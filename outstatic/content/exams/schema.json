@@ -8,6 +8,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "Subject"
+    },
+    "year": {
+      "required": true,
+      "description": "Year of the exam ",
+      "fieldType": "Number",
+      "dataType": "number",
+      "title": "Year"
     }
   }
 }
