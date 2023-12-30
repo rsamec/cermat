@@ -1,6 +1,6 @@
 {
-  "commit": "9671a0d692dec241aef5d8b9d0e8f79001818f00",
-  "generated": "Sat, 30 Dec 2023 13:00:55 GMT",
+  "commit": "41e4f95fe42a0832043df3ebaa90ec3946441a70",
+  "generated": "2023-12-30T14:22:41.571Z",
   "metadata": [
     {
       "__outstatic": {
@@ -37,6 +37,26 @@
       "slug": "matematika-9-2023-1",
       "status": "published",
       "title": "Matematika 9 2023/1"
+    },
+    {
+      "__outstatic": {
+        "commit": "41e4f95fe42a0832043df3ebaa90ec3946441a70",
+        "hash": "3367556485",
+        "path": "outstatic/content/exams/cestina-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T14:25:50.401Z",
+      "slug": "cestina-9-2023-1",
+      "status": "published",
+      "subject": "czech",
+      "title": "Čeština 9 2023/1",
+      "year": "2023"
     }
   ]
 }
