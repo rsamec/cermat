@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+const plugin = require('tailwindcss/plugin');
 
 const config: Config = {
   content: [
@@ -15,6 +16,16 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, theme }: { addBase: (o: object) => void, theme: (classNames: string) => string }) {
+      addBase({
+        'h1': { fontSize: theme('fontSize.lg'), fontWeight: 600 },
+        'h2': { fontSize: theme('fontSize.lg'), },
+        'h3': { fontSize: theme('fontSize.lg'), },
+        'hr': { border: 'solid 1px black' },
+        'blockquote': { padding: '5px', border: 'solid 1px black' }
+      })
+    })
+  ],
 }
 export default config
