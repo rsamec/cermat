@@ -1,0 +1,13 @@
+{
+  "title": "exams",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "required": true,
+      "description": "Subject of the exam",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "Subject"
+    }
+  }
+}
