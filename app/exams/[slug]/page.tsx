@@ -80,16 +80,7 @@ export default async function Exam(params: Params) {
               />
             </div>
           </div>
-        </article>
-        <div className="mb-16">
-          {moreProjects.length > 0 && (
-            <ContentGrid
-              title="Rady a tipy"
-              items={moreProjects}
-              collection="projects"
-            />
-          )}
-        </div>
+        </article>     
       </div>
     </Layout>
   )
