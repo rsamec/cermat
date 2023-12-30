@@ -1,0 +1,20 @@
+{
+  "title": "exams",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "required": true,
+      "description": "Subject of the exam",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "Subject"
+    },
+    "year": {
+      "required": true,
+      "description": "Year of the exam ",
+      "fieldType": "Number",
+      "dataType": "number",
+      "title": "Year"
+    }
+  }
+}

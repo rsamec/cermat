@@ -1,7 +1,45 @@
 {
-  "commit": "9671a0d692dec241aef5d8b9d0e8f79001818f00",
-  "generated": "Sat, 30 Dec 2023 13:00:55 GMT",
+  "commit": "d822021d53006b9fb42fdf4d2b5aebf1a5d1a9df",
+  "generated": "Sat, 30 Dec 2023 14:23:18 GMT",
   "metadata": [
+    {
+      "__outstatic": {
+        "commit": "1540dc1316cc7d204c6128701d3a20bc2fa08414",
+        "hash": "1819927051",
+        "path": "outstatic/content/exams/matematika-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T12:21:20.927Z",
+      "slug": "matematika-9-2023-1",
+      "status": "published",
+      "title": "Matematika 9 2023/1"
+    },
+    {
+      "__outstatic": {
+        "commit": "032bcaec88c08766579005b4a8e2724bb4342296",
+        "hash": "3367556485",
+        "path": "outstatic/content/exams/cestina-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T14:25:50.401Z",
+      "slug": "cestina-9-2023-1",
+      "status": "published",
+      "subject": "czech",
+      "title": "Čeština 9 2023/1",
+      "year": "2023"
+    },
     {
       "__outstatic": {
         "commit": "90aaaa4741335e06fb0287a31b7923c2f9d9083e",
@@ -19,24 +57,6 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
-    },
-    {
-      "__outstatic": {
-        "commit": "65f7c34af844a4ecede7ac1ee1f5591e6dd8b800",
-        "hash": "1819927051",
-        "path": "outstatic/content/exams/matematika-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-30T12:21:20.927Z",
-      "slug": "matematika-9-2023-1",
-      "status": "published",
-      "title": "Matematika 9 2023/1"
     }
   ]
 }
