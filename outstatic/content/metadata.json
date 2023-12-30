@@ -1,7 +1,25 @@
 {
-  "commit": "a5f1007cc766e1316cd9ed0db4e88bef50c1e6d1",
-  "generated": "Sat, 30 Dec 2023 12:18:35 GMT",
+  "commit": "9671a0d692dec241aef5d8b9d0e8f79001818f00",
+  "generated": "Sat, 30 Dec 2023 13:00:33 GMT",
   "metadata": [
+    {
+      "__outstatic": {
+        "commit": "90aaaa4741335e06fb0287a31b7923c2f9d9083e",
+        "hash": "400488365",
+        "path": "outstatic/content/pages/home.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T12:23:18.534Z",
+      "slug": "home",
+      "status": "published",
+      "title": "Home"
+    },
     {
       "__outstatic": {
         "commit": "65f7c34af844a4ecede7ac1ee1f5591e6dd8b800",
@@ -16,24 +34,6 @@
       "coverImage": "",
       "description": "",
       "publishedAt": "2023-12-30T12:21:20.927Z",
-      "slug": "matematika-9-2023-1",
-      "status": "published",
-      "title": "Matematika 9 2023/1"
-    },
-    {
-      "__outstatic": {
-        "commit": "2cc982a6592db4b8165001a880f5e7d8f66250b1",
-        "hash": "3378998903",
-        "path": "outstatic/content/examps/matematika-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "examps",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-30T10:51:22.686Z",
       "slug": "matematika-9-2023-1",
       "status": "published",
       "title": "Matematika 9 2023/1"
