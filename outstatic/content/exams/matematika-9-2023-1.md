@@ -73,9 +73,7 @@ $$ 3n \cdot (2 - n + 2n) + (2n + 1) \cdot (7 - n) = $$
 $$ 0,5x + 2 \cdot (x + 2,5) = 2,5 \cdot (x + 3) $$
 
 ## 5.2
-$$ \begin{align*}
-\frac{y + 10}{15} + \frac{2y}{5} &= 1 - \frac{5 - y}{3} \\
-\end{align*} $$
+$$ \frac{y + 10}{15} + \frac{2y}{5} = 1 - \frac{5 - y}{3} $$
 
 ---
 
@@ -135,6 +133,7 @@ než čtvercový pozemek.
 ## **V záznamovém archu** obtáhněte celou konstrukci **propisovací tužkou** (čáry i písmena).
 
 ---
+
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10**
 >V rovině leží body A, P a kružnice k se středem S.
 
@@ -146,6 +145,7 @@ než čtvercový pozemek.
 
 
 ---
+
 **VÝCHOZÍ TEXT K ÚLOZE 11**
 > Každých 3,5 cm na turistické mapě rovinaté oblasti je ve skutečnosti 700 m.</br>
 Délka vycházkové trasy je přesně 6 km, což je trojnásobek délky přímé trasy.</br>
@@ -169,7 +169,9 @@ Uvnitř haly je na podlaze, stropě a dvou stěnách vyznačena uzavřená lomen
  C) 54 m
  D) 68 m
  E) jiná délka
+
 ---
+
 **VÝCHOZÍ TEXT K ÚLOZE 13**
 >Obsah pláště rotačního válce je třikrát větší než obsah jedné podstavy tohoto válce.
 Poloměr podstavy válce je 10 cm.
@@ -180,7 +182,9 @@ Poloměr podstavy válce je 10 cm.
  C) 1260 cm2
  D) 1570 cm2
  E) větší než 1580 cm2
+
 ---
+
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14**
 >V rovině leží čtyři přímky, z nichž dvě jsou rovnoběžné.
  **14 Jaká je velikost úhlu** 𝛽?Velikosti úhlů neměřte, ale vypočtěte.
@@ -189,7 +193,9 @@ Poloměr podstavy válce je 10 cm.
  C) 116°
  D) 120°
  E) jiná velikost
+
 ---
+
 ## 15  **Přiřaďte ke každé úloze (15.1–15.3) odpovídající výsledek (A–F).**
 ## 15.1 V roce 2020 firma vyrobila 250 výrobků.Jak v roce 2021, tak v roce 2022 vyrobila firma vždy o 20 % výrobků více nežv předchozím roce.
   **Kolik výrobků vyrobila firma v roce 2022?**
@@ -204,7 +210,9 @@ Poloměr podstavy válce je 10 cm.
   D) 350
   E) 360
   F) jiný počet
+
  ---
+
  **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 16**
  >Prvním obrazcem je bílý rovnostranný trojúhelník.
 Každý další obrazec vznikne z předchozího obrazce dle následujících pravidel:
