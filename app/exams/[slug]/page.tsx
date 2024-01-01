@@ -3,12 +3,13 @@ import Layout from '@/components/Layout'
 
 import { getDocumentSlugs, load } from 'outstatic/server'
 import DateFormatter from '@/components/DateFormatter'
-import Image from 'next/image'
-import ContentGrid from '@/components/ContentGrid'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
-import { absoluteUrl, imageUrl } from '@/lib/utils/utils'
+import { absoluteUrl } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
+import {parser, GFM, Superscript, Subscript} from "@lezer/markdown";
+import { chunkByAbbreviationType } from '@/lib/utils/parser.utils'
+import Counter from '@/app/counter'
 
 const collection = 'exams';
 type Project = {
@@ -54,7 +55,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Exam(params: Params) {
-  const { project, moreProjects, content } = await getData(params)
+  const { project, moreProjects, content, contentChunks } = await getData(params)
 
   return (
     <Layout>
@@ -70,6 +71,8 @@ export default async function Exam(params: Params) {
               {' '}
               {project?.author?.name ? `by ${project?.author?.name}` : null}.
             </div>
+            {/* <Counter contentChunks={contentChunks} ></Counter> */}
+            
             {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
                 {project.description}
               </div> */}
@@ -79,6 +82,7 @@ export default async function Exam(params: Params) {
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             </div>
+            
           </div>
         </article>     
       </div>
@@ -100,6 +104,16 @@ async function getData({ params }: Params) {
     ])
     .first()
 
+  
+  
+  const mdParser = parser.configure([GFM, Subscript, Superscript]);  
+  const chunks = chunkByAbbreviationType(mdParser.parse(project.content),project.content, "HR");
+  
+  const contentChunks = await Promise.all(chunks.map(async (d)=> {
+    return await markdownToHtml(d);  
+  }))
+  console.log(chunks.length);
+    
   const content = await markdownToHtml(project.content)
 
   const moreProjects = await db
@@ -113,6 +127,7 @@ async function getData({ params }: Params) {
   return {
     project,
     content,
+    contentChunks,
     moreProjects
   }
 }
