@@ -87,7 +87,7 @@ $$ \frac{y + 10}{15} + \frac{2y}{5} = 1 - \frac{5 - y}{3} $$
 ---
 
 **VÝCHOZÍ TEXT A GRAF K ÚLOZE 7**
->Pouze pro žáky 8. a 9. tříd byly otevřeny tři kroužky – hudební, šachový a robotický.
+> Pouze pro žáky 8. a 9. tříd byly otevřeny tři kroužky – hudební, šachový a robotický.
 Každý žák může být jen v jednom z těchto tří kroužků.
 Graf znázorňuje počty žáků v jednotlivých kroužcích, jeden údaj a čísla na svislé ose chybí.
 V hudebním kroužku je celkem o 6 žáků méně než v šachovém.
@@ -101,7 +101,7 @@ Ve všech třech kroužcích dohromady je poměr počtu žáků 8. tříd ku po�
 ---
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8**
->Čtvercový pozemek má stejný obvod jako
+> Čtvercový pozemek má stejný obvod jako
 obdélníkový pozemek.
 Obdélníkový pozemek má jednu stranu o 25 % kratší
 než čtvercový pozemek a druhou stranu o 10 m delší
@@ -135,7 +135,7 @@ než čtvercový pozemek.
 ---
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10**
->V rovině leží body A, P a kružnice k se středem S.
+> V rovině leží body A, P a kružnice k se středem S.
 
 ## 10 Bod A je vrchol **rovnoramenného** trojúhelníku ABC, jehož **základna** leží na přímce AP.Vrcholy B, C tohoto trojúhelníku leží na kružnici k.
 
@@ -160,7 +160,7 @@ Délka vycházkové trasy je přesně 6 km, což je trojnásobek délky přímé
 ---
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 12**
->Vnitřní prostor haly má tvar kvádru ABCDEFGH, jehož výška je 6 m a délka 15 m.
+>  Vnitřní prostor haly má tvar kvádru ABCDEFGH, jehož výška je 6 m a délka 15 m.
 Uvnitř haly je na podlaze, stropě a dvou stěnách vyznačena uzavřená lomená čára ACFHA.
 Úhlopříčka vyznačená na podlaze haly měří 17 m a tvoří úsek AC této lomené čáry.
  12 **Jaká je délka lomené čáry** ACFHA?
@@ -173,7 +173,7 @@ Uvnitř haly je na podlaze, stropě a dvou stěnách vyznačena uzavřená lomen
 ---
 
 **VÝCHOZÍ TEXT K ÚLOZE 13**
->Obsah pláště rotačního válce je třikrát větší než obsah jedné podstavy tohoto válce.
+> Obsah pláště rotačního válce je třikrát větší než obsah jedné podstavy tohoto válce.
 Poloměr podstavy válce je 10 cm.
  **13 Jaký je povrch válce?**
  Výsledek je zaokrouhlen na desítky cm^2
@@ -186,7 +186,7 @@ Poloměr podstavy válce je 10 cm.
 ---
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14**
->V rovině leží čtyři přímky, z nichž dvě jsou rovnoběžné.
+> V rovině leží čtyři přímky, z nichž dvě jsou rovnoběžné.
  **14 Jaká je velikost úhlu** 𝛽?Velikosti úhlů neměřte, ale vypočtěte.
  A) 100°
  B) 108°
