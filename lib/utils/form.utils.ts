@@ -1,20 +1,21 @@
 export type Maybe<T> = T | undefined;
 export type ChildrenPoints<T> = { [key in keyof T]: Maybe<number> }
-type AbstractControlType<T> = FormControl<T> | FormGroup<T>;
+//type AbstractControlType<T> = FormControl<T> | FormGroup<T>;
 
-export type ValidationFunction<T> = (control: FormControl<T>) => Object | null;
+export type ValidationFunction<T> = (control: FormControl<T, any>) => Object | null;
+export type Validators<T> = ValidationFunction<T>[] | ValidationFunction<T>
 export type ComputeFunction<T> = (controls: ChildrenPoints<T>) => number;
 export interface AbstractControl<T> {
   //get<K extends keyof T>(key: K): AbstractControlType<T[K]>; 
   //validate(): string | null; 
-  isLeaf(): this is FormControl<T>
+  isLeaf(): this is FormControl<T, ComputePoints>
 }
-
-export class FormControl<T> implements AbstractControl<T> {
+export type ComputePoints = { points?: number }
+export class FormControl<T, M extends ComputePoints> implements AbstractControl<T> {
   private _value: Maybe<T>;
   private _validations: ValidationFunction<T>[] = [];
 
-  constructor(value: Maybe<T>, validations?: ValidationFunction<T>[] | ValidationFunction<T>, public config?: Object) {
+  constructor(value: Maybe<T>, validations?: Validators<T>, public config?: M) {
     this._value = value;
     this._validations = validations !== undefined ? Array.isArray(validations) ? validations : [validations] : []
   }
@@ -73,7 +74,7 @@ export class FormGroup<T> implements AbstractControl<T> {
 
     for (const key in this.controls) {
       if (this.controls.hasOwnProperty(key)) {
-        const control = this.controls[key] as AbstractControl<any>;
+        const control = this.controls[key] as AbstractControl<T>;
         if (control) {
           if (control.isLeaf()) {
             const result = control.validate();
