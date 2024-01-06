@@ -14,13 +14,10 @@ publishedAt: '2023-12-30T14:25:50.401Z'
 
 # 1 Která z následujících vět je zapsána pravopisně správně? 
 
-A) Zapomětlivost a roztržitost našeho dědy nám způsobili nejedno překvapení. 
-
-B) Zapomětlivost a roztržitost našeho dědy nám způsobily nejedno překvapení. 
-
-C) Zapomnětlivost a roztržitost našeho dědy nám způsobili nejedno překvapení. 
-
-D) Zapomnětlivost a roztržitost našeho dědy nám způsobily nejedno překvapení.
+ - [A] Zapomětlivost a roztržitost našeho dědy nám způsobili nejedno překvapení. 
+ - [B] Zapomětlivost a roztržitost našeho dědy nám způsobily nejedno překvapení. 
+ - [C] Zapomnětlivost a roztržitost našeho dědy nám způsobili nejedno překvapení. 
+ - [D] Zapomnětlivost a roztržitost našeho dědy nám způsobily nejedno překvapení.
 
 ---
 
@@ -57,26 +54,20 @@ Vysvětlivka: Loreta – pražská kaple
 > V poezii se setkáváme s tím, že něco, co je v běžném životě neživé, je **personifikováno** (personifikace = zosobnění). Např. ve větě Slunce se na mě smálo nebo v souvětí ~~Připadalo mi~~, že mě slunce hladí po tváři je personifikováno slunce.
 
 # 2 Které z následujících tvrzení odpovídá TEXTU 1?
-A) V textu je popisován konec první dětské lásky.
-
-B) V textu je zmíněna socha nejmenovaného světce.
-
-C) V textu je zmíněna kytice, kterou Hynek věnoval Jarmile.
-
-D) V textu je popisován smutek muže, který zhasíná lampy u Lorety.
+ - [A] V textu je popisován konec první dětské lásky.
+ - [B] V textu je zmíněna socha nejmenovaného světce.
+ - [C] V textu je zmíněna kytice, kterou Hynek věnoval Jarmile.
+ - [D] V textu je popisován smutek muže, který zhasíná lampy u Lorety.
 
 ---
 
 # 3 Které z následujících tvrzení o první části TEXTU 1 je pravdivé?
 (Úlohu řešte na základě informací uvedených v TEXTU 2.)
 
-A) V této části textu je personifikována plíseň.
-
-B) V této části textu jsou personifikovány střechy.
-
-C) V této části textu je personifikována rozhledna.
-
-D) V této části textu jsou personifikovány schůdky.
+- [A] V této části textu je personifikována plíseň.
+- [B] V této části textu jsou personifikovány střechy.
+- [C]V této části textu je personifikována rozhledna.
+- [D] V této části textu jsou personifikovány schůdky.
 
 ---
 
@@ -84,18 +75,18 @@ D) V této části textu jsou personifikovány schůdky.
 ## **Tvrzení č.2:** Slovní spojení bílé stroje v TEXTU 1 nejspíše označuje letadla.
 ## **Odpovídá alespoň některé z výše uvedených tvrzení TEXTU 1?**
 ## (Posuzované slovní spojení je v TEXTU 1 vyznačeno tučně.)
-- [A)] ne, žádné z těchto tvrzení
-- [B)] ano, každé z těchto tvrzení
-- [C)] ano, avšak pouze tvrzení č. 1
-- [D)] ano, avšak pouze tvrzení č. 2
+- [A] ne, žádné z těchto tvrzení
+- [B] ano, každé z těchto tvrzení
+- [C] ano, avšak pouze tvrzení č. 1
+- [D] ano, avšak pouze tvrzení č. 2
 
 ---
 
 # **5 Které z následujících tvrzení o slovesném tvaru podtrženém v TEXTU 1 je pravdivé?**
-- [A)] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný prchala chvíli poté začal ztrácet rovnováhu.
-- [B)] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný zhasil světla a chvíli poté začal ztrácet rovnováhu.
-- [C)] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný prchal a zároveň občas ztrácel rovnováhu.  
-- [D)] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný zhasil světla a zároveň občas ztrácel rovnováhu.
+- [A] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný prchala chvíli poté začal ztrácet rovnováhu.
+- [B] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný zhasil světla a chvíli poté začal ztrácet rovnováhu.
+- [C] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný prchal a zároveň občas ztrácel rovnováhu.  
+- [D] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný zhasil světla a zároveň občas ztrácel rovnováhu.
 
 ---
 
@@ -104,11 +95,11 @@ D) V této části textu jsou personifikovány schůdky.
 ## 6.1 Někdo sestře poslal milostný dopis. 
 ## 6.2 Učebnice angličtiny dostanou žáci později. 
 ## 6.3 Příchozí ochotně podepsali prezenční listiny.
-- [A)] Věta obsahuje podmět, přísudek, přívlastek shodný a dva předměty.
-- [B)] Věta obsahuje podmět, přísudek, přívlastek neshodný a dva předměty.
-- [C)] Věta obsahuje podmět, přísudek, dva přívlastky shodné a příslovečné určení.
-- [D)] Věta obsahuje podmět, přísudek, přívlastek shodný, předmět a příslovečné určení.
-- [E)] Věta obsahuje podmět, přísudek, přívlastek neshodný, předmět a příslovečné určení.
+- [A] Věta obsahuje podmět, přísudek, přívlastek shodný a dva předměty.
+- [B] Věta obsahuje podmět, přísudek, přívlastek neshodný a dva předměty.
+- [C] Věta obsahuje podmět, přísudek, dva přívlastky shodné a příslovečné určení.
+- [D] Věta obsahuje podmět, přísudek, přívlastek shodný, předmět a příslovečné určení.
+- [E] Věta obsahuje podmět, přísudek, přívlastek neshodný, předmět a příslovečné určení.
 
 ---
 
@@ -162,28 +153,28 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 ---
 
 # **10 Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výchozím textu, aby dané souvětí bylo gramaticky správné a zároveň se v něm uplatnil stupňovací poměr?**
-- [A)] ne-li až nezdvořile
-- [B)] tudíž až nezdvořilé
-- [C)] ne-li dost nezdvořilé
-- [D)] tudíž dost nezdvořile
+- [A] ne-li až nezdvořile
+- [B] tudíž až nezdvořilé
+- [C] ne-li dost nezdvořilé
+- [D] tudíž dost nezdvořile
 
 ---
 
 # **11 Ve které z následujících možností je uvedena dvojice slov, jež nelze v kontextu výchozího textu považovat za antonyma?**
 - (První slovo z každé dvojice pochází z výchozího textu a je v něm vyznačeno tučně.)
-- [A)] nemilé – milé 
-- [B)] nesměle – směle
-- [C)] náročné – nenáročné
-- [D)] jistě – nejistě
+- [A] nemilé – milé 
+- [B] nesměle – směle
+- [C] náročné – nenáročné
+- [D] jistě – nejistě
 
 ---
 
 # **12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří .
 ## Kterou z následujících možností je nutné doplnit na vynechané místo () ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
-- [A)] celkem tři příslušníci stejné rasy
-- [B)] celkem čtyři příslušníci stejné rasy
-- [C)] celkem tři postavy, z nichž dvě jsou příslušníci stejné rasy
-- [D)] celkem čtyři postavy, z nichž tři jsou příslušníci stejné rasy
+- [A] celkem tři příslušníci stejné rasy
+- [B] celkem čtyři příslušníci stejné rasy
+- [C] celkem tři postavy, z nichž dvě jsou příslušníci stejné rasy
+- [D] celkem čtyři postavy, z nichž tři jsou příslušníci stejné rasy
 
 ---
 
@@ -205,22 +196,22 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 
 ---
 
-- [A)] „Někoho z práce?“ vyzvídala má sestra Maeve. Sandy se na chvíli zamyslela: „To
+- [A] „Někoho z práce?“ vyzvídala má sestra Maeve. Sandy se na chvíli zamyslela: „To
 asi ne. Kde máš bráchu?“
-- [B)] Když otec přivedl Andreu do Holandské vily poprvé, naše hospodyně Sandy
+- [B] Když otec přivedl Andreu do Holandské vily poprvé, naše hospodyně Sandy
 přišla k sestře do pokoje a oznámila: „Otec tu má návštěvu a rád by vás s ní
 seznámil.“
-- [C)] „Abych měl soukromí,“ odpověděl jsem, ačkoliv jsem ve svých osmi letech
+- [C] „Abych měl soukromí,“ odpověděl jsem, ačkoliv jsem ve svých osmi letech
 neměl ponětí, co to vlastně soukromí je. Líbilo se mi to slovo – a taky pocit, že
 když za sebou zatáhnu závěsy, ocitnu se ve vlastním malém světě.
- - [D)] Měl jsem vyzkoušeno, že v téhle pozici dohlédnu mezerou mezi sloupky
+ - [D] Měl jsem vyzkoušeno, že v téhle pozici dohlédnu mezerou mezi sloupky
 zábradlí až do salonku. Viděl jsem, že před krbem stojí můj otec a hovoří
 s neznámou ženou. To mi zatím stačilo. Vrátil jsem se proto potichu do pokoje.
- - [E)] Host v přízemí byl ale každopádně záhada, která mě lákala. Táta neměl přátele,
+ - [E] Host v přízemí byl ale každopádně záhada, která mě lákala. Táta neměl přátele,
 rozhodně ne takové, kteří by nás navštěvovali v sobotu večer. Vylezl jsem proto
 ze své skrýše u okna, opatrně jsem vyšel na chodbu a lehl si na koberec nad
 schody.
- - [F)] „U okna,“ prozradila Maeve. Sandy roztáhla závěsy, za nimiž se skrýval široký
+ - [F] „U okna,“ prozradila Maeve. Sandy roztáhla závěsy, za nimiž se skrýval široký
 parapet upravený k sezení, a zeptala se mě: „Proč se tu schováváš?“
 
 ## 15.1 _____
@@ -247,10 +238,10 @@ stačí je slepit. Nahoru přilepíme hotovou hlavu. Poté na největší kvádr
 bude tělo robota, přilepíme dvě podlouhlé krabice (nohy) a dvě úzké krabice (ruce).
 
 # **17 Která z následujících možností nejlépe vystihuje výchozí text?**
-- [A)] Tento popis pracovního postupu vykazuje nedostatky, například některé kroky na sebe logicky nenavazují.
-- [B)] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky, například některé kroky na sebe logicky nenavazují.
-- [C)] Tento popis pracovního postupu vykazuje nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
-- [D)] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
+- [A] Tento popis pracovního postupu vykazuje nedostatky, například některé kroky na sebe logicky nenavazují.
+- [B] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky, například některé kroky na sebe logicky nenavazují.
+- [C] Tento popis pracovního postupu vykazuje nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
+- [D] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
 
 ---
 
@@ -311,35 +302,35 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 ---
 
 # **20 Která z následujících možností patří na vynechané místo (*****) v TEXTU 1?**
-- [A)] Známý dosud není ani přesný počet postavených věží
-- [B)] Známá doposud není ani poloha žádné z postavených věží
-- [C)] Známá doposud není ani přibližná podoba staveb zvaných brochy
-- [D)] Známý dosud není ani způsob opracovávání kamenů při stavbě brochů
+- [A] Známý dosud není ani přesný počet postavených věží
+- [B] Známá doposud není ani poloha žádné z postavených věží
+- [C] Známá doposud není ani přibližná podoba staveb zvaných brochy
+- [D] Známý dosud není ani způsob opracovávání kamenů při stavbě brochů
 
 ---
 
 # **21 Které z následujících tvrzení o dvou větách podtržených v TEXTU 1 je pravdivé?**
 - (Úlohu řešte na základě definic uvedených v TEXTU 2.) 
-- [A)] Obě tyto věty jsou typu A.
-- [B)] Obě tyto věty jsou typu B.
-- [C)] Věta z druhé části textu je typu A, věta ze třetí části textu je typu B.
-- [D)] Věta z druhé části textu je typu B, věta ze třetí části textu je typu A.
+- [A] Obě tyto věty jsou typu A.
+- [B] Obě tyto věty jsou typu B.
+- [C] Věta z druhé části textu je typu A, věta ze třetí části textu je typu B.
+- [D] Věta z druhé části textu je typu B, věta ze třetí části textu je typu A.
 
 ---
 
 # **22 Které z následujících tvrzení odpovídá TEXTU 1?**
-- [A)] V textu je zmíněna hypotéza, že brochy bylo možné dobýt, její pravdivost je však následně zpochybněna.
-- [B)] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, její pravdivost je však následně zpochybněna.
-- [C)] V textu je zmíněna hypotéza, že brochy nebylo možné dobýt, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
-- [D)] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
+- [A] V textu je zmíněna hypotéza, že brochy bylo možné dobýt, její pravdivost je však následně zpochybněna.
+- [B] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, její pravdivost je však následně zpochybněna.
+- [C] V textu je zmíněna hypotéza, že brochy nebylo možné dobýt, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
+- [D] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
   
 ---
 
 # **23 Které z následujících tvrzení o slově dobytek tučně vyznačeném v TEXTU 1 je pravdivé?**
-- [A)] Toto slovo je vždy citově zabarvené, tedy jak v TEXTU 1, tak ve větě Ten mladý právník je ale dobytek.
-- [B)] Toto slovo není nikdy citově zabarvené, tedy ani v TEXTU 1, ani ve větě Ten mladý právník je ale dobytek.
-- [C)] Toto slovo není v TEXTU 1 citově zabarvené, ale ve větě Ten mladý právník je ale dobytek citově zabarvené je.
-- [D)] Toto slovo je citově zabarvené v TEXTU 1, ale ve větě Ten mladý právník je ale dobytek citově zabarvené není.
+- [A] Toto slovo je vždy citově zabarvené, tedy jak v TEXTU 1, tak ve větě Ten mladý právník je ale dobytek.
+- [B] Toto slovo není nikdy citově zabarvené, tedy ani v TEXTU 1, ani ve větě Ten mladý právník je ale dobytek.
+- [C] Toto slovo není v TEXTU 1 citově zabarvené, ale ve větě Ten mladý právník je ale dobytek citově zabarvené je.
+- [D] Toto slovo je citově zabarvené v TEXTU 1, ale ve větě Ten mladý právník je ale dobytek citově zabarvené není.
 
 ---
 
@@ -349,10 +340,10 @@ ve firmě KZO, sídlící jen 15 minut od jeho domu. Záhy se však tato firma p
 do jiného města. Když se Víťa sešel se sousedkou Terezou, postěžoval si jí: „Tomu se říká
 dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě hodiny!“
 # **24 Které z následujících tvrzení vystihuje situaci popsanou ve výchozím textu?**
-- [A)] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost se svou situací.
-- [B)] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že se jeho situace navzdory očekávání nezlepšila. 
-- [C)] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost s neseriózním jednáním firmy KZO.
-- [D)] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že firma KZO za své neseriózní jednání odmítá nést odpovědnost.
+- [A] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost se svou situací.
+- [B] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že se jeho situace navzdory očekávání nezlepšila. 
+- [C] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost s neseriózním jednáním firmy KZO.
+- [D] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že firma KZO za své neseriózní jednání odmítá nést odpovědnost.
 
 ---
 
@@ -390,28 +381,28 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 ---
 
 # **27 Které z následujících tvrzení o slovese tučně vyznačeném ve výchozím textu je pravdivé?**
-- [A)] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
-- [B)] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
-- [C)] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
-- [D)] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
+- [A] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
+- [B] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
+- [C] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
+- [D] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
 
 ---
 
 # **28 Které z následujících tvrzení o zájmenu podtrženém ve výchozím textu je pravdivé?**
-- [A)] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu drožky.
-- [B)] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu zařízení.
-- [C)] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu drožky.
-- [D)] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu zařízení.
+- [A] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu drožky.
+- [B] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu zařízení.
+- [C] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu drožky.
+- [D] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu zařízení.
   
 ---
 
 **VÝCHOZÍ TEXT K ÚLOZE 29**
 >Kryštof nakonec musel prodat, navíc dost pod cennou, zlatou medaili z mistrovství světa. 
 # **29 Které z následujících tvrzení je pravdivé?**
-- [A)] Výchozí text je zapsán pravopisně správně.
-- [B)] Výchozí text obsahuje pravopisnou chybu: místo nakonec má být na konec.
-- [C)] Výchozí text obsahuje pravopisnou chybu: místo cennou má být cenou.
-- [D)] Výchozí text obsahuje pravopisnou chybu: místo medaili má být medaily.
+- [A] Výchozí text je zapsán pravopisně správně.
+- [B] Výchozí text obsahuje pravopisnou chybu: místo nakonec má být na konec.
+- [C] Výchozí text obsahuje pravopisnou chybu: místo cennou má být cenou.
+- [D] Výchozí text obsahuje pravopisnou chybu: místo medaili má být medaily.
 
 ---
 
@@ -421,42 +412,9 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 ## 30.2 Oba podtržené tvary jsou v daném souvětí nespisovné, druhý podtržený tvar však může být v jiném kontextu spisovný
 ## 30.3 První podtržený tvar je spisovný, druhý podtržený tvar je v daném souvětí nespisovný, avšak v jiném kontextu může být spisovný.
 ## 30.4 Druhý podtržený tvar je spisovný, první podtržený tvar je v daném souvětí nespisovný, avšak v jiném kontextu může být spisovný.
-- [A)] Musíte ty auta přeparkovat, právě totiž začli čistit ulici.
-- [B)] S chutí bych ti vypla počítač, kdybys nemusel dělat referát.
-- [C)] Pivní tácky pod nohama židle zajistily, že se už tak neviklala.
-- [D)] Nájemní smlouvu si radši vytisk dvakrát, aby neměl žádný potíže. 
-- [E)] Zeptal se kamaráda ze školy, jaké pravidla platí pro běžecké závody.
-- [F)] Poděkování patří záchranářům, kteří pomohli oboum zraněným mužům.
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- [A)]
-- [B)]
-- [C)]
-- [D)]
-
-
-
-
-
-
-
-- []
+- [A] Musíte ty auta přeparkovat, právě totiž začli čistit ulici.
+- [B] S chutí bych ti vypla počítač, kdybys nemusel dělat referát.
+- [C] Pivní tácky pod nohama židle zajistily, že se už tak neviklala.
+- [D] Nájemní smlouvu si radši vytisk dvakrát, aby neměl žádný potíže. 
+- [E] Zeptal se kamaráda ze školy, jaké pravidla platí pro běžecké závody.
+- [F] Poděkování patří záchranářům, kteří pomohli oboum zraněným mužům.
