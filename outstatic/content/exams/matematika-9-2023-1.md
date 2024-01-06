@@ -113,6 +113,7 @@ obdélníkový pozemek.
 Obdélníkový pozemek má jednu stranu o 25 % kratší
 než čtvercový pozemek a druhou stranu o 10 m delší
 než čtvercový pozemek.
+>![gg](/math/2013/8.jpeg)
 
 # 8 Délku strany čtvercového pozemku označíme 𝑎.
 
@@ -128,6 +129,7 @@ než čtvercový pozemek.
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 9**
 > V rovině leží body A, C, M.
+> ![ggg](/math/2013/9.jpeg)
 
 
 
@@ -142,6 +144,7 @@ než čtvercový pozemek.
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10**
 > V rovině leží body A, P a kružnice k se středem S.
+> ![gggg](/math/2013/10.jpeg)
 
 # 10
 
@@ -158,7 +161,7 @@ Vrcholy B, C tohoto trojúhelníku leží na kružnici k.
 **VÝCHOZÍ TEXT K ÚLOZE 11**
 > Každých 3,5 cm na turistické mapě rovinaté oblasti je ve skutečnosti 700 m.\
 > Délka vycházkové trasy je přesně 6 km, což je trojnásobek délky přímé trasy.
->
+>![gggf](/math/2013/11.jpeg)
 > (Uvažované trasy nemají žádné převýšení.)
 
 # 11 Rozhodněte o každém z následujících tvrzení (11.1–11.3), zda je pravdivé (A), či nikoli (N).
@@ -173,6 +176,7 @@ Vrcholy B, C tohoto trojúhelníku leží na kružnici k.
 >  Vnitřní prostor haly má tvar kvádru ABCDEFGH, jehož výška je 6 m a délka 15 m.
 Uvnitř haly je na podlaze, stropě a dvou stěnách vyznačena uzavřená lomená čára ACFHA.
 Úhlopříčka vyznačená na podlaze haly měří 17 m a tvoří úsek AC této lomené čáry.
+>![gggd](/math/2013/12.jpeg)
 
 # 12 **Jaká je délka lomené čáry** ACFHA?
 
@@ -241,6 +245,7 @@ Výsledek je zaokrouhlen na desítky cm^2
 > Každý další obrazec vznikne z předchozího obrazce dle následujících pravidel:
 > 1. Nejprve každý bílý trojúhelník v obrazci rozdělíme na 4 shodné rovnostranné trojúhelníky.
 > 2. Poté v každé takto vzniklé čtveřici bílých trojúhelníků obarvíme vnitřní trojúhelník na šedo.
+> ![gggfd](/math/2013/13.jpeg)
 
 # 16
 ## 16.1 Určete, kolik bílých trojúhelníků obsahuje pátý obrazec.
@@ -249,6 +254,7 @@ Výsledek je zaokrouhlen na desítky cm^2
 ## 16.3 Počet šedých trojúhelníků v posledním a v předposledním obrazci se liší o 6 561.Určete, kolik bílých trojúhelníků obsahuje poslední obrazec
 
 ---
+
 
 
 
