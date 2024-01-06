@@ -17,6 +17,7 @@ const Footer = () => {
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-l">ZAJÍMAVÉ ODKAZY</h3>
               <a href="https://prijimacky.cermat.cz/" target="_blank">Cermat Příjmačky</a>              
+              <a href="https://tau.cermat.cz/" target="_blank">TAU</a>              
 
             </div>
             <div className="flex flex-col gap-1">
@@ -37,7 +38,7 @@ const Footer = () => {
       <footer className="bg-black text-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-5 p-5">
           <div className="flex">
-            <p className="text-sm flex-1 text-slate-400">© 2018 - 2024 Paperify</p>
+            <p className="text-sm flex-1 text-slate-400">© 2018 - 2024</p>
           </div>
         </div>
 
