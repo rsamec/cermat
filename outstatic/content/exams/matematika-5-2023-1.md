@@ -1,7 +1,7 @@
 ---
 year: '2023'
 subject: 'math'
-coverImage: ''
+coverImage: '/images/math.png'
 description: ''
 slug: 'matematika-5-2023-1'
 author:
