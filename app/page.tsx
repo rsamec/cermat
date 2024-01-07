@@ -71,6 +71,5 @@ async function getData() {
   return {
     content,
     allPosts,
-    //allProjects
   }
 }

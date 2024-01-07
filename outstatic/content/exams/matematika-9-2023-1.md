@@ -122,9 +122,6 @@ než čtvercový pozemek.
 ## 8.3 **Vypočtěte**, o kolik m^2se liší obsahy obdélníkového a čtvercového pozemku.
 
 
-
-
-
 ---
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 9**
@@ -180,11 +177,11 @@ Uvnitř haly je na podlaze, stropě a dvou stěnách vyznačena uzavřená lomen
 
 # 12 **Jaká je délka lomené čáry** ACFHA?
 
-1) 46 m
-2) 50 m
-3) 54 m
-4) 68 m
-5) jiná délka
+- [A] 46 m
+- [B] 50 m
+- [C] 54 m
+- [D] 68 m
+- [E] jiná délka
 
 ---
 
@@ -196,11 +193,11 @@ Uvnitř haly je na podlaze, stropě a dvou stěnách vyznačena uzavřená lomen
 
 Výsledek je zaokrouhlen na desítky cm^2
 
-1) menší než 930 cm2
-2) 940 cm2
-3) 1260 cm2
-4) 1570 cm2
-5) větší než 1580 cm2
+- [A] menší než 930 cm2
+- [B] 940 cm2
+- [C] 1260 cm2
+- [D] 1570 cm2
+- [E] větší než 1580 cm2
 
 ---
 
@@ -209,11 +206,11 @@ Výsledek je zaokrouhlen na desítky cm^2
 
 # 14 Jaká je velikost úhlu 𝛽? Velikosti úhlů neměřte, ale vypočtěte.
 
-1) 100°
-2) 108°
-3) 116°
-4) 120°
-5) jiná velikost
+- [A] 100°
+- [B] 108°
+- [C] 116°
+- [D] 120°
+- [D] jiná velikost
 
 ---
 
@@ -231,12 +228,12 @@ Výsledek je zaokrouhlen na desítky cm^2
 
 **Kolik zaměstnanců měla firma před krizí?**
 
- 1) 280
- 2) 300
- 3) 320
- 4) 350
- 5) 360
- 6) jiný počet
+- [A] 280
+- [B] 300
+- [C] 320
+- [D] 350
+- [E] 360
+- [F] jiný počet
 
  ---
 

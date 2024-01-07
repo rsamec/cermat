@@ -5,11 +5,15 @@ import { getDocumentSlugs, load } from 'outstatic/server'
 import DateFormatter from '@/components/DateFormatter'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
-import { absoluteUrl } from '@/lib/utils/utils'
+import { Maybe, absoluteUrl } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
-import {parser, GFM, Superscript, Subscript} from "@lezer/markdown";
-import { chunkByAbbreviationType } from '@/lib/utils/parser.utils'
-import Counter from '@/app/counter'
+import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
+import { OptionList, Question, QuestionHtml, ShortCodeMarker, chunkByAbbreviationType, generateHeadingsList, renderHtmlTree } from '@/lib/utils/parser.utils'
+import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
+import math from '@/lib/exams/math'
+import Steps from '@/components/wizard/steps'
+import { FormControl } from '@/lib/utils/form.utils'
+import Step from '@/components/wizard/step'
 
 const collection = 'exams';
 type Project = {
@@ -55,7 +59,11 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Exam(params: Params) {
-  const { project, moreProjects, content, contentChunks } = await getData(params)
+  const { project, moreProjects, content, quiz } = await getData(params);
+
+  const { config, leafs } = quiz;
+  const steps = config.getAllLeafNodes();
+
 
   return (
     <Layout>
@@ -71,22 +79,39 @@ export default async function Exam(params: Params) {
               {' '}
               {project?.author?.name ? `by ${project?.author?.name}` : null}.
             </div>
-            {/* <Counter contentChunks={contentChunks} ></Counter> */}
-            
+
+            {/* <Wizard contentChunks={leafs.map(d => d.ancestors.map(x => x.data.contentHtml).join(""))} ></Wizard> */}
             {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
                 {project.description}
               </div> */}
+            {/* <div>
+              {
+                steps.map((d, i) => {
+                  const matchedLeaf = leafs[i];
+                  const output = matchedLeaf.ancestors.map(d => d.data.contentHtml!).join("");
+
+
+                  return (<div key={i}>
+                    <div className="prose lg:prose-xl flex flex-col space-y-2"
+                      dangerouslySetInnerHTML={{ __html: output }} />                    
+                  </div>
+                  )
+                })}
+            </div>
+             */}
+
             <div className="max-w-2xl mx-auto">
               <div
                 className="prose lg:prose-xl flex flex-col space-y-2"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             </div>
-            
+
+
           </div>
-        </article>     
-      </div>
-    </Layout>
+        </article>
+      </div >
+    </Layout >
   )
 }
 
@@ -104,16 +129,46 @@ async function getData({ params }: Params) {
     ])
     .first()
 
-  
-  
-  const mdParser = parser.configure([GFM, Subscript, Superscript]);  
-  const chunks = chunkByAbbreviationType(mdParser.parse(project.content),project.content, "HR");
-  
-  const contentChunks = await Promise.all(chunks.map(async (d)=> {
-    return await markdownToHtml(d);  
-  }))
-  console.log(chunks.length);
-    
+
+
+  const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
+  const parsedTree = mdParser.parse(project.content);
+  const questions = chunkByAbbreviationType(parsedTree, project.content, "HR");
+  const headings = generateHeadingsList(parsedTree, project.content);
+
+  const contentHeadings = await Promise.all(headings.map(async (d) => ({
+    ...d,
+    contentHtml: await markdownToHtml(d.header) + await markdownToHtml(d.content),
+  })))
+
+  function order(name: Maybe<string>) {
+    if (name == "HorizontalRule") return 1;
+    if (name == "ATXHeading1") return 2;
+    if (name == "ATXHeading2") return 3;
+    return 0;
+  }
+
+  const headingsTreeNodes = createTree(contentHeadings.map(d => ({ data: d })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
+  const leafs = getAllLeafsWithAncestors({ data: {} as QuestionHtml, children: headingsTreeNodes });
+  //console.log(leafs.map(d => d.leaf.data.options))
+  //const contentTree = renderHtmlTree(parsedTree)
+
+  const quiz = {
+    config: math,
+    leafs,
+  }
+
+
+  //console.log( headings.map(d => d.type?.name))
+  //console.log(headings.map(d => d.type?.name + ":" + (d.header != "" ? d.header : d.nextHeader) + ":" + (/./.test(d.content))))
+
+  // const contentChunks = await Promise.all(questions.map(async (d) => {
+  //   return await markdownToHtml(d);
+  // }))
+
+
+
+
   const content = await markdownToHtml(project.content)
 
   const moreProjects = await db
@@ -127,7 +182,7 @@ async function getData({ params }: Params) {
   return {
     project,
     content,
-    contentChunks,
+    quiz,
     moreProjects
   }
 }
