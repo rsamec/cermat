@@ -1,11 +1,11 @@
 {
-  "commit": "c92beb889a37af0012d845adb9b1d0291d9af4b2",
-  "generated": "2024-01-07T09:54:43.954Z",
+  "commit": "33a4593ed0aad1d5290ed8d820f141841feff628",
+  "generated": "Sun, 07 Jan 2024 09:54:52 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "1540dc1316cc7d204c6128701d3a20bc2fa08414",
-        "hash": "1819927051",
+        "commit": "3300d3304da16d3a7e2c0c45113d1041b6c952ce",
+        "hash": "3879882090",
         "path": "outstatic/content/exams/matematika-9-2023-1.md"
       },
       "author": {
@@ -18,12 +18,34 @@
       "publishedAt": "2023-12-30T12:21:20.927Z",
       "slug": "matematika-9-2023-1",
       "status": "published",
-      "title": "Matematika 9 2023/1"
+      "subject": "math",
+      "title": "Matematika 9 2023/1",
+      "year": "2023"
     },
     {
       "__outstatic": {
-        "commit": "032bcaec88c08766579005b4a8e2724bb4342296",
-        "hash": "3367556485",
+        "commit": "ad582501b75b9a0563be7248a3cb078a27bfd76a",
+        "hash": "4238284405",
+        "path": "outstatic/content/exams/matematika-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-07T09:59:56.794Z",
+      "slug": "matematika-5-2023-1",
+      "status": "published",
+      "subject": "math",
+      "title": "Matematika 5 2023/1",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "c7e80732f7f7962395e44a29db5c27a21c022cd0",
+        "hash": "3581945545",
         "path": "outstatic/content/exams/cestina-9-2023-1.md"
       },
       "author": {
@@ -57,26 +79,6 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
-    },
-    {
-      "__outstatic": {
-        "commit": "c92beb889a37af0012d845adb9b1d0291d9af4b2",
-        "hash": "4238284405",
-        "path": "outstatic/content/exams/matematika-5-2023-1.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2024-01-07T09:59:56.794Z",
-      "slug": "matematika-5-2023-1",
-      "status": "published",
-      "subject": "math",
-      "title": "Matematika 5 2023/1",
-      "year": "2023"
     }
   ]
 }
