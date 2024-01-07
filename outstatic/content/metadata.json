@@ -1,6 +1,6 @@
 {
-  "commit": "33a4593ed0aad1d5290ed8d820f141841feff628",
-  "generated": "Sun, 07 Jan 2024 09:54:52 GMT",
+  "commit": "058040ef76e5bac7029214dea8571a09e82073a7",
+  "generated": "2024-01-07T12:39:25.642Z",
   "metadata": [
     {
       "__outstatic": {
@@ -79,6 +79,26 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
+    },
+    {
+      "__outstatic": {
+        "commit": "058040ef76e5bac7029214dea8571a09e82073a7",
+        "hash": "3931753880",
+        "path": "outstatic/content/exams/cestina-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-07T12:44:38.288Z",
+      "slug": "cestina-5-2023-1",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština 5 2023/1",
+      "year": "2023"
     }
   ]
 }
