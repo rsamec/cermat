@@ -174,7 +174,7 @@ mincí v kasičce.
 
 **VÝCHOZÍ TEXT A GRAF K ÚLOZE 13**
 >Graf udává, kolik kg odpadu vytřídily tři skautské oddíly R, S a T.
->![graf](/math/2013/5/5/18.jpeg)
+>![graf](/math/2013/5/18.jpeg)
 ## **13 Do každé neúplné věty (13.1–13.3) doplňte na vynechané místo (……………) chybějící část (A–F) tak, aby vzniklo pravdivé tvrzení.**
 ## 13.1 Oddíl R vytřídil …………… méně kg papíru než oddíl S.
 ## 13.2 Oddíly S a T dohromady vytřídily …………… více kg plastu než oddíl R.
