@@ -20,9 +20,10 @@ $$ (5 + 5 \cdot 29) - 4 \cdot \left(	176:8 - 8 \cdot 2\right) = $$
 
 ---
 
-# **2**
+# 2
 ## 2.1 **Vypočtěte, o kolik litrů se liší čtvrtina z 24 litrů a třetina z 12 litrů.**
-## 2.2 Vynásobením dvou kladných celých čísel jsme získali součin 180. Jedno z těchto dvou čísel zvětšíme dvakrát a jedno zmenšíme šestkrát.
+## 2.2 Vynásobením dvou kladných celých čísel jsme získali součin 180.
+## Jedno z těchto dvou čísel zvětšíme dvakrát a jedno zmenšíme šestkrát.
 ## **Určete, jaký součin získáme vynásobením obou změněných čísel.**
 
 ---
@@ -30,9 +31,10 @@ $$ (5 + 5 \cdot 29) - 4 \cdot \left(	176:8 - 8 \cdot 2\right) = $$
 **VÝCHOZÍ TEXT K ÚLOZE 3**
 >V rotě je jeden kapitán a má pod sebou 4 poručíky. Každý poručík má pod sebou 3 své četaře
 a každý četař má pod sebou 10 svých vojínů. (Další osoby v rotě nejsou.)
-Kapitán se rozhodl svolat celou rotu k nástupu. Rozkaz k nástupu se předával tak, že
+>Kapitán se rozhodl svolat celou rotu k nástupu. Rozkaz k nástupu se předával tak, že
 kapitán vydal rozkaz všem poručíkům, z nichž každý vydal tento rozkaz svým četařům
 a každý četař jej vydal svým vojínům. Poté celá rota nastoupila.
+
 ## **3 Vypočtěte,**
 ## 3.1 kolik je v rotě **vojínů,**
 ## 3.2 kolik osob v rotě vydalo rozkaz k nástupu,
@@ -46,7 +48,8 @@ sešitů a několik stejných kružítek.
 # **4**
 ## 4.1 Jana koupila celkem 36 sešitů, přičemž linkovaných koupila třikrát více než čtverečkovaných.
 ## **Vypočtěte, kolik linkovaných sešitů koupila.**
-## 4.2 Dva linkované sešity a dva čtverečkované sešity stojí dohromady 180 korun. Dva čtverečkované sešity stojí stejně jako tři linkované.
+## 4.2 Dva linkované sešity a dva čtverečkované sešity stojí dohromady 180 korun.
+## Dva čtverečkované sešity stojí stejně jako tři linkované.
 ## **Vypočtěte, kolik korun stojí jeden čtverečkovaný sešit.**
 ## 4.3 K nákupu šesti kružítek chybělo Janě 160 korun, proto koupila jen čtyři kružítka a zbylo jí 100 korun.
 ## **Vypočtěte, kolik korun zaplatila za 4 kružítka.**
@@ -55,7 +58,7 @@ sešitů a několik stejných kružítek.
 
 **VÝCHOZÍ TEXT K ÚLOZE 5**
 >Pro děti klubu SEN se letos otevřel pouze sportovní, divadelní a robotický kroužek.
-Každé dítě klubu SEN navštěvuje alespoň jeden z těchto tří kroužků – 3 děti navštěvují
+>Každé dítě klubu SEN navštěvuje alespoň jeden z těchto tří kroužků – 3 děti navštěvují
 všechny tři kroužky, 8 dětí navštěvuje právě dva kroužky a ostatní děti jediný kroužek.
 Sportovní kroužek navštěvuje 14 dětí, divadelní 12 dětí a robotický 6 dětí.
 # **5 Vypočtěte,**
@@ -66,10 +69,13 @@ Sportovní kroužek navštěvuje 14 dětí, divadelní 12 dětí a robotický 6 
 
 **VÝCHOZÍ TEXT K ÚLOZE 6**
 >Na odměny pro tři nejlepší soutěžící byla připravena finanční částka v korunách.
-První soutěžící získal polovinu této částky.
-Druhý soutěžící dostal 300 korun.
-Třetí soutěžící získal zbytek připravené částky, což bylo třikrát méně korun, než získal první
+>První soutěžící získal polovinu této částky.
+>Druhý soutěžící dostal 300 korun.
+>Třetí soutěžící získal zbytek připravené částky, což bylo třikrát méně korun, než získal první
 soutěžící.
+
+
+
 ## **6 Vypočtěte,**
 ## 6.1 kolikrát více korun dostal druhý soutěžící než třetí soutěžící,
 ## 6.2 kolik korun bylo celkem připraveno na odměny
@@ -79,8 +85,11 @@ soutěžící.
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.1**
 >V rovině leží bod C a přímky a, b.
 >![V rovině leží bod C a přímky a, b.](/math/2013/5/14.jpeg)
-## 7.1 Bod C je vrchol trojúhelníku ABC. Na přímce a leží vrchol A a na přímce b vrchol B tohoto trojúhelníku. Strana AC trojúhelníku ABC je rovnoběžná s přímkou b. Strany AB a AC mají stejnou délku.
-## **Sestrojte** vrcholy A, B trojúhelníku ABC, **označte** je písmeny a trojúhelník **narýsujte**. Najděte všechna řešení.
+## 7.1 Bod C je vrchol trojúhelníku ABC.
+## Na přímce a leží vrchol A a na přímce b vrchol B tohoto trojúhelníku. 
+## Strana AC trojúhelníku ABC je rovnoběžná s přímkou b.
+## Strany AB a AC mají stejnou délku.
+## **Sestrojte** vrcholy A, B trojúhelníku ABC, **označte** je písmeny a trojúhelník **narýsujte**.   Najděte všechna řešení.
 ## **V záznamovém archu** obtáhněte vše **propisovací tužkou** (čáry i písmena).
 
 ---
@@ -88,7 +97,9 @@ soutěžící.
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.2**
 >V rovině leží body K, S a přímka p procházející bodem S.
 >![rovině leží body K, S a přímka p procházející bodem S.](/math/2013/5/15.jpeg)
-## 7.2 Bod K je vrchol obdélníku KLMN.Bod S je střed strany KL tohoto obdélníku. Přímka p prochází středem S strany KL a středem ještě jedné strany obdélníku KLMN.
+## 7.2 Bod K je vrchol obdélníku KLMN.
+## Bod S je střed strany KL tohoto obdélníku.
+## Přímka p prochází středem S strany KL a středem ještě jedné strany obdélníku KLMN.
 ## **Sestrojte** vrcholy L, M, N obdélníku KLMN, **označte** je písmeny a obdélník **narýsujte**. Najděte všechna řešení.
 ## **V záznamovém archu** obtáhněte vše **propisovací tužkou**(čáry i písmena).
 
@@ -112,9 +123,11 @@ nejdelší 20 cm.
 
 **VÝCHOZÍ TEXT K ÚLOZE 9**
 >Maminka koupila v cukrárně tři různé zákusky.
-První zákusek stál 72 korun.
-Druhý zákusek byl o čtvrtinu levnější než první.
-Cena třetího zákusku byla třetinou celkové ceny všech tří zákusků.
+>První zákusek stál 72 korun.
+>Druhý zákusek byl o čtvrtinu levnější než první.
+>Cena třetího zákusku byla třetinou celkové ceny všech tří zákusků.
+
+
 ## **9 O kolik korun byl třetí zákusek dražší než druhý?**
 - [A] o méně než 12 korun
 - [B] o 12 korun
@@ -126,7 +139,7 @@ Cena třetího zákusku byla třetinou celkové ceny všech tří zákusků.
 
 **VÝCHOZÍ TEXT K ÚLOZE 10**
 >V kasičce je celkem 78 mincí – některé jsou pětikorunové a zbývající desetikorunové.
-Hodnota všech pětikorunových mincí v kasičce je stejná jako hodnota všech desetikorunových
+>Hodnota všech pětikorunových mincí v kasičce je stejná jako hodnota všech desetikorunových
 mincí v kasičce.
 ## **10 Jaká je hodnota všech mincí v kasičce?**
 - [A] 390 korun
@@ -139,7 +152,7 @@ mincí v kasičce.
 
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOHÁM 11–12**
 >Stavebnice obsahuje samé stejné dílky.
-Každý dílek má tvar kvádru s rozměry 6 cm, 4 cm a 4 cm.
+>Každý dílek má tvar kvádru s rozměry 6 cm, 4 cm a 4 cm.
 >![obdelnik](/math/2013/5/17.jpeg)
 ## **11 Kolik dílků stavebnice je třeba ke složení kvádru s rozměry 8 cm, 12 cm a 16 cm?**
 - [A] méně než 12 dílků
