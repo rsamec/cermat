@@ -4,12 +4,12 @@ import InputNumber from "@/components/core/InputNumber";
 import TextInput from "@/components/core/TextInput";
 
 
-import { FormAnswerMetadata, FormBuilder, FormControl } from "../utils/form.utils";
-import { createBoolAnswer, createOptionAnswer, createQuestion } from "../utils/input-builder";
-import { CoreValidators } from "../utils/validators";
-import { LeafWithAncestors } from "../utils/tree.utils";
-import { Question } from "../utils/parser.utils";
-import { Maybe, Option } from "../utils/utils";
+import { FormAnswerMetadata, FormBuilder, FormControl } from "./utils/form.utils";
+import { createBoolAnswer, createOptionAnswer, createQuestion } from "./utils/input-builder";
+import { CoreValidators } from "./utils/validators";
+import { LeafWithAncestors } from "./utils/tree.utils";
+import { ParsedQuestion } from "./utils/parser.utils";
+import { Maybe, Option } from "./utils/utils";
 
 
 export const form = FormBuilder.group({
@@ -76,7 +76,7 @@ const steps: { id: string, ctrl: FormControl<any, any>, input: (ctrl: FormContro
   { id: "12", ctrl: form.controls[12], input: (ctrl, options) => createOptionAnswer(ctrl, options) },
 ];
 
-export function createSteps(leafs: LeafWithAncestors<Question & { headerHtml?: string, contentHtml?: string }>[]) {
+export function createSteps(leafs: LeafWithAncestors<ParsedQuestion & { headerHtml?: string, contentHtml?: string }>[]) {
   return steps.map((d, i) => {
     const matchedLeaf = leafs[i];
     return createStep(d.id, d.ctrl, 

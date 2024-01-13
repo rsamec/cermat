@@ -12,7 +12,7 @@ const TextInput: React.FC<TextInputProps> = ({ value, onChange }) => {
   return (
     <input
       type="text"
-      value={value}
+      value={value ?? ''}
       onChange={handleChange}
     />
   );

@@ -2,35 +2,54 @@
 
 import * as React from "react";
 import { connect } from "react-redux";
-import { RootState, Dispatch } from "../../lib/store";
+import { RootState, Dispatch, store } from "../../lib/store";
+import { Question } from "@/lib/models/quiz";
+import { cls, filterSteps } from "@/lib/utils/utils";
 
-const mapState = (state: RootState) => state.quiz;
+
+const selection = store.select((models) => ({
+  currentStepIndex: models.quiz.currentStepIndex,
+  currentAnswerState: models.quiz.currentAnswerState,
+  totalAnswers: models.quiz.totalAnswers,
+}));
+
+const mapState = (state: RootState) => ({
+  ...state.quiz,
+  ...selection(state),
+})
 
 const mapDispatch = (dispatch: Dispatch) => ({
-  next: () => dispatch.quiz.next(),
-  back: () => dispatch.quiz.back(),
-  goTo: (id: string) => dispatch.quiz.goTo(id),
+  next: () => dispatch.quiz.goToNextStep(),
+  back: () => dispatch.quiz.goToPreviousStep(),
+  goTo: (id: string) => dispatch.quiz.goToStep(id),
 });
 
 type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
-type Props = StateProps & DispatchProps;
+type Props = { questions: Question[] } & StateProps & DispatchProps;
 
 
 function Stepper(props: Props) {
   return (
-    <div>
-      <div className="flex items-center gap-1">
-
-      
-      {props.questions.map((d, i) => <button className="btn btn-blue" key={i} onClick={() => props.goTo(d.id) } >{d.id}</button>)}
+    <div className="flex flex-col items-center gap-5">
+      <div className="flex gap-5 self-stretch">
+        <div className="grow">
+          <span>Počet úloh:</span>
+          <span>{props.totalAnswers}/{props.questions.length}</span></div>
+        <div className="">Body:</div>
       </div>
-      {/* <div>
-        <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
-          onClick={() => props.next()}>next</button>
-        <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+      <div className="flex items-center gap-5">
+        <button className="btn btn-blue"
           onClick={() => props.back()}>back</button>
-      </div> */}
+
+        <div className="flex items-center gap-1">
+          {filterSteps(props.questions, props.currentStepIndex, 15).map((d, i) =>
+            <button className={cls(['btn', d.id === props.currentStep?.id && 'btn-blue', props.corrections[d.id] === true && 'btn-green', props.corrections[d.id] === false && 'btn-red'])} key={i} onClick={() => props.goTo(d.id)} >{d.id}</button>)}
+        </div>
+        <button className="btn btn-blue"
+          onClick={() => props.next()}>next</button>
+
+      </div>
     </div>
   );
 }

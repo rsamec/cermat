@@ -1,6 +1,7 @@
 import { BehaviorSubject, Observable } from "rxjs";
 import { Maybe, Option } from "./utils";
 import { ComputeFunction, CoreValidators, GroupPoints, GroupValidationResult, ValidationFunction, Validators } from "./validators";
+import { AnswerGroup, AnswerNode, isGroup } from "./form-answers";
 
 export interface AbstractControl<T> {
   isLeaf(): this is FormControl<T, ComputePoints>
@@ -128,21 +129,46 @@ export type FormAnswerMetadata = ComputePoints & {
 }
 
 export class FormBuilder {
-  
+
   static group<T>(controlsConfig: ControlsConfig<T>, compute?: ComputeFunction<T>): FormGroup<T> {
-      return new FormGroup<T>(controlsConfig, compute);
-  }  
-  
+    return new FormGroup<T>(controlsConfig, compute);
+  }
+
   static answer<T>(validators: Validators<T>, metaData?: FormAnswerMetadata) {
     return new FormControl<T, FormAnswerMetadata>(undefined, validators, metaData)
   }
-  static answerValue<T>(value: T, metaData?: FormAnswerMetadata) {    
+  static answerValue<T>(value: T, metaData?: FormAnswerMetadata) {
     return new FormControl<T, FormAnswerMetadata>(undefined, CoreValidators.EqualValidator(value), metaData)
   }
-  static answerOption<T>(value: T, metaData?: FormAnswerMetadata) {    
+  static answerOption<T>(value: T, metaData?: FormAnswerMetadata) {
     return new FormControl<Option<T>, FormAnswerMetadata>(undefined, control => {
       // returns null if value is valid, or an error message otherwise 
       return control.value?.value === value ? undefined : { '': 'This value is invalid' };
     })
   }
+}
+
+export class FormConverter {
+  static convertTree<T>(tree: AnswerGroup<T>) {
+
+    const traverse = (node: AnswerNode<T>) => {
+      if (isGroup(node)) {
+        const children: ControlsConfig<any> = {}
+        for (let key in node.children) {
+          children[key] = traverse(node.children[key]);
+        }
+        return new FormGroup(children)
+
+      }
+      else {
+        return new FormControl(undefined, convertToValidators(node.verifyBy), node)
+      }
+    }
+    return traverse(tree) as FormGroup<T>
+  }
+
+}
+
+export function convertToValidators(verifyBy: any) {
+  return CoreValidators.EqualValidator(verifyBy)
 }

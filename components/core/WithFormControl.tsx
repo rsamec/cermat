@@ -26,6 +26,7 @@ function withControl<T, P extends ValueProps<T>>(
 
     const handleChange = (value: T) => {
       props.control.setValue(value);
+      props.onChange?.(value);
     };
 
     return <WrappedComponent {...props} value={value} onChange={handleChange} />;

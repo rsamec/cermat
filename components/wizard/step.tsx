@@ -2,12 +2,27 @@
 import { AnswerMetadata } from "@/lib/utils/form-answers";
 import { Option } from "@/lib/utils/utils";
 import * as React from "react";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
-function Step(props: {answer: AnswerMetadata<any>, options: string[]}) {
+function Loading() {
+  return <div>Loading</div>;
+}
+function Loaded(props: { form: {text:string} }) {
+  return <div>{JSON.stringify(props)}</div>;
+}
+function Step(props: { slug: string, answer?: AnswerMetadata<any>, options: string[] }) {
+  const [comp, setComp] = useState(Loading);
+  useEffect(() => {
+
+    const load = async () => {
+      const form = await import(`/public/${props.slug}.js`);
+      setComp(<Loaded form={form.default}></Loaded>);
+    }
+    load()
+  }, [props.slug])
+
   return (
-    <div>
-    </div>
+    <div>{comp}</div>
   );
 }
 

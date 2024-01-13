@@ -27,3 +27,16 @@ export function formatNumber(value: string) {
 export function cls(input: (string | boolean)[]) {
   return input.filter((cond: string | boolean) => typeof cond === "string").join(" ")
 }
+export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleSteps: number): T[] {
+  const totalSteps = steps.length;
+
+  // Calculate the start and end indices for the visible steps
+  let start = Math.max(0, currentStepIndex - Math.floor(maxVisibleSteps / 2));
+  let end = Math.min(totalSteps - 1, start + maxVisibleSteps - 1);
+
+  // Adjust the start index if needed to keep the end index within bounds
+  start = Math.max(0, end - maxVisibleSteps + 1);
+
+  // Return the filtered array of visible steps
+  return steps.slice(start, end + 1);
+};

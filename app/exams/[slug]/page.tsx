@@ -8,13 +8,12 @@ import { Metadata } from 'next'
 import { Maybe, absoluteUrl } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
-import { OptionList, Question, QuestionHtml, ShortCodeMarker, chunkByAbbreviationType, generateHeadingsList, renderHtmlTree } from '@/lib/utils/parser.utils'
+import { OptionList, QuestionHtml, ShortCodeMarker, chunkByAbbreviationType, generateHeadingsList, renderHtmlTree } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
-import math from '@/lib/exams/math'
-import Steps from '@/components/wizard/steps'
-import { FormControl } from '@/lib/utils/form.utils'
-import Step from '@/components/wizard/step'
-
+import Wizard from '@/components/wizard/wizard'
+import { loadJsonBySlug } from '@/lib/utils/file.utils'
+import { QuestionData } from '@/lib/models/quiz'
+ 
 const collection = 'exams';
 type Project = {
   tags: { value: string; label: string }[]
@@ -59,12 +58,22 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Exam(params: Params) {
-  const { project, moreProjects, content, quiz } = await getData(params);
-
-  const { config, leafs } = quiz;
-  const steps = config.getAllLeafNodes();
+  const { project, moreProjects, content, quiz, leafs } = await getData(params);
 
 
+  //const steps = config.getAllLeafNodes();
+
+  
+  // const dynamicForm = dynamic(() => import(`../../../lib/exams/${project.slug}`), {
+  //   ssr: false,
+  // })
+  
+  // console.log(dynamicForm);
+  const data: QuestionData[] = leafs.map(d => ({ 
+    content: d.ancestors.map(x => x.data.contentHtml).join(""),
+    options: d.leaf.data.options
+  }))
+  
   return (
     <Layout>
       <div className="max-w-6xl mx-auto px-5">
@@ -80,7 +89,7 @@ export default async function Exam(params: Params) {
               {project?.author?.name ? `by ${project?.author?.name}` : null}.
             </div>
 
-            {/* <Wizard contentChunks={leafs.map(d => d.ancestors.map(x => x.data.contentHtml).join(""))} ></Wizard> */}
+            <Wizard quiz={quiz}  leafs={data} ></Wizard>
             {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
                 {project.description}
               </div> */}
@@ -91,21 +100,22 @@ export default async function Exam(params: Params) {
                   const output = matchedLeaf.ancestors.map(d => d.data.contentHtml!).join("");
 
 
+                  // return (<Step slug={project.slug} options={[]} ></Step>)
                   return (<div key={i}>
                     <div className="prose lg:prose-xl flex flex-col space-y-2"
                       dangerouslySetInnerHTML={{ __html: output }} />                    
                   </div>
                   )
                 })}
-            </div>
-             */}
+            </div> */}
+            
 
-            <div className="max-w-2xl mx-auto">
+            {/* <div className="max-w-2xl mx-auto">
               <div
                 className="prose lg:prose-xl flex flex-col space-y-2"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
-            </div>
+            </div> */}
 
 
           </div>
@@ -153,12 +163,7 @@ async function getData({ params }: Params) {
   //console.log(leafs.map(d => d.leaf.data.options))
   //const contentTree = renderHtmlTree(parsedTree)
 
-  const quiz = {
-    config: math,
-    leafs,
-  }
-
-
+  const quiz = await loadJsonBySlug(params.slug);
   //console.log( headings.map(d => d.type?.name))
   //console.log(headings.map(d => d.type?.name + ":" + (d.header != "" ? d.header : d.nextHeader) + ":" + (/./.test(d.content))))
 
@@ -183,6 +188,7 @@ async function getData({ params }: Params) {
     project,
     content,
     quiz,
+    leafs,
     moreProjects
   }
 }

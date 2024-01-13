@@ -4,9 +4,24 @@ import { models, RootModel } from "./models";
 
 export const store = init({
   models,
-   // add selectPlugin to your store
-   plugins: [selectPlugin()],
+  // add selectPlugin to your store
+  plugins: [selectPlugin()],
 });
+
+// export const initializeStore = (initialState?: Partial<RootState>) => {
+//   const store = init({
+//     models,
+//     plugins: [selectPlugin()],      
+//     redux: {
+//       initialState,
+//     },
+//   });
+
+//   return {store};
+// };
+
+
+
 export type Store = typeof store;
 export type Dispatch = RematchDispatch<RootModel>;
 export type RootState = RematchRootState<RootModel>;

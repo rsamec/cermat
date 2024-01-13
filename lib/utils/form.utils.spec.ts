@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { ComputePoints, FormControl, FormGroup, } from './form.utils';
+import { ComputePoints, FormControl, FormConverter, FormGroup, } from './form.utils';
 import { CoreValidators } from './validators';
 import { Maybe } from './utils';
 import { AnswerBuilder } from './form-answers';
@@ -65,4 +65,22 @@ test('compute points - custom compute', () => {
   // all correct answers - 4 points
   form.controls['11.3'].setValue(false);
   expect(form.validateAndCompute()).toBe(4);
+})
+
+test('compute points', () => {
+  const formSpec = AnswerBuilder.group({
+    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputType: 'number' },
+    2: AnswerBuilder.group({
+      2.1: { verifyBy: { kind: "equal", args: 1.2 }, points: 2, },
+      2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, },
+    }),
+  })
+
+
+  const form = FormConverter.convertTree(formSpec);
+
+
+  // no answers
+  //expect(form.validateAndCompute()).toBe(0);
+
 })

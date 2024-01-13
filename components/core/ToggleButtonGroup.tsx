@@ -2,7 +2,7 @@
 
 import React from 'react';
 import withControl, { ValueProps } from './WithFormControl';
-import { Maybe } from '@/lib/utils/form.utils';
+import { Maybe } from '@/lib/utils/utils';
 
 type ToggleButtonGroupProps<T> = ValueProps<T> & {
   options: T[];

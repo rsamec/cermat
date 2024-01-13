@@ -1,0 +1,314 @@
+{
+  "children": {
+    "1": {
+      "verifyBy": {
+        "kind": "equal",
+        "args": 20
+      },
+      "points": 1,
+      "inputType": "number"
+    },
+    "2": {
+      "children": {
+        "2.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 20
+          },
+          "points": 2,
+          "inputType": "number"
+        },
+        "2.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 1600000
+          },
+          "points": 1,
+          "inputType": "number"
+        }
+      }
+    },
+    "3": {
+      "children": {
+        "3.1": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              4,
+              9
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "3.2": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              -2,
+              7
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "3.3": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              5,
+              14
+            ]
+          },
+          "points": 2,
+          "inputType": "text"
+        }
+      }
+    },
+    "4": {
+      "children": {
+        "4.1": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              4,
+              9
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "4.2": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              -2,
+              7
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "4.3": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              5,
+              14
+            ]
+          },
+          "points": 2,
+          "inputType": "text"
+        }
+      }
+    },
+    "5": {
+      "children": {
+        "5.1": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              4,
+              9
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "5.2": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              -2,
+              7
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        }
+      }
+    },
+    "6": {
+      "children": {
+        "6.1": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              4,
+              9
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "6.2": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              -2,
+              7
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        }
+      }
+    },
+    "7": {
+      "children": {
+        "7.1": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              4,
+              9
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "7.2": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              -2,
+              7
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "7.3": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              5,
+              14
+            ]
+          },
+          "points": 2,
+          "inputType": "text"
+        }
+      }
+    },
+    "8": {
+      "children": {
+        "8.1": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              4,
+              9
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "8.2": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              -2,
+              7
+            ]
+          },
+          "points": 1,
+          "inputType": "text"
+        },
+        "8.3": {
+          "verifyBy": {
+            "kind": "equalFraction",
+            "args": [
+              5,
+              14
+            ]
+          },
+          "points": 2,
+          "inputType": "text"
+        }
+      }
+    },
+    "9": {
+      "verifyBy": {
+        "kind": "selfEvaluate",
+        "args": {
+          "options": [
+            {
+              "value": 0,
+              "name": "0 bodů"
+            },
+            {
+              "value": 1,
+              "name": "1 bod"
+            },
+            {
+              "value": 2,
+              "name": "2 body"
+            }
+          ]
+        }
+      },
+      "points": 1
+    },
+    "10": {
+      "verifyBy": {
+        "kind": "selfEvaluate",
+        "args": {
+          "options": [
+            {
+              "value": 0,
+              "name": "0 bodů"
+            },
+            {
+              "value": 1,
+              "name": "1 bod"
+            },
+            {
+              "value": 2,
+              "name": "2 body"
+            }
+          ]
+        }
+      },
+      "points": 1
+    },
+    "11": {
+      "children": {
+        "11.1": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": false
+          },
+          "inputType": "boolean"
+        },
+        "11.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": true
+          },
+          "inputType": "boolean"
+        },
+        "11.3": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": false
+          },
+          "inputType": "boolean"
+        }
+      },
+      "metadata": {
+        "compute": {
+          "kind": "group"
+        }
+      }
+    },
+    "12": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "B"
+      },
+      "points": 1,
+      "inputType": "options"
+    }
+  }
+}

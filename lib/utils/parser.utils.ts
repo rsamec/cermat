@@ -63,12 +63,12 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
   })
   return chunks.length > 0 ? chunks : [input];
 }
-export type Question = { type?: { name: string }, header: string, content: string, nextHeader: string, options: string[] };
-export type QuestionHtml = Question & { contentHtml: string }
+export type ParsedQuestion = { type?: { name: string }, header: string, content: string, nextHeader: string, options: string[] };
+export type QuestionHtml = ParsedQuestion & { contentHtml: string }
 export type State = { position: number, node?: { type: NodeType, from: number, to: number }, options: string[] }
 export function generateHeadingsList(tree: Tree, input: string) {
 
-  const children: Question[] = [];
+  const children: ParsedQuestion[] = [];
   const isHeading = (type: NodeType) => type.name == Abbreviations.H1 || type.name == Abbreviations.H2;
   let lastState: State = { position: 0, options: [] }
 

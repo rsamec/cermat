@@ -1,6 +1,5 @@
-import { AnswerBuilder } from "../utils/form-answers";
-import { Maybe } from "../utils/utils";
-import { CoreValidators } from "../utils/validators";
+import { AnswerBuilder } from "./utils/form-answers";
+import { CoreValidators } from "./utils/validators";
 
 const form = AnswerBuilder.group({
   1: { verifyBy: CoreValidators.EqualValidator(20), points: 1, inputType: 'number' },
@@ -22,7 +21,7 @@ const form = AnswerBuilder.group({
     11.3: { verifyBy: CoreValidators.EqualOptionValidator(false) },
   }, {
     compute: (points) => {
-      const arr = Object.entries(points).map(([, d]) => d as Maybe<number>);
+      const arr = Object.entries(points).map(([, d]) => d);
       const succesAnswersCount = arr.filter(d => d).length;
       return succesAnswersCount === 0 ? 0 : succesAnswersCount === arr.length ? 2 : 1
     }
