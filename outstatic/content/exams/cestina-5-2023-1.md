@@ -1,7 +1,7 @@
 ---
 year: '2023'
 subject: 'cz'
-coverImage: ''
+coverImage: '/images/cz.png'
 description: ''
 slug: 'cestina-5-2023-1'
 author:
