@@ -3,6 +3,7 @@ import * as React from "react";
 import WizardStep from "./wizard-step";
 import { RootState, store } from "@/lib/store";
 import { connect } from "react-redux";
+import Stepper from "./stepper";
 
 
 const selection = store.select((models) => ({
@@ -13,16 +14,19 @@ const selection = store.select((models) => ({
 
 const mapState = (state: RootState) => ({
   ...state.quiz,
-  ...selection(state),
+  ...selection(state as never),
 })
 
 type StateProps = ReturnType<typeof mapState>;
 
 const StepsRenderer: React.FC<StateProps> = ({ currentStep, currentAnswerState }) => {
-  if (currentStep == null){
+  if (currentStep == null) {
     return <div>Loading....</div>
   }
-  return <WizardStep question={currentStep} answerState={currentAnswerState} ></WizardStep>
+  return <div className="flex flex-col gap-5">
+    <Stepper></Stepper>
+    <WizardStep question={currentStep} answerState={currentAnswerState} ></WizardStep>
+  </div>
 };
 
 

@@ -17,7 +17,7 @@ const selection = store.select((models) => ({
 
 const mapState = (state: RootState) => ({
   ...state.quiz,
-  ...selection(state),
+  ...selection(state as never),
 })
 
 const mapDispatch = (dispatch: Dispatch) => ({

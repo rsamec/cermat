@@ -11,7 +11,6 @@ import { AnswerMetadata } from "@/lib/utils/form-answers";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import { extractContentInSquareBrackets } from "@/lib/utils/parser.utils";
-import Badge from "../core/Badge";
 import IconBadge from "../core/IconBadge";
 import { faThumbsUp, faThumbsDown, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -95,13 +94,13 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
       <div
         className="prose lg:prose-xl bg-white p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 flex flex-col space-y-2"
-        dangerouslySetInnerHTML={{ __html: question.data?.content }}
+        dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
       />
 
 
       <div>
 
-        {hasInput ? renderInput(question, formControl, setAnswer) : null}
+        {hasInput ? renderInput(question, formControl as any, setAnswer) : null}
 
         {!hasInput ?
           <div>

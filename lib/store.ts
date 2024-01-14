@@ -5,22 +5,8 @@ import { models, RootModel } from "./models";
 export const store = init({
   models,
   // add selectPlugin to your store
-  plugins: [selectPlugin()],
+  plugins: [selectPlugin() as any],
 });
-
-// export const initializeStore = (initialState?: Partial<RootState>) => {
-//   const store = init({
-//     models,
-//     plugins: [selectPlugin()],      
-//     redux: {
-//       initialState,
-//     },
-//   });
-
-//   return {store};
-// };
-
-
 
 export type Store = typeof store;
 export type Dispatch = RematchDispatch<RootModel>;
