@@ -1,6 +1,7 @@
 import { NodeType, SyntaxNodeRef, Tree } from "@lezer/common";
 import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
 import { tags as t } from "@lezer/highlight";
+import { PositionChunk, excludeChunks } from "./utils";
 
 export const Abbreviations = {
   H1: "ATXHeading1",
@@ -65,34 +66,42 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
 }
 export type ParsedQuestion = { type?: { name: string }, header: string, content: string, nextHeader: string, options: string[] };
 export type QuestionHtml = ParsedQuestion & { contentHtml: string }
-export type State = { position: number, node?: { type: NodeType, from: number, to: number }, options: string[] }
+export type State = { position: number, node?: { type: NodeType, from: number, to: number }, options: string[], excludeChunks: PositionChunk[] }
 export function generateHeadingsList(tree: Tree, input: string) {
 
   const children: ParsedQuestion[] = [];
   const isHeading = (type: NodeType) => type.name == Abbreviations.H1 || type.name == Abbreviations.H2;
-  let lastState: State = { position: 0, options: [] }
+  let lastState: State = { position: 0, options: [], excludeChunks: [] }
 
   tree.iterate({
     enter({ type, from, to }: SyntaxNodeRef) {
       if (isHeading(type) || (type.name == Abbreviations.HR)) {
 
+        const computedExcludeChunks = lastState.excludeChunks.map(d => ({
+          from: d.from - lastState.position,
+          to: d.to - lastState.position,
+        }))
+
         children.push({
           nextHeader: input.substring(from, to),
           type: lastState.node != null ? lastState.node?.type : { name: "HorizontalRule" },
           header: lastState.node != null && lastState.node.type.name != Abbreviations.HR ? input.substring(lastState.node.from, lastState.node.to) : '',
-          content: input.substring(lastState.position, from),
+          content: excludeChunks(input.substring(lastState.position, from), computedExcludeChunks),
           options: lastState.options
         })
-        lastState = { position: to, node: { type, from, to }, options: [] };
+        lastState = { position: to, node: { type, from, to }, options: [], excludeChunks: [] };
       }
-
+    
       if (type.name == "Option") {
         lastState.options?.push(input.substring(from, to))
       }
 
     },
     leave({ type, from, to }: SyntaxNodeRef) {
+      if (type.name == Abbreviations.BL &&  lastState.options?.length > 0) {        
+        lastState.excludeChunks.push({ from, to })
 
+      }
     }
   })
   return children;
@@ -137,4 +146,12 @@ export const ShortCodeMarker: MarkdownConfig = {
       return cx.addElement(cx.elt("ShortCodeMarker", pos, pos + 1 + match[0].length))
     },
   }]
+}
+
+export function extractContentInSquareBrackets(inputString: string) {
+  const regex = /^\[([\w\d]*)\][ \t]/; // Regular expression to match content inside square brackets
+  const match = inputString.match(regex);
+
+  // If there is a match, return the content inside square brackets (group 1)
+  return match ? match[1] : null;
 }

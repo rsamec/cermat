@@ -9,8 +9,7 @@ const Footer = () => {
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-l"> KONTAKTNÍ ÚDAJE</h3>
               <div>
-                <p>Telefonní číslo: <strong> +420 .......</strong></p>
-                <p>E-mail: <strong><a href="mailto:roman.samec2@gmail.com">roman.samec2@gmail.com</a></strong></p>
+                <p>E-mail: <strong>TODO</strong></p>
               </div>
             </div>
 
@@ -38,7 +37,7 @@ const Footer = () => {
       <footer className="bg-black text-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-5 p-5">
           <div className="flex">
-            <p className="text-sm flex-1 text-slate-400">© 2018 - 2024</p>
+            <p className="text-sm flex-1 text-slate-400">© 2018 - 2024 - MIT Licenced</p>
           </div>
         </div>
 

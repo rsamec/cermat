@@ -1,0 +1,12 @@
+{
+  "children": {
+    "1": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "B"
+      },
+      "points": 1,
+      "inputType": "options"
+    }
+  }
+}

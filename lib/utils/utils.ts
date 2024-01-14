@@ -40,3 +40,31 @@ export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleS
   // Return the filtered array of visible steps
   return steps.slice(start, end + 1);
 };
+
+
+export type PositionChunk = {
+  from: number;
+  to: number;
+};
+
+export function excludeChunks(inputString: string, chunks: PositionChunk[]): string {
+  if (chunks.length === 0) {
+    return inputString; // No chunks to exclude, return the original string
+  }
+
+  // Sort chunks by start index in descending order
+  const sortedChunks = chunks.sort((a, b) => b.from - a.from);
+
+  let result = inputString;
+  for (const chunk of sortedChunks) {
+    const { from: start, to: end } = chunk;
+    
+    // Ensure start and end indices are within the bounds of the string
+    if (start >= 0 && end <= result.length && start <= end) {
+      // Exclude the chunk from the result string
+      result = result.slice(0, start) + result.slice(end);
+    }
+  }
+
+  return result;
+}

@@ -59,23 +59,25 @@ export const quiz = createModel<RootModel>()({
 			if (question == null) {
 				throw `Question ${questionId} does not exist.`;
 			}
+			const corrections = {
+				...state.corrections,
+				[questionId]: verifyQuestion(question, answer)
+			}
 			return {
 				...state,
 				answers: {
 					...state.answers,
 					[questionId]: answer,
 				},
-				corrections: {
-					...state.corrections,
-					[questionId]: verifyQuestion(question, answer)
-				}
+				corrections,
+				totalPoints: calculateTotalPoints(state, corrections)
 			};
 		},
 		submitQuiz(state) {
 			return {
 				...state,
 				corrections: calculateCorrections(state),
-				totalPoints: calculateTotalPoints(state),
+				totalPoints: calculateTotalPoints(state, state.corrections),
 			};
 		},
 		goToNextStep(state) {
@@ -153,20 +155,42 @@ const verifyQuestion = (question: Question, answer: string) => {
 	return validator(answer) == null;
 }
 
-const calculateTotalPoints = (state: QuizState) => {
-	const { corrections } = state;
+
+const calculateTotalPoints = (state: QuizState, corrections: Record<string, boolean>) => {
 	let totalPoints = 0;
-	if (state.tree == null) return totalPoints;
+	const tree = state.tree;
+	if (tree == null) return totalPoints;
 
-	// state.group.forEach((group) => {
-	// 	const groupCorrect = group.children.every(
-	// 		(child) => 'questions' in child || corrections[(child as Question).id]
-	// 	);
+	const calculateSum = (children: Question[]) => children.reduce((out, d) => out += corrections[d.id] ? (d.metadata.points ?? 0) : 0, 0)
+	const calculateCustom = (children: Question[]) => {
+		const successCount = children.map(d => corrections[d.id]).filter(d => d).length;
+		return successCount == children.length ? 4 : successCount >= 2 ? 2 : 0
+	}
 
-	// 	if (groupCorrect) {
-	// 		totalPoints += group.points;
-	// 	}
-	// });
+	const traverse = (node: TreeNode<Question | QuestionGroup>, leafs: Question[]) => {
+		let total = 0;
+
+		// Check if the current node is a leaf (no children)
+		if (!node.children || node.children.length === 0) {
+			leafs.push(node.data as Question);
+		}
+		else {
+			const group = node.data as QuestionGroup;
+			//clear leafs for each composite node
+			leafs = []
+			// Recursively calculate total points for each child node						
+			for (const childNode of node.children) {
+				total += traverse(childNode, leafs);
+			}
+
+			//points for leafs
+			total += leafs.length > 0 ? (group.metadata?.compute != null ? calculateCustom(leafs) : calculateSum(leafs)) : 0;
+		}
+		return total
+	}
+
+	totalPoints = traverse(tree, [])
 
 	return totalPoints;
+
 };

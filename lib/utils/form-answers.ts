@@ -122,7 +122,7 @@ export class CoreVerifyiers {
 
   static EqualOptionValidator<T>(value: T) {
     return (control: Option<T>) => {
-      return control.value === value ? undefined : { '': 'This value is invalid' };
+      return control.value === value ? undefined : { 'value': control.value };
     }
   }
 
