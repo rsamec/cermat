@@ -75,3 +75,10 @@ li > ol {
   }
 
 }
+
+body.background {
+  /* background-image: linear-gradient(to right bottom, #dde7f6, #c4d9f8, #abcbfa, #90bdfc, #72affd);   */
+  /* background-image: linear-gradient(to right top, #dad8ff, #cdcbff, #bfbeff, #b0b1ff, #a1a5ff, #84acff, #63b1ff, #3cb6ff, #00c9ff, #00dbff, #28ecfb, #5ffbf1); */
+  /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+  /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+}

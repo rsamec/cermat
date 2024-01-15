@@ -6,3 +6,7 @@ export default async function Page({ params }: { params: { ost: string[] } }) {
   const ostData = await Outstatic()
   return <OstClient ostData={ostData} params={params} />
 }
+
+export async function generateStaticParams() {
+  return [];
+}
