@@ -12,6 +12,7 @@ if (hasRepoSlug) {
 }
 
 const production = process.env.NODE_ENV === 'production' || false;
+console.log("PROD", production)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withExportImages({
