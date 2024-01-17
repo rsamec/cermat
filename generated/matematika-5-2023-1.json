@@ -85,7 +85,17 @@
       },
       "metadata": {
         "computeBy": {
-          "kind": "group"
+          "kind": "group",
+          "args": [
+            {
+              "points": 2,
+              "min": 2
+            },
+            {
+              "points": 4,
+              "min": 3
+            }
+          ]
         }
       }
     },

@@ -21,8 +21,8 @@ const form = group({
     11.2: { verifyBy: { kind: 'equalOption', args: true } },
     11.3: { verifyBy: { kind: 'equalOption', args: false } },
   }, {
-    computeBy: {
-      kind: 'group'
+    computeBy: {      
+      kind: 'group', args: [{ points: 2, min: 2 }, { points: 4, min: 3 }]
     }
   }),
   12: { verifyBy: { kind: 'equalOption', args: 'B' }, points: 1 },
