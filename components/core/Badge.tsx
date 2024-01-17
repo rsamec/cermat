@@ -1,8 +1,6 @@
 import { cls } from '@/lib/utils/utils';
 import React, { ChangeEvent } from 'react';
 
-
-
 type BadgeProps =  {
   text: string,
   type: "Success" | "Danger" | "Warning"

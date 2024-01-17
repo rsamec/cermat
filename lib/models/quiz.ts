@@ -1,8 +1,8 @@
-// src/models/quiz.ts
 import { createModel } from '@rematch/core';
 import { RootModel } from './index';
 import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
-import { AnswerGroup, AnswerGroupMetadata, AnswerMetadata, convertTree, getVerifyFunction } from '../utils/form-answers';
+import { AnswerGroup, AnswerGroupMetadata, AnswerMetadata, convertTree } from '../utils/quiz-specification';
+import { getVerifyFunction } from '../utils/catalog-function';
 
 export interface Question {
 	id: string;
@@ -24,19 +24,22 @@ export interface QuizState {
 	corrections: Record<string, boolean>;
 	totalPoints: number;
 }
+
 export type AnswerStatus = 'correct' | 'incorrect' | 'unanswered';
 export type AnswerState = { value: any, status: AnswerStatus }
 
 export type QuestionData = { content: string, options: string[] }
 
+const initState: QuizState = {
+	questions: [],
+	currentStep: null,
+	answers: {},
+	corrections: {},
+	totalPoints: 0,
+}
+
 export const quiz = createModel<RootModel>()({
-	state: {
-		questions: [],
-		currentStep: null,
-		answers: {},
-		corrections: {},
-		totalPoints: 0,
-	} as QuizState,
+	state: {...initState},
 	reducers: {
 		init(state, { quiz, leafs }: { quiz: AnswerGroup<any>, leafs: QuestionData[] }) {
 
@@ -48,7 +51,7 @@ export const quiz = createModel<RootModel>()({
 			} as Question))
 
 			return {
-				...state,
+				...initState,
 				tree,
 				questions,
 				currentStep: questions.length > 0 ? questions[0] : null,
@@ -184,7 +187,7 @@ const calculateTotalPoints = (state: QuizState, corrections: Record<string, bool
 			}
 
 			//points for leafs
-			total += leafs.length > 0 ? (group.metadata?.compute != null ? calculateCustom(leafs) : calculateSum(leafs)) : 0;
+			total += leafs.length > 0 ? (group.metadata?.computeBy != null ? calculateCustom(leafs) : calculateSum(leafs)) : 0;
 		}
 		return total
 	}

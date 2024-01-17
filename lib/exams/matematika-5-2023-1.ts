@@ -1,9 +1,9 @@
-import { AnswerBuilder } from "../utils/form-answers";
+import { AnswerBuilder } from "../utils/quiz-specification";
 
 const group = AnswerBuilder.group;
 
 const form = group({
-  1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputType: 'number' },
+  1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy: {kind: 'number'} },
   2: group({
     2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, },
     2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, },
@@ -21,7 +21,7 @@ const form = group({
     11.2: { verifyBy: { kind: 'equalOption', args: true } },
     11.3: { verifyBy: { kind: 'equalOption', args: false } },
   }, {
-    compute: {
+    computeBy: {
       kind: 'group'
     }
   }),

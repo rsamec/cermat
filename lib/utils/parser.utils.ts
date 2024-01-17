@@ -1,7 +1,6 @@
 import { NodeType, SyntaxNodeRef, Tree } from "@lezer/common";
 import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
 import { tags as t } from "@lezer/highlight";
-import { PositionChunk, excludeChunks } from "./utils";
 
 export const Abbreviations = {
   H1: "ATXHeading1",
@@ -154,4 +153,32 @@ export function extractContentInSquareBrackets(inputString: string) {
 
   // If there is a match, return the content inside square brackets (group 1)
   return match ? match[1] : null;
+}
+
+
+export type PositionChunk = {
+  from: number;
+  to: number;
+};
+
+export function excludeChunks(inputString: string, chunks: PositionChunk[]): string {
+  if (chunks.length === 0) {
+    return inputString; // No chunks to exclude, return the original string
+  }
+
+  // Sort chunks by start index in descending order
+  const sortedChunks = chunks.sort((a, b) => b.from - a.from);
+
+  let result = inputString;
+  for (const chunk of sortedChunks) {
+    const { from: start, to: end } = chunk;
+    
+    // Ensure start and end indices are within the bounds of the string
+    if (start >= 0 && end <= result.length && start <= end) {
+      // Exclude the chunk from the result string
+      result = result.slice(0, start) + result.slice(end);
+    }
+  }
+
+  return result;
 }

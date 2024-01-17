@@ -1,11 +1,11 @@
 import { test, expect } from "vitest";
-import { AnswerBuilder, ValidationFunctionSpec, convertTree } from "./form-answers";
+import { AnswerBuilder, convertTree } from "./quiz-specification";
 import { getAllLeafsWithAncestors } from "./tree.utils";
 
 test('get all leafs with ancestors', () => {
 
   const form = AnswerBuilder.group({
-    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputType: 'number' },
+    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy: 'number' },
     2: AnswerBuilder.group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, },
@@ -23,7 +23,7 @@ test('get all leafs with ancestors', () => {
       11.2: { verifyBy: { kind: 'equalOption', args: true } },
       11.3: { verifyBy: { kind: 'equalOption', args: false } },
     }, {
-      compute: {
+      computeBy: {
         kind: 'group'
       }
     }),
@@ -39,7 +39,7 @@ test('get all leafs with ancestors', () => {
 test('convert answer tree', () => {
 
   const form = AnswerBuilder.group({
-    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputType: 'number' },
+    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy: {kind: 'number'} },
     2: AnswerBuilder.group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, },
@@ -53,11 +53,11 @@ test('convert answer tree', () => {
       }
     }),
     11: AnswerBuilder.group({
-      11.1: { verifyBy: { kind: 'equalOption', args: false } },
+      11.1: { verifyBy: { kind: 'equalOption', args: false } , inputBy: {kind:'bool'}},
       11.2: { verifyBy: { kind: 'equalOption', args: true } },
       11.3: { verifyBy: { kind: 'equalOption', args: false } },
     }, {
-      compute: {
+      computeBy: {
         kind: 'group'
       }
     }),
@@ -76,15 +76,3 @@ test('convert answer tree', () => {
 
   expect(leafs.length).toBe(10);
 })
-
-
-test('execute verifiers', () => {
-  const verifyBy =  {
-    kind: 'equal',
-    args: true,
-  }
-
-  expect(verifyBy)
-})
-
-

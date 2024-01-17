@@ -1,17 +1,15 @@
 import { BehaviorSubject, Observable } from "rxjs";
 import { Maybe, Option } from "./utils";
-import { ComputeFunction, CoreValidators, GroupPoints, GroupValidationResult, ValidationFunction, Validators } from "./validators";
-import { AnswerGroup, AnswerNode, isGroup } from "./form-answers";
+import { CoreValidators, GroupValidationResult, ValidationFunction, Validators } from "./validators";
 
 export interface AbstractControl<T> {
-  isLeaf(): this is FormControl<T, ComputePoints>
+  isLeaf(): this is FormControl<T>
 }
-export type ComputePoints = { points?: number }
-export class FormControl<T, M extends ComputePoints> implements AbstractControl<T> {
+export class FormControl<T> implements AbstractControl<T> {
   private _value: BehaviorSubject<Maybe<T>>;
   private _validations: ValidationFunction<T>[] = [];
 
-  constructor(value: Maybe<T>, validations?: Validators<T>, public config?: M) {
+  constructor(value: Maybe<T>, validations?: Validators<T>) {
     this._value = new BehaviorSubject(value);
     this._validations = validations !== undefined ? Array.isArray(validations) ? validations : [validations] : []
   }
@@ -43,18 +41,13 @@ export class FormControl<T, M extends ComputePoints> implements AbstractControl<
   }
 }
 
-function sum<T>(points: GroupPoints<T>) {
-  return Object.entries(points).map(([, d]) => d as number).filter(d => d != null).reduce((out, d) => out += d, 0);
-}
 export type ControlsConfig<T> = { [K in keyof T]: T[K] };
 
 export class FormGroup<T> implements AbstractControl<T> {
   controls: ControlsConfig<T>;
-  private _compute: ComputeFunction<T>;
 
-  constructor(controlsConfig: ControlsConfig<T>, compute: ComputeFunction<T> = sum) {
+  constructor(controlsConfig: ControlsConfig<T>) {
     this.controls = controlsConfig;
-    this._compute = compute;
   }
 
   // setValues(values: Partial<T>): void {
@@ -75,100 +68,44 @@ export class FormGroup<T> implements AbstractControl<T> {
         if (control) {
           if (control.isLeaf()) {
             // console.log(key, result, control.value);
-            childrenResult[key] = control.validate()
+            const result = control.validate()
+            if (result != null) {
+              childrenResult[key] = result
+            }
 
           }
           else {
             //recursive calls
-            childrenResult[key] = (control as FormGroup<T>).validate()
+            const result = (control as FormGroup<T>).validate();
+            if (result != null) {
+              childrenResult[key] = result;
+            }
           }
         }
       }
     }
-    return childrenResult;
+    return Object.keys(childrenResult).length > 0 ? childrenResult: null;
   }
 
-  validateAndCompute() {
-    const result = this.validate();
-    console.log(result)
-    return this.compute(result);
-  }
-
-  compute(validationResult: GroupValidationResult) {
-    const childrenPoints = {} as GroupPoints<T>
-
-    for (const key in this.controls) {
-      if (this.controls.hasOwnProperty(key)) {
-        const control = this.controls[key] as AbstractControl<T>;
-        const result = validationResult[key];
-        if (control) {
-
-          if (control.isLeaf()) {
-            // console.log(key, result, control.value);
-            childrenPoints[key] = result == null ? control.config?.points ?? 0 : undefined
-
-          }
-          else if (result != null) {
-            //recursive calls
-            childrenPoints[key] = (control as FormGroup<T>).compute(result)
-          }
-        }
-      }
-    }
-    return this._compute(childrenPoints);
-
-  }
   isLeaf() {
     return false;
   }
 }
 
-
-export type FormAnswerMetadata = ComputePoints & {
-  deductions?: [number, string][]
-}
-
 export class FormBuilder {
-
-  static group<T>(controlsConfig: ControlsConfig<T>, compute?: ComputeFunction<T>): FormGroup<T> {
-    return new FormGroup<T>(controlsConfig, compute);
+  static group<T>(controlsConfig: ControlsConfig<T>): FormGroup<T> {
+    return new FormGroup<T>(controlsConfig);
   }
 
-  static answer<T>(validators: Validators<T>, metaData?: FormAnswerMetadata) {
-    return new FormControl<T, FormAnswerMetadata>(undefined, validators, metaData)
+  static answer<T>(validators: Validators<T>) {
+    return new FormControl<T>(undefined, validators)
   }
-  static answerValue<T>(value: T, metaData?: FormAnswerMetadata) {
-    return new FormControl<T, FormAnswerMetadata>(undefined, CoreValidators.EqualValidator(value), metaData)
+  static answerValue<T>(value: T) {
+    return new FormControl<T>(undefined, CoreValidators.EqualValidator(value))
   }
-  static answerOption<T>(value: T, metaData?: FormAnswerMetadata) {
-    return new FormControl<Option<T>, FormAnswerMetadata>(undefined, control => {
-      // returns null if value is valid, or an error message otherwise 
+  static answerOption<T>(value: T) {
+    return new FormControl<Option<T>>(undefined, control => {
       return control.value?.value === value ? undefined : { '': 'This value is invalid' };
     })
   }
-}
-
-export class FormConverter {
-  static convertTree<T>(tree: AnswerGroup<T>) {
-
-    const traverse = (node: AnswerNode<T>) => {
-      if (isGroup(node)) {
-        const children: ControlsConfig<any> = {}
-        for (let key in node.children) {
-          children[key] = traverse(node.children[key]);
-        }
-        return new FormGroup(children)
-
-      }
-      else {
-        return new FormControl(undefined, convertToValidators(node.verifyBy), node)
-      }
-    }
-    return traverse(tree) as FormGroup<T>
-  }
-
-}
-
-export function convertToValidators(verifyBy: any) {
-  return CoreValidators.EqualValidator(verifyBy)
 }

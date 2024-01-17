@@ -1,12 +1,13 @@
 /* eslint-disable react/display-name */
 import { FormControl } from '@/lib/utils/form.utils';
 import React, { useEffect, useState } from 'react';
+
 export interface ValueProps<T> {
   value?: T;
   onChange?: (value?:T) => void;
 }
 export interface withFormControl<T> {
-  control: FormControl<T, any>;
+  control: FormControl<T>;
 }
 
 function withControl<T, P extends ValueProps<T>>(

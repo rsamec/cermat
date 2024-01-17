@@ -6,7 +6,9 @@
         "args": 20
       },
       "points": 1,
-      "inputType": "number"
+      "inputBy": {
+        "kind": "number"
+      }
     },
     "2": {
       "children": {
@@ -82,7 +84,7 @@
         }
       },
       "metadata": {
-        "compute": {
+        "computeBy": {
           "kind": "group"
         }
       }

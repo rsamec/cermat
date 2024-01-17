@@ -6,8 +6,7 @@ import { AnswerState, Question } from "@/lib/models/quiz";
 import InputNumber from "../core/InputNumber";
 import { FormControl } from "@/lib/utils/form.utils";
 import TextInput from "../core/TextInput";
-import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/input-builder";
-import { AnswerMetadata } from "@/lib/utils/form-answers";
+import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/component.utils";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 import { extractContentInSquareBrackets } from "@/lib/utils/parser.utils";
@@ -45,23 +44,48 @@ function inputGroup(input: React.ReactNode, button: React.ReactNode, { prefix, s
 
 }
 
-function renderInput(question: Question, control: FormControl<any, AnswerMetadata<any>>, setAnswer: any) {
+function renderInput(question: Question, control: FormControl<any>, setAnswer: any) {
 
-  if (question.metadata.inputType === "number") {
+  const inputBy = question.metadata.inputBy;
+  if (inputBy == null) return null;
+
+  if (inputBy.kind === "number") {
+
     return inputGroup(
       <InputNumber control={control} className="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base text-right font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary" ></InputNumber>,
       <button className="btn btn-blue" onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
-      {})
+      inputBy.args ?? {})
   }
-  else if (question.metadata.inputType === "text") {
+  else if (inputBy.kind === "text") {
     return inputGroup(<TextInput control={control} className="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base text-right font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"></TextInput>,
       <button className="btn btn-blue" onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
-      {})
+      inputBy.args ?? {})
   }
-  else if (question.metadata.inputType === "boolean") {
+  else if (inputBy.kind === "math") {
+
+
+    const input = inputGroup(<TextInput control={control} className="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base text-right font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"></TextInput>,
+      <button className="btn btn-blue" onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
+      inputBy.args ?? {})
+    return inputBy.args?.hintType != null ? <div>
+      {input}
+      {inputBy.args.hintType == "expression" ?
+        <span>
+          x2 zapište jako x2.
+          Výsledek s násobením závorek zapište jako x(x+1).</span>
+        : inputBy.args.hintType == "fraction" ?
+          <span>Zlomkovou čáru zapište pomocí /.</span>
+          : inputBy.args.hintType == "equation" ?
+            <span>Nemá řešení zapište NŘ, nekonečno mnoho řešení zapište NM, jinak zapište číslo.</span>
+            : inputBy.args.hintType == "ratio" ?
+              <span>Poměr zapište jako 1:1.</span> : null
+      }
+    </div> : input
+  }
+  else if (inputBy.kind === "bool") {
     return createBoolAnswer(control, (value) => setAnswer({ questionId: question.id, answer: value }))
   }
-  else if (question.metadata.inputType === "options") {
+  else if (inputBy.kind === "options") {
     return createOptionAnswer(control,
       question.data?.options != null ? question.data?.options?.map(d => ({ name: d, value: extractContentInSquareBrackets(d) })) : [],
       (value) => setAnswer({ questionId: question.id, answer: value }));
@@ -85,7 +109,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
 
 
-  const hasInput = question.metadata.inputType != null;
+  const hasInput = question.metadata.inputBy != null;
 
   const disabled = (status === "correct")
 

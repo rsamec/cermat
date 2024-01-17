@@ -6,7 +6,9 @@
         "args": "B"
       },
       "points": 1,
-      "inputType": "options"
+      "inputBy": {
+        "kind": "options"
+      }
     }
   }
 }
