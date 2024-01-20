@@ -18,7 +18,7 @@ import { absoluteUrl } from './utils';
 function transformImgSrc() {
   return (tree:any, file:any) => {
     visit(tree, 'paragraph', node => {
-      const image = node.children.find(child => child.type === 'image');
+      const image = node.children.find((child:{type:string}) => child.type === 'image');
       if (image) {        
         image.url =  absoluteUrl(image.url);
       }
