@@ -18,7 +18,11 @@ export default async function markdownToHtml(markdown: string) {
     .use(supersub)
     .use(remarkRehype)
     .use(rehypeSanitize)
-    .use(rehypeMathjax)
+    .use(rehypeMathjax, {
+      svg: {
+        scale: 2,
+      },
+    })
     .use(rehypeStringify)
     .process(markdown);
 
