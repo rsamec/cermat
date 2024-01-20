@@ -8,11 +8,30 @@ import remarkRehype from 'remark-rehype';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
 import supersub from 'remark-supersub';
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm';
+
+import { visit } from 'unist-util-visit';
+import { absoluteUrl } from './utils';
+
+//const imgDirInsidePublic = 'images';
+
+function transformImgSrc() {
+  return (tree:any, file:any) => {
+    visit(tree, 'paragraph', node => {
+      const image = node.children.find(child => child.type === 'image');
+      if (image) {        
+        image.url =  absoluteUrl(image.url);
+      }
+    });
+  };
+}
+
+
 
 export default async function markdownToHtml(markdown: string) {
   const result = await remark()
     .use(remarkParse)
+    .use(transformImgSrc)
     .use(remarkMath)
     .use(remarkGfm)
     .use(supersub)

@@ -126,7 +126,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 9
 ===
 
 > V rovině leží body A, C, M.
-> ![ggg](/math/2013/9.jpeg)
+> ![ggg](/public/math/2013/9.jpeg)
 
 # 9
  Body A, C jsou vrcholy obdélníku ABCD.
@@ -140,7 +140,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10
 ===
 
 > V rovině leží body A, P a kružnice k se středem S.
-> ![gggg](/math/2013/10.jpeg)
+> ![gggg](/public/math/2013/10.jpeg)
 
 # 10
 

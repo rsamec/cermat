@@ -3,6 +3,7 @@ export type Option<T> = { name: string, value: T }
 
 export function absoluteUrl(path: string) {
   //return path;
+  path = path.replace("/public","");
   const rootSegment = process.env.NEXT_PUBLIC_REPO_SLUG;
   return `${rootSegment ? `/${rootSegment}` : ''}${path}`
 }
