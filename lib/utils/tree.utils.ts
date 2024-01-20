@@ -36,7 +36,7 @@ export interface LeafWithAncestors<T> {
   ancestors: TreeNode<T>[];
 }
 
-export function getAllLeafsWithAncestors<T>(tree: TreeNode<T>): LeafWithAncestors<T>[] {
+export function getAllLeafsWithAncestors<T>(tree: TreeNode<T>, applyChildSetToParent?:(parent:T, child:T) => void): LeafWithAncestors<T>[] {
   const result: LeafWithAncestors<T>[] = [];
 
   function traverse(node: TreeNode<T>, ancestors: TreeNode<T>[] = []) {
@@ -44,6 +44,9 @@ export function getAllLeafsWithAncestors<T>(tree: TreeNode<T>): LeafWithAncestor
 
     if (!node.children || node.children.length === 0) {
       // Node is a leaf
+      
+      applyChildSetToParent?.(ancestors[ancestors.length - 1].data, node.data);
+      
       result.push({ leaf: node, ancestors: currentAncestors });
     } else {
       // Node has children, continue traversal

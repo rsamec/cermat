@@ -3,16 +3,17 @@ import * as React from "react";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store";
 import { useEffect } from "react";
-import { QuestionData } from "@/lib/models/quiz";
+import { Question, QuestionGroup } from "@/lib/models/quiz";
 import StepRenderer from "./step-render";
+import { TreeNode } from "@/lib/utils/tree.utils";
 
-export default function Wizard(props: { quiz: any, leafs: QuestionData[]  }) {
+export default function Wizard(props: { questions: Question[] , tree: TreeNode<QuestionGroup | Question> }) {
   const { dispatch } = store;
 
   useEffect(() => {
     // Dispatch fetchData action when the component mounts    
     dispatch.quiz.init(props)
-  }, [props.quiz, props.leafs]);
+  }, [props, dispatch.quiz]);
   
   
   return (

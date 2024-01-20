@@ -39,16 +39,16 @@ const initState: QuizState = {
 }
 
 export const quiz = createModel<RootModel>()({
-	state: {...initState},
+	state: { ...initState },
 	reducers: {
-		init(state, { quiz, leafs }: { quiz: AnswerGroup<any>, leafs: QuestionData[] }) {
+		init(state, { questions, tree }: { questions: Question[], tree: TreeNode<Question | QuestionGroup> }) {
 
-			const tree = convertTree<QuestionGroup | Question>(quiz);
+			// const tree = convertTree<QuestionGroup | Question>(quiz);
 
-			const questions = getAllLeafsWithAncestors(tree).map((d, i) => ({
-				...d.leaf.data,
-				data: leafs[i],
-			} as Question))
+			// const questions = getAllLeafsWithAncestors(tree).map((d, i) => ({
+			// 	...d.leaf.data,
+			// 	data: leafs[i],
+			// } as Question))
 
 			return {
 				...initState,

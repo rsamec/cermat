@@ -19,9 +19,9 @@ publishedAt: '2023-12-30T14:25:50.401Z'
  - [C] Zapomnětlivost a roztržitost našeho dědy nám způsobili nejedno překvapení. 
  - [D] Zapomnětlivost a roztržitost našeho dědy nám způsobily nejedno překvapení.
 
----
 
-**VÝCHOZÍ TEXTY K ÚLOZE 2-5**
+VÝCHOZÍ TEXTY K ÚLOZE 2-5
+===
 
 **TEXT 1**
 > (1) Jarmilo, ach běda, kde je Hynek,\
@@ -59,7 +59,6 @@ Vysvětlivka: Loreta – pražská kaple
  - [C] V textu je zmíněna kytice, kterou Hynek věnoval Jarmile.
  - [D] V textu je popisován smutek muže, který zhasíná lampy u Lorety.
 
----
 
 # 3 Které z následujících tvrzení o první části TEXTU 1 je pravdivé?
 (Úlohu řešte na základě informací uvedených v TEXTU 2.)
@@ -69,18 +68,20 @@ Vysvětlivka: Loreta – pražská kaple
 - [C]V této části textu je personifikována rozhledna.
 - [D] V této části textu jsou personifikovány schůdky.
 
----
 
-# **4 Tvrzení č.1:** Slovní spojení bílé stroje v TEXTU 1 použil Hynek.
-## **Tvrzení č.2:** Slovní spojení bílé stroje v TEXTU 1 nejspíše označuje letadla.
-## **Odpovídá alespoň některé z výše uvedených tvrzení TEXTU 1?**
-## (Posuzované slovní spojení je v TEXTU 1 vyznačeno tučně.)
+# 4
+**Tvrzení č.1:** Slovní spojení bílé stroje v TEXTU 1 použil Hynek.
+
+**Tvrzení č.2:** Slovní spojení bílé stroje v TEXTU 1 nejspíše označuje letadla.
+
+**Odpovídá alespoň některé z výše uvedených tvrzení TEXTU 1?**
+
+(Posuzované slovní spojení je v TEXTU 1 vyznačeno tučně.)
 - [A] ne, žádné z těchto tvrzení
 - [B] ano, každé z těchto tvrzení
 - [C] ano, avšak pouze tvrzení č. 1
 - [D] ano, avšak pouze tvrzení č. 2
 
----
 
 # **5 Které z následujících tvrzení o slovesném tvaru podtrženém v TEXTU 1 je pravdivé?**
 - [A] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný prchala chvíli poté začal ztrácet rovnováhu.
@@ -88,28 +89,29 @@ Vysvětlivka: Loreta – pražská kaple
 - [C] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný prchal a zároveň občas ztrácel rovnováhu.  
 - [D] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný zhasil světla a zároveň občas ztrácel rovnováhu.
 
----
 
 # **6 Přiřaďte k jednotlivým větám (6.1–6.3) odpovídající tvrzení (A–E).**
-## (Větné členy mohou být ve větách uvedeny v libovolném pořadí. Žádnou možnost z nabídky A–E nelze přiřadit víckrát než jednou.)
+
+(Větné členy mohou být ve větách uvedeny v libovolném pořadí. Žádnou možnost z nabídky A–E nelze přiřadit víckrát než jednou.)
+
 ## 6.1 Někdo sestře poslal milostný dopis. 
 ## 6.2 Učebnice angličtiny dostanou žáci později. 
 ## 6.3 Příchozí ochotně podepsali prezenční listiny.
+
 - [A] Věta obsahuje podmět, přísudek, přívlastek shodný a dva předměty.
 - [B] Věta obsahuje podmět, přísudek, přívlastek neshodný a dva předměty.
 - [C] Věta obsahuje podmět, přísudek, dva přívlastky shodné a příslovečné určení.
 - [D] Věta obsahuje podmět, přísudek, přívlastek shodný, předmět a příslovečné určení.
 - [E] Věta obsahuje podmět, přísudek, přívlastek neshodný, předmět a příslovečné určení.
 
----
 
 # **7 Ke každé z následujících podúloh (7.1 a 7.2) napište současné (tj. ne zastaralé) spisovné slovo, které odpovídá zadání a zároveň není vlastním jménem.**
 ## 7.1 Napište podstatné jméno, které je v 1. pádě čísla jednotného jednoslabičné, je příbuzné se slovem ŘÍKAT, skloňuje se podle vzoru KOST a neobsahuje předponu.
 ## 7.2 Napište podstatné jméno, které je v 1. pádě čísla jednotného tříslabičné, je příbuzné se slovem ROVNAT, skloňuje se podle vzoru STAVENÍ a obsahuje předponu.
 
----
 
-**VÝCHOZÍ TEXT K ÚLOHÁM 8–12**
+VÝCHOZÍ TEXT K ÚLOHÁM 8–12
+===
 >(1) Sidra a Tak kráčely muzeem rovnou ke kurátorčině pracovně. Když však došly na
 místo, čekalo je nemilé překvapení. Na obrazovce nad kanceláří blikala zpráva: Šla jsem
 již domů. Vaše požadavky budou vyřízeny ve vedlejší kanceláři. „Zatraceně!“ rozmrzele
@@ -145,12 +147,10 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 ## 8.3 Joje v závěru setkání odhalil, že mu Sidra a Tak lžou, a nabyl proto přesvědčení, že jsou zlodějky. 
 ## 8.4 Sidra nesla s nelibostí, že kvůli vymazanému protokolu upřímnosti musí na Jojeho otázky odpovídat nepravdivě. 
 
----
 
 # **9 Vypište z první části výchozího textu dvě zájmena.**
 ## Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
----
 
 # **10 Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výchozím textu, aby dané souvětí bylo gramaticky správné a zároveň se v něm uplatnil stupňovací poměr?**
 - [A] ne-li až nezdvořile
@@ -158,7 +158,6 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 - [C] ne-li dost nezdvořilé
 - [D] tudíž dost nezdvořile
 
----
 
 # **11 Ve které z následujících možností je uvedena dvojice slov, jež nelze v kontextu výchozího textu považovat za antonyma?**
 - (První slovo z každé dvojice pochází z výchozího textu a je v něm vyznačeno tučně.)
@@ -167,7 +166,6 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 - [C] náročné – nenáročné
 - [D] jistě – nejistě
 
----
 
 # **12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří .
 ## Kterou z následujících možností je nutné doplnit na vynechané místo () ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
@@ -176,7 +174,6 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 - [C] celkem tři postavy, z nichž dvě jsou příslušníci stejné rasy
 - [D] celkem čtyři postavy, z nichž tři jsou příslušníci stejné rasy
 
----
 
 # **13 Rozhodněte o každém z následujících souvětí, zda je zapsáno pravopisně správně (A), nebo ne (N).**
 ## 13.1 Jakmile přibyl na stěnu první lištu, prohlásil, že je unavený a musí si trochu oddechnout. 
@@ -184,9 +181,9 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 ## 13.3 Milošovy vtipy tentokrát nerozesmály ani jeho přátele, kteří většinou uvítali každý jeho rozpustilý kousek. 
 ## 13.4 Městští zastupitelé na podnět skupiny místních obyvatel schválili, že budovy v areálu staré zástavby budou modernizovány. 
 
----
 
-**VÝCHOZÍ TEXT K ÚLOZE 14**
+VÝCHOZÍ TEXT K ÚLOZE 14
+===
 >Dítěti ***** být středem pozornosti může nástup do 1. třídy činit problémy. Během času
  ve škole se však zpravidla naučí dát prostor i svým vrstevníkům.
 ## 14
@@ -194,7 +191,6 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 ## **14.2 Napište náležitý spisovný tvar slova prožitý, který patří na druhé vynechané místo () ve výchozím textu.**
 # (Po doplnění náležitého tvaru musí být příslušný větný celek gramaticky správný.)
 
----
 
 - [A] „Někoho z práce?“ vyzvídala má sestra Maeve. Sandy se na chvíli zamyslela: „To
 asi ne. Kde máš bráchu?“
@@ -214,23 +210,17 @@ schody.
  - [F] „U okna,“ prozradila Maeve. Sandy roztáhla závěsy, za nimiž se skrýval široký
 parapet upravený k sezení, a zeptala se mě: „Proč se tu schováváš?“
 
-## 15.1 _____
-## 15.2 _____
-## 15.3 _____
-## 15.4 _____
-## 15.5 _____
-## 15.6 _____
 
----
 
 # **16 Vypište z každé z následujících vět (16.1 a 16.2) základní skladební dvojici.**
 ## (Základní skladební dvojice musí být zapsány pravopisně správně.)
 ## 16.1 Závan horského větru byl v tom mimořádně horkém odpoledni opravdu osvěžující.
 ## 16.2 Mohli by dnešní lidé vůbec žít bez moderní techniky a dalších vymožeností?
 
----
 
-**VÝCHOZÍ TEXT K ÚLOZE 17**
+VÝCHOZÍ TEXT K ÚLOZE 17
+===
+
 >Papírového robota vyrobíme ze 6 krabic. Na plochy, které budou přilepené k sobě,
 použijeme oboustrannou lepicí pásku. Na hlavu robota z krychlové krabice nalepíme
 ruličku od toaletního papíru představující anténu. Když máme vybrané všechny krabice,
@@ -243,9 +233,10 @@ bude tělo robota, přilepíme dvě podlouhlé krabice (nohy) a dvě úzké krab
 - [C] Tento popis pracovního postupu vykazuje nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
 - [D] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
 
----
 
-**VÝCHOZÍ TEXT K ÚLOZE 18**
+VÝCHOZÍ TEXT K ÚLOZE 18
+===
+
 >Minulý týden se davy lidí vydaly do pražských Holešovic, kde se konal již 27. ročník
 veletrhu Svět knihy. Tato čtyřdenní událost je nejvýznamějším svátkem literatury v České
 republice. Celé akci, na niž jako obvykle přijaly pozvání výrazné literární osobnosti,
@@ -262,9 +253,11 @@ přivítá velké i malé knihomoli na jaře příštího roku.
 ## Podtržené výrazy jsou zapsány správně.
 ## Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
----
 
-**VÝCHOZÍ TEXTY K ÚLOHÁM 19–23 TEXT 1**
+VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
+===
+
+**TEXT 1**
 >(1) Skotská krajina je poseta tajemnými stavbami s atypickou konstrukcí: jsou postaveny
 výhradně z plochých neopracovaných kamenů a bez použití malty. Tyto záhadné věže se
 nazývají brochy. Na některých se čas nepodepsal, z jiných zbyly jen ruiny.
@@ -289,6 +282,7 @@ Brochy se z neznámých důvodů přestaly stavět kolem roku 100 n. l., obydlen
 zůstaly ještě v následujících staletích. Ačkoli se zatím nepodařilo objasnit všechny záhady
 kamenných věží, jedno je jisté – jde o výjimečný architektonický počin.
 (www.stoplusjednicka.cz; www.dotyk.cz, upraveno)
+
 **TEXT 2**
 >Ve větě typu A lze zcela jednoznačně určit podmět, např. Hádku vyvolal stres.
 Ve větě typu B nelze zcela jednoznačně určit podmět, např. Spor vyvolal stres (Vznikl
@@ -299,7 +293,6 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 ## 19.3 Všech dvacet členů komunity, která obývala brochy, v tehdejší společnosti zastávalo vysoké funkce. 
 ## 19.4 V mezeře mezi vnější a vnitřní obvodovou zdí brochů byly obvykle schody, po nichž bylo možné se dostat z nádvoří do vyšších pater. 
 
----
 
 # **20 Která z následujících možností patří na vynechané místo (*****) v TEXTU 1?**
 - [A] Známý dosud není ani přesný počet postavených věží
@@ -307,7 +300,6 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 - [C] Známá doposud není ani přibližná podoba staveb zvaných brochy
 - [D] Známý dosud není ani způsob opracovávání kamenů při stavbě brochů
 
----
 
 # **21 Které z následujících tvrzení o dvou větách podtržených v TEXTU 1 je pravdivé?**
 - (Úlohu řešte na základě definic uvedených v TEXTU 2.) 
@@ -316,7 +308,6 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 - [C] Věta z druhé části textu je typu A, věta ze třetí části textu je typu B.
 - [D] Věta z druhé části textu je typu B, věta ze třetí části textu je typu A.
 
----
 
 # **22 Které z následujících tvrzení odpovídá TEXTU 1?**
 - [A] V textu je zmíněna hypotéza, že brochy bylo možné dobýt, její pravdivost je však následně zpochybněna.
@@ -324,7 +315,6 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 - [C] V textu je zmíněna hypotéza, že brochy nebylo možné dobýt, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
 - [D] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
   
----
 
 # **23 Které z následujících tvrzení o slově dobytek tučně vyznačeném v TEXTU 1 je pravdivé?**
 - [A] Toto slovo je vždy citově zabarvené, tedy jak v TEXTU 1, tak ve větě Ten mladý právník je ale dobytek.
@@ -332,9 +322,9 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 - [C] Toto slovo není v TEXTU 1 citově zabarvené, ale ve větě Ten mladý právník je ale dobytek citově zabarvené je.
 - [D] Toto slovo je citově zabarvené v TEXTU 1, ale ve větě Ten mladý právník je ale dobytek citově zabarvené není.
 
----
 
-**VÝCHOZÍ TEXT K ÚLOZE 24**
+VÝCHOZÍ TEXT K ÚLOZE 24
+===
 >Jízda do práce a zpět Víťovi každý den zabrala dvě hodiny. Našel si proto nové místo
 ve firmě KZO, sídlící jen 15 minut od jeho domu. Záhy se však tato firma přestěhovala
 do jiného města. Když se Víťa sešel se sousedkou Terezou, postěžoval si jí: „Tomu se říká
@@ -345,9 +335,9 @@ dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě
 - [C] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost s neseriózním jednáním firmy KZO.
 - [D] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že firma KZO za své neseriózní jednání odmítá nést odpovědnost.
 
----
 
-**VÝCHOZÍ TEXT K ÚLOHÁM 25–28**
+VÝCHOZÍ TEXT K ÚLOHÁM 25–28
+===
 >(1) Ještě v polovině 19. století bylo hlavní úklidovou pomůckou koště. Na sklonku
 století se sice objevily první úklidové stroje poháněné motorem, příliš účinné však
 nebyly. Nečistoty totiž nenasávaly, ale jen odfoukávaly.
@@ -373,12 +363,10 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 ## 25.3 Patent na Spanglerův přenosný vysavač koupil v roce 1908 zakladatel jedné americké fi rmy.
 ## 25.4 Velká hlučnost Boothova vysávacího zařízení vyvolala demonstraci nespokojených občanů Londýna. 
 
----
 
 # **26 Vypište z druhé části výchozího textu tři podstatná jména, která jsou v textu užita v 6. pádě.**
 ## Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
----
 
 # **27 Které z následujících tvrzení o slovese tučně vyznačeném ve výchozím textu je pravdivé?**
 - [A] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
@@ -386,7 +374,6 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 - [C] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
 - [D] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
 
----
 
 # **28 Které z následujících tvrzení o zájmenu podtrženém ve výchozím textu je pravdivé?**
 - [A] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu drožky.
@@ -394,9 +381,9 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 - [C] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu drožky.
 - [D] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu zařízení.
   
----
 
-**VÝCHOZÍ TEXT K ÚLOZE 29**
+VÝCHOZÍ TEXT K ÚLOZE 29
+===
 >Kryštof nakonec musel prodat, navíc dost pod cennou, zlatou medaili z mistrovství světa. 
 # **29 Které z následujících tvrzení je pravdivé?**
 - [A] Výchozí text je zapsán pravopisně správně.
@@ -404,7 +391,6 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 - [C] Výchozí text obsahuje pravopisnou chybu: místo cennou má být cenou.
 - [D] Výchozí text obsahuje pravopisnou chybu: místo medaili má být medaily.
 
----
 
 # **30 Přiřaďte k jednotlivým tvrzením (30.1–30.4) odpovídající souvětí (A–F).**
 ## (Spisovnost/nespisovnost posuzujte z hlediska současné češtiny. Žádnou možnost z nabídky A–F nelze přiřadit víckrát než jednou.)

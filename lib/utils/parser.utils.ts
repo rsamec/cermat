@@ -1,4 +1,4 @@
-import { NodeType, SyntaxNodeRef, Tree } from "@lezer/common";
+import { SyntaxNodeRef, Tree } from "@lezer/common";
 import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
 import { tags as t } from "@lezer/highlight";
 
@@ -28,6 +28,7 @@ export const Abbreviations = {
   q: "QuoteMark",
   l: "ListMark",
   L: "LinkMark",
+  ST: "SetextHeading1",
 } as const
 
 export type Abbreviation = keyof typeof Abbreviations;
@@ -48,12 +49,13 @@ export function renderHtmlTree(tree: Tree) {
   return lists;
 }
 
-export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbreviation) {
+export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbreviation | Abbreviation[]) {
+  const abbrs = Array.isArray(abbr) ? abbr : [abbr];
   const chunks: string[] = [];
   let lastPosition = 0;
   tree.iterate({
     enter({ type, from, to }: SyntaxNodeRef) {
-      if (type.name == Abbreviations[abbr]) {
+      if (abbrs.some(d => type.name == Abbreviations[d])) {
         chunks.push(input.substring(lastPosition, from))
         lastPosition = to;
       }
@@ -63,43 +65,51 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
   })
   return chunks.length > 0 ? chunks : [input];
 }
-export type ParsedQuestion = { type?: { name: string }, header: string, content: string, nextHeader: string, options: string[] };
+export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options: string[] };
 export type QuestionHtml = ParsedQuestion & { contentHtml: string }
-export type State = { position: number, node?: { type: NodeType, from: number, to: number }, options: string[], excludeChunks: PositionChunk[] }
-export function generateHeadingsList(tree: Tree, input: string) {
+export type State = { position: number, type?: { name: string }, header: string, options: string[], excludeChunks: PositionChunk[] }
+export function chunkHeadingsList(tree: Tree, input: string) {
 
   const children: ParsedQuestion[] = [];
-  const isHeading = (type: NodeType) => type.name == Abbreviations.H1 || type.name == Abbreviations.H2;
-  let lastState: State = { position: 0, options: [], excludeChunks: [] }
+  let lastState: State = { position: 0, header: '', options: [], excludeChunks: [] }
+
+  const computedExcludeChunks = () => lastState.excludeChunks.map(d => ({
+    from: d.from - lastState.position,
+    to: d.to - lastState.position,
+  }))
+
 
   tree.iterate({
     enter({ type, from, to }: SyntaxNodeRef) {
-      if (isHeading(type) || (type.name == Abbreviations.HR)) {
+      if (type.name == Abbreviations.H1 || type.name == Abbreviations.H2 || type.name == Abbreviations.ST) {
 
-        const computedExcludeChunks = lastState.excludeChunks.map(d => ({
-          from: d.from - lastState.position,
-          to: d.to - lastState.position,
-        }))
-
-        children.push({
-          nextHeader: input.substring(from, to),
-          type: lastState.node != null ? lastState.node?.type : { name: "HorizontalRule" },
-          header: lastState.node != null && lastState.node.type.name != Abbreviations.HR ? input.substring(lastState.node.from, lastState.node.to) : '',
-          content: excludeChunks(input.substring(lastState.position, from), computedExcludeChunks),
-          options: lastState.options
-        })
-        lastState = { position: to, node: { type, from, to }, options: [], excludeChunks: [] };
+        if (lastState.position != 0) {
+          children.push({
+            type: lastState.type,
+            header: lastState.header,
+            content: excludeChunks(input.substring(lastState.position, from), computedExcludeChunks()),
+            options: lastState.options
+          })
+        }
+        lastState = { position: to, type, header: input.substring(from, to), options: [], excludeChunks: [] };
       }
-    
+
       if (type.name == "Option") {
         lastState.options?.push(input.substring(from, to))
       }
 
     },
     leave({ type, from, to }: SyntaxNodeRef) {
-      if (type.name == Abbreviations.BL &&  lastState.options?.length > 0) {        
+      if (type.name == Abbreviations.BL && lastState.options?.length > 0) {
         lastState.excludeChunks.push({ from, to })
-
+      }
+      if (type.name == "Document") {
+        children.push({
+          type: lastState.type,
+          header: lastState.header,
+          content: excludeChunks(input.substring(lastState.position, to), computedExcludeChunks()),
+          options: lastState.options
+        })
       }
     }
   })
@@ -172,7 +182,7 @@ export function excludeChunks(inputString: string, chunks: PositionChunk[]): str
   let result = inputString;
   for (const chunk of sortedChunks) {
     const { from: start, to: end } = chunk;
-    
+
     // Ensure start and end indices are within the bounds of the string
     if (start >= 0 && end <= result.length && start <= end) {
       // Exclude the chunk from the result string

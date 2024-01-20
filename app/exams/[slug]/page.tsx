@@ -5,15 +5,16 @@ import { getDocumentSlugs, load } from 'outstatic/server'
 import DateFormatter from '@/components/DateFormatter'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
-import { Maybe, absoluteUrl } from '@/lib/utils/utils'
+import { Maybe, absoluteUrl, extractNumberRange } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
-import { OptionList, QuestionHtml, ShortCodeMarker, chunkByAbbreviationType, generateHeadingsList, renderHtmlTree } from '@/lib/utils/parser.utils'
+import { OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
-import { QuestionData } from '@/lib/models/quiz'
- 
+import { Question, QuestionGroup } from '@/lib/models/quiz'
+import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
+
 const collection = 'exams';
 type Project = {
   tags: { value: string; label: string }[]
@@ -58,22 +59,19 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Exam(params: Params) {
-  const { project, moreProjects, content, quiz, leafs } = await getData(params);
+  const { project, moreProjects, content, questions, tree } = await getData(params);
 
 
   //const steps = config.getAllLeafNodes();
 
-  
+
   // const dynamicForm = dynamic(() => import(`../../../lib/exams/${project.slug}`), {
   //   ssr: false,
   // })
-  
+
   // console.log(dynamicForm);
-  const data: QuestionData[] = leafs.map(d => ({ 
-    content: d.ancestors.map(x => x.data.contentHtml).join(""),
-    options: d.leaf.data.options
-  }))
-  
+
+
   return (
     <Layout>
       <div className="max-w-6xl mx-auto px-5">
@@ -89,7 +87,7 @@ export default async function Exam(params: Params) {
               {project?.author?.name ? `by ${project?.author?.name}` : null}.
             </div>
 
-            <Wizard quiz={quiz}  leafs={data} ></Wizard>
+            <Wizard questions={questions} tree={tree} ></Wizard>
             {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
                 {project.description}
               </div> */}
@@ -108,7 +106,7 @@ export default async function Exam(params: Params) {
                   )
                 })}
             </div> */}
-            
+
 
             {/* <div className="max-w-2xl mx-auto">
               <div
@@ -143,8 +141,8 @@ async function getData({ params }: Params) {
 
   const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
   const parsedTree = mdParser.parse(project.content);
-  const questions = chunkByAbbreviationType(parsedTree, project.content, "HR");
-  const headings = generateHeadingsList(parsedTree, project.content);
+
+  const headings = chunkHeadingsList(parsedTree, project.content);
 
   const contentHeadings = await Promise.all(headings.map(async (d) => ({
     ...d,
@@ -152,27 +150,56 @@ async function getData({ params }: Params) {
   })))
 
   function order(name: Maybe<string>) {
-    if (name == "HorizontalRule") return 1;
+    if (name == "SetextHeading1") return 1;
     if (name == "ATXHeading1") return 2;
     if (name == "ATXHeading2") return 3;
     return 0;
   }
 
   const headingsTreeNodes = createTree(contentHeadings.map(d => ({ data: d })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
-  const leafs = getAllLeafsWithAncestors({ data: {} as QuestionHtml, children: headingsTreeNodes });
-  //console.log(leafs.map(d => d.leaf.data.options))
+  const leafs = getAllLeafsWithAncestors({ data: {} as QuestionHtml, children: headingsTreeNodes }, (parent, child) => {
+    //copy some children property donw up from leafs to it parent
+    if (parent.options?.length === 0 && child.options?.length > 0) {
+      parent.options = child.options;
+    }
+  });
+
+
   //const contentTree = renderHtmlTree(parsedTree)
 
-  const quiz = await loadJsonBySlug(params.slug);
+  const quiz: AnswerGroup<Question | QuestionGroup> = await loadJsonBySlug(params.slug);
+
+  const quizTree = convertTree<QuestionGroup | Question>(quiz);
+  const quizQuestions = getAllLeafsWithAncestors(quizTree).map((d, i) => {
+
+    const node = leafs[i];
+    const rootAncestor = node.ancestors[1].data;
+
+    //Heuristic - expect quiz question id as number
+    const quizQuestionNumber = Math.floor(parseFloat(d.leaf.data.id));
+    //if there is a root parent of type SetextHeading1 - extract number range of quiz questions from header using regex search
+    const range = rootAncestor.type?.name == "SetextHeading1" ? extractNumberRange(rootAncestor.header) : null;
+    //include parent only if it is in range or it there is no such parent  
+    const shouldIncludeRootParent = range != null ? quizQuestionNumber >= range[0] && quizQuestionNumber <= range[1] : true;
+
+    //console.log(d.leaf.data.id, node.leaf.data.options, node.ancestors[node.ancestors.length - 2].data.options)
+    //console.log(node.leaf.data.content);
+    return {
+      ...d.leaf.data,
+      data: {
+        content: node.ancestors.slice(shouldIncludeRootParent ? 1 : 2).map(x => x.data.contentHtml).join(""),
+        options: node.leaf.data.options?.length > 0 ? node.leaf.data.options : node.ancestors[node.ancestors.length - 2].data.options
+      }
+    } as Question
+  })
+
+
   //console.log( headings.map(d => d.type?.name))
   //console.log(headings.map(d => d.type?.name + ":" + (d.header != "" ? d.header : d.nextHeader) + ":" + (/./.test(d.content))))
 
   // const contentChunks = await Promise.all(questions.map(async (d) => {
   //   return await markdownToHtml(d);
   // }))
-
-
-
 
   const content = await markdownToHtml(project.content)
 
@@ -187,8 +214,8 @@ async function getData({ params }: Params) {
   return {
     project,
     content,
-    quiz,
-    leafs,
+    questions: quizQuestions,
+    tree: quizTree,
     moreProjects
   }
 }
