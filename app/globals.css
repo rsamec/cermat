@@ -25,6 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.MathJax > svg{  
+  max-width: 100%;  
+}
+
 /* 
 li > ol {
   list-style-type: 'upper-alpha',  
