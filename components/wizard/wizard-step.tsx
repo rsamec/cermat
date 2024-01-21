@@ -117,7 +117,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
     <div className="flex flex-col gap-10" >
 
       <div
-        className="prose lg:prose-xl bg-white p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 flex flex-col space-y-2"
+        className="prose lg:prose-xl flex flex-col space-y-2"
         dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
       />
 

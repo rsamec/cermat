@@ -1,20 +1,25 @@
 import { cls } from '@/lib/utils/utils';
 import React, { ChangeEvent } from 'react';
 
-type BadgeProps =  {
-  text: string,
-  type: "Success" | "Danger" | "Warning"
+type BadgeProps = {
+  text: string | number,
+  badgeText: string | number,
+  type: "Success" | "Danger" | "Warning" | "Default"
 }
 
-const Badge: React.FC<BadgeProps> = ({ text, type }) => {
-  
+const Badge: React.FC<BadgeProps> = ({ text, type, badgeText }) => {
+
 
   return (
-    <span className={cls(['flex','rounded-full','uppercase','px-2','py-1','text-xs','font-bold','mr-3',
-     type == "Success" && 'bg-green-100',
-     type == "Danger" && 'bg-red-100',
-     type == "Warning" && 'bg-yellow-100'
-    ])}>{text}</span>
+    <div className="py-2 px-3 inline-flex items-center gap-x-2 font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm dark:bg-slate-900 dark:border-gray-700 dark:text-white">
+      <span className={cls(['inline-flex items-center py-0.5 px-3 rounded-full font-medium text-white',
+        type == "Default" && 'bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500',
+        type == "Success" && 'bg-green-500',
+        type == "Danger" && 'bg-red-500',
+        type == "Warning" && 'bg-yellow-500'
+      ])}>{badgeText}</span>
+      <span className="mr-2">{text}</span>
+    </div>
 
   );
 };

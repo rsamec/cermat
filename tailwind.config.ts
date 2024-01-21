@@ -27,7 +27,7 @@ const config: Config = {
         'h3': { fontSize: theme('fontSize.lg'), },
         'hr': { border: 'solid 1px black' },
         'blockquote': { padding: '5px', border: 'solid 1px black' },        
-        'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
+        // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
     })
   ],

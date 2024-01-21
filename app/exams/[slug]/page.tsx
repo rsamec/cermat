@@ -14,6 +14,7 @@ import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
 import { Question, QuestionGroup } from '@/lib/models/quiz'
 import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
+import Footer from '@/components/Footer'
 
 const collection = 'exams';
 type Project = {
@@ -73,25 +74,36 @@ export default async function Exam(params: Params) {
 
 
   return (
-    <Layout>
-      <div className="max-w-6xl mx-auto px-5">
-        <Navigation />
-        <article className="mb-8">
-          <div>
-            <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
+    <>
+      <header className="bg-black text-white border-t border-neutral-200">
+        <div className="max-w-6xl mx-auto px-5 p-2">
+          <div className="flex">
+            <Navigation name={project.title} />
+          </div>
+        </div>
+      </header>
+
+      <div className="min-h-screen">
+        <main>
+          <div className="max-w-6xl mx-auto px-3 py-2">
+
+
+            <article className="mb-8">
+              <div>
+                {/* <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
               {project.title}
-            </h1>
-            <div className="hidden md:block md:mb-8 italic text-slate-400">
+            </h1> */}
+                {/* <div className="hidden md:block md:mb-8 italic text-slate-400">
               Publikováno <DateFormatter dateString={project.publishedAt} />
               {' '}
               {project?.author?.name ? `by ${project?.author?.name}` : null}.
-            </div>
+            </div> */}
 
-            <Wizard questions={questions} tree={tree} ></Wizard>
-            {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
+                <Wizard questions={questions} tree={tree}></Wizard>
+                {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
                 {project.description}
               </div> */}
-            {/* <div>
+                {/* <div>
               {
                 steps.map((d, i) => {
                   const matchedLeaf = leafs[i];
@@ -108,7 +120,7 @@ export default async function Exam(params: Params) {
             </div> */}
 
 
-            {/* <div className="max-w-2xl mx-auto">
+                {/* <div className="max-w-2xl mx-auto">
               <div
                 className="prose lg:prose-xl flex flex-col space-y-2"
                 dangerouslySetInnerHTML={{ __html: content }}
@@ -116,10 +128,14 @@ export default async function Exam(params: Params) {
             </div> */}
 
 
-          </div>
-        </article>
-      </div >
-    </Layout >
+              </div>
+            </article>
+          </div >
+        </main>
+      </div>
+      <Footer></Footer>
+
+    </>
   )
 }
 

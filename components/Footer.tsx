@@ -3,7 +3,7 @@ import { absoluteUrl } from "@/lib/utils/utils"
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-800 text-white border-t border-neutral-200">
+      <footer className="hidden md:block bg-gray-800 text-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-5 p-5 text-slate-400">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 lg:gap-x-8 gap-y-5 sm:gap-y-6 lg:gap-y-8 mb-8">
             <div className="flex flex-col gap-1">
@@ -35,9 +35,9 @@ const Footer = () => {
       </footer>
 
       <footer className="bg-black text-white border-t border-neutral-200">
-        <div className="max-w-6xl mx-auto px-5 p-5">
+        <div className="max-w-6xl mx-auto px-5 p-2">
           <div className="flex">
-            <p className="text-sm flex-1 text-slate-400">© 2018 - 2024 - MIT Licenced</p>
+            <p className="text-sm flex-1 text-slate-400">© 2018 - 2024</p>
           </div>
         </div>
 
