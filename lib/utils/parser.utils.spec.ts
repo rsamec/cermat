@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { OptionList, ShortCodeMarker, chunkByAbbreviationType, chunkHeadingsList } from './parser.utils'
+import { Abbreviations, OptionList, ShortCodeMarker, chunkByAbbreviationType, chunkHeadingsList } from './parser.utils'
 import { parser, GFM, Subscript, Superscript } from '@lezer/markdown';
 import { createTree, getAllLeafsWithAncestors } from './tree.utils';
 import { Maybe } from './utils';
@@ -105,9 +105,9 @@ test('parse tree markdown', () => {
 
   //const tree = createTree(headings);
   function order(name: Maybe<string>) {
-    if (name == "SetextHeading1") return 1;
-    if (name == "ATXHeading1") return 2;
-    if (name == "ATXHeading2") return 3;
+    if (name == Abbreviations.ST) return 1;
+    if (name == Abbreviations.H1) return 2;
+    if (name == Abbreviations.H2) return 3;
     return 0;
   }
 
@@ -151,7 +151,7 @@ test('parse options', () => {
   expect(rawHeadings.length).toBe(1);
   expect(rawHeadings[0].options.length).toBe(6);
   expect(rawHeadings[0].options.map(d => d.value).join("")).toBe('ABCDEF');
-  
+
 
 
 })

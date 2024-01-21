@@ -9,8 +9,7 @@ import TextInput from "../core/TextInput";
 import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/component.utils";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
-import IconBadge from "../core/IconBadge";
-import { faThumbsUp, faThumbsDown, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cls } from "@/lib/utils/utils";
 
@@ -119,19 +118,33 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
   const hasInput = question.metadata.inputBy != null;
 
-  const disabled = (status === "correct")
+  const header = question.data?.header;
 
   return (
     <div className="flex flex-col gap-10" >
+      <div>
 
-      <div
-        className="prose lg:prose-xl flex flex-col space-y-2"
-        dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
-      />
+        {header != null ?
+          <details className="py-5 [&_svg]:open:-rotate-180" open={true} >
+            <summary className="text-xl font-bold">{header.title}</summary>
+            <section>
+              <div
+                className="prose lg:prose-xl flex flex-col space-y-2"
+                dangerouslySetInnerHTML={{ __html: header.content ?? '' }}
+              />
+            </section>
+          </details>
+          : null}
+
+        <div
+          className="prose lg:prose-xl flex flex-col space-y-2"
+          dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
+        />
+      </div>
 
 
-      <div  className="flex flex-col gap-5">
-        
+      <div className="flex flex-col gap-5">
+
         {hasInput ? renderInput(question, formControl as any, status, setAnswer) : null}
 
         {!hasInput ?

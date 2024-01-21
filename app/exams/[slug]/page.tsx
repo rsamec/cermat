@@ -1,14 +1,12 @@
 import Navigation from '@/components/Navigation'
-import Layout from '@/components/Layout'
 
 import { getDocumentSlugs, load } from 'outstatic/server'
-import DateFormatter from '@/components/DateFormatter'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
 import { Maybe, absoluteUrl, extractNumberRange } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
-import { OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList } from '@/lib/utils/parser.utils'
+import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
@@ -162,13 +160,13 @@ async function getData({ params }: Params) {
 
   const contentHeadings = await Promise.all(headings.map(async (d) => ({
     ...d,
-    contentHtml: await markdownToHtml(d.header) + await markdownToHtml(d.content),
+    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content) : (await markdownToHtml(d.header) + await markdownToHtml(d.content)),
   })))
 
   function order(name: Maybe<string>) {
-    if (name == "SetextHeading1") return 1;
-    if (name == "ATXHeading1") return 2;
-    if (name == "ATXHeading2") return 3;
+    if (name == Abbreviations.ST) return 1;
+    if (name == Abbreviations.H1) return 2;
+    if (name == Abbreviations.H2) return 3;
     return 0;
   }
 
@@ -194,16 +192,24 @@ async function getData({ params }: Params) {
     //Heuristic - expect quiz question id as number
     const quizQuestionNumber = Math.floor(parseFloat(d.leaf.data.id));
     //if there is a root parent of type SetextHeading1 - extract number range of quiz questions from header using regex search
-    const range = rootAncestor.type?.name == "SetextHeading1" ? extractNumberRange(rootAncestor.header) : null;
+    const range = rootAncestor.type?.name == Abbreviations.ST ? extractNumberRange(rootAncestor.header) : null;
     //include parent only if it is in range or it there is no such parent  
-    const shouldIncludeRootParent = range != null ? quizQuestionNumber >= range[0] && quizQuestionNumber <= range[1] : true;
-
-    //console.log(d.leaf.data.id, node.leaf.data.options, node.ancestors[node.ancestors.length - 2].data.options)
+    const isInRange = range != null ? quizQuestionNumber >= range[0] && quizQuestionNumber <= range[1] : false;
+    const shouldIncludeRootParent = range != null ? isInRange : true;
+    if (isInRange) {
+      console.log(d.leaf.data.id, node.ancestors[1].data.header, node.ancestors[1].data.content)
+    }
     //console.log(node.leaf.data.content);
     return {
       ...d.leaf.data,
       data: {
-        content: node.ancestors.slice(shouldIncludeRootParent ? 1 : 2).map(x => x.data.contentHtml).join(""),
+        content: node.ancestors.slice(range == null ? 1 : 2).map(x => x.data.contentHtml).join(""),
+        ...(isInRange && {
+          header: {
+            title: node.ancestors[1].data.header.replace("===", ""),
+            content: node.ancestors[1].data.contentHtml,
+          }
+        }),
         options: node.leaf.data.options?.length > 0 ? node.leaf.data.options : node.ancestors[node.ancestors.length - 2].data.options
       }
     } as Question

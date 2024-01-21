@@ -1,9 +1,9 @@
 import { createModel } from '@rematch/core';
 import { RootModel } from './index';
-import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
-import { AnswerGroup, AnswerGroupMetadata, AnswerMetadata, convertTree } from '../utils/quiz-specification';
+import { TreeNode } from '../utils/tree.utils';
+import { AnswerGroupMetadata, AnswerMetadata } from '../utils/quiz-specification';
 import { getVerifyFunction } from '../utils/catalog-function';
-import { Option} from '../utils/utils'
+import { Option } from '../utils/utils'
 
 export interface Question {
 	id: string;
@@ -29,7 +29,7 @@ export interface QuizState {
 export type AnswerStatus = 'correct' | 'incorrect' | 'unanswered';
 export type AnswerState = { value: any, status: AnswerStatus }
 
-export type QuestionData = { content: string, options: Option<string>[] }
+export type QuestionData = { content: string, options: Option<string>[], header?: { title: string, content: string } }
 
 const initState: QuizState = {
 	questions: [],
