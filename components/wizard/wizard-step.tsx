@@ -130,7 +130,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
       />
 
 
-      <div  className="flex flex-col gap-2">
+      <div  className="flex flex-col gap-5">
         
         {hasInput ? renderInput(question, formControl as any, status, setAnswer) : null}
 
