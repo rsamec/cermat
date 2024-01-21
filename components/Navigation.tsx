@@ -9,6 +9,9 @@ const Navigation = ({name}: {name: string}) => {
             Home
           </Link>
         </li>
+        <li>
+          /
+        </li>
         <li>      
             {name}          
         </li>     

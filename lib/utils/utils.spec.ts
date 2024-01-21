@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls } from './utils';
+import { cls, extractOptionRange } from './utils';
 
 test('simple string', () => {
 
@@ -15,4 +15,9 @@ test('ternary operator', () => {
 test('boolean to string', () => {
   expect(cls([true && "one"])).toBe("one")
   expect(cls([false && "one"])).toBe("")
+})
+
+test('extract option identifier', () => {
+  expect(extractOptionRange("[A] some text")).toBe(["A", "some text"])
+
 })

@@ -1,6 +1,7 @@
 import { SyntaxNodeRef, Tree } from "@lezer/common";
 import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
 import { tags as t } from "@lezer/highlight";
+import { Option, extractOptionRange } from "./utils";
 
 export const Abbreviations = {
   H1: "ATXHeading1",
@@ -65,9 +66,9 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
   })
   return chunks.length > 0 ? chunks : [input];
 }
-export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options: string[] };
+export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options:  Option<string>[] };
 export type QuestionHtml = ParsedQuestion & { contentHtml: string }
-export type State = { position: number, type?: { name: string }, header: string, options: string[], excludeChunks: PositionChunk[] }
+export type State = { position: number, type?: { name: string }, header: string, options: Option<string>[], excludeChunks: PositionChunk[] }
 export function chunkHeadingsList(tree: Tree, input: string) {
 
   const children: ParsedQuestion[] = [];
@@ -95,7 +96,9 @@ export function chunkHeadingsList(tree: Tree, input: string) {
       }
 
       if (type.name == "Option") {
-        lastState.options?.push(input.substring(from, to))
+        const optionText = input.substring(from, to);
+        const range = extractOptionRange(optionText);
+        lastState.options?.push(range != null ? { value: range[0], name: range[1] } : { value: optionText, name: optionText })
       }
 
     },
@@ -156,15 +159,6 @@ export const ShortCodeMarker: MarkdownConfig = {
     },
   }]
 }
-
-export function extractContentInSquareBrackets(inputString: string) {
-  const regex = /^\[([\w\d]*)\][ \t]/; // Regular expression to match content inside square brackets
-  const match = inputString.match(regex);
-
-  // If there is a match, return the content inside square brackets (group 1)
-  return match ? match[1] : null;
-}
-
 
 export type PositionChunk = {
   from: number;

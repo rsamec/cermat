@@ -3,6 +3,7 @@ import { RootModel } from './index';
 import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
 import { AnswerGroup, AnswerGroupMetadata, AnswerMetadata, convertTree } from '../utils/quiz-specification';
 import { getVerifyFunction } from '../utils/catalog-function';
+import { Option} from '../utils/utils'
 
 export interface Question {
 	id: string;
@@ -28,7 +29,7 @@ export interface QuizState {
 export type AnswerStatus = 'correct' | 'incorrect' | 'unanswered';
 export type AnswerState = { value: any, status: AnswerStatus }
 
-export type QuestionData = { content: string, options: string[] }
+export type QuestionData = { content: string, options: Option<string>[] }
 
 const initState: QuizState = {
 	questions: [],

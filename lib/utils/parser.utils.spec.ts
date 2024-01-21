@@ -111,13 +111,13 @@ test('parse tree markdown', () => {
     return 0;
   }
 
-  console.log(rawHeadings)
+  //console.log(rawHeadings)
   expect(rawHeadings.length).toBe(4);
-  
+
 
   const headingsTree = createTree(rawHeadings.map(data => ({ data })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
 
-  expect(headingsTree.length).toBe(1);  
+  expect(headingsTree.length).toBe(1);
 
   const headingLeafs = getAllLeafsWithAncestors({ data: {}, children: headingsTree });
 
@@ -131,3 +131,28 @@ test('parse tree markdown', () => {
 
 
 })
+
+
+test('parse options', () => {
+  const input = ` 
+- [A] 280
+- [B] 300
+- [C] 320
+- [D] 350
+- [E] 360
+- [F] jiný počet
+  `
+
+
+  const parsedTree = markdownParser.parse(input);
+  const rawHeadings = chunkHeadingsList(parsedTree, input);
+
+  console.log(rawHeadings[0].options.map(d => d.name))
+  expect(rawHeadings.length).toBe(1);
+  expect(rawHeadings[0].options.length).toBe(6);
+  expect(rawHeadings[0].options.map(d => d.value).join("")).toBe('ABCDEF');
+  
+
+
+})
+

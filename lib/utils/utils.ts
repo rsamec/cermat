@@ -53,3 +53,13 @@ export function extractNumberRange(text: string): [number, number] | null {
       return null;
   }
 }
+
+export function extractOptionRange(text: string): [string, string] | null {
+  const match = text.match(/^\[([\w\d]*)\][ \t]/);
+  if (match) {
+      const prefix = match[1];
+      return [prefix, text.replace(`[${prefix}] `,'')];
+  } else {
+      return null;
+  }
+}

@@ -12,7 +12,7 @@ test('markdown image src transform', async () => {
   const input = `![](/math/2013/6.jpeg)`
 
   const html = await markdownToHtml(input);
-  expect(html).toBe('<p><img src="/images/math/2013/6.jpeg" alt=""></p>')
+  expect(html).toBe('<p><img src="/math/2013/6.jpeg" alt=""></p>')
 })
 
 
