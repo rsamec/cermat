@@ -1,7 +1,7 @@
 'use client'
 import * as React from "react";
 import { connect } from "react-redux";
-import { Dispatch } from "../../lib/store";
+import { Dispatch, RootState, store } from "../../lib/store";
 import { AnswerState, AnswerStatus, Question } from "@/lib/models/quiz";
 import InputNumber from "../core/InputNumber";
 import { FormControl } from "@/lib/utils/form.utils";
@@ -9,10 +9,12 @@ import TextInput from "../core/TextInput";
 import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/component.utils";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
-import { faAngleLeft, faAngleRight, faInfo, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cls } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
+import { useSwipeable } from 'react-swipeable';
+import Badge from "../core/Badge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -21,9 +23,21 @@ const mapDispatch = (dispatch: Dispatch) => ({
 });
 
 
+const selection = store.select((models) => ({
+  currentStepIndex: models.quiz.currentStepIndex,
+  currentAnswerState: models.quiz.currentAnswerState,
+  totalAnswers: models.quiz.totalAnswers,
+}));
 
+const mapState = (state: RootState) => ({
+  ...state.quiz,
+  ...selection(state as never),
+})
+
+type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
-type Props = { question: Question, answerState: AnswerState } & DispatchProps
+type Props = { question: Question, answerState: AnswerState } & StateProps & DispatchProps;
+
 
 
 function inputGroup(input: React.ReactNode, button: React.ReactNode, { prefix, suffix }: { prefix?: string, suffix?: string }) {
@@ -104,7 +118,7 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
 }
 
 
-const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back }) => {
+const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back, totalAnswers, totalPoints, questions }) => {
 
   const [flag, setFlag] = useState(false);
   const [error, setError] = useState(true);
@@ -117,7 +131,11 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
     setError(true);
   }, [question])
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => next(),
+    onSwipedRight: () => back(),
 
+  });
 
   const hasInput = question.metadata.inputBy != null;
 
@@ -129,7 +147,8 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
 
   return (
-    <div className="flex flex-col gap-10" >
+
+    <div {...handlers} className="flex flex-col gap-2 px-3" >
       <div>
 
         {header != null ?
@@ -151,7 +170,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
       </div>
 
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-1">
 
         {hasInput ? renderInput(question, formControl as any, status, setAnswer) : null}
 
@@ -175,26 +194,31 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
             })}</div>
 
           </div> : null}
+        {maxPoints != null ? <div> <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} /></div> : null}
+      </div>
 
-        <div className="flex">
-          <div className="grow">
-            {maxPoints != null ? <div> <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} /></div> : null}
-          </div>
-          <div className="grid grid-cols-2 gap-3">
+      <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
-            <button className="btn btn-blue"
-              onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
-            <button className="btn btn-blue"
-              onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} /></button>
+      <div className="flex">
 
-          </div>
+        <div className="grow flex flex-wrap gap-2">
+          <Badge text="Úlohy" badgeText={`${totalAnswers} / ${questions.length}`} type="Gray" ></Badge>
+          <Badge text="Body" badgeText={`${totalPoints} / ${50}`} type="Gray" ></Badge>
+        </div>
+
+        <div className="flex self-end gap-3">
+
+          <button className="btn btn-blue"
+            onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
+          <button className="btn btn-blue"
+            onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} /></button>
+
         </div>
 
       </div>
-
     </div>
   );
 }
 
-const WizardStepContainer = connect(null, mapDispatch)(WizardStep);
+const WizardStepContainer = connect(mapState, mapDispatch)(WizardStep);
 export default WizardStepContainer;

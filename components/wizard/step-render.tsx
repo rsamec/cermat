@@ -23,10 +23,10 @@ const StepsRenderer: React.FC<StateProps> = ({ currentStep, currentAnswerState }
   if (currentStep == null) {
     return <div>Loading....</div>
   }
-  return <div className="flex flex-col gap-5">
+  return <>
     <Stepper></Stepper>
     <WizardStep question={currentStep} answerState={currentAnswerState} ></WizardStep>
-  </div>
+  </>
 };
 
 

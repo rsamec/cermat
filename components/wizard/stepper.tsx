@@ -47,9 +47,9 @@ function Stepper(props: Props) {
       } else if (containerWidth < 768) {
         stepsToShow = 7;
       } else if (containerWidth < 1024) {
-        stepsToShow = 11;
+        stepsToShow = 9;
       } else {
-        stepsToShow = 13;
+        stepsToShow = 11;
       }
 
       setMaxVisibleSteps(stepsToShow);
@@ -67,23 +67,8 @@ function Stepper(props: Props) {
     };
   }, [steps]);
   return (
-    <div className="flex flex-col items-center gap-5">
-      <div className="flex gap-5 self-stretch">
-        <div className="grow flex gap-5 justify-end">
-          <Badge text="Úlohy" badgeText={`${props.totalAnswers} / ${props.questions.length}`} type="Gray" ></Badge>
-          <Badge text="Body" badgeText={`${props.totalPoints} / ${50}`} type="Gray" ></Badge>
-        </div>
-        {/* <div className="hidden sm:flex md:hidden gap-2">
-          <button className="btn"
-            onClick={() => props.back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
-          <button className="btn"
-            onClick={() => props.next()}><FontAwesomeIcon icon={faAngleRight} /></button>
-
-        </div> */}
-
-
-      </div>
-      <div className="hidden md:flex items-center gap-5">
+    <div className="hidden md:flex flex-col items-center py-5">
+      <div className="flex items-center gap-5">
 
         <button className="btn"
           onClick={() => props.back()}><FontAwesomeIcon icon={faAngleLeft} /></button>

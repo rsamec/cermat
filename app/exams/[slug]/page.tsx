@@ -73,7 +73,7 @@ export default async function Exam(params: Params) {
 
   return (
     <>
-      <header className="bg-black text-white border-b border-neutral-200">
+      <header className="sticky top-0 bg-black text-white border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-5 p-2">
           <div className="flex">
             <Navigation name={project.title} />
@@ -83,7 +83,7 @@ export default async function Exam(params: Params) {
 
       <div className="min-h-screen">
         <main>
-          <div className="max-w-6xl mx-auto px-3 py-2">
+          <div className="max-w-6xl mx-auto">
 
 
             <article className="mb-8">
