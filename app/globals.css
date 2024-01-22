@@ -17,13 +17,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 .MathJax > svg{  
@@ -82,7 +82,7 @@ li > ol {
 }
 
 body.background {
-  background-color: white;
+  /* background-color: white; */
   /* background-image: linear-gradient(to right bottom, #dde7f6, #c4d9f8, #abcbfa, #90bdfc, #72affd);   */
   /* background-image: linear-gradient(to right top, #dad8ff, #cdcbff, #bfbeff, #b0b1ff, #a1a5ff, #84acff, #63b1ff, #3cb6ff, #00c9ff, #00dbff, #28ecfb, #5ffbf1); */
   /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */

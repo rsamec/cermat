@@ -45,11 +45,11 @@ function Stepper(props: Props) {
       if (containerWidth < 640) {
         stepsToShow = 5;
       } else if (containerWidth < 768) {
-        stepsToShow = 9;
+        stepsToShow = 7;
       } else if (containerWidth < 1024) {
-        stepsToShow = 13;
+        stepsToShow = 11;
       } else {
-        stepsToShow = 17;
+        stepsToShow = 13;
       }
 
       setMaxVisibleSteps(stepsToShow);
@@ -91,8 +91,14 @@ function Stepper(props: Props) {
         <div className="flex items-center gap-1">
           {filterSteps(steps, props.currentStepIndex, maxVisibleSteps).map((d, i) =>
             <div key={i} className="flex flex-col">
-              <button className={cls(['btn', 'btn-outline', 'rounded-none', 'rounded-t-lg', d.id === props.currentStep?.id && 'btn-blue'])} onClick={() => props.goTo(d.id)} >{d.id}</button>
-              <div className={cls(['min-h-2', props.corrections[d.id] === true && 'bg-green-300', props.corrections[d.id] === false && 'bg-red-300'])}></div>
+              <button className={cls(['text-gray-900  border hover:bg-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-1 dark:text-white dark:hover:bg-gray-700',
+                d.id === props.currentStep?.id ? 'bg-gray-200 dark:bg-gray-600' : 'bg-white dark:bg-gray-800 ',
+                props.corrections[d.id] === undefined && 'border-gray-300 dark:border-gray-600 dark:hover:border-gray-600',
+                props.corrections[d.id] === true && 'border-green-500 hover:border-green-600 dark:border-green-500 dark:hover:border-green-600',
+                props.corrections[d.id] === false && 'border-red-500 hover:border-red-600 dark:border-red-500 dark:hover:border-red-600',
+                
+              ])} onClick={() => props.goTo(d.id)} >{d.id}</button>
+              {/* <div className={cls(['min-h-2', props.corrections[d.id] === true && 'bg-green-300', props.corrections[d.id] === false && 'bg-red-300'])}></div> */}
             </div>)}
         </div>
         <button className="btn"

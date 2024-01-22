@@ -21,15 +21,25 @@ const config: Config = {
   },
   plugins: [
     plugin(function ({ addBase, theme }: { addBase: (o: object) => void, theme: (classNames: string) => string }) {
+      const darkBlockquote = {
+        borderColor: 'white',
+      }
       addBase({
         'h1': { fontSize: theme('fontSize.2xl'), fontWeight: 600 },
         'h2': { fontSize: theme('fontSize.lg'), },
         'h3': { fontSize: theme('fontSize.lg'), },
         'hr': { border: 'solid 1px black' },
-        'blockquote': { padding: '5px', border: 'solid 1px black' },        
+        'blockquote': { padding: '10px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'black' },
+        '.dark': {
+          'blockquote': darkBlockquote
+        },
+        '@media (prefers-color-scheme: dark)': {
+          'blockquote': darkBlockquote
+        },
         // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
     })
   ],
+  darkMode: 'class',
 }
 export default config

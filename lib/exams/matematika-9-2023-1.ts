@@ -41,9 +41,9 @@ const form = group({
     8.3: { verifyBy: { kind: 'equal', args: 100 }, points: 1, inputBy: { kind: 'number', args: { prefix: 'o', suffix: 'm^2' } } }
   }),
   9: {
-    verifyBy: { kind: 'selfEvaluate', args: { options: pointOptions } }, points: 1
+    verifyBy: { kind: 'selfEvaluate', args: { options: pointOptions } }
   },
-  10: { verifyBy: { kind: "selfEvaluate", args: { options: pointOptions.concat({ value: 3, name: '3 body' }) } }, points: 1 },
+  10: { verifyBy: { kind: "selfEvaluate", args: { options: pointOptions.concat({ value: 3, name: '3 body' }) } }},
   11: group({
     11.1: { verifyBy: { kind: 'equalOption', args: false }, inputBy: { kind: 'bool' } },
     11.2: { verifyBy: { kind: 'equalOption', args: true }, inputBy: { kind: 'bool' } },

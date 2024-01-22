@@ -73,7 +73,7 @@ export default async function Exam(params: Params) {
 
   return (
     <>
-      <header className="bg-black text-white border-t border-neutral-200">
+      <header className="bg-black text-white border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-5 p-2">
           <div className="flex">
             <Navigation name={project.title} />
@@ -195,10 +195,10 @@ async function getData({ params }: Params) {
     const range = rootAncestor.type?.name == Abbreviations.ST ? extractNumberRange(rootAncestor.header) : null;
     //include parent only if it is in range or it there is no such parent  
     const isInRange = range != null ? quizQuestionNumber >= range[0] && quizQuestionNumber <= range[1] : false;
-    const shouldIncludeRootParent = range != null ? isInRange : true;
-    if (isInRange) {
-      console.log(d.leaf.data.id, node.ancestors[1].data.header, node.ancestors[1].data.content)
-    }
+    //const shouldIncludeRootParent = range != null ? isInRange : true;
+    // if (isInRange) {
+    //   console.log(d.leaf.data.id, node.ancestors[1].data.header, node.ancestors[1].data.content)
+    // }
     //console.log(node.leaf.data.content);
     return {
       ...d.leaf.data,

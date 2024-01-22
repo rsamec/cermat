@@ -33,7 +33,7 @@ const ToggleButtonGroup = <T extends Object>({
       {options.map((option, i) => (
         <button
           className={cls(['max-w-80','py-3 px-4 inline-flex items-center gap-x-2 rounded-t-md text-sm text-left font-medium focus:z-10 border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
-            isSelected(value, option) && (type === 'success' ? 'bg-green-100 hover:bg-green-200 border-green-200' : type === 'danger' ? 'bg-red-100 hover:bg-red-200 border-red-200' : 'bg-gray-300 hover:bg-gray-400')])}
+            isSelected(value, option) && (type === 'success' ? 'bg-green-100 hover:bg-green-200 border-green-200 dark:border-green-400' : type === 'danger' ? 'bg-red-100 hover:bg-red-200 border-red-200 dark:border-red-400' : 'bg-gray-300 hover:bg-gray-400')])}
           key={`opt_${i}`}
           onClick={() => handleChange(option)}
         >

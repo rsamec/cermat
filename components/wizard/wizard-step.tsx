@@ -45,9 +45,9 @@ function inputGroup(input: React.ReactNode, button: React.ReactNode, { prefix, s
 }
 function statusInput(status: AnswerStatus) {
   return status == "correct" ?
-    "bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-green-500"
+    "bg-green-50 border border-green-500 text-green-900 text-sm focus:ring-green-500 focus:border-green-500 dark:border-green-500"
     : status === "incorrect" ?
-      "bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500" :
+      "bg-red-50 border border-red-500 text-red-900 text-sm focus:ring-red-500 focus:border-red-500 dark:border-red-500" :
       'text-gray-900 border border-gray-300 bg-gray-50';
 }
 function renderInput(question: Question, control: FormControl<any>, status: AnswerStatus, setAnswer: any) {
@@ -58,19 +58,19 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
   if (inputBy.kind === "number") {
 
     return inputGroup(
-      <InputNumber control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 ", statusInput(status)])} ></InputNumber>,
+      <InputNumber control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])} ></InputNumber>,
       <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
       inputBy.args ?? {})
   }
   else if (inputBy.kind === "text") {
-    return inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2", statusInput(status)])}></TextInput>,
+    return inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
       <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
       inputBy.args ?? {})
   }
   else if (inputBy.kind === "math") {
 
 
-    const input = inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2", statusInput(status)])}></TextInput>,
+    const input = inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
       <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
       inputBy.args ?? {})
     return inputBy.args?.hintType != null ? <div>
@@ -169,7 +169,9 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
           </div> : null}
 
         <div className="flex">
-          <div className="grow"> </div>
+          <div className="grow">
+            {question.metadata.points != null ? <div>Body: {question.metadata.points}</div> : question.metadata.points }
+          </div>
           <div className="grid grid-cols-2 gap-3">
 
             <button className="btn btn-blue"
