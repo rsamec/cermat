@@ -7,18 +7,17 @@ import React from 'react';
 
 type IconBadgeProps =  {
   icon: IconDefinition,
-  type: "Success" | "Danger" | "Warning"
+  text?: string
 }
 
-const IconBadge: React.FC<IconBadgeProps> = ({ icon, type }) => {
+const IconBadge: React.FC<IconBadgeProps> = ({ icon, text }) => {
   
 
   return (
-    <span className={cls(['inline-flex','rounded','uppercase','p-2','text-lg','font-bold',
-     type == "Success" && 'bg-green-300',
-     type == "Danger" && 'bg-red-300',
-     type == "Warning" && 'bg-yellow-300'
-    ])}><FontAwesomeIcon fontSize={30} icon={icon} /></span>
+    <span className={cls(['py-1 px-1.5 inline-flex items-center gap-x-1 text-xs bg-gray-100 text-gray-800 rounded-md dark:bg-slate-500/20 dark:text-slate-400'])}>
+      <FontAwesomeIcon icon={icon} />
+      <span>{text}</span>
+    </span>
 
   );
 };

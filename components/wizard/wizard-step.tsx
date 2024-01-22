@@ -9,9 +9,10 @@ import TextInput from "../core/TextInput";
 import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/component.utils";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faInfo, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cls } from "@/lib/utils/utils";
+import IconBadge from "../core/IconBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -50,6 +51,8 @@ function statusInput(status: AnswerStatus) {
       "bg-red-50 border border-red-500 text-red-900 text-sm focus:ring-red-500 focus:border-red-500 dark:border-red-500" :
       'text-gray-900 border border-gray-300 bg-gray-50';
 }
+
+
 function renderInput(question: Question, control: FormControl<any>, status: AnswerStatus, setAnswer: any) {
 
   const inputBy = question.metadata.inputBy;
@@ -69,22 +72,22 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
   }
   else if (inputBy.kind === "math") {
 
-
+    const hintClass = 'italic text-sm'
     const input = inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
       <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
       inputBy.args ?? {})
     return inputBy.args?.hintType != null ? <div>
       {input}
       {inputBy.args.hintType == "expression" ?
-        <span>
+        <span className={hintClass}>
           x2 zapište jako x2.
           Výsledek s násobením závorek zapište jako x(x+1).</span>
         : inputBy.args.hintType == "fraction" ?
-          <span>Zlomkovou čáru zapište pomocí /.</span>
+          <span className={hintClass}>Zlomkovou čáru zapište pomocí /.</span>
           : inputBy.args.hintType == "equation" ?
-            <span>Nemá řešení zapište NŘ, nekonečno mnoho řešení zapište NM, jinak zapište číslo.</span>
+            <span className={hintClass}>Nemá řešení zapište NŘ, nekonečno mnoho řešení zapište NM, jinak zapište číslo.</span>
             : inputBy.args.hintType == "ratio" ?
-              <span>Poměr zapište jako 1:1.</span> : null
+              <span className={hintClass}>Poměr zapište jako 1:1.</span> : null
       }
     </div> : input
   }
@@ -119,6 +122,11 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const hasInput = question.metadata.inputBy != null;
 
   const header = question.data?.header;
+  const verifyBy = question.metadata.verifyBy;
+  const maxPoints = verifyBy.kind == 'selfEvaluate' ? Math.max(...verifyBy.args.options.map(d => d.value)) : question.metadata.points;
+
+
+
 
   return (
     <div className="flex flex-col gap-10" >
@@ -170,7 +178,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
         <div className="flex">
           <div className="grow">
-            {question.metadata.points != null ? <div>Body: {question.metadata.points}</div> : question.metadata.points }
+            {maxPoints != null ? <div> <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} /></div> : null}
           </div>
           <div className="grid grid-cols-2 gap-3">
 

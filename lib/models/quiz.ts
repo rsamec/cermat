@@ -21,7 +21,7 @@ export interface QuizState {
 	tree?: TreeNode<QuestionGroup | Question>
 	questions: Question[]
 	currentStep: Question | null; // Use Question type directly
-	answers: Record<string, string>;
+	answers: Record<string, any>;
 	corrections: Record<string, boolean>;
 	totalPoints: number;
 }
@@ -67,21 +67,22 @@ export const quiz = createModel<RootModel>()({
 				...state.corrections,
 				[questionId]: verifyQuestion(question, answer)
 			}
+			const answers = {
+				...state.answers,
+				[questionId]: answer,
+			}
 			return {
 				...state,
-				answers: {
-					...state.answers,
-					[questionId]: answer,
-				},
+				answers,
 				corrections,
-				totalPoints: calculateTotalPoints(state, corrections)
+				totalPoints: calculateTotalPoints(state, { corrections, answers })
 			};
 		},
 		submitQuiz(state) {
 			return {
 				...state,
 				corrections: calculateCorrections(state),
-				totalPoints: calculateTotalPoints(state, state.corrections),
+				totalPoints: calculateTotalPoints(state, { corrections: state.corrections, answers: state.answers }),
 			};
 		},
 		goToNextStep(state) {
@@ -160,12 +161,16 @@ const verifyQuestion = (question: Question, answer: string) => {
 }
 
 
-const calculateTotalPoints = (state: QuizState, corrections: Record<string, boolean>) => {
+const calculateTotalPoints = (state: QuizState, { corrections, answers }: { corrections: Record<string, boolean>, answers: Record<string, any> }) => {
 	let totalPoints = 0;
 	const tree = state.tree;
 	if (tree == null) return totalPoints;
 
-	const calculateSum = (children: Question[]) => children.reduce((out, d) => out += corrections[d.id] ? (d.metadata.points ?? 0) : 0, 0)
+	const calculateSum = (children: Question[]) => children.reduce((out, d) => {
+		out += d.metadata.points == null && d.metadata.verifyBy.kind == "selfEvaluate"
+			? (answers[d.id]?.value ?? 0) : corrections[d.id] ? (d.metadata.points ?? 0) : 0
+		return out;
+	}, 0)
 	const calculateCustom = (children: Question[]) => {
 		const successCount = children.map(d => corrections[d.id]).filter(d => d).length;
 		return successCount == children.length ? 4 : successCount >= 2 ? 2 : 0
