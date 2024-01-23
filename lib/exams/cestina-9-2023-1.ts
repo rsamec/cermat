@@ -30,10 +30,10 @@ const form = group({
   11: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
   12: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
   13: group({
-    13.1: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'options' } },
-    13.2: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'options' } },
-    13.3: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'options' } },
-    13.4: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'options' } },
+    13.1: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'bool' } },
+    13.2: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'bool' } },
+    13.3: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'bool' } },
+    13.4: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'bool' } },
   }, {
     computeBy: {
       kind: 'group', args: [{ points: 2, min: 4 }, { points: 1, min: 3 }]
