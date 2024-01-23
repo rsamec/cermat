@@ -24,11 +24,18 @@ export type EqualOptionValidator<T> = ValidationFunctionArgs<T> & {
 export type EqualMathOptionValidator = ValidationFunctionArgs<string> & {
   kind: "equalMath"
 }
+export type EqualSortedOptionsValidator = ValidationFunctionArgs<string[]> & {
+  kind: "equalSortedOptions"
+}
+export type EqualListValidator<T> = ValidationFunctionArgs<T[]> & {
+  kind: "equalList"
+}
+
 
 export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<number>[] }> & {
   kind: "selfEvaluate"
 }
-export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualOptionValidator<T> | FractionEqualValidator | SelfEvaluateValidator | EqualMathOptionValidator;
+export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualOptionValidator<T> | FractionEqualValidator | SelfEvaluateValidator | EqualMathOptionValidator | EqualListValidator<T> | EqualSortedOptionsValidator;
 
 export type ComponentFunctionArgs<T> = { args?: T }
 export type MathExpressionHintType = 'fraction' | 'expression' | 'equation' | 'ratio';
@@ -45,12 +52,15 @@ export type NumberComponentFunctionSpec = ComponentFunctionArgs<{ prefix?: strin
 export type MathExpressionComponentFunctionSpec = ComponentFunctionArgs<{ prefix?: string, suffix?: string, hintType?: MathExpressionHintType | MathExpressionHintType[], hint?: string }> & {
   kind: 'math'
 }
-
 export type OptionsComponentFunctionSpec = ComponentFunctionArgs<undefined> & {
   kind: 'options'
 }
+export type SortedOptionsComponentFunctionSpec = ComponentFunctionArgs<undefined> & {
+  kind: 'sortedOptions'
+}
 
-export type ComponentFunctionSpec = BooleanComponentFunctionSpec | TextComponentFunctionSpec | NumberComponentFunctionSpec | OptionsComponentFunctionSpec | MathExpressionComponentFunctionSpec
+
+export type ComponentFunctionSpec = BooleanComponentFunctionSpec | TextComponentFunctionSpec | NumberComponentFunctionSpec | OptionsComponentFunctionSpec | MathExpressionComponentFunctionSpec | SortedOptionsComponentFunctionSpec
 
 export class CoreVerifyiers {
   static EqualValidator<T>(value: T) {
@@ -66,7 +76,14 @@ export class CoreVerifyiers {
 
   static EqualOptionValidator<T>(value: T) {
     return (control: Option<T>) => {
-      return control.value === value ? undefined : { 'value': control.value };
+      return control?.value === value ? undefined : { 'value': control?.value };
+    }
+  }
+
+  static EqualSortedOptionsValidator(values: string[]) {
+    return (control: Option<string>[]) => {
+      const options = control ?? [];
+      return values.length === options.length && values.join() === options.map(d => d.value).join() ? undefined : { 'value': options.map(d => d.value).join(",") };
     }
   }
 
@@ -87,7 +104,9 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
     case 'equalOption':
       return CoreVerifyiers.EqualOptionValidator(spec.args);
     case 'selfEvaluate':
-      return CoreVerifyiers.SelfEvaluateValidator(spec.args)
+      return CoreVerifyiers.SelfEvaluateValidator(spec.args);
+    case 'equalSortedOptions':
+      return CoreVerifyiers.EqualSortedOptionsValidator(spec.args);
     default:
       throw new Error(`Function ${spec} not supported.`);
   }

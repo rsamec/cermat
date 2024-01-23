@@ -185,12 +185,16 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 VÝCHOZÍ TEXT K ÚLOZE 14
 ===
 >Dítěti ***** být středem pozornosti může nástup do 1. třídy činit problémy. Během času
- ve škole se však zpravidla naučí dát prostor i svým vrstevníkům.
-## 14
+> ve škole se však zpravidla naučí dát prostor i svým vrstevníkům.
+
+# 14
 ## **14.1 Napište náležitý spisovný tvar slova zvyklý, který patří na první vynechané místo (*****) ve výchozím textu.**
 ## **14.2 Napište náležitý spisovný tvar slova prožitý, který patří na druhé vynechané místo () ve výchozím textu.**
-# (Po doplnění náležitého tvaru musí být příslušný větný celek gramaticky správný.)
 
+(Po doplnění náležitého tvaru musí být příslušný větný celek gramaticky správný.)
+
+
+# 15 Seřaďte jednotlivé části textu (A–F) tak, aby byla dodržena textová návaznost.
 
 - [A] „Někoho z práce?“ vyzvídala má sestra Maeve. Sandy se na chvíli zamyslela: „To
 asi ne. Kde máš bráchu?“
@@ -200,19 +204,19 @@ seznámil.“
 - [C] „Abych měl soukromí,“ odpověděl jsem, ačkoliv jsem ve svých osmi letech
 neměl ponětí, co to vlastně soukromí je. Líbilo se mi to slovo – a taky pocit, že
 když za sebou zatáhnu závěsy, ocitnu se ve vlastním malém světě.
- - [D] Měl jsem vyzkoušeno, že v téhle pozici dohlédnu mezerou mezi sloupky
+- [D] Měl jsem vyzkoušeno, že v téhle pozici dohlédnu mezerou mezi sloupky
 zábradlí až do salonku. Viděl jsem, že před krbem stojí můj otec a hovoří
 s neznámou ženou. To mi zatím stačilo. Vrátil jsem se proto potichu do pokoje.
- - [E] Host v přízemí byl ale každopádně záhada, která mě lákala. Táta neměl přátele,
+- [E] Host v přízemí byl ale každopádně záhada, která mě lákala. Táta neměl přátele,
 rozhodně ne takové, kteří by nás navštěvovali v sobotu večer. Vylezl jsem proto
 ze své skrýše u okna, opatrně jsem vyšel na chodbu a lehl si na koberec nad
 schody.
- - [F] „U okna,“ prozradila Maeve. Sandy roztáhla závěsy, za nimiž se skrýval široký
+- [F] „U okna,“ prozradila Maeve. Sandy roztáhla závěsy, za nimiž se skrýval široký
 parapet upravený k sezení, a zeptala se mě: „Proč se tu schováváš?“
+ 
 
 
-
-# **16 Vypište z každé z následujících vět (16.1 a 16.2) základní skladební dvojici.**
+# 16 Vypište z každé z následujících vět (16.1 a 16.2) základní skladební dvojici.
 ## (Základní skladební dvojice musí být zapsány pravopisně správně.)
 ## 16.1 Závan horského větru byl v tom mimořádně horkém odpoledni opravdu osvěžující.
 ## 16.2 Mohli by dnešní lidé vůbec žít bez moderní techniky a dalších vymožeností?

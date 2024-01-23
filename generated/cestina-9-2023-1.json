@@ -166,6 +166,146 @@
           ]
         }
       }
+    },
+    "9": {
+      "verifyBy": {
+        "kind": "equal",
+        "args": "je,vaše"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "text"
+      }
+    },
+    "10": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "A"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "11": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "D"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "12": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "C"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "13": {
+      "children": {
+        "13.1": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": false
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "13.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": true
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "13.3": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": true
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "13.4": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": true
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 2,
+              "min": 4
+            },
+            {
+              "points": 1,
+              "min": 3
+            }
+          ]
+        }
+      }
+    },
+    "14": {
+      "children": {
+        "14.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": "zvyklému"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "text"
+          }
+        },
+        "14.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "prožitého"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "text"
+          }
+        }
+      }
+    },
+    "15": {
+      "verifyBy": {
+        "kind": "equalSortedOptions",
+        "args": [
+          "B",
+          "A",
+          "F",
+          "C",
+          "E",
+          "D"
+        ]
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "sortedOptions"
+      }
     }
   }
 }

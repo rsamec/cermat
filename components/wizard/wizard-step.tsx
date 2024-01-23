@@ -15,6 +15,7 @@ import { cls } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import { useSwipeable } from 'react-swipeable';
 import Badge from "../core/Badge";
+import SortableList from "../core/SortableList";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -70,25 +71,26 @@ function statusInput(status: AnswerStatus) {
 function renderInput(question: Question, control: FormControl<any>, status: AnswerStatus, setAnswer: any) {
 
   const inputBy = question.metadata.inputBy;
+  const confirmButton = <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>
   if (inputBy == null) return null;
 
   if (inputBy.kind === "number") {
 
     return inputGroup(
       <InputNumber control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])} ></InputNumber>,
-      <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
+      confirmButton,
       inputBy.args ?? {})
   }
   else if (inputBy.kind === "text") {
     return inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
-      <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
+      confirmButton,
       inputBy.args ?? {})
   }
   else if (inputBy.kind === "math") {
 
     const hintClass = 'italic text-sm'
     const input = inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
-      <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>,
+      confirmButton,
       inputBy.args ?? {})
     return inputBy.args?.hintType != null ? <div>
       {input}
@@ -114,6 +116,12 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
       status,
       (value) => setAnswer({ questionId: question.id, answer: value }));
   }
+  else if (inputBy.kind == "sortedOptions") {
+    return <div className="flex flex-col gap-4">
+      <SortableList control={control}></SortableList>
+      {confirmButton}
+    </div>
+  }
   return null
 }
 
@@ -123,7 +131,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const [flag, setFlag] = useState(false);
   const [error, setError] = useState(true);
   const { status, value } = answerState;
-  const formControl = new FormControl(value);
+  const formControl = new FormControl( question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) :value);
 
 
   useEffect(() => {
@@ -142,9 +150,6 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const header = question.data?.header;
   const verifyBy = question.metadata.verifyBy;
   const maxPoints = verifyBy.kind == 'selfEvaluate' ? Math.max(...verifyBy.args.options.map(d => d.value)) : question.metadata.points;
-
-
-
 
   return (
 
