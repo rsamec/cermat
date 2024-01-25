@@ -5,7 +5,8 @@ const tsNode = require('ts-node');
 
 // Register ts-node compiler
 tsNode.register({
-  transpileOnly: true,
+  transpileOnly: false,
+
   compilerOptions: {
     module: "commonjs", // Set module to 'es2015' or later
     target: "es2020",
@@ -64,8 +65,8 @@ async function main() {
     process.exit(1);
   }
 
-  const sourceDir = args[0];
-  const outputDir = args[1];
+  const sourceDir = path.join(process.cwd(),args[0]);
+  const outputDir = path.join(process.cwd(),args[1]);
 
   // Ensure the output directory exists
   if (!fs.existsSync(outputDir)) {

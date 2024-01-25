@@ -217,7 +217,7 @@ parapet upravený k sezení, a zeptala se mě: „Proč se tu schováváš?“
 
 
 # 16 Vypište z každé z následujících vět (16.1 a 16.2) základní skladební dvojici.
-## (Základní skladební dvojice musí být zapsány pravopisně správně.)
+ (Základní skladební dvojice musí být zapsány pravopisně správně.)
 ## 16.1 Závan horského větru byl v tom mimořádně horkém odpoledni opravdu osvěžující.
 ## 16.2 Mohli by dnešní lidé vůbec žít bez moderní techniky a dalších vymožeností?
 
@@ -232,6 +232,7 @@ stačí je slepit. Nahoru přilepíme hotovou hlavu. Poté na největší kvádr
 bude tělo robota, přilepíme dvě podlouhlé krabice (nohy) a dvě úzké krabice (ruce).
 
 # **17 Která z následujících možností nejlépe vystihuje výchozí text?**
+
 - [A] Tento popis pracovního postupu vykazuje nedostatky, například některé kroky na sebe logicky nenavazují.
 - [B] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky, například některé kroky na sebe logicky nenavazují.
 - [C] Tento popis pracovního postupu vykazuje nedostatky: jednotlivé kroky na sebe sice logicky navazují, chybí však přesné rozměry krabic.
@@ -254,8 +255,8 @@ představivost, tak šíři slovní zásoby.
 Letošní veletrh návštěvníkům tradyčně nabídl smysluplně strávený čas, další ročník
 přivítá velké i malé knihomoli na jaře příštího roku.
 # **18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je pravopisně správně.**
-## Podtržené výrazy jsou zapsány správně.
-## Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
+Podtržené výrazy jsou zapsány správně.
+Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
 VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
