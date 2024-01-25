@@ -1,36 +1,4 @@
 import { AnswerBuilder } from "../utils/quiz-specification";
-
-let adresa = {
-  street: 101,
-  city: 'dolni hbity'
-}
-interface Osoba {
-  firstName: string
-  lastName: string
-  vek: number,
-  adresa: {
-    street: number
-    city: string
-  }
-}
-
-
-let osoba = {
-  firstName: 'Roman',
-  lastName: 'Samec',
-  vek: 45,
-  adresa: adresa
-}
-let osoba2 = {
-  firstName: 'Jan',
-  lastName: 'Samec',
-  vek: 12,
-  adresa: adresa
-}
-
-function vypisOsoby(item: Osoba) {
-  return item.firstName + item.lastName + item.vek + item.adresa.city + item.adresa.street;
-}
 function volba(spravnaVolba: string) {
   return {
     verifyBy:
@@ -41,10 +9,6 @@ function volba(spravnaVolba: string) {
     }
   } as const
 }
-
-
-console.log(vypisOsoby(osoba))
-console.log(vypisOsoby(osoba2))
 
 
 const group = AnswerBuilder.group;

@@ -1,4 +1,5 @@
-import { ComponentFunctionSpec, ComputeFunctionSpec, ValidationFunctionSpec } from "./catalog-function";
+import { ValidationFunctionSpec } from "./assert";
+import { ComponentFunctionSpec, ComputeFunctionSpec } from "./catalog-function";
 import { TreeNode } from "./tree.utils"
 
 

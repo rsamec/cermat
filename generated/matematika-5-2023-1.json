@@ -32,33 +32,42 @@
       "children": {
         "3.1": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              4,
-              9
-            ]
+            "kind": "equalMathExpression",
+            "args": "4/9"
           },
-          "points": 1
+          "points": 1,
+          "inputBy": {
+            "kind": "math",
+            "args": {
+              "hintType": "fraction"
+            }
+          }
         },
         "3.2": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              -2,
-              7
-            ]
+            "kind": "equalMathExpression",
+            "args": "-2/7"
           },
-          "points": 1
+          "points": 1,
+          "inputBy": {
+            "kind": "math",
+            "args": {
+              "hintType": "fraction"
+            }
+          }
         },
         "3.3": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              5,
-              14
-            ]
+            "kind": "equalMathExpression",
+            "args": "5/14"
           },
-          "points": 2
+          "points": 2,
+          "inputBy": {
+            "kind": "math",
+            "args": {
+              "hintType": "fraction"
+            }
+          }
         }
       }
     },

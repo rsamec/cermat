@@ -16,6 +16,8 @@ import IconBadge from "../core/IconBadge";
 import { useSwipeable } from 'react-swipeable';
 import Badge from "../core/Badge";
 import SortableList from "../core/SortableList";
+import MathInput from "../core/MathInput";
+import { toHtml } from "@/lib/utils/math.utils";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -41,21 +43,26 @@ type Props = { question: Question, answerState: AnswerState } & StateProps & Dis
 
 
 
-function inputGroup(input: React.ReactNode, button: React.ReactNode, { prefix, suffix }: { prefix?: string, suffix?: string }) {
-  return <div className="max-w-lg relative mb-4 flex flex-wrap items-stretch">
-    {prefix != null ? <span
-      className="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-    >{prefix}</span> : null}
-    {input}
+function inputGroup({ input, confirmButton, verifyResult, inputBy }: { input: React.ReactNode, confirmButton: React.ReactNode, verifyResult: React.ReactNode, inputBy: { kind: 'number' | 'text' | 'math', args?: { prefix?: string, suffix?: string } } }) {
+  const { prefix, suffix } = inputBy.args ?? {};
+  return <div>
+    <div className={`${cls(["max-w-lg relative mb-4 flex flex-wrap", inputBy.kind === "math" ? "items-start" : "items-stretch"])}`}>
+      {prefix != null ? <span
+        className="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+      >{prefix}</span> : null}
+      {input}
 
-    {suffix != null ? <span
-      className="flex items-center whitespace-nowrap rounded-r border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-    >{suffix}</span> : null}
+      {suffix != null ? <span
+        className="flex items-center whitespace-nowrap rounded-r border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+      >{suffix}</span> : null}
 
-    <div className="flex items-center ml-2">
-      {button}
+      <div className="flex items-center ml-2">
+        {confirmButton}
+      </div>
     </div>
-
+    <div>
+      {verifyResult}
+    </div>
   </div>
 
 }
@@ -74,37 +81,43 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
   const confirmButton = <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>
   if (inputBy == null) return null;
 
+  const verifyResult = status == "incorrect" ?
+    question.metadata.inputBy?.kind === 'math' ?
+      <div dangerouslySetInnerHTML={{ __html: toHtml(question.metadata.verifyBy.args) }} /> :
+      <div>{question.metadata.verifyBy?.args}</div> : null
+
   if (inputBy.kind === "number") {
 
     return inputGroup(
-      <InputNumber control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])} ></InputNumber>,
-      confirmButton,
-      inputBy.args ?? {})
+      {
+        input: <InputNumber control={control} step={inputBy.args?.step} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])} ></InputNumber>,
+        confirmButton,
+        verifyResult,
+        inputBy
+      })
   }
   else if (inputBy.kind === "text") {
-    return inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
+    return inputGroup({
+      input: <TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
       confirmButton,
-      inputBy.args ?? {})
+      verifyResult,
+      inputBy
+    })
   }
   else if (inputBy.kind === "math") {
 
     const hintClass = 'italic text-sm'
-    const input = inputGroup(<TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
+    const input = inputGroup({
+      input: <MathInput control={control} className={cls(["relative m-0 block  min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></MathInput>,
       confirmButton,
-      inputBy.args ?? {})
+      verifyResult,
+      inputBy
+    })
     return inputBy.args?.hintType != null ? <div>
       {input}
-      {inputBy.args.hintType == "expression" ?
-        <span className={hintClass}>
-          x2 zapište jako x2.
-          Výsledek s násobením závorek zapište jako x(x+1).</span>
-        : inputBy.args.hintType == "fraction" ?
-          <span className={hintClass}>Zlomkovou čáru zapište pomocí /.</span>
-          : inputBy.args.hintType == "equation" ?
-            <span className={hintClass}>Nemá řešení zapište NŘ, nekonečno mnoho řešení zapište NM, jinak zapište číslo.</span>
-            : inputBy.args.hintType == "ratio" ?
-              <span className={hintClass}>Poměr zapište jako 1:1.</span> : null
-      }
+      <span className={hintClass}>
+        Násobení např.2x, x(x+1). Dělení a zlomek x/2, 1/(3+2). Mocninu x<sup>2</sup> zapište jako x^2.
+      </span>
     </div> : input
   }
   else if (inputBy.kind === "bool") {
@@ -131,7 +144,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const [flag, setFlag] = useState(false);
   const [error, setError] = useState(true);
   const { status, value } = answerState;
-  const formControl = new FormControl( question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) :value);
+  const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
 
 
   useEffect(() => {

@@ -63,3 +63,11 @@ export function extractOptionRange(text: string): [string, string] | null {
       return null;
   }
 }
+
+export const isEmptyOrWhiteSpace = (value: string): boolean => {
+  return value == null || value.trim() === '';
+};
+
+export const removeSpaces = (value:string) => {
+  return value !=null ? value.replace(/\s+/g,''): value
+}

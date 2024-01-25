@@ -2,8 +2,8 @@ import { createModel } from '@rematch/core';
 import { RootModel } from './index';
 import { TreeNode } from '../utils/tree.utils';
 import { AnswerGroupMetadata, AnswerMetadata } from '../utils/quiz-specification';
-import { getVerifyFunction } from '../utils/catalog-function';
 import { Option } from '../utils/utils'
+import { getVerifyFunction } from '../utils/assert';
 
 export interface Question {
 	id: string;
