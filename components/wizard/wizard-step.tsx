@@ -18,6 +18,7 @@ import Badge from "../core/Badge";
 import SortableList from "../core/SortableList";
 import MathInput from "../core/MathInput";
 import { toHtml } from "@/lib/utils/math.utils";
+import DOMPurify from "dompurify";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -83,7 +84,7 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
 
   const verifyResult = status == "incorrect" ?
     question.metadata.inputBy?.kind === 'math' ?
-      <div dangerouslySetInnerHTML={{ __html: toHtml(question.metadata.verifyBy.args) }} /> :
+      <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(question.metadata.verifyBy.args)) }} /> :
       <div>{question.metadata.verifyBy?.args}</div> : null
 
   if (inputBy.kind === "number") {
