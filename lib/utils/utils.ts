@@ -43,7 +43,7 @@ export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleS
 };
 
 export function extractNumberRange(text: string): [number, number] | null {
-  const match = text.match(/^([\s\S]*?)(\d+)(?:-(\d+))?/);
+  const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?/);
   if (match) {
       const prefix = match[1];
       const start = parseInt(match[2], 10);

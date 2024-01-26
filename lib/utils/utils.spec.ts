@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls, extractOptionRange } from './utils';
+import { cls, extractNumberRange, extractOptionRange } from './utils';
 
 test('simple string', () => {
 
@@ -17,7 +17,22 @@ test('boolean to string', () => {
   expect(cls([false && "one"])).toBe("")
 })
 
-// test('extract option identifier', () => {
-//   expect(extractOptionRange("[A] some text")).toBe(["A", "some text"])
+test('extract number range identifier', () => {
+  expect(extractNumberRange(
+  `Some text 8-12
+  ===`
+  )).toEqual([8,12])
 
-// })
+})
+test('extract number range identifier', () => {
+  expect(extractNumberRange(
+  `Some text 8–12
+  ===`
+  )).toEqual([8,12])
+
+})
+
+test('extract option identifier', () => {
+  expect(extractOptionRange("[A] some text")).toEqual(["A", "some text"])
+
+})

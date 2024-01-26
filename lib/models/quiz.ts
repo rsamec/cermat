@@ -1,9 +1,10 @@
 import { createModel } from '@rematch/core';
 import { RootModel } from './index';
 import { TreeNode } from '../utils/tree.utils';
-import { AnswerGroupMetadata, AnswerMetadata } from '../utils/quiz-specification';
+import { Answer, AnswerGroupMetadata, AnswerGroupTreeNode, AnswerMetadata, AnswerMetadataTreeNode, calculateMaxTotalPoints, calculatePoints } from '../utils/quiz-specification';
 import { Option } from '../utils/utils'
 import { getVerifyFunction } from '../utils/assert';
+import { GroupCompute } from '../utils/catalog-function';
 
 export interface Question {
 	id: string;
@@ -18,12 +19,13 @@ export interface QuestionGroup {
 }
 
 export interface QuizState {
-	tree?: TreeNode<QuestionGroup | Question>
+	tree?: TreeNode<Answer<any>>
 	questions: Question[]
 	currentStep: Question | null; // Use Question type directly
 	answers: Record<string, any>;
 	corrections: Record<string, boolean>;
 	totalPoints: number;
+	maxTotalPoints: number;
 }
 
 export type AnswerStatus = 'correct' | 'incorrect' | 'unanswered';
@@ -37,12 +39,13 @@ const initState: QuizState = {
 	answers: {},
 	corrections: {},
 	totalPoints: 0,
+	maxTotalPoints: 0
 }
 
 export const quiz = createModel<RootModel>()({
 	state: { ...initState },
 	reducers: {
-		init(state, { questions, tree }: { questions: Question[], tree: TreeNode<Question | QuestionGroup> }) {
+		init(state, { questions, tree }: { questions: Question[], tree: TreeNode<Answer<any>> }) {
 
 			// const tree = convertTree<QuestionGroup | Question>(quiz);
 
@@ -56,6 +59,7 @@ export const quiz = createModel<RootModel>()({
 				tree,
 				questions,
 				currentStep: questions.length > 0 ? questions[0] : null,
+				maxTotalPoints: calculateMaxTotalPoints(tree)
 			}
 		},
 		setAnswer(state, { questionId, answer }: { questionId: string; answer: string }) {
@@ -166,39 +170,21 @@ const calculateTotalPoints = (state: QuizState, { corrections, answers }: { corr
 	const tree = state.tree;
 	if (tree == null) return totalPoints;
 
-	const calculateSum = (children: Question[]) => children.reduce((out, d) => {
-		out += d.metadata.points == null && d.metadata.verifyBy.kind == "selfEvaluate"
-			? (answers[d.id]?.value ?? 0) : corrections[d.id] ? (d.metadata.points ?? 0) : 0
+	const calculateSum = (children: AnswerMetadataTreeNode<any>[]) => children.reduce((out, d) => {
+		out += d.node.points == null && d.node.verifyBy.kind == "selfEvaluate"
+			? (answers[d.id]?.value ?? 0) : corrections[d.id] ? (d.node.points ?? 0) : 0
 		return out;
 	}, 0)
-	const calculateCustom = (children: Question[]) => {
+	const calculateCustom = (computBy: GroupCompute, children: AnswerMetadataTreeNode<any>[]) => {
 		const successCount = children.map(d => corrections[d.id]).filter(d => d).length;
-		return successCount == children.length ? 4 : successCount >= 2 ? 2 : 0
+		const points = computBy.args.filter(d => d.min <= successCount).map(d => d.points);
+		return points.length > 0 ? Math.max(...points) : 0
 	}
 
-	const traverse = (node: TreeNode<Question | QuestionGroup>, leafs: Question[]) => {
-		let total = 0;
 
-		// Check if the current node is a leaf (no children)
-		if (!node.children || node.children.length === 0) {
-			leafs.push(node.data as Question);
-		}
-		else {
-			const group = node.data as QuestionGroup;
-			//clear leafs for each composite node
-			leafs = []
-			// Recursively calculate total points for each child node						
-			for (const childNode of node.children) {
-				total += traverse(childNode, leafs);
-			}
-
-			//points for leafs
-			total += leafs.length > 0 ? (group.metadata?.computeBy != null ? calculateCustom(leafs) : calculateSum(leafs)) : 0;
-		}
-		return total
-	}
-
-	totalPoints = traverse(tree, [])
+	totalPoints = calculatePoints(tree, (computeBy, leafs) => computeBy != null && computeBy.kind == "group"
+		? calculateCustom(computeBy, leafs)
+		: calculateSum(leafs))
 
 	return totalPoints;
 

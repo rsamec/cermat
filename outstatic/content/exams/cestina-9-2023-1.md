@@ -83,14 +83,14 @@ Vysvětlivka: Loreta – pražská kaple
 - [D] ano, avšak pouze tvrzení č. 2
 
 
-# **5 Které z následujících tvrzení o slovesném tvaru podtrženém v TEXTU 1 je pravdivé?**
+# 5 Které z následujících tvrzení o slovesném tvaru podtrženém v TEXTU 1 je pravdivé?
 - [A] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný prchala chvíli poté začal ztrácet rovnováhu.
 - [B] Tvar ztráceje v textu vyjadřuje děj následující po jiném ději – dotyčný zhasil světla a chvíli poté začal ztrácet rovnováhu.
 - [C] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný prchal a zároveň občas ztrácel rovnováhu.  
 - [D] Tvar ztráceje v textu vyjadřuje děj současně probíhající s jiným dějem – dotyčný zhasil světla a zároveň občas ztrácel rovnováhu.
 
 
-# **6 Přiřaďte k jednotlivým větám (6.1–6.3) odpovídající tvrzení (A–E).**
+# 6 Přiřaďte k jednotlivým větám (6.1–6.3) odpovídající tvrzení (A–E).
 
 (Větné členy mohou být ve větách uvedeny v libovolném pořadí. Žádnou možnost z nabídky A–E nelze přiřadit víckrát než jednou.)
 
@@ -105,13 +105,14 @@ Vysvětlivka: Loreta – pražská kaple
 - [E] Věta obsahuje podmět, přísudek, přívlastek neshodný, předmět a příslovečné určení.
 
 
-# **7 Ke každé z následujících podúloh (7.1 a 7.2) napište současné (tj. ne zastaralé) spisovné slovo, které odpovídá zadání a zároveň není vlastním jménem.**
+# 7 Ke každé z následujících podúloh (7.1 a 7.2) napište současné (tj. ne zastaralé) spisovné slovo, které odpovídá zadání a zároveň není vlastním jménem.
 ## 7.1 Napište podstatné jméno, které je v 1. pádě čísla jednotného jednoslabičné, je příbuzné se slovem ŘÍKAT, skloňuje se podle vzoru KOST a neobsahuje předponu.
 ## 7.2 Napište podstatné jméno, které je v 1. pádě čísla jednotného tříslabičné, je příbuzné se slovem ROVNAT, skloňuje se podle vzoru STAVENÍ a obsahuje předponu.
 
 
 VÝCHOZÍ TEXT K ÚLOHÁM 8–12
 ===
+
 >(1) Sidra a Tak kráčely muzeem rovnou ke kurátorčině pracovně. Když však došly na
 místo, čekalo je nemilé překvapení. Na obrazovce nad kanceláří blikala zpráva: Šla jsem
 již domů. Vaše požadavky budou vyřízeny ve vedlejší kanceláři. „Zatraceně!“ rozmrzele
@@ -141,25 +142,25 @@ v pořádku, takže příslušné exponáty můžete prozkoumat.“ A zavřel dv
 Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – buňka obsahující barvivo
 (B. Chambersová, Dvě místa na slunci, upraveno)
 
-# **Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).**
+# 8 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 8.1 Thixis zanechala na dveřích Jojeho kanceláře vzkaz adresovaný Sidře a Tak. 
 ## 8.2 Joje si všiml, že následkem požití léků se zdravotní stav Tak v průběhu setkání zhoršil. 
 ## 8.3 Joje v závěru setkání odhalil, že mu Sidra a Tak lžou, a nabyl proto přesvědčení, že jsou zlodějky. 
 ## 8.4 Sidra nesla s nelibostí, že kvůli vymazanému protokolu upřímnosti musí na Jojeho otázky odpovídat nepravdivě. 
 
 
-# **9 Vypište z první části výchozího textu dvě zájmena.**
-## Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jakéhokoli slova, které neodpovídá zadání.
+# 9 Vypište z první části výchozího textu dvě zájmena.
+Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
-# **10 Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výchozím textu, aby dané souvětí bylo gramaticky správné a zároveň se v něm uplatnil stupňovací poměr?**
+# 10 Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výchozím textu, aby dané souvětí bylo gramaticky správné a zároveň se v něm uplatnil stupňovací poměr?
 - [A] ne-li až nezdvořile
 - [B] tudíž až nezdvořilé
 - [C] ne-li dost nezdvořilé
 - [D] tudíž dost nezdvořile
 
 
-# **11 Ve které z následujících možností je uvedena dvojice slov, jež nelze v kontextu výchozího textu považovat za antonyma?**
+# 11 Ve které z následujících možností je uvedena dvojice slov, jež nelze v kontextu výchozího textu považovat za antonyma?
 - (První slovo z každé dvojice pochází z výchozího textu a je v něm vyznačeno tučně.)
 - [A] nemilé – milé 
 - [B] nesměle – směle
@@ -167,7 +168,7 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 - [D] jistě – nejistě
 
 
-# **12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří .
+# 12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří 
 ## Kterou z následujících možností je nutné doplnit na vynechané místo () ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
 - [A] celkem tři příslušníci stejné rasy
 - [B] celkem čtyři příslušníci stejné rasy
@@ -175,7 +176,7 @@ Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – bu�
 - [D] celkem čtyři postavy, z nichž tři jsou příslušníci stejné rasy
 
 
-# **13 Rozhodněte o každém z následujících souvětí, zda je zapsáno pravopisně správně (A), nebo ne (N).**
+# 13 Rozhodněte o každém z následujících souvětí, zda je zapsáno pravopisně správně (A), nebo ne (N).
 ## 13.1 Jakmile přibyl na stěnu první lištu, prohlásil, že je unavený a musí si trochu oddechnout. 
 ## 13.2 Po dnešní dlouhé pěší túře rodiče rozhodli, že se zítra na vrchol hory necháme vyvézt lanovkou.
 ## 13.3 Milošovy vtipy tentokrát nerozesmály ani jeho přátele, kteří většinou uvítali každý jeho rozpustilý kousek. 
@@ -188,8 +189,8 @@ VÝCHOZÍ TEXT K ÚLOZE 14
 > ve škole se však zpravidla naučí dát prostor i svým vrstevníkům.
 
 # 14
-## **14.1 Napište náležitý spisovný tvar slova zvyklý, který patří na první vynechané místo (*****) ve výchozím textu.**
-## **14.2 Napište náležitý spisovný tvar slova prožitý, který patří na druhé vynechané místo () ve výchozím textu.**
+## 14.1 Napište náležitý spisovný tvar slova zvyklý, který patří na první vynechané místo (*****) ve výchozím textu.
+## 14.2 Napište náležitý spisovný tvar slova prožitý, který patří na druhé vynechané místo () ve výchozím textu.
 
 (Po doplnění náležitého tvaru musí být příslušný větný celek gramaticky správný.)
 
@@ -231,7 +232,7 @@ ruličku od toaletního papíru představující anténu. Když máme vybrané v
 stačí je slepit. Nahoru přilepíme hotovou hlavu. Poté na největší kvádrovou krabici, z níž
 bude tělo robota, přilepíme dvě podlouhlé krabice (nohy) a dvě úzké krabice (ruce).
 
-# **17 Která z následujících možností nejlépe vystihuje výchozí text?**
+# 17 Která z následujících možností nejlépe vystihuje výchozí text?
 
 - [A] Tento popis pracovního postupu vykazuje nedostatky, například některé kroky na sebe logicky nenavazují.
 - [B] Jde o líčení (tj. subjektivně zabarvený popis) vykazující nedostatky, například některé kroky na sebe logicky nenavazují.
@@ -254,7 +255,7 @@ aby se stále nesnižovaly počty dětských čtenářů. Čtení přece pozitiv
 představivost, tak šíři slovní zásoby.
 Letošní veletrh návštěvníkům tradyčně nabídl smysluplně strávený čas, další ročník
 přivítá velké i malé knihomoli na jaře příštího roku.
-# **18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je pravopisně správně.**
+# 18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je pravopisně správně.
 Podtržené výrazy jsou zapsány správně.
 Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
@@ -292,21 +293,21 @@ kamenných věží, jedno je jisté – jde o výjimečný architektonický poč
 >Ve větě typu A lze zcela jednoznačně určit podmět, např. Hádku vyvolal stres.
 Ve větě typu B nelze zcela jednoznačně určit podmět, např. Spor vyvolal stres (Vznikl
 spor kvůli stresu, nebo vznikl stres kvůli sporu?).
-# **19 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z TEXTU 1 (A), nebo ne (N).**
+# 19 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z TEXTU 1 (A), nebo ne (N).
 ## 19.1 První broch byl na území Skotska postaven před více než 2 500 lety. 
 ## 19.2 Vnitřní průměr dochovaného brochu je v nejvyšším místě této stavby menší než 15 metrů. 
 ## 19.3 Všech dvacet členů komunity, která obývala brochy, v tehdejší společnosti zastávalo vysoké funkce. 
 ## 19.4 V mezeře mezi vnější a vnitřní obvodovou zdí brochů byly obvykle schody, po nichž bylo možné se dostat z nádvoří do vyšších pater. 
 
 
-# **20 Která z následujících možností patří na vynechané místo (*****) v TEXTU 1?**
+# 20 Která z následujících možností patří na vynechané místo (*****) v TEXTU 1?
 - [A] Známý dosud není ani přesný počet postavených věží
 - [B] Známá doposud není ani poloha žádné z postavených věží
 - [C] Známá doposud není ani přibližná podoba staveb zvaných brochy
 - [D] Známý dosud není ani způsob opracovávání kamenů při stavbě brochů
 
 
-# **21 Které z následujících tvrzení o dvou větách podtržených v TEXTU 1 je pravdivé?**
+# 21 Které z následujících tvrzení o dvou větách podtržených v TEXTU 1 je pravdivé?
 - (Úlohu řešte na základě definic uvedených v TEXTU 2.) 
 - [A] Obě tyto věty jsou typu A.
 - [B] Obě tyto věty jsou typu B.
@@ -314,14 +315,14 @@ spor kvůli stresu, nebo vznikl stres kvůli sporu?).
 - [D] Věta z druhé části textu je typu B, věta ze třetí části textu je typu A.
 
 
-# **22 Které z následujících tvrzení odpovídá TEXTU 1?**
+# 22 Které z následujících tvrzení odpovídá TEXTU 1?
 - [A] V textu je zmíněna hypotéza, že brochy bylo možné dobýt, její pravdivost je však následně zpochybněna.
 - [B] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, její pravdivost je však následně zpochybněna.
 - [C] V textu je zmíněna hypotéza, že brochy nebylo možné dobýt, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
 - [D] V textu je zmíněna hypotéza, že brochy mohly sloužit jako obranné pevnosti, a její pravdivost je doložena konkrétními příklady, např. absencí oken.
   
 
-# **23 Které z následujících tvrzení o slově dobytek tučně vyznačeném v TEXTU 1 je pravdivé?**
+# 23 Které z následujících tvrzení o slově dobytek tučně vyznačeném v TEXTU 1 je pravdivé?
 - [A] Toto slovo je vždy citově zabarvené, tedy jak v TEXTU 1, tak ve větě Ten mladý právník je ale dobytek.
 - [B] Toto slovo není nikdy citově zabarvené, tedy ani v TEXTU 1, ani ve větě Ten mladý právník je ale dobytek.
 - [C] Toto slovo není v TEXTU 1 citově zabarvené, ale ve větě Ten mladý právník je ale dobytek citově zabarvené je.
@@ -334,7 +335,7 @@ VÝCHOZÍ TEXT K ÚLOZE 24
 ve firmě KZO, sídlící jen 15 minut od jeho domu. Záhy se však tato firma přestěhovala
 do jiného města. Když se Víťa sešel se sousedkou Terezou, postěžoval si jí: „Tomu se říká
 dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě hodiny!“
-# **24 Které z následujících tvrzení vystihuje situaci popsanou ve výchozím textu?**
+# 24 Které z následujících tvrzení vystihuje situaci popsanou ve výchozím textu?
 - [A] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost se svou situací.
 - [B] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že se jeho situace navzdory očekávání nezlepšila. 
 - [C] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost s neseriózním jednáním firmy KZO.
@@ -362,25 +363,25 @@ dobu obdivuhodně lehký model LUX 1, který vyrobila společnost Electrolux. Pr
 se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 (www.idnes.cz; epochaplus.cz, upraveno)
 
-# **25 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).**
+# 25 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 25.1 Model LUX 1, výrobek společnosti Electrolux, byl uveden na trh v minulém století. 
 ## 25.2 Během procesu vysávání Boothovo zařízení fungovalo výhradně na koňský pohon.
 ## 25.3 Patent na Spanglerův přenosný vysavač koupil v roce 1908 zakladatel jedné americké fi rmy.
 ## 25.4 Velká hlučnost Boothova vysávacího zařízení vyvolala demonstraci nespokojených občanů Londýna. 
 
 
-# **26 Vypište z druhé části výchozího textu tři podstatná jména, která jsou v textu užita v 6. pádě.**
+# 26 Vypište z druhé části výchozího textu tři podstatná jména, která jsou v textu užita v 6. pádě.
 ## Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
-# **27 Které z následujících tvrzení o slovese tučně vyznačeném ve výchozím textu je pravdivé?**
+# 27 Které z následujících tvrzení o slovese tučně vyznačeném ve výchozím textu je pravdivé?
 - [A] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
 - [B] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
 - [C] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
 - [D] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
 
 
-# **28 Které z následujících tvrzení o zájmenu podtrženém ve výchozím textu je pravdivé?**
+# 28 Které z následujících tvrzení o zájmenu podtrženém ve výchozím textu je pravdivé?
 - [A] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu drožky.
 - [B] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu zařízení.
 - [C] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu drožky.
@@ -390,14 +391,14 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 VÝCHOZÍ TEXT K ÚLOZE 29
 ===
 >Kryštof nakonec musel prodat, navíc dost pod cennou, zlatou medaili z mistrovství světa. 
-# **29 Které z následujících tvrzení je pravdivé?**
+# 29 Které z následujících tvrzení je pravdivé?
 - [A] Výchozí text je zapsán pravopisně správně.
 - [B] Výchozí text obsahuje pravopisnou chybu: místo nakonec má být na konec.
 - [C] Výchozí text obsahuje pravopisnou chybu: místo cennou má být cenou.
 - [D] Výchozí text obsahuje pravopisnou chybu: místo medaili má být medaily.
 
 
-# **30 Přiřaďte k jednotlivým tvrzením (30.1–30.4) odpovídající souvětí (A–F).**
+# 30 Přiřaďte k jednotlivým tvrzením (30.1–30.4) odpovídající souvětí (A–F).
 ## (Spisovnost/nespisovnost posuzujte z hlediska současné češtiny. Žádnou možnost z nabídky A–F nelze přiřadit víckrát než jednou.)
 ## 30.1 Oba podtržené tvary jsou v daném souvětí nespisovné, první podtržený tvar však může být v jiném kontextu spisovný. 
 ## 30.2 Oba podtržené tvary jsou v daném souvětí nespisovné, druhý podtržený tvar však může být v jiném kontextu spisovný

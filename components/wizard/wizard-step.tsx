@@ -139,7 +139,7 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
 }
 
 
-const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back, totalAnswers, totalPoints, questions }) => {
+const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints, questions }) => {
 
   const { status, value } = answerState;
   
@@ -225,7 +225,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
         <div className="grow flex flex-wrap gap-2">
           <Badge text="Úlohy" badgeText={`${totalAnswers} / ${questions.length}`} type="Gray" ></Badge>
-          <Badge text="Body" badgeText={`${totalPoints} / ${50}`} type="Gray" ></Badge>
+          <Badge text="Body" badgeText={`${totalPoints} / ${maxTotalPoints}`} type="Gray" ></Badge>
         </div>
 
         <div className="flex self-end gap-3">

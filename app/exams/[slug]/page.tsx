@@ -11,7 +11,7 @@ import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
 import { Question, QuestionGroup } from '@/lib/models/quiz'
-import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
+import { AnswerGroup, AnswerMetadata, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Footer from '@/components/Footer'
 
 const collection = 'exams';
@@ -81,16 +81,16 @@ export default async function Exam(params: Params) {
         </div>
       </header>
 
-                <Wizard questions={questions} tree={tree}></Wizard>
-               
+      <Wizard questions={questions} tree={tree}></Wizard>
 
-                {/* <div className="max-w-2xl mx-auto">
+
+      {/* <div className="max-w-2xl mx-auto">
               <div
                 className="prose lg:prose-xl flex flex-col space-y-2"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             </div> */}
-             
+
       <Footer></Footer>
 
     </>
@@ -141,9 +141,9 @@ async function getData({ params }: Params) {
 
   //const contentTree = renderHtmlTree(parsedTree)
 
-  const quiz: AnswerGroup<Question | QuestionGroup> = await loadJsonBySlug(params.slug);
+  const quiz: AnswerGroup<any> = await loadJsonBySlug(params.slug);
 
-  const quizTree = convertTree<QuestionGroup | Question>(quiz);
+  const quizTree = convertTree(quiz);
   const quizQuestions = getAllLeafsWithAncestors(quizTree).map((d, i) => {
 
     const node = leafs[i];
@@ -159,9 +159,11 @@ async function getData({ params }: Params) {
     // if (isInRange) {
     //   console.log(d.leaf.data.id, node.ancestors[1].data.header, node.ancestors[1].data.content)
     // }
-    //console.log(node.leaf.data.content);
+    //console.log(node.leaf.data.header, isInRange, range);
+    const treeLeaf = d.leaf.data as AnswerMetadataTreeNode<any>
     return {
-      ...d.leaf.data,
+      id: treeLeaf.id,
+      metadata: treeLeaf.node,
       data: {
         content: node.ancestors.slice(range == null ? 1 : 2).map(x => x.data.contentHtml).join(""),
         ...(isInRange && {
