@@ -6,20 +6,21 @@ import { useEffect } from "react";
 import { Question, QuestionGroup } from "@/lib/models/quiz";
 import StepRenderer from "./step-render";
 import { TreeNode } from "@/lib/utils/tree.utils";
+import { Answer } from "@/lib/utils/quiz-specification";
 
-export default function Wizard(props: { questions: Question[] , tree: TreeNode<QuestionGroup | Question> }) {
+export default function Wizard(props: { questions: Question[], tree: TreeNode<Answer<any>> }) {
   const { dispatch } = store;
 
   useEffect(() => {
     // Dispatch fetchData action when the component mounts    
     dispatch.quiz.init(props)
   }, [props, dispatch.quiz]);
-  
-  
+
+
   return (
     <div>
       <Provider store={store}>
-          <StepRenderer></StepRenderer>
+        <StepRenderer></StepRenderer>
       </Provider>
     </div>
   )
