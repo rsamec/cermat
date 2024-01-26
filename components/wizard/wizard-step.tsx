@@ -7,11 +7,11 @@ import InputNumber from "../core/InputNumber";
 import { FormControl } from "@/lib/utils/form.utils";
 import TextInput from "../core/TextInput";
 import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/component.utils";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { cls } from "@/lib/utils/utils";
+import { cls, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import { useSwipeable } from 'react-swipeable';
 import Badge from "../core/Badge";
@@ -142,17 +142,13 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
 
 const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back, totalAnswers, totalPoints, questions }) => {
 
-  const [flag, setFlag] = useState(false);
-  const [error, setError] = useState(true);
   const { status, value } = answerState;
-  const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
+  
+  
+  const [questionMap, setQuestionMap] = useState(new Map())
+  const [headerMap, setHeaderMap] = useState(new Map())
 
-
-  useEffect(() => {
-    setFlag(false);
-    setError(true);
-  }, [question])
-
+  
   const handlers = useSwipeable({
     onSwipedLeft: () => next(),
     onSwipedRight: () => back(),
@@ -165,14 +161,27 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const verifyBy = question.metadata.verifyBy;
   const maxPoints = verifyBy.kind == 'selfEvaluate' ? Math.max(...verifyBy.args.options.map(d => d.value)) : question.metadata.points;
 
+  const isHeaderExpanded = headerMap.has(header?.title) ? headerMap.get(header?.title).expanded : true;
+  const isQuestionAnswerExpanded = questionMap.has(question.id) ? questionMap.get(question.id).expanded : false;
+  const toggleExpandableHeader = (title: string) => {
+    setHeaderMap((previous) => updateMap(previous, title, { expanded: previous.has(title) ? !previous.get(title).expanded : false }))
+  }
+  const toggleExpandableAnswer = (questionId: string) => {
+    setQuestionMap((previous) => updateMap(previous, questionId, { expanded: previous.has(questionId) ? !previous.get(questionId).expanded : true }))
+  }
+
+  const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
   return (
 
     <div {...handlers} className="flex flex-col gap-2 px-3" >
       <div>
 
         {header != null ?
-          <details className="py-5 [&_svg]:open:-rotate-180" open={true} >
-            <summary className="text-xl font-bold">{header.title}</summary>
+          <details className="py-5 [&_svg]:open:-rotate-180" open={isHeaderExpanded} >
+            <summary className="text-xl font-bold" onClick={(e) => {
+              e.preventDefault();
+              toggleExpandableHeader(header.title);
+            }} >{header.title}</summary>
             <section>
               <div
                 className="prose lg:prose-xl flex flex-col space-y-2"
@@ -195,11 +204,12 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
         {!hasInput ?
           <div>
-            <details className="py-5 [&_svg]:open:-rotate-180" open={flag} >
+            <details className="py-5 [&_svg]:open:-rotate-180" open={isQuestionAnswerExpanded} >
               <summary className="text-xl font-bold" onClick={(e) => {
                 e.preventDefault();
-                setFlag(!flag);
+                toggleExpandableAnswer(question.id);
               }}>Zobrazit výsledek</summary>
+
               <section className="grid grid-cols-1 py-5" >
                 <div className="relative w-full aspect-[4/3]">
                   <Image src={"/math/2013/9/9-result.jpeg"} alt='Check result' fill className="object-cover object-center" />

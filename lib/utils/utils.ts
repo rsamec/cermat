@@ -69,5 +69,15 @@ export const isEmptyOrWhiteSpace = (value: string): boolean => {
 };
 
 export const removeSpaces = (value:string) => {
-  return value !=null ? value.replace(/\s+/g,''): value
+  return value !=
+  null ? value.replace(/\s+/g,''): value
+}
+export function updateMap<K, V>(originalMap: Map<K, V>, key: K, value: V): Map<K, V> {
+  // Create a shallow copy of the original Map
+  const newMap = new Map(originalMap);
+
+  // Add or update the entry in the copied Map
+  newMap.set(key, value);
+
+  return newMap;
 }
