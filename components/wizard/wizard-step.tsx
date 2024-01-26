@@ -13,7 +13,6 @@ import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cls, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
-import { useSwipeable } from 'react-swipeable';
 import Badge from "../core/Badge";
 import SortableList from "../core/SortableList";
 import MathInput from "../core/MathInput";
@@ -148,12 +147,6 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const [questionMap, setQuestionMap] = useState(new Map())
   const [headerMap, setHeaderMap] = useState(new Map())
 
-  
-  const handlers = useSwipeable({
-    onSwipedLeft: () => next(),
-    onSwipedRight: () => back(),
-
-  });
 
   const hasInput = question.metadata.inputBy != null;
 
@@ -173,7 +166,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
   return (
 
-    <div {...handlers} className="flex flex-col gap-2 px-3" >
+    <div className="flex flex-col gap-2 px-3" >
       <div>
 
         {header != null ?

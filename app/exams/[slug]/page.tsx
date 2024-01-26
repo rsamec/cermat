@@ -81,42 +81,8 @@ export default async function Exam(params: Params) {
         </div>
       </header>
 
-      <div className="min-h-screen">
-        <main>
-          <div className="max-w-6xl mx-auto">
-
-
-            <article className="mb-8">
-              <div>
-                {/* <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
-              {project.title}
-            </h1> */}
-                {/* <div className="hidden md:block md:mb-8 italic text-slate-400">
-              Publikováno <DateFormatter dateString={project.publishedAt} />
-              {' '}
-              {project?.author?.name ? `by ${project?.author?.name}` : null}.
-            </div> */}
-
                 <Wizard questions={questions} tree={tree}></Wizard>
-                {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
-                {project.description}
-              </div> */}
-                {/* <div>
-              {
-                steps.map((d, i) => {
-                  const matchedLeaf = leafs[i];
-                  const output = matchedLeaf.ancestors.map(d => d.data.contentHtml!).join("");
-
-
-                  // return (<Step slug={project.slug} options={[]} ></Step>)
-                  return (<div key={i}>
-                    <div className="prose lg:prose-xl flex flex-col space-y-2"
-                      dangerouslySetInnerHTML={{ __html: output }} />                    
-                  </div>
-                  )
-                })}
-            </div> */}
-
+               
 
                 {/* <div className="max-w-2xl mx-auto">
               <div
@@ -124,13 +90,7 @@ export default async function Exam(params: Params) {
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             </div> */}
-
-
-              </div>
-            </article>
-          </div >
-        </main>
-      </div>
+             
       <Footer></Footer>
 
     </>
