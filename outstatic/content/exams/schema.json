@@ -22,6 +22,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "Grade"
+    },
+    "timeSlot": {
+      "required": false,
+      "description": "",
+      "fieldType": "Number",
+      "dataType": "number",
+      "title": "timeSlot"
     }
   }
 }
