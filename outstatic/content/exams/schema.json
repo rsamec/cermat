@@ -26,8 +26,8 @@
     "timeSlot": {
       "required": false,
       "description": "",
-      "fieldType": "String",
-      "dataType": "string",
+      "fieldType": "Number",
+      "dataType": "number",
       "title": "timeSlot"
     }
   }
