@@ -1,90 +1,10 @@
 {
-  "commit": "6424fb34c7a6900ef08e0d5a379932bf26b220ed",
-  "generated": "2024-01-27T12:30:55.904Z",
+  "commit": "83a5794d14830310ef17888b6fab3891048dd73f",
+  "generated": "Sat, 27 Jan 2024 12:42:31 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "502a66f0c728c00b187497a822c861effe002fcb",
-        "hash": "1099192311",
-        "path": "outstatic/content/exams/matematika-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/math.png",
-      "description": "",
-      "publishedAt": "2023-12-30T12:21:20.927Z",
-      "slug": "matematika-9-2023-1",
-      "status": "published",
-      "subject": "math",
-      "title": "Matematika 9 2023/1",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "11c5be9ee6a43af602e4aadf9c421cb49335fd63",
-        "hash": "564309276",
-        "path": "outstatic/content/exams/matematika-5-2023-1.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/math.png",
-      "description": "",
-      "publishedAt": "2024-01-07T09:59:56.794Z",
-      "slug": "matematika-5-2023-1",
-      "status": "published",
-      "subject": "math",
-      "title": "Matematika 5 2023/1",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "be2c9a1dec88dd927388e62cca690acc0c85ebe3",
-        "hash": "1061083422",
-        "path": "outstatic/content/exams/cestina-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/cz.png",
-      "description": "",
-      "publishedAt": "2023-12-30T14:25:50.401Z",
-      "slug": "cestina-9-2023-1",
-      "status": "published",
-      "subject": "czech",
-      "title": "Čeština (9 ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "2a9980cc19aa0d81c6dc02116e72a366d65f8dd9",
-        "hash": "4235087475",
-        "path": "outstatic/content/exams/cestina-5-2023-1.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/cz.png",
-      "description": "",
-      "publishedAt": "2024-01-07T12:44:38.288Z",
-      "slug": "cestina-5-2023-1",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština 5 2023/1",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "6424fb34c7a6900ef08e0d5a379932bf26b220ed",
+        "commit": "64256ce6e535134fab8b85ae4329724cbd48aac5",
         "hash": "1359251944",
         "path": "outstatic/content/pages/home.md"
       },
@@ -99,6 +19,86 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
+    },
+    {
+      "__outstatic": {
+        "commit": "9e935c7fb8bb7e3b9313d50fde6bdd03d1cfe09c",
+        "hash": "3367281274",
+        "path": "outstatic/content/exams/matematika-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "/images/math.png",
+      "description": "",
+      "publishedAt": "2023-12-30T12:21:20.927Z",
+      "slug": "matematika-9-2023-1",
+      "status": "published",
+      "subject": "math",
+      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "6f6a9330cc58dc567f7bbd412919d1032ef0780f",
+        "hash": "4154616538",
+        "path": "outstatic/content/exams/matematika-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "/images/math.png",
+      "description": "",
+      "publishedAt": "2024-01-07T09:59:56.794Z",
+      "slug": "matematika-5-2023-1",
+      "status": "published",
+      "subject": "math",
+      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "782b5c6ffa03d244312cbc1f89227f25191fbaa4",
+        "hash": "3373012321",
+        "path": "outstatic/content/exams/cestina-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "/images/cz.png",
+      "description": "",
+      "publishedAt": "2023-12-30T14:25:50.401Z",
+      "slug": "cestina-9-2023-1",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "207176860d23b55d1cd33c1fc6cf0c2377071547",
+        "hash": "2003667798",
+        "path": "outstatic/content/exams/cestina-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "/images/cz.png",
+      "description": "",
+      "publishedAt": "2024-01-07T12:44:38.288Z",
+      "slug": "cestina-5-2023-1",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
+      "year": "2023"
     }
   ]
 }
