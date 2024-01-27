@@ -31,7 +31,7 @@ export interface QuizState {
 export type AnswerStatus = 'correct' | 'incorrect' | 'unanswered';
 export type AnswerState = { value: any, status: AnswerStatus }
 
-export type QuestionData = { content: string, options: Option<string>[], header?: { title: string, content: string } }
+export type QuestionData = { content: string, options: Option<string>[], header?: { title: string, content: string, mutliColumnLayout: boolean } }
 
 const initState: QuizState = {
 	questions: [],

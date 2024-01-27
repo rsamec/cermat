@@ -15,8 +15,8 @@ export class AnswerBuilder {
 }
 export interface AnswerMetadata<T> {
   verifyBy: ValidationFunctionSpec<T>
-  points?: number
-  inputBy?: ComponentFunctionSpec
+  points?: number  
+  inputBy?: ComponentFunctionSpec  
 }
 
 export interface AnswerGroupMetadata<T> {

@@ -37,6 +37,7 @@ const mapState = (state: RootState) => ({
   ...selection(state as never),
 })
 
+
 type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
 type Props = { question: Question, answerState: AnswerState } & StateProps & DispatchProps;
@@ -177,7 +178,10 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
             }} >{header.title}</summary>
             <section>
               <div
-                className="prose lg:prose-xl flex flex-col space-y-2"
+                className={cls([
+                  "prose lg:prose-xl flex flex-col space-y-2",
+                  header.mutliColumnLayout && "[&_blockquote]:sm:columns-2 [&_blockquote]:sm:text-justify [&_blockquote]:md:gap-8"
+                ])}
                 dangerouslySetInnerHTML={{ __html: header.content ?? '' }}
               />
             </section>

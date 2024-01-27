@@ -24,31 +24,33 @@ VÝCHOZÍ TEXTY K ÚLOZE 2-5
 ===
 
 **TEXT 1**
-> (1) Jarmilo, ach běda, kde je Hynek,\
-usnul nad kyticí konvalinek.\
-Já jsem také sníval ve svém dětství,\
-chtěl jsem se dát tehdy na letectví:\
-nad zábradlím rozviklaných schůdků\
-propadal jsem tesknici a smutku,\
-bezradný ve věčném nepokoji\
-hledíval jsem za bílými stroji.\
-Štítil jsem se orosené plísně\
-v oknech domků vzhlížejících přísně,\
-rozhledna však, rozkročena k jaru,\
-jako kdyby hrála na kytaru,\
-slyšela můj pláč a moje vzdechy,\
-když jsem míjel postříbřené střechy.\
-\
-(2) Těžko nevzpomínat bez zármutku\
-města dětských lásek, naivních smutků,\
-žil jsem s jeho světly, s jeho květy,\
-lampář zhasil světla u Lorety.\
-A já prchal po kamenném svahu,\
-ztráceje chvílemi rovnováhu;\
-svatý, jehož socha stála na úbočí,\
-neviděl mě, měl zavřené oči.\
-\
-Vysvětlivka: Loreta – pražská kaple
+>(1) Jarmilo, ach běda, kde je Hynek,\
+>usnul nad kyticí konvalinek.\
+>Já jsem také sníval ve svém dětství,\
+>chtěl jsem se dát tehdy na letectví:\
+>nad zábradlím rozviklaných schůdků\
+>propadal jsem tesknici a smutku,\
+>bezradný ve věčném nepokoji\
+>hledíval jsem za bílými stroji.\
+>Štítil jsem se orosené plísně\
+>v oknech domků vzhlížejících přísně,\
+>rozhledna však, rozkročena k jaru,\
+>jako kdyby hrála na kytaru,\
+>slyšela můj pláč a moje vzdechy,\
+>když jsem míjel postříbřené střechy.
+>
+>
+>(2) Těžko nevzpomínat bez zármutku\
+>města dětských lásek, naivních smutků,\
+>žil jsem s jeho světly, s jeho květy,\
+>lampář zhasil světla u Lorety.\
+>A já prchal po kamenném svahu,\
+>ztráceje chvílemi rovnováhu;\
+>svatý, jehož socha stála na úbočí,\
+>neviděl mě, měl zavřené oči.
+>
+>
+>Vysvětlivka: Loreta – pražská kaple
 
 **TEXT 2**
 > V poezii se setkáváme s tím, že něco, co je v běžném životě neživé, je **personifikováno** (personifikace = zosobnění). Např. ve větě & *Slunce se na mě smálo* nebo v souvětí *Připadalo mi, že mě slunce hladí po tváři* je personifikováno slunce.
@@ -60,7 +62,7 @@ Vysvětlivka: Loreta – pražská kaple
  - [D] V textu je popisován smutek muže, který zhasíná lampy u Lorety.
 
 
-# 3 Které z následujících tvrzení o <u>první části</u> TEXTU 1 je pravdivé?
+# 3 Které z následujících tvrzení o __první části__ TEXTU 1 je pravdivé?
 (Úlohu řešte na základě informací uvedených v TEXTU 2.)
 
 - [A] V této části textu je personifikována plíseň.
@@ -111,7 +113,7 @@ Vysvětlivka: Loreta – pražská kaple
 
 
 VÝCHOZÍ TEXT K ÚLOHÁM 8–12
-===
+====
 
 >(1) Sidra a Tak kráčely muzeem rovnou ke kurátorčině pracovně. Když však došly na
 >místo, čekalo je **nemilé** překvapení. Na obrazovce nad kanceláří blikala zpráva: Šla jsem
@@ -232,7 +234,7 @@ parapet upravený k sezení, a zeptala se mě: „Proč se tu schováváš?“
 
 
 VÝCHOZÍ TEXT K ÚLOZE 17
-===
+====
 
 >Papírového robota vyrobíme ze 6 krabic. Na plochy, které budou přilepené k sobě,
 použijeme oboustrannou lepicí pásku. Na hlavu robota z krychlové krabice nalepíme
@@ -249,7 +251,7 @@ bude tělo robota, přilepíme dvě podlouhlé krabice (nohy) a dvě úzké krab
 
 
 VÝCHOZÍ TEXT K ÚLOZE 18
-===
+====
 
 >Minulý týden se davy lidí vydaly do pražských Holešovic, kde se konal již 27. ročník
 >veletrhu Svět knihy. Tato čtyřdenní událost je nejvýznamějším svátkem literatury v České
@@ -272,7 +274,7 @@ Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v te
 
 
 VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
-===
+====
 
 **TEXT 1**
 >(1) Skotská krajina je poseta tajemnými stavbami s atypickou konstrukcí: jsou postaveny
@@ -347,11 +349,12 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
 
 
 VÝCHOZÍ TEXT K ÚLOZE 24
-===
+====
 >Jízda do práce a zpět Víťovi každý den zabrala dvě hodiny. Našel si proto nové místo
 ve firmě KZO, sídlící jen 15 minut od jeho domu. Záhy se však tato firma přestěhovala
 do jiného města. Když se Víťa sešel se sousedkou Terezou, postěžoval si jí: „Tomu se říká
 dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě hodiny!“
+
 # 24 Které z následujících tvrzení vystihuje situaci popsanou ve výchozím textu?
 - [A] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost se svou situací.
 - [B] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že se jeho situace navzdory očekávání nezlepšila. 
@@ -360,7 +363,7 @@ dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě
 
 
 VÝCHOZÍ TEXT K ÚLOHÁM 25–28
-===
+====
 >(1) Ještě v polovině 19. století bylo hlavní úklidovou pomůckou koště. Na sklonku
 >století se sice objevily první úklidové stroje poháněné motorem, příliš účinné však
 >nebyly. Nečistoty totiž nenasávaly, ale jen odfoukávaly.

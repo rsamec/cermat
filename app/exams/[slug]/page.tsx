@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 import { Maybe, absoluteUrl, extractNumberRange } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
-import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList } from '@/lib/utils/parser.utils'
+import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList, countMaxChars } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
@@ -134,6 +134,8 @@ async function getData({ params }: Params) {
     // }
     //console.log(node.leaf.data.header, isInRange, range);
     const treeLeaf = d.leaf.data as AnswerMetadataTreeNode<any>
+    const headerNode = node.ancestors[1].data;
+    
     return {
       id: treeLeaf.id,
       metadata: treeLeaf.node,
@@ -141,8 +143,9 @@ async function getData({ params }: Params) {
         content: node.ancestors.slice(range == null ? 1 : 2).map(x => x.data.contentHtml).join(""),
         ...(isInRange && {
           header: {
-            title: node.ancestors[1].data.header.replace("===", ""),
-            content: node.ancestors[1].data.contentHtml,
+            title: headerNode.header.replaceAll(/=+/g, ""),
+            content: headerNode.contentHtml,
+            mutliColumnLayout: countMaxChars(headerNode.header, "=") > 3 ? true : false
           }
         }),
         options: node.leaf.data.options?.length > 0 ? node.leaf.data.options : node.ancestors[node.ancestors.length - 2].data.options
