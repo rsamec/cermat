@@ -19,10 +19,10 @@
     "tags": {
       "required": false,
       "description": "",
+      "values": [],
       "fieldType": "Tags",
       "dataType": "array",
-      "title": "Tags",
-      "values": []
+      "title": "Tags"
     }
   }
 }
