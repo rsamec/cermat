@@ -10,5 +10,7 @@ coverImage: ''
 publishedAt: '2023-12-30T12:23:18.534Z'
 ---
 
-Věř, že nejpřirozenější metoda učení, je učení se vlastní činností.*(**Learning by doing**)*\
-*Věř, že* učit se bez přemýšlení, je zbytečné. Přemýšlet bez učení je nebezpečné. (**Konfucius** *čínský učitel, editor, politik a filozof)zof*
+Věř, že nejpřirozenější metoda učení, je učení se vlastní činností.*(**Learning by doing**)*
+
+\
+Věř, že učit se bez přemýšlení, je zbytečné. Přemýšlet bez učení je nebezpečné. (**Konfucius** *čínský učitel, editor, politik a filozof)zof*
