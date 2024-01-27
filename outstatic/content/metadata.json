@@ -1,25 +1,7 @@
 {
-  "commit": "0fc8d3b95a52326b4988e0fed0622f93f3e6a84f",
-  "generated": "Sat, 27 Jan 2024 11:34:58 GMT",
+  "commit": "6aca62112eea9bbf9bc7313a7a0a6188ad1364d1",
+  "generated": "2024-01-27T12:24:32.746Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "90aaaa4741335e06fb0287a31b7923c2f9d9083e",
-        "hash": "400488365",
-        "path": "outstatic/content/pages/home.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-30T12:23:18.534Z",
-      "slug": "home",
-      "status": "published",
-      "title": "Home"
-    },
     {
       "__outstatic": {
         "commit": "502a66f0c728c00b187497a822c861effe002fcb",
@@ -99,6 +81,24 @@
       "subject": "cz",
       "title": "Čeština 5 2023/1",
       "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "6aca62112eea9bbf9bc7313a7a0a6188ad1364d1",
+        "hash": "1602728789",
+        "path": "outstatic/content/pages/home.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T12:23:18.534Z",
+      "slug": "home",
+      "status": "published",
+      "title": "Home"
     }
   ]
 }

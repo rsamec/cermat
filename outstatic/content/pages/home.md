@@ -10,4 +10,9 @@ coverImage: ''
 publishedAt: '2023-12-30T12:23:18.534Z'
 ---
 
-Aplikace s cermat testy
+Věřím, že nejpřirozenější metoda učení, je učení se vlastní činností.*(**Learning by doing**)*
+
+> „Učit se bez přemýšlení je zbytečné. Přemýšlet bez učení je nebezpečné.“
+> ****Konfucius** *čínský učitel, editor, politik a filozof* 
+
+ 
