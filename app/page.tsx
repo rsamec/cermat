@@ -112,6 +112,6 @@ async function getData() {
   return {
     content,
     mathPosts: toItems(mathPosts),
-    primaryLanguagePosts: toItems(mathPosts),
+    primaryLanguagePosts: toItems(primaryLanguagePosts),
   }
 }
