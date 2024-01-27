@@ -91,20 +91,21 @@ body.background {
 
 /* style the HTML output */
 .math-function {
-  color: Purple;
+  color: darkorange;
   font-weight: bold;
 }
 
 .math-number {
-  color: Blue;
+  color: blueviolet;
+  font-weight: bold;
 }
 
 .math-boolean {
-  color: Green;
+  color: darkred;
 }
 
 .math-string {
-  color: Grey;
+  color: darkblue;
 }
 
 .math-string::before,

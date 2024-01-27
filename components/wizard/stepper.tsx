@@ -48,8 +48,10 @@ function Stepper(props: Props) {
         stepsToShow = 7;
       } else if (containerWidth < 1024) {
         stepsToShow = 9;
-      } else {
+      } else if (containerWidth < 1200) {
         stepsToShow = 11;
+      } else {
+        stepsToShow = 13;
       }
 
       setMaxVisibleSteps(stepsToShow);
@@ -67,6 +69,7 @@ function Stepper(props: Props) {
     };
   }, [steps]);
   return (
+
     <div className="hidden md:flex flex-col items-center py-5">
       <div className="flex items-center gap-5">
 
@@ -74,17 +77,26 @@ function Stepper(props: Props) {
           onClick={() => props.back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
 
         <div className="flex items-center gap-1">
-          {filterSteps(steps, props.currentStepIndex, maxVisibleSteps).map((d, i) =>
-            <div key={i} className="flex flex-col">
-              <button className={cls(['text-gray-900  border hover:bg-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-1 dark:text-white dark:hover:bg-gray-700',
-                d.id === props.currentStep?.id ? 'bg-gray-200 dark:bg-gray-600' : 'bg-white dark:bg-gray-800 ',
-                props.corrections[d.id] === undefined && 'border-gray-300 dark:border-gray-600 dark:hover:border-gray-600',
-                props.corrections[d.id] === true && 'border-green-500 hover:border-green-600 dark:border-green-500 dark:hover:border-green-600',
-                props.corrections[d.id] === false && 'border-red-500 hover:border-red-600 dark:border-red-500 dark:hover:border-red-600',
-                
+          {filterSteps(steps, props.currentStepIndex, maxVisibleSteps).map((d, i) => {
+            const selected = d.id === props.currentStep?.id;
+            const correct = props.corrections[d.id] === true;
+            const incorrect = props.corrections[d.id] === false;
+
+            return (<div key={i} className="flex flex-col">
+              <button className={cls([
+                'border font-medium rounded-full text-sm px-5 py-2.5 me-1',
+                'text-gray-900 dark:text-white',
+                '--:bg-white --:dark:bg-gray-800  --:border-gray-300 --:dark:border-gray-600 --:hover:bg-gray-200 --:dark:hover:bg-gray-700',
+                selected && '-:bg-gray-200 -:dark:bg-gray-700',
+                correct && 'border-green-200 -:bg-green-100 -:dark:bg-green-800 hover:bg-green-300 hover:dark:bg-green-500',
+                correct && selected && 'bg-green-300 dark:bg-green-500',
+                incorrect && 'border-red-200 -:bg-red-100 -:dark:bg-red-800 hover:bg-red-300 hover:dark:bg-red-500',
+                incorrect && selected && 'bg-red-300 dark:bg-red-500',
               ])} onClick={() => props.goTo(d.id)} >{d.id}</button>
-              {/* <div className={cls(['min-h-2', props.corrections[d.id] === true && 'bg-green-300', props.corrections[d.id] === false && 'bg-red-300'])}></div> */}
-            </div>)}
+            </div>)
+          }
+          )}
+
         </div>
         <button className="btn"
           onClick={() => props.next()}><FontAwesomeIcon icon={faAngleRight} /></button>
@@ -95,4 +107,5 @@ function Stepper(props: Props) {
 }
 
 export default connect(mapState, mapDispatch)(Stepper);
+
 

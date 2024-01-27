@@ -30,10 +30,14 @@ const ToggleButtonGroup = <T extends Object>({
 
   return (
     <div className='flex flex-wrap justify-items-start  gap-2'>
-      {options.map((option, i) => (
-        <button
-          className={cls(['max-w-80','py-3 px-4 inline-flex items-center gap-x-2 rounded-t-md text-sm text-left font-medium focus:z-10 border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
-            isSelected(value, option) && (type === 'success' ? 'bg-green-100 hover:bg-green-200 border-green-200 dark:border-green-400' : type === 'danger' ? 'bg-red-100 hover:bg-red-200 border-red-200 dark:border-red-400' : 'bg-gray-300 hover:bg-gray-400')])}
+      {options.map((option, i) => {
+
+        const selected = isSelected(value, option);
+        return (<button
+          className={cls(['max-w-screen-sm', 'py-3 px-4 inline-flex items-center gap-x-2 rounded text-sm text-left font-medium focus:z-10 border text-gray-800 shadow-sm dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
+            '-:dark:bg-slate-900 -:hover:bg-gray-50 -:dark:hover:bg-gray-800 border-gray-200 dark:border-gray-700',
+            selected && type === 'success' && 'bg-green-100 dark:bg-green-800 hover:bg-green-200 border-green-200 dark:border-green-400',
+            selected && type === 'danger' && 'bg-red-100 dark:bg-red-800 hover:bg-red-200 border-red-200 dark:border-red-400'])}
           key={`opt_${i}`}
           onClick={() => handleChange(option)}
         >
@@ -43,8 +47,9 @@ const ToggleButtonGroup = <T extends Object>({
             <span >{format ? format(option) : option.toString()}</span>
           </div>
 
-        </button>
-      ))}
+        </button>)
+      }
+      )}
     </div>
   );
 };

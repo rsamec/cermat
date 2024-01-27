@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 const plugin = require('tailwindcss/plugin');
 
+
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -38,8 +39,9 @@ const config: Config = {
         },
         // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
-    })
+    }),
+    require('tailwindcss-unimportant'),
   ],
-   //darkMode: 'class',
+  //darkMode: 'class',
 }
 export default config
