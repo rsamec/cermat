@@ -2,7 +2,7 @@
 year: '2023'
 subject: 'math'
 coverImage: '/images/math.png'
-description: ''
+description: 'Provoúhlý lichoběžník, graf s počty žáku hudebního, šachového a robotickéhého kroužku, sekvence bílých a šedých trojúhelníků'
 slug: 'matematika-9-2023-1'
 author:
   name: 'Roman Samec'

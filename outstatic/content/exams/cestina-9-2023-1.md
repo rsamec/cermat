@@ -2,7 +2,7 @@
 year: '2023'
 subject: 'cz'
 coverImage: '/images/cz.png'
-description: ''
+description: 'Pozie J. Seiferta, Rozhledna na Petříně, úryvek z knihy Dvě místa na slunci. Setkání spisovatelů na veletrhu Svět knihy.'
 slug: 'cestina-9-2023-1'
 author:
   name: 'Roman Samec'

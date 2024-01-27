@@ -2,7 +2,7 @@
 year: '2023'
 subject: 'cz'
 coverImage: '/images/cz.png'
-description: ''
+description: 'Úpír Drákula, článek o váškách z national geographic, Martin jako vášnivý hokejový fanoušek'
 slug: 'cestina-5-2023-1'
 author:
   name: ''

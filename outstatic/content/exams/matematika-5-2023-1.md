@@ -2,7 +2,7 @@
 year: '2023'
 subject: 'math'
 coverImage: '/images/math.png'
-description: ''
+description: 'Vážení koulí a válců na miskách'
 slug: 'matematika-5-2023-1'
 author:
   name: ''
