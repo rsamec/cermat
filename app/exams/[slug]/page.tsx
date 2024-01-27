@@ -154,7 +154,7 @@ async function getData({ params }: Params) {
   })
 
 
-  // const content = await markdownToHtml(project.content)
+  
 
   // const moreProjects = await db
   //   .find({ collection, slug: { $ne: params.slug } }, [

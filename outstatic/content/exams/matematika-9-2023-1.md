@@ -10,6 +10,8 @@ author:
 status: 'published'
 title: 'Matematika (9 ročník) - 1. řádný termín 2023'
 publishedAt: '2023-12-30T12:21:20.927Z'
+timeSlot: 1
+grade: 5 ročník
 ---
 
 VÝCHOZÍ TEXT K ÚLOZE 1

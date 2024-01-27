@@ -3,14 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { imageUrl } from '@/lib/utils/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookAtlas, faSquareRootVariable } from "@fortawesome/free-solid-svg-icons";
+import { faBookAtlas, faSquareRootVariable, faPrint } from "@fortawesome/free-solid-svg-icons";
 
 type Item = {
   tags?: { value: string; label: string }[]
 } & OstDocument
 
 type Props = {
-  collection: 'math' | 'cz'
+  collection: 'exams'
+  iconType: 'math' | 'cz'
   title?: string
   items: Item[]
   priority?: boolean
@@ -20,6 +21,7 @@ const ContentGrid = ({
   title = 'More',
   items,
   collection,
+  iconType,
   priority = false
 }: Props) => {
   return (
@@ -45,8 +47,8 @@ const ContentGrid = ({
                     ))
                     : null}
                   <div className="flex gap-5 items-center">
-                    {collection == "math" && <FontAwesomeIcon icon={faSquareRootVariable} size='lg' ></FontAwesomeIcon>}
-                    {collection == "cz" && <FontAwesomeIcon icon={faBookAtlas} size='lg' ></FontAwesomeIcon>}
+                    {iconType == "math" && <FontAwesomeIcon icon={faSquareRootVariable} size='lg' ></FontAwesomeIcon>}
+                    {iconType == "cz" && <FontAwesomeIcon icon={faBookAtlas} size='lg' ></FontAwesomeIcon>}
                     <h3 className="text-xl mb-2 leading-snug font-bold hover:underline">
                       {item.title}
 
@@ -56,6 +58,7 @@ const ContentGrid = ({
                   <p className="text-sm leading-relaxed mb-4">
                     {item.description}
                   </p>
+                  <FontAwesomeIcon icon={faPrint} size='lg' ></FontAwesomeIcon>
                 </div>
               )}
             </div>

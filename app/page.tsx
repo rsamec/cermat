@@ -3,6 +3,7 @@ import { load } from 'outstatic/server'
 import ContentGrid from '../components/ContentGrid'
 import markdownToHtml from '@/lib/utils/markdown';
 
+const collection = "exams";
 
 export default async function Index() {
   const { content, mathPosts, primaryLanguagePosts } = await getData()
@@ -26,7 +27,8 @@ export default async function Index() {
           <ContentGrid
             title="Matika"
             items={mathPosts}
-            collection="math"
+            collection={collection}
+            iconType="math"
             priority
           />
         )}
@@ -34,7 +36,8 @@ export default async function Index() {
           <ContentGrid
             title="Čeština"
             items={primaryLanguagePosts}
-            collection="cz"
+            collection={collection}
+            iconType="cz"
             priority
           />
         )}
@@ -60,28 +63,36 @@ async function getData() {
   const content = await markdownToHtml(page.content)
 
   const mathPosts = await db
-    .find({ collection: 'exams', subject: 'math' }, [
+    .find({ collection, subject: 'math' }, [
       'title',
       'publishedAt',
       'slug',
       'coverImage',
       'description',
-      'tags'
+      'subject',
+      'year',
+      'grade',
+      'timeSlot',
     ])
     .sort({ slug: 1 })
     .toArray()
 
   const primaryLanguagePosts = await db
-    .find({ collection: 'exams', subject: 'cz' }, [
+    .find({ collection, subject: 'cz' }, [
       'title',
       'publishedAt',
       'slug',
       'coverImage',
       'description',
-      'tags'
+      'subject',
+      'year',
+      'grade',
+      'timeSlot',
     ])
     .sort({ slug: 1 })
     .toArray()
+
+
 
 
   // const allProjects = await db
@@ -89,9 +100,18 @@ async function getData() {
   //   .sort({ publishedAt: -1 })
   //   .toArray()
 
+  const timeSlots = new Map([[1, "1. řádný termín"], [2, "2. řádný termín"], [3, "1. náhradní termín"], [4, "2. náhradní termín"]])
+  const toItems = (items: any[]) => items.map(d => ({
+    ...d, tags: [
+      { value: d.year, label: d.year },
+      ...(d.grade ? [{ value: d.grade, label: d.grade }] : []),
+      ...(d.timeSlot ? [{ value: d.timeSlot, label: timeSlots.get(d.timeSlot) ?? d.timeSlot }] : [])
+    ]
+  }))
+
   return {
     content,
-    mathPosts,
-    primaryLanguagePosts,
+    mathPosts: toItems(mathPosts),
+    primaryLanguagePosts: toItems(mathPosts),
   }
 }

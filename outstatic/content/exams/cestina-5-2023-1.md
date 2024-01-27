@@ -10,6 +10,8 @@ author:
 status: 'published'
 title: 'Čeština (5 ročník) - 1. řádný termín 2023'
 publishedAt: '2024-01-07T12:44:38.288Z'
+timeSlot: 1
+grade: 5 ročník
 ---
 
 **VÝCHOZÍ TEXT K ÚLOHÁM 1–3**

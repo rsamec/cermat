@@ -10,6 +10,8 @@ author:
 status: 'published'
 title: 'Čeština (9 ročník) - 1. řádný termín 2023'
 publishedAt: '2023-12-30T14:25:50.401Z'
+timeSlot: 1
+grade: 5 ročník
 ---
 
 # 1 Která z následujících vět je zapsána pravopisně správně? 
