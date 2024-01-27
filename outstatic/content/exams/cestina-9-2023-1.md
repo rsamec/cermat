@@ -8,7 +8,7 @@ author:
   name: 'Roman Samec'
   picture: 'https://avatars.githubusercontent.com/u/5671166?v=4'
 status: 'published'
-title: 'Čeština 9 2023/1'
+title: 'Čeština (9 ročník) - 1. řádný termín 2023'
 publishedAt: '2023-12-30T14:25:50.401Z'
 ---
 
@@ -51,7 +51,7 @@ neviděl mě, měl zavřené oči.\
 Vysvětlivka: Loreta – pražská kaple
 
 **TEXT 2**
-> V poezii se setkáváme s tím, že něco, co je v běžném životě neživé, je **personifikováno** (personifikace = zosobnění). Např. ve větě Slunce se na mě smálo nebo v souvětí ~~Připadalo mi~~, že mě slunce hladí po tváři je personifikováno slunce.
+> V poezii se setkáváme s tím, že něco, co je v běžném životě neživé, je **personifikováno** (personifikace = zosobnění). Např. ve větě & *Slunce se na mě smálo* nebo v souvětí *Připadalo mi, že mě slunce hladí po tváři* je personifikováno slunce.
 
 # 2 Které z následujících tvrzení odpovídá TEXTU 1?
  - [A] V textu je popisován konec první dětské lásky.
@@ -60,7 +60,7 @@ Vysvětlivka: Loreta – pražská kaple
  - [D] V textu je popisován smutek muže, který zhasíná lampy u Lorety.
 
 
-# 3 Které z následujících tvrzení o první části TEXTU 1 je pravdivé?
+# 3 Které z následujících tvrzení o <u>první části</u> TEXTU 1 je pravdivé?
 (Úlohu řešte na základě informací uvedených v TEXTU 2.)
 
 - [A] V této části textu je personifikována plíseň.
@@ -70,9 +70,9 @@ Vysvětlivka: Loreta – pražská kaple
 
 
 # 4
-**Tvrzení č.1:** Slovní spojení bílé stroje v TEXTU 1 použil Hynek.
+**Tvrzení č.1:** Slovní spojení *bílé stroje* v TEXTU 1 použil Hynek.
 
-**Tvrzení č.2:** Slovní spojení bílé stroje v TEXTU 1 nejspíše označuje letadla.
+**Tvrzení č.2:** Slovní spojení *bílé stroje* v TEXTU 1 nejspíše označuje letadla.
 
 **Odpovídá alespoň některé z výše uvedených tvrzení TEXTU 1?**
 
@@ -114,33 +114,41 @@ VÝCHOZÍ TEXT K ÚLOHÁM 8–12
 ===
 
 >(1) Sidra a Tak kráčely muzeem rovnou ke kurátorčině pracovně. Když však došly na
-místo, čekalo je nemilé překvapení. Na obrazovce nad kanceláří blikala zpráva: Šla jsem
-již domů. Vaše požadavky budou vyřízeny ve vedlejší kanceláři. „Zatraceně!“ rozmrzele
-konstatovala Tak a nesměle zaklepala na sousední dveře. Vzápětí ovšem ztuhla. Ve
-dveřích stál totiž Aeluon.
-(2) „Jsem kurátor Joje. Jak vám můžu pomoct?“ zeptal se jich a tváře se mu přitom
-zbarvily zvídavou hnědou.
-Následně Tak udělala něco, co je pro rasu Aeluonů neobvyklé – odpověděla slovy
-místo barvami: „Omlouvám se, ale nedávno jsem mluvila s kurátorkou Thixis o svém
-výzkumu. Potřebuju povolení prozkoumat určité exponáty.“ Normálně by fakt, že
-příslušník Aeluonů promluví před někým z jiné rasy nahlas, byl považován za vstřícné
-gesto vůči cizinci, v tomto případě vůči Sidře. Ovšem to, že Tak zcela vynechala vizuální
-odpověď, vypadalo podivně, *****. Sidra ale věděla, že lhaní barvami je pro Aeluony
-opravdu náročné.
-„Jistě, Thixis mě o tom informovala,“ přikývl kurátor, „předpokládám, že obě jste
-součástí výzkumného týmu. Nebylo vás ale původně víc?“
-„Ostatním není dobře,“ zalhala Sidra a její dráhy přitom vděčně pomyslely na
-profesora Dega, s jehož pomocí zvládla vymazat svůj protokol upřímnosti. Vyděšená
-Tak se zatím soustředila na ovládání svých chromatoforů: nesměl ji prozradit ani náznak
-nervózní červené.
-Joje se zadíval na Tak a poněkud netaktně podotkl: „Ani vy nevypadáte zcela zdravě.“
-„Kolegyni otekl po koktejlu jazyk,“ zachraňovala situaci Sidra a umělé srdce jí bilo jako
-o závod, „musela si vzít léky a od té doby je trochu mimo.“
-„No dobrá, nebudu vás už zdržovat,“ zakončil rozhovor kurátor, „dokumenty máte
-v pořádku, takže příslušné exponáty můžete prozkoumat.“ A zavřel dveře kanceláře.
-„Sakra! Myslíš, že zjistil, že nejsme výzkumnice, ale chystáme se krást?“ zašeptala Tak.
-Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – buňka obsahující barvivo
-(B. Chambersová, Dvě místa na slunci, upraveno)
+>místo, čekalo je **nemilé** překvapení. Na obrazovce nad kanceláří blikala zpráva: Šla jsem
+>již domů. Vaše požadavky budou vyřízeny ve vedlejší kanceláři. „Zatraceně!“ rozmrzele
+>konstatovala Tak a **nesměle** zaklepala na sousední dveře. Vzápětí ovšem ztuhla. Ve
+>dveřích stál totiž Aeluon.
+>
+>(2) „Jsem kurátor Joje. Jak vám můžu pomoct?“ zeptal se jich a tváře se mu přitom
+>zbarvily zvídavou hnědou.
+>
+>Následně Tak udělala něco, co je pro rasu Aeluonů neobvyklé – odpověděla slovy
+>místo barvami: „Omlouvám se, ale nedávno jsem mluvila s kurátorkou Thixis o svém
+>výzkumu. Potřebuju povolení prozkoumat určité exponáty.“ Normálně by fakt, že
+>příslušník Aeluonů promluví před někým z jiné rasy nahlas, byl považován za vstřícné
+>gesto vůči cizinci, v tomto případě vůči Sidře. Ovšem to, že Tak zcela vynechala vizuální
+>odpověď, vypadalo podivně, *****. Sidra ale věděla, že lhaní barvami je pro Aeluony
+>opravdu **náročné**.
+>
+>„**Jistě**, Thixis mě o tom informovala,“ přikývl kurátor, „předpokládám, že obě jste
+>součástí výzkumného týmu. Nebylo vás ale původně víc?“
+>„Ostatním není dobře,“ zalhala Sidra a její dráhy přitom vděčně pomyslely na
+>profesora Dega, s jehož pomocí zvládla vymazat svůj protokol upřímnosti. Vyděšená
+>Tak se zatím soustředila na ovládání svých chromatoforů: nesměl ji prozradit ani náznak
+>nervózní červené.
+>
+>Joje se zadíval na Tak a poněkud netaktně podotkl: „Ani vy nevypadáte zcela zdravě.“
+>
+>„Kolegyni otekl po koktejlu jazyk,“ zachraňovala situaci Sidra a umělé srdce jí bilo jako
+>o závod, „musela si vzít léky a od té doby je trochu mimo.“
+>
+>„No dobrá, nebudu vás už zdržovat,“ zakončil rozhovor kurátor, „dokumenty máte
+>v pořádku, takže příslušné exponáty můžete prozkoumat.“ A zavřel dveře kanceláře.
+>„Sakra! Myslíš, že zjistil, že nejsme výzkumnice, ale chystáme se krást?“ zašeptala Tak.
+>
+>Vysvětlivky: kurátor – správce sbírek, např. v muzeu; chromatofor – buňka obsahující barvivo
+>
+>(B. Chambersová, Dvě místa na slunci, upraveno)
 
 # 8 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 8.1 Thixis zanechala na dveřích Jojeho kanceláře vzkaz adresovaný Sidře a Tak. 
@@ -244,17 +252,20 @@ VÝCHOZÍ TEXT K ÚLOZE 18
 ===
 
 >Minulý týden se davy lidí vydaly do pražských Holešovic, kde se konal již 27. ročník
-veletrhu Svět knihy. Tato čtyřdenní událost je nejvýznamějším svátkem literatury v České
-republice. Celé akci, na niž jako obvykle přijaly pozvání výrazné literární osobnosti,
-vévodily knižní novinky z Itálie.
-V rámci autorských čtení se návštěvníci mohli seznámit s různými spisovateli. Jednou
-z letošních hvězd byla kanadská autorka napínavých detektivek. Její oddaní fanoušci
-ji nadšeně vítali. Knižní veletrh, s nímž je zpjatý bohatý doprovodný program, se však
-nezaměřuje jen na dospělé. Zajímavými aktivitami se organizátoři snaží dosáhnout toho,
-aby se stále nesnižovaly počty dětských čtenářů. Čtení přece pozitivně ovlivňuje jak
-představivost, tak šíři slovní zásoby.
-Letošní veletrh návštěvníkům tradyčně nabídl smysluplně strávený čas, další ročník
-přivítá velké i malé knihomoli na jaře příštího roku.
+>veletrhu Svět knihy. Tato čtyřdenní událost je nejvýznamějším svátkem literatury v České
+>republice. Celé akci, na niž jako obvykle přijaly pozvání výrazné literární osobnosti,
+>vévodily knižní novinky z Itálie.
+>
+>V rámci autorských čtení se návštěvníci mohli seznámit s různými spisovateli. Jednou
+>z letošních hvězd byla kanadská autorka napínavých detektivek. Její oddaní fanoušci
+>ji nadšeně vítali. Knižní veletrh, s nímž je zpjatý bohatý doprovodný program, se však
+>nezaměřuje jen na dospělé. Zajímavými aktivitami se organizátoři snaží dosáhnout toho,
+>aby se stále nesnižovaly počty dětských čtenářů. Čtení přece pozitivně ovlivňuje jak
+>představivost, tak šíři slovní zásoby.
+>
+>Letošní veletrh návštěvníkům tradyčně nabídl smysluplně strávený čas, další ročník
+>přivítá velké i malé knihomoli na jaře příštího roku.
+
 # 18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je pravopisně správně.
 Podtržené výrazy jsou zapsány správně.
 Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
@@ -265,34 +276,40 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
 
 **TEXT 1**
 >(1) Skotská krajina je poseta tajemnými stavbami s atypickou konstrukcí: jsou postaveny
-výhradně z plochých neopracovaných kamenů a bez použití malty. Tyto záhadné věže se
-nazývají brochy. Na některých se čas nepodepsal, z jiných zbyly jen ruiny.
-Brochy, které se dochovaly celé, jsou vysoké zhruba 13 metrů a z dálky svým tvarem
-připomínají dětské bábovičky. Vnitřní průměr těchto brochů se u země pohybuje mezi
-10 a 15 metry a směrem vzhůru se zmenšuje. Věže mají dvojité obvodové zdi: v mezeře
-mezi vnější a vnitřní zdí se zpravidla nacházely schody, jež vedly z nádvoří do vyšších pater.
-Je prokázáno, že první brochy byly na území Skotska postaveny v 6. století př. n. l.
-O tom, kdo a za jakým účelem je postavil, však vědci vedou dlouhá léta diskuse. *****,
-zatím totiž nebyly všechny rozvaliny z dané oblasti prozkoumány.
-(2) Pohled na mapu odhalí, že brochy často stojí na strategických místech, navíc bývají
-chráněny přírodními překážkami, např. strmými útesy. Mohly tedy plnit funkci obranných
-pevností. Tato hypotéza má ale háček – věže rozhodně nebyly nedobytné. Nepřítel by
-snadno kamennou stěnu zdolal, absence oken či ochozů na střeše totiž neumožňovala
-aktivní obranu.
-(3) Vzhledem k uspořádání interiéru se tedy nabízí možnost, že brochy sloužily jako
-běžná obydlí (patrně pro vysoce postavené jedince), což by potvrzovaly i nalezené
-fragmenty keramiky. V jedné věži mohlo žít odhadem až dvacet lidí včetně služebnictva.
-Na nádvoří v přízemí byl zřejmě ustájen dobytek, v patrech se nacházely obytné prostory
-a skladiště potravin. Protože brochy neměly okna, jediným zdrojem světla byl oheň.
-Brochy se z neznámých důvodů přestaly stavět kolem roku 100 n. l., obydlené však
-zůstaly ještě v následujících staletích. Ačkoli se zatím nepodařilo objasnit všechny záhady
-kamenných věží, jedno je jisté – jde o výjimečný architektonický počin.
-(www.stoplusjednicka.cz; www.dotyk.cz, upraveno)
+>výhradně z plochých neopracovaných kamenů a bez použití malty. Tyto záhadné věže se
+>nazývají brochy. Na některých se čas nepodepsal, z jiných zbyly jen ruiny.
+>
+>Brochy, které se dochovaly celé, jsou vysoké zhruba 13 metrů a z dálky svým tvarem
+>připomínají dětské bábovičky. Vnitřní průměr těchto brochů se u země pohybuje mezi
+>10 a 15 metry a směrem vzhůru se zmenšuje. Věže mají dvojité obvodové zdi: v mezeře
+>mezi vnější a vnitřní zdí se zpravidla nacházely schody, jež vedly z nádvoří do vyšších pater.
+>
+>Je prokázáno, že první brochy byly na území Skotska postaveny v 6. století př. n. l.
+>O tom, kdo a za jakým účelem je postavil, však vědci vedou dlouhá léta diskuse. *****,
+>zatím totiž nebyly všechny rozvaliny z dané oblasti prozkoumány.
+>
+>(2) Pohled na mapu odhalí, že brochy často stojí na strategických místech, navíc bývají
+>chráněny přírodními překážkami, např. strmými útesy. Mohly tedy plnit funkci obranných
+>pevností. Tato hypotéza má ale háček – věže rozhodně nebyly nedobytné. Nepřítel by
+>snadno kamennou stěnu zdolal, absence oken či ochozů na střeše totiž neumožňovala
+>aktivní obranu.
+>
+>(3) Vzhledem k uspořádání interiéru se tedy nabízí možnost, že brochy sloužily jako
+>běžná obydlí (patrně pro vysoce postavené jedince), což by potvrzovaly i nalezené
+>fragmenty keramiky. V jedné věži mohlo žít odhadem až dvacet lidí včetně služebnictva.
+>Na nádvoří v přízemí byl zřejmě ustájen **dobytek**, v patrech se nacházely obytné prostory
+>a skladiště potravin. Protože brochy neměly okna, jediným zdrojem světla byl oheň.
+>
+>Brochy se z neznámých důvodů přestaly stavět kolem roku 100 n. l., obydlené však
+>zůstaly ještě v následujících staletích. Ačkoli se zatím nepodařilo objasnit všechny záhady
+>kamenných věží, jedno je jisté – jde o výjimečný architektonický počin.
+>(www.stoplusjednicka.cz; www.dotyk.cz, upraveno)
 
 **TEXT 2**
->Ve větě typu A lze zcela jednoznačně určit podmět, např. Hádku vyvolal stres.
-Ve větě typu B nelze zcela jednoznačně určit podmět, např. Spor vyvolal stres (Vznikl
-spor kvůli stresu, nebo vznikl stres kvůli sporu?).
+>**Ve větě typu A** lze zcela jednoznačně určit podmět, např. *Hádku vyvolal stres.*
+>**Ve větě typu B** nelze zcela jednoznačně určit podmět, např. *Spor vyvolal stres* (Vznikl
+>spor kvůli stresu, nebo vznikl stres kvůli sporu?).
+
 # 19 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z TEXTU 1 (A), nebo ne (N).
 ## 19.1 První broch byl na území Skotska postaven před více než 2 500 lety. 
 ## 19.2 Vnitřní průměr dochovaného brochu je v nejvyšším místě této stavby menší než 15 metrů. 
@@ -345,23 +362,27 @@ dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě
 VÝCHOZÍ TEXT K ÚLOHÁM 25–28
 ===
 >(1) Ještě v polovině 19. století bylo hlavní úklidovou pomůckou koště. Na sklonku
-století se sice objevily první úklidové stroje poháněné motorem, příliš účinné však
-nebyly. Nečistoty totiž nenasávaly, ale jen odfoukávaly.
-Za vynálezce vysavače je považován Hubert Booth. Výsledkem jeho experimentů bylo
-koňmi tažené zařízení o velikosti drožky, které sestrojil a roku 1901 si nechal patentovat.
-Boothův vysávací kočár zastavil před domem, pracovník firmy nastartoval spalovací
-motor zabudovaný ve stroji a poté pomocí dlouhé hadice vysál prach z domácnosti.
-I přes rámus při vysávání, na nějž si mnozí Londýňané stěžovali, byl o Boothovy úklidové
-služby zájem. Demonstrace jeho vysavače dokonce proběhla i před královskou rodinou.
-(2) Dalším průkopníkem v dějinách moderního vysávání byl školník James Spangler.
-Coby astmatik se při úklidu neustále potýkal s problémy zapříčiněnými zvířeným
-prachem. Roku 1907 konečně objevil řešení: vynalezl první přenosný vysavač. Patent na
-tento převratný vynález o rok později prodal Williamu Hooverovi, zakladateli americké
-firmy vyrábějící domácí spotřebiče.
-Za pár let pronikly přenosné vysavače i do Evropy, a to když se na trhu objevil na svou
-dobu obdivuhodně lehký model LUX 1, který vyrobila společnost Electrolux. Pro vysavač
-se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
-(www.idnes.cz; epochaplus.cz, upraveno)
+>století se sice objevily první úklidové stroje poháněné motorem, příliš účinné však
+>nebyly. Nečistoty totiž nenasávaly, ale jen odfoukávaly.
+>
+>Za vynálezce vysavače je považován Hubert Booth. Výsledkem jeho experimentů bylo
+>koňmi tažené zařízení o velikosti drožky, které sestrojil a roku 1901 si nechal patentovat.
+>Boothův vysávací kočár zastavil před domem, pracovník firmy nastartoval spalovací
+>motor zabudovaný ve stroji a poté pomocí dlouhé hadice vysál prach z domácnosti.
+>I přes rámus při vysávání, na nějž si mnozí Londýňané stěžovali, byl o Boothovy úklidové
+>služby zájem. Demonstrace jeho vysavače dokonce proběhla i před královskou rodinou.
+>
+>(2) Dalším průkopníkem v dějinách moderního vysávání byl školník James Spangler.
+>Coby astmatik se při úklidu neustále potýkal s problémy zapříčiněnými zvířeným
+>prachem. Roku 1907 konečně objevil řešení: vynalezl první přenosný vysavač. Patent na
+>tento převratný vynález o rok později prodal Williamu Hooverovi, zakladateli americké
+>firmy vyrábějící domácí spotřebiče.
+>
+>Za pár let pronikly přenosné vysavače i do Evropy, a to když se na trhu objevil na svou
+>dobu obdivuhodně lehký model LUX 1, který vyrobila společnost Electrolux. Pro vysavač
+>**se** rázem **vžil** název lux a od té doby se už nevysává, ale luxuje.
+>
+>(www.idnes.cz; epochaplus.cz, upraveno)
 
 # 25 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 25.1 Model LUX 1, výrobek společnosti Electrolux, byl uveden na trh v minulém století. 
@@ -390,7 +411,9 @@ se rázem vžil název lux a od té doby se už nevysává, ale luxuje.
 
 VÝCHOZÍ TEXT K ÚLOZE 29
 ===
+
 >Kryštof nakonec musel prodat, navíc dost pod cennou, zlatou medaili z mistrovství světa. 
+
 # 29 Které z následujících tvrzení je pravdivé?
 - [A] Výchozí text je zapsán pravopisně správně.
 - [B] Výchozí text obsahuje pravopisnou chybu: místo nakonec má být na konec.

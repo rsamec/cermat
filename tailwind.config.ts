@@ -26,21 +26,22 @@ const config: Config = {
         borderColor: 'white',
       }
       addBase({
+        'p': { textIndent: '0.5rem'},
         'h1': { fontSize: theme('fontSize.2xl'), fontWeight: 600 },
         'h2': { fontSize: theme('fontSize.lg'), },
         'h3': { fontSize: theme('fontSize.lg'), },
         'hr': { border: 'solid 1px black' },
         'blockquote': { padding: '10px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'black' },
         '.dark': {
-          'blockquote': darkBlockquote
-        },
+        'blockquote': darkBlockquote
+      },
         '@media (prefers-color-scheme: dark)': {
-          'blockquote': darkBlockquote
-        },
+        'blockquote': darkBlockquote
+      },
         // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
     }),
-    require('tailwindcss-unimportant'),
+  require('tailwindcss-unimportant'),
   ],
   //darkMode: 'class',
 }

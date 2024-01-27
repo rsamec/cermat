@@ -13,6 +13,7 @@ import { loadJsonBySlug } from '@/lib/utils/file.utils'
 import { Question, QuestionGroup } from '@/lib/models/quiz'
 import { AnswerGroup, AnswerMetadata, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 const collection = 'exams';
 type Project = {
@@ -58,41 +59,13 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Exam(params: Params) {
-  const { project, moreProjects, content, questions, tree } = await getData(params);
-
-
-  //const steps = config.getAllLeafNodes();
-
-
-  // const dynamicForm = dynamic(() => import(`../../../lib/exams/${project.slug}`), {
-  //   ssr: false,
-  // })
-
-  // console.log(dynamicForm);
-
+  const { project, questions, tree } = await getData(params);
 
   return (
     <>
-      <header className="sticky z-10 top-0 bg-slate-900 text-white border-b border-neutral-200">
-        <div className="max-w-6xl mx-auto px-5 p-2">
-          <div className="flex">
-            <Navigation name={project.title} />
-          </div>
-        </div>
-      </header>
-
+      <Header><Navigation name={project.title} /></Header>
       <Wizard questions={questions} tree={tree}></Wizard>
-
-
-      {/* <div className="max-w-2xl mx-auto">
-              <div
-                className="prose lg:prose-xl flex flex-col space-y-2"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
-            </div> */}
-
       <Footer></Footer>
-
     </>
   )
 }
@@ -178,29 +151,20 @@ async function getData({ params }: Params) {
   })
 
 
-  //console.log( headings.map(d => d.type?.name))
-  //console.log(headings.map(d => d.type?.name + ":" + (d.header != "" ? d.header : d.nextHeader) + ":" + (/./.test(d.content))))
+  // const content = await markdownToHtml(project.content)
 
-  // const contentChunks = await Promise.all(questions.map(async (d) => {
-  //   return await markdownToHtml(d);
-  // }))
-
-  const content = await markdownToHtml(project.content)
-
-  const moreProjects = await db
-    .find({ collection, slug: { $ne: params.slug } }, [
-      'title',
-      'slug',
-      'coverImage'
-    ])
-    .toArray()
+  // const moreProjects = await db
+  //   .find({ collection, slug: { $ne: params.slug } }, [
+  //     'title',
+  //     'slug',
+  //     'coverImage'
+  //   ])
+  //   .toArray()
 
   return {
     project,
-    content,
     questions: quizQuestions,
     tree: quizTree,
-    moreProjects
   }
 }
 
