@@ -1,6 +1,6 @@
 ---
 year: '2023'
-subject: 'czech'
+subject: 'cz'
 coverImage: '/images/cz.png'
 description: ''
 slug: 'cestina-9-2023-1'

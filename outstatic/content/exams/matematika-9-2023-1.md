@@ -8,7 +8,7 @@ author:
   name: 'Roman Samec'
   picture: 'https://avatars.githubusercontent.com/u/5671166?v=4'
 status: 'published'
-title: 'Matematika 9 2023/1'
+title: 'Matematika (9 ročník) - 1. řádný termín 2023'
 publishedAt: '2023-12-30T12:21:20.927Z'
 ---
 

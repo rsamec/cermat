@@ -26,7 +26,7 @@ const config: Config = {
         borderColor: 'white',
       }
       addBase({
-        'p': { textIndent: '0.5rem'},
+        'blockquote p': { textIndent: '0.5rem'},
         'h1': { fontSize: theme('fontSize.2xl'), fontWeight: 600 },
         'h2': { fontSize: theme('fontSize.lg'), },
         'h3': { fontSize: theme('fontSize.lg'), },
