@@ -3,7 +3,7 @@ export type Option<T> = { name: string, value: T }
 
 export function absoluteUrl(path: string) {
   //return path;
-  path = path.replace("/public","");
+  path = path.replace("/public", "");
   const rootSegment = process.env.NEXT_PUBLIC_REPO_SLUG;
   return `${rootSegment ? `/${rootSegment}` : ''}${path}`
 }
@@ -45,22 +45,22 @@ export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleS
 export function extractNumberRange(text: string): [number, number] | null {
   const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?/);
   if (match) {
-      const prefix = match[1];
-      const start = parseInt(match[2], 10);
-      const end = match[3] ? parseInt(match[3], 10) : start;
-      return [start, end];
+    const prefix = match[1];
+    const start = parseInt(match[2], 10);
+    const end = match[3] ? parseInt(match[3], 10) : start;
+    return [start, end];
   } else {
-      return null;
+    return null;
   }
 }
 
 export function extractOptionRange(text: string): [string, string] | null {
   const match = text.match(/^\[([\w\d]*)\][ \t]/);
   if (match) {
-      const prefix = match[1];
-      return [prefix, text.replace(`[${prefix}] `,'')];
+    const prefix = match[1];
+    return [prefix, text.replace(`[${prefix}] `, '')];
   } else {
-      return null;
+    return null;
   }
 }
 
@@ -68,9 +68,9 @@ export const isEmptyOrWhiteSpace = (value: string): boolean => {
   return value == null || value.trim() === '';
 };
 
-export const removeSpaces = (value:string) => {
+export const removeSpaces = (value: string) => {
   return value !=
-  null ? value.replace(/\s+/g,''): value
+    null ? value.replace(/\s+/g, '') : value
 }
 export function updateMap<K, V>(originalMap: Map<K, V>, key: K, value: V): Map<K, V> {
   // Create a shallow copy of the original Map
@@ -80,4 +80,15 @@ export function updateMap<K, V>(originalMap: Map<K, V>, key: K, value: V): Map<K
   newMap.set(key, value);
 
   return newMap;
+}
+
+export function strToSimpleHtml(value: string) {
+
+  // Use a regular expression to match patterns like x^22^
+  const regex = /\^(.*)\^/g;
+
+  // Replace matched patterns with HTML sup tags
+  const result = value.replace(regex, (_, exponent) => `<sup>${exponent}</sup>`);
+
+  return result;
 }

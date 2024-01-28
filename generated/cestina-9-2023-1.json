@@ -55,7 +55,7 @@
         "6.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "E"
+            "args": "A"
           },
           "points": 1,
           "inputBy": {
@@ -65,7 +65,7 @@
         "6.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "C"
+            "args": "E"
           },
           "points": 1,
           "inputBy": {
@@ -75,7 +75,7 @@
         "6.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": "D"
           },
           "points": 1,
           "inputBy": {

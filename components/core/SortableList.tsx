@@ -28,7 +28,7 @@ function SortableItem({ option, activeId }: { option: Option<string>, activeId: 
 
       <div className="inline-flex self-start items-center gap-x-2">
         <span className='inline-flex self-start py-0.5 px-3 rounded-full font-medium text-white bg-gray-500'>{id}</span>
-        <span >{name}</span>
+        <span dangerouslySetInnerHTML={{__html:name}}></span>
       </div>
 
     </div>

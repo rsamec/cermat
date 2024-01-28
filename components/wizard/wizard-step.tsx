@@ -11,7 +11,7 @@ import { useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { cls, updateMap } from "@/lib/utils/utils";
+import { cls, strToSimpleHtml, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import Badge from "../core/Badge";
 import SortableList from "../core/SortableList";
@@ -50,12 +50,12 @@ function inputGroup({ input, confirmButton, verifyResult, inputBy }: { input: Re
     <div className={`${cls(["max-w-lg relative mb-4 flex flex-wrap", inputBy.kind === "math" ? "items-start" : "items-stretch"])}`}>
       {prefix != null ? <span
         className="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-      >{prefix}</span> : null}
+        dangerouslySetInnerHTML={{ __html: strToSimpleHtml(prefix) }}></span> : null}
       {input}
 
       {suffix != null ? <span
         className="flex items-center whitespace-nowrap rounded-r border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-      >{suffix}</span> : null}
+        dangerouslySetInnerHTML={{ __html: strToSimpleHtml(suffix) }} ></span> : null}
 
       <div className="flex items-center ml-2">
         {confirmButton}
@@ -143,8 +143,8 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
 const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints, questions }) => {
 
   const { status, value } = answerState;
-  
-  
+
+
   const [questionMap, setQuestionMap] = useState(new Map())
   const [headerMap, setHeaderMap] = useState(new Map())
 

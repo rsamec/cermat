@@ -93,6 +93,10 @@ async function getData({ params }: Params) {
 
   const contentHeadings = await Promise.all(headings.map(async (d) => ({
     ...d,
+    options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
+      ...opt,
+      name: await markdownToHtml(opt.name)
+    }))) : d.options,
     contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content) : (await markdownToHtml(d.header) + await markdownToHtml(d.content)),
   })))
 
@@ -105,7 +109,7 @@ async function getData({ params }: Params) {
 
   const headingsTreeNodes = createTree(contentHeadings.map(d => ({ data: d })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
   const leafs = getAllLeafsWithAncestors({ data: {} as QuestionHtml, children: headingsTreeNodes }, (parent, child) => {
-    //copy some children property donw up from leafs to it parent
+    //copy some children property bottom up from leafs to its parent
     if (parent.options?.length === 0 && child.options?.length > 0) {
       parent.options = child.options;
     }
@@ -135,7 +139,7 @@ async function getData({ params }: Params) {
     //console.log(node.leaf.data.header, isInRange, range);
     const treeLeaf = d.leaf.data as AnswerMetadataTreeNode<any>
     const headerNode = node.ancestors[1].data;
-    
+
     return {
       id: treeLeaf.id,
       metadata: treeLeaf.node,
@@ -154,7 +158,7 @@ async function getData({ params }: Params) {
   })
 
 
-  
+
 
   // const moreProjects = await db
   //   .find({ collection, slug: { $ne: params.slug } }, [

@@ -171,7 +171,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm^2"
+              "suffix": "cm^2^"
             }
           }
         },
@@ -184,7 +184,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm^2"
+              "suffix": "cm^2^"
             }
           }
         }
@@ -275,7 +275,7 @@
             "kind": "number",
             "args": {
               "prefix": "o",
-              "suffix": "m^2"
+              "suffix": "m^2^"
             }
           }
         }

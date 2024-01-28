@@ -434,9 +434,9 @@ VÝCHOZÍ TEXT K ÚLOZE 29
 ## 30.3 První podtržený tvar je spisovný, druhý podtržený tvar je v daném souvětí nespisovný, avšak v jiném kontextu může být spisovný.
 ## 30.4 Druhý podtržený tvar je spisovný, první podtržený tvar je v daném souvětí nespisovný, avšak v jiném kontextu může být spisovný.
 
-- [A] Musíte _ty_ auta přeparkovat, právě totiž _začli_ čistit ulici.
-- [B] S chutí bych ti _vypla_ počítač, _kdybys_ nemusel dělat referát.
-- [C] Pivní tácky pod _nohama_ židle zajistily, že se už tak _neviklala_.
-- [D] Nájemní smlouvu si radši _vytisk_ dvakrát, aby neměl _žádný_ potíže. 
-- [E] Zeptal se _kamaráda_ ze školy, _jaké_ pravidla platí pro běžecké závody.
-- [F] Poděkování patří _záchranářům_, kteří pomohli _oboum_ zraněným mužům.
+- [A] Musíte __ty__ auta přeparkovat, právě totiž __začli__ čistit ulici.
+- [B] S chutí bych ti __vypla__ počítač, __kdybys__ nemusel dělat referát.
+- [C] Pivní tácky pod __nohama__ židle zajistily, že se už tak __neviklala__.
+- [D] Nájemní smlouvu si radši __vytisk__ dvakrát, aby neměl __žádný__ potíže. 
+- [E] Zeptal se __kamaráda__ ze školy, __jaké__ pravidla platí pro běžecké závody.
+- [F] Poděkování patří __záchranářům__, kteří pomohli __oboum__ zraněným mužům.

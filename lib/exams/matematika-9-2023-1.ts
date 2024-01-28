@@ -27,8 +27,8 @@ const form = group({
     5.2: { verifyBy: { kind: 'equalMathEquation', args: false }, points: 2, inputBy: { kind: 'math', args: { hintType: 'equation' } } },
   }),
   6: group({
-    6.1: { verifyBy: { kind: 'equal', args: 24 }, points: 1, inputBy: { kind: 'number', args: { suffix: 'cm^2' } } },
-    6.2: { verifyBy: { kind: 'equal', args: 64 }, points: 1, inputBy: { kind: 'number', args: { suffix: 'cm^2' } } },
+    6.1: { verifyBy: { kind: 'equal', args: 24 }, points: 1, inputBy: { kind: 'number', args: { suffix: 'cm^2^' } } },
+    6.2: { verifyBy: { kind: 'equal', args: 64 }, points: 1, inputBy: { kind: 'number', args: { suffix: 'cm^2^' } } },
   }),
   7: group({
     7.1: { verifyBy: { kind: 'equal', args: 25 }, points: 1, inputBy: { kind: 'number', args: { prefix: 'o', suffix: '%' } } },
@@ -38,7 +38,7 @@ const form = group({
   8: group({
     8.1: { verifyBy: { kind: 'equalMathExpression', args: "0.75a" }, points: 1, inputBy: { kind: 'math', args: { hintType: 'ratio', hint: 'Odpověď zapište s proměnnou a.' } } },
     8.2: { verifyBy: { kind: 'equal', args: 40 }, points: 2, inputBy: { kind: 'number', args: { prefix: 'a = ', suffix: 'm' } } },
-    8.3: { verifyBy: { kind: 'equal', args: 100 }, points: 1, inputBy: { kind: 'number', args: { prefix: 'o', suffix: 'm^2' } } }
+    8.3: { verifyBy: { kind: 'equal', args: 100 }, points: 1, inputBy: { kind: 'number', args: { prefix: 'o', suffix: 'm^2^' } } }
   }),
   9: {
     verifyBy: { kind: 'selfEvaluate', args: { options: pointOptions } }

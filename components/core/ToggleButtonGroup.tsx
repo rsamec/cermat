@@ -44,7 +44,7 @@ const ToggleButtonGroup = <T extends Object>({
           <div className="inline-flex self-start items-center gap-x-2">
             {badge != null ?
               <span className={cls(['inline-flex self-start py-0.5 px-3 rounded-full font-medium text-white bg-gray-500'])}>{badge(option)}</span> : null}
-            <span >{format ? format(option) : option.toString()}</span>
+            <span dangerouslySetInnerHTML={{ __html:format ? format(option) : option.toString()}}></span>
           </div>
 
         </button>)

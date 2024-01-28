@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls, extractNumberRange, extractOptionRange } from './utils';
+import { cls, extractNumberRange, extractOptionRange, strToSimpleHtml } from './utils';
 
 test('simple string', () => {
 
@@ -35,4 +35,10 @@ test('extract number range identifier', () => {
 test('extract option identifier', () => {
   expect(extractOptionRange("[A] some text")).toEqual(["A", "some text"])
 
+})
+
+
+test('simple convert string to super script', () => {
+  expect(strToSimpleHtml("x^a + 2^")).toEqual("x<sup>a + 2</sup>")
+  expect(strToSimpleHtml("some prefix x^a + 2^ some suffix")).toEqual("some prefix x<sup>a + 2</sup> some suffix")
 })
