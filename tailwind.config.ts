@@ -32,15 +32,17 @@ const config: Config = {
       addBase({
         'blockquote p': { textIndent: '0.5rem' },
         'details > summary': {          
-          backgroundColor: theme("colors.gray.600"),
-          color: theme("colors.white"),
+          //backgroundColor: theme("colors.gray.600"),
+          //color: theme("colors.white"),
+          borderColor: theme("colors.gray.600"),
+          borderWidth: "1px",
           cursor: 'pointer',
           padding: '.5rem 1rem',
         },
         // '@media (prefers-color-scheme: dark) details > summary': darkDetailsSummary,
         // '.dark details > summary': darkDetailsSummary,
         'details > section': {
-          borderWidth: "1px",
+          borderWidth: "0px 1px 1px 1px",
           borderColor: theme("colors.gray.600"),
           marginTop: 0,
           padding: "1rem"

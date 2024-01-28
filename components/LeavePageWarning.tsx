@@ -9,7 +9,7 @@ const LeavePageWarning = ({ children }: { children: ReactNode }) => {
       return confirmationMessage;
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    //window.addEventListener('beforeunload', handleBeforeUnload);
 
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);

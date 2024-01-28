@@ -175,7 +175,11 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
             <summary className="text-xl font-bold" onClick={(e) => {
               e.preventDefault();
               toggleExpandableHeader(header.title);
-            }} >{header.title}</summary>
+            }}><div className="inline-flex items-center w-[calc(100%-30px)]">
+                <span className="grow">{header.title}</span>
+                <button className="text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isHeaderExpanded ? 'Skrýt' : 'Zobrazit'}</button>
+              </div>
+            </summary>
             <section>
               <div
                 className={cls([
@@ -205,7 +209,12 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
               <summary className="text-xl font-bold" onClick={(e) => {
                 e.preventDefault();
                 toggleExpandableAnswer(question.id);
-              }}>Zobrazit výsledek</summary>
+              }}>
+                <div className="inline-flex items-center w-[calc(100%-30px)]">
+                  <span className="grow">Zobrazit výsledek</span>
+                  <button className="text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isQuestionAnswerExpanded ? 'Skrýt' : 'Zobrazit'}</button>
+                </div>
+              </summary>
 
               <section className="grid grid-cols-1 py-5" >
                 <div className="relative w-full aspect-[4/3]">
