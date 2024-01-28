@@ -189,7 +189,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
           className="prose lg:prose-xl flex flex-col space-y-2"
           dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
         />
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-2">
           {!hasInput && <IconBadge icon={faInfoCircle} text={`Vlastní vyhodnocení úlohy.`}  />}
           {maxPoints != null && <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} />}
         </div>
