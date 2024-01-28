@@ -25,23 +25,45 @@ const config: Config = {
       const darkBlockquote = {
         borderColor: 'white',
       }
+      
+      // const darkDetailsSummary = {
+      //   backgroundColor: theme("colors.gray.600")
+      // }
       addBase({
-        'blockquote p': { textIndent: '0.5rem'},
+        'blockquote p': { textIndent: '0.5rem' },
+        'details > summary': {          
+          backgroundColor: theme("colors.gray.600"),
+          color: theme("colors.white"),
+          cursor: 'pointer',
+          padding: '.5rem 1rem',
+        },
+        // '@media (prefers-color-scheme: dark) details > summary': darkDetailsSummary,
+        // '.dark details > summary': darkDetailsSummary,
+        'details > section': {
+          borderWidth: "1px",
+          borderColor: theme("colors.gray.600"),
+          marginTop: 0,
+          padding: "1rem"
+        },
+        'details > section p:has(+ blockquote)': {
+          borderBottomWidth: "1px",
+          borderBottomColor: theme("colors.gray.600"),
+        },
         'h1': { fontSize: theme('fontSize.2xl'), fontWeight: 600 },
         'h2': { fontSize: theme('fontSize.lg'), },
         'h3': { fontSize: theme('fontSize.lg'), },
         'hr': { border: 'solid 1px black' },
-        'blockquote': { padding: '10px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'black' },
+        //'blockquote': { padding: '5px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'black' },
         '.dark': {
-        'blockquote': darkBlockquote
-      },
+          'blockquote': darkBlockquote
+        },
         '@media (prefers-color-scheme: dark)': {
-        'blockquote': darkBlockquote
-      },
+          'blockquote': darkBlockquote
+        },
         // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
     }),
-  require('tailwindcss-unimportant'),
+    require('tailwindcss-unimportant'),
   ],
   //darkMode: 'class',
 }

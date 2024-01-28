@@ -20,9 +20,9 @@ const form = group({
   4: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
   5: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
   6: group({
-    6.1: { verifyBy: { kind: 'equalOption', args: 'E' }, points: 1, inputBy: { kind: 'options' } },
-    6.2: { verifyBy: { kind: 'equalOption', args: 'C' }, points: 1, inputBy: { kind: 'options' } },
-    6.3: { verifyBy: { kind: 'equalOption', args: 'A' }, points: 1, inputBy: { kind: 'options' } },
+    6.1: { verifyBy: { kind: 'equalOption', args: 'A' }, points: 1, inputBy: { kind: 'options' } },
+    6.2: { verifyBy: { kind: 'equalOption', args: 'E' }, points: 1, inputBy: { kind: 'options' } },
+    6.3: { verifyBy: { kind: 'equalOption', args: 'D' }, points: 1, inputBy: { kind: 'options' } },
   }),
   7: group({
     7.1: { verifyBy: { kind: 'equal', args: 'řeč' }, points: 1, inputBy: { kind: 'text' } },

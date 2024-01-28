@@ -79,7 +79,7 @@ function statusInput(status: AnswerStatus) {
 function renderInput(question: Question, control: FormControl<any>, status: AnswerStatus, setAnswer: any) {
 
   const inputBy = question.metadata.inputBy;
-  const confirmButton = <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Overit</button>
+  const confirmButton = <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Zkontrolovat</button>
   if (inputBy == null) return null;
 
   const verifyResult = status == "incorrect" ?

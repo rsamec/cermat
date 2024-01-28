@@ -16,21 +16,20 @@ import { absoluteUrl } from './utils';
 //const imgDirInsidePublic = 'images';
 
 function transformImgSrc() {
-  return (tree:any, file:any) => {
+  return (tree: any) => {
     visit(tree, 'paragraph', node => {
-      const image = node.children.find((child:{type:string}) => child.type === 'image');
-      if (image) {        
-        image.url =  absoluteUrl(image.url);
+      const image = node.children.find((child: { type: string }) => child.type === 'image');
+      if (image) {
+        image.url = absoluteUrl(image.url);
       }
     });
   };
 }
 
-
-
 export default async function markdownToHtml(markdown: string) {
   const result = await remark()
     .use(remarkParse)
+    .use(underlinePlugin)
     .use(transformImgSrc)
     .use(remarkMath)
     .use(remarkGfm)
@@ -52,3 +51,32 @@ export default async function markdownToHtml(markdown: string) {
 //   const result = await remark().use(html).process(markdown)
 //   return result.toString()
 // }
+
+
+/**
+ * Underline plugin for Remark.
+ */
+const underlinePlugin = () => {
+  function transformer(tree: any, { value }: { value: any }) {
+    // Convert strong nodes created by "__" to a different unist node type.
+    visit(tree, 'strong', (node, position, parent) => {
+
+      const startOg = node.position.start.offset;
+      const endOg = node.position.end.offset;
+
+      const strToOperateOn = value.substring(startOg, endOg);
+      const wasUnderscores =
+        strToOperateOn.startsWith("__") && strToOperateOn.endsWith("__");
+
+      if (wasUnderscores) {
+        node.type = "underline";
+        node.data = {
+          hName: "ins",
+          hProperties: {}
+        };
+      }
+    });
+  }
+
+  return transformer;
+};

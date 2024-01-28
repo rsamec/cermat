@@ -33,7 +33,7 @@ VÝCHOZÍ TEXTY K ÚLOZE 2-5
 >nad zábradlím rozviklaných schůdků\
 >propadal jsem tesknici a smutku,\
 >bezradný ve věčném nepokoji\
->hledíval jsem za bílými stroji.\
+>hledíval jsem **za bílými stroji**.\
 >Štítil jsem se orosené plísně\
 >v oknech domků vzhlížejících přísně,\
 >rozhledna však, rozkročena k jaru,\
@@ -47,7 +47,7 @@ VÝCHOZÍ TEXTY K ÚLOZE 2-5
 >žil jsem s jeho světly, s jeho květy,\
 >lampář zhasil světla u Lorety.\
 >A já prchal po kamenném svahu,\
->ztráceje chvílemi rovnováhu;\
+>__ztráceje__ chvílemi rovnováhu;\
 >svatý, jehož socha stála na úbočí,\
 >neviděl mě, měl zavřené oči.
 >
@@ -55,7 +55,7 @@ VÝCHOZÍ TEXTY K ÚLOZE 2-5
 >Vysvětlivka: Loreta – pražská kaple
 
 **TEXT 2**
-> V poezii se setkáváme s tím, že něco, co je v běžném životě neživé, je **personifikováno** (personifikace = zosobnění). Např. ve větě & *Slunce se na mě smálo* nebo v souvětí *Připadalo mi, že mě slunce hladí po tváři* je personifikováno slunce.
+> V poezii se setkáváme s tím, že něco, co je v běžném životě neživé, je **personifikováno** (personifikace = zosobnění). Např. ve větě  **Slunce se na mě smálo** nebo v souvětí **Připadalo mi, že mě slunce hladí po tváři** je personifikováno slunce.
 
 # 2 Které z následujících tvrzení odpovídá TEXTU 1?
  - [A] V textu je popisován konec první dětské lásky.
@@ -69,7 +69,7 @@ VÝCHOZÍ TEXTY K ÚLOZE 2-5
 
 - [A] V této části textu je personifikována plíseň.
 - [B] V této části textu jsou personifikovány střechy.
-- [C]V této části textu je personifikována rozhledna.
+- [C] V této části textu je personifikována rozhledna.
 - [D] V této části textu jsou personifikovány schůdky.
 
 
@@ -110,7 +110,7 @@ VÝCHOZÍ TEXTY K ÚLOZE 2-5
 
 
 # 7 Ke každé z následujících podúloh (7.1 a 7.2) napište současné (tj. ne zastaralé) spisovné slovo, které odpovídá zadání a zároveň není vlastním jménem.
-## 7.1 Napište podstatné jméno, které je v 1. pádě čísla jednotného jednoslabičné, je příbuzné se slovem ŘÍKAT, skloňuje se podle vzoru KOST a neobsahuje předponu.
+## 7.1 Napište podstatné jméno, které je v 1. pádě čísla jednotného jednoslabičné, je příbuzné se slovem ŘÍKAT, skloňuje se podle vzoru KOST a __neobsahuje__ předponu.
 ## 7.2 Napište podstatné jméno, které je v 1. pádě čísla jednotného tříslabičné, je příbuzné se slovem ROVNAT, skloňuje se podle vzoru STAVENÍ a obsahuje předponu.
 
 
@@ -161,7 +161,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 8–12
 ## 8.4 Sidra nesla s nelibostí, že kvůli vymazanému protokolu upřímnosti musí na Jojeho otázky odpovídat nepravdivě. 
 
 
-# 9 Vypište z první části výchozího textu dvě zájmena.
+# 9 Vypište z __první části__ výchozího textu dvě zájmena.
 Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
@@ -180,8 +180,8 @@ Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jaké
 - [D] jistě – nejistě
 
 
-# 12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří 
-## Kterou z následujících možností je nutné doplnit na vynechané místo () ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
+# 12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří (*****)
+## Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
 - [A] celkem tři příslušníci stejné rasy
 - [B] celkem čtyři příslušníci stejné rasy
 - [C] celkem tři postavy, z nichž dvě jsou příslušníci stejné rasy
@@ -198,11 +198,11 @@ Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jaké
 VÝCHOZÍ TEXT K ÚLOZE 14
 ===
 >Dítěti ***** být středem pozornosti může nástup do 1. třídy činit problémy. Během času
-> ve škole se však zpravidla naučí dát prostor i svým vrstevníkům.
+> &#11044;&#11044;&#11044;&#11044;&#11044; ve škole se však zpravidla naučí dát prostor i svým vrstevníkům.
 
 # 14
 ## 14.1 Napište náležitý spisovný tvar slova zvyklý, který patří na první vynechané místo (*****) ve výchozím textu.
-## 14.2 Napište náležitý spisovný tvar slova prožitý, který patří na druhé vynechané místo () ve výchozím textu.
+## 14.2 Napište náležitý spisovný tvar slova prožitý, který patří na druhé vynechané místo (&#11044;&#11044;&#11044;&#11044;&#11044;) ve výchozím textu.
 
 (Po doplnění náležitého tvaru musí být příslušný větný celek gramaticky správný.)
 
@@ -230,7 +230,8 @@ parapet upravený k sezení, a zeptala se mě: „Proč se tu schováváš?“
 
 
 # 16 Vypište z každé z následujících vět (16.1 a 16.2) základní skladební dvojici.
- (Základní skladební dvojice musí být zapsány pravopisně správně.)
+
+(Základní skladební dvojice musí být zapsány pravopisně správně.)
 ## 16.1 Závan horského větru byl v tom mimořádně horkém odpoledni opravdu osvěžující.
 ## 16.2 Mohli by dnešní lidé vůbec žít bez moderní techniky a dalších vymožeností?
 
@@ -256,7 +257,7 @@ VÝCHOZÍ TEXT K ÚLOZE 18
 ====
 
 >Minulý týden se davy lidí vydaly do pražských Holešovic, kde se konal již 27. ročník
->veletrhu Svět knihy. Tato čtyřdenní událost je nejvýznamějším svátkem literatury v České
+>veletrhu __Svět knihy__. Tato čtyřdenní událost je nejvýznamějším svátkem literatury v České
 >republice. Celé akci, na niž jako obvykle přijaly pozvání výrazné literární osobnosti,
 >vévodily knižní novinky z Itálie.
 >
@@ -270,7 +271,7 @@ VÝCHOZÍ TEXT K ÚLOZE 18
 >Letošní veletrh návštěvníkům tradyčně nabídl smysluplně strávený čas, další ročník
 >přivítá velké i malé knihomoli na jaře příštího roku.
 
-# 18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je pravopisně správně.
+# 18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je __pravopisně správně__.
 Podtržené výrazy jsou zapsány správně.
 Ohebná slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
@@ -294,15 +295,15 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
 >
 >(2) Pohled na mapu odhalí, že brochy často stojí na strategických místech, navíc bývají
 >chráněny přírodními překážkami, např. strmými útesy. Mohly tedy plnit funkci obranných
->pevností. Tato hypotéza má ale háček – věže rozhodně nebyly nedobytné. Nepřítel by
->snadno kamennou stěnu zdolal, absence oken či ochozů na střeše totiž neumožňovala
+>pevností. Tato hypotéza má ale háček – věže rozhodně nebyly nedobytné. __Nepřítel by
+>snadno kamennou stěnu zdolal__, absence oken či ochozů na střeše totiž neumožňovala
 >aktivní obranu.
 >
 >(3) Vzhledem k uspořádání interiéru se tedy nabízí možnost, že brochy sloužily jako
 >běžná obydlí (patrně pro vysoce postavené jedince), což by potvrzovaly i nalezené
 >fragmenty keramiky. V jedné věži mohlo žít odhadem až dvacet lidí včetně služebnictva.
 >Na nádvoří v přízemí byl zřejmě ustájen **dobytek**, v patrech se nacházely obytné prostory
->a skladiště potravin. Protože brochy neměly okna, jediným zdrojem světla byl oheň.
+>a skladiště potravin. __Protože brochy neměly okna__, jediným zdrojem světla byl oheň.
 >
 >Brochy se z neznámých důvodů přestaly stavět kolem roku 100 n. l., obydlené však
 >zůstaly ještě v následujících staletích. Ačkoli se zatím nepodařilo objasnit všechny záhady
@@ -358,9 +359,9 @@ do jiného města. Když se Víťa sešel se sousedkou Terezou, postěžoval si 
 dostat se z bláta do louže. Teď každý den zase trávím dojížděním dvě hodiny!“
 
 # 24 Které z následujících tvrzení vystihuje situaci popsanou ve výchozím textu?
-- [A] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost se svou situací.
+- [A] Víťa popletl ustálené slovní spojení *dostat se z bláta pod okap*, jímž chtěl vyjádřit nespokojenost se svou situací.
 - [B] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že se jeho situace navzdory očekávání nezlepšila. 
-- [C] Víťa popletl ustálené slovní spojení dostat se z bláta pod okap, jímž chtěl vyjádřit nespokojenost s neseriózním jednáním firmy KZO.
+- [C] Víťa popletl ustálené slovní spojení *dostat se z bláta pod okap*, jímž chtěl vyjádřit nespokojenost s neseriózním jednáním firmy KZO.
 - [D] Víťa pomocí ustáleného slovního spojení vyjádřil nespokojenost s tím, že firma KZO za své neseriózní jednání odmítá nést odpovědnost.
 
 
@@ -392,26 +393,26 @@ VÝCHOZÍ TEXT K ÚLOHÁM 25–28
 # 25 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 25.1 Model LUX 1, výrobek společnosti Electrolux, byl uveden na trh v minulém století. 
 ## 25.2 Během procesu vysávání Boothovo zařízení fungovalo výhradně na koňský pohon.
-## 25.3 Patent na Spanglerův přenosný vysavač koupil v roce 1908 zakladatel jedné americké fi rmy.
+## 25.3 Patent na Spanglerův přenosný vysavač koupil v roce 1908 zakladatel jedné americké firmy.
 ## 25.4 Velká hlučnost Boothova vysávacího zařízení vyvolala demonstraci nespokojených občanů Londýna. 
 
 
-# 26 Vypište z druhé části výchozího textu tři podstatná jména, která jsou v textu užita v 6. pádě.
+# 26 Vypište z __druhé části__ výchozího textu tři podstatná jména, která jsou v textu užita v 6. pádě.
 ## Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
 # 27 Které z následujících tvrzení o slovese tučně vyznačeném ve výchozím textu je pravdivé?
-- [A] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
-- [B] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem ujal se, význam textu zůstane zachován.
-- [C] Sloveso vžil se má v textu význam soužitím se přizpůsobil, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
-- [D] Sloveso vžil se má v textu význam stal se obvyklým, a pokud ho nahradíme slovesem vcítil se, význam textu zůstane zachován.
+- [A] Sloveso *vžil se* má v textu význam *soužitím se přizpůsobil*, a pokud ho nahradíme slovesem *ujal se*, význam textu zůstane zachován.
+- [B] Sloveso *vžil se* má v textu význam *stal se obvyklým*, a pokud ho nahradíme slovesem *ujal se*, význam textu zůstane zachován.
+- [C] Sloveso *vžil se* má v textu význam *soužitím se přizpůsobil*, a pokud ho nahradíme slovesem *vcítil se*, význam textu zůstane zachován.
+- [D] Sloveso *vžil se* má v textu význam *stal se obvyklým*, a pokud ho nahradíme slovesem *vcítil se*, význam textu zůstane zachován.
 
 
 # 28 Které z následujících tvrzení o zájmenu podtrženém ve výchozím textu je pravdivé?
-- [A] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu drožky.
-- [B] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu zařízení.
-- [C] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu drožky.
-- [D] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu zařízení.
+- [A] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu *drožky*.
+- [B] Toto zájmeno je v textu užito v množném čísle a odkazuje ke slovu *zařízení*.
+- [C] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu *drožky*.
+- [D] Toto zájmeno je v textu užito v jednotném čísle a odkazuje ke slovu *zařízení*.
   
 
 VÝCHOZÍ TEXT K ÚLOZE 29
@@ -421,20 +422,21 @@ VÝCHOZÍ TEXT K ÚLOZE 29
 
 # 29 Které z následujících tvrzení je pravdivé?
 - [A] Výchozí text je zapsán pravopisně správně.
-- [B] Výchozí text obsahuje pravopisnou chybu: místo nakonec má být na konec.
-- [C] Výchozí text obsahuje pravopisnou chybu: místo cennou má být cenou.
-- [D] Výchozí text obsahuje pravopisnou chybu: místo medaili má být medaily.
+- [B] Výchozí text obsahuje pravopisnou chybu: místo *nakonec* má být na *konec*.
+- [C] Výchozí text obsahuje pravopisnou chybu: místo *cennou* má být *cenou*.
+- [D] Výchozí text obsahuje pravopisnou chybu: místo *medaili* má být *medaily*.
 
 
 # 30 Přiřaďte k jednotlivým tvrzením (30.1–30.4) odpovídající souvětí (A–F).
-## (Spisovnost/nespisovnost posuzujte z hlediska současné češtiny. Žádnou možnost z nabídky A–F nelze přiřadit víckrát než jednou.)
+(Spisovnost/nespisovnost posuzujte z hlediska současné češtiny. Žádnou možnost z nabídky A–F nelze přiřadit víckrát než jednou.)
 ## 30.1 Oba podtržené tvary jsou v daném souvětí nespisovné, první podtržený tvar však může být v jiném kontextu spisovný. 
 ## 30.2 Oba podtržené tvary jsou v daném souvětí nespisovné, druhý podtržený tvar však může být v jiném kontextu spisovný
 ## 30.3 První podtržený tvar je spisovný, druhý podtržený tvar je v daném souvětí nespisovný, avšak v jiném kontextu může být spisovný.
 ## 30.4 Druhý podtržený tvar je spisovný, první podtržený tvar je v daném souvětí nespisovný, avšak v jiném kontextu může být spisovný.
-- [A] Musíte ty auta přeparkovat, právě totiž začli čistit ulici.
-- [B] S chutí bych ti vypla počítač, kdybys nemusel dělat referát.
-- [C] Pivní tácky pod nohama židle zajistily, že se už tak neviklala.
-- [D] Nájemní smlouvu si radši vytisk dvakrát, aby neměl žádný potíže. 
-- [E] Zeptal se kamaráda ze školy, jaké pravidla platí pro běžecké závody.
-- [F] Poděkování patří záchranářům, kteří pomohli oboum zraněným mužům.
+
+- [A] Musíte _ty_ auta přeparkovat, právě totiž _začli_ čistit ulici.
+- [B] S chutí bych ti _vypla_ počítač, _kdybys_ nemusel dělat referát.
+- [C] Pivní tácky pod _nohama_ židle zajistily, že se už tak _neviklala_.
+- [D] Nájemní smlouvu si radši _vytisk_ dvakrát, aby neměl _žádný_ potíže. 
+- [E] Zeptal se _kamaráda_ ze školy, _jaké_ pravidla platí pro běžecké závody.
+- [F] Poděkování patří _záchranářům_, kteří pomohli _oboum_ zraněným mužům.
