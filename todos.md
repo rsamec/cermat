@@ -1,6 +1,6 @@
 required
 - [x] zvyrazit expandable/collapsable container
-- [ ] zobrazení správné odpovědi všude a zvýraznit, format cislo 
+- [x] zobrazení správné odpovědi všude a zvýraznit, format cislo 
 - [ ] samohodnoceni badge, hint + odliseni voleb 
 - [x] varovani opusteni stranky - refresh, F5
 - [ ] varovani opusteni stranky - routing

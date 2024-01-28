@@ -21,9 +21,6 @@ export function chunk<T>(arr: T[], chunkSize = 3) {
   }
   return chunks;
 }
-export function formatNumber(value: string) {
-  return value != null ? parseInt(value).toLocaleString("cs-CZ", { maximumFractionDigits: 0, minimumFractionDigits: 0 }) + " Kč" : '---';
-}
 
 export function cls(input: (string | boolean)[]) {
   return input.filter((cond: string | boolean) => typeof cond === "string").join(" ")
@@ -91,4 +88,14 @@ export function strToSimpleHtml(value: string) {
   const result = value.replace(regex, (_, exponent) => `<sup>${exponent}</sup>`);
 
   return result;
+}
+export function format(value: any) {
+  if (value == null) return value;
+  if (typeof value == 'number') return formatNumber(value);
+  if (typeof value == 'boolean') return value ? "A" : "N"
+  return value;
+}
+
+export function formatNumber(input: number, decimals: number = 0) {
+  return input.toLocaleString("cs-CZ", { maximumFractionDigits: decimals, minimumFractionDigits: 0 })
 }

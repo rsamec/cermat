@@ -11,13 +11,14 @@ import { useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { cls, strToSimpleHtml, updateMap } from "@/lib/utils/utils";
+import { cls, format, strToSimpleHtml, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import Badge from "../core/Badge";
 import SortableList from "../core/SortableList";
 import MathInput from "../core/MathInput";
 import { toHtml } from "@/lib/utils/math.utils";
 import DOMPurify from "dompurify";
+import ToggleSwitchBadge from "../core/ToggleSwitchBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -44,10 +45,10 @@ type Props = { question: Question, answerState: AnswerState } & StateProps & Dis
 
 
 
-function inputGroup({ input, confirmButton, verifyResult, inputBy }: { input: React.ReactNode, confirmButton: React.ReactNode, verifyResult: React.ReactNode, inputBy: { kind: 'number' | 'text' | 'math', args?: { prefix?: string, suffix?: string } } }) {
+function inputGroup({ input, confirmButton, inputBy }: { input: React.ReactNode, confirmButton: React.ReactNode, inputBy: { kind: 'number' | 'text' | 'math', args?: { prefix?: string, suffix?: string } } }) {
   const { prefix, suffix } = inputBy.args ?? {};
-  return <div>
-    <div className={`${cls(["max-w-lg relative mb-4 flex flex-wrap", inputBy.kind === "math" ? "items-start" : "items-stretch"])}`}>
+  return <div className="flex flex-wrap gap-2">
+    <div className={`${cls(["max-w-lg relative grow flex", inputBy.kind === "math" ? "items-start" : "items-stretch"])}`}>
       {prefix != null ? <span
         className="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
         dangerouslySetInnerHTML={{ __html: strToSimpleHtml(prefix) }}></span> : null}
@@ -56,17 +57,14 @@ function inputGroup({ input, confirmButton, verifyResult, inputBy }: { input: Re
       {suffix != null ? <span
         className="flex items-center whitespace-nowrap rounded-r border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
         dangerouslySetInnerHTML={{ __html: strToSimpleHtml(suffix) }} ></span> : null}
-
-      <div className="flex items-center ml-2">
-        {confirmButton}
-      </div>
     </div>
+
     <div>
-      {verifyResult}
+      {confirmButton}
     </div>
   </div>
-
 }
+
 function statusInput(status: AnswerStatus) {
   return status == "correct" ?
     "bg-green-50 border border-green-500 text-green-900 text-sm focus:ring-green-500 focus:border-green-500 dark:border-green-500"
@@ -82,18 +80,12 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
   const confirmButton = <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Zkontrolovat</button>
   if (inputBy == null) return null;
 
-  const verifyResult = status == "incorrect" ?
-    question.metadata.inputBy?.kind === 'math' ?
-      <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(question.metadata.verifyBy.args)) }} /> :
-      <div>{question.metadata.verifyBy?.args}</div> : null
-
   if (inputBy.kind === "number") {
 
     return inputGroup(
       {
         input: <InputNumber control={control} step={inputBy.args?.step} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])} ></InputNumber>,
         confirmButton,
-        verifyResult,
         inputBy
       })
   }
@@ -101,25 +93,22 @@ function renderInput(question: Question, control: FormControl<any>, status: Answ
     return inputGroup({
       input: <TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
       confirmButton,
-      verifyResult,
       inputBy
     })
   }
   else if (inputBy.kind === "math") {
 
     const hintClass = 'italic text-sm'
-    const input = inputGroup({
-      input: <MathInput control={control} className={cls(["relative m-0 block  min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></MathInput>,
+    return inputGroup({
+      input: <div className="flex flex-col">
+        <MathInput control={control} className={cls(["relative m-0 block  min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></MathInput>
+        {inputBy.args?.hintType != null && <span className={hintClass}>
+          Násobení např.2x, x(x+1). Dělení a zlomek x/2, 1/(3+2). Mocninu x<sup>2</sup> zapište jako x^2.
+        </span>}
+      </div>,
       confirmButton,
-      verifyResult,
       inputBy
     })
-    return inputBy.args?.hintType != null ? <div>
-      {input}
-      <span className={hintClass}>
-        Násobení např.2x, x(x+1). Dělení a zlomek x/2, 1/(3+2). Mocninu x<sup>2</sup> zapište jako x^2.
-      </span>
-    </div> : input
   }
   else if (inputBy.kind === "bool") {
     return createBoolAnswer(control, status, (value) => setAnswer({ questionId: question.id, answer: value }))
@@ -165,6 +154,10 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
   }
 
   const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
+
+
+
+
   return (
 
     <div className="flex flex-col gap-2 px-3" >
@@ -196,12 +189,27 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
           className="prose lg:prose-xl flex flex-col space-y-2"
           dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
         />
+        <div className="flex justify-end">
+          {!hasInput && <IconBadge icon={faInfoCircle} text={`Vlastní vyhodnocení úlohy.`}  />}
+          {maxPoints != null && <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} />}
+        </div>
+
       </div>
 
 
       <div className="flex flex-col gap-1">
 
-        {hasInput ? renderInput(question, formControl as any, status, setAnswer) : null}
+        {hasInput ? <div className="flex flex-col gap-4">
+          {renderInput(question, formControl as any, status, setAnswer)}
+          {
+            status == "incorrect" ? <ToggleSwitchBadge text="Zobrazit řešení úlohy" value={isQuestionAnswerExpanded} onChange={() => toggleExpandableAnswer(question.id)} type="Success" > {
+              question.metadata.inputBy?.kind === 'math' ?
+                <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(question.metadata.verifyBy.args))) }} /> :
+                <div>{format(question.metadata.verifyBy?.args)}</div>
+            }
+            </ToggleSwitchBadge> : null
+          }
+        </div> : null}
 
         {!hasInput ?
           <div>
@@ -211,7 +219,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
                 toggleExpandableAnswer(question.id);
               }}>
                 <div className="inline-flex items-center w-[calc(100%-30px)]">
-                  <span className="grow">Zobrazit výsledek</span>
+                  <span className="grow">Zobrazit řešení úlohy</span>
                   <button className="text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isQuestionAnswerExpanded ? 'Skrýt' : 'Zobrazit'}</button>
                 </div>
               </summary>
@@ -220,16 +228,17 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
                 <div className="relative w-full aspect-[4/3]">
                   <Image src={"/math/2013/9/9-result.jpeg"} alt='Check result' fill className="object-cover object-center" />
                 </div>
+
+                <div>{createOptionAnswer(formControl, question.metadata.verifyBy.args.options, status, (value) => {
+                  if (value === undefined) return;
+                  setAnswer({ questionId: question.id, answer: value });
+                })}</div>
+
               </section>
             </details>
 
-            <div>{createOptionAnswer(formControl, question.metadata.verifyBy.args.options, status, (value) => {
-              if (value === undefined) return;
-              setAnswer({ questionId: question.id, answer: value });
-            })}</div>
 
           </div> : null}
-        {maxPoints != null ? <div> <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} /></div> : null}
       </div>
 
       <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -237,8 +246,8 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
       <div className="flex">
 
         <div className="grow flex flex-wrap gap-2">
-          <Badge text="Úlohy" badgeText={`${totalAnswers} / ${questions.length}`} type="Gray" ></Badge>
-          <Badge text="Body" badgeText={`${totalPoints} / ${maxTotalPoints}`} type="Gray" ></Badge>
+          <Badge text="Úlohy" type="Gray">{`${totalAnswers} / ${questions.length}`}</Badge>
+          <Badge text="Body" type="Gray">{`${totalPoints} / ${maxTotalPoints}`}</Badge>
         </div>
 
         <div className="flex self-end gap-3">
