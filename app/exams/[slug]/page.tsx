@@ -10,8 +10,8 @@ import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadings
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
-import { Question, QuestionGroup } from '@/lib/models/quiz'
-import { AnswerGroup, AnswerMetadata, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
+import { Question } from '@/lib/models/quiz'
+import { AnswerGroup, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 

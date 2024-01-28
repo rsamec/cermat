@@ -3,10 +3,11 @@ import * as React from "react";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store";
 import { useEffect } from "react";
-import { Question, QuestionGroup } from "@/lib/models/quiz";
+import { Question } from "@/lib/models/quiz";
 import StepRenderer from "./step-render";
 import { TreeNode } from "@/lib/utils/tree.utils";
 import { Answer } from "@/lib/utils/quiz-specification";
+import LeavePageWarning from "../LeavePageWarning";
 
 export default function Wizard(props: { questions: Question[], tree: TreeNode<Answer<any>> }) {
   const { dispatch } = store;
@@ -20,7 +21,9 @@ export default function Wizard(props: { questions: Question[], tree: TreeNode<An
   return (
     <div>
       <Provider store={store}>
-        <StepRenderer></StepRenderer>
+        <LeavePageWarning>
+          <StepRenderer></StepRenderer>
+        </LeavePageWarning>
       </Provider>
     </div>
   )
