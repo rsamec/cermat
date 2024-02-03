@@ -1,13 +1,16 @@
 
+import { ReactNode } from 'react';
 
-const Header = () => {
-  return (<header className="bg-slate-900 text-white border-t border-neutral-200">
-    <div className="max-w-6xl mx-auto px-5 p-3">
-      <div className="flex">
-        <span className="text-xs flex-1">CERMAT TESTY</span>        
+const Header:  React.FC<{children?: ReactNode}> = ({ children }) => {
+  return (
+    <header className="sticky z-10 top-0 bg-slate-900 text-white border-b border-neutral-200">
+      <div className="max-w-6xl mx-auto px-5 p-2">
+        <div className="flex">
+          {children}
+        </div>
       </div>
-    </div>
-  </header>)    
+    </header>
+  )
 }
 
 export default Header;

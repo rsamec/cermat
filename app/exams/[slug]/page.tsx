@@ -6,13 +6,14 @@ import { Metadata } from 'next'
 import { Maybe, absoluteUrl, extractNumberRange } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
-import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList } from '@/lib/utils/parser.utils'
+import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList, countMaxChars } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJsonBySlug } from '@/lib/utils/file.utils'
-import { Question, QuestionGroup } from '@/lib/models/quiz'
-import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
+import { Question } from '@/lib/models/quiz'
+import { AnswerGroup, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 const collection = 'exams';
 type Project = {
@@ -58,81 +59,13 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Exam(params: Params) {
-  const { project, moreProjects, content, questions, tree } = await getData(params);
-
-
-  //const steps = config.getAllLeafNodes();
-
-
-  // const dynamicForm = dynamic(() => import(`../../../lib/exams/${project.slug}`), {
-  //   ssr: false,
-  // })
-
-  // console.log(dynamicForm);
-
+  const { project, questions, tree } = await getData(params);
 
   return (
     <>
-      <header className="sticky top-0 bg-black text-white border-b border-neutral-200">
-        <div className="max-w-6xl mx-auto px-5 p-2">
-          <div className="flex">
-            <Navigation name={project.title} />
-          </div>
-        </div>
-      </header>
-
-      <div className="min-h-screen">
-        <main>
-          <div className="max-w-6xl mx-auto">
-
-
-            <article className="mb-8">
-              <div>
-                {/* <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
-              {project.title}
-            </h1> */}
-                {/* <div className="hidden md:block md:mb-8 italic text-slate-400">
-              Publikováno <DateFormatter dateString={project.publishedAt} />
-              {' '}
-              {project?.author?.name ? `by ${project?.author?.name}` : null}.
-            </div> */}
-
-                <Wizard questions={questions} tree={tree}></Wizard>
-                {/* <div className="inline-block p-4 border mb-8 font-semibold text-lg rounded shadow">
-                {project.description}
-              </div> */}
-                {/* <div>
-              {
-                steps.map((d, i) => {
-                  const matchedLeaf = leafs[i];
-                  const output = matchedLeaf.ancestors.map(d => d.data.contentHtml!).join("");
-
-
-                  // return (<Step slug={project.slug} options={[]} ></Step>)
-                  return (<div key={i}>
-                    <div className="prose lg:prose-xl flex flex-col space-y-2"
-                      dangerouslySetInnerHTML={{ __html: output }} />                    
-                  </div>
-                  )
-                })}
-            </div> */}
-
-
-                {/* <div className="max-w-2xl mx-auto">
-              <div
-                className="prose lg:prose-xl flex flex-col space-y-2"
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
-            </div> */}
-
-
-              </div>
-            </article>
-          </div >
-        </main>
-      </div>
+      <Header><Navigation name={project.title} /></Header>
+      <Wizard questions={questions} tree={tree}></Wizard>
       <Footer></Footer>
-
     </>
   )
 }
@@ -160,6 +93,10 @@ async function getData({ params }: Params) {
 
   const contentHeadings = await Promise.all(headings.map(async (d) => ({
     ...d,
+    options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
+      ...opt,
+      name: await markdownToHtml(opt.name)
+    }))) : d.options,
     contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content) : (await markdownToHtml(d.header) + await markdownToHtml(d.content)),
   })))
 
@@ -172,7 +109,7 @@ async function getData({ params }: Params) {
 
   const headingsTreeNodes = createTree(contentHeadings.map(d => ({ data: d })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
   const leafs = getAllLeafsWithAncestors({ data: {} as QuestionHtml, children: headingsTreeNodes }, (parent, child) => {
-    //copy some children property donw up from leafs to it parent
+    //copy some children property bottom up from leafs to its parent
     if (parent.options?.length === 0 && child.options?.length > 0) {
       parent.options = child.options;
     }
@@ -181,9 +118,9 @@ async function getData({ params }: Params) {
 
   //const contentTree = renderHtmlTree(parsedTree)
 
-  const quiz: AnswerGroup<Question | QuestionGroup> = await loadJsonBySlug(params.slug);
+  const quiz: AnswerGroup<any> = await loadJsonBySlug(params.slug);
 
-  const quizTree = convertTree<QuestionGroup | Question>(quiz);
+  const quizTree = convertTree(quiz);
   const quizQuestions = getAllLeafsWithAncestors(quizTree).map((d, i) => {
 
     const node = leafs[i];
@@ -199,15 +136,20 @@ async function getData({ params }: Params) {
     // if (isInRange) {
     //   console.log(d.leaf.data.id, node.ancestors[1].data.header, node.ancestors[1].data.content)
     // }
-    //console.log(node.leaf.data.content);
+    //console.log(node.leaf.data.header, isInRange, range);
+    const treeLeaf = d.leaf.data as AnswerMetadataTreeNode<any>
+    const headerNode = node.ancestors[1].data;
+
     return {
-      ...d.leaf.data,
+      id: treeLeaf.id,
+      metadata: treeLeaf.node,
       data: {
         content: node.ancestors.slice(range == null ? 1 : 2).map(x => x.data.contentHtml).join(""),
         ...(isInRange && {
           header: {
-            title: node.ancestors[1].data.header.replace("===", ""),
-            content: node.ancestors[1].data.contentHtml,
+            title: headerNode.header.replaceAll(/=+/g, ""),
+            content: headerNode.contentHtml,
+            mutliColumnLayout: countMaxChars(headerNode.header, "=") > 3 ? true : false
           }
         }),
         options: node.leaf.data.options?.length > 0 ? node.leaf.data.options : node.ancestors[node.ancestors.length - 2].data.options
@@ -216,29 +158,20 @@ async function getData({ params }: Params) {
   })
 
 
-  //console.log( headings.map(d => d.type?.name))
-  //console.log(headings.map(d => d.type?.name + ":" + (d.header != "" ? d.header : d.nextHeader) + ":" + (/./.test(d.content))))
 
-  // const contentChunks = await Promise.all(questions.map(async (d) => {
-  //   return await markdownToHtml(d);
-  // }))
 
-  const content = await markdownToHtml(project.content)
-
-  const moreProjects = await db
-    .find({ collection, slug: { $ne: params.slug } }, [
-      'title',
-      'slug',
-      'coverImage'
-    ])
-    .toArray()
+  // const moreProjects = await db
+  //   .find({ collection, slug: { $ne: params.slug } }, [
+  //     'title',
+  //     'slug',
+  //     'coverImage'
+  //   ])
+  //   .toArray()
 
   return {
     project,
-    content,
     questions: quizQuestions,
     tree: quizTree,
-    moreProjects
   }
 }
 

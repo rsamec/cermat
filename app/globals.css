@@ -88,3 +88,42 @@ body.background {
   /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
   /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
 }
+
+/* style the HTML output */
+.math-function {
+  color: darkorange;
+  font-weight: bold;
+}
+
+.math-number {
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.math-boolean {
+  color: darkred;
+}
+
+.math-string {
+  color: darkblue;
+}
+
+.math-string::before,
+.math-string::after {
+  content: "\"";
+}
+
+.math-property {
+  font-style: italic;
+}
+
+.math-explicit-binary-operator::before,
+.math-explicit-binary-operator::after {
+  content: " ";
+}
+
+.math-separator::after,
+.math-assignment-operator::after {
+  content: " ";
+}
+

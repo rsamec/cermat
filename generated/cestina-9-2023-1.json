@@ -55,7 +55,7 @@
         "6.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "E"
+            "args": "A"
           },
           "points": 1,
           "inputBy": {
@@ -65,7 +65,7 @@
         "6.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "C"
+            "args": "E"
           },
           "points": 1,
           "inputBy": {
@@ -75,7 +75,7 @@
         "6.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": "D"
           },
           "points": 1,
           "inputBy": {
@@ -311,22 +311,38 @@
       "children": {
         "16.1": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": "podmět: závan; přísudek: byl osvěžující"
+            "kind": "equal",
+            "args": {
+              "podmet": "závan",
+              "prisudek": "byl osvěžující"
+            }
           },
           "points": 1,
           "inputBy": {
-            "kind": "text"
+            "podmet": {
+              "kind": "text"
+            },
+            "prisudek": {
+              "kind": "text"
+            }
           }
         },
         "16.2": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": "podmět: lidé; přísudek: by mohli žít"
+            "kind": "equal",
+            "args": {
+              "podmet": "lidé",
+              "prisudek": "by mohli žít"
+            }
           },
           "points": 1,
           "inputBy": {
-            "kind": "text"
+            "podmet": {
+              "kind": "text"
+            },
+            "prisudek": {
+              "kind": "text"
+            }
           }
         }
       }
@@ -344,12 +360,28 @@
     "18": {
       "verifyBy": {
         "kind": "equal",
-        "args": "nejvýznamnějším, spjatý, tradičně, knihomoly"
+        "args": [
+          "nejvýznamnějším",
+          "spjatý",
+          "tradičně",
+          "knihomoly"
+        ]
       },
       "points": 1,
-      "inputBy": {
-        "kind": "text"
-      }
+      "inputBy": [
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        }
+      ]
     },
     "19": {
       "children": {
@@ -514,12 +546,24 @@
     "26": {
       "verifyBy": {
         "kind": "equal",
-        "args": "dějinách, úklidu, trhu"
+        "args": [
+          "dějinách",
+          "úklidu",
+          "trhu"
+        ]
       },
       "points": 3,
-      "inputBy": {
-        "kind": "text"
-      }
+      "inputBy": [
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        }
+      ]
     },
     "27": {
       "verifyBy": {
@@ -551,44 +595,48 @@
         "kind": "options"
       }
     },
-    "30.1": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "A"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "30.2": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "D"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "30.3": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "E"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "30.4": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "C"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
+    "30": {
+      "children": {
+        "30.1": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "A"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "30.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "D"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "30.3": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "E"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "30.4": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "C"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        }
       }
     }
   }

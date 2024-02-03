@@ -1,11 +1,11 @@
 {
-  "commit": "ef731c71ffb19d524bd647fd89ee02ca24a84632",
-  "generated": "Sun, 07 Jan 2024 20:14:24 GMT",
+  "commit": "cc5269fe133c9f7e42682314a9b63d6b6ac49e04",
+  "generated": "Sat, 27 Jan 2024 16:28:25 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "90aaaa4741335e06fb0287a31b7923c2f9d9083e",
-        "hash": "400488365",
+        "commit": "64256ce6e535134fab8b85ae4329724cbd48aac5",
+        "hash": "1359251944",
         "path": "outstatic/content/pages/home.md"
       },
       "author": {
@@ -22,8 +22,8 @@
     },
     {
       "__outstatic": {
-        "commit": "c49909acbd6a112422e8eecd552c013cf7772160",
-        "hash": "2599803237",
+        "commit": "89ea390e2847b897900100186494e60defe06024",
+        "hash": "3417491264",
         "path": "outstatic/content/exams/matematika-9-2023-1.md"
       },
       "author": {
@@ -32,58 +32,20 @@
       },
       "collection": "exams",
       "coverImage": "/images/math.png",
-      "description": "",
+      "description": "Provoúhlý lichoběžník, graf s počty žáku hudebního, šachového a robotickéhého kroužku, sekvence bílých a šedých trojúhelníků",
+      "grade": "9 ročník",
       "publishedAt": "2023-12-30T12:21:20.927Z",
       "slug": "matematika-9-2023-1",
       "status": "published",
       "subject": "math",
-      "title": "Matematika 9 2023/1",
+      "timeSlot": 1,
+      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
       "__outstatic": {
-        "commit": "2a9980cc19aa0d81c6dc02116e72a366d65f8dd9",
-        "hash": "4235087475",
-        "path": "outstatic/content/exams/cestina-5-2023-1.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/cz.png",
-      "description": "",
-      "publishedAt": "2024-01-07T12:44:38.288Z",
-      "slug": "cestina-5-2023-1",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština 5 2023/1",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "9103cc9712f1541eb53e9df94baf9773effb9b98",
-        "hash": "2065386020",
-        "path": "outstatic/content/exams/cestina-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/cz.png",
-      "description": "",
-      "publishedAt": "2023-12-30T14:25:50.401Z",
-      "slug": "cestina-9-2023-1",
-      "status": "published",
-      "subject": "czech",
-      "title": "Čeština 9 2023/1",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "11c5be9ee6a43af602e4aadf9c421cb49335fd63",
-        "hash": "564309276",
+        "commit": "dbd7d51e1e8a931f4be6884333cc82e478dca975",
+        "hash": "162161398",
         "path": "outstatic/content/exams/matematika-5-2023-1.md"
       },
       "author": {
@@ -92,12 +54,58 @@
       },
       "collection": "exams",
       "coverImage": "/images/math.png",
-      "description": "",
+      "description": "Vážení koulí a válců na miskách",
+      "grade": "5 ročník",
       "publishedAt": "2024-01-07T09:59:56.794Z",
       "slug": "matematika-5-2023-1",
       "status": "published",
       "subject": "math",
-      "title": "Matematika 5 2023/1",
+      "timeSlot": 1,
+      "title": "Matematika (5 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "e944015086dce6eceff4d527a7cdec4861713271",
+        "hash": "3329769323",
+        "path": "outstatic/content/exams/cestina-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "/images/cz.png",
+      "description": "Úpír Drákula, článek o váškách z national geographic, Martin jako vášnivý hokejový fanoušek",
+      "grade": "5 ročník",
+      "publishedAt": "2024-01-07T12:44:38.288Z",
+      "slug": "cestina-5-2023-1",
+      "status": "published",
+      "subject": "cz",
+      "timeSlot": 1,
+      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "7fbb2ee8999ffe0ee73bbd133477e6fabed14779",
+        "hash": "4169713774",
+        "path": "outstatic/content/exams/cestina-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "exams",
+      "coverImage": "/images/cz.png",
+      "description": "Pozie J. Seiferta, Rozhledna na Petříně, úryvek z knihy Dvě místa na slunci. Setkání spisovatelů na veletrhu Svět knihy.",
+      "grade": "9 ročník",
+      "publishedAt": "2023-12-30T14:25:50.401Z",
+      "slug": "cestina-9-2023-1",
+      "status": "published",
+      "subject": "cz",
+      "timeSlot": 1,
+      "title": "Čeština (9 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]

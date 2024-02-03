@@ -3,23 +3,27 @@ import * as React from "react";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store";
 import { useEffect } from "react";
-import { Question, QuestionGroup } from "@/lib/models/quiz";
+import { Question } from "@/lib/models/quiz";
 import StepRenderer from "./step-render";
 import { TreeNode } from "@/lib/utils/tree.utils";
+import { Answer } from "@/lib/utils/quiz-specification";
+import LeavePageWarning from "../LeavePageWarning";
 
-export default function Wizard(props: { questions: Question[] , tree: TreeNode<QuestionGroup | Question> }) {
+export default function Wizard(props: { questions: Question[], tree: TreeNode<Answer<any>> }) {
   const { dispatch } = store;
 
   useEffect(() => {
     // Dispatch fetchData action when the component mounts    
     dispatch.quiz.init(props)
   }, [props, dispatch.quiz]);
-  
-  
+
+
   return (
     <div>
       <Provider store={store}>
+        <LeavePageWarning>
           <StepRenderer></StepRenderer>
+        </LeavePageWarning>
       </Provider>
     </div>
   )

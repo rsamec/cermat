@@ -32,10 +32,6 @@ function vypisOsoby(item: Osoba) {
   return item.firstName + item.lastName + item.vek + item.adresa.city + item.adresa.street;
 }
 
-console.log(vypisOsoby(osoba))
-console.log(vypisOsoby(osoba2))
-
-
 const group = AnswerBuilder.group;
 
 const form = group({
@@ -45,9 +41,9 @@ const form = group({
   4: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
   5: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
   6: group({
-    6.1: { verifyBy: { kind: 'equalOption', args: 'E' }, points: 1, inputBy: { kind: 'options' } },
-    6.2: { verifyBy: { kind: 'equalOption', args: 'C' }, points: 1, inputBy: { kind: 'options' } },
-    6.3: { verifyBy: { kind: 'equalOption', args: 'A' }, points: 1, inputBy: { kind: 'options' } },
+    6.1: { verifyBy: { kind: 'equalOption', args: 'A' }, points: 1, inputBy: { kind: 'options' } },
+    6.2: { verifyBy: { kind: 'equalOption', args: 'E' }, points: 1, inputBy: { kind: 'options' } },
+    6.3: { verifyBy: { kind: 'equalOption', args: 'D' }, points: 1, inputBy: { kind: 'options' } },
   }),
   7: group({
     7.1: { verifyBy: { kind: 'equal', args: 'řeč' }, points: 1, inputBy: { kind: 'text' } },
@@ -83,11 +79,11 @@ const form = group({
   }),
   15: { verifyBy: { kind: 'equalSortedOptions', args: ['B', 'A', 'F', 'C', 'E', 'D'] }, points: 1, inputBy: { kind: 'sortedOptions' } },
   16: group({
-    16.1: { verifyBy: { kind: 'equalOption', args: 'podmět: závan; přísudek: byl osvěžující' }, points: 1, inputBy: { kind: 'text' } },
-    16.2: { verifyBy: { kind: 'equalOption', args: 'podmět: lidé; přísudek: by mohli žít' }, points: 1, inputBy: { kind: 'text' } },
+    16.1: { verifyBy: { kind: 'equal', args: { podmet: 'závan', prisudek: 'byl osvěžující' } }, points: 1, inputBy: { podmet: { kind: 'text' }, prisudek: { kind: 'text' } } },
+    16.2: { verifyBy: { kind: 'equal', args: { podmet: 'lidé', prisudek: 'by mohli žít' } }, points: 1, inputBy: { podmet: { kind: 'text' }, prisudek: { kind: 'text' } } },
   }),
   17: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-  18: { verifyBy: { kind: "equal", args: "nejvýznamnějším, spjatý, tradičně, knihomoly" }, points: 1, inputBy: { kind: 'text' } },
+  18: { verifyBy: { kind: "equal", args: "nejvýznamnějším,spjatý,tradičně,knihomoly".split(",") }, points: 1, inputBy: [{ kind: 'text' }, { kind: 'text' }, { kind: 'text' }, { kind: 'text' }] },
   19: group({
     19.1: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } },
     19.2: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } },
@@ -119,19 +115,21 @@ const form = group({
       }, {
         min: 4, points: 2
       }]
-    },}),
-    26: { verifyBy: { kind: "equal", args: "dějinách, úklidu, trhu" }, points: 3, inputBy: { kind: 'text' } },
+    },
+  }),
+  26: { verifyBy: { kind: "equal", args: "dějinách,úklidu,trhu".split(",") }, points: 3, inputBy: [{ kind: 'text' }, { kind: 'text' }, { kind: 'text' }] },
 
-    27: { verifyBy: { kind: "equalOption", args: "B" }, points: 1, inputBy: { kind: 'options' } },
-    28: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
-    29: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
-
+  27: { verifyBy: { kind: "equalOption", args: "B" }, points: 1, inputBy: { kind: 'options' } },
+  28: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
+  29: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
+  30: group({
     30.1: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
     30.2: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
     30.3: { verifyBy: { kind: "equalOption", args: "E" }, points: 1, inputBy: { kind: 'options' } },
     30.4: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
+  })
 
-  
+
 
 });
 

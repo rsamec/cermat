@@ -22,10 +22,10 @@
           },
           "points": 2,
           "inputBy": {
-            "kind": "math",
+            "kind": "number",
             "args": {
               "suffix": "litru",
-              "hintType": "fraction"
+              "step": 0.1
             }
           }
         },
@@ -48,11 +48,8 @@
       "children": {
         "3.1": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              4,
-              9
-            ]
+            "kind": "equalMathExpression",
+            "args": "4/9"
           },
           "points": 1,
           "inputBy": {
@@ -64,11 +61,8 @@
         },
         "3.2": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              -2,
-              7
-            ]
+            "kind": "equalMathExpression",
+            "args": "-2/7"
           },
           "points": 1,
           "inputBy": {
@@ -80,11 +74,8 @@
         },
         "3.3": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              5,
-              14
-            ]
+            "kind": "equalMathExpression",
+            "args": "5/14"
           },
           "points": 2,
           "inputBy": {
@@ -100,7 +91,7 @@
       "children": {
         "4.1": {
           "verifyBy": {
-            "kind": "equalMath",
+            "kind": "equalMathExpression",
             "args": "x(2x-1)"
           },
           "points": 1,
@@ -113,8 +104,8 @@
         },
         "4.2": {
           "verifyBy": {
-            "kind": "equalMath",
-            "args": "4/9a2-4a+9"
+            "kind": "equalMathExpression",
+            "args": "4/9a^2-4a+9"
           },
           "points": 1,
           "inputBy": {
@@ -126,8 +117,8 @@
         },
         "4.3": {
           "verifyBy": {
-            "kind": "equalMath",
-            "args": "n2+19n+7"
+            "kind": "equalMathExpression",
+            "args": "n^2+19n+7"
           },
           "points": 2,
           "inputBy": {
@@ -143,11 +134,8 @@
       "children": {
         "5.1": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              4,
-              9
-            ]
+            "kind": "equalMathEquation",
+            "args": false
           },
           "points": 2,
           "inputBy": {
@@ -159,11 +147,8 @@
         },
         "5.2": {
           "verifyBy": {
-            "kind": "equalFraction",
-            "args": [
-              -2,
-              7
-            ]
+            "kind": "equalMathEquation",
+            "args": "y=-10"
           },
           "points": 2,
           "inputBy": {
@@ -186,7 +171,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm^2"
+              "suffix": "cm^2^"
             }
           }
         },
@@ -199,7 +184,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm^2"
+              "suffix": "cm^2^"
             }
           }
         }
@@ -236,14 +221,14 @@
         },
         "7.3": {
           "verifyBy": {
-            "kind": "equalMath",
+            "kind": "equalRatio",
             "args": "3:7"
           },
           "points": 1,
           "inputBy": {
-            "kind": "math",
+            "kind": "text",
             "args": {
-              "hintType": "ratio"
+              "patternType": "ratio"
             }
           }
         }
@@ -253,14 +238,14 @@
       "children": {
         "8.1": {
           "verifyBy": {
-            "kind": "equalMath",
+            "kind": "equalMathExpression",
             "args": "0.75a"
           },
           "points": 1,
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "ratio",
+              "hintType": "expression",
               "hint": "Odpověď zapište s proměnnou a."
             }
           }
@@ -289,7 +274,7 @@
             "kind": "number",
             "args": {
               "prefix": "o",
-              "suffix": "m^2"
+              "suffix": "m^2^"
             }
           }
         }
@@ -314,6 +299,23 @@
             }
           ]
         }
+      },
+      "inputBy": {
+        "kind": "options",
+        "args": [
+          {
+            "value": 0,
+            "name": "0 bodů"
+          },
+          {
+            "value": 1,
+            "name": "1 bod"
+          },
+          {
+            "value": 2,
+            "name": "2 body"
+          }
+        ]
       }
     },
     "10": {
@@ -339,6 +341,27 @@
             }
           ]
         }
+      },
+      "inputBy": {
+        "kind": "options",
+        "args": [
+          {
+            "value": 0,
+            "name": "0 bodů"
+          },
+          {
+            "value": 1,
+            "name": "1 bod"
+          },
+          {
+            "value": 2,
+            "name": "2 body"
+          },
+          {
+            "value": 3,
+            "name": "3 body"
+          }
+        ]
       }
     },
     "11": {
