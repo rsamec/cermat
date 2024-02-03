@@ -70,7 +70,7 @@ function Stepper(props: Props) {
   }, [steps]);
   return (
 
-    <div className="hidden md:flex flex-col items-center py-5">
+    <div className="hidden md:flex flex-col items-center">
       <div className="flex items-center gap-5">
 
         <button className="btn"

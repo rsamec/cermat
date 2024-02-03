@@ -91,17 +91,16 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
   const checkButton = <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: question.id, answer: formControl.value })}>Zkontrolovat</button>
   return (
 
-    <div className="flex flex-col gap-2 px-3" >
-      <div>
-
+    <div className="flex flex-col gap-2" >
+      
         {header != null ?
-          <details className="py-5 [&_svg]:open:-rotate-180" open={isHeaderExpanded} >
+          <details className="[&_svg]:open:-rotate-180" open={isHeaderExpanded} >
             <summary className="text-xl font-bold" onClick={(e) => {
               e.preventDefault();
               toggleExpandableHeader(header.title);
-            }}><div className="inline-flex items-center w-[calc(100%-30px)]">
+            }}><div className="inline-flex items-start gap-2 w-[calc(100%-30px)]">
                 <span className="grow">{header.title}</span>
-                <button className="text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isHeaderExpanded ? 'Skrýt' : 'Zobrazit'}</button>
+                <button className="min-h-6 text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isHeaderExpanded ? 'Skrýt' : 'Zobrazit'}</button>
               </div>
             </summary>
             <section>
@@ -125,7 +124,7 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
           {maxPoints != null && <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} />}
         </div>
 
-      </div>
+        <hr className="h-px mb-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
 
       <div className="flex flex-col gap-1">
@@ -138,7 +137,7 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
               inputBy.kind == "options" ?
                 createOptionAnswer(formControl as unknown as FieldControl, question.data?.options ?? [],
                   status, () => setAnswer({ questionId: question.id, answer: formControl.value })) :
-                <div className="flex items-center flex-wrap gap-2">
+                <div className="flex items-end flex-wrap gap-2">
                   {renderControl(formControl, question.metadata.inputBy!, { options: question.data?.options ?? [] })}
                   {checkButton}
                 </div>
@@ -161,15 +160,15 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
         </div> : null}
 
         {isSelfEvaluate ?
-          <div>
-            <details className="py-5 [&_svg]:open:-rotate-180" open={isQuestionAnswerExpanded} >
+          
+            <details className="[&_svg]:open:-rotate-180" open={isQuestionAnswerExpanded} >
               <summary className="text-xl font-bold" onClick={(e) => {
                 e.preventDefault();
                 toggleExpandableAnswer(question.id);
               }}>
-                <div className="inline-flex items-center w-[calc(100%-30px)]">
+                <div className="inline-flex items-start w-[calc(100%-30px)]">
                   <span className="grow">Zobrazit řešení úlohy</span>
-                  <button className="text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isQuestionAnswerExpanded ? 'Skrýt' : 'Zobrazit'}</button>
+                  <button className="min-h-6 text-end text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">{isQuestionAnswerExpanded ? 'Skrýt' : 'Zobrazit'}</button>
                 </div>
               </summary>
 
@@ -184,10 +183,7 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
                 })}</div>
 
               </section>
-            </details>
-
-
-          </div> : null}
+            </details>: null}
       </div>
 
       <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>

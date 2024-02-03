@@ -34,7 +34,7 @@ export const ToggleButtonGroup = <T extends Object>({
 
         const selected = isSelected(value, option);
         return (<button
-          className={cls(['max-w-screen-sm', 'py-3 px-4 inline-flex items-center gap-x-2 rounded text-sm text-left font-medium focus:z-10 border text-gray-800 shadow-sm dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
+          className={cls(['py-3 px-4 inline-flex items-center gap-x-2 rounded text-sm text-left font-medium focus:z-10 border text-gray-800 shadow-sm dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
             '--:dark:bg-slate-900 --:hover:bg-gray-50 --:dark:hover:bg-gray-800 --:border-gray-200 --:dark:border-gray-700',
             selected && '-:bg-slate-200 -:hover:bg-slate-300 -:dark:bg-slate-600 -:hover:bg-gray-350 -:dark:hover:bg-gray-700 -:border-gray-200 -:dark:border-gray-700',
             selected && type === 'success' && 'bg-green-100 dark:bg-green-800 hover:bg-green-200 border-green-200 dark:border-green-400',

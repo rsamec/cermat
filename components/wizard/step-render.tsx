@@ -37,7 +37,7 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ currentStep, curr
   return <div  {...handlers} className="min-h-screen">
     {currentStep == null ?
       <div>Loading...</div> :
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto flex flex-col gap-4 py-4 px-2">
         <Stepper></Stepper>
         <WizardStep question={currentStep} answerState={currentAnswerState}></WizardStep>
       </div>}

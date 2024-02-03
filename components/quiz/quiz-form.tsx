@@ -31,9 +31,6 @@ type Props = { quizTree: TreeNode<Answer<any>> } //& StateProps & DispatchProps;
 const QuizForm: React.FC<Props> = ({ quizTree }) => {
 
   const groupControlRef = useRef(convertToForm(quizTree))
-  const treeNodeMap = new Map(getAllLeafsWithAncestors(quizTree).map(d => [d.leaf.data.id, d.leaf.data.node as AnswerMetadata<any>]))
-
-
 
   useEffect(() => {
     const subscription = groupControlRef.current.valueChange.subscribe((v) => {

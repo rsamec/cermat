@@ -59,11 +59,12 @@ const QuizInput: React.FC<Props> = ({ quizTree, questions }) => {
       {leafs.map(({ leaf, options }) => {
         const { id, node } = leaf;
         const control = getControl(groupControlRef.current, id as any)
+        
         //console.log(id, control != null, control?.controls != null, control)
         return node.inputBy && (
           <div key={`${id}`}>
             <span>{id}</span>
-            {renderControl(control, node.inputBy, { options })}
+            {(control != null) && renderControl(control, node.inputBy, { options })}
           </div>
         )
       })}
