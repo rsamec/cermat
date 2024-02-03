@@ -150,3 +150,14 @@ export type QuizQuestionCode = `${number}${'.' | ''}${number | ''}${'.' | ''}${n
 export function isComponentFunctionSpec(spec: AnswerInputBy): spec is ComponentFunctionSpec {
   return (spec as any).kind != null
 }
+
+export function volba(spravnaVolba: string) {
+  return {
+    verifyBy:
+      { kind: "equalOption", args: spravnaVolba },
+    points: 1,
+    inputBy: {
+      kind: 'options'
+    }
+  } as const
+}
