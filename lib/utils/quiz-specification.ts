@@ -79,3 +79,15 @@ export function convertTree<T>(tree: AnswerGroup<any>) {
   }
   return traverse("root", tree) as TreeNode<T>;
 }
+
+
+export function volba(spravnaVolba: string) {
+  return {
+    verifyBy:
+      { kind: "equalOption", args: spravnaVolba },
+    points: 1,
+    inputBy: {
+      kind: 'options'
+    }
+  } as const
+}

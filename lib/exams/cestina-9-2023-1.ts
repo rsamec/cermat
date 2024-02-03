@@ -1,5 +1,5 @@
-import { AnswerBuilder } from "../utils/quiz-specification";
-
+import { AnswerBuilder, volba } from "../utils/quiz-specification";
+ 
 let adresa = {
   street: 101,
   city: 'dolni hbity'
@@ -31,17 +31,6 @@ let osoba2 = {
 function vypisOsoby(item: Osoba) {
   return item.firstName + item.lastName + item.vek + item.adresa.city + item.adresa.street;
 }
-function volba(spravnaVolba: string) {
-  return {
-    verifyBy:
-      { kind: "equalOption", args: spravnaVolba },
-    points: 1,
-    inputBy: {
-      kind: 'options'
-    }
-  } as const
-}
-
 
 console.log(vypisOsoby(osoba))
 console.log(vypisOsoby(osoba2))
