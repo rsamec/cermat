@@ -158,18 +158,18 @@ function renderInputField(control: FieldControl, spec: ComponentFunctionSpec) {
 }
 
 function renderList(control: ListControl, spec: ComponentFunctionSpec[]) {
-  return <ol className="ps-5 mt-2 space-y-1 list-decimal list-inside">
+  return <ol className='flex flex-wrap gap-4'>
     <List control={control}>
       {({ childControls, ...rest }) => {
         return (
           <>
             {childControls!.map((control, i) => {
               return (
-                <li key={`key${i}`}>
-
+                <li key={`key${i}`} className='flex gap-2'>
+                  <span>{i + 1}.</span>
                   <Field name={`${i}`}>
                     {({ value, setValue }) =>
-                      <>{renderInputComponentBySpec(spec[i], control as FieldControl)}</>
+                      <span>{renderInputComponentBySpec(spec[i], control as FieldControl)}</span>
                     }
                   </Field>
                 </li>

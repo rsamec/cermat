@@ -178,7 +178,13 @@ export function getControl(control: GroupControl, code: QuizQuestionCode) {
     out.push(currentPart);
     return out;
   }, [] as string[]);
-  return names.reduce((out, d) => out?.get(d), control)
+  try {
+   return names.reduce((out, d) => out?.get(d), control)
+  }
+  catch (e){
+    console.log(names, control)
+  }
+  return null;
 }
 export function getControlChildren(control: GroupControl, code?: QuizQuestionCode) {
   if (code == null) return Object.values(control.controls ?? {});

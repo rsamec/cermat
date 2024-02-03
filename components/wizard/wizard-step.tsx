@@ -7,7 +7,7 @@ import { convertToForm, getControl } from "@/lib/utils/form.utils";
 import { createOptionAnswer, createBoolAnswer, renderControl } from "@/lib/utils/component.utils";
 import { useRef, useState } from "react";
 import Image from 'next/image';
-import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
@@ -54,6 +54,12 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
   const [headerMap, setHeaderMap] = useState(new Map())
 
 
+  const formControl = getControl(groupControlRef.current, question.id as any);
+  const valid = useControlValid(formControl!);
+  if (formControl == null) {
+    return <div>Ooops....</div>
+  }
+
 
 
   const header = question.data?.header;
@@ -69,15 +75,12 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
     setQuestionMap((previous) => updateMap(previous, questionId, { expanded: previous.has(questionId) ? !previous.get(questionId).expanded : true }))
   }
 
-  //const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
-
-  const formControl = getControl(groupControlRef.current, question.id as any);
 
   const inputBy = (question.metadata.inputBy as ComponentFunctionSpec);
 
   const isSelfEvaluate = verifyBy.kind === "selfEvaluate";
 
-  const valid = useControlValid(formControl);
+
 
 
   const stateVariants = {
@@ -85,7 +88,7 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
     incorrect: 'bg-red-100 dark:bg-red-800 hover:bg-red-200 border-red-200 dark:border-red-400',
     unanswered: '-:dark:bg-slate-900 -:hover:bg-gray-50 -:dark:hover:bg-gray-800 border-gray-200 dark:border-gray-700',
   }
-
+  const checkButton = <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: question.id, answer: formControl.value })}>Zkontrolovat</button>
   return (
 
     <div className="flex flex-col gap-2 px-3" >
@@ -135,21 +138,24 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
               inputBy.kind == "options" ?
                 createOptionAnswer(formControl as unknown as FieldControl, question.data?.options ?? [],
                   status, () => setAnswer({ questionId: question.id, answer: formControl.value })) :
-                renderControl(formControl, question.metadata.inputBy!, { options: question.data?.options ?? [] })
+                <div className="flex items-center flex-wrap gap-2">
+                  {renderControl(formControl, question.metadata.inputBy!, { options: question.data?.options ?? [] })}
+                  {checkButton}
+                </div>
           }
           {
 
-            ((inputBy.kind != "bool" && inputBy.kind != "options") || (status === 'incorrect' && inputBy.kind != "bool")) &&
-            <div className={cls(["flex items-center gap-4 flex-wrap p-2 border shadow-sm", stateVariants[status]])} >
-              {(inputBy.kind != "options") && <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: question.id, answer: formControl.value })}>Zkontrolovat</button>}
-              {(status === 'incorrect') && <ToggleSwitchBadge text="Zobrazit řešení úlohy" value={isQuestionAnswerExpanded} onChange={() => toggleExpandableAnswer(question.id)} type="Success" > {
-                inputBy?.kind === 'math' ?
-                  <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(verifyBy.args))) }} /> :
-                  <div>{format(verifyBy?.args)}</div>
-              }
-              </ToggleSwitchBadge>
-              }
-            </div>
+            ((inputBy.kind != "bool" && ((status === 'correct' && inputBy.kind !== 'options') || (status === 'incorrect')))) &&
+              <div className={cls(["flex items-center gap-4 flex-wrap p-2 border shadow-sm", stateVariants[status]])} >
+                {(status === 'correct' && inputBy.kind !== 'options') && <div className="flex items-center gap-2"><FontAwesomeIcon icon={faThumbsUp} size="xl"></FontAwesomeIcon><span>Správně</span></div>}
+                {(status === 'incorrect') && <ToggleSwitchBadge text="Zobrazit správné řešení úlohy" value={isQuestionAnswerExpanded} onChange={() => toggleExpandableAnswer(question.id)} type="Success" > {
+                  inputBy?.kind === 'math' ?
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(verifyBy.args))) }} /> :
+                    <div>{format(verifyBy?.args)}</div>
+                }
+                </ToggleSwitchBadge>
+                }
+              </div>
 
           }
         </div> : null}

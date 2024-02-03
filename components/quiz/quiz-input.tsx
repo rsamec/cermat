@@ -1,6 +1,6 @@
 'use client'
 import * as React from "react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Answer, AnswerMetadataTreeNode } from "@/lib/utils/quiz-specification";
 import { TreeNode, getAllLeafsWithAncestors } from "@/lib/utils/tree.utils";
 import { convertToForm, getControl } from "@/lib/utils/form.utils";
