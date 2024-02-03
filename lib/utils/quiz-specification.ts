@@ -13,10 +13,12 @@ export class AnswerBuilder {
     return { verifyBy };
   }
 }
+export type AnswerInputBy = ComponentFunctionSpec | ComponentFunctionSpec[] | { [index: string]: ComponentFunctionSpec }
 export interface AnswerMetadata<T> {
   verifyBy: ValidationFunctionSpec<T>
-  points?: number  
-  inputBy?: ComponentFunctionSpec  
+  points?: number
+  inputBy?: AnswerInputBy
+
 }
 
 export interface AnswerGroupMetadata<T> {
@@ -108,7 +110,7 @@ export function calculatePoints<T>(tree: TreeNode<AnswerTreeNode<T>>,
       for (const childNode of node.children) {
         total += traverse(childNode, leafs);
       }
-      //points for leafs      
+      //points for leafs
       total += leafs.length > 0 ? calculate(group.node.metadata?.computeBy!, leafs) : 0;
     }
     return total
@@ -143,3 +145,8 @@ export function calculateMaxTotalPoints<T>(tree: TreeNode<AnswerTreeNode<T>>) {
   return totalPoints;
 
 };
+
+export type QuizQuestionCode = `${number}${'.' | ''}${number | ''}${'.' | ''}${number | ''}`;
+export function isComponentFunctionSpec(spec: AnswerInputBy): spec is ComponentFunctionSpec {
+  return (spec as any).kind != null
+}

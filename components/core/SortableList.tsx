@@ -1,12 +1,12 @@
-import React, { useState, DragEvent, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Option, cls } from '../../lib/utils/utils';
 import withControl, { ValueProps } from './WithFormControl';
 import type { UniqueIdentifier } from '@dnd-kit/core';
-import { DndContext, closestCenter, MouseSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core';
+import { DndContext, MouseSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
 import { CSS as cssDndKit } from '@dnd-kit/utilities';
 
-type SortableListProps = ValueProps<Option<string>[]>
+type SortableListProps = { options: Option<string>[] } & ValueProps<Option<string>[]>
 
 
 function SortableItem({ option, activeId }: { option: Option<string>, activeId: UniqueIdentifier | null }) {
@@ -28,7 +28,7 @@ function SortableItem({ option, activeId }: { option: Option<string>, activeId: 
 
       <div className="inline-flex self-start items-center gap-x-2">
         <span className='inline-flex self-start py-0.5 px-3 rounded-full font-medium text-white bg-gray-500'>{id}</span>
-        <span dangerouslySetInnerHTML={{__html:name}}></span>
+        <span dangerouslySetInnerHTML={{ __html: name }}></span>
       </div>
 
     </div>
@@ -87,16 +87,16 @@ const SortableList = ({ items, onSortEnd }: { items: Option<string>[], onSortEnd
   );
 }
 
-export const DndKitList: React.FunctionComponent<SortableListProps> = ({ value, onChange }) => {
+export const DndKitList: React.FunctionComponent<SortableListProps> = ({ value, onChange, options }) => {
 
   const onSortEnd = useCallback(
     ({ oldIndex, newIndex }: { oldIndex: number, newIndex: number }) => {
-      onChange?.(arrayMove(value ?? [], oldIndex, newIndex));
+      onChange?.(arrayMove(value ?? options ?? [], oldIndex, newIndex));
     },
-    [value, onChange]
+    [value, onChange, options]
   );
 
-  return (<SortableList items={value ?? []} onSortEnd={onSortEnd} />);
+  return (<SortableList items={value ?? options ?? []} onSortEnd={onSortEnd} />);
 }
 
 

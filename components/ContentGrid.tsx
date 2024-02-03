@@ -31,11 +31,13 @@ const ContentGrid = ({
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 lg:gap-x-8 gap-y-5 sm:gap-y-6 lg:gap-y-8 mb-8">
         {items.map((item, id) => (
-          <Link key={item.slug} href={`/${collection}/${item.slug}`}>
-            <div className="cursor-pointer border project-card rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu transition duration-100 motion-reduce:hover:scale-100 hover:shadow overflow-hidden">
 
-              {(
-                <div className="p-4 flex flex-col gap-2">
+          <div key={item.slug} className="p-4 cursor-pointer border project-card rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu transition duration-100 motion-reduce:hover:scale-100 hover:shadow overflow-hidden">
+
+            {(
+              <div className='h-full flex flex-col gap-2'>
+                <Link className="grow flex flex-col gap-2" href={`/${collection}/${item.slug}`}>
+
                   <div>
                     {Array.isArray(item?.tags)
                       ? item.tags.map(({ label }) => (
@@ -57,19 +59,22 @@ const ContentGrid = ({
 
                     </h3>
                   </div>
-                  
+
                   <p className="text-sm leading-relaxed mb-4">
                     {item.description}
                   </p>
-                  <div className='self-end flex gap-4'> 
-                    <FontAwesomeIcon icon={faDownload} size='lg' ></FontAwesomeIcon>
-                    <FontAwesomeIcon icon={faFileExport} size='lg' ></FontAwesomeIcon>
+
+                </Link>
+                <div className='self-end flex gap-4'>
+                  <FontAwesomeIcon icon={faDownload} size='lg' ></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faFileExport} size='lg' ></FontAwesomeIcon>
+                  <Link href={`/paper/${item.slug}`}>
                     <FontAwesomeIcon icon={faPrint} size='lg' ></FontAwesomeIcon>
-                  </div>
+                  </Link>
                 </div>
-              )}
-            </div>
-          </Link>
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </section>

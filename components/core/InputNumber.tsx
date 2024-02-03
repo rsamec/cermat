@@ -21,7 +21,6 @@ const InputNumber: React.FC<InputNumberProps> = ({ value, onChange, min, max, st
       onChange?.();
     }
   };
-
   return (
     <input
       className={className}

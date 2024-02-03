@@ -23,8 +23,8 @@ const form = group({
     4.3: { verifyBy: { kind: 'equalMathExpression', args: 'n^2+19n+7' }, points: 2, inputBy: { kind: 'math', args: { hintType: 'expression' } } }
   }),
   5: group({
-    5.1: { verifyBy: { kind: 'equalMathEquation', args: -10 }, points: 2, inputBy: { kind: 'math', args: { hintType: 'equation' } } },
-    5.2: { verifyBy: { kind: 'equalMathEquation', args: false }, points: 2, inputBy: { kind: 'math', args: { hintType: 'equation' } } },
+    5.1: { verifyBy: { kind: 'equalMathEquation', args: false }, points: 2, inputBy: { kind: 'math', args: { hintType: 'equation' } } },
+    5.2: { verifyBy: { kind: 'equalMathEquation', args: 'y=-10' }, points: 2, inputBy: { kind: 'math', args: { hintType: 'equation' } } },
   }),
   6: group({
     6.1: { verifyBy: { kind: 'equal', args: 24 }, points: 1, inputBy: { kind: 'number', args: { suffix: 'cm^2^' } } },
@@ -33,17 +33,20 @@ const form = group({
   7: group({
     7.1: { verifyBy: { kind: 'equal', args: 25 }, points: 1, inputBy: { kind: 'number', args: { prefix: 'o', suffix: '%' } } },
     7.2: { verifyBy: { kind: 'equal', args: 21 }, points: 1, inputBy: { kind: 'number', args: { suffix: 'žáků' } } },
-    7.3: { verifyBy: { kind: 'equal', args: [3, 7] }, points: 1, inputBy: { kind: 'text', args: {} } }
+    7.3: { verifyBy: { kind: 'equalRatio', args: "3:7" }, points: 1, inputBy: { kind: 'text', args: { patternType: 'ratio' } } }
   }),
   8: group({
-    8.1: { verifyBy: { kind: 'equalMathExpression', args: "0.75a" }, points: 1, inputBy: { kind: 'math', args: { hintType: 'ratio', hint: 'Odpověď zapište s proměnnou a.' } } },
+    8.1: { verifyBy: { kind: 'equalMathExpression', args: "0.75a" }, points: 1, inputBy: { kind: 'math', args: { hintType: 'expression', hint: 'Odpověď zapište s proměnnou a.' } } },
     8.2: { verifyBy: { kind: 'equal', args: 40 }, points: 2, inputBy: { kind: 'number', args: { prefix: 'a = ', suffix: 'm' } } },
     8.3: { verifyBy: { kind: 'equal', args: 100 }, points: 1, inputBy: { kind: 'number', args: { prefix: 'o', suffix: 'm^2^' } } }
   }),
   9: {
-    verifyBy: { kind: 'selfEvaluate', args: { options: pointOptions } }
+    verifyBy: { kind: 'selfEvaluate', args: { options: pointOptions } }, inputBy: { kind: 'options', args: pointOptions }
   },
-  10: { verifyBy: { kind: "selfEvaluate", args: { options: pointOptions.concat({ value: 3, name: '3 body' }) } } },
+  10: {
+    verifyBy: { kind: "selfEvaluate", args: { options: pointOptions.concat({ value: 3, name: '3 body' }) } },
+    inputBy: { kind: 'options', args: pointOptions.concat({ value: 3, name: '3 body' }) }
+  },
   11: group({
     11.1: { verifyBy: { kind: 'equalOption', args: false }, inputBy: { kind: 'bool' } },
     11.2: { verifyBy: { kind: 'equalOption', args: true }, inputBy: { kind: 'bool' } },

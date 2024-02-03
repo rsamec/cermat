@@ -2,23 +2,22 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { Dispatch, RootState, store } from "../../lib/store";
-import { AnswerState, AnswerStatus, Question } from "@/lib/models/quiz";
-import InputNumber from "../core/InputNumber";
-import { FormControl } from "@/lib/utils/form.utils";
-import TextInput from "../core/TextInput";
-import { createBoolAnswer, createOptionAnswer } from "@/lib/utils/component.utils";
-import { useState } from "react";
+import { AnswerState, Question } from "@/lib/models/quiz";
+import { convertToForm, getControl } from "@/lib/utils/form.utils";
+import { createOptionAnswer, createBoolAnswer, renderControl } from "@/lib/utils/component.utils";
+import { useRef, useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { cls, format, strToSimpleHtml, updateMap } from "@/lib/utils/utils";
+import { cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import Badge from "../core/Badge";
-import SortableList from "../core/SortableList";
-import MathInput from "../core/MathInput";
-import { toHtml } from "@/lib/utils/math.utils";
-import DOMPurify from "dompurify";
+import { FieldControl } from "@rx-form/core";
+import { useControlValid } from "@rx-form/react";
+import { ComponentFunctionSpec } from "@/lib/utils/catalog-function";
 import ToggleSwitchBadge from "../core/ToggleSwitchBadge";
+import DOMPurify from "dompurify";
+import { toHtml } from "@/lib/utils/math.utils";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.setAnswer(args),
@@ -45,100 +44,17 @@ type Props = { question: Question, answerState: AnswerState } & StateProps & Dis
 
 
 
-function inputGroup({ input, confirmButton, inputBy }: { input: React.ReactNode, confirmButton: React.ReactNode, inputBy: { kind: 'number' | 'text' | 'math', args?: { prefix?: string, suffix?: string } } }) {
-  const { prefix, suffix } = inputBy.args ?? {};
-  return <div className="flex flex-wrap gap-2">
-    <div className={`${cls(["max-w-lg relative grow flex", inputBy.kind === "math" ? "items-start" : "items-stretch"])}`}>
-      {prefix != null ? <span
-        className="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-        dangerouslySetInnerHTML={{ __html: strToSimpleHtml(prefix) }}></span> : null}
-      {input}
 
-      {suffix != null ? <span
-        className="flex items-center whitespace-nowrap rounded-r border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-        dangerouslySetInnerHTML={{ __html: strToSimpleHtml(suffix) }} ></span> : null}
-    </div>
-
-    <div>
-      {confirmButton}
-    </div>
-  </div>
-}
-
-function statusInput(status: AnswerStatus) {
-  return status == "correct" ?
-    "bg-green-50 border border-green-500 text-green-900 text-sm focus:ring-green-500 focus:border-green-500 dark:border-green-500"
-    : status === "incorrect" ?
-      "bg-red-50 border border-red-500 text-red-900 text-sm focus:ring-red-500 focus:border-red-500 dark:border-red-500" :
-      'text-gray-900 border border-gray-300 bg-gray-50';
-}
-
-
-function renderInput(question: Question, control: FormControl<any>, status: AnswerStatus, setAnswer: any) {
-
-  const inputBy = question.metadata.inputBy;
-  const confirmButton = <button className={cls(["btn btn-blue"])} onClick={() => setAnswer({ questionId: question.id, answer: control.value })}>Zkontrolovat</button>
-  if (inputBy == null) return null;
-
-  if (inputBy.kind === "number") {
-
-    return inputGroup(
-      {
-        input: <InputNumber control={control} step={inputBy.args?.step} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])} ></InputNumber>,
-        confirmButton,
-        inputBy
-      })
-  }
-  else if (inputBy.kind === "text") {
-    return inputGroup({
-      input: <TextInput control={control} className={cls(["relative m-0 block w-[1px] min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></TextInput>,
-      confirmButton,
-      inputBy
-    })
-  }
-  else if (inputBy.kind === "math") {
-
-    const hintClass = 'italic text-sm'
-    return inputGroup({
-      input: <div className="flex flex-col">
-        <MathInput control={control} className={cls(["relative m-0 block  min-w-0 flex-auto p-2 dark:bg-gray-700 dark:text-white", statusInput(status)])}></MathInput>
-        {inputBy.args?.hintType != null && <span className={hintClass}>
-          Násobení např.2x, x(x+1). Dělení a zlomek x/2, 1/(3+2). Mocninu x<sup>2</sup> zapište jako x^2.
-        </span>}
-      </div>,
-      confirmButton,
-      inputBy
-    })
-  }
-  else if (inputBy.kind === "bool") {
-    return createBoolAnswer(control, status, (value) => setAnswer({ questionId: question.id, answer: value }))
-  }
-  else if (inputBy.kind === "options") {
-    return createOptionAnswer(control,
-      question.data?.options ?? [],
-      status,
-      (value) => setAnswer({ questionId: question.id, answer: value }));
-  }
-  else if (inputBy.kind == "sortedOptions") {
-    return <div className="flex flex-col gap-4">
-      <SortableList control={control}></SortableList>
-      {confirmButton}
-    </div>
-  }
-  return null
-}
-
-
-const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints, questions }) => {
+const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints, questions }) => {
 
   const { status, value } = answerState;
 
-
+  const groupControlRef = useRef(convertToForm(tree!));
   const [questionMap, setQuestionMap] = useState(new Map())
   const [headerMap, setHeaderMap] = useState(new Map())
 
 
-  const hasInput = question.metadata.inputBy != null;
+
 
   const header = question.data?.header;
   const verifyBy = question.metadata.verifyBy;
@@ -153,10 +69,22 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
     setQuestionMap((previous) => updateMap(previous, questionId, { expanded: previous.has(questionId) ? !previous.get(questionId).expanded : true }))
   }
 
-  const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
+  //const formControl = new FormControl(question.metadata.inputBy?.kind === "sortedOptions" ? (value ?? question.data?.options) : value);
+
+  const formControl = getControl(groupControlRef.current, question.id as any);
+
+  const inputBy = (question.metadata.inputBy as ComponentFunctionSpec);
+
+  const isSelfEvaluate = verifyBy.kind === "selfEvaluate";
+
+  const valid = useControlValid(formControl);
 
 
-
+  const stateVariants = {
+    correct: 'bg-green-100 dark:bg-green-800 hover:bg-green-200 border-green-200 dark:border-green-400',
+    incorrect: 'bg-red-100 dark:bg-red-800 hover:bg-red-200 border-red-200 dark:border-red-400',
+    unanswered: '-:dark:bg-slate-900 -:hover:bg-gray-50 -:dark:hover:bg-gray-800 border-gray-200 dark:border-gray-700',
+  }
 
   return (
 
@@ -190,7 +118,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
           dangerouslySetInnerHTML={{ __html: question.data?.content ?? '' }}
         />
         <div className="flex justify-end gap-2">
-          {!hasInput && <IconBadge icon={faInfoCircle} text={`Vlastní vyhodnocení úlohy.`}  />}
+          {isSelfEvaluate && <IconBadge icon={faInfoCircle} text={`Vlastní vyhodnocení úlohy.`} />}
           {maxPoints != null && <IconBadge icon={faInfoCircle} text={`Max. bodů ${maxPoints}`} />}
         </div>
 
@@ -199,19 +127,34 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
 
       <div className="flex flex-col gap-1">
 
-        {hasInput ? <div className="flex flex-col gap-4">
-          {renderInput(question, formControl as any, status, setAnswer)}
+        {!isSelfEvaluate ? <div className="flex flex-col gap-4">
           {
-            status == "incorrect" ? <ToggleSwitchBadge text="Zobrazit řešení úlohy" value={isQuestionAnswerExpanded} onChange={() => toggleExpandableAnswer(question.id)} type="Success" > {
-              question.metadata.inputBy?.kind === 'math' ?
-                <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(question.metadata.verifyBy.args))) }} /> :
-                <div>{format(question.metadata.verifyBy?.args)}</div>
-            }
-            </ToggleSwitchBadge> : null
+            inputBy.kind == "bool" ?
+              createBoolAnswer(formControl as unknown as FieldControl, status,
+                () => setAnswer({ questionId: question.id, answer: formControl.value })) :
+              inputBy.kind == "options" ?
+                createOptionAnswer(formControl as unknown as FieldControl, question.data?.options ?? [],
+                  status, () => setAnswer({ questionId: question.id, answer: formControl.value })) :
+                renderControl(formControl, question.metadata.inputBy!, { options: question.data?.options ?? [] })
+          }
+          {
+
+            ((inputBy.kind != "bool" && inputBy.kind != "options") || (status === 'incorrect' && inputBy.kind != "bool")) &&
+            <div className={cls(["flex items-center gap-4 flex-wrap p-2 border shadow-sm", stateVariants[status]])} >
+              {(inputBy.kind != "options") && <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: question.id, answer: formControl.value })}>Zkontrolovat</button>}
+              {(status === 'incorrect') && <ToggleSwitchBadge text="Zobrazit řešení úlohy" value={isQuestionAnswerExpanded} onChange={() => toggleExpandableAnswer(question.id)} type="Success" > {
+                inputBy?.kind === 'math' ?
+                  <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(verifyBy.args))) }} /> :
+                  <div>{format(verifyBy?.args)}</div>
+              }
+              </ToggleSwitchBadge>
+              }
+            </div>
+
           }
         </div> : null}
 
-        {!hasInput ?
+        {isSelfEvaluate ?
           <div>
             <details className="py-5 [&_svg]:open:-rotate-180" open={isQuestionAnswerExpanded} >
               <summary className="text-xl font-bold" onClick={(e) => {
@@ -229,7 +172,7 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
                   <Image src={"/math/2013/9/9-result.jpeg"} alt='Check result' fill className="object-cover object-center" />
                 </div>
 
-                <div>{createOptionAnswer(formControl, question.metadata.verifyBy.args.options, status, (value) => {
+                <div>{createOptionAnswer(formControl as unknown as FieldControl, verifyBy.args.options, status, (value) => {
                   if (value === undefined) return;
                   setAnswer({ questionId: question.id, answer: value });
                 })}</div>
@@ -253,9 +196,9 @@ const WizardStep: React.FC<Props> = ({ question, answerState, setAnswer, next, b
         <div className="flex self-end gap-3">
 
           <button className="btn btn-blue"
-            onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
+            onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} size="2xl" /></button>
           <button className="btn btn-blue"
-            onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} /></button>
+            onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} size="2xl" /></button>
 
         </div>
 
