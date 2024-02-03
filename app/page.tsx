@@ -16,7 +16,7 @@ export default async function Index() {
       <div className="max-w-6xl mx-auto px-5">
         <section className="mt-16 mb-16 md:mb-12">
           <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight">
-            Cermat testy
+            Mimooficiální cermat testy
           </h2>
           <div
             className="prose lg:prose-2xl home-intro"

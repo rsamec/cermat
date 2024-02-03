@@ -11,9 +11,9 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 lg:gap-x-8 gap-y-5 sm:gap-y-6 lg:gap-y-8 mb-8">
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-l"> KONTAKTNÍ ÚDAJE</h3>
-              {/* <div>
-                <p>E-mail: <strong>TODO</strong></p>
-              </div> */}
+              <div>
+                <p>E-mail: <a href="mailto:roman.samec2@gmail.com"><strong>roman.samec2@gmail.com</strong></a></p>
+              </div>
             </div>
 
             <div className="flex flex-col gap-1">
@@ -40,7 +40,7 @@ const Footer = () => {
       <footer className="bg-slate-900 text-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-5 p-2">
           <div className="flex">            
-            <p className="grow text-sm flex-1 text-slate-400">© 2018 - 2024 paperify.io</p>
+            <p className="grow text-sm flex-1 text-slate-400">© 2024</p>
             <a href="https://github.com/rsamec/cermat"><FontAwesomeIcon icon={faGithub} size="lg"></FontAwesomeIcon></a>
           </div>
         </div>
