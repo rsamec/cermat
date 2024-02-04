@@ -1,6 +1,6 @@
 {
-  "commit": "d6d680b34ed7659dca988caabefcf0071810b71d",
-  "generated": "2024-02-04T16:52:22.489Z",
+  "commit": "5fa34eb1da7df9fae42f0c479b638ad1b776bf9a",
+  "generated": "2024-02-04T16:53:22.727Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,28 +19,6 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
-    },
-    {
-      "__outstatic": {
-        "commit": "89ea390e2847b897900100186494e60defe06024",
-        "hash": "3417491264",
-        "path": "outstatic/content/exams/matematika-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "exams",
-      "coverImage": "/images/math.png",
-      "description": "Provoúhlý lichoběžník, graf s počty žáku hudebního, šachového a robotickéhého kroužku, sekvence bílých a šedých trojúhelníků",
-      "grade": "9 ročník",
-      "publishedAt": "2023-12-30T12:21:20.927Z",
-      "slug": "matematika-9-2023-1",
-      "status": "published",
-      "subject": "math",
-      "timeSlot": 1,
-      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
-      "year": "2023"
     },
     {
       "__outstatic": {
@@ -109,6 +87,29 @@
       "subject": "math",
       "timeSlot": "1",
       "title": "Matematika (5 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "5fa34eb1da7df9fae42f0c479b638ad1b776bf9a",
+        "hash": "2340452090",
+        "path": "outstatic/content/exams/matematika-9-2023-1.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M9A_2023",
+      "collection": "exams",
+      "coverImage": "/images/math.png",
+      "description": "Provoúhlý lichoběžník, graf s počty žáku hudebního, šachového a robotickéhého kroužku, sekvence bílých a šedých trojúhelníků",
+      "grade": "4",
+      "publishedAt": "2023-12-30T12:21:20.927Z",
+      "slug": "matematika-9-2023-1",
+      "status": "published",
+      "subject": "math",
+      "timeSlot": "1",
+      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
