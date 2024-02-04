@@ -2,9 +2,9 @@ import { expect, test } from 'vitest'
 import { GroupControl, FieldControl, requiredValidator, patternValidator } from '@rx-form/core'
 
 import { Maybe } from './utils';
-import { AnswerBuilder, convertTree } from './quiz-specification';
+import { convertTree } from './quiz-specification';
 import { convertToForm, getControlChildren, patternCatalog } from './form.utils';
-import { TextComponentFunctionSpec } from './catalog-function';
+import { group } from './quiz-builder';
 
 test('validate form', () => {
   const form = new GroupControl({
@@ -39,9 +39,9 @@ test('convert answer tree to form tree', () => {
 
   const inputBy = { kind: 'number' as const };
 
-  const quizSpec = AnswerBuilder.group({
+  const quizSpec = group({
     1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy },
-    2: AnswerBuilder.group({
+    2: group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, inputBy },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, inputBy },
     }),
@@ -61,9 +61,9 @@ test('convert answer tree to form tree', () => {
 test('convert answer tree to form tree inputs as arrays', () => {
   const inputBy = [{ kind: 'number' as const }, { kind: 'number' as const }, { kind: 'number' as const }]
 
-  const quizSpec = AnswerBuilder.group({
+  const quizSpec = group({
     1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy },
-    2: AnswerBuilder.group({
+    2: group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, inputBy },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, inputBy },
     }),
@@ -88,9 +88,9 @@ test('convert answer tree to form tree inputs as object', () => {
     c: { kind: 'number' as const },
   }
 
-  const quizSpec = AnswerBuilder.group({
+  const quizSpec = group({
     1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy },
-    2: AnswerBuilder.group({
+    2: group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, inputBy },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, inputBy },
     }),

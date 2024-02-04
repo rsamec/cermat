@@ -1,16 +1,17 @@
 import { test, expect } from "vitest";
-import { AnswerBuilder, AnswerGroup, calculateMaxTotalPoints, convertTree } from "./quiz-specification";
+import { calculateMaxTotalPoints, convertTree } from "./quiz-specification";
 import { getAllLeafsWithAncestors } from "./tree.utils";
+import { group } from "./quiz-builder";
 
 test('get all leafs with ancestors', () => {
 
-  const form = AnswerBuilder.group({
+  const form = group({
     1: { verifyBy: { kind: "equal", args: 20 }, points: 1 },
-    2: AnswerBuilder.group({
+    2: group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, },
     }),
-    3: AnswerBuilder.group({
+    3: group({
       3.1: { verifyBy: { kind: 'equal', args: [4, 9] }, points: 1 },
       3.2: { verifyBy: { kind: 'equal', args: [-2, 7] }, points: 1 },
       3.3: {
@@ -18,7 +19,7 @@ test('get all leafs with ancestors', () => {
         points: 2,
       }
     }),
-    11: AnswerBuilder.group({
+    11: group({
       11.1: { verifyBy: { kind: 'equalOption', args: false } },
       11.2: { verifyBy: { kind: 'equalOption', args: true } },
       11.3: { verifyBy: { kind: 'equalOption', args: false } },
@@ -39,13 +40,13 @@ test('get all leafs with ancestors', () => {
 
 test('convert answer tree', () => {
 
-  const form = AnswerBuilder.group({
+  const form = group({
     1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy: { kind: 'number' } },
-    2: AnswerBuilder.group({
+    2: group({
       2.1: { verifyBy: { kind: "equal", args: 20 }, points: 2, },
       2.2: { verifyBy: { kind: "equal", args: 1_600_000 }, points: 1, },
     }),
-    3: AnswerBuilder.group({
+    3: group({
       3.1: { verifyBy: { kind: 'equal', args: [4, 9] }, points: 1 },
       3.2: { verifyBy: { kind: 'equal', args: [-2, 7] }, points: 1 },
       3.3: {
@@ -53,7 +54,7 @@ test('convert answer tree', () => {
         points: 2,
       }
     }),
-    11: AnswerBuilder.group({
+    11: group({
       11.1: { verifyBy: { kind: 'equalOption', args: false }, inputBy: { kind: 'bool' } },
       11.2: { verifyBy: { kind: 'equalOption', args: true } },
       11.3: { verifyBy: { kind: 'equalOption', args: false } },
@@ -81,18 +82,18 @@ test('convert answer tree', () => {
 
 test('compute max points', () => {
   const verifyBy = { kind: 'equal', args: 20 } as const;
-  const form = AnswerBuilder.group({
+  const form = group({
     1: { verifyBy, points: 1 },
-    2: AnswerBuilder.group({
+    2: group({
       2.1: { verifyBy, points: 2, },
       2.2: { verifyBy, points: 1, },
     }),
-    3: AnswerBuilder.group({
+    3: group({
       3.1: { verifyBy, points: 1 },
       3.2: { verifyBy, points: 1 },
       3.3: { verifyBy, points: 2, }
     }),
-    11: AnswerBuilder.group({
+    11: group({
       11.1: { verifyBy },
       11.2: { verifyBy },
       11.3: { verifyBy },

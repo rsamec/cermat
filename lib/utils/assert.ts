@@ -27,8 +27,17 @@ export type EqualListValidator<T> = ValidationFunctionArgs<T[]> & {
   kind: "equalList"
 }
 
+export type SelfEvaluateText = {
+  kind: 'text',
+  content: string
+}
 
-export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<number>[] }> & {
+export type SelfEvaluateImage = {
+  kind: 'image'
+  src: string
+}
+
+export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<number>[], hint: SelfEvaluateText | SelfEvaluateText }> & {
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator

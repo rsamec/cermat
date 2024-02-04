@@ -5,14 +5,6 @@ import { TreeNode } from "./tree.utils"
 
 export type MixedChildren<T> = { [K in keyof T]: T[K] extends AnswerGroup<any> ? T[K] : AnswerMetadata<any> };
 
-export class AnswerBuilder {
-  static group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetadata<T>) {
-    return new AnswerGroupImpl<T>(children, metadata);
-  }
-  static answer<T>(verifyBy: ValidationFunctionSpec<T>) {
-    return { verifyBy };
-  }
-}
 export type AnswerInputBy = ComponentFunctionSpec | ComponentFunctionSpec[] | { [index: string]: ComponentFunctionSpec }
 export interface AnswerMetadata<T> {
   verifyBy: ValidationFunctionSpec<T>
@@ -109,9 +101,9 @@ export function calculatePoints<T>(tree: TreeNode<AnswerTreeNode<T>>,
       // Recursively calculate total points for each child node						
       for (const childNode of node.children) {
         total += traverse(childNode, leafs);
-      }
-      //points for leafs
-      total += leafs.length > 0 ? calculate(group.node.metadata?.computeBy!, leafs) : 0;
+      }      
+      //points for leafs    
+      total += leafs.length > 0 ? calculate(group.node.metadata?.computeBy!, leafs) : 0;      
     }
     return total
   }
@@ -135,9 +127,11 @@ export function calculateMaxTotalPoints<T>(tree: TreeNode<AnswerTreeNode<T>>) {
   }, 0)
 
   const calculate = (computeBy: ComputeFunctionSpec, leafs: AnswerMetadataTreeNode<any>[]) => {
-    return computeBy != null && computeBy.kind == "group" ?
+    
+    const res = computeBy != null && computeBy.kind == "group" ?
       computeBy.args.reduce((out, d) => out = out > d.points ? out : d.points, 0)
       : calculateSum(leafs);
+    return res;
   }
 
   totalPoints = calculatePoints(tree, calculate)
@@ -149,15 +143,4 @@ export function calculateMaxTotalPoints<T>(tree: TreeNode<AnswerTreeNode<T>>) {
 export type QuizQuestionCode = `${number}${'.' | ''}${number | ''}${'.' | ''}${number | ''}`;
 export function isComponentFunctionSpec(spec: AnswerInputBy): spec is ComponentFunctionSpec {
   return (spec as any).kind != null
-}
-
-export function volba(spravnaVolba: string) {
-  return {
-    verifyBy:
-      { kind: "equalOption", args: spravnaVolba },
-    points: 1,
-    inputBy: {
-      kind: 'options'
-    }
-  } as const
 }

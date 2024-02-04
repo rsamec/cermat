@@ -137,22 +137,38 @@
       "children": {
         "7.1": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": "podmět: kousky; přísudek: se objeví"
+            "kind": "equal",
+            "args": {
+              "podmět": "kousky",
+              "přísudek": "se objeví"
+            }
           },
           "points": 1,
           "inputBy": {
-            "kind": "text"
+            "podmět": {
+              "kind": "text"
+            },
+            "přísudek": {
+              "kind": "text"
+            }
           }
         },
         "7.2": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": "podmět: deště (a) záplavy; přísudek: zničily"
+            "kind": "equal",
+            "args": {
+              "podmět": "deště (a) záplavy",
+              "přísudek": "zničily"
+            }
           },
           "points": 1,
           "inputBy": {
-            "kind": "text"
+            "podmět": {
+              "kind": "text"
+            },
+            "přísudek": {
+              "kind": "text"
+            }
           }
         }
       }
@@ -198,6 +214,21 @@
           "inputBy": {
             "kind": "bool"
           }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 2,
+              "min": 4
+            },
+            {
+              "points": 1,
+              "min": 3
+            }
+          ]
         }
       }
     },
@@ -263,126 +294,148 @@
             {
               "value": 1,
               "name": "1 bod"
-            },
-            {
-              "value": 2,
-              "name": "2 body"
             }
-          ]
+          ],
+          "hint": {
+            "kind": "text",
+            "content": "Věta musí obsahovat bezchybně zapsané slovo stát a musí splňovat tyto\n  podmínky: a) výraz stát je jiným SD než ve VT; b) věta obsahuje přísudek;\n  c) věta je gramaticky správná; d) věta je\n  smysluplná; e) věta je pravopisně správná; f) věta obsahuje 4 slova.\n  Věta, která splňovala podmínky a)–c), ale obsahovala 1 chybu\n  (např. pravopisnou), byla hodnocena 1 bodem.\n  V ostatních případech bylo přiděleno 0 bodů."
+          }
         }
       },
-      "points": 1,
       "inputBy": {
-        "kind": "text"
+        "kind": "options",
+        "args": [
+          {
+            "value": 0,
+            "name": "0 bodů"
+          },
+          {
+            "value": 1,
+            "name": "1 bod"
+          }
+        ]
       }
     },
     "15": {
-      "children": {
-        "Prvníčást": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": "C"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "options"
-          }
-        },
-        "Druháčást": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": "E"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "options"
-          }
-        },
-        "Třetíčást": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": "B"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "options"
-          }
-        },
-        "Čtvrtáčást": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": "D"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "options"
-          }
-        },
-        "Pátáčást": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": "A"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "options"
-          }
-        },
-        "Šestáčást": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": "F"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "options"
-          }
-        }
+      "verifyBy": {
+        "kind": "equalSortedOptions",
+        "args": [
+          "C",
+          "E",
+          "B",
+          "D",
+          "A",
+          "F"
+        ]
+      },
+      "points": 3,
+      "inputBy": {
+        "kind": "sortedOptions"
       }
     },
     "16": {
       "children": {
         "16.1": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": " např. Až skončí trénink, půjdeme do parku. "
+            "kind": "selfEvaluate",
+            "args": {
+              "options": [
+                {
+                  "value": 0,
+                  "name": "0 bodů"
+                }
+              ],
+              "hint": {
+                "kind": "text",
+                "content": "např. Až skončí trénink, půjdeme do parku."
+              }
+            }
           },
-          "points": 1,
           "inputBy": {
-            "kind": "text"
+            "kind": "options",
+            "args": [
+              {
+                "value": 0,
+                "name": "0 bodů"
+              }
+            ]
           }
         },
         "16.2": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": " např. Rozhodl jsem se napsat román. "
+            "kind": "selfEvaluate",
+            "args": {
+              "options": [
+                {
+                  "value": 0,
+                  "name": "0 bodů"
+                }
+              ],
+              "hint": {
+                "kind": "text",
+                "content": "např. Rozhodl jsem se napsat román."
+              }
+            }
           },
-          "points": 1,
           "inputBy": {
-            "kind": "text"
+            "kind": "options",
+            "args": [
+              {
+                "value": 0,
+                "name": "0 bodů"
+              }
+            ]
           }
         }
       }
     },
     "17": {
       "verifyBy": {
-        "kind": "equalOption",
-        "args": " čistota, důsledek, plavání "
+        "kind": "equal",
+        "args": [
+          "čistota",
+          "důsledek",
+          "plavání"
+        ]
       },
-      "points": 1,
-      "inputBy": {
-        "kind": "text"
-      }
+      "points": 3,
+      "inputBy": [
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        }
+      ]
     },
     "18": {
       "verifyBy": {
-        "kind": "equalOption",
-        "args": " vyzvídat, nerozuměl, autogramy, nejúžasnější "
+        "kind": "equal",
+        "args": [
+          "vyzvídat",
+          "nerozuměl",
+          "autogramy",
+          "nejúžasnější"
+        ]
       },
-      "points": 1,
-      "inputBy": {
-        "kind": "text"
-      }
+      "points": 4,
+      "inputBy": [
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        }
+      ]
     },
     "19": {
       "children": {
@@ -426,17 +479,44 @@
             "kind": "bool"
           }
         }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 2,
+              "min": 4
+            },
+            {
+              "points": 1,
+              "min": 3
+            }
+          ]
+        }
       }
     },
     "20": {
       "verifyBy": {
-        "kind": "equalOption",
-        "args": " kukátku, plánu, náhodě "
+        "kind": "equal",
+        "args": [
+          "kukátku",
+          "plánu",
+          "náhodě"
+        ]
       },
-      "points": 1,
-      "inputBy": {
-        "kind": "text"
-      }
+      "points": 3,
+      "inputBy": [
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        }
+      ]
     },
     "21": {
       "verifyBy": {
@@ -500,6 +580,21 @@
             "kind": "bool"
           }
         }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 2,
+              "min": 4
+            },
+            {
+              "points": 1,
+              "min": 3
+            }
+          ]
+        }
       }
     },
     "24": {
@@ -553,6 +648,21 @@
           "inputBy": {
             "kind": "bool"
           }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 2,
+              "min": 4
+            },
+            {
+              "points": 1,
+              "min": 3
+            }
+          ]
         }
       }
     },

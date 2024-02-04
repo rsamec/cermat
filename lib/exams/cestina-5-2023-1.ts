@@ -1,111 +1,79 @@
-import { AnswerBuilder, volba } from "../utils/quiz-specification";
-const group = AnswerBuilder.group;
-
-function anoNe(spravnaVolba: boolean) {
-  return {
-    verifyBy:
-      { kind: "equalOption", args: spravnaVolba },
-    points: 1,
-    inputBy: {
-      kind: 'bool'
-    }
-  } as const
-}
-function bodyMax2() {
-  return {
-    computeBy: {
-      kind: 'group' as const, args: [{ points: 2, min: 4 }, { points: 1, min: 3 }]
-    }
-  }
-
-}
-function bodyMax3() {
-  return {
-    computeBy: {
-      kind: 'group' as const, args: [{ points: 3, min: 3 }, { points: 2, min: 2 }, { points: 1, min: 1 }]
-    }
-  }
-}
-
-const pointOptions = [{ value: 0, name: "0 bodů" }, { value: 1, name: "1 bod" }, { value: 2, name: "2 body" }];
+import { optionBool, group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints } from "../utils/quiz-builder";
 
 const form = group({
-  1: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-  2: volba("B"),
-  3: volba("B"),
-  4: volba("B"),
+  1: option("A"),
+  2: option("B"),
+  3: option("B"),
+  4: option("B"),
   5: group({
-    5.1: anoNe(true),
-    5.2: anoNe(false),
-    5.3: anoNe(false),
-    5.4: anoNe(true),
-  }, bodyMax2()),
+    5.1: optionBool(true),
+    5.2: optionBool(false),
+    5.3: optionBool(false),
+    5.4: optionBool(true),
+  }, tasks4Max2Points),
   6: group({
-    6.1: volba("E"),
-    6.2: volba("B"),
-    6.3: volba("D"),
+    6.1: option("E"),
+    6.2: option("B"),
+    6.3: option("D"),
   }),
   7: group({
-    7.1: { verifyBy: { kind: 'equalOption', args: 'podmět: kousky; přísudek: se objeví' }, points: 1, inputBy: { kind: 'text' } },
-    7.2: { verifyBy: { kind: 'equalOption', args: 'podmět: deště (a) záplavy; přísudek: zničily' }, points: 1, inputBy: { kind: 'text' } },
+    7.1: wordsGroup({ podmět: 'kousky', přísudek: 'se objeví' }),
+    7.2: wordsGroup({ podmět: 'deště (a) záplavy', přísudek: 'zničily' }),
   }),
   8: group({
-    8.1: anoNe(false),
-    8.2: anoNe(false),
-    8.3: anoNe(false),
-    8.4: anoNe(false),
-  }),
-  9: volba("D"),
-  10: volba("B"),
-  11: volba("A"),
-  12: volba("C"),
-  13: volba("A"),
-  14: { verifyBy: { kind: 'selfEvaluate', args: { options: pointOptions } }, points: 1, inputBy: { kind: 'text' } },
-  15: group({
-    Prvníčást: volba("C"),
-    Druháčást: volba("E"),
-    Třetíčást: volba("B"),
-    Čtvrtáčást: volba("D"),
-    Pátáčást: volba("A"),
-    Šestáčást: volba("F"),
-
-
-  }),
+    8.1: optionBool(false),
+    8.2: optionBool(false),
+    8.3: optionBool(false),
+    8.4: optionBool(false),
+  }, tasks4Max2Points),
+  9: option("D"),
+  10: option("B"),
+  11: option("A"),
+  12: option("C"),
+  13: option("A"),
+  14: selfEvaluateText(2, `Věta musí obsahovat bezchybně zapsané slovo stát a musí splňovat tyto
+  podmínky: a) výraz stát je jiným SD než ve VT; b) věta obsahuje přísudek;
+  c) věta je gramaticky správná; d) věta je
+  smysluplná; e) věta je pravopisně správná; f) věta obsahuje 4 slova.
+  Věta, která splňovala podmínky a)–c), ale obsahovala 1 chybu
+  (např. pravopisnou), byla hodnocena 1 bodem.
+  V ostatních případech bylo přiděleno 0 bodů.`),
+  15: sortedOptions(["C", "E", "B", "D", "A", "F"], threePoints),
   16: group({
-    16.1: { verifyBy: { kind: 'equalOption', args: ' např. Až skončí trénink, půjdeme do parku. ' }, points: 1, inputBy: { kind: 'text' } },
-    16.2: { verifyBy: { kind: 'equalOption', args: ' např. Rozhodl jsem se napsat román. ' }, points: 1, inputBy: { kind: 'text' } },
+    16.1: selfEvaluateText(1, 'např. Až skončí trénink, půjdeme do parku.'),
+    16.2: selfEvaluateText(1, 'např. Rozhodl jsem se napsat román.'),
   }),
-  17: { verifyBy: { kind: 'equalOption', args: ' čistota, důsledek, plavání ' }, points: 1, inputBy: { kind: 'text' } },
-  18: { verifyBy: { kind: 'equalOption', args: ' vyzvídat, nerozuměl, autogramy, nejúžasnější ' }, points: 1, inputBy: { kind: 'text' } },
+  17: words('čistota,důsledek,plavání', threePoints),
+  18: words('vyzvídat,nerozuměl,autogramy,nejúžasnější', fourPoints),
   19: group({
-    19.1: anoNe(false),
-    19.2: anoNe(false),
-    19.3: anoNe(false),
-    19.4: anoNe(true),
-  }),
-  20: { verifyBy: { kind: 'equalOption', args: ' kukátku, plánu, náhodě ' }, points: 1, inputBy: { kind: 'text' } },
-  21: volba("D"),
-  22: volba("C"),
+    19.1: optionBool(false),
+    19.2: optionBool(false),
+    19.3: optionBool(false),
+    19.4: optionBool(true),
+  }, tasks4Max2Points),
+  20: words('kukátku,plánu,náhodě', threePoints),
+  21: option("D"),
+  22: option("C"),
   23: group({
-    23.1: anoNe(true),
-    23.2: anoNe(false),
-    23.3: anoNe(false),
-    23.4: anoNe(true),
-  }),
-  24: volba("C"),
+    23.1: optionBool(true),
+    23.2: optionBool(false),
+    23.3: optionBool(false),
+    23.4: optionBool(true),
+  }, tasks4Max2Points),
+  24: option("C"),
   25: group({
-    25.1: anoNe(true),
-    25.2: anoNe(false),
-    25.3: anoNe(false),
-    25.4: anoNe(true),
-  }),
-  26: volba("D"),
-  27: volba("A"),
+    25.1: optionBool(true),
+    25.2: optionBool(false),
+    25.3: optionBool(false),
+    25.4: optionBool(true),
+  }, tasks4Max2Points),
+  26: option("D"),
+  27: option("A"),
   28: group({
-    28.1: volba("D"),
-    28.2: volba("C"),
-    28.3: volba("A"),
-    28.4: volba("E"),
+    28.1: option("D"),
+    28.2: option("C"),
+    28.3: option("A"),
+    28.4: option("E"),
   })
 });
 export default form

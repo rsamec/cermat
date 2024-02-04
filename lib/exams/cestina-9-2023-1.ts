@@ -1,136 +1,74 @@
-import { AnswerBuilder, volba } from "../utils/quiz-specification";
- 
-let adresa = {
-  street: 101,
-  city: 'dolni hbity'
-}
-interface Osoba {
-  firstName: string
-  lastName: string
-  vek: number,
-  adresa: {
-    street: number
-    city: string
-  }
-}
-
-
-let osoba = {
-  firstName: 'Roman',
-  lastName: 'Samec',
-  vek: 45,
-  adresa: adresa
-}
-let osoba2 = {
-  firstName: 'Jan',
-  lastName: 'Samec',
-  vek: 12,
-  adresa: adresa
-}
-
-function vypisOsoby(item: Osoba) {
-  return item.firstName + item.lastName + item.vek + item.adresa.city + item.adresa.street;
-}
-
-const group = AnswerBuilder.group;
+import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints } from "../utils/quiz-builder";
 
 const form = group({
-  1: volba("D"),
-  2: volba("B"),
-  3: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
-  4: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
-  5: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
+  1: option("D"),
+  2: option("B"),
+  3: option("C"),
+  4: option("D"),
+  5: option("C"),
   6: group({
-    6.1: { verifyBy: { kind: 'equalOption', args: 'A' }, points: 1, inputBy: { kind: 'options' } },
-    6.2: { verifyBy: { kind: 'equalOption', args: 'E' }, points: 1, inputBy: { kind: 'options' } },
-    6.3: { verifyBy: { kind: 'equalOption', args: 'D' }, points: 1, inputBy: { kind: 'options' } },
+    6.1: option('A'),
+    6.2: option('E'),
+    6.3: option('D'),
   }),
   7: group({
-    7.1: { verifyBy: { kind: 'equal', args: 'řeč' }, points: 1, inputBy: { kind: 'text' } },
-    7.2: { verifyBy: { kind: 'equal', args: 'srovnání' }, points: 1, inputBy: { kind: 'text' } },
+    7.1: word('řeč'),
+    7.2: word('srovnání'),
   }),
   8: group({
-    8.1: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'bool' } },
-    8.2: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'bool' } },
-    8.3: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'bool' } },
-    8.4: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'bool' } },
-  }, {
-    computeBy: {
-      kind: 'group', args: [{ points: 2, min: 4 }, { points: 1, min: 3 }]
-    }
-  }),
-  9: { verifyBy: { kind: "equal", args: "je,vaše" }, points: 1, inputBy: { kind: 'text' } },
-  10: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-  11: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
-  12: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
+    8.1: optionBool(false),
+    8.2: optionBool(false),
+    8.3: optionBool(false),
+    8.4: optionBool(false),
+  }, tasks4Max2Points),
+  9: words("je,vaše", twoPoints),
+  10: option("A"),
+  11: option("D"),
+  12: option("C"),
   13: group({
-    13.1: { verifyBy: { kind: 'equalOption', args: false }, points: 1, inputBy: { kind: 'bool' } },
-    13.2: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'bool' } },
-    13.3: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'bool' } },
-    13.4: { verifyBy: { kind: 'equalOption', args: true }, points: 1, inputBy: { kind: 'bool' } },
-  }, {
-    computeBy: {
-      kind: 'group', args: [{ points: 2, min: 4 }, { points: 1, min: 3 }]
-    }
-  }),
+    13.1: optionBool(false),
+    13.2: optionBool(true),
+    13.3: optionBool(true),
+    13.4: optionBool(true),
+  }, tasks4Max2Points),
   14: group({
-    14.1: { verifyBy: { kind: 'equal', args: 'zvyklému' }, points: 1, inputBy: { kind: 'text' } },
-    14.2: { verifyBy: { kind: 'equal', args: 'prožitého' }, points: 1, inputBy: { kind: 'text' } },
+    14.1: word('zvyklému'),
+    14.2: word('prožitého'),
   }),
-  15: { verifyBy: { kind: 'equalSortedOptions', args: ['B', 'A', 'F', 'C', 'E', 'D'] }, points: 1, inputBy: { kind: 'sortedOptions' } },
+  15: sortedOptions(['B', 'A', 'F', 'C', 'E', 'D'], threePoints),
   16: group({
-    16.1: { verifyBy: { kind: 'equal', args: { podmet: 'závan', prisudek: 'byl osvěžující' } }, points: 1, inputBy: { podmet: { kind: 'text' }, prisudek: { kind: 'text' } } },
-    16.2: { verifyBy: { kind: 'equal', args: { podmet: 'lidé', prisudek: 'by mohli žít' } }, points: 1, inputBy: { podmet: { kind: 'text' }, prisudek: { kind: 'text' } } },
+    16.1: wordsGroup({ podmet: 'závan', prisudek: 'byl osvěžující' }),
+    16.2: wordsGroup({ podmet: 'lidé', prisudek: 'by mohli žít' }),
   }),
-  17: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-  18: { verifyBy: { kind: "equal", args: "nejvýznamnějším,spjatý,tradičně,knihomoly".split(",") }, points: 1, inputBy: [{ kind: 'text' }, { kind: 'text' }, { kind: 'text' }, { kind: 'text' }] },
+  17: option("A"),
+  18: words("nejvýznamnějším,spjatý,tradičně,knihomoly", fourPoints),
   19: group({
-    19.1: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } },
-    19.2: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } },
-    19.3: { verifyBy: { kind: "equalOption", args: false }, inputBy: { kind: 'bool' } },
-    19.4: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } }
-  }, {
-    computeBy: {
-      kind: "group", args: [{
-        min: 3, points: 1
-      }, {
-        min: 4, points: 2
-      }]
-    }
-  }),
-  20: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-  21: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-  22: { verifyBy: { kind: "equalOption", args: "B" }, points: 1, inputBy: { kind: 'options' } },
-  23: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
-  24: { verifyBy: { kind: "equalOption", args: "B" }, points: 1, inputBy: { kind: 'options' } },
+    19.1: optionBool(true),
+    19.2: optionBool(true),
+    19.3: optionBool(false),
+    19.4: optionBool(true),
+  }, tasks4Max2Points),
+  20: option("A"),
+  21: option("A"),
+  22: option("B"),
+  23: option("C"),
+  24: option("B"),
   25: group({
-    25.1: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } },
-    25.2: { verifyBy: { kind: "equalOption", args: false }, inputBy: { kind: 'bool' } },
-    25.3: { verifyBy: { kind: "equalOption", args: true }, inputBy: { kind: 'bool' } },
-    25.4: { verifyBy: { kind: "equalOption", args: false }, inputBy: { kind: 'bool' } },
-  }, {
-    computeBy: {
-      kind: "group", args: [{
-        min: 3, points: 1
-      }, {
-        min: 4, points: 2
-      }]
-    },
-  }),
-  26: { verifyBy: { kind: "equal", args: "dějinách,úklidu,trhu".split(",") }, points: 3, inputBy: [{ kind: 'text' }, { kind: 'text' }, { kind: 'text' }] },
-
-  27: { verifyBy: { kind: "equalOption", args: "B" }, points: 1, inputBy: { kind: 'options' } },
-  28: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
-  29: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
+    25.1: optionBool(true),
+    25.2: optionBool(false),
+    25.3: optionBool(true),
+    25.4: optionBool(false),
+  }, tasks4Max2Points),
+  26: words("dějinách,úklidu,trhu", threePoints),
+  27: option("B"),
+  28: option("D"),
+  29: option("C"),
   30: group({
-    30.1: { verifyBy: { kind: "equalOption", args: "A" }, points: 1, inputBy: { kind: 'options' } },
-    30.2: { verifyBy: { kind: "equalOption", args: "D" }, points: 1, inputBy: { kind: 'options' } },
-    30.3: { verifyBy: { kind: "equalOption", args: "E" }, points: 1, inputBy: { kind: 'options' } },
-    30.4: { verifyBy: { kind: "equalOption", args: "C" }, points: 1, inputBy: { kind: 'options' } },
+    30.1: option("A"),
+    30.2: option("D"),
+    30.3: option("E"),
+    30.4: option("C"),
   })
-
-
-
 });
 
 export default form;

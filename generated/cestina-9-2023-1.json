@@ -170,12 +170,20 @@
     "9": {
       "verifyBy": {
         "kind": "equal",
-        "args": "je,vaše"
+        "args": [
+          "je",
+          "vaše"
+        ]
       },
-      "points": 1,
-      "inputBy": {
-        "kind": "text"
-      }
+      "points": 2,
+      "inputBy": [
+        {
+          "kind": "text"
+        },
+        {
+          "kind": "text"
+        }
+      ]
     },
     "10": {
       "verifyBy": {
@@ -302,7 +310,7 @@
           "D"
         ]
       },
-      "points": 1,
+      "points": 3,
       "inputBy": {
         "kind": "sortedOptions"
       }
@@ -367,7 +375,7 @@
           "knihomoly"
         ]
       },
-      "points": 1,
+      "points": 4,
       "inputBy": [
         {
           "kind": "text"
@@ -390,6 +398,7 @@
             "kind": "equalOption",
             "args": true
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -399,6 +408,7 @@
             "kind": "equalOption",
             "args": true
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -408,6 +418,7 @@
             "kind": "equalOption",
             "args": false
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -417,6 +428,7 @@
             "kind": "equalOption",
             "args": true
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -427,12 +439,12 @@
           "kind": "group",
           "args": [
             {
-              "min": 3,
-              "points": 1
+              "points": 2,
+              "min": 4
             },
             {
-              "min": 4,
-              "points": 2
+              "points": 1,
+              "min": 3
             }
           ]
         }
@@ -495,6 +507,7 @@
             "kind": "equalOption",
             "args": true
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -504,6 +517,7 @@
             "kind": "equalOption",
             "args": false
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -513,6 +527,7 @@
             "kind": "equalOption",
             "args": true
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -522,6 +537,7 @@
             "kind": "equalOption",
             "args": false
           },
+          "points": 1,
           "inputBy": {
             "kind": "bool"
           }
@@ -532,12 +548,12 @@
           "kind": "group",
           "args": [
             {
-              "min": 3,
-              "points": 1
+              "points": 2,
+              "min": 4
             },
             {
-              "min": 4,
-              "points": 2
+              "points": 1,
+              "min": 3
             }
           ]
         }
