@@ -34,8 +34,8 @@ const form = group({
     8.2: number(40, { prefix: 'a = ', suffix: 'm' }, twoPoints),
     8.3: number(10, { prefix: 'o', suffix: 'm^2^' }),
   }),
-  9: selfEvaluateImage(2, "/math/2013/9/9-result.jpeg"),
-  10: selfEvaluateImage(3, "/math/2013/9/10-result.jpeg"),
+  9: selfEvaluateImage(2, "9-result.jpeg"),
+  10: selfEvaluateImage(3, "10-result.jpeg"),
   11: group({
     11.1: optionBool(false),
     11.2: optionBool(true),

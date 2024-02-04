@@ -9,7 +9,7 @@ import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
 import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList, countMaxChars } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
-import { loadJsonBySlug } from '@/lib/utils/file.utils'
+import { loadJsonBySlug, loadMarkdown } from '@/lib/utils/file.utils'
 import { Question } from '@/lib/models/quiz'
 import { AnswerGroup, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Footer from '@/components/Footer'
@@ -17,9 +17,16 @@ import Header from '@/components/Header'
 
 const collection = 'exams';
 type Project = {
-  tags: { value: string; label: string }[]
-} & OstDocument
+  tags: { value: string; label: string }[],
 
+} & OstDocument & ExamMetadata
+
+
+type ExamMetadata = {
+  subject: 'cz' | 'math'
+  grade: '4' | '6' | '8' | 'diploma'
+  code: string
+}
 interface Params {
   params: {
     slug: string
@@ -80,16 +87,20 @@ async function getData({ params }: Params) {
       'slug',
       'author',
       'content',
-      'coverImage'
+      'coverImage',
+      'subject',
+      'grade',
+      'code'
     ])
-    .first()
-
-
+    .first();
+    
+  const pathes = [project.subject, project.grade, project.code]
+  const quizContent = await loadMarkdown(pathes.concat(['index.md']));
 
   const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
-  const parsedTree = mdParser.parse(project.content);
+  const parsedTree = mdParser.parse(quizContent);
 
-  const headings = chunkHeadingsList(parsedTree, project.content);
+  const headings = chunkHeadingsList(parsedTree, quizContent);
 
   const contentHeadings = await Promise.all(headings.map(async (d) => ({
     ...d,
@@ -97,7 +108,7 @@ async function getData({ params }: Params) {
       ...opt,
       name: await markdownToHtml(opt.name)
     }))) : d.options,
-    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content) : (await markdownToHtml(d.header) + await markdownToHtml(d.content)),
+    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: pathes }) : (await markdownToHtml(d.header, { path: pathes }) + await markdownToHtml(d.content, { path: pathes })),
   })))
 
   function order(name: Maybe<string>) {

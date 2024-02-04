@@ -8,7 +8,7 @@ import markdownToHtml from '@/lib/utils/markdown'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
-import { loadJsonBySlug } from '@/lib/utils/file.utils'
+import { loadJsonBySlug, loadMarkdown } from '@/lib/utils/file.utils'
 import QuizForm from '@/components/quiz/quiz-form'
 import QuizInput from '@/components/quiz/quiz-input'
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown'
@@ -18,7 +18,14 @@ import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 const collection = 'exams';
 type Project = {
   tags: { value: string; label: string }[]
-} & OstDocument
+} & OstDocument & ExamMetadata
+
+
+type ExamMetadata = {
+  subject: 'cz' | 'math'
+  grade: '4' | '6' | '8' | 'diploma'
+  code: string
+}
 
 interface Params {
   params: {
@@ -88,21 +95,26 @@ async function getData({ params }: Params) {
       'slug',
       'author',
       'content',
-      'coverImage'
+      'coverImage',
+      'subject',
+      'grade',
+      'code'
     ])
     .first()
 
 
+  const pathes = [project.subject, project.grade, project.code]
+  const quizContent = await loadMarkdown(pathes.concat(['index.md']));
 
-  const content = await markdownToHtml(project.content)
+  const content = await markdownToHtml(quizContent, { path: pathes })
   const quiz: AnswerGroup<any> = await loadJsonBySlug(params.slug);
 
   const quizTree = convertTree(quiz);
 
 
   const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
-  const parsedTree = mdParser.parse(project.content);
-  const headings = chunkHeadingsList(parsedTree, project.content);
+  const parsedTree = mdParser.parse(quizContent);
+  const headings = chunkHeadingsList(parsedTree, quizContent);
   // const contentHeadings = await Promise.all(headings.map(async (d) => ({
   //   ...d,
   //   options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
