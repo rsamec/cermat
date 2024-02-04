@@ -77,6 +77,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} run build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
+      - name: Archive npm failure logs
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: npm-logs
+          path: ~/.npm/_logs          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
