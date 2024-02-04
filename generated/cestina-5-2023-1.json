@@ -294,6 +294,10 @@
             {
               "value": 1,
               "name": "1 bod"
+            },
+            {
+              "value": 2,
+              "name": "2 body"
             }
           ],
           "hint": {
@@ -312,6 +316,10 @@
           {
             "value": 1,
             "name": "1 bod"
+          },
+          {
+            "value": 2,
+            "name": "2 body"
           }
         ]
       }
@@ -343,6 +351,10 @@
                 {
                   "value": 0,
                   "name": "0 bodů"
+                },
+                {
+                  "value": 1,
+                  "name": "1 bod"
                 }
               ],
               "hint": {
@@ -357,6 +369,10 @@
               {
                 "value": 0,
                 "name": "0 bodů"
+              },
+              {
+                "value": 1,
+                "name": "1 bod"
               }
             ]
           }
@@ -369,6 +385,10 @@
                 {
                   "value": 0,
                   "name": "0 bodů"
+                },
+                {
+                  "value": 1,
+                  "name": "1 bod"
                 }
               ],
               "hint": {
@@ -383,6 +403,10 @@
               {
                 "value": 0,
                 "name": "0 bodů"
+              },
+              {
+                "value": 1,
+                "name": "1 bod"
               }
             ]
           }

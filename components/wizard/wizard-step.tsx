@@ -9,7 +9,7 @@ import { useRef, useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { cls, format, updateMap } from "@/lib/utils/utils";
+import { absoluteUrl, cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import Badge from "../core/Badge";
 import { FieldControl } from "@rx-form/core";
@@ -80,15 +80,15 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
 
   const isSelfEvaluate = verifyBy.kind === "selfEvaluate";
 
-
-
-
   const stateVariants = {
     correct: 'bg-green-100 dark:bg-green-800 hover:bg-green-200 border-green-200 dark:border-green-400',
     incorrect: 'bg-red-100 dark:bg-red-800 hover:bg-red-200 border-red-200 dark:border-red-400',
     unanswered: '-:dark:bg-slate-900 -:hover:bg-gray-50 -:dark:hover:bg-gray-800 border-gray-200 dark:border-gray-700',
   }
   const checkButton = <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: question.id, answer: formControl.value })}>Zkontrolovat</button>
+
+  
+
   return (
 
     <div className="flex flex-col gap-2" >
@@ -172,10 +172,13 @@ const WizardStep: React.FC<Props> = ({ question, tree, answerState, setAnswer, n
                 </div>
               </summary>
 
-              <section className="grid grid-cols-1 py-5" >
+              <section className="grid grid-cols-1 gap-2 py-5" >
+                { verifyBy.args.hint.kind == 'image' &&
                 <div className="relative w-full aspect-[4/3]">
-                  <Image src={"/math/2013/9/9-result.jpeg"} alt='Check result' fill className="object-cover object-center" />
+                  <Image src={absoluteUrl(verifyBy.args.hint.src)} alt='Check result' fill className="object-contain object-center" />
                 </div>
+                }
+                { verifyBy.args.hint.kind == 'text' && <div dangerouslySetInnerHTML={{ __html: verifyBy.args.hint.content }} /> }
 
                 <div>{createOptionAnswer(formControl as unknown as FieldControl, verifyBy.args.options, status, (value) => {
                   if (value === undefined) return;

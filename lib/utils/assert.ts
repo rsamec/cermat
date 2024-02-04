@@ -37,7 +37,7 @@ export type SelfEvaluateImage = {
   src: string
 }
 
-export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<number>[], hint: SelfEvaluateText | SelfEvaluateText }> & {
+export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<number>[], hint: SelfEvaluateText | SelfEvaluateImage }> & {
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator

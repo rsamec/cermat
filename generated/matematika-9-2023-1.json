@@ -292,11 +292,15 @@
             {
               "value": 1,
               "name": "1 bod"
+            },
+            {
+              "value": 2,
+              "name": "2 body"
             }
           ],
           "hint": {
             "kind": "image",
-            "src": ""
+            "src": "/math/2013/9/9-result.jpeg"
           }
         }
       },
@@ -310,6 +314,10 @@
           {
             "value": 1,
             "name": "1 bod"
+          },
+          {
+            "value": 2,
+            "name": "2 body"
           }
         ]
       }
@@ -330,11 +338,15 @@
             {
               "value": 2,
               "name": "2 body"
+            },
+            {
+              "value": 3,
+              "name": "3 body"
             }
           ],
           "hint": {
             "kind": "image",
-            "src": ""
+            "src": "/math/2013/9/10-result.jpeg"
           }
         }
       },
@@ -352,6 +364,10 @@
           {
             "value": 2,
             "name": "2 body"
+          },
+          {
+            "value": 3,
+            "name": "3 body"
           }
         ]
       }
