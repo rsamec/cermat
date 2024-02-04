@@ -9,9 +9,10 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/148689951?v=4'
 status: 'published'
 title: 'Matematika (5 ročník) - 1. řádný termín 2023'
+timeSlot: '1'
+grade: '8'
+code: 'M5A_2023'
 publishedAt: '2024-01-07T09:59:56.794Z'
-timeSlot: 1
-grade: 5 ročník
 ---
 
 # **1 Vypočtěte:**
