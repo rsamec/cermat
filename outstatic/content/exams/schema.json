@@ -22,6 +22,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "Grade"
+    },
+    "code": {
+      "required": true,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "code"
     }
   }
 }
