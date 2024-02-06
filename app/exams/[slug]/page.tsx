@@ -135,6 +135,7 @@ async function getData({ params }: Params) {
   const quizQuestions = getAllLeafsWithAncestors(quizTree).map((d, i) => {
 
     const node = leafs[i];
+    console.log(leafs.length,i, d.leaf.data.id)
     const rootAncestor = node.ancestors[1].data;
 
     //Heuristic - expect quiz question id as number

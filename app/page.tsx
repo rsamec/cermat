@@ -100,12 +100,18 @@ async function getData() {
   //   .sort({ publishedAt: -1 })
   //   .toArray()
 
+  const gradeLabel = (value: string) => {
+    if (value === "4") return "čtyřleté";
+    else if (value ==="6") return "šestilété"
+    else if (value ==="8") return "osmileté";
+    return value
+  }
+
   const timeSlots = new Map([[1, "1. řádný termín"], [2, "2. řádný termín"], [3, "1. náhradní termín"], [4, "2. náhradní termín"]])
   const toItems = (items: any[]) => items.map(d => ({
     ...d, tags: [
       { value: d.year, label: d.year },
-      ...(d.grade ? [{ value: d.grade, label: d.grade }] : []),
-      ...(d.timeSlot ? [{ value: d.timeSlot, label: timeSlots.get(d.timeSlot) ?? d.timeSlot }] : [])
+      ...(d.grade ? [{ value: d.grade, label: gradeLabel(d.grade) }] : []),
     ]
   }))
 

@@ -1,9 +1,7 @@
 import type { OstDocument } from 'outstatic'
 import Link from 'next/link'
-import Image from 'next/image'
-import { imageUrl } from '@/lib/utils/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookAtlas, faLink, faArrowUpRightFromSquare, faDownload, faFileExport, faSquareRootVariable, faPrint } from "@fortawesome/free-solid-svg-icons";
+import { faBookAtlas, faDownload, faFileExport, faSquareRootVariable, faPrint } from "@fortawesome/free-solid-svg-icons";
 
 type Item = {
   tags?: { value: string; label: string }[]

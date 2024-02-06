@@ -1,40 +1,47 @@
 VÝCHOZÍ TEXT K ÚLOHÁM 1–3
-===
->Hloupé holky netopýry
-mají často za upíry
-a hraběte Drákulu
-za hodného bambulu.
->Ale to se strašně pletou!
-Tamhleten stín za roletou,
-to je upír Drákula!
->Jak to žádá tradice –
-navoněný levandulí
-už se chystá za Vendulí
-Novákovou z 3. C.
->Nakroutí si zplihlé kníry,
-vyděsí dva netopýry
-a pak nechá za vraty
-hrad i celé Karpaty.
->Letí v plášti mezi mraky,
-cení zuby – upířáky
-a ve svitu měsíce
-navoněný levandulí
-skočí oknem za Vendulí
-Novákovou z 3. C.
->Jenže neví Drákula,
-jak chytrá je Vendula!
->Ta, než vleze pod deku,
-schroupá kilo česneku.
-Ví, že platí na upíry
-jen česnek či prošlé sýry,
-že ta vůně (pardon, smrad)
-zažene je do Karpat.
->Proto jezte česnek denně,
-ať Drákula zaručeně
-ze své hradní světnice
-navoněný levandulí
-nevrátí se za Vendulí
-Novákovou z 3. C.
+====
+>Hloupé holky netopýry\
+>mají často za upíry\
+>a hraběte Drákulu\
+>za hodného bambulu.\
+>\
+>Ale to se strašně pletou!\
+>Tamhleten stín za roletou,\
+>to je upír Drákula!\
+>\
+>Jak to žádá tradice –\
+>navoněný levandulí\
+>už se chystá za Vendulí\
+>Novákovou z 3. C.\
+>\
+>Nakroutí si zplihlé kníry,\
+>vyděsí dva netopýry\
+>a pak nechá za vraty\
+>hrad i celé Karpaty.\
+>\
+>Letí v plášti mezi mraky,\
+>cení zuby – upířáky\
+>a ve svitu měsíce\
+>navoněný levandulí\
+>skočí oknem za Vendulí\
+>Novákovou z 3. C.\
+>\
+>Jenže neví Drákula,\
+>jak chytrá je Vendula!\
+>\
+>Ta, než vleze pod deku,\
+>schroupá kilo česneku.\
+>Ví, že platí na upíry\
+>jen česnek či prošlé sýry,\
+>že ta vůně (pardon, smrad)\
+>zažene je do Karpat.\
+>\
+>Proto jezte česnek denně,\
+>ať Drákula zaručeně\
+>ze své hradní světnice\
+>navoněný levandulí\
+>nevrátí se za Vendulí\
+>Novákovou z 3. C.\
 # 1 Které z následujících tvrzení odpovídá výchozímu textu?
 - [A] Vendula Nováková si je vědoma toho, že upíry zapudí kromě česneku i prošlé
 sýry. 
@@ -83,7 +90,7 @@ a pak se divil, když mu řekla, že se chová jako blbec. Zkrátka *****.
 
 
 # 6 Přiřaďte k jednotlivým souvětím (6.1–6.3) odpovídající tvrzení (A–E).
-## (Žádnou možnost z nabídky A–E nelze přiřadit víckrát než jednou. Dvě možnosti zbudou a nebudou použity.)
+(Žádnou možnost z nabídky A–E nelze přiřadit víckrát než jednou. Dvě možnosti zbudou a nebudou použity.)
 ## 6.1 Jeho bývalí spolužáci, který pozval na oslavu, dorazej až za hodinu. 
 ## 6.2 Měli byste přijet k nám na chalupu, s rodičema se na vás moc těšíme. 
 ## 6.3 Žádný vozidlo se k nim nedostalo, cesta totiž byla v obouch směrech zavřená. 
@@ -95,33 +102,37 @@ a pak se divil, když mu řekla, že se chová jako blbec. Zkrátka *****.
 
 
 # 7 Vypište z každé z následujících vět (7.1 a 7.2) základní skladební dvojici.
-## (Základní skladební dvojice musí být zapsány pravopisně správně.)
+(Základní skladební dvojice musí být zapsány pravopisně správně.)
 ## 7.1 Mezi zdánlivě obyčejnými předměty se při troše štěstí objeví i vzácné kousky.
 ## 7.2 Loňské silné deště a s nimi související záplavy zničily většinu zemědělské úrody.
 
 
 VÝCHOZÍ TEXT K ÚLOHÁM 8–12
 ====
+
 >Vážky patří k nejnápadnějším zástupcům hmyzu v okolí vod nejen kvůli své velikosti,
-ale především kvůli své křehké kráse. Na Zemi se objevily v závěrečné fázi prvohor, a to
-zhruba před 300 miliony let. Jako jedni z prvních živočichů opustily vodní prostředí,
-dodnes jsou však na něm závislé – voda je pro jejich vývoj nepostradatelná.
-Dospělé vážky jsou krásně zbarvené, mají štíhlé protáhlé tělo a dva páry křídel
-(největší rozpětí křídel je kolem 19 cm). Jejich schopnosti je řadí k nejdokonalejším
-letcům z hmyzí říše. Umí letět kolmo nahoru i dolů a na krátkou vzdálenost dovedou
-vyvinout rychlost větší, než kdy během závodů zvládl nejrychlejší muž světa Usain Bolt.
-Vážky mají dvě velké složené oči (složené oko je tvořeno tisíci maličkých oček),
-pomocí nichž si jako mozaiku skládají obraz toho, co vidí. Zrak je pro ně důležitým
-smyslem: nevidí sice příliš ostře, zato mají velké zorné pole a ve své blízkosti ZACHYTÍ
-sebemenší pohyb. Jsou to predátoři, tedy živočichové živící se dravým způsobem:
-kořist, jíž je v případě dospělých vážek létající hmyz, uloví a sežerou. Vážky nelítostně
-pronásledují svou oběť, zpravidla ji dostihnou za pár sekund. Polapený hmyz poté
-nohama přitáhnou rovnou ke kusadlům.
-Vážkám se kdysi dávaly různé přezdívky – třeba Evropané je nazývali ďáblovými
-létajícími jehlami a strašili jimi zlobivé děti. Asie naopak ve vážkách vždy viděla symbol
-krásy, štěstí a odvahy. Například ve Vietnamu je vážka tradičně spojována s úspěchem
-a její dokonale vyvážené modely si mohou turisté zakoupit v mnoha zdejších obchodech
-se suvenýry.
+>ale především kvůli své křehké kráse. Na Zemi se objevily v závěrečné fázi prvohor, a to
+>zhruba před 300 miliony let. Jako jedni z prvních živočichů opustily vodní prostředí,
+>dodnes jsou však na něm závislé – voda je pro jejich vývoj nepostradatelná.
+>
+>Dospělé vážky jsou krásně zbarvené, mají štíhlé protáhlé tělo a dva páry křídel
+>(největší rozpětí křídel je kolem 19 cm). Jejich schopnosti je řadí k nejdokonalejším
+>letcům z hmyzí říše. Umí letět kolmo nahoru i dolů a na krátkou vzdálenost dovedou
+>vyvinout rychlost větší, než kdy během závodů zvládl nejrychlejší muž světa Usain Bolt.
+>
+>Vážky mají dvě velké složené oči (složené oko je tvořeno tisíci maličkých oček),
+>pomocí nichž si jako mozaiku skládají obraz toho, co vidí. Zrak je pro ně důležitým
+>smyslem: nevidí sice příliš ostře, zato mají velké zorné pole a ve své blízkosti ZACHYTÍ
+>sebemenší pohyb. Jsou to predátoři, tedy živočichové živící se dravým způsobem:
+>kořist, jíž je v případě dospělých vážek létající hmyz, uloví a sežerou. Vážky nelítostně
+>pronásledují svou oběť, zpravidla ji dostihnou za pár sekund. Polapený hmyz poté
+>nohama přitáhnou rovnou ke kusadlům.
+>
+>Vážkám se kdysi dávaly různé přezdívky – třeba Evropané je nazývali ďáblovými
+>létajícími jehlami a strašili jimi zlobivé děti. Asie naopak ve vážkách vždy viděla symbol
+>krásy, štěstí a odvahy. Například ve Vietnamu je vážka tradičně spojována s úspěchem
+>a její dokonale vyvážené modely si mohou turisté zakoupit v mnoha zdejších obchodech
+>se suvenýry.
 
 # 8 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 8.1 Maximální délka jednoho křídla dospělé vážky je 19 cm. 
@@ -130,7 +141,7 @@ se suvenýry.
 ## 8.4 Ve Vietnamu se vážky tradičně loví za účelem jejich prodeje v obchodech. 
 
 
-## 9 Které z následujících tvrzení je pravdivé?
+# 9 Které z následujících tvrzení je pravdivé?
 ## (Tvar zachytí je ve výchozím textu zapsán velkými písmeny.)
 - [A] Tvar zachytí je jak ve výchozím textu, tak v jakémkoli jiném textu vždy tvarem
 množného čísla.
@@ -142,7 +153,7 @@ být tvarem množného čísla.
 být tvarem jednotného čísla.
 
 
-## 10 Které z následujících tvrzení je pravdivé?
+# 10 Které z následujících tvrzení je pravdivé?
 ## (Posuzovaná slova jsou ve výchozím textu podtržena.)
 - [A] Slovo krokem by ve výchozím textu mělo opačný význam, než má v textu slovo
 během.
@@ -178,8 +189,10 @@ slovo odvahy.
 
 VÝCHOZÍ TEXT K ÚLOZE 14
 ===
+
 >V takové situaci musíme stát při sobě.
-## 14 Napište smysluplnou větu o čtyřech slovech, v níž výraz STÁT bude jednoznačně jiným slovním druhem než ve výchozím textu.
+
+# 14 Napište smysluplnou větu o čtyřech slovech, v níž výraz STÁT bude jednoznačně jiným slovním druhem než ve výchozím textu.
 Vzniklá věta musí obsahovat tvar stát, musí být gramaticky i pravopisně správná a musí obsahovat přísudek. Výraz stát nesmýt použit jako vlastní jméno.
 
 
@@ -199,22 +212,23 @@ Vzniklá věta musí obsahovat tvar stát, musí být gramaticky i pravopisně s
 
 
 VÝCHOZÍ TEXTY K ÚLOZE 17
-===
+====
+
 **TEXT 1**
->ves
->otužilec 
->příručka
->mýtina
->čistota
->skluzavka
->věšák
->důsledek
->knihkupectví
->ložnice
->planeta
->náměstí
->hlupák
->plavání
+>ves\
+>otužilec \
+>příručka\
+>mýtina\
+>čistota\
+>skluzavka\
+>věšák\
+>důsledek\
+>knihkupectví\
+>ložnice\
+>planeta\
+>náměstí\
+>hlupák\
+>plavání\
 >kapesník
 
 **TEXT 2**
@@ -225,12 +239,13 @@ VÝCHOZÍ TEXTY K ÚLOZE 17
 >(trpělivost, smutek, stárnutí, bdělost, podmínka aj.).
 
 # 17 Vypište z TEXTU 1 tři podstatná jména abstraktní.
-## Úlohu řešte na základě definic uvedených v TEXTU 2. 
-## Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
+Úlohu řešte na základě definic uvedených v TEXTU 2. 
+Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
 VÝCHOZÍ TEXT K ÚLOZE 18
 ====
+
 >Jelikož je Martin už od dětství vášnivý hokejový fanoušek, tatínek mu k narozeninám
 přichystal překvapení: koupil vstupenky na mezinárodní utkání. Martin se celý měsíc
 snažil vyzvýdat, jaký dárek dostane, rodiče se ale tvářili tajemně.
@@ -244,12 +259,13 @@ třešničkou na dortu byla možnost získat od hráčů autogrami. Byl to ten n
 narozeninový dárek.
 
 # 18 Najděte ve výchozím textu čtyři slova, která jsou zapsána s pravopisnou chybou, a napište je PRAVOPISNĚ SPRÁVNĚ.
-## Podtržené výrazy jsou zapsány správně.
-## Slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
+Podtržené výrazy jsou zapsány správně.
+Slova zapište bezchybně ve stejném tvaru, ve kterém jsou užita v textu. Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
 VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
 ====
+
 **TEXT 1**
 >(1) Chyběla hodina do půlnoci a obě děti napjatě čekaly v pokoji 213. Alžběta se
 >dívala do kukátka, zatímco Freddy listoval v černé knize. Zčistajasna ho něco napadlo:
@@ -283,7 +299,8 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
 >Součástí souvětí jsou různé věty, např. věty typu A nebo typu B. 
 >**Věta typu A** je smysluplnou odpovědí na otázku, kterou pokládáme pomocí příslovcí 
 >odkdy, dokdy, kdy. Příklady: Bude ho hledat, dokud ho nenajde. (DOKDY ho bude hledat?
-→ Dokud ho nenajde.); Když se setmělo, šli spát. (KDY šli spát? → Když se setmělo.)
+>→ Dokud ho nenajde.); Když se setmělo, šli spát. (KDY šli spát? → Když se setmělo.)
+>
 >Na **větu typu B** se **nelze** zeptat pomocí příslovcí odkdy, dokdy, kdy. Tato věta je totiž
 >smysluplnou odpovědí na otázku, kterou pokládáme pomocí zájmen. Příklady: Přinutil je,
 >aby se usmířili. (K ČEMU je přinutil? → Aby se usmířili.); Zda Eva nakonec přijde, vůbec
@@ -297,10 +314,10 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 19–23
 
 
 # 20 Vypište ze třetí části TEXTU 1 tři podstatná jména, která jsou v textu užita ve 3. pádě.
-## Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
+Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
-## 21 Tvrzení: Od doby, kdy Alžběta na určité stránce černé knihy viděla jediné stříbrné písmeno, do doby, kdy na téže stránce spatřila napsané KLÍ, uběhlo *****.
+# 21 Tvrzení: Od doby, kdy Alžběta na určité stránce černé knihy viděla jediné stříbrné písmeno, do doby, kdy na téže stránce spatřila napsané KLÍ, uběhlo *****.
 
 Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výše uvedeném tvrzení, aby toto tvrzení odpovídalo TEXTU 1?
 - [A] méně než 24 hodin
@@ -352,7 +369,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 25–27
 >Chase Tag nabízí atraktivní podívanou plnou vzrušujících momentů. Není tedy divu,
 >že videa z některých zápasů mají na YouTube až 11 milionů zhlédnutí.
 
-## 25 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
+# 25 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
 ## 25.1 Při jednom zápasu v Chase-Off může jedno družstvo získat maximálně 16 bodů. 
 ## 25.2 Mistrovství světa ve sportu zvaném Chase Tag se koná pravidelně jednou za dva roky.
 ## 25.3 Chase Tag je divácky natolik atraktivní sport, že každý zápas zhlédne na YouTube kolem 11 milionů lidí.
@@ -367,7 +384,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 25–27
 
 
 # 27 Ve které z následujících možností je uvedena vhodná náhrada za chybně užitý tvar slova?
-## (Posuzované tvary jsou ve výchozím textu vyznačeny tučně.)
+  (Posuzované tvary jsou ve výchozím textu vyznačeny tučně.)
 - [A] místo propojení má být propojením
 - [B] místo variantách má být variant
 - [C] místo nejzajímavější má být nejzajímavějšími
@@ -375,19 +392,17 @@ VÝCHOZÍ TEXT K ÚLOHÁM 25–27
 
 
 # 28 Přiřaďte k jednotlivým obrázkům (28.1–28.4) odpovídající popis (A–F).
+
 (Žádnou možnost z nabídky A–F nelze přiřadit víckrát než jednou. Dvě možnosti zbudou a nebudou použity.)
 
-
-# 28.1
->![OBRAZEK1](/cestina/2023/5/1.jpeg)
-
-
-# 28.2
->![OBRAZEK1](/cestina/2023/5/2.jpeg)
-
->![OBRAZEK1](/cestina/2023/5/3.jpeg)
-
->![OBRAZEK1](/cestina/2023/5/4.jpeg)
+## 28.1
+>![OBRAZEK1](./1.jpeg)
+## 28.2
+>![OBRAZEK1](./2.jpeg)
+## 28.3
+>![OBRAZEK1](./3.jpeg)
+## 28.4
+>![OBRAZEK1](./4.jpeg)
 
 - [A] Celkový počet domů je lichý. Patrových domů je méně než přízemních. Většina domů mezi stromy má sedlovou střechu. 
 - [B] Celkový počet domů s plochou střechou je lichý. Přízemních domů je méně než patrových. Většina všech domů je na kopci.
