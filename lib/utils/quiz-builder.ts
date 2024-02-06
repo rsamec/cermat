@@ -6,7 +6,7 @@ export function group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetad
   return new AnswerGroupImpl<T>(children, metadata);
 }
 
-export function number(value: number, args: NumberComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
+export function number(value: number, args?: NumberComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
   return { verifyBy: { kind: "equal", args: value }, points, inputBy: { kind: 'number', args } } as const
 }
 export function mathExpr(value: string | number, args: MathExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
@@ -50,6 +50,11 @@ export const task3Max3Points = {
 export const task3Max4Points = {
   computeBy: {
     kind: 'group' as const, args: [{ points: 4, min: 3 }, { points: 2, min: 2 }]
+  }
+}
+export const task3Max5Points = {
+  computeBy: {
+    kind: 'group' as const, args: [{ points: 5, min: 3 }, { points: 3, min: 2 }, { points: 1, min: 1 }]
   }
 }
 export const task3Max6Points = {
