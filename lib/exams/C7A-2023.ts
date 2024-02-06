@@ -1,4 +1,4 @@
-import { faL } from "@fortawesome/free-solid-svg-icons";
+
 import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, selfEvaluate, selfEvaluateText } from "../utils/quiz-builder";
 
 const form = group({
