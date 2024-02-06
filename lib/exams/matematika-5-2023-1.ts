@@ -31,8 +31,8 @@ const form = group({
     6.2: number(900, { suffix: 'korun' }, twoPoints),
   }),
   7: group({
-    7.1: selfEvaluateImage(3, "primky ab v rrovine vysledrk"),
-    7.2: selfEvaluateImage(3, "V rovině leží body K, S a přímka p procházející bodem S."),
+    7.1: selfEvaluateImage(3, "primkyABvRovineVysledek.jpg"),
+    7.2: selfEvaluateImage(3, "bodyVRovine.jpg"),
   }),
   8: group({
     8.1: optionBool(false),
