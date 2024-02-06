@@ -1,52 +1,46 @@
 {
-  "commit": "ebe5e1e02ef50d99f3655ed956a39195a0703e0a",
-  "generated": "Sun, 04 Feb 2024 16:57:50 GMT",
+  "commit": "034df46d406b0ea0215a6628630b3fe1b3e78d7e",
+  "generated": "Tue, 06 Feb 2024 14:40:21 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "a3301f96c0b89c46efdf77c9627f10c6a6e95e1b",
-        "hash": "2340452090",
-        "path": "outstatic/content/exams/matematika-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "M9A_2023",
-      "collection": "exams",
-      "coverImage": "/images/math.png",
-      "description": "Provoúhlý lichoběžník, graf s počty žáku hudebního, šachového a robotickéhého kroužku, sekvence bílých a šedých trojúhelníků",
-      "grade": "4",
-      "publishedAt": "2023-12-30T12:21:20.927Z",
-      "slug": "matematika-9-2023-1",
-      "status": "published",
-      "subject": "math",
-      "timeSlot": "1",
-      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "dccd005f5031346b1ad23679f602e7a186e3f1f1",
-        "hash": "3824142257",
-        "path": "outstatic/content/exams/cestina-5-2023-1.md"
+        "commit": "7c8515c3970f965de557c11fcb8eca8da72d058d",
+        "hash": "3744460058",
+        "path": "outstatic/content/exams/c7a-2023.md"
       },
       "author": {
         "name": "",
         "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
       },
-      "code": "C5A_2023",
+      "code": "C7A_2023",
       "collection": "exams",
-      "coverImage": "/images/cz.png",
-      "description": "Úpír Drákula, článek o váškách z national geographic, Martin jako vášnivý hokejový fanoušek",
-      "grade": "8",
-      "publishedAt": "2024-01-07T12:44:38.288Z",
-      "slug": "cestina-5-2023-1",
+      "coverImage": "",
+      "description": "",
+      "grade": "6",
+      "publishedAt": "2024-02-06T14:44:28.546Z",
+      "slug": "c7a-2023",
       "status": "published",
       "subject": "cz",
-      "timeSlot": "1",
-      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
+      "title": "Čeština (7 ročník) - 1. řádný termín 2023",
       "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "8c7041534b73e0d4671137a4d7360121f18d559a",
+        "hash": "415493133",
+        "path": "outstatic/content/pages/home.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T12:23:18.534Z",
+      "slug": "home",
+      "status": "published",
+      "title": "Home"
     },
     {
       "__outstatic": {
@@ -73,21 +67,26 @@
     },
     {
       "__outstatic": {
-        "commit": "8c7041534b73e0d4671137a4d7360121f18d559a",
-        "hash": "415493133",
-        "path": "outstatic/content/pages/home.md"
+        "commit": "a3301f96c0b89c46efdf77c9627f10c6a6e95e1b",
+        "hash": "2340452090",
+        "path": "outstatic/content/exams/matematika-9-2023-1.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-30T12:23:18.534Z",
-      "slug": "home",
+      "code": "M9A_2023",
+      "collection": "exams",
+      "coverImage": "/images/math.png",
+      "description": "Provoúhlý lichoběžník, graf s počty žáku hudebního, šachového a robotickéhého kroužku, sekvence bílých a šedých trojúhelníků",
+      "grade": "4",
+      "publishedAt": "2023-12-30T12:21:20.927Z",
+      "slug": "matematika-9-2023-1",
       "status": "published",
-      "title": "Home"
+      "subject": "math",
+      "timeSlot": "1",
+      "title": "Matematika (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
     },
     {
       "__outstatic": {
@@ -110,6 +109,29 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "dccd005f5031346b1ad23679f602e7a186e3f1f1",
+        "hash": "3824142257",
+        "path": "outstatic/content/exams/cestina-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "code": "C5A_2023",
+      "collection": "exams",
+      "coverImage": "/images/cz.png",
+      "description": "Úpír Drákula, článek o váškách z national geographic, Martin jako vášnivý hokejový fanoušek",
+      "grade": "8",
+      "publishedAt": "2024-01-07T12:44:38.288Z",
+      "slug": "cestina-5-2023-1",
+      "status": "published",
+      "subject": "cz",
+      "timeSlot": "1",
+      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
