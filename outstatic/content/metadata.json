@@ -1,6 +1,6 @@
 {
-  "commit": "ebe5e1e02ef50d99f3655ed956a39195a0703e0a",
-  "generated": "Sun, 04 Feb 2024 16:57:50 GMT",
+  "commit": "28df0817138da0a83c735a130bd5157056bb3574",
+  "generated": "2024-02-06T14:39:59.167Z",
   "metadata": [
     {
       "__outstatic": {
@@ -110,6 +110,28 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "28df0817138da0a83c735a130bd5157056bb3574",
+        "hash": "3744460058",
+        "path": "outstatic/content/exams/c7a-2023.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "code": "C7A_2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "grade": "6",
+      "publishedAt": "2024-02-06T14:44:28.546Z",
+      "slug": "c7a-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (7 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
