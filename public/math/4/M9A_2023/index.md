@@ -1,5 +1,3 @@
-
-
 VÝCHOZÍ TEXT K ÚLOZE 1
 ===
 
