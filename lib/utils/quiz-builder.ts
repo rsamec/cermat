@@ -70,7 +70,7 @@ const points = [
   { value: 6, name: "6 bodů" }, { value: 7, name: "7 bodů" }, { value: 8, name: "8 bodů" },
   { value: 9, name: "9 bodů" }, { value: 10, name: "10 bodů" }
 ]
-function getPoints(max: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10) {
+function getPoints(max: number) {
   return points.slice(0, max + 1)
 }
 export function option(spravnaVolba: string, { points }: { points?: number } = { points: 1 }) {
@@ -84,7 +84,7 @@ export function option(spravnaVolba: string, { points }: { points?: number } = {
   } as const
 }
 
-export function word(slovo: string,{ points }: { points: number } = { points: 1 }) {
+export function word(slovo: string, { points }: { points: number } = { points: 1 }) {
   return {
     verifyBy:
       { kind: "equal", args: slovo },
@@ -121,14 +121,14 @@ export function sortedOptions(sortedOptions: string[], { points }: { points?: nu
   return { verifyBy: { kind: 'equalSortedOptions', args: sortedOptions }, points, inputBy: { kind: 'sortedOptions' } } as const
 }
 
-export function selfEvaluateImage(max: 0 | 1 | 2 | 3 | 4, src: string) {
-  return selfEvaluate(max, { kind: 'image' as const, src });
+export function selfEvaluateImage(src: string, points: { points?: number } = { points: 1 }) {
+  return selfEvaluate({ kind: 'image' as const, src }, points);
 }
-export function selfEvaluateText(max: 0 | 1 | 2 | 3 | 4, content: string) {
-  return selfEvaluate(max, { kind: 'text' as const, content });
+export function selfEvaluateText(content: string, { points }: { points?: number } = { points: 1 }) {
+  return selfEvaluate({ kind: 'text' as const, content }, { points });
 }
-export function selfEvaluate(max: 0 | 1 | 2 | 3 | 4, hint: SelfEvaluateText | SelfEvaluateImage) {
-  const options = getPoints(max)
+export function selfEvaluate(hint: SelfEvaluateText | SelfEvaluateImage, { points }: { points?: number } = { points: 1 }) {
+  const options = getPoints(points ?? 1)
   return {
     verifyBy: { kind: 'selfEvaluate', args: { options, hint } } as SelfEvaluateValidator, inputBy: { kind: 'options' as const, args: options }
 

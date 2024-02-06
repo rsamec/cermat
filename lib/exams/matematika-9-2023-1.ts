@@ -1,4 +1,4 @@
-import { fourPoints, group, mathEquation, mathExpr, mathRatio, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max6Points, twoPoints } from "../utils/quiz-builder";
+import { fourPoints, group, mathEquation, mathExpr, mathRatio, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
 const form = group({
   1: number(20, { suffix: 'minut' }),
@@ -34,8 +34,8 @@ const form = group({
     8.2: number(40, { prefix: 'a = ', suffix: 'm' }, twoPoints),
     8.3: number(10, { prefix: 'o', suffix: 'm^2^' }),
   }),
-  9: selfEvaluateImage(2, "9-result.jpeg"),
-  10: selfEvaluateImage(3, "10-result.jpeg"),
+  9: selfEvaluateImage( "9-result.jpeg",twoPoints),
+  10: selfEvaluateImage( "10-result.jpeg",threePoints),
   11: group({
     11.1: optionBool(false),
     11.2: optionBool(true),
