@@ -1,4 +1,4 @@
-import { optionBool, group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints } from "../utils/quiz-builder";
+import { optionBool, group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints } from "../utils/quiz-builder";
 
 const form = group({
   1: option("A"),
@@ -31,17 +31,17 @@ const form = group({
   11: option("A"),
   12: option("C"),
   13: option("A"),
-  14: selfEvaluateText(2, `Věta musí obsahovat bezchybně zapsané slovo stát a musí splňovat tyto
+  14: selfEvaluateText( `Věta musí obsahovat bezchybně zapsané slovo stát a musí splňovat tyto
   podmínky: a) výraz stát je jiným SD než ve VT; b) věta obsahuje přísudek;
   c) věta je gramaticky správná; d) věta je
   smysluplná; e) věta je pravopisně správná; f) věta obsahuje 4 slova.
   Věta, která splňovala podmínky a)–c), ale obsahovala 1 chybu
   (např. pravopisnou), byla hodnocena 1 bodem.
-  V ostatních případech bylo přiděleno 0 bodů.`),
+  V ostatních případech bylo přiděleno 0 bodů.`,twoPoints),
   15: sortedOptions(["C", "E", "B", "D", "A", "F"], threePoints),
   16: group({
-    16.1: selfEvaluateText(1, 'např. Až skončí trénink, půjdeme do parku.'),
-    16.2: selfEvaluateText(1, 'např. Rozhodl jsem se napsat román.'),
+    16.1: selfEvaluateText( 'např. Až skončí trénink, půjdeme do parku.'),
+    16.2: selfEvaluateText( 'např. Rozhodl jsem se napsat román.'),
   }),
   17: words('čistota,důsledek,plavání', threePoints),
   18: words('vyzvídat,nerozuměl,autogramy,nejúžasnější', fourPoints),

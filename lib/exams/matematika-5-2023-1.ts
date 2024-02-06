@@ -1,6 +1,6 @@
 
 
-import { group, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max5Points, twoPoints } from "../utils/quiz-builder";
+import { group, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max5Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
 const form = group({
   1: group({
@@ -31,8 +31,8 @@ const form = group({
     6.2: number(900, { suffix: 'korun' }, twoPoints),
   }),
   7: group({
-    7.1: selfEvaluateImage(3, "primkyABvRovineVysledek.jpg"),
-    7.2: selfEvaluateImage(3, "bodyVRovine.jpg"),
+    7.1: selfEvaluateImage( "primkyABvRovineVysledek.jpg",threePoints),
+    7.2: selfEvaluateImage( "bodyVRovine.jpg",threePoints),
   }),
   8: group({
     8.1: optionBool(false),
