@@ -5,7 +5,10 @@ import mat5_2023_1 from './exams/matematika-5-2023-1';
 import mat9_2023_1 from './exams/matematika-9-2023-1';
 import cz5_2023_1 from './exams/cestina-5-2023-1';
 import cz9_2023_1 from './exams/cestina-9-2023-1';
-import cestina7 from './exams/C7A-2023'
+import cestina7 from './exams/C7A-2023';
+
+import cestina5B from './exams/C5B-2023';
+import cestina9B from './exams/C9B-2023';
 
 
 test('matika 5 2023 - 1 radny termin', () => {    
@@ -22,4 +25,11 @@ test('cz 9 2023 - 1 radny termin', () => {
 })
 test('cestina 7 2023', () => {    
   expect(calculateMaxTotalPoints(convertTree(cestina7))).toBe(50);
+})
+
+test('cestina 5B 2023', () => {    
+  expect(calculateMaxTotalPoints(convertTree(cestina5B))).toBe(50);
+})
+test('cestina 9B 2023', () => {    
+  expect(calculateMaxTotalPoints(convertTree(cestina9B))).toBe(50);
 })
