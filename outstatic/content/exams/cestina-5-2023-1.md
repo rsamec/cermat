@@ -1,4 +1,6 @@
 ---
+code: 'C5A-2023'
+grade: '8'
 year: '2023'
 subject: 'cz'
 coverImage: '/images/cz.png'
@@ -10,8 +12,6 @@ author:
 status: 'published'
 title: 'Čeština (5 ročník) - 1. řádný termín 2023'
 timeSlot: '1'
-grade: '8'
-code: 'C5A_2023'
 publishedAt: '2024-01-07T12:44:38.288Z'
 ---
 
