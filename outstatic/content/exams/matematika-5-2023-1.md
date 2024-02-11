@@ -1,4 +1,6 @@
 ---
+code: 'M5A-2023'
+grade: '8'
 year: '2023'
 subject: 'math'
 coverImage: '/images/math.png'
@@ -10,8 +12,6 @@ author:
 status: 'published'
 title: 'Matematika (5 ročník) - 1. řádný termín 2023'
 timeSlot: '1'
-grade: '8'
-code: 'M5A_2023'
 publishedAt: '2024-01-07T09:59:56.794Z'
 ---
 
