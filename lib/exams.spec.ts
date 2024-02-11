@@ -1,10 +1,10 @@
 import { test, expect } from "vitest";
 import { calculateMaxTotalPoints, convertTree } from "./utils/quiz-specification";
 
-import mat5_2023_1 from './exams/matematika-5-2023-1';
-import mat9_2023_1 from './exams/matematika-9-2023-1';
-import cz5_2023_1 from './exams/cestina-5-2023-1';
-import cz9_2023_1 from './exams/cestina-9-2023-1';
+import mat5_2023_1 from './exams/M5A-2023';
+import mat9_2023_1 from './exams/M9A-2023';
+import cz5_2023_1 from './exams/C5A-2023';
+import cz9_2023_1 from './exams/C9A-2023';
 import cestina7 from './exams/C7A-2023';
 
 import cestina5B from './exams/C5B-2023';

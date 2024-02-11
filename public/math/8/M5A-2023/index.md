@@ -2,22 +2,21 @@
 
 ## 1.1
 
-$$ 5 \\cdot 120 + (700 - 6 \\cdot 25) \\div (10 - 7 + 2) = $$
+$$ 5 \cdot 120 + (700 - 6 \cdot 25) \div (10 - 7 + 2) = $$
 
 ## 1.2
 
-$$ (5 + 5 \\cdot 29) - 4 \\cdot \\left( 176:8 - 8 \\cdot 2\\right) = $$
+$$ (5 + 5 \cdot 29) - 4 \cdot \left( 176:8 - 8 \cdot 2\right) = $$
 
 
 # 2
 
 ## 2.1 Vypočtěte, o kolik litrů se liší čtvrtina z 24 litrů a třetina z 12 litrů.
 
-## 2.2 Vynásobením dvou kladných celých čísel jsme získali součin 180.
+## 2.2 
+Vynásobením dvou kladných celých čísel jsme získali součin 180. Jedno z těchto dvou čísel zvětšíme dvakrát a jedno zmenšíme šestkrát.
 
-## Jedno z těchto dvou čísel zvětšíme dvakrát a jedno zmenšíme šestkrát.
-
-## Určete, jaký součin získáme vynásobením obou změněných čísel.
+**Určete, jaký součin získáme vynásobením obou změněných čísel.**
 
 
 VÝCHOZÍ TEXT K ÚLOZE 3
@@ -81,12 +80,14 @@ VÝCHOZÍ TEXT K ÚLOZE 6
 
 # 7
 
-**VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.1**
-
-> V rovině leží bod C a přímky a, b. ![V rovině leží bod C a přímky a, b.](./14.jpeg)
-
 
 ## 7.1 Bod C je vrchol trojúhelníku ABC.
+
+**VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.1**
+
+> V rovině leží bod C a přímky a, b. 
+> ![V rovině leží bod C a přímky a, b.](./14.jpeg)
+
 
 Na přímce a leží vrchol A a na přímce b vrchol B tohoto trojúhelníku.
 
@@ -99,11 +100,13 @@ Strany AB a AC mají stejnou délku.
 **V záznamovém archu** obtáhněte vše **propisovací tužkou** (čáry i písmena).
 
 
+## 7.2 Bod K je vrchol obdélníku KLMN.
+
 **VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.2**
 
-> V rovině leží body K, S a přímka p procházející bodem S. ![rovině leží body K, S a přímka p procházející bodem S.](./15.jpeg)
+> V rovině leží body K, S a přímka p procházející bodem S.
+> ![rovině leží body K, S a přímka p procházející bodem S.](./15.jpeg)
 
-## 7.2 Bod K je vrchol obdélníku KLMN.
 
 Bod S je střed strany KL tohoto obdélníku.
 
@@ -119,7 +122,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8
 
 > Desetiúhelník na obrázku se skládá z jednoho rovnostranného trojúhelníku, pěti stejných čtverců, jednoho šedého obdélníku a dvou stejných šedých trojúhelníků. Nejkratší strana desetiúhelníku měří 4 cm, nejdelší 20 cm. ![Desetiúhelník](./16.jpeg)
 
-## 8 Rozhodněte o každém z následujících tvrzení (8.1–8.3), zda je pravdivé (A), či nikoli (N).
+# 8 Rozhodněte o každém z následujících tvrzení (8.1–8.3), zda je pravdivé (A), či nikoli (N).
 
 ## 8.1 Obvod rovnostranného trojúhelníku je 12 cm.
 
@@ -204,7 +207,7 @@ VÝCHOZÍ TEXT A OBRÁZKY K ÚLOZE 14
 ===
 > Ze stejně velkých světlých a tmavých čtverečků tvoříme obrazce tvaru čtverce nebo obdélníku. Základní obrazec je tvořen jednou nebo více řadami světlých čtverečků. ![Čtercová síť](./19.jpeg) Z každého základního obrazce vytvoříme rozšířený obrazec tak, že přidáme nahoru jednu řadu tmavých čtverečků a pak vlevo i vpravo po jednom sloupci tmavých čtverečků.
 
-## 14
+# 14
 
 ## 14.1 Ze základního obrazce, který má 5 řad, vytvoříme rozšířený obrazec přidáním 30 tmavých čtverečků.
 

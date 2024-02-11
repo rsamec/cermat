@@ -9,7 +9,7 @@ import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
 import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList, countMaxChars } from '@/lib/utils/parser.utils'
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
-import { loadJsonBySlug, loadMarkdown } from '@/lib/utils/file.utils'
+import { loadJson, loadMarkdown } from '@/lib/utils/file.utils'
 import { Question } from '@/lib/models/quiz'
 import { AnswerGroup, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Footer from '@/components/Footer'
@@ -93,7 +93,7 @@ async function getData({ params }: Params) {
       'code'
     ])
     .first();
-    
+
   const pathes = [project.subject, project.grade, project.code]
   const quizContent = await loadMarkdown(pathes.concat(['index.md']));
 
@@ -129,7 +129,7 @@ async function getData({ params }: Params) {
 
   //const contentTree = renderHtmlTree(parsedTree)
 
-  const quiz: AnswerGroup<any> = await loadJsonBySlug(params.slug);
+  const quiz: AnswerGroup<any> = await loadJson([`${project.code}.json`]);
 
   const quizTree = convertTree(quiz);
   const quizQuestions = getAllLeafsWithAncestors(quizTree).map((d, i) => {

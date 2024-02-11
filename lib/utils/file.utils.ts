@@ -19,8 +19,8 @@ const ASSETS_PATH = join(
   'public'
 )
 
-export const loadJsonBySlug = async <TSchema extends {} = {}>(slug: string) => {
-  const m = await readFile(resolve(GENERATED_PATH, `./${slug}.json`))
+export const loadJson = async <TSchema extends {} = {}>(path:string[]) => {
+  const m = await readFile(resolve(join(GENERATED_PATH, join(...path))))
   return JSON.parse(m.toString()) as TSchema
 }
 

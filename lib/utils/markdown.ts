@@ -34,7 +34,7 @@ function concatPaths(...segments: string[]): string {
 function transformImgSrc() {
   return (tree: any, file: any, ...args: []) => {
 
-    visit(tree, 'paragraph', node => {
+    visit(tree, node => node.type === 'heading' || node.type === 'paragraph', node => {
 
       const image = node.children.find((child: { type: string }) => child.type === 'image');
       if (image) {

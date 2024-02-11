@@ -8,7 +8,7 @@ import markdownToHtml from '@/lib/utils/markdown'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
-import { loadJsonBySlug, loadMarkdown } from '@/lib/utils/file.utils'
+import { loadJson, loadMarkdown } from '@/lib/utils/file.utils'
 import QuizForm from '@/components/quiz/quiz-form'
 import QuizInput from '@/components/quiz/quiz-input'
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown'
@@ -107,7 +107,7 @@ async function getData({ params }: Params) {
   const quizContent = await loadMarkdown(pathes.concat(['index.md']));
 
   const content = await markdownToHtml(quizContent, { path: pathes })
-  const quiz: AnswerGroup<any> = await loadJsonBySlug(params.slug);
+  const quiz: AnswerGroup<any> = await loadJson([`${project.code}.json`]);
 
   const quizTree = convertTree(quiz);
 
