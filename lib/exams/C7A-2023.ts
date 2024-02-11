@@ -33,9 +33,7 @@ const form = group({
   14.1:wordsGroup({ podmet: 'návštěva', prisudek: 'je považována' }),
   14.2:wordsGroup({ podmet: 'ne', prisudek: 'zahřálo' }),
   }),
-  15: group({
-   15.1: sortedOptions(['C', 'A', 'D', 'F', 'E', 'B'], threePoints),
-  }),
+  15: sortedOptions(['C', 'A', 'D', 'F', 'E', 'B'], threePoints),
   16: group({
     16.1:selfEvaluateText( 'např. Učitelka informovala rodiče, že se chovám nevhodně.',),
     16.2:selfEvaluateText("např. Parkoval na místě určeném jen pro zákazníky")

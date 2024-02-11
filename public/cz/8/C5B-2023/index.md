@@ -117,7 +117,7 @@ patří k nejoblíbenějším živočichům. Není divu, je to totiž opravdu ro
 Veverky se chlubí pestrou škálou odstínů srsti: od světle rezavé přes sytě hnědou až 
 po černou. Na světě zřejmě nenajdete dvě zcela stejně zbarvené veverky. Jediné, co mají 
 v tomto směru všechny veverky společné, je bílé bříško. Jejich huňatý ocas, dlouhý až 
-# 20 cm, má několik funkcí. Veverky se do něj například zabalí, když se spustí hustý déšť 
+20 cm, má několik funkcí. Veverky se do něj například zabalí, když se spustí hustý déšť 
 nebo jim je zima, a také díky NĚMU udržují rovnováhu při skákání po stromech.
 Veverky nemají své příbytky v dutinách stromů, jak se mylně domnívá řada lidí, ale 
 splétají si z větévek hnízda, připomínající svým tvarem míč na ragby. Jejich vnitřek bývá 
@@ -426,10 +426,7 @@ tvar slova?
 místo *cesta* má být *cestou*
 - [C] místo *počasí* má být *počasím*
 - [D] místo *jistého* má být *jistému* 
-## 28.1 
-## 28.2 
-## 28.3   
-## 28.4 
+
  
  
  
@@ -440,6 +437,7 @@ místo *cesta* má být *cestou*
  
  
 �
+
 Vysvětlivky:��
 Na obrázku jsou celkem dva bonbony (jeden na tácu a druhý v košíku) a celkem pět vajíček. Na pomlázce 
 jsou celkem dvě stuhy. 
@@ -447,7 +445,10 @@ jsou celkem dvě stuhy.
 Přiřaďte k jednotlivým obrázkům (28.1–28.4) odpovídající popis (A–F).
 (Žádnou možnost z nabídky A–F nelze přiřadit víckrát než jednou. Dvě možnosti 
 zbudou a nebudou použity.)
-ZKONTROLUJTE, ZDA JSTE DO ZÁZNAMOVÉHO ARCHU UVEDL/A VŠECHNY ODPOVĚDI.
+## 28.1 
+## 28.2 
+## 28.3   
+## 28.4 
 - [A] 
 Na tácu je více bonbonů než v košíku. Na pomlázce je lichý počet stuh. Čokoládových 
 vajíček je méně než malovaných.

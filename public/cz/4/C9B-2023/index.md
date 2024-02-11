@@ -228,12 +228,7 @@ explodovalo bolestí. Spadla jsem a vzápětí už mě drtila tíha Kylova těla
 mi zatlačil hlavu pod hladinu. Nestihla jsem zatajit dech a vdechla jsem vodu. 
 Cítila jsem, že ztrácím vědomí.
 (*S. Meyerová, Hostitel, upraveno*)
-## 14.1 _____
-## 14.2 _____
-## 14.3 _____
-## 14.4 _____
-## 14.5 _____
-## 14.6 _____
+
 VÝCHOZÍ TEXT K ÚLOZE 15
 ===
 
@@ -478,5 +473,3 @@ nevybíravě nadávat svejm dětem.
 - [F] 
 Milan se s oběma spolubydlícími bez problémů domluvil na tom, kolik peněz je 
 zapotřebí dávat do společného fondu.
-ZKONTROLUJTE, ZDA JSTE DO ZÁZNAMOVÉHO ARCHU UVEDL/A VŠECHNY ODPOVĚDI.
-# 11

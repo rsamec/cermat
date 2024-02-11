@@ -103,39 +103,6 @@ export function formatNumber(input: number, decimals: number = 0) {
   return input.toLocaleString("cs-CZ", { maximumFractionDigits: decimals, minimumFractionDigits: 0 })
 }
 
-export function matchNumberListCount(input: string) {
-  return input.replace(/^\s*(\d+(?:\.\d+)*)(?=\s|$)/gm, (match, p1) => {
-    const hashCount = p1.split('.').length - 1;
-    const hashes = '#'.repeat(hashCount + 1);
-    return `${hashes} ${p1}`;
-  });
-  //return input.replaceAll(/(\d+)(?:\.(\d+))?/gm, (_, ...matches:string[]) => `## ${matches.join('.')}`)
-}
-
-export function removeLinesMatchingValues(inputString: string, valuesToRemove: string[]): string {
-  const regexPattern = new RegExp(`^\\s*(${valuesToRemove.join('|')})\\s*$`, 'gm');
-  return inputString.replace(regexPattern, '');
-}
-export function removeMultipleLinesMathingLastValue(inputString: string, lastLineValue: string): string {
-  const regex = new RegExp(`^\\d+\\s*$(?:\\r?\\n|^)\\s*${lastLineValue}\\s*$`, 'gm');
-
-  return inputString.replace(regex, '');
-}
-export function normalizeText(input: string) {
-  let result = input;
-
-  //cleanup
-  result = removeLinesMatchingValues(result, ['1 bod', '2 body', '3 body', '4 body', 'max. 1 bod', 'max. 2 body', 'max. 3 body', 'max. 4 body'])
-  // add top level 
-  result = result.replaceAll(/^\s*VÝCHOZÍ TEXT.*$/gm, (match, header: string) => match + '\n===\n')
-  // add second level
-  result = matchNumberListCount(result);
-
-  // proces options
-  result = result.replace(/^([ABCDEF])\)[ \t]/gm, (_, option: string) => `- [${option}] `)
-
-  return result;
-}
 
 export function areDeeplyEqual(obj1: any, obj2: any): boolean {
   if (obj1 === obj2) return true;
@@ -169,4 +136,13 @@ export function areDeeplyEqual(obj1: any, obj2: any): boolean {
   }
 
   return false;
+}
+
+export function matchNumberListCount(input: string) {
+  return input.replace(/^\s*(\d+(?:\.\d+)*)(?=\s|$)/gm, (_match, p1) => {
+    const hashCount = p1.split('.').length - 1;
+    const hashes = '#'.repeat(hashCount + 1);
+    return `${hashes} ${p1}`;
+  });
+  //return input.replaceAll(/(\d+)(?:\.(\d+))?/gm, (_, ...matches:string[]) => `## ${matches.join('.')}`)
 }

@@ -142,7 +142,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 8–12
 
 
 # 9 Které z následujících tvrzení je pravdivé?
-## (Tvar zachytí je ve výchozím textu zapsán velkými písmeny.)
+(Tvar zachytí je ve výchozím textu zapsán velkými písmeny.)
 - [A] Tvar zachytí je jak ve výchozím textu, tak v jakémkoli jiném textu vždy tvarem
 množného čísla.
 - [B] Tvar zachytí je jak ve výchozím textu, tak v jakémkoli jiném textu vždy tvarem
@@ -154,7 +154,7 @@ být tvarem jednotného čísla.
 
 
 # 10 Které z následujících tvrzení je pravdivé?
-## (Posuzovaná slova jsou ve výchozím textu podtržena.)
+(Posuzovaná slova jsou ve výchozím textu podtržena.)
 - [A] Slovo krokem by ve výchozím textu mělo opačný význam, než má v textu slovo
 během.
 - [B] Slovo nedoženou by ve výchozím textu mělo opačný význam, než má v textu slovo
@@ -205,7 +205,7 @@ Vzniklá věta musí obsahovat tvar stát, musí být gramaticky i pravopisně s
 - [F] „Majitel toho záhadného domu na kopci. Maminka si myslí, že je to šílenec, protože se s nikým nebaví. A to, že mi dal takové peníze na ruku, ji v tom jen utvrdilo,“ odpověděl mi táta. Máma vrhla na tátu rozzuřený pohled.
 
 # 16
-# 16.1 Po tréninku půjdeme do parku
+## 16.1 Po tréninku půjdeme do parku
 Úsek podtržený ve výše uvedené větě jednoduché upravte tak, aby z věty vzniklo gramaticky správné souvětí obsahující dvě věty. Význam původní věty musí zůstat zachován.
 ## 16.2 Rozhodl jsem se, že napíšu román.
 Úsek podtržený ve výše uvedeném souvětí upravte tak, aby ze souvětí vznikla gramaticky správná věta jednoduchá. Význam původního souvětí musí zůstat zachován.

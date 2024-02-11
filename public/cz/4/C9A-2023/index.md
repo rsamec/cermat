@@ -164,8 +164,9 @@ Za chybu je považováno jak neuvedení hledaného zájmena, tak zapsání jaké
 - [D] jistě – nejistě
 
 
-# 12 Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří (*****)
-## Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
+# 12
+**Tvrzení:** V druhé části výchozího textu prostřednictvím přímé řeči hovoří (*****)
+Kterou z následujících možností je nutné doplnit na vynechané místo (*****) ve výše uvedeném tvrzení, aby toto tvrzení bylo pravdivé?
 - [A] celkem tři příslušníci stejné rasy
 - [B] celkem čtyři příslušníci stejné rasy
 - [C] celkem tři postavy, z nichž dvě jsou příslušníci stejné rasy
@@ -382,7 +383,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 25–28
 
 
 # 26 Vypište z __druhé části__ výchozího textu tři podstatná jména, která jsou v textu užita v 6. pádě.
-## Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
+Za chybu je považováno jak neuvedení hledaného podstatného jména, tak zapsání jakéhokoli slova, které neodpovídá zadání.
 
 
 # 27 Které z následujících tvrzení o slovese tučně vyznačeném ve výchozím textu je pravdivé?
