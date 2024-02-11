@@ -1,4 +1,6 @@
 ---
+code: 'C9A-2023'
+grade: '4'
 year: '2023'
 subject: 'cz'
 coverImage: '/images/cz.png'
@@ -10,8 +12,6 @@ author:
 status: 'published'
 title: 'Čeština (9 ročník) - 1. řádný termín 2023'
 timeSlot: '1'
-grade: '4'
-code: 'C9A_2023'
 publishedAt: '2023-12-30T14:25:50.401Z'
 ---
 
