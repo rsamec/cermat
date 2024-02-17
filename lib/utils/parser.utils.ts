@@ -191,6 +191,6 @@ export function excludeChunks(inputString: string, chunks: PositionChunk[]): str
 export function countMaxChars(str: string, charToCount: string): number {
   const pattern = new RegExp(`${charToCount}+`, 'g');
   const matches = str.match(pattern) || [];
-  const maxCount = Math.max(...matches.map(match => match.length));
+  const maxCount = matches.length == 0 ? 0 : Math.max(...matches.map(match => match.length));
   return maxCount;
 }

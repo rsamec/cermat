@@ -325,24 +325,20 @@
       }
     },
     "15": {
-      "children": {
-        "15.1": {
-          "verifyBy": {
-            "kind": "equalSortedOptions",
-            "args": [
-              "C",
-              "A",
-              "D",
-              "F",
-              "E",
-              "B"
-            ]
-          },
-          "points": 3,
-          "inputBy": {
-            "kind": "sortedOptions"
-          }
-        }
+      "verifyBy": {
+        "kind": "equalSortedOptions",
+        "args": [
+          "C",
+          "A",
+          "D",
+          "F",
+          "E",
+          "B"
+        ]
+      },
+      "points": 3,
+      "inputBy": {
+        "kind": "sortedOptions"
       }
     },
     "16": {

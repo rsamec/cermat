@@ -14,7 +14,7 @@ export type ComputeFunctionSpec = SumCompute | GroupCompute
 
 
 export type ComponentFunctionArgs<T> = { args?: T }
-export type MathExpressionHintType = 'fraction' | 'expression' | 'equation' | 'ratio';
+export type MathExpressionHintType = 'fraction' | 'expression' | 'equation';
 
 export type BooleanComponentFunctionSpec = ComponentFunctionArgs<never> & {
   kind: 'bool'

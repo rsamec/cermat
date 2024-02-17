@@ -6,27 +6,19 @@ import { connect } from "react-redux";
 import Stepper from "./stepper";
 import { useSwipeable } from "react-swipeable";
 
-
-const selection = store.select((models) => ({
-  currentStepIndex: models.quiz.currentStepIndex,
-  currentAnswerState: models.quiz.currentAnswerState,
-  totalAnswers: models.quiz.totalAnswers,
-}));
-
 const mapDispatch = (dispatch: Dispatch) => ({
-  next: () => dispatch.quiz.goToNextStep(),
-  back: () => dispatch.quiz.goToPreviousStep(),
+  next: () => dispatch.wizard.goToNextStep(),
+  back: () => dispatch.wizard.goToPreviousStep(),
 });
 
 const mapState = (state: RootState) => ({
-  ...state.quiz,
-  ...selection(state as never),
+  ...state.wizard,
 })
 
 type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
 
-const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ currentStep, currentAnswerState, next, back }) => {
+const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ currentStep, next, back }) => {
   const handlers = useSwipeable({
     onSwipedLeft: () => next(),
     onSwipedRight: () => back(),
@@ -37,9 +29,9 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ currentStep, curr
   return <div  {...handlers} className="min-h-screen">
     {currentStep == null ?
       <div>Loading...</div> :
-      <div className="max-w-6xl mx-auto flex flex-col gap-4 py-4 px-2">
+      <div className="flex flex-col gap-4">
         <Stepper></Stepper>
-        <WizardStep question={currentStep} answerState={currentAnswerState}></WizardStep>
+        <WizardStep step={currentStep}></WizardStep>
       </div>}
   </div>
 };

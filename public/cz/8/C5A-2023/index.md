@@ -1,5 +1,5 @@
 VÝCHOZÍ TEXT K ÚLOHÁM 1–3
-====
+======
 >Hloupé holky netopýry\
 >mají často za upíry\
 >a hraběte Drákulu\
@@ -41,7 +41,8 @@ VÝCHOZÍ TEXT K ÚLOHÁM 1–3
 >ze své hradní světnice\
 >navoněný levandulí\
 >nevrátí se za Vendulí\
->Novákovou z 3. C.\
+>Novákovou z 3. C.
+
 # 1 Které z následujících tvrzení odpovídá výchozímu textu?
 - [A] Vendula Nováková si je vědoma toho, že upíry zapudí kromě česneku i prošlé
 sýry. 
@@ -212,7 +213,7 @@ Vzniklá věta musí obsahovat tvar stát, musí být gramaticky i pravopisně s
 
 
 VÝCHOZÍ TEXTY K ÚLOZE 17
-====
+======
 
 **TEXT 1**
 >ves\
@@ -232,8 +233,7 @@ VÝCHOZÍ TEXTY K ÚLOZE 17
 >kapesník
 
 **TEXT 2**
->**Podstatná jména konkrétní** označují osoby, zvířata, věci a místa (slaboch, hmyz, >stůl,
->pohoří aj.).
+>**Podstatná jména konkrétní** označují osoby, zvířata, věci a místa (slaboch, hmyz, stůl, pohoří aj.).
 >
 >**Podstatná jména abstraktní** označují např. vlastnosti, pocity, děje, stavy a vztahy
 >(trpělivost, smutek, stárnutí, bdělost, podmínka aj.).

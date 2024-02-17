@@ -61,7 +61,7 @@ export function extractOptionRange(text: string): [string, string] | null {
   }
 }
 
-export const isEmptyOrWhiteSpace = (value: string): boolean => {
+export const isEmptyOrWhiteSpace = (value: string | undefined): boolean => {
   return value == null || (typeof value === 'string' && value.trim() === '');
 };
 

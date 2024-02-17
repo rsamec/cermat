@@ -34,7 +34,6 @@ const config: Config = {
       //   backgroundColor: theme("colors.gray.600")
       // }
       addBase({
-        'blockquote p': { textIndent: '0.5rem' },
         'details > summary': {          
           //backgroundColor: theme("colors.gray.600"),
           //color: theme("colors.white"),
@@ -59,13 +58,15 @@ const config: Config = {
         'h2': { fontSize: theme('fontSize.lg') },
         'h3': { fontSize: theme('fontSize.lg'), },
         'hr': { border: 'solid 1px black' },
-        //'blockquote': { padding: '5px', borderWidth: '1px', borderStyle: 'solid', borderColor: 'black' },
+        //'blockquote': { padding: '5px', borderLeftWidth: '4px', borderStyle: 'solid', borderColor: 'black' },
         '.dark': {
           'blockquote': darkBlockquote
         },
         '@media (prefers-color-scheme: dark)': {
           'blockquote': darkBlockquote
         },
+        '@media print': {
+        }
         // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
     }),

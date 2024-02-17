@@ -198,7 +198,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 - [B] 108°
 - [C] 116°
 - [D] 120°
-- [D] jiná velikost
+- [E] jiná velikost
 
 
 # 15 Přiřaďte ke každé úloze (15.1–15.3) odpovídající výsledek (A–F).

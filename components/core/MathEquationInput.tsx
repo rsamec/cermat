@@ -2,7 +2,6 @@ import React, { ChangeEvent } from 'react';
 import withControl, { ValueProps } from './WithFormControl';
 import { Maybe, Option } from '../../lib/utils/utils';
 import { ToggleButtonGroup } from './ToggleButtonGroup';
-import MathInput from './MathInput';
 
 type MathEquationInputProps = ValueProps<MathEquationValue> & { className?: string }
 type MathEquationValue = true | false | string | undefined;
@@ -34,21 +33,20 @@ const MathEquationInput: React.FC<MathEquationInputProps> = ({ value, onChange, 
   const selectedValue = options.find(d => d.value == value);
   const hintClass = 'italic text-sm'
   return (
-    <div>
-
-      <ToggleButtonGroup format={(option) => option.name}
-        badge={(option) => option.value === true ? "∞" : option.value === false ? '∅' : '='}
-        isSame={isSame}
-        value={selectedValue}
-        onChange={handleSwitch} options={options} ></ToggleButtonGroup>
-      {!isBool && <><input
-        type="text"
-        className={className}
-        value={value ?? ''}
-        onChange={handleChange}
-      /> <span className={hintClass}>
-          Vysledek zapište např. y = 2.
-        </span></>}
+    <div className='flex flex-wrap items-center'>
+      <div>
+        <ToggleButtonGroup format={(option) => ''}
+          badge={(option) => option.value === true ? "∞" : option.value === false ? '∅' : '='}
+          isSame={isSame}
+          value={selectedValue}
+          onChange={handleSwitch} options={options} ></ToggleButtonGroup>
+      </div>
+      {!isBool && <div>
+        <input type="text"
+          className={className}
+          value={value ?? ''}
+          onChange={handleChange}
+        /></div>}
     </div>
   );
 };

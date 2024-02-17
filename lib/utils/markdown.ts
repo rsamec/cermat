@@ -67,7 +67,7 @@ export default async function markdownToHtml(markdown: string, data?: { path: st
     .use(rehypeSanitize)
     .use(rehypeMathjax, {
       svg: {
-        scale: 2,
+        scale: 1,
       },
     })
     .use(rehypeStringify)

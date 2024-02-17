@@ -1,7 +1,9 @@
 import type { OstDocument } from 'outstatic'
 import Link from 'next/link'
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookAtlas, faDownload, faFileExport, faSquareRootVariable, faPrint } from "@fortawesome/free-solid-svg-icons";
+import { faBookAtlas, faWaveSquare, faSquareRootVariable, faPrint, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { imageUrl, isEmptyOrWhiteSpace } from '@/lib/utils/utils';
 
 type Item = {
   tags?: { value: string; label: string }[]
@@ -34,9 +36,37 @@ const ContentGrid = ({
 
             {(
               <div className='h-full flex flex-col gap-2'>
-                <Link className="grow flex flex-col gap-2" href={`/${collection}/${item.slug}`}>
+                <Link className="grow flex flex-col gap-2" href={`/prospect/${item.slug}`}>
+                  <div className="flex gap-5 items-start">
 
-                  <div>
+                    {iconType == "math" && <FontAwesomeIcon icon={faSquareRootVariable} size='3x' ></FontAwesomeIcon>}
+                    {iconType == "cz" && <FontAwesomeIcon icon={faBookAtlas} size='3x' ></FontAwesomeIcon>}
+                    <h3 className="text-xl mb-2 leading-snug font-bold hover:underline">
+                      {item.title}
+
+                    </h3>
+                  </div>
+                  <div className='relative'>
+                    <Image
+                      alt={item.title}
+                      src={imageUrl(!isEmptyOrWhiteSpace(item?.coverImage!) ? item?.coverImage! : `/${[item.subject, item.grade, item.code, 'cover.png'].join("/")}`)}
+                      width={0}
+                      height={0}
+                      className="object-cover object-center w-full h-auto"
+                      sizes="(min-width: 768px) 347px, 192px"
+                      priority
+                    />
+
+                  </div>
+
+
+                  <p className="text-sm leading-relaxed mb-4">
+                    {item.description}
+                  </p>
+
+                </Link>
+                <div className='flex gap-4 items-center'>
+                  <div className='grow'>
                     {Array.isArray(item?.tags)
                       ? item.tags.map(({ label }) => (
                         <span
@@ -48,27 +78,17 @@ const ContentGrid = ({
                       ))
                       : null}
                   </div>
-                  <div className="flex gap-5 items-start">
-
-                    {iconType == "math" && <FontAwesomeIcon icon={faSquareRootVariable} size='3x' ></FontAwesomeIcon>}
-                    {iconType == "cz" && <FontAwesomeIcon icon={faBookAtlas} size='3x' ></FontAwesomeIcon>}
-                    <h3 className="text-xl mb-2 leading-snug font-bold hover:underline">
-                      {item.title}
-
-                    </h3>
+                  <div className='flex gap-4'>
+                    <Link href={`/paper/${item.slug}`}>
+                      <FontAwesomeIcon icon={faPrint} size='2xl' ></FontAwesomeIcon>
+                    </Link>
+                    <Link href={`/sheet/${item.slug}`}>
+                      <FontAwesomeIcon icon={faPenToSquare} size='2xl' ></FontAwesomeIcon>
+                    </Link>
+                    <Link href={`/wizard/${item.slug}`}>
+                      <FontAwesomeIcon icon={faWaveSquare} size='2xl' ></FontAwesomeIcon>
+                    </Link>
                   </div>
-
-                  <p className="text-sm leading-relaxed mb-4">
-                    {item.description}
-                  </p>
-
-                </Link>
-                <div className='self-end flex gap-4'>
-                  <FontAwesomeIcon icon={faDownload} size='lg' ></FontAwesomeIcon>
-                  <FontAwesomeIcon icon={faFileExport} size='lg' ></FontAwesomeIcon>
-                  <Link href={`/paper/${item.slug}`}>
-                    <FontAwesomeIcon icon={faPrint} size='lg' ></FontAwesomeIcon>
-                  </Link>
                 </div>
               </div>
             )}

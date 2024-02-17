@@ -2,18 +2,15 @@ import Layout from '../components/Layout'
 import { load } from 'outstatic/server'
 import ContentGrid from '../components/ContentGrid'
 import markdownToHtml from '@/lib/utils/markdown';
+import Navigation from '@/components/Navigation';
 
 const collection = "exams";
 
 export default async function Index() {
   const { content, mathPosts, primaryLanguagePosts } = await getData()
-
   return (
-    <Layout>
-      {/* <div className='hidden md:block relative h-72'>
-        <Background></Background>
-      </div> */}
-      <div className="max-w-6xl mx-auto px-5">
+    <Layout headerNavigation={<Navigation />} showContact={true}>
+      <div>
         <section className="mt-16 mb-16 md:mb-12">
           <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight">
             Mimooficiální cermat testy
@@ -48,7 +45,7 @@ export default async function Index() {
             collection="projects"
           />
         )} */}
-      </div>
+      </div>      
     </Layout>
   )
 }
@@ -72,7 +69,7 @@ async function getData() {
       'subject',
       'year',
       'grade',
-      'timeSlot',
+      'code',
     ])
     .sort({ slug: 1 })
     .toArray()
@@ -87,7 +84,7 @@ async function getData() {
       'subject',
       'year',
       'grade',
-      'timeSlot',
+      'code',
     ])
     .sort({ slug: 1 })
     .toArray()
@@ -102,8 +99,8 @@ async function getData() {
 
   const gradeLabel = (value: string) => {
     if (value === "4") return "čtyřleté";
-    else if (value ==="6") return "šestilété"
-    else if (value ==="8") return "osmileté";
+    else if (value === "6") return "šestilété"
+    else if (value === "8") return "osmileté";
     return value
   }
 

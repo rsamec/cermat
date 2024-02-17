@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { GroupControl, FieldControl, requiredValidator, patternValidator } from '@rx-form/core'
+import { GroupControl, FieldControl, requiredValidator } from '@rx-form/core'
 
 import { Maybe } from './utils';
 import { convertTree } from './quiz-specification';

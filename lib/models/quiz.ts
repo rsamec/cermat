@@ -1,191 +1,116 @@
 import { createModel } from '@rematch/core';
 import { RootModel } from './index';
-import { TreeNode } from '../utils/tree.utils';
-import { Answer, AnswerGroupMetadata, AnswerGroupTreeNode, AnswerMetadata, AnswerMetadataTreeNode, calculateMaxTotalPoints, calculatePoints } from '../utils/quiz-specification';
-import { Option } from '../utils/utils'
+import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
+import { Answer, AnswerMetadataTreeNode, calculateMaxTotalPoints, calculatePoints } from '../utils/quiz-specification';
 import { getVerifyFunction } from '../utils/assert';
 import { GroupCompute } from '../utils/catalog-function';
 
-export interface Question {
-	id: string;
-	metadata: AnswerMetadata<any>
-	data?: QuestionData
-}
-
-export interface QuestionGroup {
-	id: string;
-	metadata?: AnswerGroupMetadata<any>
-
-}
-
 export interface QuizState {
-	tree?: TreeNode<Answer<any>>
-	questions: Question[]
-	currentStep: Question | null; // Use Question type directly
-	answers: Record<string, any>;
-	corrections: Record<string, boolean>;
-	totalPoints: number;
-	maxTotalPoints: number;
+  tree?: TreeNode<Answer<any>>
+  questions: AnswerMetadataTreeNode<any>[]
+  answers: Record<string, any>;
+  corrections: Record<string, boolean>;
+  totalPoints: number;
+  maxTotalPoints: number;
 }
-
-export type AnswerStatus = 'correct' | 'incorrect' | 'unanswered';
-export type AnswerState = { value: any, status: AnswerStatus }
-
-export type QuestionData = { content: string, options: Option<string>[], header?: { title: string, content: string, mutliColumnLayout: boolean } }
 
 const initState: QuizState = {
-	questions: [],
-	currentStep: null,
-	answers: {},
-	corrections: {},
-	totalPoints: 0,
-	maxTotalPoints: 0
+  questions: [],
+  answers: {},
+  corrections: {},
+  totalPoints: 0,
+  maxTotalPoints: 0
 }
 
 export const quiz = createModel<RootModel>()({
-	state: { ...initState },
-	reducers: {
-		init(state, { questions, tree }: { questions: Question[], tree: TreeNode<Answer<any>> }) {
+  state: { ...initState },
+  reducers: {
+    init(state, { tree }: { tree: TreeNode<Answer<any>> }) {
 
-			// const tree = convertTree<QuestionGroup | Question>(quiz);
-
-			// const questions = getAllLeafsWithAncestors(tree).map((d, i) => ({
-			// 	...d.leaf.data,
-			// 	data: leafs[i],
-			// } as Question))
-
-			return {
-				...initState,
-				tree,
-				questions,
-				currentStep: questions.length > 0 ? questions[0] : null,
-				maxTotalPoints: calculateMaxTotalPoints(tree)
-			}
-		},
-		setAnswer(state, { questionId, answer }: { questionId: string; answer: string }) {
-			const question = state.questions.find(d => d.id === questionId);
-			if (question == null) {
-				throw `Question ${questionId} does not exist.`;
-			}
-			const corrections = {
-				...state.corrections,
-				[questionId]: verifyQuestion(question, answer)
-			}
-			const answers = {
-				...state.answers,
-				[questionId]: answer,
-			}
-			return {
-				...state,
-				answers,
-				corrections,
-				totalPoints: calculateTotalPoints(state, { corrections, answers })
-			};
-		},
-		submitQuiz(state) {
-			return {
-				...state,
-				corrections: calculateCorrections(state),
-				totalPoints: calculateTotalPoints(state, { corrections: state.corrections, answers: state.answers }),
-			};
-		},
-		goToNextStep(state) {
-			const currentIndex = state.questions.findIndex((question) => question.id === state.currentStep?.id);
-			const nextIndex = currentIndex + 1;
-
-			return {
-				...state,
-				currentStep: nextIndex < state.questions.length ? state.questions[nextIndex] : state.currentStep,
-			};
-		},
-		goToPreviousStep(state) {
-			const currentIndex = state.questions.findIndex((question) => question.id === state.currentStep?.id);
-			const previousIndex = currentIndex - 1;
-
-			return {
-				...state,
-				currentStep: previousIndex >= 0 ? state.questions[previousIndex] : state.currentStep,
-			};
-		},
-		goToStep(state, id: string) {
-			const stepIndex = state.questions.findIndex((question) => question.id === id);
-
-
-			return {
-				...state,
-				currentStep: stepIndex >= 0 && stepIndex < state.questions.length ? state.questions[stepIndex] : state.currentStep,
-			};
-		},
-	},
-	selectors: (slice) => ({
-		currentStepIndex() {
-			return slice(state => state.currentStep != null ? state.questions.indexOf(state.currentStep) : -1)
-		},
-		totalAnswers() {
-			return slice(state => Object.keys(state.answers).length)
-		},
-		currentAnswerState() {
-			return slice((state) => {
-
-				const currentStep = state.currentStep;
-				if (!currentStep) {
-					return { status: 'unanswered' };
-				}
-
-				const questionId = currentStep.id;
-				const isCorrect = state.corrections[questionId];
-				const hasAnswered = state.answers.hasOwnProperty(questionId);
-
-				if (hasAnswered) {
-					return { status: isCorrect ? 'correct' : 'incorrect', value: state.answers[questionId] };
-				} else {
-					return { status: 'unanswered' };
-				}
-			})
-		},
-	})
+      const questions = getAllLeafsWithAncestors(tree).map((d, i) => d.leaf.data as AnswerMetadataTreeNode<any>)
+      return {
+        ...initState,
+        questions,
+        tree,
+        maxTotalPoints: calculateMaxTotalPoints(tree)
+      }
+    },
+    submitQuizAnswer(state, { questionId, answer }: { questionId: string; answer: string }) {
+      const question = state.questions.find(d => d.id === questionId);
+      if (question == null) {
+        throw `Question ${questionId} does not exist.`;
+      }
+      const answers = {
+        ...state.answers,
+        [questionId]: answer,
+      }
+      const corrections = {
+        ...state.corrections,
+        [questionId]: verifyQuestion(question, answer)
+      }
+      return {
+        ...state,
+        answers,
+        corrections,
+        totalPoints: calculateTotalPoints(state, { corrections, answers })
+      };
+    },
+    submitQuiz(state, answers: Record<string, any>) {
+      const corrections = calculateCorrections(state, answers);
+      return {
+        ...state,
+        answers,
+        corrections,
+        totalPoints: calculateTotalPoints(state, { corrections, answers }),
+      };
+    },
+  },
+  selectors: (slice) => ({
+    totalAnswers() {
+      return slice(state => Object.keys(state.answers).length)
+    },
+  })
 });
 
 // Helper functions
-const calculateCorrections = (state: QuizState) => {
-	const { answers } = state;
-	const corrections: Record<string, boolean> = {};
+const calculateCorrections = (state: QuizState, answers: Record<string, any>) => {
+  const corrections: Record<string, boolean> = {};
 
-	state.questions.forEach((question) => {
-		corrections[question.id] = verifyQuestion(question, answers[question.id])
-	});
+  state.questions.forEach((question) => {
+    corrections[question.id] = verifyQuestion(question, answers[question.id])
+  });
 
-	return corrections;
+  return corrections;
 };
 
-const verifyQuestion = (question: Question, answer: string) => {
-	const verifyBy = question.metadata.verifyBy;
-	const validator = getVerifyFunction(verifyBy);
-	return validator(answer) == null;
+const verifyQuestion = (question: AnswerMetadataTreeNode<any>, answer: string) => {
+  const verifyBy = question.node.verifyBy;
+  const validator = getVerifyFunction(verifyBy);
+  return validator(answer) == null;
 }
 
 
 const calculateTotalPoints = (state: QuizState, { corrections, answers }: { corrections: Record<string, boolean>, answers: Record<string, any> }) => {
-	let totalPoints = 0;
-	const tree = state.tree;
-	if (tree == null) return totalPoints;
+  let totalPoints = 0;
+  const tree = state.tree;
+  if (tree == null) return totalPoints;
 
-	const calculateSum = (children: AnswerMetadataTreeNode<any>[]) => children.reduce((out, d) => {
-		out += d.node.points == null && d.node.verifyBy.kind == "selfEvaluate"
-			? (answers[d.id]?.value ?? 0) : corrections[d.id] ? (d.node.points ?? 0) : 0
-		return out;
-	}, 0)
-	const calculateCustom = (computBy: GroupCompute, children: AnswerMetadataTreeNode<any>[]) => {
-		const successCount = children.map(d => corrections[d.id]).filter(d => d).length;
-		const points = computBy.args.filter(d => d.min <= successCount).map(d => d.points);
-		return points.length > 0 ? Math.max(...points) : 0
-	}
+  const calculateSum = (children: AnswerMetadataTreeNode<any>[]) => children.reduce((out, d) => {
+    out += d.node.points == null && d.node.verifyBy.kind == "selfEvaluate"
+      ? (answers[d.id]?.value ?? 0) : corrections[d.id] ? (d.node.points ?? 0) : 0
+    return out;
+  }, 0)
+  const calculateCustom = (computBy: GroupCompute, children: AnswerMetadataTreeNode<any>[]) => {
+    const successCount = children.map(d => corrections[d.id]).filter(d => d).length;
+    const points = computBy.args.filter(d => d.min <= successCount).map(d => d.points);
+    return points.length > 0 ? Math.max(...points) : 0
+  }
 
 
-	totalPoints = calculatePoints(tree, (computeBy, leafs) => computeBy != null && computeBy.kind == "group"
-		? calculateCustom(computeBy, leafs)
-		: calculateSum(leafs))
+  totalPoints = calculatePoints(tree, (computeBy, leafs) => computeBy != null && computeBy.kind == "group"
+    ? calculateCustom(computeBy, leafs)
+    : calculateSum(leafs))
 
-	return totalPoints;
+  return totalPoints;
 
 };

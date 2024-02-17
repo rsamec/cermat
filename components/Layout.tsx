@@ -1,25 +1,24 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { cls } from '@/lib/utils/utils'
 import Footer from './Footer'
 import Header from './Header'
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import Link from 'next/link';
 
 type Props = {
+  headerNavigation: React.ReactNode
+  showContact?: boolean
+  fullWidth?: boolean
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, headerNavigation, fullWidth, showContact }: Props) => {
   return (
     <>
       <Header>
-          <Link href="/" className="hover:underline flex gap-2 items-center">
-            <FontAwesomeIcon icon={faHome}></FontAwesomeIcon> Home
-          </Link>
+        {headerNavigation}
       </Header>
-      <div className="min-h-screen">
+      <div className={cls(["min-h-screen mx-auto p-5", !fullWidth && "max-w-6xl"])}>
         <main>{children}</main>
       </div>
-      <Footer />
+      <Footer showContact={showContact} />
     </>
   )
 }

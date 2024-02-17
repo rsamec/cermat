@@ -1,6 +1,5 @@
 import React, { ChangeEvent } from 'react';
 import withControl, { ValueProps } from './WithFormControl';
-
 type MathInputProps = ValueProps<string> & { className?: string }
 
 const MathInput: React.FC<MathInputProps> = ({ value, onChange, className }) => {
@@ -9,12 +8,14 @@ const MathInput: React.FC<MathInputProps> = ({ value, onChange, className }) => 
   };
 
   return (
-    <input
-      type="text"
-      className={className}
-      value={value ?? ''}
-      onChange={handleChange}
-    />
+    <div>
+      <input
+        type="text"
+        className={className}
+        value={value ?? ''}
+        onChange={handleChange}
+      /> 
+    </div>   
   );
 };
 

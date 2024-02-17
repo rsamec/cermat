@@ -10,10 +10,9 @@ import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadings
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Wizard from '@/components/wizard/wizard'
 import { loadJson, loadMarkdown } from '@/lib/utils/file.utils'
-import { Question } from '@/lib/models/quiz'
+import { Question } from '@/lib/models/wizard'
 import { AnswerGroup, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+import Layout from '@/components/Layout'
 
 const collection = 'exams';
 type Project = {
@@ -65,16 +64,13 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
   }
 }
 
-export default async function Exam(params: Params) {
+export default async function WizardPage(params: Params) {
   const { project, questions, tree } = await getData(params);
 
   return (
-    <>
-      <Header><Navigation name={project.title} /></Header>
-      <Wizard questions={questions} tree={tree}></Wizard>
-      <Footer></Footer>
-    </>
-  )
+    <Layout headerNavigation={<Navigation name={project.title} />}>
+      <Wizard steps={questions} tree={tree}></Wizard>
+    </Layout>)
 }
 
 async function getData({ params }: Params) {
@@ -151,6 +147,7 @@ async function getData({ params }: Params) {
     //console.log(node.leaf.data.header, isInRange, range);
     const treeLeaf = d.leaf.data as AnswerMetadataTreeNode<any>
     const headerNode = node.ancestors[1].data;
+    const headerEqualCount = countMaxChars(headerNode.header, "=");
 
     return {
       id: treeLeaf.id,
@@ -161,24 +158,13 @@ async function getData({ params }: Params) {
           header: {
             title: headerNode.header.replaceAll(/=+/g, ""),
             content: headerNode.contentHtml,
-            mutliColumnLayout: countMaxChars(headerNode.header, "=") > 3 ? true : false
+            mutliColumnLayout: headerEqualCount > 3 ? true : false
           }
         }),
         options: node.leaf.data.options?.length > 0 ? node.leaf.data.options : node.ancestors[node.ancestors.length - 2].data.options
       }
     } as Question
   })
-
-
-
-
-  // const moreProjects = await db
-  //   .find({ collection, slug: { $ne: params.slug } }, [
-  //     'title',
-  //     'slug',
-  //     'coverImage'
-  //   ])
-  //   .toArray()
 
   return {
     project,

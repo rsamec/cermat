@@ -1,13 +1,16 @@
 import Navigation from '@/components/Navigation'
+
 import { getDocumentSlugs, load } from 'outstatic/server'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
-import { absoluteUrl, cls } from '@/lib/utils/utils'
-import markdownToHtml from '@/lib/utils/markdown'
-import { loadMarkdown } from '@/lib/utils/file.utils'
+import { Maybe, absoluteUrl } from '@/lib/utils/utils'
+import { AnswerGroup, convertTree } from '@/lib/utils/quiz-specification'
+import { loadJson, loadMarkdown } from '@/lib/utils/file.utils'
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown'
-import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, countMaxChars } from '@/lib/utils/parser.utils'
+import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, ParsedQuestion } from '@/lib/utils/parser.utils'
+import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Layout from '@/components/Layout'
+import QuizSheet from '@/components/quiz/quiz-sheet'
 
 const collection = 'exams';
 type Project = {
@@ -59,39 +62,13 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
   }
 }
 
-export default async function Exam(params: Params) {
-  const { project, contentHeadings } = await getData(params);
+export default async function Sheet(params: Params) {
+  const { project, quizTree, questions } = await getData(params);
 
   return (
-    <Layout headerNavigation={<Navigation name={project.title} />} fullWidth={true}>
-      <div data-testid="root-document">
-        <div className='columns-sm gap-6 [column-rule-style:solid] [column-rule-width:1px] [column-rule-color:lightgray]'>
-          {contentHeadings.map((d, i, arr) => <div key={i} data-testid={`question-${i}`}>
-            {
-              d.type?.name == Abbreviations.ST && i !== 0 ? <div className='py-3' /> : null
-            }
-            <div
-              className={cls([
-                "prose lg:prose-xl",
-                d.hasTexIndent && d.multiColumnsCount <= 1 && "[&_blockquote_p]:indent-2 [&_blockquote]:text-justify",
-                d.multiColumnsCount > 1 && "[&_blockquote]:sm:columns-2"
-              ])}
-              dangerouslySetInnerHTML={{ __html: d.contentHtml }}
-            />
-            {d.options.map((d, i) => <div className='flex gap-1' key={`opt-${i}`}>
-              <span>{d.value})</span>
-              <div
-                className="prose lg:prose-2xl"
-                dangerouslySetInnerHTML={{ __html: d.name }}
-              />
-            </div>)
-            }
-          </div>
-          )}
-        </div>
-      </div>
+    <Layout headerNavigation={<Navigation name={project.title} />}>
+        <QuizSheet tree={quizTree} headersAndOptions={questions}></QuizSheet>      
     </Layout>
-
   )
 }
 
@@ -116,24 +93,41 @@ async function getData({ params }: Params) {
   const pathes = [project.subject, project.grade, project.code]
   const quizContent = await loadMarkdown(pathes.concat(['index.md']));
 
+  const quiz: AnswerGroup<any> = await loadJson([`${project.code}.json`]);
+
+  const quizTree = convertTree(quiz);
+
+
   const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
   const parsedTree = mdParser.parse(quizContent);
   const headings = chunkHeadingsList(parsedTree, quizContent);
 
-  const contentHeadings = await Promise.all(headings.map(async (d) => ({
-    ...d,
-    options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
-      ...opt,
-      name: await markdownToHtml(opt.name)
-    }))) : d.options,
-    hasTexIndent: countMaxChars(d.header, "=") === 4,
-    multiColumnsCount: Math.max(0, countMaxChars(d.header, "=") - 4),
-    contentHtml: (await markdownToHtml(d.header, { path: pathes }) + await markdownToHtml(d.content, { path: pathes })),
-  })))
+
+  function order(name: Maybe<string>) {
+    if (name == Abbreviations.ST) return 1;
+    if (name == Abbreviations.H1) return 2;
+    if (name == Abbreviations.H2) return 3;
+    return 0;
+  }
+
+  const headingsTreeNodes = createTree(headings.map(d => ({ data: d })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
+  const questions = getAllLeafsWithAncestors({ data: {} as ParsedQuestion, children: headingsTreeNodes }, (parent, child) => {
+    //copy some children property bottom up from leafs to its parent
+    if (parent.options?.length === 0 && child.options?.length > 0) {
+      parent.options = child.options;
+    }
+  }).map(d => ({
+    header: d.leaf.data.header,
+    options: d.leaf.data.options?.length > 0 ? d.leaf.data.options : d.ancestors[d.ancestors.length - 2].data.options
+  }));
+
+
+
 
   return {
     project,
-    contentHeadings
+    quizTree,
+    questions
   }
 }
 

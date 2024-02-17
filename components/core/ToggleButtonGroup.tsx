@@ -2,14 +2,16 @@
 
 import React from 'react';
 import withControl, { ValueProps } from './WithFormControl';
-import { Maybe, cls } from '@/lib/utils/utils';
+import { Maybe, cls, isEmptyOrWhiteSpace } from '@/lib/utils/utils';
 
+export type ToggleButtonGroupType = 'success' | 'danger'
 type ToggleButtonGroupProps<T> = ValueProps<T> & {
   options: T[];
   format?: (option: T) => string;
   badge?: (option: T) => string;
   isSame?: (selected: Maybe<T>, option: T) => boolean
-  type?: 'success' | 'danger'
+  type?: ToggleButtonGroupType
+  className?: string
 }
 
 export const ToggleButtonGroup = <T extends Object>({
@@ -19,7 +21,8 @@ export const ToggleButtonGroup = <T extends Object>({
   format,
   badge,
   isSame,
-  type
+  type,
+  className
 }: ToggleButtonGroupProps<T>) => {
 
   const isSelected = isSame ?? ((selected: Maybe<T> | undefined, option: T) => selected != null && selected === option);
@@ -29,12 +32,12 @@ export const ToggleButtonGroup = <T extends Object>({
   };
 
   return (
-    <div className='flex flex-wrap justify-items-start  gap-2'>
+    <div className={className}>
       {options.map((option, i) => {
 
         const selected = isSelected(value, option);
         return (<button
-          className={cls(['py-3 px-4 inline-flex items-center gap-x-2 rounded text-sm text-left font-medium focus:z-10 border text-gray-800 shadow-sm dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
+          className={cls(['py-2 px-2 inline-flex items-center gap-x-2 text-sm text-left font-medium focus:z-10 border text-gray-800 shadow-sm dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
             '--:dark:bg-slate-900 --:hover:bg-gray-50 --:dark:hover:bg-gray-800 --:border-gray-200 --:dark:border-gray-700',
             selected && '-:bg-slate-200 -:hover:bg-slate-300 -:dark:bg-slate-600 -:hover:bg-gray-350 -:dark:hover:bg-gray-700 -:border-gray-200 -:dark:border-gray-700',
             selected && type === 'success' && 'bg-green-100 dark:bg-green-800 hover:bg-green-200 border-green-200 dark:border-green-400',
@@ -45,7 +48,7 @@ export const ToggleButtonGroup = <T extends Object>({
           <div className="inline-flex self-start items-center gap-x-2">
             {badge != null ?
               <span className={cls(['inline-flex self-start py-0.5 px-3 rounded-full font-medium text-white bg-gray-500'])}>{badge(option)}</span> : null}
-            <span dangerouslySetInnerHTML={{ __html:format ? format(option) : option.toString()}}></span>
+            {!isEmptyOrWhiteSpace(format ? format(option) : option.toString()) && <span dangerouslySetInnerHTML={{ __html: format ? format(option) : option.toString() }}></span>}
           </div>
 
         </button>)

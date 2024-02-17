@@ -91,7 +91,7 @@ export class CoreVerifyiers {
 
   static SelfEvaluateTo({ options }: { options: Option<number>[] }) {
     return (control: Option<number>) => {
-      return options[options.length - 1].value == control.value ? null : control
+      return options[options.length - 1].value == control?.value ? null : control
     }
   }
 }

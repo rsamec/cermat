@@ -3,28 +3,30 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { RootState, Dispatch, store } from "../../lib/store";
-import { Question } from "@/lib/models/quiz";
+import { Question } from "@/lib/models/wizard";
 import { cls, filterSteps } from "@/lib/utils/utils";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import Badge from "../core/Badge";
+import { faAngleLeft, faAngleRight, faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import TextBadge from "../core/Badge";
 
 const selection = store.select((models) => ({
-  currentStepIndex: models.quiz.currentStepIndex,
-  currentAnswerState: models.quiz.currentAnswerState,
+  currentStepIndex: models.wizard.currentStepIndex,
   totalAnswers: models.quiz.totalAnswers,
 }));
 
 const mapState = (state: RootState) => ({
-  ...state.quiz,
+  ...state.wizard,
+  corrections: state.quiz.corrections,
   ...selection(state as never),
 })
 
 const mapDispatch = (dispatch: Dispatch) => ({
-  next: () => dispatch.quiz.goToNextStep(),
-  back: () => dispatch.quiz.goToPreviousStep(),
-  goTo: (id: string) => dispatch.quiz.goToStep(id),
+  next: () => dispatch.wizard.goToNextStep(),
+  back: () => dispatch.wizard.goToPreviousStep(),
+  start: () => dispatch.wizard.goToFirstStep(),
+  end: () => dispatch.wizard.goToLastStep(),
+  goTo: (id: string) => dispatch.wizard.goToStep(id),
 });
 
 type StateProps = ReturnType<typeof mapState>;
@@ -33,7 +35,7 @@ type Props = { questions: Question[] } & StateProps & DispatchProps;
 
 
 function Stepper(props: Props) {
-  const steps = props.questions;
+  const steps = props.steps;
   const [maxVisibleSteps, setMaxVisibleSteps] = useState(5);
 
   useEffect(() => {
@@ -72,10 +74,12 @@ function Stepper(props: Props) {
 
     <div className="hidden md:flex flex-col items-center">
       <div className="flex items-center gap-5">
-
-        <button className="btn"
-          onClick={() => props.back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
-
+        <div className="flex items-center">
+          <button className="btn"
+            onClick={() => props.start()}><FontAwesomeIcon icon={faAnglesLeft} /></button>
+          <button className="btn"
+            onClick={() => props.back()}><FontAwesomeIcon icon={faAngleLeft} /></button>
+        </div>
         <div className="flex items-center gap-1">
           {filterSteps(steps, props.currentStepIndex, maxVisibleSteps).map((d, i) => {
             const selected = d.id === props.currentStep?.id;
@@ -98,9 +102,12 @@ function Stepper(props: Props) {
           )}
 
         </div>
-        <button className="btn"
-          onClick={() => props.next()}><FontAwesomeIcon icon={faAngleRight} /></button>
-
+        <div className="flex items-center gap">
+          <button className="btn"
+            onClick={() => props.next()}><FontAwesomeIcon icon={faAngleRight} /></button>
+          <button className="btn"
+            onClick={() => props.end()}><FontAwesomeIcon icon={faAnglesRight} /></button>
+        </div>
       </div>
     </div>
   );

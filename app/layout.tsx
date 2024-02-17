@@ -6,6 +6,7 @@ config.autoAddCss = false;
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+//const inter = Grandstander({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Cermat Application',
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=''>
-      <body className={`bg-white dark:bg-slate-900 dark:text-white`}>{children}</body>
+      <body className={`${inter.className} bg-white dark:bg-slate-900 dark:text-white`}>{children}</body>
     </html>
   )
 }
