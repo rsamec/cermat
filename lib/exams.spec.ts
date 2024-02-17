@@ -14,6 +14,8 @@ import cestina7 from './exams/C7A-2023';
 
 import cestina5B from './exams/C5B-2023';
 import cestina9B from './exams/C9B-2023';
+import czMaturita from './exams/CJMZD23';
+import cestina9C from './exams/C9C-2023';
 
 async function testQuestionDifference(pathes: string[], tree: TreeNode<AnswerTreeNode<any>>) {
   const questions = await parseMarkdownTree(pathes);
@@ -70,6 +72,8 @@ test.each([
   { quiz: cestina7, pathes: ["cz", "6", "C7A-2023"] },
   { quiz: cz9_2023_1, pathes: ["cz", "4", "C9A-2023"] },
   { quiz: cestina9B, pathes: ["cz", "4", "C9B-2023"] },
+  { quiz: czMaturita, pathes: ["cz", "4", "SSDmt-2023"] },
+  {quiz: cestina9C, pathes: ["cz", "4", "C9C-2023"] },
 ])(`exam validate $pathes`, async ({ quiz, pathes }) => {
   const tree = convertTree(quiz);
   expect(calculateMaxTotalPoints(tree)).toBe(50);
