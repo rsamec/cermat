@@ -2,7 +2,6 @@ import { cls } from '@/lib/utils/utils';
 import React, { ReactNode } from 'react';
 
 type BadgeProps = {
-  text: string | number,
   children: ReactNode,
   type: "Success" | "Danger" | "Warning" | "Default" | "Gray"
 }

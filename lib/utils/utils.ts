@@ -146,3 +146,10 @@ export function matchNumberListCount(input: string) {
   });
   //return input.replaceAll(/(\d+)(?:\.(\d+))?/gm, (_, ...matches:string[]) => `## ${matches.join('.')}`)
 }
+export function formatTime(seconds: number) {
+  const miliseconds = seconds * 1000
+  var minutes =  Math.floor(miliseconds / (1000 * 60));
+  var seconds = Math.floor((miliseconds % (1000 * 60)) / 1000);
+  return minutes + "m " + seconds + "s";
+   
+}

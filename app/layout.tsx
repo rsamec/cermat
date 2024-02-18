@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 //const inter = Grandstander({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Cermat Application',
+  title: 'Cermat online testy',
   description: 'Cermat Test application',
 }
 
