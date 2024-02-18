@@ -9,15 +9,16 @@ import { useRef, useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { absoluteUrl, cls, format, updateMap } from "@/lib/utils/utils";
+import { absoluteUrl, cls, format, formatTime, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
-import TextBadge from "../core/Badge";
+import Badge from "../core/Badge";
 import { FieldControl } from "@rx-form/core";
 import { useControlValid } from "@rx-form/react";
 import { ComponentFunctionSpec } from "@/lib/utils/catalog-function";
 import ToggleSwitchBadge from "../core/ToggleSwitchBadge";
 import DOMPurify from "dompurify";
 import { toHtml } from "@/lib/utils/math.utils";
+import TextBadge from "../core/TextBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.submitQuizAnswer(args),
@@ -32,6 +33,7 @@ const selection = store.select((models) => ({
 
 const mapState = (state: RootState) => ({
   ...state.quiz,
+  time: state.timer.time,
   ...selection(state as never),
 })
 
@@ -43,7 +45,7 @@ type Props = { step: Question } & StateProps & DispatchProps;
 
 
 
-const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
+const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, time, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
 
   const stepId = step.id;
   const correction = corrections[stepId]
@@ -93,7 +95,11 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, setAn
   return (
 
     <div className="flex flex-col gap-2" >
-
+      <div>
+        <Badge type="Gray">
+           {formatTime(time)}
+        </Badge>
+      </div>
       {header != null ?
         <details className="[&_svg]:open:-rotate-180" open={isHeaderExpanded} >
           <summary className="text-xl font-bold" onClick={(e) => {

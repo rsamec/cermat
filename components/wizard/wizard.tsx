@@ -16,6 +16,7 @@ export default function Wizard({ steps, tree }: { steps: Question[], tree: TreeN
     // Dispatch fetchData action when the component mounts    
     dispatch.wizard.init({ steps });
     dispatch.quiz.init({ tree });
+    dispatch.timer.startTimer()
   }, [steps, tree, dispatch.wizard, dispatch.quiz]);
 
 
