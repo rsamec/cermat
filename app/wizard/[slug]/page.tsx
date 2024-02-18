@@ -69,7 +69,7 @@ export default async function WizardPage(params: Params) {
 
   return (
     <Layout headerNavigation={<Navigation name={project.title} />}>
-      <Wizard steps={questions} tree={tree}></Wizard>
+      <Wizard steps={questions} tree={tree} timeInSeconds={project.subject == "cz" ?3600: 4200} ></Wizard>
     </Layout>)
 }
 

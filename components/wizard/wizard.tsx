@@ -9,14 +9,14 @@ import { TreeNode } from "@/lib/utils/tree.utils";
 import { Answer } from "@/lib/utils/quiz-specification";
 import LeavePageWarning from "../LeavePageWarning";
 
-export default function Wizard({ steps, tree }: { steps: Question[], tree: TreeNode<Answer<any>> }) {
+export default function Wizard({ steps, tree,timeInSeconds }: { steps: Question[], tree: TreeNode<Answer<any>>,timeInSeconds: number }) {
   const { dispatch } = store;
 
   useEffect(() => {
     // Dispatch fetchData action when the component mounts    
     dispatch.wizard.init({ steps });
     dispatch.quiz.init({ tree });
-    dispatch.timer.startTimer()
+    dispatch.timer.startTimer(timeInSeconds)
   }, [steps, tree, dispatch.wizard, dispatch.quiz]);
 
 

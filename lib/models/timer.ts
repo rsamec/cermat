@@ -10,9 +10,13 @@ export const timer = createModel<RootModel>()({
         decrement(state) {
             return { ...state, time: state.time - 1 };
         },
+        setTime(state, timeInSeconds:number){
+            return {...state, time:timeInSeconds}
+        }
     },
     effects: (dispatch) => ({
-        async startTimer() {
+        async startTimer(timeInSeconds: number) {
+            dispatch.timer.setTime (timeInSeconds)
             while (true) {
                 dispatch.timer.decrement(); // Decrement the time
                 await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second
