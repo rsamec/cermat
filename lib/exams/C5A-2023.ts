@@ -47,7 +47,7 @@ const form = group({
   18: words('vyzvídat,nerozuměl,autogramy,nejúžasnější', fourPoints),
   19: group({
     19.1: optionBool(false),
-    19.2: optionBool(false),
+    19.2: optionBool(false), 
     19.3: optionBool(false),
     19.4: optionBool(true),
   }, tasks4Max2Points),
