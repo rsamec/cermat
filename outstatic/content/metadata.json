@@ -1,6 +1,6 @@
 {
-  "commit": "fb691ad9747fecb90b9c489a3513e9c6dac0337e",
-  "generated": "Mon, 19 Feb 2024 20:17:09 GMT",
+  "commit": "0e73a0f1cca6d56d2b74baef3c9c0c08f785b08f",
+  "generated": "2024-02-19T20:21:44.457Z",
   "metadata": [
     {
       "__outstatic": {
@@ -67,28 +67,6 @@
       "status": "published",
       "subject": "cz",
       "title": "Čeština (7 ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "1fd231924c786891d259ab4ac7ce545df7e2cd86",
-        "hash": "488444122",
-        "path": "outstatic/content/exams/c5b-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C5B-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "grade": "8",
-      "publishedAt": "2024-02-11T06:49:17.845Z",
-      "slug": "c5b-2023",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
@@ -198,6 +176,28 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "0e73a0f1cca6d56d2b74baef3c9c0c08f785b08f",
+        "hash": "3023593936",
+        "path": "outstatic/content/exams/c5b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C5B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "grade": "8",
+      "publishedAt": "2024-02-11T06:49:17.845Z",
+      "slug": "c5b-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
