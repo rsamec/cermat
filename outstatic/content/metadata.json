@@ -1,6 +1,6 @@
 {
-  "commit": "b52d0bde3e14e868c993cb2117e1ddd94efc3922",
-  "generated": "Sun, 11 Feb 2024 07:04:07 GMT",
+  "commit": "ce74a3d3f6e8ee9cb3b011648fe09879d5248af3",
+  "generated": "2024-02-19T20:10:46.639Z",
   "metadata": [
     {
       "__outstatic": {
@@ -176,6 +176,28 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (5 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "ce74a3d3f6e8ee9cb3b011648fe09879d5248af3",
+        "hash": "2638276388",
+        "path": "outstatic/content/exams/cestina-maturita-jaro-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "CM9-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "cestina-maturita-jaro-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (maturita) - jaro 2023",
       "year": "2023"
     }
   ]
