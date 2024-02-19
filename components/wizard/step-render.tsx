@@ -1,7 +1,7 @@
 'use client'
 import * as React from "react";
 import WizardStep from "./wizard-step";
-import { Dispatch, RootState, store } from "@/lib/store";
+import { Dispatch, RootState } from "@/lib/store";
 import { connect } from "react-redux";
 import Stepper from "./stepper";
 import { useSwipeable } from "react-swipeable";
@@ -27,12 +27,10 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ currentStep, next
 
 
   return <div  {...handlers} className="min-h-screen">
-    {currentStep == null ?
-      <div>Loading...</div> :
-      <div className="flex flex-col gap-4">
-        <Stepper></Stepper>
-        <WizardStep step={currentStep}></WizardStep>
-      </div>}
+    <div className="flex flex-col gap-4">
+      <Stepper></Stepper>
+      <WizardStep step={currentStep}></WizardStep>
+    </div>
   </div>
 };
 

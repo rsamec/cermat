@@ -20,6 +20,7 @@ export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>) {
       ...(spec.kind === 'text' && spec.args?.patternType === 'ratio' ? [patternValidator(new RegExp(patternCatalog.ratio.regex))] : [])
     ]
   }
+  
   const traverse = (node: TreeNode<AnswerTreeNode<T>>) => {
 
     // Check if the current node is a leaf (no children)
@@ -57,8 +58,8 @@ export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>) {
 
     }
   }
-
-  return traverse(tree) as GroupControl<any>
+  const result = traverse(tree) as GroupControl<any>;  
+  return result;
 }
 
 export function getControl(control: GroupControl, code: QuizQuestionCode) {

@@ -37,7 +37,7 @@ type DispatchProps = ReturnType<typeof mapDispatch>;
 type Props = { headersAndOptions: Pick<ParsedQuestion, 'header' | 'options'>[] } & StateProps & DispatchProps;
 
 const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, corrections, questions, totalAnswers, totalPoints, maxTotalPoints }) => {
-  const groupControlRef = useRef<GroupControl>(convertToForm(tree!));
+  const [form] = useState(() => convertToForm(tree!));
   const leafs = getAllLeafsWithAncestors(tree!).map((d, i) => {
     const options = headersAndOptions[i]?.options;
     const leaf = d.leaf.data as AnswerMetadataTreeNode<any>;
@@ -49,19 +49,19 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
 
 
   useEffect(() => {
-    const subscription = groupControlRef.current.valueChange.subscribe((v) => {
+    const subscription = form.valueChange.subscribe((v) => {
       setVerified(false);
-      setInvalid(groupControlRef.current.invalid);
-      console.log(groupControlRef.current.invalid)
+      setInvalid(form.invalid);
+      console.log(form.invalid)
     });
 
     return () => {
       subscription.unsubscribe();
     };
-  }, []);
+  }, [form]);
 
   const submitQuizHandler = () => {
-    const value = groupControlRef.current.value;
+    const value = form.value;
     const answers = Object.entries(value).flatMap(([key, value]) => value != null && Object.keys(value).some(d => d.startsWith(key)) ? Object.entries(value).map(([key, value]) => ({ key, value })) : { key, value });
     submitQuiz(answers.reduce((out, { key, value }) => {
       out[key] = value;
@@ -74,7 +74,7 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
     <div className="flex flex-col gap-2">
       {leafs.map(({ leaf, options }) => {
         const { id, node } = leaf;
-        const control = getControl(groupControlRef.current, id as any)
+        const control = getControl(form, id as any)
         const correction = corrections[id];
         return node.inputBy && (
           <div className="flex flex-wrap gap-10" key={`${id}`}>
@@ -84,7 +84,7 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
               <div className="flex items-center gap-4">
                 {verified && correction === true && <FontAwesomeIcon icon={faThumbsUp} size="xl" className="text-green-600"></FontAwesomeIcon>}
                 {verified && correction === false && <FontAwesomeIcon icon={faThumbsDown} size="xl" className="text-red-600"></FontAwesomeIcon>}
-                {verified && correction !== true && <Badge type="Success" text={''} >{
+                {verified && correction !== true && <Badge type="Success">{
                   (node.inputBy as any)?.kind === 'math' ?
                     <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(node.verifyBy.args))) }} /> :
                     <div>{format(node.verifyBy?.args)}</div>
@@ -97,7 +97,7 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
       })}
       <br />
       <div className="flex gap-4">
-        <button className="btn btn-blue" onClick={() => markAsDirty(groupControlRef.current)}>
+        <button className="btn btn-blue" onClick={() => markAsDirty(form)}>
           Zkontrolovat
         </button>
         <button className="btn btn-blue" disabled={invalid} onClick={submitQuizHandler}>

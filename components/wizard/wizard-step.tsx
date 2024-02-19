@@ -5,7 +5,7 @@ import { Dispatch, RootState, store } from "../../lib/store";
 import { Question } from "@/lib/models/wizard";
 import { convertToForm, getControl } from "@/lib/utils/form.utils";
 import { createOptionAnswer, createBoolAnswer, renderControl } from "@/lib/utils/component.utils";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -51,16 +51,15 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, time,
   const correction = corrections[stepId]
   const status = correction === true ? 'success' : correction === false ? 'danger' : undefined
 
-
-  const groupControlRef = useRef(convertToForm(tree!));
+  const [form] = useState(() => convertToForm(tree!))
   const [questionMap, setQuestionMap] = useState(new Map())
   const [headerMap, setHeaderMap] = useState(new Map())
 
 
-  const formControl = getControl(groupControlRef.current, stepId as any);
+  const formControl = getControl(form, stepId as any);
   const valid = useControlValid(formControl!);
   if (formControl == null) {
-    return <div>Ooops....</div>
+    return <div>Ooops...., problem with question: {stepId}</div>
   }
 
 
@@ -95,11 +94,11 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, time,
   return (
 
     <div className="flex flex-col gap-2" >
-      <div>
+      {/* <div>
         <Badge type="Gray">
            {formatTime(time)}
         </Badge>
-      </div>
+      </div> */}
       {header != null ?
         <details className="[&_svg]:open:-rotate-180" open={isHeaderExpanded} >
           <summary className="text-xl font-bold" onClick={(e) => {
