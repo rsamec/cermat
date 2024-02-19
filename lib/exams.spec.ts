@@ -14,7 +14,8 @@ import cestina7 from './exams/C7A-2023';
 
 import cestina5B from './exams/C5B-2023';
 import cestina9B from './exams/C9B-2023';
-import czMaturita from './exams/CJMZD23';
+import cz_2023_A from './exams/CMA-2023';
+import cz_2023_B from './exams/CMB-2023';
 import cestina9C from './exams/C9C-2023';
 
 async function testQuestionDifference(pathes: string[], tree: TreeNode<AnswerTreeNode<any>>) {
@@ -82,7 +83,8 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
   { quiz: cz9_2023_1, pathes: cz4Years.concat("C9A-2023") },
   { quiz: cestina9B, pathes: cz4Years.concat("C9B-2023") },
   { quiz: cestina9C, pathes: cz4Years.concat("C9C-2023") },
-  { quiz: czMaturita, pathes: czDimploma.concat("SSDmt-2023") },
+  { quiz: cz_2023_A, pathes: czDimploma.concat("CMA-2023") },
+  { quiz: cz_2023_B, pathes: czDimploma.concat("CMB-2023") },
 ]
 
 test.each(examTestCases)(`compute total max points $pathes`, ({ quiz, pathes }) => {
