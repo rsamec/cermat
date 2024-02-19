@@ -63,11 +63,11 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function Sheet(params: Params) {
-  const { project, quizTree, questions } = await getData(params);
+  const { project, quizTree, questions, assetPath } = await getData(params);
 
   return (
     <Layout headerNavigation={<Navigation name={project.title} />}>
-        <QuizSheet tree={quizTree} headersAndOptions={questions}></QuizSheet>      
+        <QuizSheet tree={quizTree} headersAndOptions={questions} assetPath={assetPath}></QuizSheet>      
     </Layout>
   )
 }
@@ -90,8 +90,8 @@ async function getData({ params }: Params) {
     .first()
 
 
-  const pathes = [project.subject, project.grade, project.code]
-  const quizContent = await loadMarkdown(pathes.concat(['index.md']));
+  const assetPath = [project.subject, project.grade, project.code]
+  const quizContent = await loadMarkdown(assetPath.concat(['index.md']));
 
   const quiz: AnswerGroup<any> = await loadJson([`${project.code}.json`]);
 
@@ -125,6 +125,7 @@ async function getData({ params }: Params) {
 
 
   return {
+    assetPath,
     project,
     quizTree,
     questions

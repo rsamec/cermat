@@ -9,14 +9,14 @@ import QuizForm from "./quiz-form";
 import { ParsedQuestion } from "@/lib/utils/parser.utils";
 import LoadableBlock from "../LoadableBlock";
 
-export default function QuizSheet({ tree, headersAndOptions }: { headersAndOptions: Pick<ParsedQuestion, 'header' | 'options'>[], tree: TreeNode<Answer<any>> }) {
+export default function QuizSheet({ tree, headersAndOptions, assetPath }: { headersAndOptions: Pick<ParsedQuestion, 'header' | 'options'>[], tree: TreeNode<Answer<any>>, assetPath: string[] }) {
   const { dispatch } = store;
   const [loaded, setLoaded] = React.useState(false);
 
   useEffect(() => {
-    dispatch.quiz.init({ tree })
+    dispatch.quiz.init({ tree, assetPath })
     setLoaded(true);
-  }, [tree, dispatch.quiz]);
+  }, [tree, dispatch.quiz, assetPath]);
 
 
   return (
