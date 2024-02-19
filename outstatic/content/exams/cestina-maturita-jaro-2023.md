@@ -1,5 +1,5 @@
 ---
-code: 'CM9-2023'
+code: 'CMA-2023'
 grade: 'diploma'
 year: '2023'
 subject: 'cz'
@@ -14,4 +14,4 @@ title: 'Čeština (maturita) - jaro 2023'
 publishedAt: '2024-02-19T20:11:55.734Z'
 ---
 
-Didaktický test z českého jazyka obsahuje 32 úloh, na kterých mohlo studentstvo nasbírat až 50 bodů. Pro úspěšné složení maturitní zkoušky pak muselo pokořit hranici 44% úspěšnosti. 
+Didaktický test z českého jazyka obsahuje 32 úloh, na kterých mohlo studentstvo nasbírat až 50 bodů. Pro úspěšné složení maturitní zkoušky pak muselo pokořit hranici 44% úspěšnosti.

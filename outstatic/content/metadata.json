@@ -1,6 +1,6 @@
 {
-  "commit": "e4a27974e72445743ef1cda1896a44dfae43ea71",
-  "generated": "Mon, 19 Feb 2024 20:11:01 GMT",
+  "commit": "000871a8d5dabbda4814ed63194f039986e71f28",
+  "generated": "2024-02-19T20:16:33.280Z",
   "metadata": [
     {
       "__outstatic": {
@@ -93,28 +93,6 @@
     },
     {
       "__outstatic": {
-        "commit": "ce7a39583ae23b62dbfc0d7f8c5021b9b1cc228e",
-        "hash": "2638276388",
-        "path": "outstatic/content/exams/cestina-maturita-jaro-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "CM9-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "cestina-maturita-jaro-2023",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština (maturita) - jaro 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "8c7041534b73e0d4671137a4d7360121f18d559a",
         "hash": "415493133",
         "path": "outstatic/content/pages/home.md"
@@ -198,6 +176,28 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (9 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "000871a8d5dabbda4814ed63194f039986e71f28",
+        "hash": "551540346",
+        "path": "outstatic/content/exams/cestina-maturita-jaro-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "CMA-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "cestina-maturita-jaro-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (maturita) - jaro 2023",
       "year": "2023"
     }
   ]
