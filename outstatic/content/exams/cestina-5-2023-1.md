@@ -3,7 +3,7 @@ code: 'C5A-2023'
 grade: '8'
 year: '2023'
 subject: 'cz'
-coverImage: '/images/cz.png'
+coverImage: ''
 description: ''
 slug: 'cestina-5-2023-1'
 author:
