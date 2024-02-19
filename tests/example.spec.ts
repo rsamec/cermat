@@ -19,6 +19,7 @@ const slugs: [string, string[]][] = [
   ['c9b-2023', ["cz", "4", "C9B-2023"]],
   ['c7a-2023', ["cz", "6", "C7A-2023"]],
   ['c5b-2023', ["cz", "8", "C5B-2023"]],
+  ['cestina-maturita-jaro-2023', ["cz", "diploma", "CMA-2023"]],
 ];
 
 for (const [slug, pathes] of slugs) {
