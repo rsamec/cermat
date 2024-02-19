@@ -6,6 +6,7 @@ import { getVerifyFunction } from '../utils/assert';
 import { GroupCompute } from '../utils/catalog-function';
 
 export interface QuizState {
+  assetPath?: string[]
   tree?: TreeNode<Answer<any>>
   questions: AnswerMetadataTreeNode<any>[]
   answers: Record<string, any>;
@@ -25,13 +26,14 @@ const initState: QuizState = {
 export const quiz = createModel<RootModel>()({
   state: { ...initState },
   reducers: {
-    init(state, { tree }: { tree: TreeNode<Answer<any>> }) {
+    init(state, { tree, assetPath }: { tree: TreeNode<Answer<any>>, assetPath:string[] }) {
 
       const questions = getAllLeafsWithAncestors(tree).map((d, i) => d.leaf.data as AnswerMetadataTreeNode<any>)
       return {
         ...initState,
         questions,
         tree,
+        assetPath,
         maxTotalPoints: calculateMaxTotalPoints(tree)
       }
     },

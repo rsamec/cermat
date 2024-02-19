@@ -65,11 +65,11 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 }
 
 export default async function WizardPage(params: Params) {
-  const { project, questions, tree } = await getData(params);
+  const { project, questions, tree, assetPath } = await getData(params);
 
   return (
     <Layout headerNavigation={<Navigation name={project.title} />}>
-      <Wizard steps={questions} tree={tree}></Wizard>
+      <Wizard steps={questions} tree={tree} assetPath={assetPath}></Wizard>
     </Layout>)
 }
 
@@ -90,8 +90,8 @@ async function getData({ params }: Params) {
     ])
     .first();
 
-  const pathes = [project.subject, project.grade, project.code]
-  const quizContent = await loadMarkdown(pathes.concat(['index.md']));
+  const assetPath = [project.subject, project.grade, project.code]
+  const quizContent = await loadMarkdown(assetPath.concat(['index.md']));
 
   const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
   const parsedTree = mdParser.parse(quizContent);
@@ -104,7 +104,7 @@ async function getData({ params }: Params) {
       ...opt,
       name: await markdownToHtml(opt.name)
     }))) : d.options,
-    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: pathes }) : (await markdownToHtml(d.header, { path: pathes }) + await markdownToHtml(d.content, { path: pathes })),
+    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: assetPath }) : (await markdownToHtml(d.header, { path: assetPath }) + await markdownToHtml(d.content, { path: assetPath })),
   })))
 
   function order(name: Maybe<string>) {
@@ -168,6 +168,7 @@ async function getData({ params }: Params) {
 
   return {
     project,
+    assetPath,
     questions: quizQuestions,
     tree: quizTree,
   }

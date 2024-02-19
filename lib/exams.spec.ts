@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { Answer, AnswerTreeNode, calculateMaxTotalPoints, convertTree } from "./utils/quiz-specification";
+import { Answer, AnswerGroup, AnswerGroupImpl, AnswerTreeNode, calculateMaxTotalPoints, convertTree } from "./utils/quiz-specification";
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown';
 import { Maybe, matchNumberListCount } from "./utils/utils";
 import { TreeNode, createTree, getAllLeafsWithAncestors } from "./utils/tree.utils";
@@ -63,19 +63,34 @@ async function parseMarkdownTree(pathes: string[]) {
   return questions;
 }
 
+const cz8Years = ["cz", "8"];
+const cz4Years = ["cz", "4"];
+const cz6Years = ["cz", "6"];
+const czDimploma = ["cz", "diploma"];
+const math8Years = ["math", "8"];
+const math4Years = ["math", "4"];
+const math6Years = ["math", "6"];
+const mathDimploma = ["math", "6"];
 
-test.each([
-  { quiz: mat5_2023_1, pathes: ["math", "8", "M5A-2023"] },
-  { quiz: mat9_2023_1, pathes: ["math", "4", "M9A-2023"] },
-  { quiz: cz5_2023_1, pathes: ["cz", "8", "C5A-2023"] },
-  { quiz: cestina5B, pathes: ["cz", "8", "C5B-2023"] },
-  { quiz: cestina7, pathes: ["cz", "6", "C7A-2023"] },
-  { quiz: cz9_2023_1, pathes: ["cz", "4", "C9A-2023"] },
-  { quiz: cestina9B, pathes: ["cz", "4", "C9B-2023"] },
-  { quiz: czMaturita, pathes: ["cz", "4", "SSDmt-2023"] },
-  {quiz: cestina9C, pathes: ["cz", "4", "C9C-2023"] },
-])(`exam validate $pathes`, async ({ quiz, pathes }) => {
+
+const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
+  { quiz: mat5_2023_1, pathes: math8Years.concat("M5A-2023") },
+  { quiz: mat9_2023_1, pathes: math4Years.concat("M9A-2023") },
+  { quiz: cz5_2023_1, pathes: cz8Years.concat("C5A-2023") },
+  { quiz: cestina5B, pathes: cz8Years.concat("C5B-2023") },
+  { quiz: cestina7, pathes: cz6Years.concat("C7A-2023") },
+  { quiz: cz9_2023_1, pathes: cz4Years.concat("C9A-2023") },
+  { quiz: cestina9B, pathes: cz4Years.concat("C9B-2023") },
+  { quiz: cestina9C, pathes: cz4Years.concat("C9C-2023") },
+  { quiz: czMaturita, pathes: czDimploma.concat("SSDmt-2023") },
+]
+
+test.each(examTestCases)(`compute total max points $pathes`, ({ quiz, pathes }) => {
   const tree = convertTree(quiz);
   expect(calculateMaxTotalPoints(tree)).toBe(50);
+})
+
+test.each(examTestCases)(`validate exam structure $pathes`, async ({ quiz, pathes }) => {
+  const tree = convertTree(quiz);
   await testQuestionDifference(pathes, tree)
 })

@@ -33,7 +33,7 @@ const selection = store.select((models) => ({
 
 const mapState = (state: RootState) => ({
   ...state.quiz,
-  time: state.timer.time,
+  //time: state.timer.time,
   ...selection(state as never),
 })
 
@@ -45,7 +45,7 @@ type Props = { step: Question } & StateProps & DispatchProps;
 
 
 
-const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, time, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
+const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, assetPath, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
 
   const stepId = step.id;
   const correction = corrections[stepId]
@@ -181,7 +181,7 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, time,
             <section className="grid grid-cols-1 gap-2 py-5" >
               {verifyBy.args.hint.kind == 'image' &&
                 <div className="relative w-full aspect-[4/3]">
-                  <Image src={absoluteUrl(verifyBy.args.hint.src)} alt='Check result' fill className="object-contain object-center" />
+                  <Image src={absoluteUrl(`/${(assetPath ?? []).concat(verifyBy.args.hint.src).join("/")}`)} alt='Check result' fill className="object-contain object-center" />
                 </div>
               }
               {verifyBy.args.hint.kind == 'text' && <div dangerouslySetInnerHTML={{ __html: verifyBy.args.hint.content }} />}

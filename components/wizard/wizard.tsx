@@ -9,17 +9,17 @@ import { TreeNode } from "@/lib/utils/tree.utils";
 import { Answer } from "@/lib/utils/quiz-specification";
 import LoadableBlock from "../LoadableBlock";
 
-export default function Wizard({ steps, tree }: { steps: Question[], tree: TreeNode<Answer<any>> }) {
+export default function Wizard({ steps, tree, assetPath }: { steps: Question[], tree: TreeNode<Answer<any>>, assetPath: string[] }) {
   const { dispatch } = store;
   const [loaded, setLoaded] = React.useState(false);
 
   useEffect(() => {
     // Dispatch fetchData action when the component mounts    
     dispatch.wizard.init({ steps });
-    dispatch.quiz.init({ tree });
+    dispatch.quiz.init({ tree, assetPath });
     //dispatch.timer.startTimer();
     setLoaded(true);
-  }, [steps, tree, dispatch.wizard, dispatch.quiz, dispatch.timer]);
+  }, [steps, tree, assetPath, dispatch.wizard, dispatch.quiz, dispatch.timer]);
 
 
   return (
