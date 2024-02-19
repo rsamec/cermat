@@ -1,11 +1,11 @@
 {
-  "commit": "fb691ad9747fecb90b9c489a3513e9c6dac0337e",
-  "generated": "Mon, 19 Feb 2024 20:23:38 GMT",
+  "commit": "a5f651b161b7a3e7a510648647b1a8df3e3c3f73",
+  "generated": "Mon, 19 Feb 2024 20:23:57 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "6f356b12345d8350f1a959a81fdc1a029042cb60",
-        "hash": "2993079040",
+        "commit": "974d888e3bd5474fea5a31a5250806bf9caf361e",
+        "hash": "3763921968",
         "path": "outstatic/content/exams/cestina-5-2023-1.md"
       },
       "author": {
@@ -14,7 +14,7 @@
       },
       "code": "C5A-2023",
       "collection": "exams",
-      "coverImage": "/images/cz.png",
+      "coverImage": "",
       "description": "",
       "grade": "8",
       "publishedAt": "2024-01-07T12:44:38.288Z",
@@ -71,8 +71,8 @@
     },
     {
       "__outstatic": {
-        "commit": "1fd231924c786891d259ab4ac7ce545df7e2cd86",
-        "hash": "3023593936",
+        "commit": "b6db766e3b0ea03a0778862b34f7513379a9a46f",
+        "hash": "4091183803",
         "path": "outstatic/content/exams/c5b-2023.md"
       },
       "author": {
@@ -88,7 +88,7 @@
       "slug": "c5b-2023",
       "status": "published",
       "subject": "cz",
-      "title": "Čeština (5 ročník) - 1. řádný termín 2023",
+      "title": "Čeština (5 ročník) - 2. řádný termín 2023",
       "year": "2023"
     },
     {
@@ -179,8 +179,8 @@
     },
     {
       "__outstatic": {
-        "commit": "601b9bc03dbf96a89ffabf46afcefcefb0da1895",
-        "hash": "3916247241",
+        "commit": "a1025020fd7a259bd0cc7dbc874f1d189beb5c49",
+        "hash": "2288756849",
         "path": "outstatic/content/exams/cestina-9-2023-1.md"
       },
       "author": {
@@ -189,7 +189,7 @@
       },
       "code": "C9A-2023",
       "collection": "exams",
-      "coverImage": "/images/cz.png",
+      "coverImage": "",
       "description": "",
       "grade": "4",
       "publishedAt": "2023-12-30T14:25:50.401Z",
