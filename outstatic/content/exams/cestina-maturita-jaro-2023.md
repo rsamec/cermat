@@ -15,3 +15,5 @@ publishedAt: '2024-02-19T20:11:55.734Z'
 ---
 
 Didaktický test z českého jazyka obsahuje 32 úloh, na kterých mohlo studentstvo nasbírat až 50 bodů. Pro úspěšné složení maturitní zkoušky pak muselo pokořit hranici 44% úspěšnosti.
+
+- [![Watch the video](https://img.youtube.com/vi/idefRjyG5Kw/hqdefault.jpg)](https://www.youtube.com/embed/idefRjyG5Kw)
