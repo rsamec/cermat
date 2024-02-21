@@ -13,6 +13,7 @@ import { loadJson, loadMarkdown } from '@/lib/utils/file.utils'
 import { Question } from '@/lib/models/wizard'
 import { AnswerGroup, AnswerMetadataTreeNode, convertTree } from '@/lib/utils/quiz-specification'
 import Layout from '@/components/Layout'
+import { ExamMetadata } from '@/components/utils/exam'
 
 const collection = 'exams';
 type Project = {
@@ -20,12 +21,6 @@ type Project = {
 
 } & OstDocument & ExamMetadata
 
-
-type ExamMetadata = {
-  subject: 'cz' | 'math'
-  grade: '4' | '6' | '8' | 'diploma'
-  code: string
-}
 interface Params {
   params: {
     slug: string

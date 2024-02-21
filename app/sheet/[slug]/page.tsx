@@ -11,18 +11,13 @@ import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, ParsedQu
 import { createTree, getAllLeafsWithAncestors } from '@/lib/utils/tree.utils'
 import Layout from '@/components/Layout'
 import QuizSheet from '@/components/quiz/quiz-sheet'
+import { ExamMetadata } from '@/components/utils/exam'
 
 const collection = 'exams';
 type Project = {
   tags: { value: string; label: string }[]
 } & OstDocument & ExamMetadata
 
-
-type ExamMetadata = {
-  subject: 'cz' | 'math'
-  grade: '4' | '6' | '8' | 'diploma'
-  code: string
-}
 
 interface Params {
   params: {

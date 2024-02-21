@@ -8,18 +8,13 @@ import { loadMarkdown } from '@/lib/utils/file.utils'
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown'
 import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, countMaxChars } from '@/lib/utils/parser.utils'
 import Layout from '@/components/Layout'
+import { ExamMetadata } from '@/components/utils/exam'
 
 const collection = 'exams';
 type Project = {
   tags: { value: string; label: string }[]
 } & OstDocument & ExamMetadata
 
-
-type ExamMetadata = {
-  subject: 'cz' | 'math'
-  grade: '4' | '6' | '8' | 'diploma'
-  code: string
-}
 
 interface Params {
   params: {

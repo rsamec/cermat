@@ -7,18 +7,13 @@ import { absoluteUrl } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import DateFormatter from '@/components/DateFormatter'
 import Layout from '@/components/Layout'
+import { ExamMetadata } from '@/components/utils/exam'
 
 const collection = 'exams';
 type Project = {
   tags: { value: string; label: string }[]
 } & OstDocument & ExamMetadata
 
-
-type ExamMetadata = {
-  subject: 'cz' | 'math'
-  grade: '4' | '6' | '8' | 'diploma'
-  code: string
-}
 
 interface Params {
   params: {

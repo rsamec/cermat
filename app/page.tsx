@@ -3,22 +3,29 @@ import { load } from 'outstatic/server'
 import ContentGrid from '../components/ContentGrid'
 import markdownToHtml from '@/lib/utils/markdown';
 import Navigation from '@/components/Navigation';
+import SearchForm from '@/components/search/search-form';
+import { toTags } from '@/components/utils/exam';
 
 const collection = "exams";
 
 export default async function Index() {
-  const { content, mathPosts, primaryLanguagePosts } = await getData()
+  const { content, mathPosts, primaryLanguagePosts } = await getData()  
   return (
     <Layout headerNavigation={<Navigation />} showContact={true}>
-      <div>
-        <section className="mt-16 mb-16 md:mb-12">
+      <div className='flex flex-col gap-4'>
+        
+
+        <section>
           <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight">
             Mimooficiální cermat testy
           </h2>
           <div
             className="prose lg:prose-2xl home-intro"
             dangerouslySetInnerHTML={{ __html: content }}
-          />
+          />          
+        </section>
+        <section>
+          <SearchForm></SearchForm>
         </section>
         {mathPosts.length > 0 && (
           <ContentGrid
@@ -45,7 +52,7 @@ export default async function Index() {
             collection="projects"
           />
         )} */}
-      </div>      
+      </div>
     </Layout>
   )
 }
@@ -97,20 +104,7 @@ async function getData() {
   //   .sort({ publishedAt: -1 })
   //   .toArray()
 
-  const gradeLabel = (value: string) => {
-    if (value === "4") return "čtyřleté";
-    else if (value === "6") return "šestilété"
-    else if (value === "8") return "osmileté";
-    return value
-  }
-
-  const timeSlots = new Map([[1, "1. řádný termín"], [2, "2. řádný termín"], [3, "1. náhradní termín"], [4, "2. náhradní termín"]])
-  const toItems = (items: any[]) => items.map(d => ({
-    ...d, tags: [
-      { value: d.year, label: d.year },
-      ...(d.grade ? [{ value: d.grade, label: gradeLabel(d.grade) }] : []),
-    ]
-  }))
+  const toItems = (items: any[]) => items.map(d => ({...d, tags: toTags(d, ['year','grade'])}))
 
   return {
     content,
