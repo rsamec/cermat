@@ -9,7 +9,7 @@ const Timeline: React.FC<{ items: { text: string, year: number ,description?: st
         {items.map((data, i, arr) =>
 
 
-          <div className="relative pl-8 sm:pl-32 py-6 group">
+          <div key={data.slug} className="relative pl-8 sm:pl-32 py-6 group">
 
             <Link className="font-caveat font-medium text text-blue-600 mb-1 sm:mb-0" href={`/wizard/${data.slug}`}>Spustit test</Link>
 
