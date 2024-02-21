@@ -5,6 +5,7 @@ import Layout from '@/components/Layout'
 import ContentGrid from '@/components/ContentGrid';
 import { ExamMetadata, GradeType, SubjectType, toTags } from '@/components/utils/exam';
 import NothingThere from '@/components/NothingThere';
+import Timeline from '@/components/Timeline';
 
 const collection = 'exams';
 type Exam = {
@@ -50,20 +51,19 @@ interface Params {
 //   }
 // }
 
-export default async function Timeline({ params }: Params) {
+export default async function TimelinePage({ params }: Params) {
   const { exams } = await getData({ params });
   const tags = toTags({ subject: params.search[0], grade: params.search[1] }, ['subject', 'grade']);
   return (
     <Layout headerNavigation={<Navigation name={`${tags.map(d => d.label).join(", ")}`} />} >
       {exams.length > 0 ? (
-        <ContentGrid
-          title={`${tags.map(d => d.label).join(" , ")}`}
-          items={exams}
-          collection={collection}
-          iconType="math"
-          priority
-        />
-      ):<NothingThere></NothingThere>}
+        <Timeline items={exams.map(d => ({
+          text: d.title,
+          slug: d.slug,
+          year: parseInt(d.year, 10),
+          description: d.description,
+        }))}></Timeline>
+      ) : <NothingThere></NothingThere>}
     </Layout>
   )
 }
@@ -88,7 +88,7 @@ async function getData({ params }: Params) {
     .toArray()
 
 
-  const toItems = (items: any[]) => items.map(d => ({ ...d, tags: toTags(d, ['subject', 'grade', 'year']) }))
+  const toItems = (items: Exam[]) => items.map(d => ({ ...d, tags: toTags(d, ['subject', 'grade', 'year']) }))
   return {
     exams: toItems(exams),
   }
