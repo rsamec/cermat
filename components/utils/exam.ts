@@ -5,6 +5,7 @@ export type ExamMetadata = {
   grade: '4' | '6' | '8' | 'diploma'
   year: string
   code: string
+  expectedAt: string
 }
 
 const subjectLabel = (value: SubjectType) => {
