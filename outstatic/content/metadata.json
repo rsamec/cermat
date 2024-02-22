@@ -1,6 +1,6 @@
 {
-  "commit": "8010144ac710879dda09400ccc2d9a0f5f72c70d",
-  "generated": "2024-02-22T19:34:04.490Z",
+  "commit": "a74e24194d098aeaf9c8aca3d12453996bada8e8",
+  "generated": "2024-02-22T19:34:19.955Z",
   "metadata": [
     {
       "__outstatic": {
@@ -41,29 +41,6 @@
       "subject": "math",
       "timeSlot": "1",
       "title": "Matematika (9 ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "3adc7556d04af1d7b6fdb896294a48f17428ebf5",
-        "hash": "2687089392",
-        "path": "outstatic/content/exams/matematika-5-2023-1.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
-      },
-      "code": "M5A-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "grade": "8",
-      "publishedAt": "2024-01-07T09:59:56.794Z",
-      "slug": "matematika-5-2023-1",
-      "status": "published",
-      "subject": "math",
-      "timeSlot": "1",
-      "title": "Matematika (5 ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
@@ -203,6 +180,30 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (5 ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "a74e24194d098aeaf9c8aca3d12453996bada8e8",
+        "hash": "2461684034",
+        "path": "outstatic/content/exams/matematika-5-2023-1.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "code": "M5A-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230417",
+      "grade": "8",
+      "publishedAt": "2024-01-07T09:59:56.794Z",
+      "slug": "matematika-5-2023-1",
+      "status": "published",
+      "subject": "math",
+      "timeSlot": "1",
+      "title": "Matematika (5 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
