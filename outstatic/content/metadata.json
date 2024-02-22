@@ -1,6 +1,6 @@
 {
-  "commit": "4b122d614a249855e58d069963f5a781aac6247a",
-  "generated": "2024-02-22T19:33:24.356Z",
+  "commit": "dca48cd45811f462f558694475ed1fd0a66a0ec7",
+  "generated": "2024-02-22T19:33:38.482Z",
   "metadata": [
     {
       "__outstatic": {
@@ -23,28 +23,6 @@
       "subject": "cz",
       "timeSlot": "1",
       "title": "Čeština (5 ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "e5b228f86f1068d6b58d921423785309ac278d06",
-        "hash": "2992620761",
-        "path": "outstatic/content/exams/c7a-2023.md"
-      },
-      "author": {
-        "name": "",
-        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
-      },
-      "code": "C7A-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "grade": "6",
-      "publishedAt": "2024-02-06T14:44:28.546Z",
-      "slug": "c7a-2023",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština (7 ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
@@ -201,6 +179,29 @@
       "status": "published",
       "subject": "cz",
       "title": "Čeština (5 ročník) - 2. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "dca48cd45811f462f558694475ed1fd0a66a0ec7",
+        "hash": "418331625",
+        "path": "outstatic/content/exams/c7a-2023.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/148689951?v=4"
+      },
+      "code": "C7A-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230417",
+      "grade": "6",
+      "publishedAt": "2024-02-06T14:44:28.546Z",
+      "slug": "c7a-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (7 ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
