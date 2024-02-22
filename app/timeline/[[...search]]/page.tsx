@@ -96,6 +96,7 @@ async function getData({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  const posts = getDocuments(collection, ['subject', 'grade'])
-  return posts.map(({ subject, grade }) => ({ search: [subject, grade] }))
+  const postsBySubjectAndGrade = getDocuments(collection, ['subject', 'grade'])  
+  const postsBySubject = getDocuments(collection, ['subject'])  
+  return postsBySubject.map(({subject}) =>  ({search: [subject]})).concat(postsBySubjectAndGrade.map(({ subject, grade }) => ({ search: [subject, grade] })))
 }
