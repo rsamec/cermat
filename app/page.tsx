@@ -5,15 +5,33 @@ import markdownToHtml from '@/lib/utils/markdown';
 import Navigation from '@/components/Navigation';
 import SearchForm from '@/components/search/search-form';
 import { toTags } from '@/components/utils/exam';
+import Image from 'next/image';
+import { absoluteUrl } from '@/lib/utils/utils';
+import StatsCard from '@/components/StatsCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookAtlas, faGlobe, faSquareRootVariable } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const collection = "exams";
 
 export default async function Index() {
-  const { content, mathPosts, primaryLanguagePosts } = await getData()  
+  const { content, mathPosts, primaryLanguagePosts } = await getData()
   return (
-    <Layout headerNavigation={<Navigation />} showContact={true}>
-      <div className='flex flex-col gap-4'>
-        
+    <Layout headerNavigation={<Navigation />} showContact={true} fullWidth={false}>
+      <div className='flex flex-col gap-6'>
+        <section>
+          <div className='origin-center'>
+            <Image
+              alt='Math'
+              src={absoluteUrl('/images/000000.png')}
+              width={0}
+              height={0}
+              className="origin-center object-cover object-center w-full h-auto"
+              sizes="(min-width: 768px) 347px, 192px"
+              priority
+            />
+          </div>
+        </section>
 
         <section>
           <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight">
@@ -22,10 +40,25 @@ export default async function Index() {
           <div
             className="prose lg:prose-2xl home-intro"
             dangerouslySetInnerHTML={{ __html: content }}
-          />          
+          />
         </section>
         <section>
+          <h3 className='mb-8 text-3xl font-bold'>Vyhledat</h3>
           <SearchForm></SearchForm>
+        </section>
+        <section>
+          <h3 className='mb-8 text-3xl font-bold'>Online testy</h3>
+          <div className="flex flex-wrap gap-10">
+            <Link href={`/timeline/math`}>
+              <StatsCard value={mathPosts.length} text="matika" icon={<FontAwesomeIcon icon={faSquareRootVariable} size='2x' ></FontAwesomeIcon>}></StatsCard>
+            </Link>
+            <Link href={`/timeline/cz`}>
+              <StatsCard value={primaryLanguagePosts.length} text="čeština" icon={<FontAwesomeIcon icon={faBookAtlas} size='2x' ></FontAwesomeIcon>}></StatsCard>
+            </Link>
+            <Link href={`/timeline/en`}>
+              <StatsCard value={0} text="angličtina" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
+            </Link>
+          </div>
         </section>
         {mathPosts.length > 0 && (
           <ContentGrid
@@ -104,7 +137,7 @@ async function getData() {
   //   .sort({ publishedAt: -1 })
   //   .toArray()
 
-  const toItems = (items: any[]) => items.map(d => ({...d, tags: toTags(d, ['year','grade'])}))
+  const toItems = (items: any[]) => items.map(d => ({ ...d, tags: toTags(d, ['year', 'grade']) }))
 
   return {
     content,

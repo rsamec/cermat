@@ -60,7 +60,7 @@ export default async function TimelinePage({ params }: Params) {
         <Timeline items={exams.map(d => ({
           text: d.title,
           slug: d.slug,
-          year: parseInt(d.year, 10),
+          publishedAt: d.testedAt ?? new Date(parseInt(d.year, 10), 3,1).toISOString(),
           description: d.description,
         }))}></Timeline>
       ) : <NothingThere></NothingThere>}
@@ -71,9 +71,10 @@ export default async function TimelinePage({ params }: Params) {
 async function getData({ params }: Params) {
   const db = await load()
   const exams = await db
-    .find<Exam>({ collection, subject: params.search[0], grade: params.search[1] }, [
+    .find<Exam>({ collection, subject: params.search[0], ...(params.search[1] != null && { grade: params.search[1]}) }, [
       'title',
       'publishedAt',
+      'testedAt',
       'description',
       'slug',
       'author',
@@ -84,7 +85,7 @@ async function getData({ params }: Params) {
       'code',
       'year'
     ])
-    .sort({ year: 1 })
+    .sort({ testedAt: 1 })
     .toArray()
 
 

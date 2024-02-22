@@ -93,7 +93,7 @@ export default async function Prospect(params: Params) {
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Kompaktní zadání</h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Zobraz si kompaktní zadání a pracuj s tužkou a papírem.<br/>
                 Výsledky zapiš do formuláře s možností vyhodnocení testu.</p>
-              <div className='flex gap-3'>
+              <div className='flex flex-wrap gap-3'>
                 <Link href={`/paper/${project.slug}`}>
                   <button className='btn btn-blue flex items-center'>Zobrazit
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

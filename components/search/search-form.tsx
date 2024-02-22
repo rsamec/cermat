@@ -22,9 +22,8 @@ export default function SearchForm() {
   const [selectedSubject, setSelectedSubject] = useState<{ code: string, label: string, icon: ReactNode }>();
   const [selectedGrade, setSelectedGrade] = useState<{ code: string, label: string }>();
   return (
-    <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Vyhledat</h5>
-      <div className="flex flex-col gap-2 ">
+    <div className="p-4 max-w-max bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="flex flex-wrap gap-2">
         <div>
           <div className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             Předmět
@@ -37,10 +36,10 @@ export default function SearchForm() {
           </div>
           <IconToggleButtonGroup value={selectedGrade} options={gradeOptions} isSame={(f, s) => f?.code === s?.code} format={option => option.label} onChange={(d) => setSelectedGrade(d)}></IconToggleButtonGroup>
         </div>
-
-        <Link href={`timeline/${selectedSubject?.code}/${selectedGrade?.code}`}><button disabled={selectedSubject == null || selectedGrade == null} 
-        className="btn btn-blue justify-self-end flex items-center gap-2"><FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>Najít</button></Link>
-
+        <div className="self-end">
+          <Link href={`timeline/${selectedSubject?.code}/${selectedGrade?.code}`}><button disabled={selectedSubject == null || selectedGrade == null}
+            className="btn btn-blue flex items-center gap-2"><FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>Najít</button></Link>
+        </div>
       </div>
     </div>
   )
