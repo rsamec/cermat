@@ -1,4 +1,5 @@
 ---
+expectedAt: '20230502'
 code: 'CMA-2023'
 grade: 'diploma'
 year: '2023'
