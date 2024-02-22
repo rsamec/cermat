@@ -29,6 +29,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "code"
+    },
+    "expectedAt": {
+      "required": true,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "ExpectedAt"
     }
   }
 }
