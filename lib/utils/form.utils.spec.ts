@@ -3,7 +3,7 @@ import { GroupControl, FieldControl, requiredValidator } from '@rx-form/core'
 
 import { Maybe } from './utils';
 import { convertTree } from './quiz-specification';
-import { convertToForm, getControlChildren, patternCatalog } from './form.utils';
+import { convertToForm, getControl, getControlChildren, patternCatalog } from './form.utils';
 import { group } from './quiz-builder';
 
 test('validate form', () => {
@@ -81,6 +81,26 @@ test('convert answer tree to form tree inputs as arrays', () => {
 
 })
 
+
+test('form tree with filled values as arrays', () => {
+  const inputBy = [{ kind: 'number' as const }, { kind: 'number' as const }, { kind: 'number' as const }]
+
+  const quizSpec = group({
+    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy },
+  })
+
+  const quizTree = convertTree(quizSpec);
+  const quizForm = convertToForm(quizTree, { 1: ["a","b","c"] });
+
+  expect(getControlChildren(quizForm, "1").length).toBe(3)
+  const control = getControl(quizForm, "1");
+  expect(control?.controls[0].value).toBe("a");
+  expect(control?.controls[1].value).toBe("b");
+  expect(control?.controls[2].value).toBe("c");
+
+
+})
+
 test('convert answer tree to form tree inputs as object', () => {
   const inputBy = {
     a: { kind: 'number' as const },
@@ -97,18 +117,45 @@ test('convert answer tree to form tree inputs as object', () => {
   })
 
   const quizTree = convertTree(quizSpec);
-  const quizForm = convertToForm(quizTree);
+  const quizForm = convertToForm(quizTree, { 1: { a: "a", b: "b", c: "c" } });
 
   expect(getControlChildren(quizForm).length).toBe(2)
 
   expect(getControlChildren(quizForm, "1").length).toBe(3)
+  const control = getControl(quizForm, "1");
+  expect(control?.controls["a"].value).toBe("a");
+  expect(control?.controls["b"].value).toBe("b");
+  expect(control?.controls["c"].value).toBe("c");
 
   expect(getControlChildren(quizForm, "2").length).toBe(2)
   expect(getControlChildren(quizForm, "2.1").length).toBe(3)
   expect(getControlChildren(quizForm, "2.2").length).toBe(3)
+})
+
+
+test('form tree with filled values as object ', () => {
+  const inputBy = {
+    a: { kind: 'number' as const },
+    b: { kind: 'number' as const },
+    c: { kind: 'number' as const },
+  }
+
+  const quizSpec = group({
+    1: { verifyBy: { kind: "equal", args: 20 }, points: 1, inputBy },
+  })
+
+  const quizTree = convertTree(quizSpec);
+  const quizForm = convertToForm(quizTree, { 1: { a: "a", b: "b", c: "c" } });
+
+  expect(getControlChildren(quizForm, "1").length).toBe(3)
+  const control = getControl(quizForm, "1");
+  expect(control?.controls["a"].value).toBe("a");
+  expect(control?.controls["b"].value).toBe("b");
+  expect(control?.controls["c"].value).toBe("c");
 
 })
-test('pattern regex - ratio', () => {  
+
+test('pattern regex - ratio', () => {
   const regex = new RegExp(patternCatalog.ratio.regex)
   //matched
   expect("1:1".match(regex)).not.toBeNull()

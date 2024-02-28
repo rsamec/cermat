@@ -1,24 +1,24 @@
 'use client'
 import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnswerMetadataTreeNode } from "@/lib/utils/quiz-specification";
 import { getAllLeafsWithAncestors } from "@/lib/utils/tree.utils";
 import { convertToForm, getControl, markAsDirty } from "@/lib/utils/form.utils";
 import { renderControl } from "@/lib/utils/component.utils";
 import { ParsedQuestion } from "@/lib/utils/parser.utils";
-import { GroupControl } from "@rx-form/core";
 import { store, RootState, Dispatch } from "@/lib/store";
 import { connect } from "react-redux";
 import { toHtml } from "@fortawesome/fontawesome-svg-core";
 import DOMPurify from "dompurify";
 import { format } from "mathjs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp, faThumbsDown, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import Badge from "../core/Badge";
 import TextBadge from "../core/TextBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   submitQuiz: (args: Record<string, any>) => dispatch.quiz.submitQuiz(args),
+  resetAnswers: () => dispatch.quiz.resetQuizAnswers(), 
 });
 
 
@@ -36,8 +36,8 @@ type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
 type Props = { headersAndOptions: Pick<ParsedQuestion, 'header' | 'options'>[] } & StateProps & DispatchProps;
 
-const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, corrections, questions, totalAnswers, totalPoints, maxTotalPoints }) => {
-  const [form] = useState(() => convertToForm(tree!));
+const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, answers, submitQuiz, resetAnswers, corrections, questions, totalAnswers, totalPoints, maxTotalPoints }) => {
+  const [form] = useState(() => convertToForm(tree!, answers));
   const leafs = getAllLeafsWithAncestors(tree!).map((d, i) => {
     const options = headersAndOptions[i]?.options;
     const leaf = d.leaf.data as AnswerMetadataTreeNode<any>;
@@ -52,7 +52,6 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
     const subscription = form.valueChange.subscribe((v) => {
       setVerified(false);
       setInvalid(form.invalid);
-      console.log(form.invalid)
     });
 
     return () => {
@@ -68,6 +67,11 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
       return out;
     }, {} as Record<string, any>))
     setVerified(true)
+  }
+
+  const resetAnswersHandler = () => {
+    setVerified(false);
+    resetAnswers();
   }
 
   return (
@@ -96,7 +100,7 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
         )
       })}
       <br />
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         <button className="btn btn-blue" onClick={() => markAsDirty(form)}>
           Zkontrolovat
         </button>
@@ -106,6 +110,10 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, submitQuiz, correc
         <button className="btn btn-red" disabled={!invalid} onClick={submitQuizHandler}>
           Odeslat nekompletní
         </button>
+        <button className="btn btn-red" disabled={!invalid} onClick={resetAnswersHandler}>
+          <FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
+        </button>
+        
       </div>
       {verified &&
         <div className="grow flex flex-wrap gap-2">

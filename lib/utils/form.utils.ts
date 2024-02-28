@@ -12,7 +12,7 @@ export const patternCatalog = {
   }
 } as const
 
-export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>) {
+export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>, answers: Record<string, any> = {}) {
   const validatorsBySpec = (spec: ComponentFunctionSpec, required?: boolean) => {
     return [
       ...(required ? [requiredValidator] : []),
@@ -32,16 +32,18 @@ export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>) {
         return;
       }
       else if (isComponentFunctionSpec(inputBy)) {
-        return new FieldControl<any>(undefined, {
+        return new FieldControl<any>(answers[data.id], {
           validators: validatorsBySpec(inputBy, true)
         });
       }
       else if (Array.isArray(inputBy)) {
-        return new ListControl(inputBy.map(d => new FieldControl(undefined, { validators: validatorsBySpec(d, true) })))
+        const answersList = answers[data.id];
+        return new ListControl(inputBy.map((d,i) => new FieldControl(answersList?.[i], { validators: validatorsBySpec(d, true) })))
       }
       else {
+        const answersMap = answers[data.id];
         return new GroupControl(Object.entries(inputBy).reduce((out, [key, d]) => {
-          out[key] = new FieldControl(undefined, { validators: validatorsBySpec(d, true) })
+          out[key] = new FieldControl(answersMap?.[key], { validators: validatorsBySpec(d, true) })
           return out;
         }, {} as FormGroupControlsConfig))
       }

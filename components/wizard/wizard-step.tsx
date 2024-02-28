@@ -7,11 +7,10 @@ import { convertToForm, getControl } from "@/lib/utils/form.utils";
 import { createOptionAnswer, createBoolAnswer, renderControl } from "@/lib/utils/component.utils";
 import { useState } from "react";
 import Image from 'next/image';
-import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { absoluteUrl, cls, format, formatTime, updateMap } from "@/lib/utils/utils";
+import { absoluteUrl, cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
-import Badge from "../core/Badge";
 import { FieldControl } from "@rx-form/core";
 import { useControlValid } from "@rx-form/react";
 import { ComponentFunctionSpec } from "@/lib/utils/catalog-function";
@@ -24,6 +23,7 @@ const mapDispatch = (dispatch: Dispatch) => ({
   setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.submitQuizAnswer(args),
   next: () => dispatch.wizard.goToNextStep(),
   back: () => dispatch.wizard.goToPreviousStep(),
+  resetAnswers: () => dispatch.quiz.resetQuizAnswers(),
 });
 
 
@@ -45,13 +45,13 @@ type Props = { step: Question } & StateProps & DispatchProps;
 
 
 
-const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, assetPath, setAnswer, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
+const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answers, assetPath, setAnswer, resetAnswers, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
 
   const stepId = step.id;
   const correction = corrections[stepId]
   const status = correction === true ? 'success' : correction === false ? 'danger' : undefined
 
-  const [form] = useState(() => convertToForm(tree!))
+  const [form] = useState(() => convertToForm(tree!, answers))
   const [questionMap, setQuestionMap] = useState(new Map())
   const [headerMap, setHeaderMap] = useState(new Map())
 
@@ -205,14 +205,15 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, asset
         </div>
 
         <div className="flex self-end gap-3">
+          <button className="btn btn-red"
+            onClick={() => resetAnswers()}><FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
+          </button>
 
           <button className="btn btn-blue"
             onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} size="2xl" /></button>
           <button className="btn btn-blue"
             onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} size="2xl" /></button>
-
         </div>
-
       </div>
     </div>
   );

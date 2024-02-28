@@ -4,6 +4,7 @@ import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
 import { Answer, AnswerMetadataTreeNode, calculateMaxTotalPoints, calculatePoints } from '../utils/quiz-specification';
 import { getVerifyFunction } from '../utils/assert';
 import { GroupCompute } from '../utils/catalog-function';
+import { get, del, set } from '../utils/storage.utils';
 
 export interface QuizState {
   assetPath?: string[]
@@ -26,14 +27,19 @@ const initState: QuizState = {
 export const quiz = createModel<RootModel>()({
   state: { ...initState },
   reducers: {
-    init(state, { tree, assetPath }: { tree: TreeNode<Answer<any>>, assetPath:string[] }) {
-
+    init(state, { tree, assetPath, answers }: { tree: TreeNode<Answer<any>>, assetPath: string[], answers: Record<string, any> }) {
       const questions = getAllLeafsWithAncestors(tree).map((d, i) => d.leaf.data as AnswerMetadataTreeNode<any>)
+      const keys = Object.keys(answers);
+      const corrections = calculateCorrections(questions.filter(d => keys.indexOf(d.id) != -1), answers);
+
       return {
         ...initState,
         questions,
         tree,
+        answers,
         assetPath,
+        corrections,
+        totalPoints: calculateTotalPoints({ tree, corrections, answers }),
         maxTotalPoints: calculateMaxTotalPoints(tree)
       }
     },
@@ -50,35 +56,58 @@ export const quiz = createModel<RootModel>()({
         ...state.corrections,
         [questionId]: verifyQuestion(question, answer)
       }
+      set(getStorageKey(state.assetPath!), answers)
       return {
         ...state,
         answers,
         corrections,
-        totalPoints: calculateTotalPoints(state, { corrections, answers })
+        totalPoints: calculateTotalPoints({ tree: state.tree, corrections, answers })
       };
     },
     submitQuiz(state, answers: Record<string, any>) {
-      const corrections = calculateCorrections(state, answers);
+      const corrections = calculateCorrections(state.questions, answers);
+      set(getStorageKey(state.assetPath!), answers)
       return {
         ...state,
         answers,
         corrections,
-        totalPoints: calculateTotalPoints(state, { corrections, answers }),
+        totalPoints: calculateTotalPoints({ tree: state.tree, corrections, answers }),
       };
     },
+    resetQuizAnswers(state) {
+      const answers = {};
+      const corrections = {}
+      del(getStorageKey(state.assetPath!));      
+      return {
+        ...state,
+        answers,
+        corrections,
+        totalPoints: calculateTotalPoints({ tree: state.tree, corrections, answers }),
+
+      }
+    }
   },
   selectors: (slice) => ({
     totalAnswers() {
       return slice(state => Object.keys(state.answers).length)
     },
-  })
+  }),
+  effects: (dispatch) => ({
+    async initAsync({ tree, assetPath }: { tree: TreeNode<Answer<any>>, assetPath: string[] }) {
+      let answers = await get(getStorageKey(assetPath!), {});
+      dispatch.quiz.init({ tree, assetPath, answers })
+    },
+  }),
 });
 
+const getStorageKey = (assetPath: string[]) => {
+  return assetPath.join("-");
+}
 // Helper functions
-const calculateCorrections = (state: QuizState, answers: Record<string, any>) => {
+const calculateCorrections = (questions: AnswerMetadataTreeNode<any>[], answers: Record<string, any>) => {
   const corrections: Record<string, boolean> = {};
 
-  state.questions.forEach((question) => {
+  questions.forEach((question) => {
     corrections[question.id] = verifyQuestion(question, answers[question.id])
   });
 
@@ -92,9 +121,8 @@ const verifyQuestion = (question: AnswerMetadataTreeNode<any>, answer: string) =
 }
 
 
-const calculateTotalPoints = (state: QuizState, { corrections, answers }: { corrections: Record<string, boolean>, answers: Record<string, any> }) => {
+const calculateTotalPoints = ({ tree, corrections, answers }: { tree?: TreeNode<Answer<any>>, corrections: Record<string, boolean>, answers: Record<string, any> }) => {
   let totalPoints = 0;
-  const tree = state.tree;
   if (tree == null) return totalPoints;
 
   const calculateSum = (children: AnswerMetadataTreeNode<any>[]) => children.reduce((out, d) => {

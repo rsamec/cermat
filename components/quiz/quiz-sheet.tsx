@@ -14,8 +14,7 @@ export default function QuizSheet({ tree, headersAndOptions, assetPath }: { head
   const [loaded, setLoaded] = React.useState(false);
 
   useEffect(() => {
-    dispatch.quiz.init({ tree, assetPath })
-    setLoaded(true);
+    dispatch.quiz.initAsync({ tree, assetPath }).then(() => setLoaded(true))
   }, [tree, dispatch.quiz, assetPath]);
 
 

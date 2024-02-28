@@ -16,9 +16,8 @@ export default function Wizard({ steps, tree, assetPath }: { steps: Question[], 
   useEffect(() => {
     // Dispatch fetchData action when the component mounts    
     dispatch.wizard.init({ steps });
-    dispatch.quiz.init({ tree, assetPath });
+    dispatch.quiz.initAsync({ tree, assetPath }).then(() => setLoaded(true));
     //dispatch.timer.startTimer();
-    setLoaded(true);
   }, [steps, tree, assetPath, dispatch.wizard, dispatch.quiz, dispatch.timer]);
 
 
