@@ -6,11 +6,11 @@ import Navigation from '@/components/Navigation';
 import SearchForm from '@/components/search/search-form';
 import { toTags } from '@/components/utils/exam';
 import Image from 'next/image';
-import { absoluteUrl } from '@/lib/utils/utils';
 import StatsCard from '@/components/StatsCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookAtlas, faGlobe, faSquareRootVariable } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import coverImage from '../public/images/000000.png'
 
 const collection = "exams";
 
@@ -22,11 +22,10 @@ export default async function Index() {
         <section>
           <div className='origin-center'>
             <Image
-              alt='Math'
-              src={absoluteUrl('/images/000000.png')}
-              width={0}
-              height={0}
+              alt='Online cermat testy'
+              src={coverImage}
               className="origin-center object-cover object-center w-full h-auto"
+              sizes="100vw"
               priority
             />
           </div>
