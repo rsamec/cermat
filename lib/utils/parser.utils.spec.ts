@@ -147,7 +147,6 @@ test('parse options', () => {
   const parsedTree = markdownParser.parse(input);
   const rawHeadings = chunkHeadingsList(parsedTree, input);
 
-  console.log(rawHeadings[0].options.map(d => d.name))
   expect(rawHeadings.length).toBe(1);
   expect(rawHeadings[0].options.length).toBe(6);
   expect(rawHeadings[0].options.map(d => d.value).join("")).toBe('ABCDEF');

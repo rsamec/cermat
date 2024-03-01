@@ -35,8 +35,8 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 1–6
 
 **TEXT 2**
 > Z přivlastňovacích zájmen se v určitých kontextech mohou stát **zájmena zpodstatnělá**, 
-> což znamená, že plní funkci podstatného jména. Např. zájmeno *našim* ve větě *Fandil *
-> *našim hokejistům* není zpodstatnělé, ale ve větě *Jdeme k našim na oběd *zpodstatnělé je.
+> což znamená, že plní funkci podstatného jména. Např. zájmeno *našim* ve větě *Fandil*
+> *našim hokejistům* není zpodstatnělé, ale ve větě *Jdeme k našim na oběd* zpodstatnělé je.
 >
 > (*CZVV*)
 
@@ -62,7 +62,7 @@ jakéhokoli slova, které neodpovídá zadání.
 **Informace č. 1:** Sedící býk je symbolem revolty indiánů proti útlaku ze strany 
 bělochů.
  
-**Informace č. 2: **Sedící býk se v dětství jmenoval Skákající jezevec.
+**Informace č. 2:** Sedící býk se v dětství jmenoval Skákající jezevec.
  
 **Které z následujících tvrzení o dvou výše uvedených informacích je pravdivé?**
 - [A] V TEXTU 1 je čtenářům předkládána jako jistá pouze informace č. 1.
@@ -73,19 +73,18 @@ bělochů.
 # 5 Ve které z následujících možností je uvedena dvojice slov, jež lze v kontextu TEXTU 1 považovat za antonyma?
 (První slovo z každé dvojice pochází z TEXTU 1 a je v něm vyznačeno tučně.)
 - [A] většinou – menšinou
-- [B] 
-právě – vzápětí
+- [B] právě – vzápětí
 - [C] často – zřídka
 - [D] zkrátka – zdlouhavě
 # 6 Které z následujících tvrzení o dvou slovech podtržených v TEXTU 1 je pravdivé?
 (Příklad: Základovým slovem slova *mladík* je přídavné jméno.)
-- [A] Základovým slovem slova *zdejší* je příslovce, základovým slovem slova* nositel* je 
+- [A] Základovým slovem slova *zdejší* je příslovce, základovým slovem slova *nositel* je 
 sloveso.
-- [B] Základovým slovem slova *zdejší* je přídavné jméno, základovým slovem slova* *
+- [B] Základovým slovem slova *zdejší* je přídavné jméno, základovým slovem slova 
 *nositel* je sloveso.
-- [C] Základovým slovem slova *zdejší* je příslovce, základovým slovem slova* nositel* je 
+- [C] Základovým slovem slova *zdejší* je příslovce, základovým slovem slova *nositel* je 
 podstatné jméno.
-- [D] Základovým slovem slova *zdejší* je přídavné jméno, základovým slovem slova* *
+- [D] Základovým slovem slova *zdejší* je přídavné jméno, základovým slovem slova 
 *nositel* je podstatné jméno.
 
 # 7 Která z následujících možností obsahuje slovo zapsané s pravopisnou chybou?
@@ -96,7 +95,8 @@ podstatné jméno.
 # 8 Přiřaďte k jednotlivým textům (8.1−8.4) možnost (A–F), která patří na vynechané místo (*****) v příslušném textu.
 (Každou možnost z nabídky A–F lze přiřadit maximálně jednou.)
 
-## 8.1 *****, jeden z ava ntgardních uměleckých směrů, vznikl během 1. světové 
+## 8.1
+*****, jeden z ava ntgardních uměleckých směrů, vznikl během 1. světové 
 války. Jeho představitelé hodnotí válečný svět jako chaotický a nesmyslný, 
 odmítají dosavadní poetické zvyklosti, pracují s nonsensem a vyznávají hru 
 s jazykem. 
@@ -131,17 +131,17 @@ zbavené individuality, jednají podle daných schémat, předvídatelný je i d
 VÝCHOZÍ TEXT K ÚLOZE 9
 ======
 
-> prohnaný
-> obrovský
-> domluvený
-> rozhazovačný 
-> zahřátý 
-> požadovaný
-> nahatý
-> odřený
-> udivený
-> přezrálý
-> vzdělaný
+> prohnaný\
+> obrovský\
+> domluvený\
+> rozhazovačný\
+> zahřátý\
+> požadovaný\
+> nahatý\
+> odřený\
+> udivený\
+> přezrálý\
+> vzdělaný\
 > schůdný
 
 # 9 Vypište z výchozího textu dvě slova, která __neobsahují__ předponu.
@@ -170,7 +170,7 @@ bylo tenkrát, když potkala Božího syna.
 VÝCHOZÍ TEXT K ÚLOZE 11
 ===
 
-> Novinář se kvůli diktatuře rozhodl uprchnout z republiky[1] na úze mí sousední země[2] 
+> Novinář se kvůli diktatuře rozhodl uprchnout z republiky[1] na území sousední země[2] 
 > mu ale vzhledem k napjaté politické situaci[3] nebyl umožněn vstup.
 
 # 11 Kam je nutné doplnit čárku, aby výchozí text byl smysluplný, spisovný a pravopisně i gramaticky správný?
@@ -249,13 +249,13 @@ zastupováno podstatné jméno *ruce*.
 - [D] Prvním zájmenem je zastupováno podstatné jméno *Arťom*, druhým zájmenem je 
 zastupováno podstatné jméno *ruce*.
 # 16 Které z následujících tvrzení je pravdivé?
-(Slova *dohled *a* neobyčejně* pocházejí z výchozího textu a jsou v něm zapsána velkými 
+(Slova *dohled* a *neobyčejně* pocházejí z výchozího textu a jsou v něm zapsána velkými 
 písmeny.)
 - [A] Slova *dohled* a *dozor* jsou v kontextu výchozího textu synonymy, totéž platí i pro 
 dvojici slov *neobyčejně* – *mimořádně*.
-- [B] Slova* dohled* a *dozor* nejsou v kontextu výchozího textu synonymy, totéž platí 
+- [B] Slova *dohled* a *dozor* nejsou v kontextu výchozího textu synonymy, totéž platí 
 i pro dvojici slov *neobyčejně* – *mimořádně*.
-- [C] Slova* dohled* a *dozor* jsou v kontextu výchozího textu synonymy, slova *neobyčejně* 
+- [C] Slova *dohled* a *dozor* jsou v kontextu výchozího textu synonymy, slova *neobyčejně* 
 a *mimořádně* však v kontextu tohoto textu synonymy nejsou.
 - [D] Slova *dohled* a *dozor* nejsou v kontextu výchozího textu synonymy, slova 
 *neobyčejně* a *mimořádně* však v kontextu tohoto textu synonymy jsou.
@@ -305,15 +305,10 @@ VÝCHOZÍ TEXT K ÚLOHÁM 18–23
 
 # 18 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), či nikoli (N).
  
-## 18.1 Byl nalezen alespoň jeden hmatatelný důkaz potvrzující, že Jericho 
-existovalo již v 8. tisíciletí př. n. l. 
-## 18.2 Náměstí, které mělo půdorys jiného tvaru než tvaru hvězdy, bylo v období 
-renesance považováno za asymetrické. 
-## 18.3 Slovo urbanismus, které označuje vědní disciplínu zabývající se plánováním 
-a výstavbou měst, bylo utvořeno z latinského slova s významem město. 
-## 18.4 Leonardo da Vinci navrhl ve svém projektu přesunout všech 300 000 obyvatel, 
-kteří tehdy bydleli v Miláně, do satelitních městeček postavených v okolí 
-tohoto města. 
+## 18.1 Byl nalezen alespoň jeden hmatatelný důkaz potvrzující, že Jericho existovalo již v 8. tisíciletí př. n. l. 
+## 18.2 Náměstí, které mělo půdorys jiného tvaru než tvaru hvězdy, bylo v období renesance považováno za asymetrické. 
+## 18.3 Slovo urbanismus, které označuje vědní disciplínu zabývající se plánováním a výstavbou měst, bylo utvořeno z latinského slova s významem město. 
+## 18.4 Leonardo da Vinci navrhl ve svém projektu přesunout všech 300 000 obyvatel, kteří tehdy bydleli v Miláně, do satelitních městeček postavených v okolí tohoto města. 
 
 # 19
 ## 19.1 Napište název literárního díla, který patří na první vynechané místo (*****) ve výchozím textu.
@@ -322,7 +317,7 @@ tohoto města.
 # 20 Které z následujících tvrzení o dvou slovních tvarech tučně vyznačených ve výchozím textu je pravdivé? 
 - [A] Jak tvar *trpícím*, tak tvar *plným* jsou ve výchozím textu užity chybně.
 - [B] Jak tvar *trpícím*, tak tvar *plným* jsou ve výchozím textu užity správně.
-- [C] Ve výchozím textu je tvar *trpícím *užit chybně a tvar *plným* je užit správně.
+- [C] Ve výchozím textu je tvar *trpícím* užit chybně a tvar *plným* je užit správně.
 - [D] Ve výchozím textu je tvar *trpícím* užit správně a tvar *plným* je užit chybně.
 
 # 21 
@@ -330,19 +325,20 @@ tohoto města.
 |xxxxx|xxxxx|
 |:---:| :---: |
 |kontaminace vody   |zprovoznění čistíren odpadních vod |
-|                   |vybudování moderních kanalizačních sítí|
+|kontaminace vody   |vybudování moderních kanalizačních sítí|
 |znečištěné ovzduší |zavedení dálkového vytápění |
-|                   |oddělení průmyslových zón od obytných čtvrtí|
+|znečištěné ovzduší |oddělení průmyslových zón od obytných čtvrtí|
 
 
 **Na každé z vynechaných míst (xxxxx) ve výše uvedené tabulce je nutné doplnit 
 vhodný název sloupce tak, aby všechny informace v tabulce odpovídaly 
 informacím obsaženým v __druhé části__ výchozího textu. Ve které z následujících 
 možností jsou uvedeny oba tyto názvy?**
-- [A] 1. sloupec: negativní jev, 2. sloupec: potenciální příčiny jevu
-- [B] 1. sloupec: negativní jev, 2. sloupec: identifikované příčiny jevu
-- [C] 1. sloupec: reálný problém, 2. sloupec: kroky směřující k eskalaci problému
-- [D] 1. sloupec: reálný problém, 2. sloupec: kroky směřující k eliminaci problému
+
+- [A] 1\. sloupec: negativní jev, 2. sloupec: potenciální příčiny jevu
+- [B] 1\. sloupec: negativní jev, 2. sloupec: identifikované příčiny jevu
+- [C] 1\. sloupec: reálný problém, 2. sloupec: kroky směřující k eskalaci problému
+- [D] 1\. sloupec: reálný problém, 2. sloupec: kroky směřující k eliminaci problému
 
 # 22 Které z následujících slov je z hlediska významu užito ve výchozím textu chybně?
 
@@ -375,7 +371,6 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 25–28
 ====
 
 **TEXT 1**
-
 > (1) Schytal jsem, Mistře, rány pěstí,\
 > usínal blízko mrákotám,\
 > někdy i v keřích na předměstí.\
@@ -414,7 +409,6 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 25–28
 >
 > *Svraštělé tváře dotknout se*\
 > *smí zase jenom stařena.*\
->\
 > (*CZVV*)
 
 # 25 Které z následujících tvrzení prokazatelně neodpovídá TEXTU 1?
@@ -429,7 +423,6 @@ definice uvedené v TEXTU 2.)
 - [B] Přesah se nevyskytuje v žádném z těchto úseků.
 - [C] Přesah se vyskytuje pouze v úseku podtrženém v druhé sloce.
 - [D] Přesah se vyskytuje pouze v úseku podtrženém ve třetí sloce.
-
 # 27 
 Na vynechané místo (*****) v TEXTU 1 patří název básně, který obsahuje dvě 
 části, a to:

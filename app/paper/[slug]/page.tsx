@@ -59,13 +59,13 @@ export default async function Exam(params: Params) {
 
   return (
     <Layout headerNavigation={<Navigation name={project.title} />} fullWidth={true}>
-      <div data-testid="root-document">
-        <div className='columns-sm gap-6 [column-rule-style:solid] [column-rule-width:1px] [column-rule-color:lightgray]'>
-          {contentHeadings.map((d, i, arr) => <div key={i} data-testid={`question-${i}`}>
-            {
-              d.type?.name == Abbreviations.ST && i !== 0 ? <div className='py-3' /> : null
-            }
-            <div
+      <div className='paper' data-testid="root-document">
+        <div className='columns-sm [column-rule-style:solid] [column-rule-width:1px] [column-rule-color:lightgray]'>
+          {contentHeadings.map((d, i, arr) => <div className={cls(['break-inside-avoid print:break-inside-avoid px-2',
+          (d.type?.name == Abbreviations.ST || d.type?.name == Abbreviations.H1) && i !== 0 && 'mt-5'
+          ])} key={i} data-testid={`question-${i}`}>
+
+            <div 
               className={cls([
                 "prose lg:prose-xl",
                 d.hasTexIndent && d.multiColumnsCount <= 1 && "[&_blockquote_p]:indent-2 [&_blockquote]:text-justify",
@@ -81,7 +81,7 @@ export default async function Exam(params: Params) {
               />
             </div>)
             }
-          </div>
+            </div>                      
           )}
         </div>
       </div>

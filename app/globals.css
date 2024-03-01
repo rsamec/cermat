@@ -35,11 +35,16 @@ li > ol {
   list-style-type: 'upper-alpha',  
 } */
 @layer base {
-  /* ul, ol {
+  .paper ul, ol {
     list-style: revert;
     margin: revert;
     padding: revert;
-  } */
+  }
+
+  .paper table th,td
+  {
+    @apply border border-black dark:border-white;
+  }
 }
 @layer components {
   .btn {
