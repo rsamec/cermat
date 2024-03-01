@@ -27,7 +27,6 @@ export default async function Index() {
               width={0}
               height={0}
               className="origin-center object-cover object-center w-full h-auto"
-              sizes="(min-width: 768px) 347px, 192px"
               priority
             />
           </div>
