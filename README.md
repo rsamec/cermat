@@ -1,6 +1,18 @@
 # Cermat tests
 
-This is repo for demonstration pages and applications that show examples how to use cermat offical tests and exams. 
+[Demo](https://rsamec.github.io/cermat)
+
+This repository shows examples like pages and applications how to use cermat offical tests and exams. 
+
+- examples of the reusable test specification - quiz specification and its usage for [cermat test](#cermat-quiz)
+  - e.g. - [czech](public/cz/8/C5A-2023/index.md)
+  - e.g. - [math](public/math/4/M9A-2023/index.md)
+- examples of print media
+  - e.g. - [czech](https://rsamec.github.io/cermat/paper/cestina-5-2023-1)
+  - e.g. - [math](https://rsamec.github.io/cermat/paper/matematika-9-2023-1)
+- examples of test application
+  - e.g. - [czech](https://rsamec.github.io/cermat/wizard/cestina-5-2023-1)
+  - e.g. - [math](https://rsamec.github.io/cermat/wizard/matematika-9-2023-1)
 
 There are 2 main bottlenecks to use cermat offical tests.
 
@@ -10,11 +22,13 @@ There are 2 main bottlenecks to use cermat offical tests.
   - getting the approval may take one month
 - the content format available is typically the pdf document - this is not much appropriate for use by a program or an application
 
-## Examples
+## License
 
-- examples of the reusable test specification - generic quiz specification and its cermat quiz format
-- examples of print media - various media prints, multi column views
-- examples of test application - learning application
+The files that are created based on CERMAT materials (mainly the content of the public directory) has ['CERMAT' license](https://prijimacky.cermat.cz/files/files/CZVV_pravidla-vyuziti-webstrankyn.pdf).
+
+Everything else is open sourced and has [MIT license](LICENSE.md)
+
+
   
 
 Reusable test specification is later called as **Quiz**.
