@@ -26,7 +26,7 @@ There are 2 main bottlenecks to use cermat offical tests.
 
 The files that are created based on CERMAT materials (mainly the content of the public directory) has ['CERMAT' license](https://prijimacky.cermat.cz/files/files/CZVV_pravidla-vyuziti-webstrankyn.pdf).
 
-Everything else is open sourced and has [MIT license](LICENSE.md)
+Everything else is open sourced and has [MIT license](LICENSE)
 
 
   
