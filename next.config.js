@@ -1,4 +1,7 @@
-const withExportImages = require('next-export-optimize-images')
+const withExportImages = require('next-export-optimize-images');
+const withPWA = require("@ducanh2912/next-pwa").default({
+  dest: "public",
+});
 
 let assetPrefix = ''
 let basePath = ''
@@ -15,10 +18,12 @@ const production = process.env.NODE_ENV === 'production' || false;
 console.log("PROD", production)
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withExportImages({
-  ...production && { output: 'export' },
-  assetPrefix,
-  basePath,
-})
+const nextConfig = withPWA(
+  withExportImages({
+    ...production && { output: 'export' },
+    assetPrefix,
+    basePath,
+  })
+)
 
 module.exports = nextConfig
