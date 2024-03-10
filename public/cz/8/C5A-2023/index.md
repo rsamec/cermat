@@ -44,25 +44,16 @@ VÝCHOZÍ TEXT K ÚLOHÁM 1–3
 >Novákovou z 3. C.
 
 # 1 Které z následujících tvrzení odpovídá výchozímu textu?
-- [A] Vendula Nováková si je vědoma toho, že upíry zapudí kromě česneku i prošlé
-sýry. 
-- [B] Před setkáním s hrabětem Drákulou považovala Vendula Nováková upíry za
-dobráky. 
-- [C] Na noční výpravu za Vendulou Novákovou se hrabě Drákula vydal v doprovodu
-dvou netopýrů.
-- [D] Hrabě Drákula se vždy za úplňku navoní levandulí, aby svým zápachem
-nevaroval vyhlédnutou oběť.
-
+- [A] Vendula Nováková si je vědoma toho, že upíry zapudí kromě česneku i prošlé sýry.
+- [B] Před setkáním s hrabětem Drákulou považovala Vendula Nováková upíry za dobráky.
+- [C] Na noční výpravu za Vendulou Novákovou se hrabě Drákula vydal v doprovodu dvou netopýrů.
+- [D] Hrabě Drákula se vždy za úplňku navoní levandulí, aby svým zápachem nevaroval vyhlédnutou oběť.
 
 # 2 Které z následujících tvrzení o slovech tučně vyznačených ve výchozím textu je pravdivé?
-- [A] Jde o slova příbuzná s totožným významem: slovo upír v textu označuje totéž co
-slovo upířák. 
-- [B] Jde o slova příbuzná s různým významem: slovo upír v textu označuje něco
-jiného než slovo upířák.
-- [C] Tato slova nejsou příbuzná, mají však totožný význam: slovo upír v textu
-označuje totéž co slovo upířák.
-- [D] Tato slova nejsou příbuzná, zároveň mají i různý význam: slovo upír v textu
-označuje něco jiného než slovo upířák.
+- [A] Jde o slova příbuzná s totožným významem: slovo upír v textu označuje totéž co slovo upířák. 
+- [B] Jde o slova příbuzná s různým významem: slovo upír v textu označuje něco jiného než slovo upířák.
+- [C] Tato slova nejsou příbuzná, mají však totožný význam: slovo upír v textu označuje totéž co slovo upířák.
+- [D] Tato slova nejsou příbuzná, zároveň mají i různý význam: slovo upír v textu označuje něco jiného než slovo upířák.
 
 # 3 Která z následujících možností nejlépe vystihuje výchozí text?
 - [A] Tento text, jehož cílem je zejména pobavit čtenáře, je próza.
@@ -73,8 +64,8 @@ označuje něco jiného než slovo upířák.
 
 VÝCHOZÍ TEXT K ÚLOZE 4
 ===
->Petr se Janě před celou třídou posmíval, že má nemoderní mobil a nosí hnusné oblečení,
-a pak se divil, když mu řekla, že se chová jako blbec. Zkrátka *****.
+> Petr se Janě před celou třídou posmíval, že má nemoderní mobil a nosí hnusné oblečení,
+> a pak se divil, když mu řekla, že se chová jako blbec. Zkrátka *****.
 
 # 4 Která z následujících možností obsahuje ustálené slovní spojení vystihující situaci ve výchozím textu, a patří tedy na vynechané místo (*****) v textu?
 - [A] na děravý pytel nová záplata

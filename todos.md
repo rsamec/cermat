@@ -4,7 +4,7 @@ required
 - [ ] samohodnoceni badge, hint + odliseni voleb 
 - [x] varovani opusteni stranky - refresh, F5
 - [ ] varovani opusteni stranky - routing
-- [ ] multi input, podmet a prisudek
+- [x] multi input, podmet a prisudek
 
 - [?] hint zvyraznit, navod pro zapsani matematickeho vyrazu
 - [x] markdown processing for options, input prefix + suffix,  text superscript + supscript

@@ -97,7 +97,7 @@ async function getData({ params }: Params) {
     ...d,
     options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
       ...opt,
-      name: await markdownToHtml(opt.name)
+      name: await markdownToHtml(opt.name, { path: assetPath })
     }))) : d.options,
     contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: assetPath }) : (await markdownToHtml(d.header, { path: assetPath }) + await markdownToHtml(d.content, { path: assetPath })),
   })))
