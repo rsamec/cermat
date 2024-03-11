@@ -1,6 +1,10 @@
 const withExportImages = require('next-export-optimize-images');
 const withPWA = require("@ducanh2912/next-pwa").default({
   dest: "public",
+  cacheOnFrontEndNav: true,
+  workboxOptions: {
+    maximumFileSizeToCacheInBytes: 5_000_000 ,
+  }
 });
 
 let assetPrefix = ''
