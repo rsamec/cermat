@@ -37,7 +37,7 @@ export default function SearchForm() {
           <IconToggleButtonGroup value={selectedGrade} options={gradeOptions} isSame={(f, s) => f?.code === s?.code} format={option => option.label} onChange={(d) => setSelectedGrade(d)}></IconToggleButtonGroup>
         </div>
         <div className="self-end">
-          <Link href={`timeline/${selectedSubject?.code}/${selectedGrade?.code}`}><button disabled={selectedSubject == null || selectedGrade == null}
+          <Link href={`/timeline/${selectedSubject?.code}/${selectedGrade?.code}`}><button disabled={selectedSubject == null || selectedGrade == null}
             className="btn btn-blue flex items-center gap-2"><FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>Najít</button></Link>
         </div>
       </div>
