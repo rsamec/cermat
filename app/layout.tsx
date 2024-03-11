@@ -7,10 +7,10 @@ import './globals.css'
 
 import type { Metadata } from "next";
 
-const APP_NAME = "Cermat Tests";
-const APP_DEFAULT_TITLE = "Cermat Test App";
-const APP_TITLE_TEMPLATE = "%s - PWA App";
-const APP_DESCRIPTION = "Cermat unoffical test application";
+const APP_NAME = "Cermat Testy";
+const APP_DEFAULT_TITLE = "Cermat Testy";
+const APP_TITLE_TEMPLATE = "%s - Cermat Testy";
+const APP_DESCRIPTION = "Cermat neoficiální testy";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
@@ -24,7 +24,15 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "default",
     title: APP_DEFAULT_TITLE,
-    // startUpImage: [],
+    startupImage: [{
+      url: '/icons/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png',
+      media: 'screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)',
+    },
+    {
+      url: '/icons/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png',
+      media: 'screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)',
+    },
+    ]
   },
   formatDetection: {
     telephone: false,
@@ -46,6 +54,11 @@ export const metadata: Metadata = {
     },
     description: APP_DESCRIPTION,
   },
+  icons: [
+    { rel: "apple-touch-icon", url: "icons/icon-128.png" },
+    { rel: "icon", url: "icons/icon-128.png" },
+
+  ]
 };
 
 const inter = Inter({ subsets: ['latin'] })
