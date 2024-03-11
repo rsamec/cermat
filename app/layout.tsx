@@ -7,10 +7,10 @@ import './globals.css'
 
 import type { Metadata } from "next";
 
-const APP_NAME = "PWA App";
-const APP_DEFAULT_TITLE = "My Awesome PWA App";
+const APP_NAME = "Cermat Tests";
+const APP_DEFAULT_TITLE = "Cermat Test App";
 const APP_TITLE_TEMPLATE = "%s - PWA App";
-const APP_DESCRIPTION = "Best PWA app in the world!";
+const APP_DESCRIPTION = "Cermat unoffical test application";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
