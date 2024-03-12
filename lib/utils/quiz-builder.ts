@@ -95,10 +95,10 @@ export function word(slovo: string, { points }: { points: number } = { points: 1
   } as const
 }
 export function words(slova: string, { points }: { points?: number } = { points: 1 }) {
-  const items = slova.split(",")
+  const items = slova.split(",").map(d => d.trim())
   return {
     verifyBy:
-      { kind: "equal", args: items },
+      { kind: "equalStringCollection", args: items },
     points,
     inputBy: items.map(() => ({
       kind: 'text' as const

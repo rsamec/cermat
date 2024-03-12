@@ -1,5 +1,5 @@
 import { normalizeToString } from "./math.utils"
-import { removeSpaces, Option, areDeeplyEqual } from "./utils"
+import { removeSpaces, Option, areDeeplyEqual, isArraySame } from "./utils"
 
 export type ValidationFunctionArgs<T> = { args: T }
 export type EqualValidator<T> = ValidationFunctionArgs<T> & {
@@ -23,8 +23,8 @@ export type EqualMathEquationValidator = ValidationFunctionArgs<string | boolean
 export type EqualSortedOptionsValidator = ValidationFunctionArgs<string[]> & {
   kind: "equalSortedOptions"
 }
-export type EqualListValidator<T> = ValidationFunctionArgs<T[]> & {
-  kind: "equalList"
+export type EqualStringCollectionValidator = ValidationFunctionArgs<string[]> & {
+  kind: "equalStringCollection"
 }
 
 export type SelfEvaluateText = {
@@ -41,7 +41,7 @@ export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<num
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator
-  | EqualMathEquationValidator | EqualListValidator<T> | EqualSortedOptionsValidator;
+  | EqualMathEquationValidator | EqualStringCollectionValidator | EqualSortedOptionsValidator;
 
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
@@ -69,7 +69,7 @@ export class CoreVerifyiers {
         return value === control ? undefined : { 'expected': value, 'actual': control };
       }
       else {
-        const controlValue = normalizeToString(control?.toString());        
+        const controlValue = normalizeToString(control?.toString());
         return value === removeSpaces(controlValue) ? undefined : { 'expected': value, 'actual': control };
       }
     }
@@ -80,6 +80,13 @@ export class CoreVerifyiers {
       return control?.value === value ? undefined : { 'expected': value, 'actual': control }
     }
   }
+
+  static EqualStringCollectionTo(value: string[]) {
+    return (control: string[]) => {
+      return isArraySame(control.sort(),value.sort()) ? undefined : { 'expected': value, 'actual': control }
+    }
+  }
+
 
   static SortedOptionsEqualTo(values: string[]) {
     return (control: Option<string>[]) => {
@@ -103,6 +110,8 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
       return CoreVerifyiers.EqualTo(spec.args);
     case 'equalRatio':
       return CoreVerifyiers.RatioEqualTo(spec.args);
+    case 'equalStringCollection':
+      return CoreVerifyiers.EqualStringCollectionTo(spec.args);
     case 'equalMathExpression':
       return CoreVerifyiers.MathExpressionEqualTo(spec.args);
     case 'equalMathEquation':

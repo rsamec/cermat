@@ -175,11 +175,11 @@
     },
     "11": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "podobu",
-          " turisty",
-          " kouzlo"
+          "turisty",
+          "kouzlo"
         ]
       },
       "points": 3,
@@ -258,7 +258,7 @@
       "children": {
         "13.1": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "jedlý"
             ]
@@ -272,7 +272,7 @@
         },
         "13.2": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "obránce"
             ]
@@ -307,7 +307,7 @@
       "children": {
         "15.1": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "zaměřených"
             ]
@@ -321,7 +321,7 @@
         },
         "15.2": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "způsobenými"
             ]
@@ -387,12 +387,12 @@
     },
     "18": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "favoritům",
-          " hlavolamy",
-          " střežený",
-          " zločinného"
+          "hlavolamy",
+          "střežený",
+          "zločinného"
         ]
       },
       "points": 4,
@@ -601,10 +601,10 @@
     },
     "28": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "oproti",
-          " mezi"
+          "mezi"
         ]
       },
       "points": 2,

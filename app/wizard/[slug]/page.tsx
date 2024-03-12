@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation'
 import { getDocumentSlugs, load } from 'outstatic/server'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
-import { Maybe, absoluteUrl, extractNumberRange } from '@/lib/utils/utils'
+import { Maybe, imageUrl, extractNumberRange } from '@/lib/utils/utils'
 import markdownToHtml from '@/lib/utils/markdown'
 import { parser, GFM, Superscript, Subscript } from "@lezer/markdown";
 import { Abbreviations, OptionList, QuestionHtml, ShortCodeMarker, chunkHeadingsList, countMaxChars } from '@/lib/utils/parser.utils'
@@ -40,10 +40,10 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
       title: project.title,
       description: project.description,
       type: 'article',
-      url: absoluteUrl(`/${collection}/${project.slug}`),
+      url: imageUrl(`/${collection}/${project.slug}`),
       images: [
         {
-          url: absoluteUrl(project?.coverImage || '/images/og-image.png'),
+          url: imageUrl(project?.coverImage || '/images/og-image.png'),
           width: 1200,
           height: 630,
           alt: project.title
@@ -54,7 +54,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
       card: 'summary_large_image',
       title: project.title,
       description: project.description,
-      images: absoluteUrl(project?.coverImage || '/images/og-image.png')
+      images: imageUrl(project?.coverImage || '/images/og-image.png')
     }
   }
 }

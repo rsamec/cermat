@@ -12,7 +12,7 @@ import remarkGfm from 'remark-gfm';
 
 
 import { visit } from 'unist-util-visit';
-import { absoluteUrl } from './utils';
+import { imageUrl } from './utils';
 
 //const imgDirInsidePublic = 'images';
 function concatPaths(...segments: string[]): string {
@@ -39,7 +39,7 @@ function transformImgSrc() {
       const image = node.children.find((child: { type: string }) => child.type === 'image');
       if (image) {
         const pathes = file.data?.path;
-        image.url = absoluteUrl(pathes?.length > 0 ? `${concatPaths(...pathes.concat(image.url))}` : image.url);
+        image.url = imageUrl(pathes?.length > 0 ? `${concatPaths(...pathes.concat(image.url))}` : image.url);
       }
     });
   };

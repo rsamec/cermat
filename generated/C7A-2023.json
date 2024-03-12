@@ -415,7 +415,7 @@
     },
     "17": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "dějinách",
           "úklidu",
@@ -437,7 +437,7 @@
     },
     "18": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "skutečné",
           "nerozuměl",
@@ -601,7 +601,7 @@
     },
     "23": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "dějinách",
           "úklidu",

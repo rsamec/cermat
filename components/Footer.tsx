@@ -1,4 +1,4 @@
-import { absoluteUrl } from "@/lib/utils/utils"
+import { imageUrl } from "@/lib/utils/utils"
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -24,7 +24,7 @@ export const ContactFooter = () => {
             <h3 className="font-semibold text-l"> DALŠÍ INFORMACE</h3>
             <div>
               {/* <p><a href={normalizeHtmlExtension(absoluteUrl('/pages/about'))}>Kdo jsme</a></p> */}
-              <p><a href={absoluteUrl('/gdpr.pdf')} target="_blank">Ochrana osobních údajů</a></p>
+              <p><a href={imageUrl('/gdpr.pdf')} target="_blank">Ochrana osobních údajů</a></p>
             </div>
 
           </div>

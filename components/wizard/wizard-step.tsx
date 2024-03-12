@@ -9,7 +9,7 @@ import { useState } from "react";
 import Image from 'next/image';
 import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { absoluteUrl, cls, format, updateMap } from "@/lib/utils/utils";
+import { imageUrl, cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import { FieldControl } from "@rx-form/core";
 import { useControlValid } from "@rx-form/react";
@@ -83,9 +83,9 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
   const isSelfEvaluate = verifyBy.kind === "selfEvaluate";
 
   const stateVariants = {
-    "success": 'bg-green-100 dark:bg-green-800 hover:bg-green-200 border-green-200 dark:border-green-400',
-    "danger": 'bg-red-100 dark:bg-red-800 hover:bg-red-200 border-red-200 dark:border-red-400',
-    "undefined": '-:dark:bg-slate-900 -:hover:bg-gray-50 -:dark:hover:bg-gray-800 border-gray-200 dark:border-gray-700',
+    "success": 'bg-green-100 dark:bg-green-800 border-green-200 dark:border-green-400',
+    "danger": 'bg-red-100 dark:bg-red-800 border-red-200 dark:border-red-400',
+    "undefined": '-:dark:bg-slate-900 border-gray-200 dark:border-gray-700',
   }
   const checkButton = <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: stepId, answer: formControl.value })}>Zkontrolovat</button>
 
@@ -181,7 +181,7 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
             <section className="grid grid-cols-1 gap-2 py-5" >
               {verifyBy.args.hint.kind == 'image' &&
                 <div className="relative w-full aspect-[4/3]">
-                  <Image src={absoluteUrl(`/${(assetPath ?? []).concat(verifyBy.args.hint.src).join("/")}`)} alt='Check result' fill className="object-contain object-center" />
+                  <Image src={imageUrl(`/${(assetPath ?? []).concat(verifyBy.args.hint.src).join("/")}`)} alt='Check result' fill className="object-contain object-center" />
                 </div>
               }
               {verifyBy.args.hint.kind == 'text' && <div dangerouslySetInnerHTML={{ __html: verifyBy.args.hint.content }} />}

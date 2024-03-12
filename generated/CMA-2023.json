@@ -61,7 +61,7 @@
     },
     "2": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "příjmení",
           "střetu",
@@ -177,10 +177,10 @@
     },
     "9": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "obrovský",
-          " nahatý"
+          "nahatý"
         ]
       },
       "points": 2,
@@ -590,7 +590,7 @@
     },
     "28": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "než"
         ]
@@ -638,12 +638,12 @@
     },
     "30": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "přibyly",
-          " amerických",
-          " výkonnou",
-          " čidly"
+          "amerických",
+          "výkonnou",
+          "čidly"
         ]
       },
       "points": 4,

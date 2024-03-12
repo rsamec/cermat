@@ -185,11 +185,11 @@
     },
     "12": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "netvorovi",
-          " příteli",
-          " bytu"
+          "příteli",
+          "bytu"
         ]
       },
       "points": 3,
@@ -325,7 +325,7 @@
       "children": {
         "16.1": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "pořádaném"
             ]
@@ -339,7 +339,7 @@
         },
         "16.2": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "článkem"
             ]
@@ -365,7 +365,7 @@
     },
     "18": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "zvolí",
           "poměrně",
@@ -492,7 +492,7 @@
       "children": {
         "24.1": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "občerstvení"
             ]
@@ -506,7 +506,7 @@
         },
         "24.2": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "dávka"
             ]
@@ -603,7 +603,7 @@
       "children": {
         "28.1": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "přívlastek"
             ]
@@ -617,7 +617,7 @@
         },
         "28.2": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "equalStringCollection",
             "args": [
               "předmět"
             ]

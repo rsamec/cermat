@@ -1,15 +1,11 @@
 export type Maybe<T> = T | undefined;
 export type Option<T> = { name: string, value: T }
 
-export function absoluteUrl(path: string) {
+export function imageUrl(path: string) {
   //return path;
   path = path.replace("/public", "");
   const rootSegment = process.env.NEXT_PUBLIC_REPO_SLUG;
   return `${rootSegment ? `/${rootSegment}` : ''}${path}`
-}
-
-export function imageUrl(image: string | undefined) {
-  return image ?? '';
 }
 
 export function chunk<T>(arr: T[], chunkSize = 3) {
@@ -152,4 +148,12 @@ export function formatTime(seconds: number) {
   var seconds = Math.floor((miliseconds % (1000 * 60)) / 1000);
   return minutes + "m " + seconds + "s";
    
+}
+
+export function isArraySame<T>(f: T[], s: T[]) {
+  return Array.isArray(f) &&
+    Array.isArray(s) &&
+    f.length === s.length &&
+    f.every((val, index) => val === s[index]);
+
 }

@@ -415,7 +415,7 @@
     },
     "17": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "čistota",
           "důsledek",
@@ -437,7 +437,7 @@
     },
     "18": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "vyzvídat",
           "nerozuměl",
@@ -522,7 +522,7 @@
     },
     "20": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "kukátku",
           "plánu",

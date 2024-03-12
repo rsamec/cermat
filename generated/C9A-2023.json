@@ -169,7 +169,7 @@
     },
     "9": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "je",
           "vaše"
@@ -367,7 +367,7 @@
     },
     "18": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "nejvýznamnějším",
           "spjatý",
@@ -561,7 +561,7 @@
     },
     "26": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "dějinách",
           "úklidu",

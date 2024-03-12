@@ -61,11 +61,11 @@
     },
     "2": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "srpnové",
-          " mezinárodní",
-          " známém"
+          "mezinárodní",
+          "známém"
         ]
       },
       "points": 3,
@@ -183,10 +183,10 @@
     },
     "10": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "sál",
-          " obrat"
+          "obrat"
         ]
       },
       "points": 2,
@@ -409,10 +409,10 @@
     },
     "22": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "oblast",
-          " ker"
+          "ker"
         ]
       },
       "points": 2,
@@ -570,12 +570,12 @@
     },
     "29": {
       "verifyBy": {
-        "kind": "equal",
+        "kind": "equalStringCollection",
         "args": [
           "setměním",
-          " zcela",
-          " skleněných",
-          " narušily"
+          "zcela",
+          "skleněných",
+          "narušily"
         ]
       },
       "points": 4,
