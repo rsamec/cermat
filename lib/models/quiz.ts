@@ -1,4 +1,4 @@
-import { createModel } from '@rematch/core';
+import { RematchRootState, createModel } from '@rematch/core';
 import { RootModel } from './index';
 import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
 import { Answer, AnswerMetadataTreeNode, calculateMaxTotalPoints, calculatePoints } from '../utils/quiz-specification';
@@ -77,7 +77,7 @@ export const quiz = createModel<RootModel>()({
     resetQuizAnswers(state) {
       const answers = {};
       const corrections = {}
-      del(getStorageKey(state.assetPath!));      
+      del(getStorageKey(state.assetPath!));
       return {
         ...state,
         answers,
@@ -93,11 +93,20 @@ export const quiz = createModel<RootModel>()({
     },
   }),
   effects: (dispatch) => ({
-    async initAsync({ tree, assetPath }: { tree: TreeNode<Answer<any>>, assetPath: string[] }) {
+    async initAsync({ tree, assetPath }: { tree: TreeNode<Answer<any>>, assetPath: string[] }, rootState: RematchRootState<RootModel>) {
       let answers = await get(getStorageKey(assetPath!), {});
       dispatch.quiz.init({ tree, assetPath, answers })
     },
-  }),
+    async submitQuizAnswerAsync({ questionId, answer }: { questionId: string; answer: string }, rootState: RematchRootState<RootModel>) {
+      //always submit answer
+      dispatch.quiz.submitQuizAnswer({ questionId, answer });
+
+      setTimeout(() => {
+        dispatch.wizard.goToFirstAvailableAsync(rootState.wizard.currentStep);
+      }, 500)
+
+    }
+  })
 });
 
 const getStorageKey = (assetPath: string[]) => {

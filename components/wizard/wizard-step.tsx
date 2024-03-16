@@ -1,13 +1,13 @@
 'use client'
 import * as React from "react";
 import { connect } from "react-redux";
-import { Dispatch, RootState, store } from "../../lib/store";
+import { Dispatch, RootState } from "../../lib/store";
 import { Question } from "@/lib/models/wizard";
 import { convertToForm, getControl } from "@/lib/utils/form.utils";
 import { createOptionAnswer, createBoolAnswer, renderControl } from "@/lib/utils/component.utils";
 import { useState } from "react";
 import Image from 'next/image';
-import { faAngleLeft, faAngleRight, faInfoCircle, faThumbsUp, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { imageUrl, cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
@@ -17,43 +17,38 @@ import { ComponentFunctionSpec } from "@/lib/utils/catalog-function";
 import ToggleSwitchBadge from "../core/ToggleSwitchBadge";
 import DOMPurify from "dompurify";
 import { toHtml } from "@/lib/utils/math.utils";
-import TextBadge from "../core/TextBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
-  setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.submitQuizAnswer(args),
+  setAnswer: (args: { questionId: string, answer: any }) => dispatch.quiz.submitQuizAnswerAsync(args),
   next: () => dispatch.wizard.goToNextStep(),
   back: () => dispatch.wizard.goToPreviousStep(),
   resetAnswers: () => dispatch.quiz.resetQuizAnswers(),
 });
 
 
-const selection = store.select((models) => ({
-  totalAnswers: models.quiz.totalAnswers,
-}));
-
 const mapState = (state: RootState) => ({
   ...state.quiz,
   //time: state.timer.time,
-  ...selection(state as never),
 })
 
 
 type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
-type Props = { step: Question } & StateProps & DispatchProps;
+type Props = { step: Question, headerMap: Map<string, { expanded: boolean }>,
+ questionMap: Map<string, { expanded: boolean }>, 
+ toggleExpandableHeader:(title:string) => void,
+ toggleExpandableAnswer:(title:string) => void, } & StateProps & DispatchProps;
 
 
 
 
-const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answers, assetPath, setAnswer, resetAnswers, next, back, totalAnswers, totalPoints, maxTotalPoints }) => {
+const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answers, assetPath, setAnswer, headerMap, questionMap, toggleExpandableAnswer, toggleExpandableHeader }) => {
 
   const stepId = step.id;
   const correction = corrections[stepId]
   const status = correction === true ? 'success' : correction === false ? 'danger' : undefined
 
   const [form] = useState(() => convertToForm(tree!, answers))
-  const [questionMap, setQuestionMap] = useState(new Map())
-  const [headerMap, setHeaderMap] = useState(new Map())
 
 
   const formControl = getControl(form, stepId as any);
@@ -68,14 +63,9 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
   const verifyBy = step.metadata.verifyBy;
   const maxPoints = verifyBy.kind == 'selfEvaluate' ? Math.max(...verifyBy.args.options.map(d => d.value)) : step.metadata.points;
 
-  const isHeaderExpanded = headerMap.has(header?.title) ? headerMap.get(header?.title).expanded : true;
-  const isQuestionAnswerExpanded = questionMap.has(stepId) ? questionMap.get(stepId).expanded : false;
-  const toggleExpandableHeader = (title: string) => {
-    setHeaderMap((previous) => updateMap(previous, title, { expanded: previous.has(title) ? !previous.get(title).expanded : false }))
-  }
-  const toggleExpandableAnswer = (questionId: string) => {
-    setQuestionMap((previous) => updateMap(previous, questionId, { expanded: previous.has(questionId) ? !previous.get(questionId).expanded : true }))
-  }
+  const isHeaderExpanded = headerMap.has(header?.title!) ? headerMap.get(header?.title!)?.expanded : true;
+  const isQuestionAnswerExpanded = questionMap.has(stepId) ? questionMap.get(stepId)?.expanded : false;
+
 
 
   const inputBy = (step.metadata.inputBy as ComponentFunctionSpec);
@@ -193,27 +183,6 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
 
             </section>
           </details> : null}
-      </div>
-
-      <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-
-      <div className="flex">
-
-        <div className="grow flex flex-wrap gap-2">
-          <TextBadge text="Úlohy" type="Gray">{`${totalAnswers} / ${questions.length}`}</TextBadge>
-          <TextBadge text="Body" type="Gray">{`${totalPoints} / ${maxTotalPoints}`}</TextBadge>
-        </div>
-
-        <div className="flex self-end gap-3">
-          <button className="btn btn-red"
-            onClick={() => resetAnswers()}><FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
-          </button>
-
-          <button className="btn btn-blue"
-            onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} size="2xl" /></button>
-          <button className="btn btn-blue"
-            onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} size="2xl" /></button>
-        </div>
       </div>
     </div>
   );
