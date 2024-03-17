@@ -19,14 +19,33 @@ const form = group({
    9:number(3, { suffix: 'krát' }), 
    10:group({
     10.1:number(2.80, { suffix: 'Kč' }), 
-    10.2:mathExpr('(2.8-0.4x)', { hintType: 'expression' },),
+    10.2:mathExpr('(2.8-0.4x)', { hintType: 'expression', suffix: 'Kč' },),
     //chybi kc
    }),
    11:mathExpr('x=2+2t', { hintType: 'equation' }),
    12:mathExpr('D[0;19]', { hintType: 'expression' }),
    13:group({
-    13.1:mathExpr('35m^2', { hintType: 'expression' }),
-    13.2:mathExpr('613m^3', { hintType: 'expression' }),
+    13.1:mathExpr('35m^2', { hintType: 'expression' },twoPoints),
+    13.2:mathExpr('613m^3', { hintType: 'expression' },twoPoints),
+   }),
+   14:number(1040, { suffix: 'm' },threePoints),
+   15:group({
+      15.1:option('N'),
+      15.2:option('A'),
+      15.3:option('A'),
+   }),
+   16:option('A',twoPoints),
+   17:option('C',twoPoints),
+   18:option('E',twoPoints),
+   19:option('B',twoPoints),
+   20:option('A',twoPoints),
+   21:option('B',twoPoints),
+   22:option('D',twoPoints),
+   23:option('D',twoPoints),
+   24:option('C',twoPoints),
+   25:group({
+      25.1:option('D',twoPoints),
+      25.2:option('E',twoPoints),
    })
 });
 export default form
