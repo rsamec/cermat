@@ -26,6 +26,9 @@ export type EqualSortedOptionsValidator = ValidationFunctionArgs<string[]> & {
 export type EqualStringCollectionValidator = ValidationFunctionArgs<string[]> & {
   kind: "equalStringCollection"
 }
+export type EqualNumberCollectionValidator = ValidationFunctionArgs<number[]> & {
+  kind: "equalNumberCollection"
+}
 
 export type SelfEvaluateText = {
   kind: 'text',
@@ -41,7 +44,7 @@ export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<num
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator
-  | EqualMathEquationValidator | EqualStringCollectionValidator | EqualSortedOptionsValidator;
+  | EqualMathEquationValidator | EqualStringCollectionValidator  | EqualNumberCollectionValidator| EqualSortedOptionsValidator;
 
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
@@ -87,6 +90,12 @@ export class CoreVerifyiers {
     }
   }
 
+  static EqualNumberCollectionTo(value: number[]) {
+    return (control: number[]) => {
+      return isArraySame(control.sort((f,s) => f-s),value.sort((f,s) => f-s)) ? undefined : { 'expected': value, 'actual': control }
+    }
+  }
+
 
   static SortedOptionsEqualTo(values: string[]) {
     return (control: Option<string>[]) => {
@@ -112,6 +121,8 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
       return CoreVerifyiers.RatioEqualTo(spec.args);
     case 'equalStringCollection':
       return CoreVerifyiers.EqualStringCollectionTo(spec.args);
+    case 'equalNumberCollection':
+      return CoreVerifyiers.EqualNumberCollectionTo(spec.args);
     case 'equalMathExpression':
       return CoreVerifyiers.MathExpressionEqualTo(spec.args);
     case 'equalMathEquation':

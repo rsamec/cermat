@@ -106,6 +106,17 @@ export function words(slova: string, { points }: { points?: number } = { points:
   } as const
 }
 
+export function numbers(items: number[], { points }: { points?: number } = { points: 1 }) {
+  return {
+    verifyBy:
+      { kind: "equalNumberCollection", args: items },
+    points,
+    inputBy: items.map(() => ({
+      kind: 'number' as const
+    }))
+  } as const
+}
+
 export function wordsGroup(slova: { [key: string]: string }, { points }: { points?: number } = { points: 1 }) {
   return {
     verifyBy: { kind: 'equal', args: slova },
@@ -116,6 +127,7 @@ export function wordsGroup(slova: { [key: string]: string }, { points }: { point
     }, {})
   } as const
 }
+
 
 export function sortedOptions(sortedOptions: string[], { points }: { points?: number } = { points: 1 }) {
   return { verifyBy: { kind: 'equalSortedOptions', args: sortedOptions }, points, inputBy: { kind: 'sortedOptions' } } as const
