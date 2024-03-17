@@ -1,6 +1,6 @@
 {
-  "commit": "3af0f9ab562d5754bc99246161078179ec06204c",
-  "generated": "Sun, 17 Mar 2024 18:49:06 GMT",
+  "commit": "321d9be77dd04fbefc098f0c8003f191f44b1583",
+  "generated": "2024-03-17T19:07:52.197Z",
   "metadata": [
     {
       "__outstatic": {
@@ -139,29 +139,6 @@
       "subject": "cz",
       "title": "Čeština (5. ročník) - 1. řádný termín 2022",
       "year": "2022"
-    },
-    {
-      "__outstatic": {
-        "commit": "aa38d18fe3e954c1b44765e9bde97fb5b0209fe8",
-        "hash": "434749399",
-        "path": "outstatic/content/exams/c7a-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C7A-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230404",
-      "grade": "6",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c7a-2023",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (7. ročník) - 1. řádný termín 2023",
-      "year": "2023"
     },
     {
       "__outstatic": {
@@ -1402,6 +1379,29 @@
       "status": "draft",
       "subject": "math",
       "title": "Matika (maturita) - podzim 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "321d9be77dd04fbefc098f0c8003f191f44b1583",
+        "hash": "2198859587",
+        "path": "outstatic/content/exams/c7a-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C7A-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230404",
+      "grade": "6",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c7a-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (7. ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
