@@ -98,12 +98,13 @@ async function getData() {
   const content = await markdownToHtml(page.content)
 
   const mathPosts = await db
-    .find({ collection, subject: 'math' }, [
+    .find({ collection, subject: 'math', status:'published' }, [
       'title',
       'publishedAt',
       'slug',
       'coverImage',
       'description',
+      'status',
       'subject',
       'year',
       'grade',
@@ -113,12 +114,13 @@ async function getData() {
     .toArray()
 
   const primaryLanguagePosts = await db
-    .find({ collection, subject: 'cz' }, [
+    .find({ collection, subject: 'cz', status:'published' }, [
       'title',
       'publishedAt',
       'slug',
       'coverImage',
       'description',
+      'status',
       'subject',
       'year',
       'grade',
