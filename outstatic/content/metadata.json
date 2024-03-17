@@ -1,6 +1,6 @@
 {
-  "commit": "984f533b9359c83c74ad91c6e517687dcb210e31",
-  "generated": "2024-03-17T18:44:50.284Z",
+  "commit": "aed33d9b08cfaf0581cecd7bf051d400dd7fff79",
+  "generated": "2024-03-17T18:46:03.293Z",
   "metadata": [
     {
       "__outstatic": {
@@ -47,29 +47,6 @@
       "subject": "cz",
       "title": "Čeština (5. ročník) - 1. náhradní termín 2022",
       "year": "2022"
-    },
-    {
-      "__outstatic": {
-        "commit": "48ed759f7910453184402154e28b54630b05e716",
-        "hash": "1274177392",
-        "path": "outstatic/content/exams/c5b-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C5B-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230405",
-      "grade": "8",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c5b-2023",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (5. ročník) - 2. řádný termín 2023",
-      "year": "2023"
     },
     {
       "__outstatic": {
@@ -1403,6 +1380,29 @@
       "subject": "cz",
       "title": "Čeština (7. ročník) - 1. řádný termín 2022",
       "year": "2022"
+    },
+    {
+      "__outstatic": {
+        "commit": "aed33d9b08cfaf0581cecd7bf051d400dd7fff79",
+        "hash": "140260401",
+        "path": "outstatic/content/exams/c5b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C5B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230405",
+      "grade": "8",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c5b-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (5. ročník) - 2. řádný termín 2023",
+      "year": "2023"
     }
   ]
 }
