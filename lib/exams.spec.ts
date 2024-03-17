@@ -11,6 +11,12 @@ import mat9_2023_1 from './exams/M9A-2023';
 import cz5_2023_1 from './exams/C5A-2023';
 import cz9_2023_1 from './exams/C9A-2023';
 import cestina7 from './exams/C7A-2023';
+import mat7_2023_1 from './exams/M7A-2023';
+import mat9A_2023_1 from './exams/M9A-2023';
+import mat7B_2023_1 from './exams/M7B-2023';
+import mat5B_2023_1 from './exams/M5B-2023';
+import mat9B_2023_1 from './exams/M9B-2023';
+
 
 import cestina5B from './exams/C5B-2023';
 import cestina9B from './exams/C9B-2023';
@@ -72,7 +78,7 @@ const czDimploma = ["cz", "diploma"];
 const math8Years = ["math", "8"];
 const math4Years = ["math", "4"];
 const math6Years = ["math", "6"];
-const mathDimploma = ["math", "6"];
+const mathDimploma = ["math", "diploma"];
 
 
 const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
@@ -86,7 +92,13 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
   { quiz: cestina9C, pathes: cz4Years.concat("C9C-2023") },
   { quiz: cz_2023_A, pathes: czDimploma.concat("CMA-2023") },
   { quiz: cz_2023_B, pathes: czDimploma.concat("CMB-2023") },
+  { quiz: mat7_2023_1, pathes: math6Years.concat("M7A-2023") },
+  { quiz: mat9A_2023_1, pathes: math4Years.concat("M9A-2023") },
+  { quiz: mat7B_2023_1, pathes: math6Years.concat("M7B-2023") },
+  { quiz: mat5B_2023_1, pathes: math8Years.concat("M5B-2023") },
+  { quiz: mat9B_2023_1, pathes: math4Years.concat("M9B-2023") },  
   { quiz: M5B_2023, pathes: math8Years.concat("M5B-2023") },
+
 ]
 
 test.each(examTestCases)(`compute total max points $pathes`, ({ quiz, pathes }) => {
