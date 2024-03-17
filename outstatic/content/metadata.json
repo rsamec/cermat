@@ -1,51 +1,29 @@
 {
-  "commit": "73fec3bccfbd19e89175fe5ecba65fe51361df02",
-  "generated": "Sun, 17 Mar 2024 13:53:23 GMT",
+  "commit": "bae8a8a4a46aa64db94b8021b0dd493c2fc78c11",
+  "generated": "Sun, 17 Mar 2024 14:02:03 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "27de4973c710191a758c1fb7c49541b7ec08f4fd",
-        "hash": "821853838",
-        "path": "outstatic/content/exams/c9b-2023.md"
+        "commit": "f63a6f3d00e9cbfe12bc05c15d6c40d424c6d4a4",
+        "hash": "2147752595",
+        "path": "outstatic/content/exams/cestina-9-2023-1.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "C9B-2023",
+      "code": "C9A-2023",
       "collection": "exams",
       "coverImage": "",
       "description": "",
-      "expectedAt": "20230414",
+      "expectedAt": "20230413",
       "grade": "4",
-      "publishedAt": "2024-02-11T06:35:31.692Z",
-      "slug": "c9b-2023",
+      "publishedAt": "2023-12-30T14:25:50.401Z",
+      "slug": "cestina-9-2023-1",
       "status": "published",
       "subject": "cz",
-      "title": "Čeština (9 ročník) - 2. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "0fe7f84710a78764386b26166146faa699291269",
-        "hash": "2281697077",
-        "path": "outstatic/content/exams/c5b-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C5B-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230418",
-      "grade": "8",
-      "publishedAt": "2024-02-11T06:49:17.845Z",
-      "slug": "c5b-2023",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština (5 ročník) - 2. řádný termín 2023",
+      "timeSlot": "1",
+      "title": "Čeština (9 ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
@@ -97,6 +75,74 @@
     },
     {
       "__outstatic": {
+        "commit": "27de4973c710191a758c1fb7c49541b7ec08f4fd",
+        "hash": "821853838",
+        "path": "outstatic/content/exams/c9b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C9B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230414",
+      "grade": "4",
+      "publishedAt": "2024-02-11T06:35:31.692Z",
+      "slug": "c9b-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (9 ročník) - 2. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "0fe7f84710a78764386b26166146faa699291269",
+        "hash": "2281697077",
+        "path": "outstatic/content/exams/c5b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C5B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230418",
+      "grade": "8",
+      "publishedAt": "2024-02-11T06:49:17.845Z",
+      "slug": "c5b-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (5 ročník) - 2. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "c4e8cf508f7f745a87f5b2fab77d8c487449ea82",
+        "hash": "3255683384",
+        "path": "outstatic/content/exams/m7a-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M7A-2023",
+      "collection": "exams",
+      "description": "",
+      "expectedAt": "20230404",
+      "grade": "6",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "m7a-2023",
+      "status": "draft",
+      "subject": "math",
+      "title": "Matika (7. ročník) - 1. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
         "commit": "f98c2b4846e5da267834e4718dc9c23723a3d847",
         "hash": "2461684034",
         "path": "outstatic/content/exams/matematika-5-2023-1.md"
@@ -117,71 +163,6 @@
       "subject": "math",
       "timeSlot": "1",
       "title": "Matematika (5 ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "8c7041534b73e0d4671137a4d7360121f18d559a",
-        "hash": "415493133",
-        "path": "outstatic/content/pages/home.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-30T12:23:18.534Z",
-      "slug": "home",
-      "status": "published",
-      "title": "Home"
-    },
-    {
-      "__outstatic": {
-        "commit": "1fad1a6615aa379a8bbdcaac197079df81416cd6",
-        "hash": "2863008213",
-        "path": "outstatic/content/exams/cestina-maturita-jaro-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "CMA-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230502",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "cestina-maturita-jaro-2023",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština (maturita) - jaro 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "f63a6f3d00e9cbfe12bc05c15d6c40d424c6d4a4",
-        "hash": "2147752595",
-        "path": "outstatic/content/exams/cestina-9-2023-1.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C9A-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230413",
-      "grade": "4",
-      "publishedAt": "2023-12-30T14:25:50.401Z",
-      "slug": "cestina-9-2023-1",
-      "status": "published",
-      "subject": "cz",
-      "timeSlot": "1",
-      "title": "Čeština (9 ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
