@@ -1,6 +1,6 @@
 {
-  "commit": "709114322567da8602e22c68b2d7df9760930e72",
-  "generated": "2024-03-17T18:44:09.247Z",
+  "commit": "984f533b9359c83c74ad91c6e517687dcb210e31",
+  "generated": "2024-03-17T18:44:50.284Z",
   "metadata": [
     {
       "__outstatic": {
@@ -185,29 +185,6 @@
       "subject": "cz",
       "title": "Čeština (5. ročník) - 2. náhradní termín 2023",
       "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "529dd2e537413e146c3b611810517557558fde01",
-        "hash": "1083541488",
-        "path": "outstatic/content/exams/c7a-2022.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C7A-2022",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20220404",
-      "grade": "6",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c7a-2022",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (7. ročník) - 1. řádný termín 2022",
-      "year": "2022"
     },
     {
       "__outstatic": {
@@ -1403,6 +1380,29 @@
       "subject": "math",
       "title": "Matika (7. ročník) - 1. řádný termín 2023",
       "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "984f533b9359c83c74ad91c6e517687dcb210e31",
+        "hash": "1089006499",
+        "path": "outstatic/content/exams/c7a-2022.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C7A-2022",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20220404",
+      "grade": "6",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c7a-2022",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (7. ročník) - 1. řádný termín 2022",
+      "year": "2022"
     }
   ]
 }
