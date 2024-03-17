@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation'
-import { getDocumentSlugs, load } from 'outstatic/server'
+import { getDocumentSlugs, getDocuments, load } from 'outstatic/server'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
 import { imageUrl, cls } from '@/lib/utils/utils'
@@ -93,7 +93,7 @@ export default async function Exam(params: Params) {
 async function getData({ params }: Params) {
   const db = await load()
   const project = await db
-    .find<Project>({ collection: collection, slug: params.slug }, [
+    .find<Project>({ collection: collection, status:'published', slug: params.slug }, [
       'title',
       'publishedAt',
       'description',
@@ -133,6 +133,7 @@ async function getData({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  const posts = getDocumentSlugs(collection)
-  return posts.map((slug) => ({ slug }))
+  return getDocuments(collection, ['slug'])  
+  // const posts = getDocumentSlugs(collection)
+  // return posts.map((slug) => ({ slug }))
 }
