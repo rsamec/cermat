@@ -71,11 +71,12 @@ export default async function TimelinePage({ params }: Params) {
 async function getData({ params }: Params) {
   const db = await load()
   const exams = await db
-    .find<Exam>({ collection, subject: params.search[0], ...(params.search[1] != null && { grade: params.search[1]}) }, [
+    .find<Exam>({ collection, status:'published', subject: params.search[0], ...(params.search[1] != null && { grade: params.search[1]}) }, [
       'title',
       'publishedAt',
       'expectedAt',
       'description',
+      'status',
       'slug',
       'author',
       'content',
@@ -96,7 +97,7 @@ async function getData({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  const postsBySubjectAndGrade = getDocuments(collection, ['subject', 'grade'])  
-  const postsBySubject = getDocuments(collection, ['subject'])  
+  const postsBySubjectAndGrade = getDocuments(collection, ['subject', 'grade'])
+  const postsBySubject = getDocuments(collection, ['subject'])
   return postsBySubject.map(({subject}) =>  ({search: [subject]})).concat(postsBySubjectAndGrade.map(({ subject, grade }) => ({ search: [subject, grade] })))
 }

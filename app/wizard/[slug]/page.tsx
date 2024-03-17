@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation'
 
-import { getDocumentSlugs, load } from 'outstatic/server'
+import { getDocumentSlugs, getDocuments, load } from 'outstatic/server'
 import { OstDocument } from 'outstatic'
 import { Metadata } from 'next'
 import { Maybe, imageUrl, extractNumberRange } from '@/lib/utils/utils'
@@ -170,6 +170,7 @@ async function getData({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  const posts = getDocumentSlugs(collection)
-  return posts.map((slug) => ({ slug }))
+  return getDocuments(collection, ['slug'])  
+  // const posts = getDocumentSlugs(collection)
+  // return posts.map((slug) => ({ slug }))
 }
