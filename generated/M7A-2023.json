@@ -244,7 +244,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": "V rovině leží bod C a přímky a, b.jpeg"
+            "src": "rovina2Primky-reseni.jpeg"
           }
         }
       },
@@ -294,7 +294,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": " V rovině leží body K, S a přímka p procházející bodem S"
+            "src": "rovina1Primka-reseni.jpeg"
           }
         }
       },
@@ -325,31 +325,31 @@
         "10.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "N"
+            "args": false
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "10.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": true
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "10.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "N"
+            "args": false
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         }
       },
@@ -473,7 +473,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "sloupců  "
+              "suffix": "sloupců"
             }
           }
         },
@@ -486,7 +486,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "sloupců  "
+              "suffix": "sloupců"
             }
           }
         },
