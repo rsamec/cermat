@@ -1,0 +1,487 @@
+{
+  "children": {
+    "1": {
+      "children": {
+        "1.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 31
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {}
+          }
+        },
+        "1.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 2050
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {}
+          }
+        }
+      }
+    },
+    "2": {
+      "children": {
+        "2.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 320
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm"
+            }
+          }
+        },
+        "2.2": {
+          "verifyBy": {
+            "kind": "equalRatio",
+            "args": "1:14"
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "text",
+            "args": {
+              "patternType": "ratio"
+            }
+          }
+        }
+      }
+    },
+    "3": {
+      "children": {
+        "3.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 320
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number"
+          }
+        },
+        "3.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 5
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "palindromických čísel"
+            }
+          }
+        },
+        "3.3": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 110
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {}
+          }
+        }
+      }
+    },
+    "4": {
+      "children": {
+        "4.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 75
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "korun"
+            }
+          }
+        },
+        "4.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 24
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "bazénů"
+            }
+          }
+        }
+      }
+    },
+    "5": {
+      "children": {
+        "5.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 6
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "pětičlenných skupin"
+            }
+          }
+        },
+        "5.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 15
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "dvoučlenných skupin"
+            }
+          }
+        }
+      }
+    },
+    "6": {
+      "children": {
+        "6.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 68
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm"
+            }
+          }
+        },
+        "6.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 28
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm",
+              "prefix": "o"
+            }
+          }
+        },
+        "6.3": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 78
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm"
+            }
+          }
+        }
+      }
+    },
+    "7": {
+      "children": {
+        "7.1": {
+          "verifyBy": {
+            "kind": "selfEvaluate",
+            "args": {
+              "options": [
+                {
+                  "value": 0,
+                  "name": "0 bodů"
+                },
+                {
+                  "value": 1,
+                  "name": "1 bod"
+                },
+                {
+                  "value": 2,
+                  "name": "2 body"
+                },
+                {
+                  "value": 3,
+                  "name": "3 body"
+                }
+              ],
+              "hint": {
+                "kind": "image",
+                "src": "V rovině leží bod F a přímka g.jpg"
+              }
+            }
+          },
+          "inputBy": {
+            "kind": "options",
+            "args": [
+              {
+                "value": 0,
+                "name": "0 bodů"
+              },
+              {
+                "value": 1,
+                "name": "1 bod"
+              },
+              {
+                "value": 2,
+                "name": "2 body"
+              },
+              {
+                "value": 3,
+                "name": "3 body"
+              }
+            ]
+          }
+        },
+        "7.2": {
+          "verifyBy": {
+            "kind": "selfEvaluate",
+            "args": {
+              "options": [
+                {
+                  "value": 0,
+                  "name": "0 bodů"
+                },
+                {
+                  "value": 1,
+                  "name": "1 bod"
+                },
+                {
+                  "value": 2,
+                  "name": "2 body"
+                },
+                {
+                  "value": 3,
+                  "name": "3 body"
+                }
+              ],
+              "hint": {
+                "kind": "image",
+                "src": "V rovině leží body S, Q a přímka p.jpg"
+              }
+            }
+          },
+          "inputBy": {
+            "kind": "options",
+            "args": [
+              {
+                "value": 0,
+                "name": "0 bodů"
+              },
+              {
+                "value": 1,
+                "name": "1 bod"
+              },
+              {
+                "value": 2,
+                "name": "2 body"
+              },
+              {
+                "value": 3,
+                "name": "3 body"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "8": {
+      "children": {
+        "8.1": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "A"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "8.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "A"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "8.3": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "A"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 4,
+              "min": 3
+            },
+            {
+              "points": 2,
+              "min": 2
+            }
+          ]
+        }
+      }
+    },
+    "9": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "A"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "10": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "D"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "11": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "E"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "12": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "E"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "13": {
+      "children": {
+        "13.1": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "C"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "13.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "D"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        },
+        "13.3": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": "B"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "options"
+          }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 4,
+              "min": 3
+            },
+            {
+              "points": 2,
+              "min": 2
+            }
+          ]
+        }
+      }
+    },
+    "14": {
+      "children": {
+        "14.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 52
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "čtverečků"
+            }
+          }
+        },
+        "14.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 40
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "šedých čtverečků"
+            }
+          }
+        },
+        "14.3": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 91
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "bílých čtverečků"
+            }
+          }
+        }
+      }
+    }
+  }
+}
