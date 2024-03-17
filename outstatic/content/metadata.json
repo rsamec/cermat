@@ -1,6 +1,6 @@
 {
-  "commit": "e8efb1b9e95036c63b420cf51c4c7d8ae4de18ef",
-  "generated": "Sun, 17 Mar 2024 17:29:53 GMT",
+  "commit": "709114322567da8602e22c68b2d7df9760930e72",
+  "generated": "2024-03-17T18:44:09.247Z",
   "metadata": [
     {
       "__outstatic": {
@@ -1156,29 +1156,6 @@
     },
     {
       "__outstatic": {
-        "commit": "e569444eeb7a734c37ad3f504763343c3a02b3b0",
-        "hash": "4241452249",
-        "path": "outstatic/content/exams/m7a-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "M7A-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230404",
-      "grade": "6",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "m7a-2023",
-      "status": "draft",
-      "subject": "math",
-      "title": "Matika (7. ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "775d176586daa756ca3cc207b30d935e15775b5d",
         "hash": "652433990",
         "path": "outstatic/content/exams/matematika-9-2023-1.md"
@@ -1402,6 +1379,29 @@
       "status": "draft",
       "subject": "math",
       "title": "Matika (maturita) - jaro 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "709114322567da8602e22c68b2d7df9760930e72",
+        "hash": "4282234889",
+        "path": "outstatic/content/exams/m7a-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M7A-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230404",
+      "grade": "6",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "m7a-2023",
+      "status": "published",
+      "subject": "math",
+      "title": "Matika (7. ročník) - 1. řádný termín 2023",
       "year": "2023"
     }
   ]
