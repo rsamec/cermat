@@ -21,6 +21,8 @@ const slugs: [string, string[]][] = [
   ['c7a-2023', ["cz", "6", "C7A-2023"]],
   ['m7a-2023', ["math", "6", "M7A-2023"]],
   ['c5b-2023', ["cz", "8", "C5B-2023"]],
+  ['mma-2023', ["math", "diploma", "MMA-2023"]],
+  ['aja-2023', ["en", "diploma", "AJA-2023"]],
   ['cestina-maturita-jaro-2023', ["cz", "diploma", "CMA-2023"]],
 ];
 

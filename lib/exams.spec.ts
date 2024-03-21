@@ -16,6 +16,7 @@ import mat9A_2023_1 from './exams/M9A-2023';
 import mat7B_2023_1 from './exams/M7B-2023';
 import mat5B_2023_1 from './exams/M5B-2023';
 import mat9B_2023_1 from './exams/M9B-2023';
+import aja_2023 from './exams/AJA-2023';
 
 
 import cestina5B from './exams/C5B-2023';
@@ -24,6 +25,7 @@ import cz_2023_A from './exams/CMA-2023';
 import cz_2023_B from './exams/CMB-2023';
 import cestina9C from './exams/C9C-2023';
 import M5B_2023 from './exams/M5B-2023';
+import MMA_2023 from './exams/MMA-2023';
 
 async function testQuestionDifference(pathes: string[], tree: TreeNode<AnswerTreeNode<any>>) {
   const questions = await parseMarkdownTree(pathes);
@@ -78,7 +80,8 @@ const czDimploma = ["cz", "diploma"];
 const math8Years = ["math", "8"];
 const math4Years = ["math", "4"];
 const math6Years = ["math", "6"];
-const mathDimploma = ["math", "diploma"];
+const mathDiploma = ["math", "diploma"];
+const enDiploma = ["en", "diploma"];
 
 
 const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
@@ -98,6 +101,8 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
   { quiz: mat5B_2023_1, pathes: math8Years.concat("M5B-2023") },
   { quiz: mat9B_2023_1, pathes: math4Years.concat("M9B-2023") },  
   { quiz: M5B_2023, pathes: math8Years.concat("M5B-2023") },
+  { quiz: MMA_2023, pathes: mathDiploma.concat("MMA-2023") },
+  { quiz: aja_2023, pathes: enDiploma.concat("AJA-2023") },
 
 ]
 

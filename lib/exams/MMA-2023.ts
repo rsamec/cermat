@@ -1,51 +1,44 @@
-import { group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, number, mathExpr, selfEvaluateImage } from "../utils/quiz-builder";
+import { group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, number, mathExpr, selfEvaluateImage, optionBool, task3Max3Points, task3Max6Points, task2Max4Points } from "../utils/quiz-builder";
 
 const form = group({
-   1: number(22, { suffix: '%' }),
-   2: mathExpr('a=-3c/b^2+2', { hintType: 'equation' }),
-   3: mathExpr('2/x', { hintType: 'expression' }, twoPoints),
-   4: mathExpr('K={-1;2}', { hintType: 'equation' }, twoPoints),
-   5: group({
-      5.1: mathExpr('64^n+0.5', { hintType: 'expression' }),
-      5.2: mathExpr('5^2n-1', { hintType: 'expression' }),
+   1: number(25, { prefix: 'o', suffix: '%' }),
+   2: number(424, {  suffix: 'cm^2^' }),
+   3: mathExpr('1/2-x', { hintType: 'expression' }, twoPoints),
+   4: mathExpr('{-4;1}', { prefix:'K=', hintType: 'expression' }, twoPoints),
+   5: mathExpr('x=0, y=5/2', { hintType: 'expression' },twoPoints),
+   6: mathExpr('{-1;9}', { prefix:'k=', hintType: 'expression' }, twoPoints),
+   7: mathExpr('-8/3', { hintType: 'fraction' }, twoPoints),
+   8: group({
+      8.1: mathExpr('[2;-4]', { prefix:'S=', hintType: 'expression' }),
+      8.2: selfEvaluateImage("image-9.png"),
    }),
-   6: number(0),
-   7: group({
-      7.1: mathExpr('b^2=1/4', { hintType: 'equation' }),
-      7.2: selfEvaluateImage("graf.jpeg"),
-   }),
-   8: mathExpr('(-8;-6>', { hintType: 'expression' }),
+   9: mathExpr('[0;-1/2]', { prefix:'P=', hintType: 'expression' }),
    //neni hotovo kuli 8 
-   9: number(3, { suffix: 'krát' }),
-   10: group({
-      10.1: number(2.80, { suffix: 'Kč' }),
-      10.2: mathExpr('(2.8-0.4x)', { hintType: 'expression', suffix: 'Kč' },),
-      //chybi kc
-   }),
-   11: mathExpr('x=2+2t', { hintType: 'equation' }),
-   12: mathExpr('D[0;19]', { hintType: 'expression' }),
+   10: mathExpr('4pi/3', { prefix:'x=', hintType: 'expression' }, twoPoints),
+   11: number(1),
+   12: number(1.4),
    13: group({
-      13.1: mathExpr('35m^2', { hintType: 'expression' }, twoPoints),
-      13.2: mathExpr('613m^3', { hintType: 'expression' }, twoPoints),
+      13.1: number(4.6, { prefix:'|AC|', suffix:'cm'}),
+      13.2: number(8.2, { prefix:'|BD|', suffix:'cm'}, twoPoints),      
    }),
-   14: number(1040, { suffix: 'm' }, threePoints),
+   14: number(57, { prefix:'využito', suffix: 'vydaných poukazů' }, threePoints),
    15: group({
-      15.1: option('N'),
-      15.2: option('A'),
-      15.3: option('A'),
-   }),
-   16: option('A', twoPoints),
-   17: option('C', twoPoints),
-   18: option('E', twoPoints),
-   19: option('B', twoPoints),
+      15.1: optionBool(true),
+      15.2: optionBool(false),
+      15.3: optionBool(false),
+   }, task3Max3Points ),
+   16: option('B', twoPoints),
+   17: option('E', twoPoints),
+   18: option('B', twoPoints),
+   19: option('C', twoPoints),
    20: option('A', twoPoints),
-   21: option('B', twoPoints),
-   22: option('D', twoPoints),
-   23: option('D', twoPoints),
-   24: option('C', twoPoints),
+   21: option('D', twoPoints),
+   22: option('C', twoPoints),
+   23: option('A', twoPoints),
+   24: option('E', twoPoints),
    25: group({
       25.1: option('D', twoPoints),
-      25.2: option('E', twoPoints),
-   })
+      25.2: option('C', twoPoints),
+   }, task2Max4Points)
 });
 export default form

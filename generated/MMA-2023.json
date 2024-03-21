@@ -3,33 +3,34 @@
     "1": {
       "verifyBy": {
         "kind": "equal",
-        "args": 22
+        "args": 25
       },
       "points": 1,
       "inputBy": {
         "kind": "number",
         "args": {
+          "prefix": "o",
           "suffix": "%"
         }
       }
     },
     "2": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "a=-3c/b^2+2"
+        "kind": "equal",
+        "args": 424
       },
       "points": 1,
       "inputBy": {
-        "kind": "math",
+        "kind": "number",
         "args": {
-          "hintType": "equation"
+          "suffix": "cm^2^"
         }
       }
     },
     "3": {
       "verifyBy": {
         "kind": "equalMathExpression",
-        "args": "2/x"
+        "args": "1/2-x"
       },
       "points": 2,
       "inputBy": {
@@ -42,72 +43,74 @@
     "4": {
       "verifyBy": {
         "kind": "equalMathExpression",
-        "args": "K={-1;2}"
+        "args": "{-4;1}"
       },
       "points": 2,
       "inputBy": {
         "kind": "math",
         "args": {
-          "hintType": "equation"
+          "prefix": "K=",
+          "hintType": "expression"
         }
       }
     },
     "5": {
-      "children": {
-        "5.1": {
-          "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "64^n+0.5"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "math",
-            "args": {
-              "hintType": "expression"
-            }
-          }
-        },
-        "5.2": {
-          "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "5^2n-1"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "math",
-            "args": {
-              "hintType": "expression"
-            }
-          }
+      "verifyBy": {
+        "kind": "equalMathExpression",
+        "args": "x=0, y=5/2"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "math",
+        "args": {
+          "hintType": "expression"
         }
       }
     },
     "6": {
       "verifyBy": {
-        "kind": "equal",
-        "args": 0
+        "kind": "equalMathExpression",
+        "args": "{-1;9}"
       },
-      "points": 1,
+      "points": 2,
       "inputBy": {
-        "kind": "number"
+        "kind": "math",
+        "args": {
+          "prefix": "k=",
+          "hintType": "expression"
+        }
       }
     },
     "7": {
+      "verifyBy": {
+        "kind": "equalMathExpression",
+        "args": "-8/3"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "math",
+        "args": {
+          "hintType": "fraction"
+        }
+      }
+    },
+    "8": {
       "children": {
-        "7.1": {
+        "8.1": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "b^2=1/4"
+            "args": "[2;-4]"
           },
           "points": 1,
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "equation"
+              "prefix": "S=",
+              "hintType": "expression"
             }
           }
         },
-        "7.2": {
+        "8.2": {
           "verifyBy": {
             "kind": "selfEvaluate",
             "args": {
@@ -123,7 +126,7 @@
               ],
               "hint": {
                 "kind": "image",
-                "src": "graf.jpeg"
+                "src": "image-9.png"
               }
             }
           },
@@ -143,114 +146,81 @@
         }
       }
     },
-    "8": {
+    "9": {
       "verifyBy": {
         "kind": "equalMathExpression",
-        "args": "(-8;-6>"
+        "args": "[0;-1/2]"
       },
       "points": 1,
       "inputBy": {
         "kind": "math",
         "args": {
+          "prefix": "P=",
           "hintType": "expression"
         }
       }
     },
-    "9": {
-      "verifyBy": {
-        "kind": "equal",
-        "args": 3
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "number",
-        "args": {
-          "suffix": "krát"
-        }
-      }
-    },
     "10": {
-      "children": {
-        "10.1": {
-          "verifyBy": {
-            "kind": "equal",
-            "args": 2.8
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "number",
-            "args": {
-              "suffix": "Kč"
-            }
-          }
-        },
-        "10.2": {
-          "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "(2.8-0.4x)"
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "math",
-            "args": {
-              "hintType": "expression",
-              "suffix": "Kč"
-            }
-          }
+      "verifyBy": {
+        "kind": "equalMathExpression",
+        "args": "4pi/3"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "math",
+        "args": {
+          "prefix": "x=",
+          "hintType": "expression"
         }
       }
     },
     "11": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "x=2+2t"
+        "kind": "equal",
+        "args": 1
       },
       "points": 1,
       "inputBy": {
-        "kind": "math",
-        "args": {
-          "hintType": "equation"
-        }
+        "kind": "number"
       }
     },
     "12": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "D[0;19]"
+        "kind": "equal",
+        "args": 1.4
       },
       "points": 1,
       "inputBy": {
-        "kind": "math",
-        "args": {
-          "hintType": "expression"
-        }
+        "kind": "number"
       }
     },
     "13": {
       "children": {
         "13.1": {
           "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "35m^2"
+            "kind": "equal",
+            "args": 4.6
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
-            "kind": "math",
+            "kind": "number",
             "args": {
-              "hintType": "expression"
+              "prefix": "|AC|",
+              "suffix": "cm"
             }
           }
         },
         "13.2": {
           "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "613m^3"
+            "kind": "equal",
+            "args": 8.2
           },
           "points": 2,
           "inputBy": {
-            "kind": "math",
+            "kind": "number",
             "args": {
-              "hintType": "expression"
+              "prefix": "|BD|",
+              "suffix": "cm"
             }
           }
         }
@@ -259,13 +229,14 @@
     "14": {
       "verifyBy": {
         "kind": "equal",
-        "args": 1040
+        "args": 57
       },
       "points": 3,
       "inputBy": {
         "kind": "number",
         "args": {
-          "suffix": "m"
+          "prefix": "využito",
+          "suffix": "vydaných poukazů"
         }
       }
     },
@@ -274,39 +245,54 @@
         "15.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "N"
+            "args": true
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "15.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": false
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "15.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": false
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 3,
+              "min": 3
+            },
+            {
+              "points": 1,
+              "min": 2
+            }
+          ]
         }
       }
     },
     "16": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "A"
+        "args": "B"
       },
       "points": 2,
       "inputBy": {
@@ -316,7 +302,7 @@
     "17": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "C"
+        "args": "E"
       },
       "points": 2,
       "inputBy": {
@@ -326,7 +312,7 @@
     "18": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "E"
+        "args": "B"
       },
       "points": 2,
       "inputBy": {
@@ -336,7 +322,7 @@
     "19": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "B"
+        "args": "C"
       },
       "points": 2,
       "inputBy": {
@@ -356,7 +342,7 @@
     "21": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "B"
+        "args": "D"
       },
       "points": 2,
       "inputBy": {
@@ -366,7 +352,7 @@
     "22": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "D"
+        "args": "C"
       },
       "points": 2,
       "inputBy": {
@@ -376,7 +362,7 @@
     "23": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "D"
+        "args": "A"
       },
       "points": 2,
       "inputBy": {
@@ -386,7 +372,7 @@
     "24": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "C"
+        "args": "E"
       },
       "points": 2,
       "inputBy": {
@@ -408,12 +394,27 @@
         "25.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "E"
+            "args": "C"
           },
           "points": 2,
           "inputBy": {
             "kind": "options"
           }
+        }
+      },
+      "metadata": {
+        "computeBy": {
+          "kind": "group",
+          "args": [
+            {
+              "points": 4,
+              "min": 2
+            },
+            {
+              "points": 2,
+              "min": 1
+            }
+          ]
         }
       }
     }

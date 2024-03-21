@@ -35,12 +35,12 @@ VÝCHOZÍ TEXT A TABULKA K ÚLOZE 4
 > Některé údaje jsou uvedeny v tabulce. 
 >  
 > 
-> |Sport|Počet žáků 
-> |---|---|
-> |volejbal|28|
-> |fotbal|16|
-> |vybíjená||
-> |Plavání|30|
+> |Sport||Počet žáků 
+> |---|---|:---:|
+> |míčový sport|volejbal|28|
+> |míčový sport|fotbal|16|
+> |míčový sport|vybíjená||
+> |Plavání||30|
 >
 > (*CZVV*)
 

@@ -15,7 +15,7 @@ import coverImage from '../public/images/000000.png'
 const collection = "exams";
 
 export default async function Index() {
-  const { content, mathPosts, primaryLanguagePosts } = await getData()
+  const { content, mathPosts, czPosts, enPosts, dePosts, frPosts } = await getData()
   return (
     <Layout headerNavigation={<Navigation />} showContact={true} fullWidth={false}>
       <div className='flex flex-col gap-6'>
@@ -51,10 +51,16 @@ export default async function Index() {
               <StatsCard value={mathPosts.length} text="matika" icon={<FontAwesomeIcon icon={faSquareRootVariable} size='2x' ></FontAwesomeIcon>}></StatsCard>
             </Link>
             <Link href={`/timeline/cz`}>
-              <StatsCard value={primaryLanguagePosts.length} text="čeština" icon={<FontAwesomeIcon icon={faBookAtlas} size='2x' ></FontAwesomeIcon>}></StatsCard>
+              <StatsCard value={czPosts.length} text="čeština" icon={<FontAwesomeIcon icon={faBookAtlas} size='2x' ></FontAwesomeIcon>}></StatsCard>
             </Link>
             <Link href={`/timeline/en`}>
-              <StatsCard value={0} text="angličtina" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
+              <StatsCard value={enPosts.length} text="angličtina" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
+            </Link>
+            <Link href={`/timeline/de`}>
+              <StatsCard value={dePosts.length} text="němčina" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
+            </Link>
+            <Link href={`/timeline/fr`}>
+              <StatsCard value={frPosts.length} text="francouzština" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
             </Link>
           </div>
         </section>
@@ -67,12 +73,39 @@ export default async function Index() {
             priority
           />
         )}
-        {primaryLanguagePosts.length > 0 && (
+        {czPosts.length > 0 && (
           <ContentGrid
             title="Čeština"
-            items={primaryLanguagePosts}
+            items={czPosts}
             collection={collection}
             iconType="cz"
+            priority
+          />
+        )}
+        {enPosts.length > 0 && (
+          <ContentGrid
+            title="Angličtina"
+            items={enPosts}
+            collection={collection}
+            iconType="en"
+            priority
+          />
+        )}
+        {dePosts.length > 0 && (
+          <ContentGrid
+            title="Němčina"
+            items={dePosts}
+            collection={collection}
+            iconType="en"
+            priority
+          />
+        )}
+        {frPosts.length > 0 && (
+          <ContentGrid
+            title="Francouzština"
+            items={frPosts}
+            collection={collection}
+            iconType="en"
             priority
           />
         )}
@@ -96,40 +129,42 @@ async function getData() {
     .first()
 
   const content = await markdownToHtml(page.content)
-
+  const fieldsSet = [
+    'title',
+    'publishedAt',
+    'slug',
+    'coverImage',
+    'description',
+    'status',
+    'subject',
+    'year',
+    'grade',
+    'code',
+  ]
   const mathPosts = await db
-    .find({ collection, subject: 'math', status:'published' }, [
-      'title',
-      'publishedAt',
-      'slug',
-      'coverImage',
-      'description',
-      'status',
-      'subject',
-      'year',
-      'grade',
-      'code',
-    ])
+    .find({ collection, subject: 'math', status: 'published' }, fieldsSet)
     .sort({ slug: 1 })
     .toArray()
 
-  const primaryLanguagePosts = await db
-    .find({ collection, subject: 'cz', status:'published' }, [
-      'title',
-      'publishedAt',
-      'slug',
-      'coverImage',
-      'description',
-      'status',
-      'subject',
-      'year',
-      'grade',
-      'code',
-    ])
+  const czPosts = await db
+    .find({ collection, subject: 'cz', status: 'published' }, fieldsSet)
     .sort({ slug: 1 })
     .toArray()
 
+  const enPosts = await db
+    .find({ collection, subject: 'en', status: 'published' }, fieldsSet)
+    .sort({ slug: 1 })
+    .toArray()
 
+  const dePosts = await db
+    .find({ collection, subject: 'de', status: 'published' }, fieldsSet)
+    .sort({ slug: 1 })
+    .toArray()
+
+  const frPosts = await db
+    .find({ collection, subject: 'fr', status: 'published' }, fieldsSet)
+    .sort({ slug: 1 })
+    .toArray()
 
 
   // const allProjects = await db
@@ -142,6 +177,9 @@ async function getData() {
   return {
     content,
     mathPosts: toItems(mathPosts),
-    primaryLanguagePosts: toItems(primaryLanguagePosts),
+    czPosts: toItems(czPosts),
+    enPosts: toItems(enPosts),
+    dePosts: toItems(dePosts),
+    frPosts: toItems(frPosts),
   }
 }

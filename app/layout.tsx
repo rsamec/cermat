@@ -3,7 +3,8 @@ import { Inter } from 'next/font/google'
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import './globals.css'
+import './globals.css';
+import 'katex/dist/katex.css';
 
 import type { Metadata } from "next";
 

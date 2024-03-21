@@ -62,10 +62,10 @@ export default async function Exam(params: Params) {
       <div className='paper' data-testid="root-document">
         <div className='columns-sm [column-rule-style:solid] [column-rule-width:1px] [column-rule-color:lightgray]'>
           {contentHeadings.map((d, i, arr) => <div className={cls(['break-inside-avoid print:break-inside-avoid px-2',
-          (d.type?.name == Abbreviations.ST || d.type?.name == Abbreviations.H1) && i !== 0 && 'mt-5'
+            (d.type?.name == Abbreviations.ST || d.type?.name == Abbreviations.H1) && i !== 0 && 'mt-5'
           ])} key={i} data-testid={`question-${i}`}>
 
-            <div 
+            <div
               className={cls([
                 "prose lg:prose-xl",
                 d.hasTexIndent && d.multiColumnsCount <= 1 && "[&_blockquote_p]:indent-2 [&_blockquote]:text-justify",
@@ -81,7 +81,7 @@ export default async function Exam(params: Params) {
               />
             </div>)
             }
-            </div>                      
+          </div>
           )}
         </div>
       </div>
@@ -93,7 +93,7 @@ export default async function Exam(params: Params) {
 async function getData({ params }: Params) {
   const db = await load()
   const project = await db
-    .find<Project>({ collection: collection, status:'published', slug: params.slug }, [
+    .find<Project>({ collection: collection, status: 'published', slug: params.slug }, [
       'title',
       'publishedAt',
       'description',
@@ -119,7 +119,7 @@ async function getData({ params }: Params) {
     ...d,
     options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
       ...opt,
-      name: await markdownToHtml(opt.name)
+      name: await markdownToHtml(opt.name, { path: pathes })
     }))) : d.options,
     hasTexIndent: countMaxChars(d.header, "=") === 4,
     multiColumnsCount: Math.max(0, countMaxChars(d.header, "=") - 4),
@@ -133,7 +133,7 @@ async function getData({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  return getDocuments(collection, ['slug'])  
+  return getDocuments(collection, ['slug'])
   // const posts = getDocumentSlugs(collection)
   // return posts.map((slug) => ({ slug }))
 }

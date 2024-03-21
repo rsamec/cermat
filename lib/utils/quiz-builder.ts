@@ -2,6 +2,7 @@ import { SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./as
 import { ComponentFunctionSpec, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
 import { AnswerGroupImpl, AnswerGroupMetadata, MixedChildren } from "./quiz-specification";
 
+
 export function group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetadata<T>) {
   return new AnswerGroupImpl<T>(children, metadata);
 }
@@ -44,7 +45,7 @@ export const tasks4Max2Points = {
 }
 export const task3Max3Points = {
   computeBy: {
-    kind: 'group' as const, args: [{ points: 3, min: 3 }, { points: 2, min: 2 }, { points: 1, min: 1 }]
+    kind: 'group' as const, args: [{ points: 3, min: 3 }, { points: 1, min: 2 }]
   }
 }
 export const task3Max4Points = {
@@ -62,6 +63,13 @@ export const task3Max6Points = {
     kind: 'group' as const, args: [{ points: 2, min: 1 }, { points: 4, min: 2 }, { points: 6, min: 3 }]
   }
 }
+
+export const task2Max4Points = {
+  computeBy: {
+    kind: 'group' as const, args: [{ points: 4, min: 2 }, { points: 2, min: 1 }]
+  }
+}
+
 
 
 const points = [

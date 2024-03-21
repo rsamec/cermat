@@ -11,7 +11,7 @@ type Item = {
 
 type Props = {
   collection: 'exams'
-  iconType: 'math' | 'cz'
+  iconType: 'math' | 'cz' | "en"
   title?: string
   items: Item[]
   priority?: boolean

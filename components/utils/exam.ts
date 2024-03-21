@@ -1,8 +1,8 @@
-export type SubjectType = 'cz' | 'math';
+export type SubjectType = 'cz' | 'math' | 'en' | 'de' | 'fr' | 'es' | 'ru';
 export type GradeType = '4' | '6' | '8' | 'diploma';
 export type ExamMetadata = {
-  subject: 'cz' | 'math'
-  grade: '4' | '6' | '8' | 'diploma'
+  subject: SubjectType
+  grade: GradeType
   year: string
   code: string
   expectedAt: string
@@ -11,6 +11,11 @@ export type ExamMetadata = {
 const subjectLabel = (value: SubjectType) => {
   if (value === "math") return "matika"
   else if (value === "cz") return "čeština"
+  else if (value === "en") return "angličtina"
+  else if (value === "de") return "němčina"
+  else if (value === "fr") return "francouzština"
+  else if (value === "es") return "španělština"
+  else if (value === "ru") return "ruština"
   return value;
 }
 const gradeLabel = (value: GradeType) => {
