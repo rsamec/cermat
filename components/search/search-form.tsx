@@ -4,23 +4,29 @@ import IconToggleButtonGroup from "../core/IconToggleButtonGroup";
 import { ReactNode, useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faSquareRootVariable, faBookTanakh } from "@fortawesome/free-solid-svg-icons"
-import { GradeType, SubjectType } from "../utils/exam";
+import { faSearch, faSquareRootVariable, faBookTanakh, faGlobe } from "@fortawesome/free-solid-svg-icons"
+import { GradeType, SubjectType, gradeLabel, subjectLabel } from "../utils/exam";
 
-const subjectOptions: { code: SubjectType, label: string, icon: ReactNode }[] = [
-  { code: 'math', label: 'matika', icon: <FontAwesomeIcon icon={faSquareRootVariable} /> },
-  { code: 'cz', label: 'čeština', icon: <FontAwesomeIcon icon={faBookTanakh} /> }]
+const subjectCodes: { code: SubjectType, icon: ReactNode }[] = [
+  { code: 'math', icon: <FontAwesomeIcon icon={faSquareRootVariable} /> },
+  { code: 'cz', icon: <FontAwesomeIcon icon={faGlobe} /> },
+  { code: 'en', icon: <FontAwesomeIcon icon={faGlobe} /> },
+  { code: 'de', icon: <FontAwesomeIcon icon={faGlobe} /> },
+  { code: 'fr', icon: <FontAwesomeIcon icon={faGlobe} /> }]
 
-const gradeOptions: { code: GradeType, label: string }[] = [
-  { code: '8', label: 'osmileté' },
-  { code: '6', label: 'šestileté' },
-  { code: '4', label: 'čtyřleté' },
-  { code: 'diploma', label: 'maturita' }
+
+const gradeCodes: { code: GradeType}[] = [
+  { code: '8'},
+  { code: '6'},
+  { code: '4'},
+  { code: 'diploma'}
 ]
 
 export default function SearchForm() {
   const [selectedSubject, setSelectedSubject] = useState<{ code: string, label: string, icon: ReactNode }>();
   const [selectedGrade, setSelectedGrade] = useState<{ code: string, label: string }>();
+  const subjectOptions = subjectCodes.map(d => ({ ...d, label: subjectLabel(d.code) }));
+  const gradeOptions = gradeCodes.map(d => ({...d,label:gradeLabel(d.code)}));
   return (
     <div className="p-4 max-w-max bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="flex flex-wrap gap-2">

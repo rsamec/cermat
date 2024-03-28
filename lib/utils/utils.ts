@@ -95,7 +95,7 @@ export function format(value: any) {
   return value;
 }
 
-export function formatNumber(input: number, decimals: number = 0) {
+export function formatNumber(input: number, decimals: number = 2) {
   return input.toLocaleString("cs-CZ", { maximumFractionDigits: decimals, minimumFractionDigits: 0 })
 }
 

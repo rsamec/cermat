@@ -10,6 +10,7 @@ export function group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetad
 export function number(value: number, args?: NumberComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
   return { verifyBy: { kind: "equal", args: value }, points, inputBy: { kind: 'number', args } } as const
 }
+
 export function mathExpr(value: string | number, args: MathExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
   return { verifyBy: { kind: "equalMathExpression", args: value }, points, inputBy: { kind: 'math' as const, args } } as const
 }
@@ -70,14 +71,13 @@ export const task2Max4Points = {
   }
 }
 
-
-
 const points = [
   { value: 0, name: "0 bodů" }, { value: 1, name: "1 bod" }, { value: 2, name: "2 body" },
   { value: 3, name: "3 body" }, { value: 4, name: "4 body" }, { value: 5, name: "5 bodů" },
   { value: 6, name: "6 bodů" }, { value: 7, name: "7 bodů" }, { value: 8, name: "8 bodů" },
   { value: 9, name: "9 bodů" }, { value: 10, name: "10 bodů" }
 ]
+
 function getPoints(max: number) {
   return points.slice(0, max + 1)
 }
@@ -102,6 +102,19 @@ export function word(slovo: string, { points }: { points: number } = { points: 1
     }
   } as const
 }
+
+export function match(pattern: RegExp, { points }: { points: number } = { points: 1 }) {
+  return {
+    verifyBy:
+      { kind: "match", args: pattern.source },
+    points,
+    inputBy: {
+      kind: 'text'
+    }
+  } as const
+}
+
+
 export function words(slova: string, { points }: { points?: number } = { points: 1 }) {
   const items = slova.split(",").map(d => d.trim())
   return {

@@ -1,169 +1,104 @@
+POSLECH 1. ČÁST -ÚLOHY 1–4 
+===
+> Uslyšíte **čtyři** krátké nahrávky. Nejprve uslyšíte otázku a poté vyslechnete nahrávku. Na základě vyslechnutých nahrávek **vyberte** k úlohám **1–4** vždy jeden správný obrázek **A–D**.
 
-POSLECH
-1. ČÁST 
-ÚLOHY 1–4 
-# 8 bodů / 2 body
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-Uslyšíte čtyři krátké nahrávky. Nejprve uslyšíte otázku a poté vyslechnete nahrávku. Na základě 
-vyslechnutých nahrávek vyberte k úlohám 1–4 vždy jeden správný obrázek A–D.
-# 1 
-Que vont faire Véronique et Sylvain ce samedi ?
-A)
-B)
-C)
-D)
-�
-# 2 
- Comment le jeune couple se fera-t-il photographier sur leur photo de mariage ?
-A)
-B)
-C)
-D)
-# 2
-POSLECH
-1. ČÁST 
-ÚLOHY 1–4
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-# 3 
-Où la voiture volée d’Albert a-t-elle été retrouvée ?
-A)
-B)
-�
-C)
-���������
-D)
-�
-# 4 
-Quel produit ne peut-on pas acheter dans la boutique Harry Potter en ce moment ?
-A)
-B)
-C)
-D)
-# 3
-POSLECH
-2. ČÁST 
-ÚLOHY 5–12 
-# 8 bodů / 1 bod
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-Uslyšíte rozhovor mezi dvěma přáteli, kteří se delší dobu neviděli. Na základě vyslechnuté 
-nahrávky rozhodněte, zda jsou tvrzení v úlohách 5–12 pravdivá (P), nebo nepravdivá (N). 
- 
-P 
-N
-# 5 
-Théo a étudié deux ans dans un lycée aux États-Unis. 
-# 6 
-Théo a été déçu par le comportement des Américains. 
-# 7 
-Agathe a étudié aux États-Unis. 
-# 8 
-Agathe parle couramment anglais et espagnol. 
-# 9 
-La petite amie de Théo, Carla, est Américaine. 
-# 10 
-Agathe a quitté son petit ami, Philippe. 
-# 11 
-Agathe va garder des enfants dans une famille en Espagne cet été. 
-# 12 
-Théo doit chercher du travail pour cet été. 
-# 4
-POSLECH
-3. ČÁST 
-ÚLOHY 13–20 
-# 16 bodů / 2 body
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-Uslyšíte ženu hovořit ke studentům o službách knihovny. Na základě vyslechnuté nahrávky 
-odpovězte ve francouzském jazyce na otázky v úlohách 13–20. V odpovědích použijte 
+[audio]
+# 1 Que vont faire Véronique et Sylvain ce samedi ?
+[audio](./audio/05%20CD%20Track.mp3)
+- [A] 
+- [B] 
+- [C] 
+- [D] 
+
+# 2  Comment le jeune couple se fera-t-il photographier sur leur photo de mariage ?
+[audio](./audio/07%20CD%20Track.mp3)
+- [A] 
+- [B] 
+- [C] 
+- [D] 
+
+# 3 Où la voiture volée d’Albert a-t-elle été retrouvée ?
+[audio](./audio/09%20CD%20Track.mp3)
+- [A] 
+- [B] 
+- [C] 
+- [D] 
+# 4 Quel produit ne peut-on pas acheter dans la boutique Harry Potter en ce moment ?
+[audio](./audio/11%20CD%20Track.mp3)
+- [A] 
+- [B] 
+- [C] 
+- [D] 
+
+POSLECH - 2. ČÁST - ÚLOHY 5–12 
+===
+> Uslyšíte rozhovor mezi dvěma přáteli, kteří se delší dobu neviděli. Na základě vyslechnuté nahrávky rozhodněte, zda jsou tvrzení v úlohách 5–12 pravdivá (P), nebo nepravdivá (N). 
+> [audio](./audio/15%20CD%20Track.mp3)
+
+# 5 Théo a étudié deux ans dans un lycée aux États-Unis. 
+# 6 Théo a été déçu par le comportement des Américains. 
+# 7 Agathe a étudié aux États-Unis. 
+# 8 Agathe parle couramment anglais et espagnol. 
+# 9 La petite amie de Théo, Carla, est Américaine. 
+# 10 Agathe a quitté son petit ami, Philippe. 
+# 11 Agathe va garder des enfants dans une famille en Espagne cet été. 
+# 12 Théo doit chercher du travail pour cet été. 
+
+POSLECH - 3. ČÁST - ÚLOHY 13–20 
+
+> Uslyšíte ženu hovořit ke studentům o službách knihovny. Na základě vyslechnuté nahrávky odpovězte ve francouzském jazyce na otázky v úlohách 13–20. V odpovědích použijte 
 nejvýše 3 slova. Čísla můžete zapisovat číslicemi. 
-*Bibliothèque de l’Alliance française*
-# 13 
-Quel poste Yvonne Duval occupe-t-elle dans la bibliothèque ?
-__________
-# 14 
-À part les étudiants, pour qui la carte de lecteur est-elle gratuite ?
-__________
-# 15 
-Combien de livres peut-on lire seulement sur place ?
-__________
-# 16 
-Quel genre de livres peut-on trouver actuellement au même étage que les livres sur 
-l’histoire ? 
-__________
-# 17 
-À quel étage y a-t-il des photocopieuses ?
-__________
-# 18 
-Qu’est-ce qu’il faut utiliser pour consulter les anciens journaux ?
-__________
-# 19 
-Quelle est l’adresse du site web de la bibliothèque ?
-www.__________.fr
-# 20 
-Qu’est-ce que l’on ne peut pas acheter actuellement à la cafétéria de la 
-bibliothèque ?
-__________
-# 5
-POSLECH
-4. ČÁST 
-ÚLOHY 21–24 
-# 8 bodů / 2 body
-ZKONTROLUJTE, ZDA JSTE DO ZÁZNAMOVÉHO ARCHU UVEDL/A VŠECHNY ODPOVĚDI.
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-Uslyšíte čtyři krátké nahrávky. Nejprve uslyšíte otázku a poté vyslechnete nahrávku. Na základě 
-vyslechnutých nahrávek vyberte k úlohám 21–24 vždy jednu správnou odpověď A–D.
-# 21 
-Pourquoi He nri et Florence ont-ils décidé d’acheter un chien à leurs enfants ?
-- [A] 
-pour la s écurité de leurs enfants
-- [B] 
-parce que leurs enfants en voulaient un
-- [C] 
-pour apprendre la responsabilité à leurs enfants
-- [D] 
-parce que leurs enfants sont allergiques aux chats
-# 22 
-Comment la f ille se sent-elle aujourd’hui ?
-- [A] 
-Elle est s ûre d’elle.
-- [B] 
-Elle est tout à fait calme.
-- [C] 
-Elle est indifférente vis-à-vis du test de demain.
-- [D] 
-Elle est étonnée par la difficulté des tests préparatoires.
-# 23 
-Pourquoi l’hom me a-t-il commencé à courir ?
+> [audio](./audio/21%20CD%20Track.mp3)
+> *Bibliothèque de l’Alliance française*
+
+# 13 Quel poste Yvonne Duval occupe-t-elle dans la bibliothèque ?
+# 14 À part les étudiants, pour qui la carte de lecteur est-elle gratuite ?
+# 15 Combien de livres peut-on lire seulement sur place ?
+# 16 Quel genre de livres peut-on trouver actuellement au même étage que les livres sur l’histoire ? 
+# 17 À quel étage y a-t-il des photocopieuses ?
+# 18 Qu’est-ce qu’il faut utiliser pour consulter les anciens journaux ?
+# 19 Quelle est l’adresse du site web de la bibliothèque ?
+# 20 Qu’est-ce que l’on ne peut pas acheter actuellement à la cafétéria de la bibliothèque ?
+
+
+POSLECH - 4. ČÁST - ÚLOHY 21–24 
+===
+> Uslyšíte čtyři krátké nahrávky. Nejprve uslyšíte otázku a poté vyslechnete nahrávku. Na základě vyslechnutých nahrávek vyberte k úlohám 21–24 vždy jednu správnou odpověď A–D.
+# 21 Pourquoi He nri et Florence ont-ils décidé d’acheter un chien à leurs enfants ?
+[audio](./audio/26%20CD%20Track.mp3)
+
+- [A] pour la s écurité de leurs enfants
+- [B] parce que leurs enfants en voulaient un
+- [C] pour apprendre la responsabilité à leurs enfants
+- [D] parce que leurs enfants sont allergiques aux chats
+# 22 Comment la f ille se sent-elle aujourd’hui ?
+[audio](./audio/26%20CD%20Track.mp3)
+
+- [A] Elle est s ûre d’elle.
+- [B] Elle est tout à fait calme.
+- [C] Elle est indifférente vis-à-vis du test de demain.
+- [D] Elle est étonnée par la difficulté des tests préparatoires.
+# 23 Pourquoi l’hom me a-t-il commencé à courir ?
+[audio](./audio/26%20CD%20Track.mp3)
+
 Parce qu’ :
-A ) 
-il veut obéir à son médecin.
-- [B] 
-il veut perdre quelques kilos.
-- [C] 
-il veut accompagner sa copine pour courir.
-- [D] 
-il veut pratiquer la course de longue distance.
-# 24 
-Où se déroulera  la fête de Jean ?
-- [A] 
-dans un bar
-B ) 
-dans un parc
-- [C] 
-dans un restaurant
-- [D] 
-dans un appartement 
-# 6
-NÁSLEDUJE SUBTEST ČTENÍ A JAZYKOVÁ KOMPETENCE.
-NEOTÁČEJTE! VYČKEJTE NA POKYN ZADAVATELE!
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-# 7
-ČTENÍ A JAZYKOVÁ KOMPETENCE
-5. ČÁST 
-ÚLOHY 25–29 
-# 10 bodů / 2 body
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-Přečtěte si pět krátkých textů. Na základě informací v textech vyberte k úlohám 25–29 vždy 
-jednu správnou odpověď A–D.
+- [A] il veut obéir à son médecin.
+- [B] il veut perdre quelques kilos.
+- [C] il veut accompagner sa copine pour courir.
+- [D] il veut pratiquer la course de longue distance.
+# 24 Où se déroulera  la fête de Jean ?
+[audio](./audio/26%20CD%20Track.mp3)
+
+- [A] dans un bar
+- [B] dans un parc
+- [C] dans un restaurant
+- [D] dans un appartement 
+
+ČTENÍ A JAZYKOVÁ KOMPETENCE - 5. ČÁST - ÚLOHY 25–29 
+===
+
+> Přečtěte si pět krátkých textů. Na základě informací v textech vyberte k úlohám 25–29 vždy jednu správnou odpověď A–D.
+
 Un an en France
 Découvrir un pays, une culture, un autre système scolaire mais aussi apprendre à être plus 
 autonome : c’est l’expérience que le programme « Un an en France » propose aux lycéens 
@@ -176,17 +111,13 @@ s’est vite développé et l’année suivante, 30 lycéens tchèques sont part
 l’intérêt pour ce programme est énorme. Chaque année, environ dix fois plus de lycéens que le 
 programme peut accueillir s’inscrivent. 
 (*www.francais.radio.cz, upraveno*)
-# 25 
-Combien de lycéens tchèques sont partis avec le programme « Un an en France » 
-en 2009 ?
-- [A] 
-# 6
-- [B] 
-# 10
-- [C] 
-# 30
-- [D] 
-# 40
+
+# 25 Combien de lycéens tchèques sont partis avec le programme « Un an en France » en 2009 ?
+- [A] 6
+- [B] 10
+- [C] 30
+- [D] 40
+
 Vincent publie depuis plus de dix ans un journal qu’il a baptisé *Le Temps*. Déjà, pendant ses 
 études au lycée, il écrivait des poèmes pour les filles, qui les appréciaient beaucoup ! Vincent 
 a souhaité les publier dans des journaux, mais aucun n’était intéressé. Il a donc abandonné 
@@ -205,19 +136,13 @@ mariage !
 (*CZVV*)
 # 26 
 Pourquoi Vincent a-t-il fondé son propre journal *Le Temps* ?
-- [A] 
-Pour attirer l’attention d’une fille.
-- [B] 
-Pour pouvoir y publier ses propres poèmes.
-- [C] 
-Parce que c’était le désir de son grand-père.
-- [D] 
-Parce qu’il n’a pas trouvé de travail dans un magazine.
-# 8
-ČTENÍ A JAZYKOVÁ KOMPETENCE
-5. ČÁST 
-ÚLOHY 25–29
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
+- [A] Pour attirer l’attention d’une fille.
+- [B] Pour pouvoir y publier ses propres poèmes.
+- [C] Parce que c’était le désir de son grand-père.
+- [D] Parce qu’il n’a pas trouvé de travail dans un magazine.
+
+
+
 Un tigre échappé d’un parc naturel a été aperçu mardi dernier sur une autoroute en Inde. 
 Étonnamment, il n’a eu d’accident avec aucune voiture. Au bout de quelques minutes, il s’est 
 dirigé vers un village voisin, où il est entré dans une maison vers 7 h 30. En le trouvant endormi sur 
@@ -227,18 +152,16 @@ sont protégés. Les gardiens du zoo local sont très rapidement arrivés dans l
 d’abord voulu transporter le tigre au zoo, mais ils ont finalement décidé de le laisser retourner 
 dans son parc naturel. Pour lui assurer un retour sûr, sans aucun accident, ils ont fait fermer 
 une partie de l’autoroute pour les voitures et ont interdit aux habitants du village de sortir. Vers 
-# 17 h 30, après quelques heures de sommeil, le tigre bien reposé est rentré seul là d’où il venait…
+17 h 30, après quelques heures de sommeil, le tigre bien reposé est rentré seul là d’où il venait…
 (*www.sain-et-naturel.com, upraveno*)
+
 # 27 
 Lequel de ces titres conviendrait le mieux au texte ?
-- [A] 
-Retour d’un tigre au zoo
-- [B] 
-Un tigre agressif tué par des villageois
-- [C] 
-Un tigre endormi trouvé dans une maison
-- [D] 
-Autoroute fermée à cause d’un accident entre une voiture et un tigre
+- [A] Retour d’un tigre au zoo
+- [B] Un tigre agressif tué par des villageois
+- [C] Un tigre endormi trouvé dans une maison
+- [D] Autoroute fermée à cause d’un accident entre une voiture et un tigre
+
 La journée de l’horreur *par Alphonse*
 La journée d’hier est une journée que je voudrais oublier ! Tout d’abord parce que mon 
 appartement s’est retrouvé presque complètement sous l’eau. Je l’ai appris quand je suis rentré 
@@ -253,14 +176,11 @@ qui était parti au travail. Heureusement, je suis bien assuré contre ce type d
 (*CZVV*)
 # 28 
 Qu’est-ce qui est arrivé à Alphonse hier ?
-- [A] 
-On lui a volé quelque chose.
-- [B] 
-Il a causé un accident de voiture.
-- [C] 
-Il a passé quelques heures au poste de police.
-- [D] 
-Il a oublié de fermer le robinet dans sa salle de bains.
+- [A] On lui a volé quelque chose.
+- [B] Il a causé un accident de voiture.
+- [C] Il a passé quelques heures au poste de police.
+- [D] Il a oublié de fermer le robinet dans sa salle de bains.
+
 Mes cadeaux de Noël *par Ema*
 Bonjour à tous ! J’espère que vous avez passé un joyeux Noël ! Moi, j’en ai vraiment bien profité 
 cette année ! J’ai reçu plein de beaux cadeaux. Ma mère sait qu’elle ne peut pas me faire plus 
@@ -275,64 +195,36 @@ trouvé cette année des billets d’avion pour ce pays sous le sapin !
 (*CZVV*)
 # 29 
 Quel cadeau de Noël Ema n’a-t-elle pas reçu cette année ?
-- [A] 
-un livre de son auteur préféré
-- [B] 
-des billets d’avion pour la Grèce
-- [C] 
-un abonnement au magazine *La maison moderne* 
-- [D] 
-un coupon pour une expérience forte en adrénaline
-# 9
-ČTENÍ A JAZYKOVÁ KOMPETENCE
-6. ČÁST 
-ÚLOHY 30–39 
-# 10 bodů / 1 bod
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
-Přečtěte si tvrzení v úlohách 30–39 a informační leták o Muzeu Yves Saint Laurent Paris (YSL). 
-Na základě informací v textu rozhodněte, zda jsou tvrzení pravdivá (P), nebo nepravdivá (N).
+- [A] un livre de son auteur préféré
+- [B] des billets d’avion pour la Grèce
+- [C] un abonnement au magazine *La maison moderne* 
+- [D] un coupon pour une expérience forte en adrénaline
+
+ČTENÍ A JAZYKOVÁ KOMPETENCE - 6. ČÁST -ÚLOHY 30–39 
+===
+> Přečtěte si tvrzení v úlohách 30–39 a informační leták o Muzeu Yves Saint Laurent Paris (YSL). 
+> Na základě informací v textu rozhodněte, zda jsou tvrzení pravdivá (P), nebo nepravdivá (N).
  
-P 
-N
-# 30 
-La maison de haute couture Yves Saint Laurent Paris a fini son 
-activité en 2017. 
-# 31 
-La maison de haute couture Yves Saint Laurent Paris a siégé 
-pendant toute son histoire au 30 bis rue Spontini. 
-# 32 
-Le Musée YSL Paris expose des œuvres textiles du couturier 
-ainsi que ses objets personnels. 
-# 33 
-Les enfant s de moins de dix ans peuvent participer aux deux types 
-de visite guidée seulement à condition d’être accompagnés d’un adulte. 
-# 34 
-Les deux ty pes de visite guidée ont lieu deux fois par semaine.  
-# 35 
-Il est obligatoire de faire une réservation pour les deux types 
-de visite guidée. 
-# 36 
-Il est possible de louer tous les salons du Musée YSL Paris pour 
-des évènements privés.  
-# 37 
-Le billet d’entrée au Musée YSL Paris acheté en ligne doit dans tous 
-les cas être présenté sur un téléphone portable au contrôle d’accès. 
-# 38 
-Il est possible de prendre des photos dans le Musée YSL Paris. 
-# 39 
-Au Musée YSL Paris, on prête gratuitement des fauteuils roulants 
-aux personnes à mobilité réduite. 
-# 10
-ČTENÍ A JAZYKOVÁ KOMPETENCE
-6. ČÁST 
-ÚLOHY 30–39
-Veřejně nepřístupná informace podle ustanovení § 80b zákona č. 561/2004 Sb.
+# 30 La maison de haute couture Yves Saint Laurent Paris a fini son activité en 2017. 
+# 31 La maison de haute couture Yves Saint Laurent Paris a siégé pendant toute son histoire au 30 bis rue Spontini. 
+# 32 Le Musée YSL Paris expose des œuvres textiles du couturier ainsi que ses objets personnels. 
+# 33 Les enfant s de moins de dix ans peuvent participer aux deux types de visite guidée seulement à condition d’être accompagnés d’un adulte. 
+# 34 Les deux ty pes de visite guidée ont lieu deux fois par semaine.  
+# 35 Il est obligatoire de faire une réservation pour les deux types de visite guidée. 
+# 36 Il est possible de louer tous les salons du Musée YSL Paris pour des évènements privés.  
+# 37 Le billet d’entrée au Musée YSL Paris acheté en ligne doit dans tous les cas être présenté sur un téléphone portable au contrôle d’accès. 
+# 38 Il est possible de prendre des photos dans le Musée YSL Paris. 
+# 39 Au Musée YSL Paris, on prête gratuitement des fauteuils roulants aux personnes à mobilité réduite. 
+
+ČTENÍ A JAZYKOVÁ KOMPETENCE - 6. ČÁST -ÚLOHY 30–39
+===
+
 Le Musée Yves Saint Laurent Paris
 Le Musée Yves Saint Laurent Paris (YSL) présente la vie du célèbre couturier à travers son travail 
 exceptionnel. Le Musée YSL Paris a ouvert le 3 octobre 2017, quinze ans après la fin de l’activité de 
 la maison de haute couture Yves Saint Laurent Paris, fondée en 1961.
 En 1974, la maison de haute couture Yves Saint Laurent Paris, située depuis sa création au 
-# 30 bis rue Spontini, s’était installée au 5 avenue Marceau. C’est également l’adresse où se situe 
+30 bis rue Spontini, s’était installée au 5 avenue Marceau. C’est également l’adresse où se situe 
 aujourd’hui le Musée YSL Paris. 
 L’actualité
 À ce jour, la collection du Musée YSL Paris n’a pas d’équivalent dans le milieu international de la 

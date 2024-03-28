@@ -24,6 +24,7 @@ const slugs: [string, string[]][] = [
   ['mma-2023', ["math", "diploma", "MMA-2023"]],
   ['aja-2023', ["en", "diploma", "AJA-2023"]],
   ['dea-2023', ["de", "diploma", "DEA-2023"]],
+  ['fra-2023', ["fr", "diploma", "FRA-2023"]],
   ['cestina-maturita-jaro-2023', ["cz", "diploma", "CMA-2023"]],
 ];
 
@@ -39,6 +40,25 @@ for (const [slug, pathes] of slugs) {
     //await page.getByTestId('root-document').screenshot({ path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
     //await page.screenshot({ fullPage: true, path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
     await page.screenshot({ path: ['public'].concat(...pathes.concat(`cover.png`)).join("/") })
+    // for (const i of [0,30]){
+    //   const questionId = `question-${i}`;
+    //   await page.getByTestId(questionId).screenshot({ path: ['public'].concat(...pathes.concat(`${questionId}.png`)).join("/") })
+    // }
+  });
+}
+
+for (const [slug, pathes] of slugs) {
+  test(`screenshot full ${slug}`, async ({ page }) => {
+    await page.goto(getTestUrl('paper', slug));
+
+    await page.setViewportSize(maxViewportSize);
+    await page.emulateMedia({ media: 'print' });
+    await expect(page.getByTestId('root-document')).toBeVisible();
+
+    //await page.pdf({ path: ['public'].concat(...pathes.concat(`cover.pdf`)).join("/"), format: 'A4', landscape: true })
+    //await page.getByTestId('root-document').screenshot({ path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
+    await page.screenshot({ fullPage: true, path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
+    //await page.screenshot({ path: ['public'].concat(...pathes.concat(`cover2.png`)).join("/") })
     // for (const i of [0,30]){
     //   const questionId = `question-${i}`;
     //   await page.getByTestId(questionId).screenshot({ path: ['public'].concat(...pathes.concat(`${questionId}.png`)).join("/") })

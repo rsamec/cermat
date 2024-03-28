@@ -5,6 +5,9 @@ export type ValidationFunctionArgs<T> = { args: T }
 export type EqualValidator<T> = ValidationFunctionArgs<T> & {
   kind: "equal"
 }
+export type MatchValidator = ValidationFunctionArgs<string> & {
+  kind: "match"
+}
 
 export type EqualRatioValidator<T> = ValidationFunctionArgs<T> & {
   kind: "equalRatio"
@@ -44,12 +47,19 @@ export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<num
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator
-  | EqualMathEquationValidator | EqualStringCollectionValidator  | EqualNumberCollectionValidator| EqualSortedOptionsValidator;
+  | EqualMathEquationValidator | EqualStringCollectionValidator  | EqualNumberCollectionValidator| EqualSortedOptionsValidator | MatchValidator;
 
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
     return (control: T) => {
       return control === value || areDeeplyEqual(control, value) ? undefined : { 'expected': value, 'actual': control };
+    }
+  }
+
+  static MatchTo(pattern: string) {
+    const regex = new RegExp(pattern);
+    return (control: string) => {
+      return regex.test(control) ? undefined : { 'expected': pattern, 'actual': control };
     }
   }
 
@@ -117,6 +127,8 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
   switch (spec.kind) {
     case 'equal':
       return CoreVerifyiers.EqualTo(spec.args);
+    case 'match':
+      return CoreVerifyiers.MatchTo(spec.args);
     case 'equalRatio':
       return CoreVerifyiers.RatioEqualTo(spec.args);
     case 'equalStringCollection':

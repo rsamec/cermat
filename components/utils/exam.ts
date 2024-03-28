@@ -8,7 +8,7 @@ export type ExamMetadata = {
   expectedAt: string
 }
 
-const subjectLabel = (value: SubjectType) => {
+export const subjectLabel = (value: SubjectType) => {
   if (value === "math") return "matika"
   else if (value === "cz") return "čeština"
   else if (value === "en") return "angličtina"
@@ -18,10 +18,11 @@ const subjectLabel = (value: SubjectType) => {
   else if (value === "ru") return "ruština"
   return value;
 }
-const gradeLabel = (value: GradeType) => {
+export const gradeLabel = (value: GradeType) => {
   if (value === "4") return "čtyřleté";
   else if (value === "6") return "šestileté"
   else if (value === "8") return "osmileté";
+  else if (value ==="diploma") return "maturita";
   return value
 }
 

@@ -16,7 +16,8 @@ export const ContactFooter = () => {
 
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold text-l">ZAJÍMAVÉ ODKAZY</h3>
-            <a href="https://prijimacky.cermat.cz/" target="_blank">Cermat Příjmačky</a>
+            <a href="https://prijimacky.cermat.cz/" target="_blank">Cermat příjmačky</a>
+            <a href="https://maturita.cermat.cz/" target="_blank">Cermat maturita</a>
             <a href="https://tau.cermat.cz/" target="_blank">TAU</a>
 
           </div>

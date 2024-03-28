@@ -33,7 +33,9 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 POSLECH - 2. ČÁST - ÚLOHY 5–12 
 ===
 > Uslyšíte rozhovor mezi přáteli ve vlaku. Na základě vyslechnuté nahrávky **rozhodněte**, zda jsou tvrzení v úlohách **5–12 pravdivá (P)**, nebo **nepravdivá (N)**.
- 
+> 
+> [audio](./audio/15%20CD%20Track.mp3)
+
 # 5 Der Zug hat jetzt 15 Minuten Verspätung. 
 # 6 Doris und Julian fahren in der 1. Klasse. 
 # 7 Doris hat die Fahrkarte an der Kasse am Bahnhof gekauft. 
@@ -46,6 +48,9 @@ POSLECH - 2. ČÁST - ÚLOHY 5–12
 POSLECH - 3. ČÁST - ÚLOHY 13–20 
 ===
 > Uslyšíte zaměstnance zoo hovořit k návštěvníkům v pavilonu žiraf. Na základě vyslechnuté nahrávky **odpovězte** v německém jazyce na otázky v úlohách **13–20**. V odpovědích použijte **nejvýše 3 slova**. Čísla můžete zapisovat číslicemi.
+>
+> [audio](./audio/21%20CD%20Track.mp3)
+
 # 13 In welchem Jahr wurde das Haus der Giraffen eröffnet?
 # 14 Wie viele Giraffen insgesamt gibt es zurzeit im Haus der Giraffen?
 # 15 Wie heißt die jüngste Giraffe?
@@ -60,22 +65,33 @@ POSLECH - 4. ČÁST - ÚLOHY 21–24
 ===
 > Uslyšíte **čtyři** krátké nahrávky. Nejprve uslyšíte otázku a poté vyslechnete nahrávku. Na základě vyslechnutých nahrávek **vyberte** k úlohám **21–24** vždy jednu správnou odpověď **A–D**.
 
+
 # 21 An welchem Tag nächste Woche soll der Maler zu Anne und Bernd kommen?
+
+[audio](./audio/26%20CD%20Track.mp3)-
 - [A] am Montag
 - [B] am Dienstag
 - [C] am Mittwoch
 - [D] am Donnerstag
+
 # 22 Was schätzt Hans an seinem neuen Rucksack?
+
+[audio](./audio/28%20CD%20Track.mp3)-
 - [A] Sicherheit
 - [B] Gewicht
 - [C] Größe
 - [D] Preis
+
 # 23 Was sagt die Reporterin über die morgige Sonderausgabe der *Tassener Zeitung*?
+
+[audio](./audio/30%20CD%20Track.mp3)-
 - [A] Die Zeitung wird farbig sein.
 - [B] Die Zeitung wird kostenlos sein.
 - [C] In der Zeitung wird eine Beilage sein.
 - [D] In der Zeitung wird ein Gespräch mit dem Chefredakteur sein.
 # 24 Welche neue Fremdsprache lernt Filip ab dem nächsten Schuljahr?
+
+[audio](./audio/32%20CD%20Track.mp3)-
 - [A] Russisch
 - [B] Spanisch
 - [C] Italienisch

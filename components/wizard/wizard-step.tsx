@@ -7,7 +7,7 @@ import { convertToForm, getControl } from "@/lib/utils/form.utils";
 import { createOptionAnswer, createBoolAnswer, renderControl } from "@/lib/utils/component.utils";
 import { useState } from "react";
 import Image from 'next/image';
-import { faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { imageUrl, cls, format, updateMap } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
@@ -34,10 +34,12 @@ const mapState = (state: RootState) => ({
 
 type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
-type Props = { step: Question, headerMap: Map<string, { expanded: boolean }>,
- questionMap: Map<string, { expanded: boolean }>, 
- toggleExpandableHeader:(title:string) => void,
- toggleExpandableAnswer:(title:string) => void, } & StateProps & DispatchProps;
+type Props = {
+  step: Question, headerMap: Map<string, { expanded: boolean }>,
+  questionMap: Map<string, { expanded: boolean }>,
+  toggleExpandableHeader: (title: string) => void,
+  toggleExpandableAnswer: (title: string) => void,
+} & StateProps & DispatchProps;
 
 
 
@@ -69,6 +71,7 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
 
 
   const inputBy = (step.metadata.inputBy as ComponentFunctionSpec);
+  
 
   const isSelfEvaluate = verifyBy.kind === "selfEvaluate";
 
@@ -77,7 +80,7 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
     "danger": 'bg-red-100 dark:bg-red-800 border-red-200 dark:border-red-400',
     "undefined": '-:dark:bg-slate-900 border-gray-200 dark:border-gray-700',
   }
-  const checkButton = <button title="Ověřit zadanou hodnotu" className="btn btn-blue" disabled={!valid} onClick={() => setAnswer({ questionId: stepId, answer: formControl.value })}>Zkontrolovat</button>
+  const checkButton = <button title="Ověřit zadanou hodnotu" className="btn btn-blue" onClick={() => setAnswer({ questionId: stepId, answer: formControl.value })}>Zkontrolovat</button>
 
 
 
@@ -143,11 +146,16 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
             ((inputBy.kind != "bool" && ((correction === true && inputBy.kind !== 'options') || (correction === false)))) &&
             <div className={cls(["flex items-center gap-4 flex-wrap p-2 border shadow-sm", stateVariants[status != null ? status : "undefined"]])} >
               {(correction === true && inputBy.kind !== 'options') && <div className="flex items-center gap-2"><FontAwesomeIcon icon={faThumbsUp} size="xl"></FontAwesomeIcon><span>Správně</span></div>}
-              {(correction === false) && <ToggleSwitchBadge text="Zobrazit správné řešení úlohy" value={isQuestionAnswerExpanded} onChange={() => toggleExpandableAnswer(stepId)} type="Success" > {
-                inputBy?.kind === 'math' ?
-                  <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(verifyBy.args))) }} /> :
-                  <div>{format(verifyBy?.args)}</div>
-              }
+              {(correction === false) && <ToggleSwitchBadge text="Zobrazit správné řešení úlohy" value={isQuestionAnswerExpanded}
+                onChange={() => toggleExpandableAnswer(stepId)}
+                showCopy={!(inputBy.kind == 'options' || inputBy.kind =="sortedOptions")}
+                onCopy={() => formControl.setValue(verifyBy?.args)}
+                type="Success">
+                {
+                  inputBy?.kind === 'math' ?
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(verifyBy.args))) }} /> :
+                    <div>{format(verifyBy?.args)}</div>
+                }
               </ToggleSwitchBadge>
               }
             </div>

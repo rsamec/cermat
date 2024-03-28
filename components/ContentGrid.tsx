@@ -2,39 +2,48 @@ import type { OstDocument } from 'outstatic'
 import Link from 'next/link'
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookAtlas, faWaveSquare, faSquareRootVariable, faPrint, faPenToSquare, faArrowRightToBracket, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faSquareRootVariable, faArrowRight, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { imageUrl, isEmptyOrWhiteSpace } from '@/lib/utils/utils';
+import { SubjectType } from './utils/exam';
+
 
 type Item = {
   tags?: { value: string; label: string }[]
 } & OstDocument
 
 type Props = {
-  collection: 'exams'
-  iconType: 'math' | 'cz' | "en"
+  subject: SubjectType
   title?: string
   items: Item[]
   priority?: boolean
+  viewAll?: boolean
 }
 
 const ContentGrid = ({
   title = 'More',
   items,
-  collection,
-  iconType,
-  priority = false
+  subject,
+  priority = false,
+  viewAll = true
 }: Props) => {
   return (
-    <section id={collection}>
-      <h2 className="mb-8 text-3xl font-bold tracking-tighter leading-tight dark:text-white">
-        {title}
-      </h2>
+    <section id={subject}>
+      <div className="flex gap-4 md:gap-6 items-end">
+        <h2 className="text-3xl font-bold tracking-tighter leading-tight capitalize dark:text-white">
+          {title}
+        </h2>
+        {viewAll ? (
+          <Link href={`/timeline/${subject}`} className="pb-1">
+            View all <FontAwesomeIcon icon={faArrowRight} />
+          </Link>
+        ) : null}
+      </div>
       <div className="flex flex-wrap gap-6">
         {items.map((item, id) => (
           <div key={id} className='max-w-64 flex flex-col gap-2'>
 
 
-            <div key={item.slug} className="p-1 cursor-pointer border project-card rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu transition duration-100 motion-reduce:hover:scale-100 hover:shadow overflow-hidden">
+            <div key={item.slug} className="p-1 cursor-pointer border project-card rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu transition duration-100 motion-reduce:hover:scale-100 hover:shadow overflow-hidden dark:border-gray-700">
 
               {(
                 <div className='h-full flex flex-col gap-2'>
@@ -69,8 +78,8 @@ const ContentGrid = ({
             </div>
             <div>
               <div className="flex gap-2 items-start">
-                {iconType == "math" && <FontAwesomeIcon icon={faSquareRootVariable} size='2x' ></FontAwesomeIcon>}
-                {iconType == "cz" && <FontAwesomeIcon icon={faBookAtlas} size='2x' ></FontAwesomeIcon>}
+                {subject == "math" && <FontAwesomeIcon icon={faSquareRootVariable} size='2x' ></FontAwesomeIcon>}
+                {subject == "cz" && <FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}
                 <Link className="grow flex flex-col gap-2" href={`/prospect/${item.slug}`}>
                   <h4 className="text mb-2 leading-snug font-bold hover:underline">
                     {item.title}

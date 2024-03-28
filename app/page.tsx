@@ -4,18 +4,19 @@ import ContentGrid from '../components/ContentGrid'
 import markdownToHtml from '@/lib/utils/markdown';
 import Navigation from '@/components/Navigation';
 import SearchForm from '@/components/search/search-form';
-import { toTags } from '@/components/utils/exam';
+import { SubjectType, subjectLabel, toTags } from '@/components/utils/exam';
 import Image from 'next/image';
 import StatsCard from '@/components/StatsCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookAtlas, faGlobe, faSquareRootVariable } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faSquareRootVariable } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import coverImage from '../public/images/000000.png'
 
 const collection = "exams";
 
 export default async function Index() {
-  const { content, mathPosts, czPosts, enPosts, dePosts, frPosts } = await getData()
+  const { content, categories } = await getData();
+
   return (
     <Layout headerNavigation={<Navigation />} showContact={true} fullWidth={false}>
       <div className='flex flex-col gap-6'>
@@ -46,76 +47,24 @@ export default async function Index() {
         </section>
         <section>
           <h3 className='mb-8 text-3xl font-bold'>Online testy</h3>
-          <div className="flex flex-wrap gap-10">
-            <Link href={`/timeline/math`}>
-              <StatsCard value={mathPosts.length} text="matika" icon={<FontAwesomeIcon icon={faSquareRootVariable} size='2x' ></FontAwesomeIcon>}></StatsCard>
-            </Link>
-            <Link href={`/timeline/cz`}>
-              <StatsCard value={czPosts.length} text="čeština" icon={<FontAwesomeIcon icon={faBookAtlas} size='2x' ></FontAwesomeIcon>}></StatsCard>
-            </Link>
-            <Link href={`/timeline/en`}>
-              <StatsCard value={enPosts.length} text="angličtina" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
-            </Link>
-            <Link href={`/timeline/de`}>
-              <StatsCard value={dePosts.length} text="němčina" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
-            </Link>
-            <Link href={`/timeline/fr`}>
-              <StatsCard value={frPosts.length} text="francouzština" icon={<FontAwesomeIcon icon={faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
-            </Link>
+          <div className="flex flex-wrap gap-8">
+            {categories.map(post =>
+              <Link key={post.code} href={`/timeline/${post.code}`}>
+                <StatsCard value={post.total} text={subjectLabel(post.code)} icon={<FontAwesomeIcon icon={post.code == "math" ? faSquareRootVariable : faGlobe} size='2x' ></FontAwesomeIcon>}></StatsCard>
+              </Link>
+            )}
           </div>
         </section>
-        {mathPosts.length > 0 && (
-          <ContentGrid
-            title="Matika"
-            items={mathPosts}
-            collection={collection}
-            iconType="math"
+        {categories.map(post => {
+          return post.items.length > 0 ? <ContentGrid key={post.code}
+            title={subjectLabel(post.code)}
+            items={post.items}
+            subject={post.code}
+            viewAll={post.total > post.items.length}
             priority
-          />
-        )}
-        {czPosts.length > 0 && (
-          <ContentGrid
-            title="Čeština"
-            items={czPosts}
-            collection={collection}
-            iconType="cz"
-            priority
-          />
-        )}
-        {enPosts.length > 0 && (
-          <ContentGrid
-            title="Angličtina"
-            items={enPosts}
-            collection={collection}
-            iconType="en"
-            priority
-          />
-        )}
-        {dePosts.length > 0 && (
-          <ContentGrid
-            title="Němčina"
-            items={dePosts}
-            collection={collection}
-            iconType="en"
-            priority
-          />
-        )}
-        {frPosts.length > 0 && (
-          <ContentGrid
-            title="Francouzština"
-            items={frPosts}
-            collection={collection}
-            iconType="en"
-            priority
-          />
-        )}
-        {/* {allProjects.length > 0 && (
-          <ContentGrid
-            title="Rady a tipy"
-            items={allProjects}
-            collection="projects"
-          />
-        )} */}
+          /> : null
+        })
+        }
       </div>
     </Layout>
   )
@@ -143,27 +92,27 @@ async function getData() {
   ]
   const mathPosts = await db
     .find({ collection, subject: 'math', status: 'published' }, fieldsSet)
-    .sort({ slug: 1 })
+    .sort({ publishedAt: -1 })
     .toArray()
 
   const czPosts = await db
     .find({ collection, subject: 'cz', status: 'published' }, fieldsSet)
-    .sort({ slug: 1 })
+    .sort({ publishedAt: -1 })
     .toArray()
 
   const enPosts = await db
     .find({ collection, subject: 'en', status: 'published' }, fieldsSet)
-    .sort({ slug: 1 })
+    .sort({ publishedAt: -1 })
     .toArray()
 
   const dePosts = await db
     .find({ collection, subject: 'de', status: 'published' }, fieldsSet)
-    .sort({ slug: 1 })
+    .sort({ publishedAt: -1 })
     .toArray()
 
   const frPosts = await db
     .find({ collection, subject: 'fr', status: 'published' }, fieldsSet)
-    .sort({ slug: 1 })
+    .sort({ publishedAt: -1 })
     .toArray()
 
 
@@ -172,14 +121,21 @@ async function getData() {
   //   .sort({ publishedAt: -1 })
   //   .toArray()
 
-  const toItems = (items: any[]) => items.map(d => ({ ...d, tags: toTags(d, ['year', 'grade']) }))
+  const limit = 4;
+  const toItems = (code: SubjectType, items: any[]) => ({
+    code,
+    total: items.length,
+    items: items.slice(0, limit).map(d => ({ ...d, tags: toTags(d, ['year', 'grade']) }))
+  });
+
 
   return {
     content,
-    mathPosts: toItems(mathPosts),
-    czPosts: toItems(czPosts),
-    enPosts: toItems(enPosts),
-    dePosts: toItems(dePosts),
-    frPosts: toItems(frPosts),
+    categories: [
+      toItems("math", mathPosts),
+      toItems("cz", czPosts),
+      toItems("en", enPosts),
+      toItems("de", dePosts),
+      toItems("fr", frPosts)]
   }
 }
