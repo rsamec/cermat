@@ -726,5 +726,15 @@
         }
       }
     }
+  },
+  "metadata": {
+    "info": {
+      "code": "C5PBD23C0T02",
+      "maxPoints": 50,
+      "questions": {
+        "closed": 22,
+        "opened": 6
+      }
+    }
   }
 }

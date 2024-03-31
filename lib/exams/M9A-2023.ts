@@ -1,6 +1,14 @@
-import { fourPoints, group, mathEquation, mathExpr, mathRatio, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
+import { fourPoints, group, mathEquation, mathExpr, mathRatio, number, option, optionBool, rootGroup, selfEvaluateImage, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup({
+  code: 'M9PAD23C0T01',
+  maxPoints: 50,
+  questions: {
+      closed: 5,
+      opened: 11
+  }
+}, {
+
   1: number(20, { suffix: 'minut' }),
   2: group({
     2.1: number(1.2, { suffix: 'litru', step: 0.1 }, twoPoints),

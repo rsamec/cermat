@@ -96,7 +96,7 @@
             "kind": "bool"
           }
         },
-        "2.1": {
+        "2.10": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -175,7 +175,7 @@
         "3.17": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:die )?Giraffen? malen"
+            "args": "(?:die )?Giraffen malen"
           },
           "points": 2,
           "inputBy": {
@@ -202,7 +202,7 @@
             "kind": "text"
           }
         },
-        "3.2": {
+        "3.20": {
           "verifyBy": {
             "kind": "match",
             "args": "(?:ein|das) Pferd"
@@ -314,7 +314,7 @@
     },
     "6": {
       "children": {
-        "6.3": {
+        "6.30": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -418,7 +418,7 @@
     },
     "7": {
       "children": {
-        "7.4": {
+        "7.40": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "C"
@@ -526,7 +526,7 @@
     },
     "9": {
       "children": {
-        "9.5": {
+        "9.50": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "A"
@@ -626,7 +626,7 @@
             "kind": "options"
           }
         },
-        "9.6": {
+        "9.60": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "C"
@@ -676,6 +676,16 @@
             "kind": "options"
           }
         }
+      }
+    }
+  },
+  "metadata": {
+    "info": {
+      "code": "NJMZD23C0T01",
+      "maxPoints": 95,
+      "questions": {
+        "closed": 56,
+        "opened": 8
       }
     }
   }

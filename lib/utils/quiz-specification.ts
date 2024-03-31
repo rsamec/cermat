@@ -13,8 +13,17 @@ export interface AnswerMetadata<T> {
 
 }
 
+export interface AnswerInfo {
+  code: string,
+  maxPoints: number
+  questions: {
+    opened: number,
+    closed: number,
+  }
+}
 export interface AnswerGroupMetadata<T> {
-  computeBy?: ComputeFunctionSpec
+  computeBy?: ComputeFunctionSpec,
+  info?: AnswerInfo
 }
 
 export type AnswerNode<T> = AnswerGroup<T> | AnswerMetadata<T>;
@@ -101,9 +110,9 @@ export function calculatePoints<T>(tree: TreeNode<AnswerTreeNode<T>>,
       // Recursively calculate total points for each child node						
       for (const childNode of node.children) {
         total += traverse(childNode, leafs);
-      }      
+      }
       //points for leafs    
-      total += leafs.length > 0 ? calculate(group.node.metadata?.computeBy!, leafs) : 0;      
+      total += leafs.length > 0 ? calculate(group.node.metadata?.computeBy!, leafs) : 0;
     }
     return total
   }
@@ -127,7 +136,7 @@ export function calculateMaxTotalPoints<T>(tree: TreeNode<AnswerTreeNode<T>>) {
   }, 0)
 
   const calculate = (computeBy: ComputeFunctionSpec, leafs: AnswerMetadataTreeNode<any>[]) => {
-    
+
     const res = computeBy != null && computeBy.kind == "group" ?
       computeBy.args.reduce((out, d) => out = out > d.points ? out : d.points, 0)
       : calculateSum(leafs);

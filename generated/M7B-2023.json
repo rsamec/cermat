@@ -468,5 +468,15 @@
         }
       }
     }
+  },
+  "metadata": {
+    "info": {
+      "code": "M7PBD23C0T02",
+      "maxPoints": 50,
+      "questions": {
+        "closed": 6,
+        "opened": 10
+      }
+    }
   }
 }

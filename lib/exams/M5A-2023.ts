@@ -1,8 +1,15 @@
 
 
-import { group, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max5Points, threePoints, twoPoints } from "../utils/quiz-builder";
+import { group, number, option, optionBool, rootGroup, selfEvaluateImage, task3Max4Points, task3Max5Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup({
+  code: 'M5PAD23C0T01',
+  maxPoints: 50,
+  questions: {
+      closed: 6,
+      opened: 8
+  }
+}, {
   1: group({
     1.1: number(710, {}, twoPoints),
     1.2: number(126, {}, twoPoints),

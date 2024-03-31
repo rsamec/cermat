@@ -1,7 +1,14 @@
 
-import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, selfEvaluate, selfEvaluateText } from "../utils/quiz-builder";
+import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, selfEvaluate, selfEvaluateText, rootGroup } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup({
+    code: 'C5PBD23C0T02',
+    maxPoints: 50,
+    questions: {
+        closed: 22,
+        opened: 6
+    }
+}, {
     1: option("B"),
     2: option("D"),
     3: option("D"),
@@ -33,7 +40,7 @@ const form = group({
     }, tasks4Max2Points),
     11: option("C"),
     12: option("A"),
-    13: option("C"),    
+    13: option("C"),
     14: sortedOptions(['F', 'A', 'C', 'B', 'E', 'D'], threePoints),
     15: group({
         15.1: selfEvaluateText("např. S trenérem se sejdeme, než začne závod."),
@@ -59,7 +66,7 @@ const form = group({
 
     }, tasks4Max2Points),
     23: option("D"),
-    24: words("např. Muž utekl bez placení.",twoPoints),
+    24: words("např. Muž utekl bez placení.", twoPoints),
     25: group({
         25.1: optionBool(true),
         25.2: optionBool(false),

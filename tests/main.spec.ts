@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { getTestUrl } from './test.utils';
 
 const viewportSizes = [{ width: 600, height: 3400 },{ width: 1200, height: 1400 }];

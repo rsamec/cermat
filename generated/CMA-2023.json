@@ -682,5 +682,15 @@
         "kind": "options"
       }
     }
+  },
+  "metadata": {
+    "info": {
+      "code": "CJMZD23C0T01",
+      "maxPoints": 50,
+      "questions": {
+        "closed": 27,
+        "opened": 5
+      }
+    }
   }
 }

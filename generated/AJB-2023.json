@@ -96,7 +96,7 @@
             "kind": "bool"
           }
         },
-        "2.1": {
+        "2.10": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -201,7 +201,7 @@
             "kind": "text"
           }
         },
-        "3.2": {
+        "3.20": {
           "verifyBy": {
             "kind": "match",
             "args": "March (the )?3(?:rd)?|3(?:rd)? March|3\\.3"
@@ -313,7 +313,7 @@
     },
     "6": {
       "children": {
-        "6.3": {
+        "6.30": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -417,7 +417,7 @@
     },
     "7": {
       "children": {
-        "7.4": {
+        "7.40": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "B"
@@ -525,7 +525,7 @@
     },
     "9": {
       "children": {
-        "9.5": {
+        "9.50": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "A"
@@ -625,7 +625,7 @@
             "kind": "options"
           }
         },
-        "9.6": {
+        "9.60": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "C"
@@ -675,6 +675,16 @@
             "kind": "options"
           }
         }
+      }
+    }
+  },
+  "metadata": {
+    "info": {
+      "code": "AJMZD23C0T04",
+      "maxPoints": 95,
+      "questions": {
+        "closed": 56,
+        "opened": 8
       }
     }
   }

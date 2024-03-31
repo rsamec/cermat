@@ -37,7 +37,6 @@ export const normalizeToString = (input: string) => {
   let result = '';
   try {
     const output = str2sym(input).toString({ implicit: 'hide', parenthesis: 'auto' })
-    console.log(input, output);
     return removeSpaces(output).replaceAll("*", "");
   }
   catch {

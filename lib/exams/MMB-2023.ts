@@ -1,6 +1,13 @@
-import { group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, number, mathExpr, selfEvaluateImage } from "../utils/quiz-builder";
+import { group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, number, mathExpr, selfEvaluateImage, rootGroup } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup({
+   code: 'MAMZD23C0T01',
+   maxPoints: 50,
+   questions: {
+       closed: 11,
+       opened: 14
+   }
+ }, { 
    1: number(22, { suffix: '%' }),
    2: mathExpr('a=-3c/b^2+2', { hintType: 'equation' }),
    3: mathExpr('2/x', { hintType: 'expression' }, twoPoints),

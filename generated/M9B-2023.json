@@ -546,5 +546,15 @@
         }
       }
     }
+  },
+  "metadata": {
+    "info": {
+      "code": "M9PBD23C0T02",
+      "maxPoints": 50,
+      "questions": {
+        "closed": 5,
+        "opened": 11
+      }
+    }
   }
 }

@@ -1,7 +1,10 @@
 import { SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
 import { ComponentFunctionSpec, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
-import { AnswerGroupImpl, AnswerGroupMetadata, MixedChildren } from "./quiz-specification";
+import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren } from "./quiz-specification";
 
+export function rootGroup<T>(info: AnswerInfo, children: MixedChildren<T>) {
+  return new AnswerGroupImpl<T>(children, { info });
+}
 
 export function group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetadata<T>) {
   return new AnswerGroupImpl<T>(children, metadata);

@@ -45,15 +45,15 @@ function Stepper(props: Props) {
 
       // Adjust the number of steps based on the container width
       if (containerWidth < 640) {
-        stepsToShow = 5;
+        stepsToShow = 3;
       } else if (containerWidth < 768) {
-        stepsToShow = 7;
+        stepsToShow = 5;
       } else if (containerWidth < 1024) {
-        stepsToShow = 9;
+        stepsToShow = 7;
       } else if (containerWidth < 1200) {
-        stepsToShow = 11;
+        stepsToShow = 9;
       } else {
-        stepsToShow = 13;
+        stepsToShow = 11;
       }
 
       setMaxVisibleSteps(stepsToShow);
@@ -83,6 +83,7 @@ function Stepper(props: Props) {
         <div className="flex items-center gap-1">
           {filterSteps(steps, props.currentStepIndex, maxVisibleSteps).map((d, i) => {
             const selected = d.id === props.currentStep?.id;
+            console.log(d.id)
             const correct = props.corrections[d.id] === true;
             const incorrect = props.corrections[d.id] === false;
 

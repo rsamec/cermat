@@ -1,6 +1,14 @@
-import { optionBool, group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, word, number, match } from "../utils/quiz-builder";
+import { optionBool, group, option, twoPoints, word, number, match, rootGroup } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup(
+    {
+        code: 'AJMZD23C0T04',
+        maxPoints: 95,
+        questions: {
+            closed: 56,
+            opened: 8
+        }
+    }, {
     1: group({
         1.1: option("D", twoPoints),
         1.2: option("C", twoPoints),
@@ -13,19 +21,19 @@ const form = group({
         2.7: optionBool(true),
         2.8: optionBool(false),
         2.9: optionBool(true),
-        2.10: optionBool(false),
+        '2.10': optionBool(false),
         2.11: optionBool(false),
         2.12: optionBool(false),
     }),
     3: group({
-        3.13: number(868,{}, twoPoints),
+        3.13: number(868, {}, twoPoints),
         3.14: word("MOYCULEN", twoPoints),
         3.15: word("brown", twoPoints),
         3.16: match(/(?:a|the) map(?:s)?/, twoPoints),
         3.17: match(/(?:a|the) concert(?:s)?/, twoPoints),
         3.18: match(/(?:a|the) sofa(?:s)?/, twoPoints),
         3.19: match(/rose(?:s)/, twoPoints),
-        3.20: match(/March (the )?3(?:rd)?|3(?:rd)? March|3\.3/, twoPoints),
+        '3.20': match(/March (the )?3(?:rd)?|3(?:rd)? March|3\.3/, twoPoints),
     }),
     4: group({
         4.21: option("C", twoPoints),
@@ -41,7 +49,7 @@ const form = group({
         5.29: option("D", twoPoints),
     }),
     6: group({
-        6.30: optionBool(false),
+        '6.30': optionBool(false),
         6.31: optionBool(true),
         6.32: optionBool(true),
         6.33: optionBool(true),
@@ -53,7 +61,7 @@ const form = group({
         6.39: optionBool(false),
     }),
     7: group({
-        7.40: option("B", twoPoints),
+        '7.40': option("B", twoPoints),
         7.41: option("D", twoPoints),
         7.42: option("A", twoPoints),
         7.43: option("C", twoPoints),
@@ -67,7 +75,7 @@ const form = group({
         8.49: option("C", twoPoints),
     }),
     9: group({
-        9.50: option("A"),
+        '9.50': option("A"),
         9.51: option("C"),
         9.52: option("C"),
         9.53: option("B"),
@@ -77,7 +85,7 @@ const form = group({
         9.57: option("A"),
         9.58: option("B"),
         9.59: option("C"),
-        9.60: option("C"),
+        '9.60': option("C"),
         9.61: option("B"),
         9.62: option("A"),
         9.63: option("B"),

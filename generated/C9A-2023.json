@@ -655,5 +655,15 @@
         }
       }
     }
+  },
+  "metadata": {
+    "info": {
+      "code": "C9PAD23C0T01",
+      "maxPoints": 50,
+      "questions": {
+        "closed": 24,
+        "opened": 6
+      }
+    }
   }
 }

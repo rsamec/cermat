@@ -1,8 +1,16 @@
 
 
-import { group, mathExpr, mathRatio, number, option, optionBool, selfEvaluateImage, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
+import { group, mathExpr, mathRatio, number, option, optionBool, rootGroup, selfEvaluateImage, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup({
+  code: 'M7PAD23C0T01',
+  maxPoints: 50,
+  questions: {
+      closed: 6,
+      opened: 10
+  }
+}, { 
+
   1: number(14, { prefix: 'o', suffix: 'litrů' }),
   2: group({
     2.1: mathExpr("-1/5", { hintType: 'fraction' }, twoPoints),

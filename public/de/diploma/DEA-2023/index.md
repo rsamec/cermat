@@ -224,9 +224,6 @@ nepravdivá (N).
 ^2^ der Schlitten: sáňky
 
 
-ČTENÍ A JAZYKOVÁ KOMPETENCE - 6. ČÁST - ÚLOHY 30–39
-===
-
 **Willkommen im Skigebiet Grindelwald!**
 
 Grindelwald befindet sich in der Jungfrau-Region, die durch ihre schöne Natur bekannt ist. 

@@ -490,5 +490,15 @@
         }
       }
     }
+  },
+  "metadata": {
+    "info": {
+      "code": "M5PAD23C0T01",
+      "maxPoints": 50,
+      "questions": {
+        "closed": 6,
+        "opened": 8
+      }
+    }
   }
 }

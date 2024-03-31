@@ -1,6 +1,13 @@
-import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints } from "../utils/quiz-builder";
+import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup } from "../utils/quiz-builder";
 
-const form = group({
+const form = rootGroup({
+  code: 'C9PAD23C0T01',
+  maxPoints: 50,
+  questions: {
+      closed: 24,
+      opened: 6
+  }
+}, {
   1: option("D"),
   2: option("B"),
   3: option("C"),

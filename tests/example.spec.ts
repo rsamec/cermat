@@ -1,36 +1,22 @@
 import { test, expect } from '@playwright/test';
 import { getTestUrl } from './test.utils';
+import exams from '../lib/exams.utils';
 
 const viewportSize = { width:  1200, height: 900 };
 const maxViewportSize = { width:  2800, height: 2100 };
-test('has title', async ({ page }) => {
-  const slug = 'c9b-2023';
-  await page.goto(getTestUrl('paper', slug));
+// test('has title', async ({ page }) => {
+//   const slug = 'c9b-2023';
+//   await page.goto(getTestUrl('paper', slug));
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle("Čeština (9 ročník) - 2. řádný termín 2023");
+//   // Expect a title "to contain" a substring.
+//   await expect(page).toHaveTitle("Čeština (9 ročník) - 2. řádný termín 2023");
 
-});
+// });
 
-const slugs: [string, string[]][] = [
-  ['matematika-5-2023-1', ["math", "8", "M5A-2023"]],
-  ['matematika-9-2023-1', ["math", "4", "M9A-2023"]],
-  ['cestina-9-2023-1', ["cz", "4", "C9A-2023"]],
-  ['cestina-5-2023-1', ["cz", "8", "C5A-2023"]],
-  ['c9b-2023', ["cz", "4", "C9B-2023"]],
-  ['c7a-2023', ["cz", "6", "C7A-2023"]],
-  ['m7a-2023', ["math", "6", "M7A-2023"]],
-  ['c5b-2023', ["cz", "8", "C5B-2023"]],
-  ['mma-2023', ["math", "diploma", "MMA-2023"]],
-  ['aja-2023', ["en", "diploma", "AJA-2023"]],
-  ['dea-2023', ["de", "diploma", "DEA-2023"]],
-  ['fra-2023', ["fr", "diploma", "FRA-2023"]],
-  ['cestina-maturita-jaro-2023', ["cz", "diploma", "CMA-2023"]],
-];
 
-for (const [slug, pathes] of slugs) {
-  test(`screenshot root document ${slug}`, async ({ page }) => {
-    await page.goto(getTestUrl('paper', slug));
+for (const {pathes} of exams) {
+  test(`screenshot root document ${pathes}`, async ({ page }) => {
+    await page.goto(getTestUrl('paper', pathes[2].toLocaleLowerCase()));
 
     await page.setViewportSize(viewportSize);
     await page.emulateMedia({ media: 'print' });
@@ -40,6 +26,7 @@ for (const [slug, pathes] of slugs) {
     //await page.getByTestId('root-document').screenshot({ path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
     //await page.screenshot({ fullPage: true, path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
     await page.screenshot({ path: ['public'].concat(...pathes.concat(`cover.png`)).join("/") })
+    
     // for (const i of [0,30]){
     //   const questionId = `question-${i}`;
     //   await page.getByTestId(questionId).screenshot({ path: ['public'].concat(...pathes.concat(`${questionId}.png`)).join("/") })
@@ -47,21 +34,15 @@ for (const [slug, pathes] of slugs) {
   });
 }
 
-for (const [slug, pathes] of slugs) {
-  test(`screenshot full ${slug}`, async ({ page }) => {
-    await page.goto(getTestUrl('paper', slug));
+// for (const  {pathes} of exams) {
+//   test(`screenshot full ${pathes}`, async ({ page }) => {
+//     await page.goto(getTestUrl('paper', pathes[2].toLocaleLowerCase()));
+//     console.log(getTestUrl('paper', pathes[2].toLocaleLowerCase()))
 
-    await page.setViewportSize(maxViewportSize);
-    await page.emulateMedia({ media: 'print' });
-    await expect(page.getByTestId('root-document')).toBeVisible();
+//     await page.setViewportSize(maxViewportSize);
+//     await page.emulateMedia({ media: 'print' });
+//     await expect(page.getByTestId('root-document')).toBeVisible();
+//     await page.screenshot({ fullPage: true, path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
 
-    //await page.pdf({ path: ['public'].concat(...pathes.concat(`cover.pdf`)).join("/"), format: 'A4', landscape: true })
-    //await page.getByTestId('root-document').screenshot({ path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
-    await page.screenshot({ fullPage: true, path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
-    //await page.screenshot({ path: ['public'].concat(...pathes.concat(`cover2.png`)).join("/") })
-    // for (const i of [0,30]){
-    //   const questionId = `question-${i}`;
-    //   await page.getByTestId(questionId).screenshot({ path: ['public'].concat(...pathes.concat(`${questionId}.png`)).join("/") })
-    // }
-  });
-}
+//   });
+// }
