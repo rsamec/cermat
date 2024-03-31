@@ -1,30 +1,7 @@
 {
-  "commit": "509e798464667d282fee68a63725fdefc60f2b6c",
-  "generated": "2024-03-31T07:59:47.918Z",
+  "commit": "13c23f6ee7fb123a1dc24858f2300edcf4e28e20",
+  "generated": "Sun, 31 Mar 2024 07:59:55 GMT",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "bc8b622eee3539e447155d4a6ff02f3536c612b3",
-        "hash": "3005963162",
-        "path": "outstatic/content/exams/aja-2022.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "AJA-2022",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20220501",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "aja-2022",
-      "status": "draft",
-      "subject": "en",
-      "title": "Angličtina (maturita) - jaro 2022",
-      "year": "2022"
-    },
     {
       "__outstatic": {
         "commit": "90148a1cae5632ebe537d2138f22dac252ca328a",
@@ -50,26 +27,26 @@
     },
     {
       "__outstatic": {
-        "commit": "08b23d379f32d8536b496b6659aef5aec9e14b96",
-        "hash": "2418927306",
-        "path": "outstatic/content/exams/ajb-2023.md"
+        "commit": "bc8b622eee3539e447155d4a6ff02f3536c612b3",
+        "hash": "3005963162",
+        "path": "outstatic/content/exams/aja-2022.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "AJB-2023",
+      "code": "AJA-2022",
       "collection": "exams",
       "coverImage": "",
       "description": "",
-      "expectedAt": "20230901",
+      "expectedAt": "20220501",
       "grade": "diploma",
       "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "ajb-2023",
+      "slug": "aja-2022",
       "status": "draft",
       "subject": "en",
-      "title": "Angličtina (maturita) - podzim 2023",
-      "year": "2023"
+      "title": "Angličtina (maturita) - jaro 2022",
+      "year": "2022"
     },
     {
       "__outstatic": {
@@ -92,52 +69,6 @@
       "status": "draft",
       "subject": "cz",
       "title": "Čeština (5. ročník) - 2. řádný termín 2022",
-      "year": "2022"
-    },
-    {
-      "__outstatic": {
-        "commit": "c7efcc0ed54b63c9e4a97b02dfd2921159ab23a6",
-        "hash": "545569706",
-        "path": "outstatic/content/exams/c5a-2022.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C5A-2022",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20220404",
-      "grade": "8",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c5a-2022",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (5. ročník) - 1. řádný termín 2022",
-      "year": "2022"
-    },
-    {
-      "__outstatic": {
-        "commit": "34b6481c39e838788ebdfe39fa307fc6460c59d0",
-        "hash": "2593019614",
-        "path": "outstatic/content/exams/ajb-2022.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "AJB-2022",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20220901",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "ajb-2022",
-      "status": "draft",
-      "subject": "en",
-      "title": "Angličtina (maturita) - podzim 2022",
       "year": "2022"
     },
     {
@@ -165,25 +96,71 @@
     },
     {
       "__outstatic": {
-        "commit": "26f33640f3158ba068bf2a6d9d5e8727ac0ff109",
-        "hash": "2361858286",
-        "path": "outstatic/content/exams/c5c-2022.md"
+        "commit": "c7efcc0ed54b63c9e4a97b02dfd2921159ab23a6",
+        "hash": "545569706",
+        "path": "outstatic/content/exams/c5a-2022.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "C5C-2022",
+      "code": "C5A-2022",
       "collection": "exams",
       "coverImage": "",
       "description": "",
-      "expectedAt": "20220406",
+      "expectedAt": "20220404",
       "grade": "8",
       "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c5c-2022",
+      "slug": "c5a-2022",
       "status": "draft",
       "subject": "cz",
-      "title": "Čeština (5. ročník) - 1. náhradní termín 2022",
+      "title": "Čeština (5. ročník) - 1. řádný termín 2022",
+      "year": "2022"
+    },
+    {
+      "__outstatic": {
+        "commit": "08b23d379f32d8536b496b6659aef5aec9e14b96",
+        "hash": "2418927306",
+        "path": "outstatic/content/exams/ajb-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "AJB-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230901",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "ajb-2023",
+      "status": "draft",
+      "subject": "en",
+      "title": "Angličtina (maturita) - podzim 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "34b6481c39e838788ebdfe39fa307fc6460c59d0",
+        "hash": "2593019614",
+        "path": "outstatic/content/exams/ajb-2022.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "AJB-2022",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20220901",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "ajb-2022",
+      "status": "draft",
+      "subject": "en",
+      "title": "Angličtina (maturita) - podzim 2022",
       "year": "2022"
     },
     {
@@ -257,6 +234,75 @@
     },
     {
       "__outstatic": {
+        "commit": "26f33640f3158ba068bf2a6d9d5e8727ac0ff109",
+        "hash": "2361858286",
+        "path": "outstatic/content/exams/c5c-2022.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C5C-2022",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20220406",
+      "grade": "8",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c5c-2022",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (5. ročník) - 1. náhradní termín 2022",
+      "year": "2022"
+    },
+    {
+      "__outstatic": {
+        "commit": "48ed759f7910453184402154e28b54630b05e716",
+        "hash": "1274177392",
+        "path": "outstatic/content/exams/c5b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C5B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230405",
+      "grade": "8",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c5b-2023",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (5. ročník) - 2. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "9fbebabb219be093eb21e9cd15e97db8feac2f79",
+        "hash": "1690030540",
+        "path": "outstatic/content/exams/c7c-2022.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C7C-2022",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20220406",
+      "grade": "6",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c7c-2022",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (7. ročník) - 1. náhradní termín 2022",
+      "year": "2022"
+    },
+    {
+      "__outstatic": {
         "commit": "39a4aa402631b7ae87b78521e2e967fc0b25c001",
         "hash": "348262674",
         "path": "outstatic/content/exams/c7b-2023.md"
@@ -303,26 +349,26 @@
     },
     {
       "__outstatic": {
-        "commit": "9fbebabb219be093eb21e9cd15e97db8feac2f79",
-        "hash": "1690030540",
-        "path": "outstatic/content/exams/c7c-2022.md"
+        "commit": "3f438725df5a81d1d2eca164ddffeff8a125c83a",
+        "hash": "687050773",
+        "path": "outstatic/content/exams/c7a-2023.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "C7C-2022",
+      "code": "C7A-2023",
       "collection": "exams",
       "coverImage": "",
       "description": "",
-      "expectedAt": "20220406",
+      "expectedAt": "20230404",
       "grade": "6",
       "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c7c-2022",
-      "status": "draft",
+      "slug": "c7a-2023",
+      "status": "published",
       "subject": "cz",
-      "title": "Čeština (7. ročník) - 1. náhradní termín 2022",
-      "year": "2022"
+      "title": "Čeština (7. ročník) - 1. řádný termín 2023",
+      "year": "2023"
     },
     {
       "__outstatic": {
@@ -349,26 +395,26 @@
     },
     {
       "__outstatic": {
-        "commit": "3f438725df5a81d1d2eca164ddffeff8a125c83a",
-        "hash": "687050773",
-        "path": "outstatic/content/exams/c7a-2023.md"
+        "commit": "8539f049ce35de3a7eb9bbbdc5f5f25818c2cba0",
+        "hash": "854183538",
+        "path": "outstatic/content/exams/c9a-2019.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "C7A-2023",
+      "code": "C9A-2019",
       "collection": "exams",
       "coverImage": "",
       "description": "",
-      "expectedAt": "20230404",
-      "grade": "6",
+      "expectedAt": "20190402",
+      "grade": "4",
       "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c7a-2023",
-      "status": "published",
+      "slug": "c9a-2019",
+      "status": "draft",
       "subject": "cz",
-      "title": "Čeština (7. ročník) - 1. řádný termín 2023",
-      "year": "2023"
+      "title": "Čeština (9. ročník) - 1. řádný termín 2019",
+      "year": "2019"
     },
     {
       "__outstatic": {
@@ -395,26 +441,26 @@
     },
     {
       "__outstatic": {
-        "commit": "8539f049ce35de3a7eb9bbbdc5f5f25818c2cba0",
-        "hash": "854183538",
-        "path": "outstatic/content/exams/c9a-2019.md"
+        "commit": "8bbc062a877223e9a6cebcb14ec4aa66507f927e",
+        "hash": "1559694841",
+        "path": "outstatic/content/exams/c7d-2023.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "C9A-2019",
+      "code": "C7D-2023",
       "collection": "exams",
       "coverImage": "",
       "description": "",
-      "expectedAt": "20190402",
-      "grade": "4",
+      "expectedAt": "20230407",
+      "grade": "6",
       "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c9a-2019",
+      "slug": "c7d-2023",
       "status": "draft",
       "subject": "cz",
-      "title": "Čeština (9. ročník) - 1. řádný termín 2019",
-      "year": "2019"
+      "title": "Čeština (7. ročník) - 2. náhradní termín 2023",
+      "year": "2023"
     },
     {
       "__outstatic": {
@@ -441,29 +487,6 @@
     },
     {
       "__outstatic": {
-        "commit": "8bbc062a877223e9a6cebcb14ec4aa66507f927e",
-        "hash": "1559694841",
-        "path": "outstatic/content/exams/c7d-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C7D-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230407",
-      "grade": "6",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c7d-2023",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (7. ročník) - 2. náhradní termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "c2f3a5ba8db449940c6363111f6d3a1f3d45984c",
         "hash": "641556053",
         "path": "outstatic/content/exams/c7c-2023.md"
@@ -484,6 +507,29 @@
       "subject": "cz",
       "title": "Čeština (7. ročník) - 1. náhradní termín 2023",
       "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "300ddd3bf50ce8c95be82f9bc24046ab73be6382",
+        "hash": "4091780802",
+        "path": "outstatic/content/exams/c9b-2018.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C9B-2018",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20180403",
+      "grade": "4",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c9b-2018",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (9. ročník) - 2. řádný termín 2018",
+      "year": "2018"
     },
     {
       "__outstatic": {
@@ -530,29 +576,6 @@
       "subject": "cz",
       "title": "Čeština (9. ročník) - 1. řádný termín 2022",
       "year": "2022"
-    },
-    {
-      "__outstatic": {
-        "commit": "300ddd3bf50ce8c95be82f9bc24046ab73be6382",
-        "hash": "4091780802",
-        "path": "outstatic/content/exams/c9b-2018.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C9B-2018",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20180403",
-      "grade": "4",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c9b-2018",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (9. ročník) - 2. řádný termín 2018",
-      "year": "2018"
     },
     {
       "__outstatic": {
@@ -622,6 +645,29 @@
       "subject": "cz",
       "title": "Čeština (9. ročník) - 1. náhradní termín 2021",
       "year": "2021"
+    },
+    {
+      "__outstatic": {
+        "commit": "b1fe78e5bc4171f1e49a47f8c8052b014ff4a30e",
+        "hash": "3121374295",
+        "path": "outstatic/content/exams/c9b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C9B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230403",
+      "grade": "4",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c9b-2023",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (9. ročník) - 2. řádný termín 2023",
+      "year": "2023"
     },
     {
       "__outstatic": {
@@ -740,29 +786,6 @@
     },
     {
       "__outstatic": {
-        "commit": "d744a97cbafef7a4aac59157c4cfed1c60c29357",
-        "hash": "3448262821",
-        "path": "outstatic/content/exams/c9c-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C9C-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230404",
-      "grade": "4",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c9c-2023",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (9. ročník) - 1. náhradní termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "4ca6859c92aa2be0266fefa49ee2ae8764f1c288",
         "hash": "2761781126",
         "path": "outstatic/content/exams/c9d-2021.md"
@@ -783,6 +806,29 @@
       "subject": "cz",
       "title": "Čeština (9. ročník) - 2. náhradní termín 2021",
       "year": "2021"
+    },
+    {
+      "__outstatic": {
+        "commit": "d744a97cbafef7a4aac59157c4cfed1c60c29357",
+        "hash": "3448262821",
+        "path": "outstatic/content/exams/c9c-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C9C-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230404",
+      "grade": "4",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c9c-2023",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (9. ročník) - 1. náhradní termín 2023",
+      "year": "2023"
     },
     {
       "__outstatic": {
@@ -832,29 +878,6 @@
     },
     {
       "__outstatic": {
-        "commit": "aa67186b6b974fa32f2eab1671733e4a77ae5f6d",
-        "hash": "1830698730",
-        "path": "outstatic/content/exams/c9i-2020.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C9I-2020",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20200401",
-      "grade": "4",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c9i-2020",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (9. ročník) - ilustrační test 2020",
-      "year": "2020"
-    },
-    {
-      "__outstatic": {
         "commit": "47a5d63a85c578900573f9c1f85b782244cd29c2",
         "hash": "69845888",
         "path": "outstatic/content/exams/cma-2023.md"
@@ -901,6 +924,29 @@
     },
     {
       "__outstatic": {
+        "commit": "aa67186b6b974fa32f2eab1671733e4a77ae5f6d",
+        "hash": "1830698730",
+        "path": "outstatic/content/exams/c9i-2020.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C9I-2020",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20200401",
+      "grade": "4",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "c9i-2020",
+      "status": "draft",
+      "subject": "cz",
+      "title": "Čeština (9. ročník) - ilustrační test 2020",
+      "year": "2020"
+    },
+    {
+      "__outstatic": {
         "commit": "4f7c3d2d5b537024c0fbb0f504e531d44a663782",
         "hash": "4021049635",
         "path": "outstatic/content/exams/c9i-2019.md"
@@ -921,29 +967,6 @@
       "subject": "cz",
       "title": "Čeština (9. ročník) - ilustrační test 2019",
       "year": "2019"
-    },
-    {
-      "__outstatic": {
-        "commit": "145ea994ca63657e2f49b706faf64c27ab73bcaa",
-        "hash": "1836075292",
-        "path": "outstatic/content/exams/dea-2022.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "DEA-2022",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20220501",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "dea-2022",
-      "status": "draft",
-      "subject": "de",
-      "title": "Němčina (maturita) - jaro 2022",
-      "year": "2022"
     },
     {
       "__outstatic": {
@@ -993,29 +1016,6 @@
     },
     {
       "__outstatic": {
-        "commit": "de5c09904df2711a76b80f52a19a679c920b993a",
-        "hash": "1687973558",
-        "path": "outstatic/content/exams/dea-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "DEA-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230501",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "dea-2023",
-      "status": "published",
-      "subject": "de",
-      "title": "Němčina (maturita) - jaro 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "94eb491adf51c897c13f9dca185ce6f8fbac475d",
         "hash": "2133933430",
         "path": "outstatic/content/exams/deb-2022.md"
@@ -1039,49 +1039,49 @@
     },
     {
       "__outstatic": {
-        "commit": "7c4719ecc36e31a30fd47130cc75bbfbccf9df21",
-        "hash": "1372637481",
-        "path": "outstatic/content/exams/m5a-2023.md"
+        "commit": "de5c09904df2711a76b80f52a19a679c920b993a",
+        "hash": "1687973558",
+        "path": "outstatic/content/exams/dea-2023.md"
       },
       "author": {
         "name": "Roman Samec",
         "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
       },
-      "code": "M5A-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230404",
-      "grade": "8",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "m5a-2023",
-      "status": "published",
-      "subject": "math",
-      "title": "Matika (5. ročník) - 1. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "2a4f533634f1a4394af2ad8e6a70f7260f3e8819",
-        "hash": "3151033715",
-        "path": "outstatic/content/exams/fra-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "FRA-2023",
+      "code": "DEA-2023",
       "collection": "exams",
       "coverImage": "",
       "description": "",
       "expectedAt": "20230501",
       "grade": "diploma",
       "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "fra-2023",
-      "status": "draft",
-      "subject": "fr",
-      "title": "Francouzština (maturita) - jaro 2023",
+      "slug": "dea-2023",
+      "status": "published",
+      "subject": "de",
+      "title": "Němčina (maturita) - jaro 2023",
       "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "145ea994ca63657e2f49b706faf64c27ab73bcaa",
+        "hash": "1836075292",
+        "path": "outstatic/content/exams/dea-2022.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "DEA-2022",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20220501",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "dea-2022",
+      "status": "draft",
+      "subject": "de",
+      "title": "Němčina (maturita) - jaro 2022",
+      "year": "2022"
     },
     {
       "__outstatic": {
@@ -1104,6 +1104,29 @@
       "status": "draft",
       "subject": "math",
       "title": "Matika (5. ročník) - 2. řádný termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "7c4719ecc36e31a30fd47130cc75bbfbccf9df21",
+        "hash": "1372637481",
+        "path": "outstatic/content/exams/m5a-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M5A-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230404",
+      "grade": "8",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "m5a-2023",
+      "status": "published",
+      "subject": "math",
+      "title": "Matika (5. ročník) - 1. řádný termín 2023",
       "year": "2023"
     },
     {
@@ -1154,6 +1177,29 @@
     },
     {
       "__outstatic": {
+        "commit": "2a4f533634f1a4394af2ad8e6a70f7260f3e8819",
+        "hash": "3151033715",
+        "path": "outstatic/content/exams/fra-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "FRA-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230501",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "fra-2023",
+      "status": "draft",
+      "subject": "fr",
+      "title": "Francouzština (maturita) - jaro 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
         "commit": "0e36e573928d1b695d19949cdd74a730912d212e",
         "hash": "1387832718",
         "path": "outstatic/content/exams/m7c-2023.md"
@@ -1173,29 +1219,6 @@
       "status": "draft",
       "subject": "math",
       "title": "Matika (7. ročník) - 1. náhradní termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "7368f9559720102a554ea4b310017523c46be127",
-        "hash": "1354535938",
-        "path": "outstatic/content/exams/m5d-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "M5D-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230407",
-      "grade": "8",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "m5d-2023",
-      "status": "draft",
-      "subject": "math",
-      "title": "Matika (5. ročník) - 2. náhradní termín 2023",
       "year": "2023"
     },
     {
@@ -1223,29 +1246,6 @@
     },
     {
       "__outstatic": {
-        "commit": "d85c194aaa8e679b1289d376ad9434cb1994cfd3",
-        "hash": "3217526132",
-        "path": "outstatic/content/exams/m5c-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "M5C-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230406",
-      "grade": "8",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "m5c-2023",
-      "status": "draft",
-      "subject": "math",
-      "title": "Matika (5. ročník) - 1. náhradní termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "b4b091b62f653fa73d6896323c2740fa7cb18e5f",
         "hash": "1903255955",
         "path": "outstatic/content/exams/m7a-2023.md"
@@ -1269,6 +1269,52 @@
     },
     {
       "__outstatic": {
+        "commit": "7368f9559720102a554ea4b310017523c46be127",
+        "hash": "1354535938",
+        "path": "outstatic/content/exams/m5d-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M5D-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230407",
+      "grade": "8",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "m5d-2023",
+      "status": "draft",
+      "subject": "math",
+      "title": "Matika (5. ročník) - 2. náhradní termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "d85c194aaa8e679b1289d376ad9434cb1994cfd3",
+        "hash": "3217526132",
+        "path": "outstatic/content/exams/m5c-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M5C-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230406",
+      "grade": "8",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "m5c-2023",
+      "status": "draft",
+      "subject": "math",
+      "title": "Matika (5. ročník) - 1. náhradní termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
         "commit": "69b7b4b94e8ffa27336ca43912cab0e36cc5bd9d",
         "hash": "2169519574",
         "path": "outstatic/content/exams/m9d-2023.md"
@@ -1288,6 +1334,29 @@
       "status": "draft",
       "subject": "math",
       "title": "Matika (9. ročník) - 2. náhradní termín 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "bcb5a576515bcaaaa9408093b4fd2a067fd5f82b",
+        "hash": "3599939480",
+        "path": "outstatic/content/exams/m9c-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "M9C-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230404",
+      "grade": "4",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "m9c-2023",
+      "status": "draft",
+      "subject": "math",
+      "title": "Matika (9. ročník) - 1. náhradní termín 2023",
       "year": "2023"
     },
     {
@@ -1338,29 +1407,6 @@
     },
     {
       "__outstatic": {
-        "commit": "bcb5a576515bcaaaa9408093b4fd2a067fd5f82b",
-        "hash": "3599939480",
-        "path": "outstatic/content/exams/m9c-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "M9C-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230404",
-      "grade": "4",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "m9c-2023",
-      "status": "draft",
-      "subject": "math",
-      "title": "Matika (9. ročník) - 1. náhradní termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "c40183d44eaa7fe7999c36252dd5fd1f1d0c86c6",
         "hash": "1314762248",
         "path": "outstatic/content/exams/m7d-2023.md"
@@ -1384,6 +1430,24 @@
     },
     {
       "__outstatic": {
+        "commit": "8c7041534b73e0d4671137a4d7360121f18d559a",
+        "hash": "415493133",
+        "path": "outstatic/content/pages/home.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-30T12:23:18.534Z",
+      "slug": "home",
+      "status": "published",
+      "title": "Home"
+    },
+    {
+      "__outstatic": {
         "commit": "d80b8cc29cc1c11730cf3b3617fc9f4477c16c0d",
         "hash": "26127354",
         "path": "outstatic/content/exams/mxb-2023.md"
@@ -1403,6 +1467,29 @@
       "status": "draft",
       "subject": "math",
       "title": "Matika (maturita) - podzim 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "719e62425d5293c3fbbe349364818e26ee0a4783",
+        "hash": "2461025973",
+        "path": "outstatic/content/exams/mxa-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "MXA-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230501",
+      "grade": "diploma",
+      "publishedAt": "2024-02-19T20:11:55.734Z",
+      "slug": "mxa-2023",
+      "status": "draft",
+      "subject": "math",
+      "title": "Matika (maturita) - jaro 2023",
       "year": "2023"
     },
     {
@@ -1430,47 +1517,6 @@
     },
     {
       "__outstatic": {
-        "commit": "8c7041534b73e0d4671137a4d7360121f18d559a",
-        "hash": "415493133",
-        "path": "outstatic/content/pages/home.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-30T12:23:18.534Z",
-      "slug": "home",
-      "status": "published",
-      "title": "Home"
-    },
-    {
-      "__outstatic": {
-        "commit": "719e62425d5293c3fbbe349364818e26ee0a4783",
-        "hash": "2461025973",
-        "path": "outstatic/content/exams/mxa-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "MXA-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230501",
-      "grade": "diploma",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "mxa-2023",
-      "status": "draft",
-      "subject": "math",
-      "title": "Matika (maturita) - jaro 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
         "commit": "6a06fd5d3df0cd8dc43fb672d37ed51dcd6b2879",
         "hash": "1528153698",
         "path": "outstatic/content/exams/mma-2023.md"
@@ -1490,52 +1536,6 @@
       "status": "published",
       "subject": "math",
       "title": "Matika (maturita) - jaro 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "36314d6d1e459d61069b8384d1f42b3180b76b53",
-        "hash": "2693266090",
-        "path": "outstatic/content/exams/c9b-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C9B-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230403",
-      "grade": "4",
-      "publishedAt": "2024-03-31T19:11:55.000Z",
-      "slug": "c9b-2023",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština (9. ročník) - 2. řádný termín 2023",
-      "year": "2023"
-    },
-    {
-      "__outstatic": {
-        "commit": "509e798464667d282fee68a63725fdefc60f2b6c",
-        "hash": "1188993075",
-        "path": "outstatic/content/exams/c5b-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C5B-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230405",
-      "grade": "8",
-      "publishedAt": "2024-03-31T19:11:55.000Z",
-      "slug": "c5b-2023",
-      "status": "published",
-      "subject": "cz",
-      "title": "Čeština (5. ročník) - 2. řádný termín 2023",
       "year": "2023"
     }
   ]
