@@ -139,8 +139,8 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 8–12
 > chráněné živočichy, a to jak v České republice, tak ve většině dalších evropských států.
 > 
 > (*Epocha 14/2022; www.stoplusjednicka.cz, upraveno*)
-> 
-> **TEXT 2**
+
+**TEXT 2**
 > **Slovo typu A** vzniká spojením dvou __celých__ slov, a proto ho **lze** rozložit na smysluplné 
 > slovní spojení. Např. slovo *vlastizrada* lze rozdělit na slovní spojení *zrada vlasti*.
 > 
@@ -228,8 +228,7 @@ zachován.
 VÝCHOZÍ TEXTY K ÚLOZE 16
 ====
 
-> **TEXT 1**
->
+**TEXT 1**
 > Využitím sluneční energie ušetříme.\
 > Zlomeninu jednoznačně potvrdil rentgen.\
 > Nasedla do přistaveného taxi. \
@@ -240,9 +239,8 @@ VÝCHOZÍ TEXTY K ÚLOZE 16
 > K obědu máme filé s bramborem. \
 > Vybral si z menu nejdražší jídlo. \
 > Na ples se oblékla do róby z hedvábí.
->
-> **TEXT 2**
->
+
+**TEXT 2**
 > Nesklonná podstatná jména mají ve všech pádech obou čísel stejný tvar. Většinou jde 
 > o přejatá slova zakončená na samohlásku, např. *iglú* (*iglú bylo malé,* *psi ho vezli k jeho iglú,*
 > *postavil si iglú, v iglú bylo teplo* aj.).

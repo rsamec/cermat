@@ -1,8 +1,7 @@
 VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
 ====
 
-TEXT 1
-
+**TEXT 1**
 > Jel stařec na oslu a blízko cesty hned \
 > zřel svěží louku, samý květ.\
 > Své zvíře pouští tam a šedivec náš hravý\
@@ -23,8 +22,7 @@ TEXT 1
 > \
 >(*J. de La Fontaine, Stařec a osel, upraveno*)
 
-TEXT 2
-
+**TEXT 2**
 > **Knižní slova** (např. *sivý*) se uplatňují zejména v uměleckých textech, v běžně mluvené 
 > řeči se téměř nepoužívají. Synonymem knižního slova *sivý* je běžně užívané slovo *šedivý*.
 

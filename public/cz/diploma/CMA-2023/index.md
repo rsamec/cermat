@@ -403,8 +403,8 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 25–28
 > Nic nelze poznat bez bolesti!\
 > Za to jsem vděčný, básníku.\
 > (*báseň M. Horáčka*)\
-**TEXT 2**
 
+**TEXT 2**
 > **Přesah** je projev nesouladu mezi větnou a veršovou výstavbou. Jde o přesahování věty z jednoho verše do dalšího verše, např.:
 >
 > *Svraštělé tváře dotknout se*\

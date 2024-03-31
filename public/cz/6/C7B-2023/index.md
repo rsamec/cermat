@@ -83,7 +83,7 @@ Veřejně nepřístupná informace podle § 60b odst. 3 a § 80b školského zá
 VÝCHOZÍ TEXTY K ÚLOHÁM 8–12
 ===
 
-TEXT 1
+**TEXT 1**
 (1) Otcem měkkých kontaktních čoček je světově proslulý chemik Otto Wichterle. 
 Český vědec ovšem nebyl první, kdo zkusil vady zraku korigovat jinak než brýlemi.
 O totéž se snažil už v 19. století Adolf Fick. Jeho skleněné čočky ovšem nebyly příliš 
@@ -113,7 +113,7 @@ V současnosti je
 Wichterleho vynález nedílnou součástí našich životů.
 Vysvětlivka: oftalmologický – týkající se očního lékařství
 (www.cocky-online.cz; www.vesmir.cz, upraveno)
-TEXT 2
+**TEXT 2**
 Souvětí typu A je jednoznačné, zájmeno který totiž odkazuje jen k jednomu 
 podstatnému jménu v souvětí, např. Připravil pomazánku z celeru, která nám chutná nebo 
 Dan s Karlem vymysleli návod na přípravu nové masti, který ukryli na tajné místo.
@@ -211,12 +211,12 @@ Veřejně nepřístupná informace podle § 60b odst. 3 a § 80b školského zá
 VÝCHOZÍ TEXTY K ÚLOZE 16
 ===
 
-TEXT 1
+**TEXT 1**
 1. vařit oběd5. napsat článek 9. jezdit autem
 2. vykonávat práci6. počítat příklad10. slíbit odměnu
 3. chytat míč7. vést boj11. hrát divadlo
 4. utřít pot8. slavit narozeniny12. vyřídit pozdrav
-TEXT 2
+**TEXT 2**
 Slovní spojení typu A lze nahradit jedním spisovným slovem s podobným významem. 
 Takové slovo má stejný kořen jako druhá složka původního slovního spojení 
 (např. provádět sběr → sbírat).
