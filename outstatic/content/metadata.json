@@ -1,6 +1,6 @@
 {
-  "commit": "13c23f6ee7fb123a1dc24858f2300edcf4e28e20",
-  "generated": "Sun, 31 Mar 2024 07:52:49 GMT",
+  "commit": "36314d6d1e459d61069b8384d1f42b3180b76b53",
+  "generated": "2024-03-31T07:59:14.506Z",
   "metadata": [
     {
       "__outstatic": {
@@ -668,29 +668,6 @@
       "subject": "cz",
       "title": "Čeština (9. ročník) - 2. řádný termín 2022",
       "year": "2022"
-    },
-    {
-      "__outstatic": {
-        "commit": "b1fe78e5bc4171f1e49a47f8c8052b014ff4a30e",
-        "hash": "3121374295",
-        "path": "outstatic/content/exams/c9b-2023.md"
-      },
-      "author": {
-        "name": "Roman Samec",
-        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
-      },
-      "code": "C9B-2023",
-      "collection": "exams",
-      "coverImage": "",
-      "description": "",
-      "expectedAt": "20230403",
-      "grade": "4",
-      "publishedAt": "2024-02-19T20:11:55.734Z",
-      "slug": "c9b-2023",
-      "status": "draft",
-      "subject": "cz",
-      "title": "Čeština (9. ročník) - 2. řádný termín 2023",
-      "year": "2023"
     },
     {
       "__outstatic": {
@@ -1536,6 +1513,29 @@
       "status": "published",
       "subject": "math",
       "title": "Matika (maturita) - jaro 2023",
+      "year": "2023"
+    },
+    {
+      "__outstatic": {
+        "commit": "36314d6d1e459d61069b8384d1f42b3180b76b53",
+        "hash": "2693266090",
+        "path": "outstatic/content/exams/c9b-2023.md"
+      },
+      "author": {
+        "name": "Roman Samec",
+        "picture": "https://avatars.githubusercontent.com/u/5671166?v=4"
+      },
+      "code": "C9B-2023",
+      "collection": "exams",
+      "coverImage": "",
+      "description": "",
+      "expectedAt": "20230403",
+      "grade": "4",
+      "publishedAt": "2024-03-31T19:11:55.000Z",
+      "slug": "c9b-2023",
+      "status": "published",
+      "subject": "cz",
+      "title": "Čeština (9. ročník) - 2. řádný termín 2023",
       "year": "2023"
     }
   ]
