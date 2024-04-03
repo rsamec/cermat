@@ -51,7 +51,6 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6
 > ![alt text](image.png)  
 > (*CZVV*) 
 
-SS
 # 6 Určete souřadnici *k*.  
 Uveďte všechna řešení. 
  
@@ -59,6 +58,7 @@ Uveďte všechna řešení.
 $$
 { \log_2(8^{-x})}
 $$
+
 **Určete všechna $ x \in R $, pro která je hodnota daného výrazu rovna osmi.** 
 
 **V záznamovém archu** uveďte celý **postup řešení**.

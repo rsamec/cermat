@@ -19,6 +19,13 @@ test('boolean to string', () => {
 
 test('extract number range identifier', () => {
   expect(extractNumberRange(
+    `Some text 8
+  ===`
+  )).toEqual([8, 8])
+
+})
+test('extract number range identifier', () => {
+  expect(extractNumberRange(
     `Some text 8-12
   ===`
   )).toEqual([8, 12])
@@ -29,6 +36,14 @@ test('extract number range identifier', () => {
     `Some text 8–12
   ===`
   )).toEqual([8, 12])
+
+})
+
+test('extract number range identifier', () => {
+  expect(extractNumberRange(
+    `POSLECH - 2. ČÁST ÚLOHY 5-12
+  ===`
+  )).toEqual([5, 12])
 
 })
 

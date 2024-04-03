@@ -84,7 +84,7 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, answers, submitQui
           <div className="flex flex-wrap gap-10" key={`${id}`}>
             <div className="flex gap-5 grow">
               <span className="min-w-8" >{id}</span>
-              {renderControl(control!, node.inputBy, { options: options.map(d => ({ value: d.value, name: '' })) })}
+              {renderControl(control!, node.inputBy, { options: options?.map(d => ({ value: d.value, name: '' })) })}
               <div className="flex items-center gap-4">
                 {verified && correction === true && <FontAwesomeIcon icon={faThumbsUp} size="xl" className="text-green-600"></FontAwesomeIcon>}
                 {verified && correction === false && <FontAwesomeIcon icon={faThumbsDown} size="xl" className="text-red-600"></FontAwesomeIcon>}

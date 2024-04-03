@@ -48,7 +48,8 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.0.0",
     "remark-supersub": "^1.0.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "squid": "^0.5.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",

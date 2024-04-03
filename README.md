@@ -2,25 +2,41 @@
 
 [Demo](https://rsamec.github.io/cermat)
 
-This repository shows examples like pages and applications how to use cermat offical tests and exams. 
-
-- examples of the reusable test specification - quiz specification and its usage for [cermat test](#cermat-quiz)
-  - e.g. - [czech](public/cz/8/C5A-2023/index.md)
-  - e.g. - [math](public/math/4/M9A-2023/index.md)
-- examples of print media
-  - e.g. - [czech](https://rsamec.github.io/cermat/paper/cestina-5-2023-1)
-  - e.g. - [math](https://rsamec.github.io/cermat/paper/matematika-9-2023-1)
-- examples of test application
-  - e.g. - [czech](https://rsamec.github.io/cermat/wizard/cestina-5-2023-1)
-  - e.g. - [math](https://rsamec.github.io/cermat/wizard/matematika-9-2023-1)
-
 There are 2 main bottlenecks to use cermat offical tests.
 
-- the content is not open and any public usage is strictly limited to writen approval by the director of the CERMAT
+- the content is not open and any public usage is strictly limited to the writen approval by the director of the CERMAT
   - the approval is limited to the usage for only non-comercial purposes  
   - the approval is time limited only for 10 month
   - getting the approval may take one month
 - the content format available is typically the pdf document - this is not much appropriate for use by a program or an application
+
+This repository shows
+- example how to store cermat's materials to be reusable
+- example applications and usage of cermat's materials
+
+See more examples
+
+- reusable test specification - [see quiz specification](#cermat-quiz)
+  - [czech](public/cz/8/C5A-2023/index.md)
+  - [math](public/math/4/M9A-2023/index.md)
+  - [english](public/en/diploma/AJA-2023/index.md)
+  - [german](public/de/diploma/DEA-2023/index.md)
+- test application - PWA with offline support
+  - [czech](https://rsamec.github.io/cermat/wizard/c5a-2023)
+  - [math](https://rsamec.github.io/cermat/wizard/m9a-2023)
+  - [english](https://rsamec.github.io/cermat/wizard/aja-2023)
+  - [german](https://rsamec.github.io/cermat/wizard/dea-2023)
+- game application - kahoot alternative - multiplayer
+  - [demo](https://kahoot-alternative-xi.vercel.app)
+  - [source](https://github.com/rsamec/kahoot-alternative)
+- examples of print media
+  - [czech](https://rsamec.github.io/cermat/paper/c5a-2023)
+  - [math](https://rsamec.github.io/cermat/paper/m9a-2023)
+  - [english](https://rsamec.github.io/cermat/paper/aja-2023)
+  - [german](https://rsamec.github.io/cermat/paper/dea-2023)
+- examples of answers from ChatGTP
+  - [math](https://rsamec.github.io/cermat/prospect/m7a-2023)
+
 
 ## License
 
@@ -28,10 +44,6 @@ The files that are created based on CERMAT materials (mainly the content of the 
 
 Everything else is open sourced and has [MIT license](LICENSE.md)
 
-
-  
-
-Reusable test specification is later called as **Quiz**.
 
 ## Quiz specification
 
@@ -196,14 +208,20 @@ Example of the cermat json meta data builder utility class.
     }),
   })
 ```
-## Cermat print media example
-
-TODO: add description
-
 
 ## Cermat test application example
 
 TODO: add description
+
+
+## Cermat game - kahoot alternative example
+
+TODO: add description
+
+## Cermat print media example
+
+TODO: add description
+
 
 
 ## Getting Started

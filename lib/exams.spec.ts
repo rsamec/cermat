@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
-import { Answer, AnswerGroup, AnswerGroupImpl, AnswerTreeNode, calculateMaxTotalPoints, convertTree } from "./utils/quiz-specification";
+import { AnswerTreeNode, calculateMaxTotalPoints, convertTree, } from "./utils/quiz-specification";
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown';
-import { Maybe, matchNumberListCount } from "./utils/utils";
+import { Maybe, matchNumberListCount, Option } from "./utils/utils";
 import { TreeNode, createTree, getAllLeafsWithAncestors } from "./utils/tree.utils";
 import { loadMarkdown } from "./utils/file.utils";
 import { Abbreviations, OptionList, ParsedQuestion, ShortCodeMarker, chunkHeadingsList } from "./utils/parser.utils";

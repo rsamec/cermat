@@ -16,9 +16,11 @@ import { imageUrl } from './utils';
 
 //const imgDirInsidePublic = 'images';
 function concatPaths(...segments: string[]): string {
-  let resultPath = '';
+  let resultPath = segments[0] ?? '';
 
-  for (const segment of segments) {
+  for (let i=1;i!=segments.length;i++) {  
+    const segment = segments[i];
+
     if (segment.startsWith('./')) {
       // Handle relative path "./"
       resultPath = `${resultPath}/${segment.slice(2)}`;
@@ -26,9 +28,8 @@ function concatPaths(...segments: string[]): string {
       resultPath = `${resultPath}/${segment}`;
     }
   }
-
   // Ensure the result path has the correct format
-  return resultPath.startsWith('/') ? resultPath : `/${resultPath}`;
+  return resultPath.startsWith('/') || resultPath.startsWith("http") ? resultPath : `/${resultPath}`;
 }
 
 function transformImgSrc() {

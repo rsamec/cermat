@@ -27,9 +27,8 @@ const config: Config = {
   plugins: [
     plugin(function ({ addBase, theme }: { addBase: (o: object) => void, theme: (classNames: string) => string }) {
       const darkBlockquote = {
-        borderColor: 'white',
-      }
-      
+        //borderColor: 'white',
+      }      
       // const darkDetailsSummary = {
       //   backgroundColor: theme("colors.gray.600")
       // }
@@ -65,9 +64,18 @@ const config: Config = {
         '@media (prefers-color-scheme: dark)': {
           'blockquote': darkBlockquote
         },
-        '@media print': {
+        '.prospect blockquote': {
+          padding: '12px',
+          margin:'5px 0px',
+          borderLeftWidth: '4px',
+          borderStyle: 'solid',
+          borderColor: '#cbd5e1',
+          backgroundColor: '#f9fafb',                    
+        },      
+        '.dark .prospect blockquote': {
+          borderColor: '#6b7280',
+          backgroundColor: '#1f2937',
         }
-        // 'ol': { listStyleType: 'upper-alpha', listStylePosition: 'inside' },
       })
     }),
     require('tailwindcss-unimportant'),

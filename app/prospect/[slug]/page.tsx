@@ -59,7 +59,7 @@ export default async function Prospect(params: Params) {
   return (
     <Layout headerNavigation={<Navigation name={project.title} />}>
 
-      <article>
+      <article className='prospect' >
         {/* <div className="relative mb-2 w-full aspect-[4/3]">
             <Image
               alt={project.title}
@@ -91,8 +91,7 @@ export default async function Prospect(params: Params) {
           <div className="card">
             <div className="flex flex-col justify-between leading-normal">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Kompaktní zadání</h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Zobraz si kompaktní zadání a pracuj s tužkou a papírem.<br/>
-                Výsledky zapiš do formuláře s možností vyhodnocení testu.</p>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Zobraz si kompaktní zadání a pracuj s tužkou a papírem.</p>
               <div className='flex flex-wrap gap-3'>
                 <Link href={`/paper/${project.slug}`}>
                   <button className='btn btn-blue flex items-center'>Zobrazit
@@ -101,6 +100,32 @@ export default async function Prospect(params: Params) {
                     </svg>
                   </button>
                 </Link>
+
+              </div>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="flex flex-col justify-between leading-normal">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Krok po kroku</h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Trénuj pomocí průvodce, který tě provede vyplňením testu po jednotlivých otázkách.</p>
+              <Link href={`/wizard/${project.slug}`}><button className='btn btn-blue flex items-center'>Start
+                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+
+              </button></Link>
+
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="flex flex-col justify-between leading-normal">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Záznamový arch</h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Výsledky zapiš do formuláře s možností vyhodnocení testu.</p>
+              <div className='flex flex-wrap gap-3'>
+
                 <Link href={`/sheet/${project.slug}`}>
                   <button className='btn btn-blue flex items-center'>Formulář
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -112,16 +137,7 @@ export default async function Prospect(params: Params) {
             </div>
           </div>
 
-          <div className="card">
-            <div className="flex flex-col justify-between leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Krok po kroku</h5>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Trénuj pomocí průvodce, který tě provede vyplňením testu po jednotlivých otázkách.</p>
-              <Link href={`/wizard/${project.slug}`}><button className='btn btn-blue'>Start</button></Link>
-
-            </div>
-          </div>
-
-          <div className="card">
+          {/* <div className="card">
             <div className="flex flex-col justify-between leading-normal">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Originální zadání</h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Vytiskni si plné verze zadání.</p>
@@ -138,7 +154,7 @@ export default async function Prospect(params: Params) {
               </ul>
 
             </div>
-          </div>
+          </div> */}
         </div>
 
         <hr className="border-neutral-200 mt-10 mb-10" />
@@ -180,8 +196,8 @@ async function getData({ params }: Params) {
   }
 }
 
-export async function generateStaticParams() {  
-  return getDocuments(collection, ['slug'])  
+export async function generateStaticParams() {
+  return getDocuments(collection, ['slug'])
   // const posts = getDocumentSlugs(collection)
   // return posts.map((slug) => ({ slug }))
 }

@@ -35,8 +35,9 @@ export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleS
   return steps.slice(start, end + 1);
 };
 
-export function extractNumberRange(text: string): [number, number] | null {
-  const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?/);
+export function extractNumberRange(text: string): [number, number] | null {  
+  text = text.split("\n")[0].trim();  
+  const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?$/);
   if (match) {
     const prefix = match[1];
     const start = parseInt(match[2], 10);
