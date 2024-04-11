@@ -38,7 +38,7 @@ const mapState = (state: RootState) => ({
 type StateProps = ReturnType<typeof mapState>;
 type DispatchProps = ReturnType<typeof mapDispatch>;
 
-const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex, currentStepIndex, currentStep, next, back, resetAnswers, questions, totalAnswers, totalPoints, maxTotalPoints }) => {
+const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex, currentStepIndex,assetPath, currentStep, next, back, resetAnswers, questions, totalAnswers, totalPoints, maxTotalPoints }) => {
   const handlers = useSwipeable({
     onSwipedLeft: () => next(),
     onSwipedRight: () => back(),
@@ -61,7 +61,7 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
     stepData.header?.rawContent,
     stepData.rawContent,
     stepData.options?.length != null ? stepData.options?.map(opt => `- ${opt.value}) ${opt.name}`).join('\n') : ''
-  ].filter(d => !isEmptyOrWhiteSpace(d)).join('\n') : undefined
+  ].filter(d => !isEmptyOrWhiteSpace(d)).join('\n').replaceAll("(./",`(https://www.eforms.cz/${assetPath?.join('/')}/`) : undefined
 
   return <div  {...handlers} className="min-h-screen">
     <div className="flex flex-col gap-4">
