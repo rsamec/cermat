@@ -79,23 +79,25 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
           <TextBadge text="Body" type="Gray">{`${totalPoints} / ${maxTotalPoints}`}</TextBadge>
         </div>
 
-        <div className="flex self-end gap-3">
-          <button className="btn btn-red"
-            onClick={() => resetAnswers()}><FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
-          </button>
-
-          {rawContent && <Link href={`https://chat.openai.com/?q=${encodeURIComponent(rawContent)}`} target="_blank">
-            <button className="btn btn-green">
-            <Image alt="Zkus ChatGTP" src={chatGTPImage} width={32} height={32} title="Zkus ChatGTP"></Image>
+        <div className="flex justify-end flex-wrap gap-5">
+          <div className="flex gap-3">
+            <button className="btn btn-red"
+              onClick={() => resetAnswers()}><FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
             </button>
-          </Link>
-          }
 
-          <button className="btn btn-blue"
-            onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} size="2xl" /></button>
-          <button className="btn btn-blue"
-            onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} size="2xl" /></button>
-
+            {rawContent && <Link href={`https://chat.openai.com/?q=${encodeURIComponent(rawContent)}`} target="_blank">
+              <button className="btn btn-green">
+                <Image alt="Zkus ChatGTP" src={chatGTPImage} width={32} height={32} title="Zkus ChatGTP"></Image>
+              </button>
+            </Link>
+            }
+          </div>
+          <div className="flex gap-3">
+            <button className="btn btn-blue"
+              onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} size="2xl" /></button>
+            <button className="btn btn-blue"
+              onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} size="2xl" /></button>
+          </div>
 
         </div>
       </div>

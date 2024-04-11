@@ -16,12 +16,7 @@ This repository shows
 
 See more examples
 
-- reusable test specification - [see quiz specification](#cermat-quiz)
-  - [czech](public/cz/8/C5A-2023/index.md)
-  - [math](public/math/4/M9A-2023/index.md)
-  - [english](public/en/diploma/AJA-2023/index.md)
-  - [german](public/de/diploma/DEA-2023/index.md)
-- test application - PWA with offline support
+- test application - PWA with offline support with ChatGTP button
   - [czech](https://rsamec.github.io/cermat/wizard/c5a-2023)
   - [math](https://rsamec.github.io/cermat/wizard/m9a-2023)
   - [english](https://rsamec.github.io/cermat/wizard/aja-2023)
@@ -34,8 +29,13 @@ See more examples
   - [math](https://rsamec.github.io/cermat/paper/m9a-2023)
   - [english](https://rsamec.github.io/cermat/paper/aja-2023)
   - [german](https://rsamec.github.io/cermat/paper/dea-2023)
-- examples of answers from ChatGTP
-  - [math](https://rsamec.github.io/cermat/prospect/m7a-2023)
+- reusable test specification - [see quiz specification](#cermat-quiz)
+  - [czech](public/cz/8/C5A-2023/index.md)
+  - [math](public/math/4/M9A-2023/index.md)
+  - [english](public/en/diploma/AJA-2023/index.md)
+  - [german](public/de/diploma/DEA-2023/index.md)
+
+
 
 
 ## License
