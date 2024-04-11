@@ -78,11 +78,19 @@ li > ol {
   }
 
   .btn-green {
-    @apply bg-green-500 text-white;
+    @apply bg-green-600 text-white;
   }
   .btn-green:hover {
     @apply bg-green-700;
   }
+
+  .btn-gray {
+    @apply bg-gray-500 text-white;
+  }
+  .btn-gray:hover {
+    @apply bg-gray-700;
+  }
+
 
   .card {
     @apply block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700;

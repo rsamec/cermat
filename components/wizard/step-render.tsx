@@ -6,11 +6,14 @@ import { connect } from "react-redux";
 import Stepper from "./stepper";
 import { useSwipeable } from "react-swipeable";
 import { useState } from "react";
-import { faTrashCan, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan, faAngleLeft, faAngleRight, faComment } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TextBadge from "../core/TextBadge";
-import { updateMap } from "@/lib/utils/utils";
+import { isEmptyOrWhiteSpace, updateMap } from "@/lib/utils/utils";
 import TransitionStep from "./transition-step";
+import Link from "next/link";
+import chatGTPImage from '../../public/chatgpt-icon.webp';
+import Image from "next/image";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   next: () => dispatch.wizard.goToNextStep(),
@@ -50,7 +53,16 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
   const toggleExpandableAnswer = (questionId: string) => {
     setQuestionMap((previous) => updateMap(previous, questionId, { expanded: previous.has(questionId) ? !previous.get(questionId).expanded : true }))
   }
+
   const step = React.cloneElement(<WizardStep step={currentStep} headerMap={headerMap} toggleExpandableHeader={toggleExpandableHeader} questionMap={questionMap} toggleExpandableAnswer={toggleExpandableAnswer} ></WizardStep>, { key: currentStep?.id });
+
+  const stepData = currentStep?.data;
+  const rawContent = stepData != null ? [
+    stepData.header?.rawContent,
+    stepData.rawContent,
+    stepData.options?.length != null ? stepData.options?.map(opt => `- ${opt.value}) ${opt.name}`).join('\n') : ''
+  ].filter(d => !isEmptyOrWhiteSpace(d)).join('\n') : undefined
+
   return <div  {...handlers} className="min-h-screen">
     <div className="flex flex-col gap-4">
       <Stepper></Stepper>
@@ -72,10 +84,19 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
             onClick={() => resetAnswers()}><FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
           </button>
 
+          {rawContent && <Link href={`https://chat.openai.com/?q=${encodeURIComponent(rawContent)}`} target="_blank">
+            <button className="btn btn-green">
+            <Image alt="Zkus ChatGTP" src={chatGTPImage} width={32} height={32} title="Zkus ChatGTP"></Image>
+            </button>
+          </Link>
+          }
+
           <button className="btn btn-blue"
             onClick={() => back()}><FontAwesomeIcon icon={faAngleLeft} size="2xl" /></button>
           <button className="btn btn-blue"
             onClick={() => next()}><FontAwesomeIcon icon={faAngleRight} size="2xl" /></button>
+
+
         </div>
       </div>
 

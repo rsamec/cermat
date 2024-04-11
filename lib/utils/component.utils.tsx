@@ -18,7 +18,7 @@ export function createOptionAnswer<T>(control: FieldControl<Option<T>>, options:
     className='flex flex-wrap justify-items-start gap-2'
     control={control}
     options={options}
-    format={(option) => option.name}
+    format={(option) => option.nameHtml ?? option.name}
     badge={(option) => option.value === true ? "A" : option.value === false ? 'N' : option.value}
     type={type}
     isSame={(selected, option) => selected != null && selected.value == option.value}

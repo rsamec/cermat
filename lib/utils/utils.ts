@@ -1,5 +1,5 @@
 export type Maybe<T> = T | undefined;
-export type Option<T> = { name: string, value: T }
+export type Option<T> = { name: string, nameHtml?:string, value: T }
 
 export function imageUrl(path: string) {
   //return path;

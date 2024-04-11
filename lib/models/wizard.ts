@@ -15,7 +15,10 @@ export interface WizardState {
 	currentStep: Question | null; // Use Question type directly
 }
 
-export type QuestionData = { content: string, options: Option<string>[], header?: { title: string, content: string, mutliColumnLayout: boolean } }
+export type QuestionData = { content: string,
+	 rawContent: string,
+	 options: Option<string>[],
+	 header?: { title: string, content: string, rawContent:string, mutliColumnLayout: boolean } }
 
 const initState: WizardState = {
 	steps: [],

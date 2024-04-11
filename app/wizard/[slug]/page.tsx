@@ -97,7 +97,7 @@ async function getData({ params }: Params) {
     ...d,
     options: d.options.length > 0 ? await Promise.all(d.options.map(async opt => ({
       ...opt,
-      name: await markdownToHtml(opt.name, { path: assetPath })
+      nameHtml: await markdownToHtml(opt.name, { path: assetPath })
     }))) : d.options,
     contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: assetPath }) : (await markdownToHtml(d.header, { path: assetPath }) + await markdownToHtml(d.content, { path: assetPath })),
   })))
@@ -123,14 +123,18 @@ async function getData({ params }: Params) {
   const quiz: AnswerGroup<any> = await loadJson([`${project.code}.json`]);
 
   const quizTree = convertTree(quiz);
+  const subject = project.subject;
   const quizQuestions = getAllLeafsWithAncestors(quizTree).map((d, i) => {
 
     const node = leafs[i];
+    
     //console.log(leafs.length,i, d.leaf.data.id)
     const rootAncestor = node.ancestors[1].data;
+    
+    const parts = d.leaf.data.id.split('.');
 
     //Heuristic - expect quiz question id as number
-    const quizQuestionNumber = Math.floor(parseFloat(d.leaf.data.id));
+    const quizQuestionNumber = Math.floor(parseFloat((subject == "math" || subject == "cz") ? parts[0]: parts[1]));
     //if there is a root parent of type SetextHeading1 - extract number range of quiz questions from header using regex search
     const range = rootAncestor.type?.name == Abbreviations.ST ? extractNumberRange(rootAncestor.header) : null;
     //include parent only if it is in range or it there is no such parent  
@@ -139,7 +143,7 @@ async function getData({ params }: Params) {
     // if (isInRange) {
     //   console.log(d.leaf.data.id, node.ancestors[1].data.header, node.ancestors[1].data.content)
     // }
-    //console.log(node.leaf.data.header, isInRange, range);
+    //console.log(node.leaf.data.header, isInRange, range, quizQuestionNumber);
     const treeLeaf = d.leaf.data as AnswerMetadataTreeNode<any>
     const headerNode = node.ancestors[1].data;
     const headerEqualCount = countMaxChars(headerNode.header, "=");
@@ -148,11 +152,14 @@ async function getData({ params }: Params) {
       id: treeLeaf.id,
       metadata: treeLeaf.node,
       data: {
+        rawContent: node.ancestors.slice(range == null ? 1 : 2).map(x => x.data.header + x.data.content).join(""),
         content: node.ancestors.slice(range == null ? 1 : 2).map(x => x.data.contentHtml).join(""),
         ...(isInRange && {
           header: {
             title: headerNode.header.replaceAll(/=+/g, ""),
+            rawTitle: headerNode.header,
             content: headerNode.contentHtml,
+            rawContent: headerNode.content,
             mutliColumnLayout: headerEqualCount > 3 ? true : false
           }
         }),
@@ -160,7 +167,7 @@ async function getData({ params }: Params) {
       }
     } as Question
   })
-
+  
   return {
     project,
     assetPath,

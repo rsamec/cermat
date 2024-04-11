@@ -58,6 +58,6 @@ export const ToggleButtonGroup = <T extends Object>({
   );
 };
 
-export type Option<T> = { name: string, value: T };
+export type Option<T> = { name: string, nameHtml?: string, value: T };
 export default withControl<Option<any>, ToggleButtonGroupProps<Option<any>>>(ToggleButtonGroup);
 

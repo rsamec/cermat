@@ -181,10 +181,10 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 12
 > (*CZVV*) 
 
 # 12 Jaký je obsah sedmiúhelníku? 
-- [A] 28 cm2 
-- [B] 31 cm2 
-- [C] 37 cm2 
-- [D] 39 cm2 
+- [A] 28 cm^2^ 
+- [B] 31 cm^2^ 
+- [C] 37 cm^2^ 
+- [D] 39 cm^2^ 
 - [E] jiný obsah 
  
 

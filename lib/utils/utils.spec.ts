@@ -24,14 +24,14 @@ test('extract number range identifier', () => {
   )).toEqual([8, 8])
 
 })
-test('extract number range identifier', () => {
+test('extract number range identifier with standard dash', () => {
   expect(extractNumberRange(
     `Some text 8-12
   ===`
   )).toEqual([8, 12])
 
 })
-test('extract number range identifier', () => {
+test('extract number range identifier with different longer dash ', () => {
   expect(extractNumberRange(
     `Some text 8–12
   ===`
@@ -39,9 +39,9 @@ test('extract number range identifier', () => {
 
 })
 
-test('extract number range identifier', () => {
+test('extract number range identifier with multiple dashes', () => {
   expect(extractNumberRange(
-    `POSLECH - 2. ČÁST ÚLOHY 5-12
+    `POSLECH - 2. ČÁST ÚLOHY 5–12 
   ===`
   )).toEqual([5, 12])
 
