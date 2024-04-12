@@ -11,6 +11,8 @@ import MMA_2023 from './exams/MMA-2023';
 import C5A_2023 from './exams/C5A-2023';
 import C5B_2023 from './exams/C5B-2023';
 import C7A_2023 from './exams/C7A-2023';
+
+import C9A_2024 from './exams/C9A-2024';
 import C9A_2023 from './exams/C9A-2023';
 import C9B_2023 from './exams/C9B-2023';
 import C9C_2023 from './exams/C9C-2023';
@@ -55,6 +57,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
 
   { pathes: cz6Years.concat("C7A-2023"), quiz: C7A_2023, config: { questions: true } },
 
+  { pathes: cz4Years.concat("C9A-2024"), quiz: C9A_2024, config: { questions: true } },
   { pathes: cz4Years.concat("C9A-2023"), quiz: C9A_2023, config: { questions: true } },
   { pathes: cz4Years.concat("C9B-2023"), quiz: C9B_2023, config: { questions: true } },
   { pathes: cz4Years.concat("C9C-2023"), quiz: C9C_2023, config: { questions: false } },
