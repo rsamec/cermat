@@ -1,10 +1,11 @@
 VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
 ====
+
 **TEXT 1**
 
 > (**1**)  Bouř žene koráb v divokém běhu.\
 > John lampu klamnou k skále přivěsil\
-> a dí: „Bůh žehnej břehu!“\
+> a dí: „Bůh žehnej břehu!“
 >
 > __A koráb k světlu žene se a v trysku\
 > se náhle přes úskalí překotil\
@@ -12,7 +13,7 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
 >
 > (**2**)  John zavýsknul si ve syčící pěnu:\
 > „Má dceruška si chystá veselku,\
-> dnes pomohu jí k věnu!“\
+> dnes pomohu jí k věnu!“
 >
 > __A člunek jeho jako liška běží\
 > po těžkých vlnách tam, kde zvrhlá loď\
@@ -20,7 +21,7 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
 >
 > (**3**)  John nenavykl marně tratit času,\
 > svou sekyru hned v koráb zarazil,\
-> vtom z něho doslech hlasu.\
+> vtom z něho doslech hlasu.
 >
 > „Jen pospěš, pospěš,“ zní to dutě zdůli,\
 > „a všeho zboží půli dostaneš,\
@@ -28,11 +29,11 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
 >
 > (**4**)  John naslouchá a vytřešťuje zraky.\
 > „Aj, pakli jedna půle bude má,\
-> toť bude druhá taky!“\
+> toť bude druhá taky!“
 >
 > A rychle v člunku ku břehu uhání.\
 > Po celou noc se k lodi nevrátil,\
-> až teprv po svítání.\
+> až teprv po svítání.
 >
 > Až po svítání, v bílé ranní době\
 > zas sekyru svou v koráb zaráží\
@@ -40,7 +41,7 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
 >
 > (**5**)  Již voda otvorem si cestu klestí,\
 > teď vyhoupla si první mrtvolu,\
-> John rychle po ní pěstí.\
+> John rychle po ní pěstí.
 >
 > Tvář mrtvou k sobě obrátil: „Eh kletě!\
 > Je po svatbě – já tady za vlasy\
@@ -69,9 +70,6 @@ v člunu na vodě.
 - [C] Poté, co ztroskotaná loď uvízla v písku, si John uvědomil, že jeho dcera se zrovna 
 v tu chvíli vdává.
 - [D] John pocítil zklamání, protože navzdory dobrému úmyslu nezabránil v noci ztroskotání korábu. 
-
-VÝCHOZÍ TEXTY K ÚLOHÁM 1–3
-===
 
 # 2 Které z následujících tvrzení o dvou úsecích podtržených v TEXTU 1 je pravdivé?
 (Každý z posuzovaných úseků se skládá ze tří veršů. Úlohu řešte na základě informací uvedených 
@@ -341,7 +339,7 @@ VÝCHOZÍ TEXT K ÚLOZE 24
 > odpracovaný \
 > upravený \
 > podlomený \
-> nahromaděný\
+> nahromaděný
 
 # 24 Vypište z výchozího textu tři slova, z nichž každé obsahuje kořen složený ze tří hlásek. 
 (Za chybu je považováno jak neuvedení hledaného slova, tak zapsání jakéhokoli slova, které 
