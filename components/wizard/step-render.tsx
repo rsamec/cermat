@@ -9,7 +9,7 @@ import { useState } from "react";
 import { faTrashCan, faAngleLeft, faAngleRight, faComment } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TextBadge from "../core/TextBadge";
-import { isEmptyOrWhiteSpace, updateMap } from "@/lib/utils/utils";
+import { isEmptyOrWhiteSpace, replaceAbsolutePathForImageUrls, updateMap } from "@/lib/utils/utils";
 import TransitionStep from "./transition-step";
 import Link from "next/link";
 import chatGTPImage from '../../public/chatgpt-icon.webp';
@@ -57,11 +57,11 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
   const step = React.cloneElement(<WizardStep step={currentStep} headerMap={headerMap} toggleExpandableHeader={toggleExpandableHeader} questionMap={questionMap} toggleExpandableAnswer={toggleExpandableAnswer} ></WizardStep>, { key: currentStep?.id });
 
   const stepData = currentStep?.data;
-  const rawContent = stepData != null ? [
+  const rawContent = stepData != null ? replaceAbsolutePathForImageUrls([
     stepData.header?.rawContent,
     stepData.rawContent,
     stepData.options?.length != null ? stepData.options?.map(opt => `- ${opt.value}) ${opt.name}`).join('\n') : ''
-  ].filter(d => !isEmptyOrWhiteSpace(d)).join('\n').replaceAll("(./",`(https://www.eforms.cz/${assetPath?.join('/')}/`) : undefined
+  ].filter(d => !isEmptyOrWhiteSpace(d)).join('\n'),['https://www.eforms.cz'].concat(...assetPath ?? [])): undefined
 
   return <div  {...handlers} className="min-h-screen">
     <div className="flex flex-col gap-4">

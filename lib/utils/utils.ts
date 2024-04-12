@@ -1,5 +1,5 @@
 export type Maybe<T> = T | undefined;
-export type Option<T> = { name: string, nameHtml?:string, value: T }
+export type Option<T> = { name: string, nameHtml?: string, value: T }
 
 export function imageUrl(path: string) {
   //return path;
@@ -35,8 +35,8 @@ export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleS
   return steps.slice(start, end + 1);
 };
 
-export function extractNumberRange(text: string): [number, number] | null {  
-  text = text.split("\n")[0].trim();  
+export function extractNumberRange(text: string): [number, number] | null {
+  text = text.split("\n")[0].trim();
   const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?$/);
   if (match) {
     const prefix = match[1];
@@ -92,7 +92,7 @@ export function format(value: any) {
   if (typeof value == 'boolean') return value ? "A" : "N"
   if (typeof value == 'string') return value;
   if (Array.isArray(value)) return value.join(', ');
-  if (typeof value == 'object') return Object.entries(value).map(([key,value]) => `${key}:${value}`).join(', ');
+  if (typeof value == 'object') return Object.entries(value).map(([key, value]) => `${key}:${value}`).join(', ');
   return value;
 }
 
@@ -145,10 +145,10 @@ export function matchNumberListCount(input: string) {
 }
 export function formatTime(seconds: number) {
   const miliseconds = seconds * 1000
-  var minutes =  Math.floor(miliseconds / (1000 * 60));
+  var minutes = Math.floor(miliseconds / (1000 * 60));
   var seconds = Math.floor((miliseconds % (1000 * 60)) / 1000);
   return minutes + "m " + seconds + "s";
-   
+
 }
 
 export function isArraySame<T>(f: T[], s: T[]) {
@@ -156,5 +156,17 @@ export function isArraySame<T>(f: T[], s: T[]) {
     Array.isArray(s) &&
     f.length === s.length &&
     f.every((val, index) => val === s[index]);
+}
+
+
+export function normalizeImageUrlsToAbsoluteUrls(markdown: string, segments: string[]): string {
+  const regex = /\]\((.*?)\)/g;
+  const replacedMarkdown = markdown.replace(regex, (match, imageUrl:string) => {
+    const modifiedImageUrl = segments.concat(imageUrl.replace('./','')).join('/');
+    // Reconstruct the markdown with the modified image URL
+    return `](${modifiedImageUrl})`;
+  });
+
+  return replacedMarkdown;
 
 }

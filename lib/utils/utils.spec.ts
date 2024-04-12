@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls, extractNumberRange, extractOptionRange, formatTime, strToSimpleHtml } from './utils';
+import { cls, extractNumberRange, extractOptionRange, formatTime, normalizeImageUrlsToAbsoluteUrls, strToSimpleHtml } from './utils';
 
 test('simple string', () => {
 
@@ -62,3 +62,10 @@ test('format time to minutes and seconds', () => {
   expect(formatTime(4200)).toEqual("70m 0s")
 
 })
+
+test('replace markdown image urls to absolute urls', () => {
+  const assetPathes = ["https://www.eforms.cz","math","5"];
+  expect(normalizeImageUrlsToAbsoluteUrls("![alt text](image.png)", assetPathes)).toEqual("![alt text](https://www.eforms.cz/math/5/image.png)")
+  expect(normalizeImageUrlsToAbsoluteUrls(">![OBRAZEK1](./1.jpeg)",assetPathes)).toEqual(">![OBRAZEK1](https://www.eforms.cz/math/5/1.jpeg)")
+})
+
