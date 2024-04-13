@@ -6,6 +6,7 @@ import ContentGrid from '@/components/ContentGrid';
 import { ExamMetadata, GradeType, SubjectType, toTags } from '@/components/utils/exam';
 import NothingThere from '@/components/NothingThere';
 import Timeline from '@/components/Timeline';
+import { convertToDate } from '@/lib/utils/utils';
 
 const collection = 'exams';
 type Exam = {
@@ -86,11 +87,11 @@ async function getData({ params }: Params) {
       'code',
       'year'
     ])
-    .sort({ expectedAt: 1 })
-    .toArray()
+    .toArray();
+  
 
 
-  const toItems = (items: Exam[]) => items.map(d => ({ ...d, tags: toTags(d, ['subject', 'grade', 'year']) }))
+  const toItems = (items: Exam[]) => items.sort((f,s) => convertToDate(s.expectedAt).getTime() - convertToDate(f.expectedAt).getTime()).map(d => ({ ...d, tags: toTags(d, ['subject', 'grade', 'year']) }))
   return {
     exams: toItems(exams),
   }

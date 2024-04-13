@@ -124,7 +124,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 6–11
 > odstranili přibližně 20 centimetrů povrchové horniny, čímž obnažili o něco světlejší 
 > pískovcové podloží. Podle vědců byl proces tvorby zřejmě jednoduchý a **zároveň** rychlý. 
 > Záhadou ale dosud zůstává smysl těchto unikátních obrazců. Existuje proto množství 
-> teorií, které se jejich účel pokoušejí objasnit.
+> teorií, __které__ se jejich účel pokoušejí objasnit.
 > 
 > (**4**) Podle jedné z nich byly geoglyfy využívány k náboženským rituálům, podle jiné šlo o důmyslný zavlažovací systém. Další vědci se zase domnívají, že obrazce sloužily jako astronomický kalendář, který pomáhal určovat období setí či sklizně. Kromě všech těchto hypotéz, považovaných za seriózní, však existuje i pofidérní teorie přisuzující obrazcům mimozemský původ. Pravdu se asi hned tak nedozvíme. Za peruánskými geoglyfy, zapsanými roku 1994 na seznam světového dědictví UNESCO, *****.
 > 
@@ -172,10 +172,9 @@ geoglyfů z Nazcy: jednou z nich je ta, že sloužily jako astronomický kalend�
  
 ## 12.1 Obloha se zatáhla tmavými mraky a vzápětí se spustilo krupobití. 
 ## 12.2 Městem se šířily poplašné zprávy, které jeho obyvatele dost zaskočili.  
-## 12.3 O víkendu společně pojedeme na výlet do Čáslavi, kde žijí tatínkovi  
-vzdálení příbuzní. 
-## 12.4 Obě hlavní role ve filmu, který vyprávěl o setkání matky se stracenou  
-dcerou, ztvárnily známé herečky. 
+## 12.3 O víkendu společně pojedeme na výlet do Čáslavi, kde žijí tatínkovi  vzdálení příbuzní. 
+## 12.4 Obě hlavní role ve filmu, který vyprávěl o setkání matky se stracenou  dcerou, ztvárnily známé herečky. 
+
 # 13 Vypište z každé z následujících vět (13.1 a 13.2) základní skladební dvojici.
 (Základní skladební dvojice musí být zapsány pravopisně správně.)
 ## 13.1 Pro žáky nastupující v září do prvního ročníku budou ve spolupráci s maturanty vytvořeny speciální informační materiály.

@@ -170,3 +170,15 @@ export function normalizeImageUrlsToAbsoluteUrls(markdown: string, segments: str
   return replacedMarkdown;
 
 }
+
+export function convertToDate(value:string){  
+    // Extract year, month, and day from the input string
+    const year = value.substring(0, 4);
+    const month = value.substring(4, 6);
+    const day = value.substring(6, 8);
+
+    // Create a Date object with the extracted values
+    const date = new Date(`${year}-${month}-${day}`);
+
+    return date;
+}
