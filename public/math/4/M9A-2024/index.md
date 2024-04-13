@@ -62,7 +62,7 @@ $$
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6
 ===
 
-> Pravoúhlý lichoběžník ABCD se základnami AB a CD má pravý úhle při vrcholu B.\
+> Pravoúhlý lichoběžník ABCD se základnami AB a CD má pravý úhel při vrcholu B.\
 > Základna AB má délku 40 cm, základna CD délku 28 cm a úhlopříčka AC délku 41 cm.
 >
 > ![alt text](image-1.png)
@@ -109,7 +109,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 9
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10
 ===
-> V rovině leží přímka AE a přímka p procházející bodem E. Bod A je vrcho obdelníku ABCD. Vrchol B leží na přímce AE a vrchol C na přímce p. Úhlopříčka BD obdelníku ABCD má stejnou délku jako úsečka AE.
+> V rovině leží přímka AE a přímka p procházející bodem E. Bod A je vrchol obdelníku ABCD. Vrchol B leží na přímce AE a vrchol C na přímce p. Úhlopříčka BD obdelníku ABCD má stejnou délku jako úsečka AE.
 > 
 > ![alt text](image-4.png)
 
@@ -126,7 +126,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 11
 >
 > ![alt text](image-5.png)
 
-# 11 Jaká je velikost rozdílu úhlů $\delta -\alpha $ ? 
+# 11 Jaká je velikost rozdílu úhlů $\gamma -\alpha $ ? 
 Velikost úhlů neměřte, ale vypočítejte (obrázek je ilustrační).
 - [A] $10\degree$
 - [B] $11\degree$
@@ -177,8 +177,6 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 13
 ## 15.1 Měřítko plánu je 1:1 000.
 ## 15.2 Skutečná délka domu je 20m.
 ## 15.3 Obsah obdélníku na plánu a obsah půdorysu domu jsou v poměru 1:100.
-
-
 
 # 16 Přiřaďte ke každé úloze (16.1-16.3) odpovídající výsledek (A-F).
 
