@@ -20,14 +20,14 @@ Výsledek ani dílčí výpočty nezaokrouhlujte.
 
 # 3 Pro $ {x \in R  \{−2;0;2\}} $ zjednodušte: 
 $$
-{ 1 \over x + 2 } - { { x^2 \over x^2 - 4} \over {x \over 2}} = 
+\frac{1}{x + 2} - \frac{\frac{x^2}{x^2 - 4}}{\frac{x}{2}} = 
 $$
 
 **V záznamovém archu** uveďte celý **postup řešení**.
 
 # 4 V oboru R řešte: 
 $$
-{x+5 \over x+1} + { 5x-1 \over x^2 - x} = {5 \over x}
+\frac{x+5}{x+1} + \frac{5x-1}{x^2 - x} = \frac{5}{x}
 $$
 
 **V záznamovém archu** uveďte celý **postup řešení**.
@@ -63,7 +63,7 @@ $$
  
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8 
 ===
-> Grafem funkce $ h:y= { 3 \over x- 2 }-4 $ je hyperbola se středem S (bod S je průsečík asymptot).
+> Grafem funkce $ h:y= \frac{3}{x- 2}-4 $ je hyperbola se středem S (bod S je průsečík asymptot).
 > Graf lineární funkce *f* prochází bodem R[−5;1] a bodem S. 
 > 
 > ![alt text](image-1.png)
@@ -79,7 +79,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 9–10
 ===
 > Pro ${ x \in R}$ je dána funkce: 
 > $$
-> { g:y = sin (x + {7\pi \over 6})}
+> { g:y = sin (x + \frac{7\pi}{6})}
 > $$
 > 
 > (*CZVV*) 
@@ -87,7 +87,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 9–10
 # 9 Vypočtěte obě souřadnice průsečíku *P* grafu funkce *𝑔* se souřadnicovou osou *y*. 
 # 10 Určete __nejmenší kladné__ číslo *x*, pro které platí: 
 $$
-{ sin(x + {7\pi \over 6}) = 1}
+{ sin(x + \frac{7\pi}{6}) = 1}
 $$
 
 VÝCHOZÍ TEXT A GRAF K ÚLOHÁM 11–12 
@@ -243,8 +243,8 @@ Výsledek je zaokrouhlen na celé cm^2^.
 - [A] $ {7-x > 0} $
 - [B] $ {(x-7)^2 > 0} $
 - [C] $ { x^2 - 49 > 0} $
-- [D] $ {{(x-1)^2 \over x -7} > 0} $
-- [E] $ {{x-7 \over x-1} > 0} $
+- [D] $ {\frac{(x-1)^2}{x -7} > 0} $
+- [E] $ {\frac{x-7}{x-1} > 0} $
  
 VÝCHOZÍ TEXT K ÚLOZE 22 
 ===
@@ -268,10 +268,10 @@ VÝCHOZÍ TEXT K ÚLOZE 23
 >
 > (*CZVV*) 
 # 23 Jaká je pravděpodobnost, že oba dva vytažené míčky budou mít stejnou barvu? 
-- [A] ${ 7 \over 15}$
-- [B] ${ 1 \over 5}$
-- [C] ${ 1 \over 2}$
-- [D] ${ 2 \over 3}$
+- [A] $\frac{7}{15}$
+- [B] $\frac{1}{5}$
+- [C] $\frac{1}{2}$
+- [D] $\frac{2}{3}$
 - [E] jiná hodnota pravděpodobnosti
  
 VÝCHOZÍ TEXT K ÚLOZE 24 

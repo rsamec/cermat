@@ -28,36 +28,50 @@ Kvádr je možné beze zbytku rozřezat na 200 krychlí, z nichž každá má ob
 # 3 Vypočtěte a výsledek zapište zlomkem v základním tvaru.
 
 ## 3.1 
-$$ {5 \over 9} - {5 \over 9}: 5 = $$
+$$ 
+\frac{5}{9} - \frac{5}{9}: 5 = 
+$$
 
 ## 3.2
-$$ {4-7 \over 8} \cdot {16 \over 21} = $$
+$$
+\frac{4-7}{8} \cdot \frac{16}{21} = 
+$$
 
 ## 3.3
-$$ {{3\over5} : \left({2\over5} + {1\over2}\right) \over {7\over6} + {7\over10} } = $$
+$$
+\frac{\frac{3}{5} : \left(\frac{2}{5} + \frac{1}{2}\right)}{\frac{7}{6} + \frac{7}{10} } = 
+$$
 
 # 4
 ## 4.1 **Upravte a rozložte** na součin vytknutím:
-$$ 2\cdot(x^2-x ) +x = $$
+$$ 
+2\cdot(x^2-x ) +x = 
+$$
 
 ## 4.2 **Umocněte a zjednodušte** (výsledný výraz nesmí obsahovat závorky):
 
-$$ (\frac{2}{3}a - 3)^2 = $$
+$$
+(\frac{2}{3}a - 3)^2 = 
+$$
 
 ## 4.3  **Zjednodušte** (výsledný výraz nesmí obsahovat závorky):
 
-$$ 3n \cdot (2 - n + 2n) + (2n + 1) \cdot (7 - n) = $$
+$$
+3n \cdot (2 - n + 2n) + (2n + 1) \cdot (7 - n) = 
+$$
 
 
 # 5 Řešte rovnici:
 
 ## 5.1
-$$ 0,5x + 2 \cdot (x + 2,5) = 2,5 \cdot (x + 3) $$
+$$
+0,5x + 2 \cdot (x + 2,5) = 2,5 \cdot (x + 3) 
+$$
 
 ## 5.2
-$$ \frac{y + 10}{15} + \frac{2y}{5} = 1 - \frac{5 - y}{3} $$
-
-
+$$
+\frac{y + 10}{15} + \frac{2y}{5} = 1 - \frac{5 - y}{3} 
+$$
 
 VÝCHOZÍ TEXT K ÚLOZE 6
 ===

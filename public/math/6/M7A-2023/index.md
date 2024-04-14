@@ -3,11 +3,15 @@
 # 2 Vypočtěte a výsledek zapište zlomkem v základním tvaru. 
 ## 2.1 
  
-$$ {42 \over 5} \cdot ({3 \over 14} - {5 \over 21}) = $$
+$$
+\frac{42}{5} \cdot (\frac{3}{14} - \frac{5}{21}) = 
+$$
 
 ## 2.2 
  
-$$ {({3 \over 4} - {1 \over 2}) : {3 \over 2} \over 2 \cdot {5 \over 8} } = $$
+$$
+\frac{(\frac{3}{4} - \frac{1}{2}) : \frac{3}{2}}{2 \cdot \frac{5}{8} } = 
+$$
  
 **V záznamovém archu** uveďte v obou částech úlohy **postup řešení**. 
 
