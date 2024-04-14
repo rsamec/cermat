@@ -83,7 +83,6 @@ function Stepper(props: Props) {
         <div className="flex items-center gap-1">
           {filterSteps(steps, props.currentStepIndex, maxVisibleSteps).map((d, i) => {
             const selected = d.id === props.currentStep?.id;
-            console.log(d.id)
             const correct = props.corrections[d.id] === true;
             const incorrect = props.corrections[d.id] === false;
 

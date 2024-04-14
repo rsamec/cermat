@@ -34,13 +34,11 @@ $$
 
 # 5 Pro ${x \in R}$, ${y \in R}$ řešte soustavu rovnic: 
 
-
 $$
-x+2y=5
-$$
-
-$$
-{x \over 2} = 10 - 4y
+\begin{aligned}
+x+2y &= 5\\
+\frac{x}{2} &= 10 - 4y
+\end{aligned}
 $$
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6 

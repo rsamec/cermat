@@ -161,8 +161,8 @@ export function isArraySame<T>(f: T[], s: T[]) {
 
 export function normalizeImageUrlsToAbsoluteUrls(markdown: string, segments: string[]): string {
   const regex = /\]\((.*?)\)/g;
-  const replacedMarkdown = markdown.replace(regex, (match, imageUrl:string) => {
-    const modifiedImageUrl = segments.concat(imageUrl.replace('./','')).join('/');
+  const replacedMarkdown = markdown.replace(regex, (match, imageUrl: string) => {
+    const modifiedImageUrl = segments.concat(imageUrl.replace('./', '')).join('/');
     // Reconstruct the markdown with the modified image URL
     return `](${modifiedImageUrl})`;
   });
@@ -171,14 +171,14 @@ export function normalizeImageUrlsToAbsoluteUrls(markdown: string, segments: str
 
 }
 
-export function convertToDate(value:string){  
-    // Extract year, month, and day from the input string
-    const year = value.substring(0, 4);
-    const month = value.substring(4, 6);
-    const day = value.substring(6, 8);
+export function convertToDate(value: string) {
+  // Extract year, month, and day from the input string
+  const year = value.substring(0, 4);
+  const month = value.substring(4, 6);
+  const day = value.substring(6, 8);
 
-    // Create a Date object with the extracted values
-    const date = new Date(`${year}-${month}-${day}`);
+  // Create a Date object with the extracted values
+  const date = new Date(`${year}-${month}-${day}`);
 
-    return date;
+  return date;
 }
