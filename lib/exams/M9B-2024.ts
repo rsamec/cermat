@@ -21,7 +21,7 @@ const form = rootGroup({
     4.3: mathExpr('3x+21', { hintType: 'expression' }, twoPoints),
   }),
   5: group({
-    5.1: mathEquation('x=-1)', { hintType: 'equation' }, twoPoints),
+    5.1: mathEquation('x=-1', { hintType: 'equation' }, twoPoints),
     5.2: mathEquation('y=21/7', { hintType: 'equation' }, twoPoints),
   }),
   6: group({

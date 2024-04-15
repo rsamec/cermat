@@ -61,7 +61,7 @@ $$
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6
 ===
 
-> Čtyřúhelník ABCD je takový lichoběžník se základnami AB a CD, že úsečka BD je jeho výška. Pro délky stran platí |AD| = 17cm, |BD| = 18cm, obsah trojúhelníku BCD je S~BCD~ = 24 cm^2^.
+> Čtyřúhelník ABCD je takový lichoběžník se základnami AB a CD, že úsečka BD je jeho výška. Pro délky stran platí |AD| = 17cm, |BD| = 18cm, obsah trojúhelníku BCD je S = 24 cm^2^.
 >
 > ![alt text](image-1.png)
 
