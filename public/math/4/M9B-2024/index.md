@@ -15,7 +15,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 2
 
 ## 3.1
 $$
-\left(\frac{3}{4}+\frac{4}{3}\right)\cdot\left(\frac{2}{3}-\frac{6}{5}\right)\
+\left(\frac{3}{4}+\frac{4}{3}\right)\cdot\left(\frac{2}{3}-\frac{6}{5}\right)
 $$
 
 ## 3.2
