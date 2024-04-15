@@ -9,6 +9,9 @@ import rehypeSanitize from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
 import supersub from 'remark-supersub';
 import remarkGfm from 'remark-gfm';
+import {fromMarkdown} from 'mdast-util-from-markdown';
+import {mathFromMarkdown} from 'mdast-util-math';
+import {math} from 'micromark-extension-math';
 
 
 import { visit } from 'unist-util-visit';
@@ -164,3 +167,12 @@ const underlinePlugin = () => {
 
   return transformer;
 };
+
+
+export function fromMarkdownTo(markdown: string) {
+  const tree = fromMarkdown(markdown, {
+    extensions: [math()],
+    mdastExtensions: [mathFromMarkdown()]
+  })
+  return tree;
+}

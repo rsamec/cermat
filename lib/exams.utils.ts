@@ -6,6 +6,8 @@ import M7A_2023 from './exams/M7A-2023';
 import M7B_2023 from './exams/M7B-2023';
 
 import M9A_2024 from './exams/M9A-2024';
+import M9B_2024 from './exams/M9B-2024';
+
 import M9A_2023 from './exams/M9A-2023';
 import M9B_2023 from './exams/M9B-2023';
 import MMA_2023 from './exams/MMA-2023';
@@ -15,6 +17,8 @@ import C5B_2023 from './exams/C5B-2023';
 import C7A_2023 from './exams/C7A-2023';
 
 import C9A_2024 from './exams/C9A-2024';
+import C9B_2024 from './exams/C9B-2024';
+
 import C9A_2023 from './exams/C9A-2023';
 import C9B_2023 from './exams/C9B-2023';
 import C9C_2023 from './exams/C9C-2023';
@@ -35,7 +39,7 @@ const math4Years = ["math", "4"];
 const math6Years = ["math", "6"];
 const mathDiploma = ["math", "diploma"];
 
-const enDiploma = ["en", "diploma"];
+const enDiploma = ["en", "diploma"];``
 const deDiploma = ["de", "diploma"];
 const frDiploma = ["fr", "diploma"];
 
@@ -49,6 +53,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: math6Years.concat("M7B-2023"), quiz: M7B_2023, config: { questions: false } },
 
   { pathes: math4Years.concat("M9A-2024"), quiz: M9A_2024, config: { questions: true } },
+  { pathes: math4Years.concat("M9B-2024"), quiz: M9B_2024, config: { questions: true } },
   { pathes: math4Years.concat("M9A-2023"), quiz: M9A_2023, config: { questions: true } },
   { pathes: math4Years.concat("M9B-2023"), quiz: M9B_2023, config: { questions: false } },
 
@@ -61,6 +66,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: cz6Years.concat("C7A-2023"), quiz: C7A_2023, config: { questions: true } },
 
   { pathes: cz4Years.concat("C9A-2024"), quiz: C9A_2024, config: { questions: true } },
+  { pathes: cz4Years.concat("C9B-2024"), quiz: C9B_2024, config: { questions: true } },
   { pathes: cz4Years.concat("C9A-2023"), quiz: C9A_2023, config: { questions: true } },
   { pathes: cz4Years.concat("C9B-2023"), quiz: C9B_2023, config: { questions: true } },
   { pathes: cz4Years.concat("C9C-2023"), quiz: C9C_2023, config: { questions: false } },
