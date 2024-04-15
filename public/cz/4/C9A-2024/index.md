@@ -104,7 +104,7 @@ k Johnovi, v páté části textu promlouvá v přímé řeči mrtvola.
 - [E] vztahu mezi slovy __chirurg__ a __operace__
 
 VÝCHOZÍ TEXT K ÚLOHÁM 6–11
-===
+====
 
 > (**1**) Planinu Nazca, ležící na jihu Peru, zdobí nejrozměrnější grafické dílo světa. 
 > Na ploše velké **okolo** 520 kilometrů čtverečních se zde nachází více než 300 geoglyfů^1^. 
@@ -252,7 +252,7 @@ Předchozí ředitel nedal bez auta ani ránu a Eva zrovna tak. Pak ale nastoupi
 kteří jezdí autem. Platí pro ni: Kam *****, tam plášť.
 
 VÝCHOZÍ TEXTY K ÚLOHÁM 18–23
-===
+====
 
 **TEXT 1**
 
