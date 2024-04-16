@@ -1,7 +1,9 @@
 import { AnswerGroup } from './utils/quiz-specification';
-
+import M5A_2024 from './exams/M5A-2024';
 import M5A_2023 from './exams/M5A-2023';
 import M5B_2023 from './exams/M5B-2023';
+
+import M7A_2024 from './exams/M7A-2024';
 import M7A_2023 from './exams/M7A-2023';
 import M7B_2023 from './exams/M7B-2023';
 
@@ -12,8 +14,11 @@ import M9A_2023 from './exams/M9A-2023';
 import M9B_2023 from './exams/M9B-2023';
 import MMA_2023 from './exams/MMA-2023';
 
+import C5A_2024 from './exams/C5A-2024';
 import C5A_2023 from './exams/C5A-2023';
 import C5B_2023 from './exams/C5B-2023';
+
+import C7A_2024 from './exams/C7A-2024';
 import C7A_2023 from './exams/C7A-2023';
 
 import C9A_2024 from './exams/C9A-2024';
@@ -46,6 +51,7 @@ const frDiploma = ["fr", "diploma"];
 
 const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { questions?: boolean } }[] = [
   // math
+  { pathes: math8Years.concat("M5A-2024"), quiz: M5A_2024, config: { questions: true } },
   { pathes: math8Years.concat("M5A-2023"), quiz: M5A_2023, config: { questions: true } },
   { pathes: math8Years.concat("M5B-2023"), quiz: M5B_2023, config: { questions: false } },
 
@@ -60,6 +66,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: mathDiploma.concat("MMA-2023"), quiz: MMA_2023, config: { questions: true } },
 
   // czech
+  { pathes: cz8Years.concat("C5A-2024"), quiz: C5A_2024, config: { questions: true } },
   { pathes: cz8Years.concat("C5A-2023"), quiz: C5A_2023, config: { questions: true } },
   { pathes: cz8Years.concat("C5B-2023"), quiz: C5B_2023, config: { questions: true } },
 

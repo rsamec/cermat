@@ -155,6 +155,16 @@ export function wordsGroup(slova: { [key: string]: string }, { points }: { point
     }, {})
   } as const
 }
+export function numbersGroup(numbers: { [key: string]: number}, { points }: { points?: number } = { points: 1 }) {
+  return {
+    verifyBy: { kind: 'equal', args: numbers },
+    points,
+    inputBy: Object.keys(numbers).reduce((out: { [key: string]: ComponentFunctionSpec }, d) => {
+      out[d] = { kind: 'number' as const };
+      return out;
+    }, {})
+  } as const
+}
 
 
 export function sortedOptions(sortedOptions: string[], { points }: { points?: number } = { points: 1 }) {
