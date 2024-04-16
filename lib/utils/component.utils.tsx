@@ -10,6 +10,7 @@ import { FieldControl, AbstractControl, GroupControl, ListControl } from "@rx-fo
 import { AnswerInputBy } from './quiz-specification';
 import { patternCatalog } from './form.utils';
 import MathEquationInput from '@/components/core/MathEquationInput';
+import LatexInput from '@/components/core/LatexInput';
 
 
 
@@ -93,6 +94,14 @@ function renderInputComponentBySpec(inputBy: ComponentFunctionSpec, control: Fie
       </span>
       } */}
     </div>
+  }
+  else if (inputBy.kind == "latex"){
+    return inputGroup({
+      input: <LatexInput control={control} className={cls([
+        "relative m-0 block min-w-40 flex-auto dark:bg-gray-700 dark:text-white",
+        statusInput(control)])}></LatexInput>,
+      args: inputBy.args
+    })
   }
   return null
 }

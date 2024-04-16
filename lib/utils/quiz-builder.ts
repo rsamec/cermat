@@ -1,5 +1,5 @@
 import { SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
-import { ComponentFunctionSpec, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
+import { ComponentFunctionSpec, LatexExpressionComponentFunctionArgs, LatexExpressionComponentFunctionSpec, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
 import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren } from "./quiz-specification";
 
 export function rootGroup<T>(info: AnswerInfo, children: MixedChildren<T>) {
@@ -17,6 +17,10 @@ export function number(value: number, args?: NumberComponentFunctionArgs, { poin
 export function mathExpr(value: string | number, args: MathExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
   return { verifyBy: { kind: "equalMathExpression", args: value }, points, inputBy: { kind: 'math' as const, args } } as const
 }
+export function latexExpr(value: string, args: LatexExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
+  return { verifyBy: { kind: "equalLatexExpression", args: value }, points, inputBy: { kind: 'latex' as const, args } } as const
+}
+
 export function mathEquation(value: string | boolean, args: MathExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
   return { verifyBy: { kind: 'equalMathEquation', args: value }, points, inputBy: { kind: 'math', args } } as const
 }

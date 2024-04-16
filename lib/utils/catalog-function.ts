@@ -31,6 +31,11 @@ export type MathExpressionComponentFunctionArgs = { prefix?: string, suffix?: st
 export type MathExpressionComponentFunctionSpec = ComponentFunctionArgs<MathExpressionComponentFunctionArgs> & {
   kind: 'math'
 }
+export type LatexExpressionComponentFunctionArgs = { prefix?: string, suffix?: string, hint?: string }
+export type LatexExpressionComponentFunctionSpec = ComponentFunctionArgs<LatexExpressionComponentFunctionArgs> & {
+  kind: 'latex'
+}
+
 export type OptionsComponentFunctionSpec<T> = ComponentFunctionArgs<Option<T>[]> & {
   kind: 'options'
 }
@@ -39,4 +44,4 @@ export type SortedOptionsComponentFunctionSpec = ComponentFunctionArgs<undefined
 }
 
 
-export type ComponentFunctionSpec = BooleanComponentFunctionSpec | TextComponentFunctionSpec | NumberComponentFunctionSpec | OptionsComponentFunctionSpec<any> | MathExpressionComponentFunctionSpec | SortedOptionsComponentFunctionSpec
+export type ComponentFunctionSpec = BooleanComponentFunctionSpec | TextComponentFunctionSpec | NumberComponentFunctionSpec | OptionsComponentFunctionSpec<any> | MathExpressionComponentFunctionSpec | LatexExpressionComponentFunctionSpec | SortedOptionsComponentFunctionSpec

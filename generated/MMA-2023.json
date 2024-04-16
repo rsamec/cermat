@@ -42,42 +42,38 @@
     },
     "4": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "{-4;1}"
+        "kind": "equalLatexExpression",
+        "args": "\\{-4;1\\}"
       },
       "points": 2,
       "inputBy": {
-        "kind": "math",
+        "kind": "latex",
         "args": {
-          "prefix": "K=",
-          "hintType": "expression"
+          "prefix": "K="
         }
       }
     },
     "5": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "x=0, y=5/2"
+        "kind": "equalLatexExpression",
+        "args": "x=0, y=\\frac52"
       },
       "points": 2,
       "inputBy": {
-        "kind": "math",
-        "args": {
-          "hintType": "expression"
-        }
+        "kind": "latex",
+        "args": {}
       }
     },
     "6": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "{-1;9}"
+        "kind": "equalLatexExpression",
+        "args": "\\{-1;9\\}"
       },
       "points": 2,
       "inputBy": {
-        "kind": "math",
+        "kind": "latex",
         "args": {
-          "prefix": "k=",
-          "hintType": "expression"
+          "prefix": "k="
         }
       }
     },
@@ -98,15 +94,14 @@
       "children": {
         "8.1": {
           "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "[2;-4]"
+            "kind": "equalLatexExpression",
+            "args": "\\[2;-4\\]"
           },
           "points": 1,
           "inputBy": {
-            "kind": "math",
+            "kind": "latex",
             "args": {
-              "prefix": "S=",
-              "hintType": "expression"
+              "prefix": "S="
             }
           }
         },
@@ -148,29 +143,27 @@
     },
     "9": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "[0;-1/2]"
+        "kind": "equalLatexExpression",
+        "args": "\\[0;-\\frac{1}{2}\\]"
       },
       "points": 1,
       "inputBy": {
-        "kind": "math",
+        "kind": "latex",
         "args": {
-          "prefix": "P=",
-          "hintType": "expression"
+          "prefix": "P="
         }
       }
     },
     "10": {
       "verifyBy": {
-        "kind": "equalMathExpression",
-        "args": "4pi/3"
+        "kind": "equalLatexExpression",
+        "args": "4\\pi3"
       },
       "points": 2,
       "inputBy": {
-        "kind": "math",
+        "kind": "latex",
         "args": {
-          "prefix": "x=",
-          "hintType": "expression"
+          "prefix": "x="
         }
       }
     },

@@ -19,6 +19,9 @@ export type EqualOptionValidator<T> = ValidationFunctionArgs<T> & {
 export type EqualMathOptionValidator = ValidationFunctionArgs<string | number> & {
   kind: "equalMathExpression"
 }
+export type EqualLatexExpressionValidator = ValidationFunctionArgs<string> & {
+  kind: "equalLatexExpression"
+}
 export type EqualMathEquationValidator = ValidationFunctionArgs<string | boolean> & {
   kind: "equalMathEquation"
 }
@@ -47,7 +50,7 @@ export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<num
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator
-  | EqualMathEquationValidator | EqualStringCollectionValidator  | EqualNumberCollectionValidator| EqualSortedOptionsValidator | MatchValidator;
+  | EqualMathEquationValidator | EqualStringCollectionValidator | EqualNumberCollectionValidator | EqualSortedOptionsValidator | MatchValidator | EqualLatexExpressionValidator;
 
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
@@ -96,13 +99,13 @@ export class CoreVerifyiers {
 
   static EqualStringCollectionTo(value: string[]) {
     return (control: string[]) => {
-      return isArraySame(control.sort(),value.sort()) ? undefined : { 'expected': value, 'actual': control }
+      return isArraySame(control.sort(), value.sort()) ? undefined : { 'expected': value, 'actual': control }
     }
   }
 
   static EqualNumberCollectionTo(value: number[]) {
     return (control: number[]) => {
-      return isArraySame(control.sort((f,s) => f-s),value.sort((f,s) => f-s)) ? undefined : { 'expected': value, 'actual': control }
+      return isArraySame(control.sort((f, s) => f - s), value.sort((f, s) => f - s)) ? undefined : { 'expected': value, 'actual': control }
     }
   }
 
@@ -126,6 +129,7 @@ export class CoreVerifyiers {
 export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
   switch (spec.kind) {
     case 'equal':
+    case 'equalLatexExpression':
       return CoreVerifyiers.EqualTo(spec.args);
     case 'match':
       return CoreVerifyiers.MatchTo(spec.args);
@@ -136,7 +140,7 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
     case 'equalNumberCollection':
       return CoreVerifyiers.EqualNumberCollectionTo(spec.args);
     case 'equalMathExpression':
-      return CoreVerifyiers.MathExpressionEqualTo(spec.args);
+      return CoreVerifyiers.MathExpressionEqualTo(spec.args);    
     case 'equalMathEquation':
       return CoreVerifyiers.MathEquationEqualTo(spec.args);
     case 'equalOption':
