@@ -1,4 +1,4 @@
-# 1 Vypočtěte:
+<# 1 Vypočtěte:
 
 ## 1.1
 
@@ -54,7 +54,7 @@ Mějme součtový trojúhelník:
 
 # 5 Doplňte do rámečku takové číslo, aby platila rovnost.
 ## 5.1 1 hodina + 20 minut = |???| sekund
-## 5.2 $\frac12$ metru + |???| milimetrů = 1 metr + 26 centimetrů
+## 5.2 $\frac12$ metru + |???| milimetrů = 1 metr - 26 centimetrů
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6
 ===
@@ -174,3 +174,4 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 **Jaký je celkový počet schodů v pyramidě?**
 ## 14.3 V pyramidě s 90 schody má 27.schod stejnou barvu jako 30.schod, ale jinou barvu než 33.schod.
 **Jaký je největší možný počet pater v této pyramidě?**
+>
