@@ -2,80 +2,83 @@
 import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, selfEvaluate, selfEvaluateText, rootGroup } from "../utils/quiz-builder";
 
 const form = rootGroup({
-  code: 'C7PAD23C0T01',
+  code: 'C7PAD24C0T01',
   maxPoints: 50,
   questions: {
-      closed: 22,
-      opened: 6
+    closed: 22,
+    opened: 6
   }
 }, {
-  1: option("C"),
+  1: option("B"),
   2: option("A"),
   3: option("A"),
-  4:selfEvaluateText(`např. Doma prohledal každý kout.`,twoPoints),
-  5: group({
-  5.1: option("E"),
-  5.2: option("A"),
-  5.3: option("B"),
-  }), 
-  6: option("D"),
-  7: option("B"),
-  8: group({
-    8.1:optionBool(true),
-    8.2:optionBool(true),
-    8.3:optionBool(false),
-    8.4:optionBool(false),
-  },tasks4Max2Points),
-    9: option("A"),
-  10: option("D"),
-  11: option("B"),
-  12: option("B"),
+  4: option("D"),
+  5: option("C"),
+  6: group({
+    6.1: option("C"),
+    6.2: option("A"),
+    6.3: option("E"),
+  }),
+  7: group({
+    7.1: optionBool(true),
+    7.2: optionBool(true),
+    7.3: optionBool(true),
+    7.4: optionBool(true),
+  }, tasks4Max2Points),
+  8: option("A"),
+  9: option("C"),
+  10: option("B"),
+  11: group({
+    11.1: word('lhář'),
+    11.2: word('smetí'),
+  }),
+  12: group({
+    12.1: optionBool(false),
+    12.2: optionBool(true),
+    12.3: optionBool(false),
+    12.4: optionBool(true),
+  }, tasks4Max2Points),
   13: group({
-  13.1: optionBool(false),
-  13.2: optionBool(true),
-  13.3: optionBool(false),
-  13.4: optionBool(true),
-  },tasks4Max2Points),
-  14: group({
-  14.1:wordsGroup({ podmet: 'návštěva', prisudek: 'je považována' }),
-  14.2:wordsGroup({ podmet: 'ne', prisudek: 'zahřálo' }),
+    13.1: wordsGroup({ podmet: 'autobus', prisudek: 'by nenabral' }),
+    13.2: wordsGroup({ podmet: 'ochota a schopnost', prisudek: 'patří' }),
   }),
-  15: sortedOptions(['C', 'A', 'D', 'F', 'E', 'B'], threePoints),
-  16: group({
-    16.1:selfEvaluateText( 'např. Učitelka informovala rodiče, že se chovám nevhodně.',),
-    16.2:selfEvaluateText("např. Parkoval na místě určeném jen pro zákazníky")
+  14: sortedOptions(['E', 'B', 'F', 'A', 'D', 'C'], threePoints),
+  15: group({
+    15.1: selfEvaluateText('např. Přestože naléhal, nabídku odmítla.',),
+    15.2: selfEvaluateText("např. Sběr hub.")
   }),
-  17:words("dějinách,úklidu,trhu",threePoints),
-  18:words("skutečné,nerozuměl,autogramy,nejúžasnější",fourPoints),
-  19: group({
-  19.1: optionBool(false),
-  19.2: optionBool(false),
-  19.3: optionBool(false),
-  19.4: optionBool(false),
-  },tasks4Max2Points),
-  20:option("C"),
-  21:option("B"),
-  22: group({
-  22.1:optionBool(true),
-  22.2:optionBool(true),
-  22.3:optionBool(false),
-  22.4:optionBool(false),
-  },tasks4Max2Points),
-  23:words("dějinách,úklidu,trhu",threePoints),
-  24:option("D"),
+  16: words("4,7,11", threePoints),
+  17: words("nevídaný,medaili,směle,zpochybňovat", fourPoints),
+  18: group({
+    18.1: optionBool(false),
+    18.2: optionBool(false),
+    18.3: optionBool(false),
+    18.4: optionBool(true),
+  }, tasks4Max2Points),
+  19: option("A"),
+  20: option("D"),
+  21: group({
+    21.1: optionBool(true),
+    21.2: optionBool(false),
+    21.3: optionBool(false),
+    21.4: optionBool(true),
+  }, tasks4Max2Points),
+  22: words("uprostřed,vedle,mezi", threePoints),
+  23: option("C"),
+  24: option("B"),
   25: group({
-  25.1:optionBool(true),
-  25.2:optionBool(true),
-  25.3:optionBool(true),
-  25.4:optionBool(false),
-  },tasks4Max2Points),
-  26:option("B"),
-  27:option("D"),
+    25.1: optionBool(false),
+    25.2: optionBool(true),
+    25.3: optionBool(true),
+    25.4: optionBool(false),
+  }, tasks4Max2Points),
+  26: option("D"),
+  27: option("D"),
   28: group({
-  28.1:option("D"),
-  28.2:option("C"),
-  28.3:option("A"),
-  28.4:option("E"),
+    28.1: option("C"),
+    28.2: option("A"),
+    28.3: option("F"),
+    28.4: option("B"),
   })
 });
 

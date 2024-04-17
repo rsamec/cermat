@@ -55,6 +55,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: math8Years.concat("M5A-2023"), quiz: M5A_2023, config: { questions: true } },
   { pathes: math8Years.concat("M5B-2023"), quiz: M5B_2023, config: { questions: false } },
 
+  { pathes: math6Years.concat("M7A-2024"), quiz: M7A_2024, config: { questions: true } },
   { pathes: math6Years.concat("M7A-2023"), quiz: M7A_2023, config: { questions: true } },
   { pathes: math6Years.concat("M7B-2023"), quiz: M7B_2023, config: { questions: false } },
 
@@ -70,6 +71,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: cz8Years.concat("C5A-2023"), quiz: C5A_2023, config: { questions: true } },
   { pathes: cz8Years.concat("C5B-2023"), quiz: C5B_2023, config: { questions: true } },
 
+  { pathes: cz6Years.concat("C7A-2024"), quiz: C7A_2024, config: { questions: true } },
   { pathes: cz6Years.concat("C7A-2023"), quiz: C7A_2023, config: { questions: true } },
 
   { pathes: cz4Years.concat("C9A-2024"), quiz: C9A_2024, config: { questions: true } },

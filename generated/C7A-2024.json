@@ -3,7 +3,7 @@
     "1": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "C"
+        "args": "B"
       },
       "points": 1,
       "inputBy": {
@@ -32,59 +32,37 @@
     },
     "4": {
       "verifyBy": {
-        "kind": "selfEvaluate",
-        "args": {
-          "options": [
-            {
-              "value": 0,
-              "name": "0 bodů"
-            },
-            {
-              "value": 1,
-              "name": "1 bod"
-            },
-            {
-              "value": 2,
-              "name": "2 body"
-            }
-          ],
-          "hint": {
-            "kind": "text",
-            "content": "např. Doma prohledal každý kout."
-          }
-        }
+        "kind": "equalOption",
+        "args": "D"
       },
+      "points": 1,
       "inputBy": {
-        "kind": "options",
-        "args": [
-          {
-            "value": 0,
-            "name": "0 bodů"
-          },
-          {
-            "value": 1,
-            "name": "1 bod"
-          },
-          {
-            "value": 2,
-            "name": "2 body"
-          }
-        ]
+        "kind": "options"
       }
     },
     "5": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "C"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "6": {
       "children": {
-        "5.1": {
+        "6.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "E"
+            "args": "C"
           },
           "points": 1,
           "inputBy": {
             "kind": "options"
           }
         },
-        "5.2": {
+        "6.2": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "A"
@@ -94,10 +72,10 @@
             "kind": "options"
           }
         },
-        "5.3": {
+        "6.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "B"
+            "args": "E"
           },
           "points": 1,
           "inputBy": {
@@ -106,29 +84,9 @@
         }
       }
     },
-    "6": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "D"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
     "7": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "B"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "8": {
       "children": {
-        "8.1": {
+        "7.1": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -138,7 +96,7 @@
             "kind": "bool"
           }
         },
-        "8.2": {
+        "7.2": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -148,20 +106,20 @@
             "kind": "bool"
           }
         },
-        "8.3": {
+        "7.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": false
+            "args": true
           },
           "points": 1,
           "inputBy": {
             "kind": "bool"
           }
         },
-        "8.4": {
+        "7.4": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": false
+            "args": true
           },
           "points": 1,
           "inputBy": {
@@ -185,7 +143,7 @@
         }
       }
     },
-    "9": {
+    "8": {
       "verifyBy": {
         "kind": "equalOption",
         "args": "A"
@@ -195,10 +153,20 @@
         "kind": "options"
       }
     },
+    "9": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "C"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
     "10": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "D"
+        "args": "B"
       },
       "points": 1,
       "inputBy": {
@@ -206,28 +174,32 @@
       }
     },
     "11": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "B"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
+      "children": {
+        "11.1": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": "lhář"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "text"
+          }
+        },
+        "11.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": "smetí"
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "text"
+          }
+        }
       }
     },
     "12": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "B"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "13": {
       "children": {
-        "13.1": {
+        "12.1": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -237,7 +209,7 @@
             "kind": "bool"
           }
         },
-        "13.2": {
+        "12.2": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -247,7 +219,7 @@
             "kind": "bool"
           }
         },
-        "13.3": {
+        "12.3": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -257,7 +229,7 @@
             "kind": "bool"
           }
         },
-        "13.4": {
+        "12.4": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -284,14 +256,14 @@
         }
       }
     },
-    "14": {
+    "13": {
       "children": {
-        "14.1": {
+        "13.1": {
           "verifyBy": {
             "kind": "equal",
             "args": {
-              "podmet": "návštěva",
-              "prisudek": "je považována"
+              "podmet": "autobus",
+              "prisudek": "by nenabral"
             }
           },
           "points": 1,
@@ -304,12 +276,12 @@
             }
           }
         },
-        "14.2": {
+        "13.2": {
           "verifyBy": {
             "kind": "equal",
             "args": {
-              "podmet": "ne",
-              "prisudek": "zahřálo"
+              "podmet": "ochota a schopnost",
+              "prisudek": "patří"
             }
           },
           "points": 1,
@@ -324,16 +296,16 @@
         }
       }
     },
-    "15": {
+    "14": {
       "verifyBy": {
         "kind": "equalSortedOptions",
         "args": [
-          "C",
+          "E",
+          "B",
+          "F",
           "A",
           "D",
-          "F",
-          "E",
-          "B"
+          "C"
         ]
       },
       "points": 3,
@@ -341,9 +313,9 @@
         "kind": "sortedOptions"
       }
     },
-    "16": {
+    "15": {
       "children": {
-        "16.1": {
+        "15.1": {
           "verifyBy": {
             "kind": "selfEvaluate",
             "args": {
@@ -359,7 +331,7 @@
               ],
               "hint": {
                 "kind": "text",
-                "content": "např. Učitelka informovala rodiče, že se chovám nevhodně."
+                "content": "např. Přestože naléhal, nabídku odmítla."
               }
             }
           },
@@ -377,7 +349,7 @@
             ]
           }
         },
-        "16.2": {
+        "15.2": {
           "verifyBy": {
             "kind": "selfEvaluate",
             "args": {
@@ -393,7 +365,7 @@
               ],
               "hint": {
                 "kind": "text",
-                "content": "např. Parkoval na místě určeném jen pro zákazníky"
+                "content": "např. Sběr hub."
               }
             }
           },
@@ -413,13 +385,13 @@
         }
       }
     },
-    "17": {
+    "16": {
       "verifyBy": {
         "kind": "equalStringCollection",
         "args": [
-          "dějinách",
-          "úklidu",
-          "trhu"
+          "4",
+          "7",
+          "11"
         ]
       },
       "points": 3,
@@ -435,14 +407,14 @@
         }
       ]
     },
-    "18": {
+    "17": {
       "verifyBy": {
         "kind": "equalStringCollection",
         "args": [
-          "skutečné",
-          "nerozuměl",
-          "autogramy",
-          "nejúžasnější"
+          "nevídaný",
+          "medaili",
+          "směle",
+          "zpochybňovat"
         ]
       },
       "points": 4,
@@ -461,9 +433,9 @@
         }
       ]
     },
-    "19": {
+    "18": {
       "children": {
-        "19.1": {
+        "18.1": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -473,7 +445,7 @@
             "kind": "bool"
           }
         },
-        "19.2": {
+        "18.2": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -483,7 +455,7 @@
             "kind": "bool"
           }
         },
-        "19.3": {
+        "18.3": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -493,10 +465,10 @@
             "kind": "bool"
           }
         },
-        "19.4": {
+        "18.4": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": false
+            "args": true
           },
           "points": 1,
           "inputBy": {
@@ -520,10 +492,20 @@
         }
       }
     },
+    "19": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "A"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
     "20": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "C"
+        "args": "D"
       },
       "points": 1,
       "inputBy": {
@@ -531,18 +513,8 @@
       }
     },
     "21": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "B"
-      },
-      "points": 1,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "22": {
       "children": {
-        "22.1": {
+        "21.1": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -552,30 +524,30 @@
             "kind": "bool"
           }
         },
-        "22.2": {
+        "21.2": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": false
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "bool"
+          }
+        },
+        "21.3": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": false
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "bool"
+          }
+        },
+        "21.4": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "bool"
-          }
-        },
-        "22.3": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": false
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "bool"
-          }
-        },
-        "22.4": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": false
           },
           "points": 1,
           "inputBy": {
@@ -599,13 +571,13 @@
         }
       }
     },
-    "23": {
+    "22": {
       "verifyBy": {
         "kind": "equalStringCollection",
         "args": [
-          "dějinách",
-          "úklidu",
-          "trhu"
+          "uprostřed",
+          "vedle",
+          "mezi"
         ]
       },
       "points": 3,
@@ -621,10 +593,20 @@
         }
       ]
     },
+    "23": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "C"
+      },
+      "points": 1,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
     "24": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "D"
+        "args": "B"
       },
       "points": 1,
       "inputBy": {
@@ -636,7 +618,7 @@
         "25.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": true
+            "args": false
           },
           "points": 1,
           "inputBy": {
@@ -693,7 +675,7 @@
     "26": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "B"
+        "args": "D"
       },
       "points": 1,
       "inputBy": {
@@ -715,7 +697,7 @@
         "28.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "D"
+            "args": "C"
           },
           "points": 1,
           "inputBy": {
@@ -725,7 +707,7 @@
         "28.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "C"
+            "args": "A"
           },
           "points": 1,
           "inputBy": {
@@ -735,7 +717,7 @@
         "28.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": "F"
           },
           "points": 1,
           "inputBy": {
@@ -745,7 +727,7 @@
         "28.4": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "E"
+            "args": "B"
           },
           "points": 1,
           "inputBy": {
@@ -757,7 +739,7 @@
   },
   "metadata": {
     "info": {
-      "code": "C7PAD23C0T01",
+      "code": "C7PAD24C0T01",
       "maxPoints": 50,
       "questions": {
         "closed": 22,

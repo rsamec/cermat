@@ -104,6 +104,11 @@ VÝCHOZÍ OBRÁZEK K ÚLOZE 10
 > ![alt text](image-6.png)
 
 # 10 Který z uvedených obrázků (A-E) logicky nepatří mezi ostatní?
+- [A] 
+- [B] 
+- [C] 
+- [D] 
+- [E] 
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 11
 ===

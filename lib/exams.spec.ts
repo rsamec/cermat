@@ -77,7 +77,7 @@ test.each(examTestCases)(`compute total max points $pathes`, ({ quiz, pathes }) 
 })
 
 test.each(examTestCases.filter(d => d.config.questions))(`validate exam structure $pathes`, async ({ quiz, pathes }) => {
-  const tree = convertTree(quiz);
+  const tree = convertTree(quiz);  
   await testQuestionDifference(pathes, tree)
 })
 
@@ -92,3 +92,4 @@ test("statistics", () => {
   console.log(computeStatistics(examTestCases));
   console.log(computeStatistics(examTestCases.filter(d => d.config.questions)));
 })
+

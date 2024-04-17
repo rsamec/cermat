@@ -7,7 +7,7 @@ import { AnswerMetadata, convertTree } from "./utils/quiz-specification";
 import { GFM, Subscript, Superscript, parser } from "@lezer/markdown";
 import { loadMarkdown } from "./utils/file.utils";
 import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, ParsedQuestion, QuestionHtml, countMaxChars, } from "./utils/parser.utils";
-import { Maybe, extractNumberRange } from "./utils/utils";
+import { Maybe, extractNumberRange, normalizeImageUrlsToAbsoluteUrls } from "./utils/utils";
 import { getVerifyFunction } from "./utils/assert";
 import { uuidv4 } from "../tests/test.utils";
 import markdownToHtml from "./utils/markdown";
@@ -167,4 +167,24 @@ test.each(examTestCases.filter(d => d.config.questions))(`generate sql queries $
   await fs.mkdir(tmpdir, { recursive:true });
   const file = path.join(tmpdir, `${exam.quiz.metadata?.info?.code}.sql`);
   await fs.writeFile(file, finalSqlQuery);
+})
+
+async function normalizeQuizMarkdown(pathes: string[]) {
+  const quizContent = await loadMarkdown(pathes.concat(['index.md']));
+  return normalizeImageUrlsToAbsoluteUrls(quizContent,['https://www.eforms.cz'].concat(...pathes ?? []))
+}
+
+async function writeToFile(fileName:string, text: string){
+  const ostmpdir = os.tmpdir();
+  const tmpdir = path.join(ostmpdir, "generated");
+  await fs.mkdir(tmpdir, { recursive:true });
+  const file = path.join(tmpdir, fileName);
+  await fs.writeFile(file, text);
+}
+
+test.each(examTestCases.filter(d => d.config.questions))(`generate sql queries $pathes`, async (exam) => {
+  const textContent = await normalizeQuizMarkdown(exam.pathes);
+  await writeToFile(`${exam.pathes[2]}.md`, textContent);
+
+  
 })
