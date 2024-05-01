@@ -66,7 +66,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8
 ===
 > Je dána přímka p a bod A, který neleží na přímce p.
 >
-> ![alt text](image-3.png) 
+> ![alt text](image-3.png)
 
 # 8 Sestrojte pravoúhlý lichoběžník ABCD, pokud platí:
 

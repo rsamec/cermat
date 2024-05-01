@@ -96,7 +96,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 9
 > V rovnině jsou dány body A,B a O. Body A,B jsou vrcholy kosočtverce ABCD.\
 > Vrchol C kosočtverce leží na přímce OA.
 > 
-> ![alt text](image-3.png)
+> ![alt text](image-8.png)
 
 # 9 Sestrojte kosočtverec ABCD.
 
@@ -110,7 +110,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10
 > V rovině je dána kružnice k se středem S a body K,L.\
 > Body K,L jsou vrcholy rovnoramenného trojúhelníku KLM se základnou LM.
 > 
-> ![alt text](image-4.png)
+> ![alt text](image-3.png)
 
 # 10 Sestrojte rovnoramenný trojúhelník KLM, leží-li bod M na kružnici k.
 Nalezněte všechna řešení.
