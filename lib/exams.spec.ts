@@ -23,6 +23,7 @@ import cestina9B from './exams/C9B-2023';
 import cz_2023_A from './exams/CMA-2023';
 import cz_2023_B from './exams/CMB-2023';
 import cestina9C from './exams/C9C-2023';
+import M5B_2023 from './exams/M5B-2023';
 
 async function testQuestionDifference(pathes: string[], tree: TreeNode<AnswerTreeNode<any>>) {
   const questions = await parseMarkdownTree(pathes);
@@ -95,9 +96,9 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[] }[] = [
   { quiz: mat9A_2023_1, pathes: math4Years.concat("M9A-2023") },
   { quiz: mat7B_2023_1, pathes: math6Years.concat("M7B-2023") },
   { quiz: mat5B_2023_1, pathes: math8Years.concat("M5B-2023") },
-  { quiz: mat9B_2023_1, pathes: math4Years.concat("M9B-2023") },
-  
-  
+  { quiz: mat9B_2023_1, pathes: math4Years.concat("M9B-2023") },  
+  { quiz: M5B_2023, pathes: math8Years.concat("M5B-2023") },
+
 ]
 
 test.each(examTestCases)(`compute total max points $pathes`, ({ quiz, pathes }) => {
