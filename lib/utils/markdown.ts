@@ -21,7 +21,7 @@ import { imageUrl } from './utils';
 function concatPaths(...segments: string[]): string {
   let resultPath = segments[0] ?? '';
 
-  for (let i=1;i!=segments.length;i++) {  
+  for (let i = 1; i != segments.length; i++) {
     const segment = segments[i];
 
     if (segment.startsWith('./')) {
@@ -37,7 +37,7 @@ function concatPaths(...segments: string[]): string {
 
 function transformImgSrc() {
   return (tree: any, file: any, ...args: []) => {
-    visit(tree, node => node.type === 'heading' || node.type === 'paragraph', node => {    
+    visit(tree, node => node.type === 'heading' || node.type === 'paragraph', node => {
       const image = node.children?.find((child: { type: string }) => child.type === 'image' || child.type === 'link');
 
       if (image) {
@@ -56,10 +56,10 @@ function extendData(data?: { path: string[] }) {
   }
 }
 
-function rehypeAudio(options: {[index:string]: Object}) {
+function rehypeAudio(options: { [index: string]: Object }) {
   const settings = options || {}
 
-  return function (tree:any) {
+  return function (tree: any) {
     visit(tree, 'element', function (node, index, parent) {
       if (
         !parent ||
@@ -88,7 +88,7 @@ function rehypeAudio(options: {[index:string]: Object}) {
           sources.push({
             type: 'element',
             tagName: 'source',
-            properties: {src, ...map},
+            properties: { src, ...map },
             children: [
               //@todo - add text node 
               //- Your browser does not support the audio element.
@@ -101,7 +101,7 @@ function rehypeAudio(options: {[index:string]: Object}) {
         type: 'element',
         tagName: 'audio',
         properties: {
-          controls:true
+          controls: true
         },
         children: [...sources, node]
       }
@@ -109,12 +109,12 @@ function rehypeAudio(options: {[index:string]: Object}) {
   }
 }
 
-
 export default async function markdownToHtml(markdown: string, data?: { path: string[] }) {
   const result = await remark()
     .use(extendData(data))
     .use(remarkParse)
     .use(underlinePlugin)
+    .use(firstWordPlugin)
     .use(transformImgSrc)
     .use(remarkMath)
     .use(remarkGfm)
@@ -122,10 +122,10 @@ export default async function markdownToHtml(markdown: string, data?: { path: st
     .use(remarkRehype)
     .use(rehypeSanitize)
     .use(rehypeKatex)
-    .use(rehypeAudio,{
-      mp3:{
-        preload:'auto',
-        type:'audio/mpeg'
+    .use(rehypeAudio, {
+      mp3: {
+        preload: 'auto',
+        type: 'audio/mpeg'
       }
     })
     .use(rehypeStringify)
@@ -163,6 +163,46 @@ const underlinePlugin = () => {
         };
       }
     });
+  }
+
+  return transformer;
+};
+
+const firstWordPlugin = () => {
+  function transformer(tree: any, { value }: { value: any }) {
+    visit(tree, 'heading', (node, index?: any) => {
+
+      if ((index > 0) ||
+        (!('children' in node)) ||
+        (node.children.length <= 0) ||
+        (!('value' in node.children[0]))) {
+        return
+      }
+
+
+      var para = node.children[0].value
+      var word = para.split(' ')[0]
+      var text = para.substr(word.length)
+
+      // remove first word from text
+      node.children[0].value = text
+
+      // replace what was first word with accessible dropcapped markup
+      node.children.unshift(
+        {
+          type: 'emphasis',
+          children: [{
+            type: 'text',
+            value: word
+          }],
+          data: {
+            hName: 'span',
+            hProperties: {}
+          }
+        }
+      )
+    }
+    );
   }
 
   return transformer;

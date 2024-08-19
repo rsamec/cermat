@@ -297,8 +297,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 18–22
 # 18 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
  
 ## 18.1 Knihu, kterou chtěl Artemis získat, měla víla ukrytou ve zlaté krabičce od  zápalek. 
-## 18.2 Artemis vyhrožoval, že pokud mu Kniha nebude zapůjčena, víla přesně za  
-# 24 hodin zemře. 
+## 18.2 Artemis vyhrožoval, že pokud mu Kniha nebude zapůjčena, víla přesně za 24 hodin zemře. 
 ## 18.3 Artemis podal víle láhev o objemu čtvrt litru, v níž byla whisky zředěná  svěcenou vodou. 
 ## 18.4 V úzké temné uličce se alespoň nějakou dobu společně nacházely jak víla vydávající se zprvu za léčitelku, tak nejméně tři další osoby. 
 # 19 Které z následujících tvrzení odpovídá výchozímu textu?

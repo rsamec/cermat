@@ -46,3 +46,27 @@ for (const {pathes} of exams) {
 
 //   });
 // }
+
+for (const {pathes} of exams) {
+  test(`generate pdf document ${pathes}`, async ({ page }) => {
+    await page.goto(getTestUrl('paper', ));
+
+    await page.setViewportSize(viewportSize);
+    await page.emulateMedia({ media: 'print' });
+    await expect(page.getByTestId('root-document')).toBeVisible();
+
+    //await page.pdf({ path: ['public'].concat(...pathes.concat(`cover.pdf`)).join("/"), format: 'A4', landscape: true })
+    //await page.getByTestId('root-document').screenshot({ path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
+    //await page.screenshot({ fullPage: true, path: ['public'].concat(...pathes.concat(`cover-full.png`)).join("/") })
+    await page.pdf({ 
+      scale:0.47,
+      format:'A4',
+      path: ['public'].concat(...pathes.concat(`${pathes[2].toLocaleLowerCase()}.pdf`)).join("/")
+     })
+    
+    // for (const i of [0,30]){
+    //   const questionId = `question-${i}`;
+    //   await page.getByTestId(questionId).screenshot({ path: ['public'].concat(...pathes.concat(`${questionId}.png`)).join("/") })
+    // }
+  });
+}

@@ -158,7 +158,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 > 
 > ![alt text](image-6.png)
 
-# 14 Jaké je obsah šedé části?
+# 14 Jaký je obsah šedé části?
 
 Pro výpočet použijte zaokrouhlenou hodnotu čísla $\pi$ z tabulky na začátku testového sešitu.
 - [A] 20,28 cm^2^

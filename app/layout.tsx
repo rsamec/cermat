@@ -1,5 +1,5 @@
 
-import { Inter } from 'next/font/google'
+import { Amatic_SC, Baskervville, Chakra_Petch, Comic_Neue, David_Libre, EB_Garamond, Georama, Inter, Inter_Tight, Khand, Lora, Merriweather, Open_Sans, Playfair_Display, PT_Sans, PT_Serif, Roboto, Roboto_Slab, Source_Code_Pro, Source_Serif_4 } from 'next/font/google'
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -62,8 +62,18 @@ export const metadata: Metadata = {
   ]
 };
 
-const inter = Inter({ subsets: ['latin'] })
-//const inter = Grandstander({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
+//const inter = David_Libre({ subsets: ['latin'], weight:"400" })
+//const inter = Chakra_Petch({ subsets: ['latin'], weight:"400" })
+//const inter = Rock_Salt({ subsets: ['latin'], weight:"400" })
+//const inter = Comic_Neue({ subsets: ['latin'], weight:"400" })
+//const inter = PT_Sans({ subsets: ['latin'], weight:"400" })
+const inter = Open_Sans({ subsets: ['latin'] })
+//const inter = Source_Serif_4({ subsets: ['latin'], weight:"400" })
+//const inter = Source_Code_Pro({ subsets: ['latin'], weight:"400" })
+//const inter = Georama({ subsets: ['latin'], weight:"400" })
+
+
 
 
 export default function RootLayout({

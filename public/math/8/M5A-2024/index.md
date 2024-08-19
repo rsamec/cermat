@@ -1,4 +1,4 @@
-<# 1 Vypočtěte:
+# 1 Vypočtěte:
 
 ## 1.1
 
@@ -71,7 +71,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7
 > V rovině leží přímka p a mimo ni body A a S.
 > ![alt text](image-4.png)
 
-# 7 Bod A je vrcho obdélníku ABCD. Bod S je střed strany AB tohoto obdélníkj. Na přímce p leží bod Q, střed některé ze sousedních stran strany AB tohoto obdélníku.
+# 7 Bod A je vrcho obdélníku ABCD. Bod S je střed strany AB tohoto obdélníku. Na přímce p leží bod Q, střed některé ze sousedních stran strany AB tohoto obdélníku.
 
 ## 7.1 Sestrojte vrchol B.
 ## 7.2 Na přímce p najděte a popište střed Q delší strany obdelníku, sestrojte a popište vrcholy C a D a obdélník ABCD narýsujte. Najděte všechna řešení.
