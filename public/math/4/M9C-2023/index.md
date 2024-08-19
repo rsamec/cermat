@@ -86,6 +86,7 @@ VÝCHOZÍ TEXT A TABULKA K ÚLOZE 8
 > V obchodě s oříšky prodávají různé směsi. Jejich cena závisí pouze na hmotnosti a ceně 
 > použitých surovin. Tabulka udává ceny za 1 kg jednotlivých surovin. 
 > 
+> 
 > |Surovina |Cena za 1 kg|
 > |---|:---:|
 > |Arašídy |80 korun|
@@ -176,7 +177,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 13
 
 > Pětiúhelník *ABCDE* se skládá z rovnoramenného, rovnostranného a pravoúhlého trojúhelníku.\
 > Základnou rovnoramenného Trojúhelníku je strana *AB*.\
-> Strany *BC* a *AE* pětiúhelníku jsou rovnoběžné.\
+> Strany *BC* a *AE* pětiúhelníku jsou rovnoběžné.
 >  
 > ![alt text](image-4.png)
 >  
@@ -218,9 +219,11 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 **Kolik stran knihy Róza dosud nepřečetla?**
 
 ## 15.3 
-V knihovně jsou některé knihy psané německy, jiné anglicky a ostatní česky. 
-Německy psaných je 30 knih, což je 10 % všech knih v knihovně.  
-Anglicky psané knihy tvoří pětinu všech knih v knihovně. 
+V knihovně jsou některé knihy psané německy, jiné anglicky a ostatní česky.
+
+Německy psaných je 30 knih, což je 10 % všech knih v knihovně.
+Anglicky psané knihy tvoří pětinu všech knih v knihovně.
+
 **Kolik je v knihovně česky psaných knih?**
 
 - [A] méně než 210 

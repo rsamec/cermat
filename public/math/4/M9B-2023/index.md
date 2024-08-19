@@ -111,7 +111,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8
 
 # 8 
 ## 8.1 Tác má tvar kruhu o průměru 𝑑 a obsahu π⋅144 cm^2^. 
-**Vypočtěte v cm průměr 𝑑 tácu. **
+**Vypočtěte v cm průměr 𝑑 tácu.**
 ## 8.2 Plocha řezu dortu má obsah 200 cm^2^ a tvoří ji obdélník, který lze rozdělit na dva čtverce. 
 **Vypočtěte v cm^3^ objem celého dortu.**
 Výsledek zaokrouhlete na desítky cm^3^. 
@@ -231,7 +231,7 @@ VÝCHOZÍ TEXT K ÚLOZE 14
 ## 15.2 Během výletu Jakub utratil tři pětiny kapesného. Tři čtvrtiny z této utracené částky použil k nákupu turistické známky. 
 **Kolik procent z kapesného utratil Jakub za turistickou známku?**
 
-## 15.3 Na třídenním festivalu se první a druhý den prodal stejný počet vstupenek. Třetí den se prodalo o třetinu více vstupenek než druhý den.
+## 15.3 Na třídenním festivalu se první a druhý den prodal stejný počet vstupenek. Třetí den se prodalo o třetinu více vstupenek než druhý den. 
 **Kolik procent všech vstupenek prodaných během festivalu se prodalo třetí den?**
 
 - [A] méně než 40 % 
@@ -259,4 +259,5 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 16
 # 16 Určete, 
 ## 16.1 vybarvením kolika dalších polí jsme z 8. obrazce vytvořili 9. obrazec, 
 ## 16.2 o kolik se liší počet tmavých a světlých polí v 10. obrazci, 
-## 16.3 kolik světlých polí může mít obrazec, který má 400 tmavých polí. Najděte všechna řešení. 
+## 16.3 kolik světlých polí může mít obrazec, který má 400 tmavých polí.
+Najděte všechna řešení. 
