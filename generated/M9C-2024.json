@@ -3,26 +3,23 @@
     "1": {
       "verifyBy": {
         "kind": "equal",
-        "args": 45
+        "args": 35100
       },
       "points": 1,
       "inputBy": {
-        "kind": "number",
-        "args": {
-          "suffix": "hodin"
-        }
+        "kind": "number"
       }
     },
     "2": {
       "verifyBy": {
         "kind": "equal",
-        "args": 3140
+        "args": 5
       },
       "points": 2,
       "inputBy": {
         "kind": "number",
         "args": {
-          "suffix": "cm^2^"
+          "suffix": "cm"
         }
       }
     },
@@ -31,7 +28,7 @@
         "3.1": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "13/3"
+            "args": "21/2"
           },
           "points": 2,
           "inputBy": {
@@ -44,7 +41,7 @@
         "3.2": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "-1/3"
+            "args": "-16/5"
           },
           "points": 2,
           "inputBy": {
@@ -61,7 +58,7 @@
         "4.1": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "9a^2/16"
+            "args": "(64/9)b^2"
           },
           "points": 1,
           "inputBy": {
@@ -74,7 +71,7 @@
         "4.2": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "(3a+4)(3a-4)"
+            "args": "(2+x)(2-x)"
           },
           "points": 1,
           "inputBy": {
@@ -87,7 +84,7 @@
         "4.3": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "10(c-1)"
+            "args": "c+49"
           },
           "points": 2,
           "inputBy": {
@@ -104,7 +101,7 @@
         "5.1": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "x=-1.1)"
+            "args": "x=9"
           },
           "points": 2,
           "inputBy": {
@@ -117,7 +114,7 @@
         "5.2": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "y=1.5"
+            "args": "x=2"
           },
           "points": 2,
           "inputBy": {
@@ -134,26 +131,26 @@
         "6.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 306
-          },
-          "points": 2,
-          "inputBy": {
-            "kind": "number",
-            "args": {
-              "suffix": "cm^2^"
-            }
-          }
-        },
-        "6.2": {
-          "verifyBy": {
-            "kind": "equal",
-            "args": 15
+            "args": 8
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
               "suffix": "cm"
+            }
+          }
+        },
+        "6.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 88
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm^2^"
             }
           }
         }
@@ -164,26 +161,26 @@
         "7.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 8
+            "args": 6
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "dívek"
+              "suffix": "m"
             }
           }
         },
         "7.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 26
+            "args": 2
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "žáků"
+              "suffix": "m"
             }
           }
         }
@@ -194,26 +191,26 @@
         "8.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 43
+            "args": 78
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm^2^"
+              "suffix": "stupňů"
             }
           }
         },
         "8.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 51
+            "args": 2
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm"
+              "suffix": "stupňů"
             }
           }
         }
@@ -342,7 +339,7 @@
     "13": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "A"
+        "args": "D"
       },
       "points": 2,
       "inputBy": {
@@ -352,7 +349,7 @@
     "14": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "D"
+        "args": "E"
       },
       "points": 2,
       "inputBy": {
@@ -364,7 +361,7 @@
         "15.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": false
+            "args": true
           },
           "points": 1,
           "inputBy": {
@@ -374,7 +371,7 @@
         "15.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": true
+            "args": false
           },
           "points": 1,
           "inputBy": {
@@ -384,7 +381,7 @@
         "15.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": false
+            "args": true
           },
           "points": 1,
           "inputBy": {
@@ -413,7 +410,7 @@
         "16.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": "E"
           },
           "points": 2,
           "inputBy": {
@@ -423,7 +420,7 @@
         "16.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "C"
+            "args": "D"
           },
           "points": 2,
           "inputBy": {
@@ -433,7 +430,7 @@
         "16.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "E"
+            "args": "B"
           },
           "points": 2,
           "inputBy": {
@@ -445,7 +442,7 @@
   },
   "metadata": {
     "info": {
-      "code": "M9PAD24C0T01",
+      "code": "M9PCD24C0T03",
       "maxPoints": 50,
       "questions": {
         "closed": 6,

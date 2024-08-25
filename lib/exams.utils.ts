@@ -9,9 +9,13 @@ import M7B_2023 from './exams/M7B-2023';
 
 import M9A_2024 from './exams/M9A-2024';
 import M9B_2024 from './exams/M9B-2024';
+import M9C_2024 from './exams/M9C-2024';
+import M9D_2024 from './exams/M9D-2024';
 
 import M9A_2023 from './exams/M9A-2023';
 import M9B_2023 from './exams/M9B-2023';
+import M9C_2023 from './exams/M9C-2023';
+import M9D_2023 from './exams/M9D-2023';
 import MMA_2023 from './exams/MMA-2023';
 
 import C5A_2024 from './exams/C5A-2024';
@@ -61,8 +65,13 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
 
   { pathes: math4Years.concat("M9A-2024"), quiz: M9A_2024, config: { questions: true } },
   { pathes: math4Years.concat("M9B-2024"), quiz: M9B_2024, config: { questions: true } },
+  { pathes: math4Years.concat("M9C-2024"), quiz: M9C_2024, config: { questions: true } },
+  { pathes: math4Years.concat("M9D-2024"), quiz: M9D_2024, config: { questions: true } },  
+
   { pathes: math4Years.concat("M9A-2023"), quiz: M9A_2023, config: { questions: true } },
-  { pathes: math4Years.concat("M9B-2023"), quiz: M9B_2023, config: { questions: false } },
+  { pathes: math4Years.concat("M9B-2023"), quiz: M9B_2023, config: { questions: true } },
+  { pathes: math4Years.concat("M9C-2023"), quiz: M9C_2023, config: { questions: true } },
+  { pathes: math4Years.concat("M9D-2023"), quiz: M9D_2023, config: { questions: true } },
 
   { pathes: mathDiploma.concat("MMA-2023"), quiz: MMA_2023, config: { questions: true } },
 

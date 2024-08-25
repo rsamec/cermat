@@ -26,11 +26,11 @@ def merge_pdfs(directory_paths, output_path):
 
 # List of directories to search for PDFs
 directory_paths = [
-    'public/cz',    
+    'public/math',    
 ]
 
 # Output path for the merged PDF
-output_path = 'generated/cz.pdf'
+output_path = 'generated/math.pdf'
 
 # Call the function to merge PDFs
 merge_pdfs(directory_paths, output_path)

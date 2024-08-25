@@ -9,7 +9,6 @@
       "inputBy": {
         "kind": "number",
         "args": {
-          "prefix": "o",
           "suffix": "km"
         }
       }
@@ -23,7 +22,6 @@
       "inputBy": {
         "kind": "number",
         "args": {
-          "prefix": "o",
           "suffix": "%"
         }
       }
@@ -33,7 +31,7 @@
         "3.1": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "-(1+1/9)"
+            "args": "-10/9"
           },
           "points": 2,
           "inputBy": {
@@ -46,7 +44,7 @@
         "3.2": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "-(7+7/9)"
+            "args": "-70/9"
           },
           "points": 2,
           "inputBy": {
@@ -119,7 +117,7 @@
         "5.2": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "y=21/7"
+            "args": "x=3"
           },
           "points": 2,
           "inputBy": {
@@ -166,7 +164,7 @@
         "7.1": {
           "verifyBy": {
             "kind": "equalMathExpression",
-            "args": "x+x/2"
+            "args": "1.5x"
           },
           "points": 2,
           "inputBy": {
@@ -179,14 +177,12 @@
         "7.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 52
+            "args": 58
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
-            "args": {
-              "suffix": "modelů"
-            }
+            "args": {}
           }
         }
       }
@@ -201,9 +197,7 @@
           "points": 2,
           "inputBy": {
             "kind": "number",
-            "args": {
-              "suffix": "kruhů"
-            }
+            "args": {}
           }
         },
         "8.2": {
@@ -215,7 +209,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": ".obrazec"
+              "suffix": "."
             }
           }
         }
@@ -245,7 +239,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": "9-result.jpeg"
+            "src": "result-5.png"
           }
         }
       },
@@ -295,7 +289,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": "10-result.jpeg"
+            "src": "result-6.png"
           }
         }
       },
@@ -450,8 +444,8 @@
       "code": "M9PBD24C0T02",
       "maxPoints": 50,
       "questions": {
-        "closed": 5,
-        "opened": 11
+        "closed": 6,
+        "opened": 10
       }
     }
   }

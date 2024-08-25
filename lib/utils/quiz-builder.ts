@@ -77,6 +77,11 @@ export const task2Max4Points = {
     kind: 'group' as const, args: [{ points: 4, min: 2 }, { points: 2, min: 1 }]
   }
 }
+export const task2Max3Points = {
+  computeBy: {
+    kind: 'group' as const, args: [{ points: 3, min: 2 }, { points: 2, min: 1 }]
+  }
+}
 
 const points = [
   { value: 0, name: "0 bodů" }, { value: 1, name: "1 bod" }, { value: 2, name: "2 body" },

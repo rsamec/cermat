@@ -32,7 +32,7 @@
     "mathlive": "^0.98.6",
     "next": "13.4.19",
     "npm-watch": "^0.11.0",
-    "outstatic": "^1.4.7",
+    "outstatic": "^1.4.9",
     "react": "^18",
     "react-dom": "^18",
     "react-redux": "^9.0.4",
