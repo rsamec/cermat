@@ -10,7 +10,7 @@ const form = rootGroup({
 }, {
 
   1: number(35100),
-  2: number(5, {suffix: 'cm' }, twoPoints),
+  2: number(5, { suffix: 'cm' }, twoPoints),
   3: group({
     3.1: mathExpr("21/2", { hintType: 'fraction' }, twoPoints),
     3.2: mathExpr("-16/5", { hintType: 'fraction' }, twoPoints),
@@ -29,15 +29,15 @@ const form = rootGroup({
     6.2: number(88, { suffix: 'cm^2^' }, twoPoints),
   }),
   7: group({
-    7.1: number(6, { suffix:'m' }, twoPoints),
-    7.2: number(2, { suffix:'m'}, twoPoints)
+    7.1: number(6, { suffix: 'm' }, twoPoints),
+    7.2: number(2, { suffix: 'm' }, twoPoints)
   }),
   8: group({
     8.1: number(78, { suffix: 'stupňů' }, twoPoints),
     8.2: number(2, { suffix: 'stupňů' }, twoPoints),
   }),
-  9: selfEvaluateImage("image-9.png", threePoints),
-  10: selfEvaluateImage("image-10.png", threePoints),
+  9: selfEvaluateImage("image-9.png", threePoints, ['steps9', 'q9']),
+  10: selfEvaluateImage("image-10.png", threePoints, ['steps10', 'q10']),
   11: option('B', twoPoints),
   12: option('C', twoPoints),
   13: option('D', twoPoints),
@@ -49,10 +49,10 @@ const form = rootGroup({
   }, task3Max3Points),
   16: group({
     16.1: option('E', twoPoints),
-    16.2: option('D',twoPoints),
+    16.2: option('D', twoPoints),
     16.3: option('B', twoPoints),
   }),
- 
+
 
 });
 export default form;

@@ -4,13 +4,13 @@ import { TreeNode } from "./tree.utils"
 
 
 export type MixedChildren<T> = { [K in keyof T]: T[K] extends AnswerGroup<any> ? T[K] : AnswerMetadata<any> };
-
+export type ObservableCells = string[]
 export type AnswerInputBy = ComponentFunctionSpec | ComponentFunctionSpec[] | { [index: string]: ComponentFunctionSpec }
 export interface AnswerMetadata<T> {
   verifyBy: ValidationFunctionSpec<T>
   points?: number
   inputBy?: AnswerInputBy
-
+  observableCells?: ObservableCells
 }
 
 export interface AnswerInfo {

@@ -1,6 +1,6 @@
 import { SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
 import { ComponentFunctionSpec, LatexExpressionComponentFunctionArgs, LatexExpressionComponentFunctionSpec, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
-import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren } from "./quiz-specification";
+import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren, ObservableCells } from "./quiz-specification";
 
 export function rootGroup<T>(info: AnswerInfo, children: MixedChildren<T>) {
   return new AnswerGroupImpl<T>(children, { info });
@@ -160,7 +160,7 @@ export function wordsGroup(slova: { [key: string]: string }, { points }: { point
     }, {})
   } as const
 }
-export function numbersGroup(numbers: { [key: string]: number}, { points }: { points?: number } = { points: 1 }) {
+export function numbersGroup(numbers: { [key: string]: number }, { points }: { points?: number } = { points: 1 }) {
   return {
     verifyBy: { kind: 'equal', args: numbers },
     points,
@@ -176,16 +176,17 @@ export function sortedOptions(sortedOptions: string[], { points }: { points?: nu
   return { verifyBy: { kind: 'equalSortedOptions', args: sortedOptions }, points, inputBy: { kind: 'sortedOptions' } } as const
 }
 
-export function selfEvaluateImage(src: string, points: { points?: number } = { points: 1 }) {
-  return selfEvaluate({ kind: 'image' as const, src }, points);
+export function selfEvaluateImage(src: string, points: { points?: number } = { points: 1 }, observableCells?: ObservableCells) {
+  return selfEvaluate({ kind: 'image' as const, src }, points, observableCells);
 }
-export function selfEvaluateText(content: string, { points }: { points?: number } = { points: 1 }) {
-  return selfEvaluate({ kind: 'text' as const, content }, { points });
+export function selfEvaluateText(content: string, { points }: { points?: number } = { points: 1 }, observableCells?: ObservableCells) {
+  return selfEvaluate({ kind: 'text' as const, content }, { points }, observableCells);
 }
-export function selfEvaluate(hint: SelfEvaluateText | SelfEvaluateImage, { points }: { points?: number } = { points: 1 }) {
+export function selfEvaluate(hint: SelfEvaluateText | SelfEvaluateImage, { points }: { points?: number } = { points: 1 }, observableCells?: ObservableCells) {
   const options = getPoints(points ?? 1)
   return {
-    verifyBy: { kind: 'selfEvaluate', args: { options, hint } } as SelfEvaluateValidator, inputBy: { kind: 'options' as const, args: options }
-
+    verifyBy: { kind: 'selfEvaluate', args: { options, hint } } as SelfEvaluateValidator,
+    inputBy: { kind: 'options' as const, args: options },
+    observableCells
   } as const
 }

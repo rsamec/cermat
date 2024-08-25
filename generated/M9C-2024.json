@@ -264,7 +264,11 @@
             "name": "3 body"
           }
         ]
-      }
+      },
+      "observableCells": [
+        "steps9",
+        "q9"
+      ]
     },
     "10": {
       "verifyBy": {
@@ -314,7 +318,11 @@
             "name": "3 body"
           }
         ]
-      }
+      },
+      "observableCells": [
+        "steps10",
+        "q10"
+      ]
     },
     "11": {
       "verifyBy": {
