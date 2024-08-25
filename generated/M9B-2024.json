@@ -22,6 +22,7 @@
       "inputBy": {
         "kind": "number",
         "args": {
+          "prefix": "o",
           "suffix": "%"
         }
       }
@@ -117,7 +118,7 @@
         "5.2": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "x=3"
+            "args": "y=3"
           },
           "points": 2,
           "inputBy": {
@@ -239,7 +240,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": "result-5.png"
+            "src": "image-4.png"
           }
         }
       },
@@ -289,7 +290,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": "result-6.png"
+            "src": "image-9.png"
           }
         }
       },

@@ -114,7 +114,7 @@
         "5.2": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "x=2"
+            "args": "y=3"
           },
           "points": 2,
           "inputBy": {
