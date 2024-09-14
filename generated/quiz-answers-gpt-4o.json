@@ -1,0 +1,51 @@
+{
+  "M9B-2024": {
+    "1": 1.5,
+    "2": 20,
+    "9": "To construct the rhombus ABCD, find the intersection of the line OA and a circle centered at O with radius equal to the length of OA. Let the intersection point be C. Because the rhombus has all sides equal, use the distance OA (or OB) to establish the remaining points D such that AB = BC = CD = DA.",
+    "10": "The solution involves geometry construction. Without performing physical constructions, the result cannot be provided in text form. However, the problem indicates multiple configurations are possible depending on the radius of circle k and position of points K and L. No numerical answer exists for such constructive tasks.",
+    "11": {
+      "value": "B"
+    },
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "B"
+    },
+    "3.1": "-17\\45",
+    "3.2": "-25\\12",
+    "4.1": "9 + 12x + 4x^2",
+    "4.2": "(100-x)(80+x)",
+    "4.3": "(x+5)(-x-3)",
+    "5.1": "x = \\frac{-2.8}{1.1}",
+    "5.2": "y = 1",
+    "6.1": 288,
+    "6.2": 64,
+    "7.1": "3\\2 * x",
+    "7.2": 58,
+    "8.1": 64,
+    "8.2": 181,
+    "15.1": {
+      "value": false
+    },
+    "15.2": {
+      "value": true
+    },
+    "15.3": {
+      "value": true
+    },
+    "16.1": {
+      "value": "B"
+    },
+    "16.2": {
+      "value": "C"
+    },
+    "16.3": {
+      "value": "C"
+    }
+  }
+}

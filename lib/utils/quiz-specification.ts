@@ -1,3 +1,4 @@
+import { SubjectType } from "@/components/utils/exam";
 import { ValidationFunctionSpec } from "./assert";
 import { ComponentFunctionSpec, ComputeFunctionSpec } from "./catalog-function";
 import { TreeNode } from "./tree.utils"
@@ -94,14 +95,15 @@ export interface AnswerTreeNode<T> {
 }
 
 export function calculatePoints<T>(tree: TreeNode<AnswerTreeNode<T>>,
-  calculate: (computeBy: ComputeFunctionSpec, leafs: AnswerMetadataTreeNode<any>[]) => number) {
+  calculate: (computeBy: ComputeFunctionSpec | null, leafs: AnswerMetadataTreeNode<any>[]) => number) {
 
-  const traverse = (node: TreeNode<AnswerTreeNode<T>>, leafs: AnswerMetadataTreeNode<T>[]) => {
+  const traverse = (node: TreeNode<AnswerTreeNode<T>>, leafs: AnswerMetadataTreeNode<T>[], level: number = 0) => {
     let total = 0;
 
     // Check if the current node is a leaf (no children)
     if (!node.children || node.children.length === 0) {
       leafs.push(node.data as AnswerMetadataTreeNode<T>);
+      return level === 0 ? calculate(null, leafs) : 0;
     }
     else {
       const group = node.data as AnswerGroupTreeNode<T>;
@@ -109,9 +111,12 @@ export function calculatePoints<T>(tree: TreeNode<AnswerTreeNode<T>>,
       leafs = []
       // Recursively calculate total points for each child node						
       for (const childNode of node.children) {
-        total += traverse(childNode, leafs);
+        const points = traverse(childNode, leafs, level + 1);
+        total += points;
+        //if (level == 0) console.log(childNode.data.id, points)
       }
       //points for leafs    
+      //if (level == 0) console.log(leafs.map(d => d.id))
       total += leafs.length > 0 ? calculate(group.node.metadata?.computeBy!, leafs) : 0;
     }
     return total
@@ -135,7 +140,7 @@ export function calculateMaxTotalPoints<T>(tree: TreeNode<AnswerTreeNode<T>>) {
     return out;
   }, 0)
 
-  const calculate = (computeBy: ComputeFunctionSpec, leafs: AnswerMetadataTreeNode<any>[]) => {
+  const calculate = (computeBy: ComputeFunctionSpec | null, leafs: AnswerMetadataTreeNode<any>[]) => {
 
     const res = computeBy != null && computeBy.kind == "group" ?
       computeBy.args.reduce((out, d) => out = out > d.points ? out : d.points, 0)
@@ -152,4 +157,12 @@ export function calculateMaxTotalPoints<T>(tree: TreeNode<AnswerTreeNode<T>>) {
 export type QuizQuestionCode = `${number}${'.' | ''}${number | ''}${'.' | ''}${number | ''}`;
 export function isComponentFunctionSpec(spec: AnswerInputBy): spec is ComponentFunctionSpec {
   return (spec as any).kind != null
+}
+
+function parseQuestionCodeToNumbers(number: QuizQuestionCode) {
+  return number.split(".").map(d => parseInt(d, 10));
+}
+
+export function getChildrenIdsByGroup(metaData: AnswerGroup<any>, ids: number[]) {
+  return ids.flatMap(id => Object.keys((metaData.children[id] as any)?.children ?? {})).map(d => parseQuestionCodeToNumbers(d as QuizQuestionCode)[1])
 }

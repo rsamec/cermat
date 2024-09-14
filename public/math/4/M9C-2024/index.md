@@ -46,15 +46,17 @@ $$
 # 5 Řešte rovnice. 
 **Do záznamového archu** uveďte u obou podúloh **celý postup řešení**. 
 Zkoušku nezapisujte. 
+
 ## 5.1 
 $$
 \left(x + \frac{1}{2}x)\right)\cdot2 = \left(x + \frac{1}{6}x\right)\cdot2+6
 $$
-## 5.2 
- 
+
+## 5.2  
 $$
 \frac12\cdot(x+2)-(x-2)^2 = 6-x^2
 $$
+
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6 
 ===
 

@@ -58,3 +58,25 @@ export function getAllLeafsWithAncestors<T>(tree: TreeNode<T>, applyChildSetToPa
 
   return result;
 }
+
+export function getNodesWithAncestors<T>(tree: TreeNode<T>, selector: (node:T) => boolean): LeafWithAncestors<T>[] {
+  const result: LeafWithAncestors<T>[] = [];
+
+  function traverse(node: TreeNode<T>, ancestors: TreeNode<T>[] = []) {
+    const currentAncestors = [...ancestors, node];
+
+    if ( selector(node.data)){
+      result.push({ leaf: node, ancestors: currentAncestors });
+    }
+    else if (!node.children || node.children.length === 0) {
+      // Node is a leaf - end of recursion
+    } else {
+      // Node has children, continue traversal
+      node.children.forEach((child) => traverse(child, currentAncestors));
+    }
+  }
+
+  traverse(tree);
+
+  return result;
+}

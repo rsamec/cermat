@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls, extractNumberRange, extractOptionRange, formatTime, normalizeImageUrlsToAbsoluteUrls, strToSimpleHtml } from './utils';
+import { cls, extractNumberRange, extractOptionRange, formatTime, intersection, normalizeImageUrlsToAbsoluteUrls, strToSimpleHtml } from './utils';
 
 test('simple string', () => {
 
@@ -64,8 +64,13 @@ test('format time to minutes and seconds', () => {
 })
 
 test('replace markdown image urls to absolute urls', () => {
-  const assetPathes = ["https://www.eforms.cz","math","5"];
+  const assetPathes = ["https://www.eforms.cz", "math", "5"];
   expect(normalizeImageUrlsToAbsoluteUrls("![alt text](image.png)", assetPathes)).toEqual("![alt text](https://www.eforms.cz/math/5/image.png)")
-  expect(normalizeImageUrlsToAbsoluteUrls(">![OBRAZEK1](./1.jpeg)",assetPathes)).toEqual(">![OBRAZEK1](https://www.eforms.cz/math/5/1.jpeg)")
+  expect(normalizeImageUrlsToAbsoluteUrls(">![OBRAZEK1](./1.jpeg)", assetPathes)).toEqual(">![OBRAZEK1](https://www.eforms.cz/math/5/1.jpeg)")
 })
 
+test('intersection', () => {
+  const array1 = ["apple", "banana", "orange", "grape"];
+  const array2 = ["banana", "apple", "grape", "pineapple"];
+  expect(intersection(array1, array2)).toBe(3);
+})

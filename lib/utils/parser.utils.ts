@@ -1,7 +1,8 @@
 import { SyntaxNodeRef, Tree } from "@lezer/common";
 import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
 import { tags as t } from "@lezer/highlight";
-import { Option, extractOptionRange } from "./utils";
+import { Maybe, Option, extractNumberRange, extractOptionRange } from "./utils";
+import { createTree, getNodesWithAncestors } from "./tree.utils";
 
 export const Abbreviations = {
   H1: "ATXHeading1",
@@ -66,7 +67,7 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
   })
   return chunks.length > 0 ? chunks : [input];
 }
-export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options:  Option<string>[] };
+export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options: Option<string>[] };
 export type QuestionHtml = ParsedQuestion & { contentHtml: string }
 export type State = { position: number, type?: { name: string }, header: string, options: Option<string>[], excludeChunks: PositionChunk[] }
 export function chunkHeadingsList(tree: Tree, input: string) {
@@ -193,4 +194,49 @@ export function countMaxChars(str: string, charToCount: string): number {
   const matches = str.match(pattern) || [];
   const maxCount = matches.length == 0 ? 0 : Math.max(...matches.map(match => match.length));
   return maxCount;
+}
+
+export function getQuizBuilder(tree: Tree, input: string) {
+  const rawHeadings = chunkHeadingsList(tree, input);
+
+  function order(name: Maybe<string>) {
+    if (name == Abbreviations.ST) return 1;
+    if (name == Abbreviations.H1) return 2;
+    return 3;    
+  }
+  
+  const headingsTree = createTree(rawHeadings.map(data => ({ data })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
+  
+
+  const rootQuestions = getNodesWithAncestors({ data: {} as ParsedQuestion, children: headingsTree }, d => d.type?.name == Abbreviations.H1);
+  const isInRange = (number: number, range: [number, number] | null) => range != null ? number >= range[0] && number <= range[1] : false;
+  const toContent = (items: { header: string, content: string }[]) => items.map(d => (d.header ?? "") + (d.content ?? "")).join("");
+
+  const values = rootQuestions.map(d => {
+    const root = d.ancestors[1].data;
+    const id = Math.floor(parseFloat(d.leaf.data.header.replaceAll("#", "")));
+    const range = root.type?.name == Abbreviations.ST ? extractNumberRange(root.header) : null;
+    
+    return {
+      title: d.leaf.data.header,
+      id,
+      content: (selectedIds: number[]) => {
+        //const children = d.leaf.children ?? []; 
+        const children = d.ancestors.slice(-1)[0].children ?? [];
+        const items = [d.leaf.data].concat(children.map(d => d.data));
+        return isInRange(id, range) && !selectedIds?.some(d => d < id && isInRange(d, range))
+          ? toContent([root].concat(items))
+          : toContent(items)
+      }
+    }
+  })
+  const output = {
+    questions: values.map(d => ({ id: d.id, title: d.title })),
+    content: (ids: number[]) => {
+      const filteredQuestions = values.filter(d => ids.includes(d.id));
+      return filteredQuestions.map(d => d.content(filteredQuestions.map(d => d.id))).join("")
+    }
+  }
+  return output;
+
 }

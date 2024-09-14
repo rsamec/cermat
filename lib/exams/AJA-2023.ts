@@ -27,13 +27,13 @@ const form = rootGroup(
             2.12: optionBool(false),
         }),
         3: group({
-            3.13: match(/(?:a|her) friend(?:s)?/, twoPoints),
+            3.13: match(/(?:a |her )?friend(?:s)?/, twoPoints),
             3.14: number(1962, {}, twoPoints),
             3.15: number(77590, {}, twoPoints),
             3.16: number(4, {}, twoPoints),
-            3.17: match(/(?:a) stone(?:s)?/, twoPoints),
-            3.18: match(/(?:a|the) (bath|bathroom)/, twoPoints),
-            3.19: match(/(?:an|the) architect/, twoPoints),
+            3.17: match(/(?:a )?stone(?:s)?/, twoPoints),
+            3.18: match(/(?:a |the )?(bath|bathroom)/, twoPoints),
+            3.19: match(/(?:an |the )?architect/, twoPoints),
             '3.20': word("Hughes", twoPoints),
         }),
         4: group({

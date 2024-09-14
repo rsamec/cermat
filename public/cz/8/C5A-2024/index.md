@@ -1,4 +1,3 @@
-
 VÝCHOZÍ TEXT K ÚLOHÁM 1–3
 ====
 

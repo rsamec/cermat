@@ -352,8 +352,11 @@
       "children": {
         "15.1": {
           "verifyBy": {
-            "kind": "equal",
-            "args": "kteří budí důvěru"
+            "kind": "match",
+            "args": {
+              "source": "kteří budí důvěru",
+              "flags": "i"
+            }
           },
           "points": 1,
           "inputBy": {
@@ -362,8 +365,11 @@
         },
         "15.2": {
           "verifyBy": {
-            "kind": "equal",
-            "args": "promícháním těchto barev"
+            "kind": "match",
+            "args": {
+              "source": "promícháním těchto barev",
+              "flags": "i"
+            }
           },
           "points": 1,
           "inputBy": {

@@ -118,7 +118,12 @@ export function word(slovo: string, { points }: { points: number } = { points: 1
 export function match(pattern: RegExp, { points }: { points: number } = { points: 1 }) {
   return {
     verifyBy:
-      { kind: "match", args: pattern.source },
+    {
+      kind: "match", args: {
+        source: pattern.source,
+        flags: pattern.flags
+      }
+    },
     points,
     inputBy: {
       kind: 'text'

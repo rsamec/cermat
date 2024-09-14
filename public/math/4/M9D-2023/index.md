@@ -1,5 +1,3 @@
-V úlohách 1, 2, 3.1, 3.2, 4.1, 4.2, 6, 7, 8 a 16 přepište do záznamového archu pouze výsledky. 
-
 # 1 Hmotnosti dvou závaží jsou v poměru 3∶5 a liší se o 600 g. 
 **Vypočtěte v gramech hmotnost lehčího závaží.**
  

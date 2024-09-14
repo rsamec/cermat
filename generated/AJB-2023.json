@@ -164,7 +164,10 @@
         "3.16": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:a|the) map(?:s)?"
+            "args": {
+              "source": "(?:a|the) map(?:s)?",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -174,7 +177,10 @@
         "3.17": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:a|the) concert(?:s)?"
+            "args": {
+              "source": "(?:a|the) concert(?:s)?",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -184,7 +190,10 @@
         "3.18": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:a|the) sofa(?:s)?"
+            "args": {
+              "source": "(?:a|the) sofa(?:s)?",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -194,7 +203,10 @@
         "3.19": {
           "verifyBy": {
             "kind": "match",
-            "args": "rose(?:s)"
+            "args": {
+              "source": "rose(?:s)",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -204,7 +216,10 @@
         "3.20": {
           "verifyBy": {
             "kind": "match",
-            "args": "March (the )?3(?:rd)?|3(?:rd)? March|3\\.3"
+            "args": {
+              "source": "March (the )?3(?:rd)?|3(?:rd)? March|3\\.3",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {

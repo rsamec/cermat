@@ -1,4 +1,4 @@
-import { optionBool, group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup, word } from "../utils/quiz-builder";
+import { optionBool, group, match, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup, word } from "../utils/quiz-builder";
 
 const form = rootGroup(
   {
@@ -47,8 +47,8 @@ const form = rootGroup(
     13: option("C"),
     14: sortedOptions(["E", "B", "D", "C", "A", "F"], threePoints),
     15: group({
-      15.1: word('kteří budí důvěru'),
-      15.2: word('promícháním těchto barev'),
+      15.1: match(/kteří budí důvěru/i),
+      15.2: match(/promícháním těchto barev/i),
     }),
     16: words("4,9,13", threePoints),
     17: words('zrcadly,kroužku,zaměřil,nechyběly', fourPoints),

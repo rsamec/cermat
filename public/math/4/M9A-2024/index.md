@@ -89,6 +89,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8
 > 
 > V podúlohách 8.1 a 8.2 pro výpočet použijte zaokrouhlenou hodnotu čísla $\pi$ z tabulky na začátku testového sešitu.
 
+# 8
 ## 8.1 Výpočítejte obsah šedého obrazce.
 Výsledek uveďte v cm^2^ a zaokrouhlete ho na celé cm^2^.
 

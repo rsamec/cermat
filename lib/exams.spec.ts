@@ -4,9 +4,11 @@ import { GFM, Subscript, Superscript, parser } from '@lezer/markdown';
 import { Maybe, matchNumberListCount, Option } from "./utils/utils";
 import { TreeNode, createTree, getAllLeafsWithAncestors } from "./utils/tree.utils";
 import { loadMarkdown } from "./utils/file.utils";
-import { Abbreviations, OptionList, ParsedQuestion, ShortCodeMarker, chunkHeadingsList } from "./utils/parser.utils";
-
+import { Abbreviations, OptionList, ParsedQuestion, ShortCodeMarker, chunkHeadingsList, getQuizBuilder } from "./utils/parser.utils";
 import examTestCases from "./exams.utils";
+
+const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
+const mdParserWithoutOptions = parser.configure([[ShortCodeMarker], GFM, Subscript, Superscript]);
 
 function isLanguageTest(subject: string){
   return !(subject == "math" || subject == "cz")
@@ -35,7 +37,6 @@ async function parseMarkdownTree(pathes: string[]) {
   const quizContent = await loadMarkdown(pathes.concat(['index.md']));
 
 
-  const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
   const parsedTree = mdParser.parse(quizContent);
   const headings = chunkHeadingsList(parsedTree, quizContent);
 
@@ -79,6 +80,20 @@ test.each(examTestCases)(`compute total max points $pathes`, ({ quiz, pathes }) 
 test.each(examTestCases.filter(d => d.config.questions))(`validate exam structure $pathes`, async ({ quiz, pathes }) => {
   const tree = convertTree(quiz);  
   await testQuestionDifference(pathes, tree)
+})
+
+
+
+test.each(examTestCases.filter((d,i) => d.config.questions))(`quiz content builder $pathes`, async ({ quiz, pathes }) => {
+   //load quiz
+   const quizContent = await loadMarkdown(pathes.concat(['index.md']));
+   //parse quiz
+   const contentTree = mdParserWithoutOptions.parse(quizContent);
+   const quizBuilder = getQuizBuilder(contentTree,quizContent);
+   
+   const questionIds = quizBuilder.questions.map(d => d.id);
+   console.log(pathes,questionIds)
+   expect(quizBuilder.content(questionIds)).toBe(quizContent.replace(/^\s+/g,''));
 })
 
 

@@ -25,9 +25,23 @@ test('parenthesis expression expressions', () => {
 })
 
 test('array equals - order of items is ignored', () => {
-  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "c"])(["a", "b", "c", "c"])).toBeUndefined()
-  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "c"])(["a", "c", "b", "c"])).toBeUndefined()
-  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "c"])(["a", "b"])).not.toBeUndefined()
-  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "c"])(["a", "b", "c"])).not.toBeUndefined()
-  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "c"])(["a", "b", "c", "c", "c"])).not.toBeUndefined()
+  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "d"])(["a", "b", "c", "d"])).toBeUndefined()
+  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "d"])(["a", "d", "b", "c"])).toBeUndefined()
+  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "d"])(["a", "b"])).not.toBeUndefined()
+  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "d"])(["a", "b", "c"])).not.toBeUndefined()
+  expect(CoreVerifyiers.EqualStringCollectionTo(["a", "b", "c", "d"])(["a", "b", "c", "d", "e"])).not.toBeUndefined()
+})
+
+test('assert match expression match', () => {
+  expect(CoreVerifyiers.MatchTo(/abc/)('Prefix abc suffix')).toBeUndefined()
+  expect(CoreVerifyiers.MatchTo(/abc/)('Prefixabcsuffix')).toBeUndefined()
+  expect(CoreVerifyiers.MatchTo(/abc/)('abc')).toBeUndefined()
+  expect(CoreVerifyiers.MatchTo(/abc/)('Prefix ab suffix')).not.toBeUndefined()
+  expect(CoreVerifyiers.MatchTo(/abc/)('Prefixabsuffix')).not.toBeUndefined()
+  expect(CoreVerifyiers.MatchTo(/abc/)('ab')).not.toBeUndefined()
+  
+  expect(CoreVerifyiers.MatchTo(/abc/i)('aBc')).toBeUndefined()
+  expect(CoreVerifyiers.MatchTo(/abc/)('aBc')).not.toBeUndefined()
+  
+
 })

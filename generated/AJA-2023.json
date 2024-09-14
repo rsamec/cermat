@@ -133,7 +133,10 @@
         "3.13": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:a|her) friend(?:s)?"
+            "args": {
+              "source": "(?:a |her )?friend(?:s)?",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -176,7 +179,10 @@
         "3.17": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:a) stone(?:s)?"
+            "args": {
+              "source": "(?:a )?stone(?:s)?",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -186,7 +192,10 @@
         "3.18": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:a|the) (bath|bathroom)"
+            "args": {
+              "source": "(?:a |the )?(bath|bathroom)",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -196,7 +205,10 @@
         "3.19": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:an|the) architect"
+            "args": {
+              "source": "(?:an |the )?architect",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {

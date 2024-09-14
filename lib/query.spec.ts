@@ -5,7 +5,7 @@ import { createTree, getAllLeafsWithAncestors } from "./utils/tree.utils";
 
 import { AnswerMetadata, convertTree } from "./utils/quiz-specification";
 import { GFM, Subscript, Superscript, parser } from "@lezer/markdown";
-import { loadMarkdown } from "./utils/file.utils";
+import { loadMarkdown, loadMarkdownWithAbsoluteImagesUrl } from "./utils/file.utils";
 import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, ParsedQuestion, QuestionHtml, countMaxChars, } from "./utils/parser.utils";
 import { Maybe, extractNumberRange, normalizeImageUrlsToAbsoluteUrls } from "./utils/utils";
 import { getVerifyFunction } from "./utils/assert";
@@ -169,10 +169,7 @@ test.each(examTestCases.filter(d => d.config.questions))(`generate sql queries $
   await fs.writeFile(file, finalSqlQuery);
 })
 
-async function normalizeQuizMarkdown(pathes: string[]) {
-  const quizContent = await loadMarkdown(pathes.concat(['index.md']));
-  return normalizeImageUrlsToAbsoluteUrls(quizContent,['https://www.eforms.cz'].concat(...pathes ?? []))
-}
+
 
 async function writeToFile(fileName:string, text: string){
   const ostmpdir = os.tmpdir();
@@ -183,8 +180,6 @@ async function writeToFile(fileName:string, text: string){
 }
 
 test.each(examTestCases.filter(d => d.config.questions))(`generate sql queries $pathes`, async (exam) => {
-  const textContent = await normalizeQuizMarkdown(exam.pathes);
-  await writeToFile(`${exam.pathes[2]}.md`, textContent);
-
-  
+  const textContent = await loadMarkdownWithAbsoluteImagesUrl(exam.pathes);
+  await writeToFile(`${exam.pathes[2]}.md`, textContent);  
 })

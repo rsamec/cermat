@@ -30,9 +30,9 @@ const form = rootGroup({
         3.15: word("TAJEVU", twoPoints),
         3.16: word("15:15", twoPoints),
         3.17: match(/(?:die )?Giraffen malen/, twoPoints),
-        3.18: match(/(?:ein|das) Familienticket|Ticket/, twoPoints),
-        3.19: match(/(?:eine|die) Kanne/, twoPoints),
-        '3.20': match(/(?:ein|das) Pferd/, twoPoints),
+        3.18: match(/(?:ein |das )?Familienticket|Ticket/, twoPoints),
+        3.19: match(/(?:eine |die )?Kanne/, twoPoints),
+        '3.20': match(/(?:ein |das )?Pferd/, twoPoints),
     }),
     4: group({
         4.21: option("C", twoPoints),

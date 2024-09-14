@@ -1,11 +1,15 @@
+import { intersect } from "mathjs"
 import { normalizeToString } from "./math.utils"
-import { removeSpaces, Option, areDeeplyEqual, isArraySame } from "./utils"
+import { option } from "./quiz-builder"
+import { removeSpaces, Option, areDeeplyEqual, isArraySame, intersection, normalizeToArray } from "./utils"
 
 export type ValidationFunctionArgs<T> = { args: T }
 export type EqualValidator<T> = ValidationFunctionArgs<T> & {
   kind: "equal"
 }
-export type MatchValidator = ValidationFunctionArgs<string> & {
+
+export type JsonRegExp = { source: string, flags: string }
+export type MatchValidator = ValidationFunctionArgs<JsonRegExp> & {
   kind: "match"
 }
 
@@ -36,6 +40,7 @@ export type EqualNumberCollectionValidator = ValidationFunctionArgs<number[]> & 
   kind: "equalNumberCollection"
 }
 
+
 export type SelfEvaluateText = {
   kind: 'text',
   content: string
@@ -55,78 +60,83 @@ export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
     return (control: T) => {
-      return control === value || areDeeplyEqual(control, value) ? undefined : { 'expected': value, 'actual': control };
+      return control === value || areDeeplyEqual(control, value) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
     }
   }
 
-  static MatchTo(pattern: string) {
-    const regex = new RegExp(pattern);
+  static MatchTo(pattern: JsonRegExp) {
+    const regex = new RegExp(pattern.source,pattern.flags);
     return (control: string) => {
-      return regex.test(control) ? undefined : { 'expected': pattern, 'actual': control };
+      return regex.test(control) ? undefined : { 'expected': pattern, 'actual': control, errorCount: null };
     }
   }
 
   static RatioEqualTo<T>(value: T) {
     return (control: T) => {
-      return typeof control === 'string' && removeSpaces(control) === value ? undefined : { 'expected': value, 'actual': control };
+      return typeof control === 'string' && removeSpaces(control) === value ? undefined : { 'expected': value, 'actual': control, errorCount: null };
     }
   }
 
   static MathExpressionEqualTo(value: string | number) {
     return (control: string) => {
-
-      return normalizeToString(control) === value ? undefined : { 'expected': value, 'actual': control };
+      return normalizeToString(control) === value ? undefined : { 'expected': value, 'actual': control, errorCount: null };
     }
   }
 
   static MathEquationEqualTo(value: string | boolean) {
     return (control: string | boolean) => {
       if (typeof value === 'boolean') {
-        return value === control ? undefined : { 'expected': value, 'actual': control };
+        return value === control ? undefined : { 'expected': value, 'actual': control, errorCount: null };
       }
       else {
         const controlValue = normalizeToString(control?.toString());
-        return value === removeSpaces(controlValue) ? undefined : { 'expected': value, 'actual': control };
+        return value === removeSpaces(controlValue) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
       }
     }
   }
 
   static OptionEqualTo<T>(value: T) {
     return (control: Option<T>) => {
-      return control?.value === value ? undefined : { 'expected': value, 'actual': control }
+      return control?.value === value || (value === true && control?.value === 'A') || (value === false && control?.value === 'N') ? undefined : { 'expected': value, 'actual': control, errorCount: null }
     }
   }
 
   static EqualStringCollectionTo(value: string[]) {
-    return (control: string[]) => {
-      return isArraySame(control.sort(), value.sort()) ? undefined : { 'expected': value, 'actual': control }
+    return (control: string[] | string) => {
+      const controlValue = normalizeToArray(control).map(d => d?.trim())
+      const errorCount = controlValue.length - intersection(controlValue, value) + Math.max(value.length - controlValue.length, 0);
+      return errorCount === 0 ? undefined : { 'expected': value, 'actual': controlValue, errorCount }
     }
   }
 
   static EqualNumberCollectionTo(value: number[]) {
-    return (control: number[]) => {
-      return isArraySame(control.sort((f, s) => f - s), value.sort((f, s) => f - s)) ? undefined : { 'expected': value, 'actual': control }
+    return (control: number[] | string) => {
+      const controlValue = normalizeToArray(control).map(d => parseInt(d));
+      const errorCount = Array.isArray(controlValue) ? controlValue.length - intersection(controlValue, value) + Math.max(value.length - controlValue.length, 0) : null;
+      return Array.isArray(controlValue) && errorCount === 0 ? undefined : { 'expected': value, 'actual': controlValue, errorCount }
     }
   }
 
 
   static SortedOptionsEqualTo(values: string[]) {
-    return (control: Option<string>[]) => {
-      const options = control ?? [];
-      return values.length === options.length && values.join() === options.map(d => d.value).join() ? undefined :
-        { 'expected': values, 'actual': options.map(d => d.value) }
+    return (control: Option<string>[] | string[] | string) => {
+      const options = normalizeToArray(control);      
+      return Array.isArray(options) && values.length === options.length && values.join() === options.map((d:any) => d.value ?? d).map(d => d?.trim()).join() ? undefined :
+        { 'expected': values, 'actual': options, errorCount: null }      
     }
   }
 
   static SelfEvaluateTo({ options }: { options: Option<number>[] }) {
     return (control: Option<number>) => {
-      return options[options.length - 1].value == control?.value ? null : control
+      return options[options.length - 1].value == control?.value ? null : { expected: options, actual: control, errorCount: null }
     }
   }
 }
 
 
-export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
+export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>)
+//: (values: any) => ({ expected: any, actual: any } | undefined)
+{
   switch (spec.kind) {
     case 'equal':
     case 'equalLatexExpression':
@@ -140,7 +150,7 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>) {
     case 'equalNumberCollection':
       return CoreVerifyiers.EqualNumberCollectionTo(spec.args);
     case 'equalMathExpression':
-      return CoreVerifyiers.MathExpressionEqualTo(spec.args);    
+      return CoreVerifyiers.MathExpressionEqualTo(spec.args);
     case 'equalMathEquation':
       return CoreVerifyiers.MathEquationEqualTo(spec.args);
     case 'equalOption':

@@ -2,7 +2,7 @@ import { RematchRootState, createModel } from '@rematch/core';
 import { RootModel } from './index';
 import { TreeNode, getAllLeafsWithAncestors } from '../utils/tree.utils';
 import { Answer, AnswerMetadataTreeNode, calculateMaxTotalPoints, calculatePoints } from '../utils/quiz-specification';
-import { getVerifyFunction } from '../utils/assert';
+import { getVerifyFunction, ValidationFunctionSpec } from '../utils/assert';
 import { GroupCompute } from '../utils/catalog-function';
 import { get, del, set } from '../utils/storage.utils';
 
@@ -91,6 +91,15 @@ export const quiz = createModel<RootModel>()({
     totalAnswers() {
       return slice(state => Object.keys(state.answers).length)
     },
+    points() {
+      return slice(state => state.tree?.children?.reduce((out, d) => {
+        out[d.data.id] = {
+          v: calculateTotalPoints({ tree: d, corrections: state.corrections, answers: state.answers }),
+          max: calculateMaxTotalPoints(d)
+        }
+        return out;
+      }, {} as Record<string, {v:number, max:number}>))
+    },    
   }),
   effects: (dispatch) => ({
     async initAsync({ tree, assetPath }: { tree: TreeNode<Answer<any>>, assetPath: string[] }, rootState: RematchRootState<RootModel>) {
@@ -124,9 +133,18 @@ const calculateCorrections = (questions: AnswerMetadataTreeNode<any>[], answers:
 };
 
 const verifyQuestion = (question: AnswerMetadataTreeNode<any>, answer: string) => {
-  const verifyBy = question.node.verifyBy;
+  return verifyQuestionResult(question.node.verifyBy, answer) == null
+}
+const verifyQuestionResult = (verifyBy: ValidationFunctionSpec<any>, answer: string) => {
   const validator = getVerifyFunction(verifyBy);
-  return validator(answer) == null;
+  return validator(answer);
+}
+const calculatePointsByErrorCount = (d: AnswerMetadataTreeNode<any>, answers: Record<string, any>) => {
+  const error = verifyQuestionResult(d.node.verifyBy, answers[d.id]);
+  if (error != null) {
+    return error.errorCount != null ? Math.max(Math.max((d.node.points ?? 0) - error.errorCount, 0)) : 0;
+  }
+  return d.node.points ?? 0;
 }
 
 
@@ -136,15 +154,18 @@ const calculateTotalPoints = ({ tree, corrections, answers }: { tree?: TreeNode<
 
   const calculateSum = (children: AnswerMetadataTreeNode<any>[]) => children.reduce((out, d) => {
     out += d.node.points == null && d.node.verifyBy.kind == "selfEvaluate"
-      ? (answers[d.id]?.value ?? 0) : corrections[d.id] ? (d.node.points ?? 0) : 0
+      ? (answers[d.id]?.value ?? 0)
+      : !corrections[d.id] && d.node.verifyBy.kind == "equalStringCollection" || d.node.verifyBy.kind == "equalNumberCollection"
+        ? calculatePointsByErrorCount(d, answers)
+        : corrections[d.id] ? (d.node.points ?? 0) : 0
     return out;
   }, 0)
+
   const calculateCustom = (computBy: GroupCompute, children: AnswerMetadataTreeNode<any>[]) => {
     const successCount = children.map(d => corrections[d.id]).filter(d => d).length;
     const points = computBy.args.filter(d => d.min <= successCount).map(d => d.points);
     return points.length > 0 ? Math.max(...points) : 0
   }
-
 
   totalPoints = calculatePoints(tree, (computeBy, leafs) => computeBy != null && computeBy.kind == "group"
     ? calculateCustom(computeBy, leafs)

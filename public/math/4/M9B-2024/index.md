@@ -173,7 +173,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 15
 >
 > ![alt text](image-7.png)
 
-**Rozhodněte o každém z následujích tvrzení (15.1-15.3), zda je pravdivé (A), či nikoliv (N).**
+# 15 Rozhodněte o každém z následujích tvrzení (15.1-15.3), zda je pravdivé (A), či nikoliv (N).
 
 ## 15.1 V 9.ročníku je stejný počet dívek jako chlapců.
 ## 15.2 Český jazyk volilo více než 16 % všech žáků 9. ročníku.

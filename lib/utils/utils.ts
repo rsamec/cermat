@@ -158,6 +158,23 @@ export function isArraySame<T>(f: T[], s: T[]) {
     f.every((val, index) => val === s[index]);
 }
 
+export function intersection<T>(arr1: T[], arr2: T[]) {
+  // Use Set to eliminate duplicates and filter to find common elements
+  const set1 = new Set(arr1);
+  const set2 = new Set(arr2);
+
+  // Find the intersection by checking if elements of one set are in the other
+  const intersection = Array.from(set1).filter(item => set2.has(item));
+
+  return intersection.length;
+}
+export function normalizeToArray(value: string | any[]) {
+  return Array.isArray(value)
+    ? value
+    : isEmptyOrWhiteSpace(value)
+      ? []
+      : value.split(",")
+}
 
 export function normalizeImageUrlsToAbsoluteUrls(markdown: string, segments: string[]): string {
   const regex = /\]\((.*?)\)/g;

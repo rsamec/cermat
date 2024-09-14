@@ -163,6 +163,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 16
 > Hranol o výšce 15 cm se skládá ze dvou shodných kvádrů s obdelníkovou podstavou a jednoho kvádru se čtvercovou podstavou. Podstava hranolu i s rozměry je na obrázku.
 > ![alt text](image-6.png)
 
+# 16
 ## 16.1 Vypočítejte povrch tělesa.
 Výsledek uveďte v cm^2^.
 

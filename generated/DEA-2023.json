@@ -175,7 +175,10 @@
         "3.17": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:die )?Giraffen malen"
+            "args": {
+              "source": "(?:die )?Giraffen malen",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -185,7 +188,10 @@
         "3.18": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:ein|das) Familienticket|Ticket"
+            "args": {
+              "source": "(?:ein |das )?Familienticket|Ticket",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -195,7 +201,10 @@
         "3.19": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:eine|die) Kanne"
+            "args": {
+              "source": "(?:eine |die )?Kanne",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
@@ -205,7 +214,10 @@
         "3.20": {
           "verifyBy": {
             "kind": "match",
-            "args": "(?:ein|das) Pferd"
+            "args": {
+              "source": "(?:ein |das )?Pferd",
+              "flags": ""
+            }
           },
           "points": 2,
           "inputBy": {
