@@ -3,24 +3,28 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 > Uslyšíte **čtyři** krátké nahrávky. Nejprve uslyšíte otázku a poté vyslechnete nahrávku. Na základě vyslechnutých nahrávek **vyberte** k úlohám **1–4** vždy jeden správný obrázek **A–D**.
 
 # 1 Which factory are the students going to visit in Campton?
+[audio](./audio/05%20AJMZD24C0T01.mp3)
 - [A] ![alt text](image.png)
 - [B] ![alt text](image-1.png)
 - [C] ![alt text](image-2.png)
 - [D] ![alt text](image-3.png)
 
 # 2 Which photograph of her grandpa is Lucy talking about?
+[audio](./audio/07%20AJMZD24C0T01.mp3)
 - [A] ![alt text](image-4.png)
 - [B] ![alt text](image-5.png)
 - [C] ![alt text](image-6.png)
 - [D] ![alt text](image-7.png)
 
 # 3 What does Steve do on Thursday afternoons?
+[audio](./audio/09%20AJMZD24C0T01.mp3)
 - [A] ![alt text](image-8.png)
 - [B] ![alt text](image-9.png)
 - [C] ![alt text](image-10.png)
 - [D] ![alt text](image-11.png)
 
 # 4 What did the man get from his girlfriend for Christmas? 
+[audio](./audio/11%20AJMZD24C0T01.mp3)
 - [A] ![alt text](image-12.png)
 - [B] ![alt text](image-13.png)
 - [C] ![alt text](image-14.png)
@@ -32,7 +36,7 @@ POSLECH - 2. ČÁST - ÚLOHY 5–12
 > Uslyšíte rozhovor mezi přáteli o letních brigádách.
 > Na základě vyslechnuté nahrávky **rozhodněte**, zda jsou tvrzení v úlohách **5–12 pravdivá** (**P**), nebo **nepravdivá** (**N**).\
 > \
-> [audio 5](./audio/15%20CD%20Track.mp3)
+> [audio](./audio/15%20AJMZD24C0T01.mp3)
  
 
 # 5 The first time Mike worked as a lifeguard was last year.  
@@ -50,7 +54,7 @@ POSLECH - 3. ČÁST - ÚLOHY 13–20
 > Na základě vyslechnuté nahrávky **odpovězte** v anglickém jazyce na otázky v úlohách **13–20**. V odpovědích použijte **nejvýše 3 slova**.
 > Čísla můžete zapisovat číslicemi. 
 > \
-> [audio 6](./audio/21%20CD%20Track.mp3)
+> [audio](./audio/21%20AJMZD24C0T01.mp3)
 > 
 > English Language Lessons
 
@@ -71,21 +75,25 @@ POSLECH - 4. ČÁST - ÚLOHY 21–24
 > vyslechnutých nahrávek **vyberte** k úlohám **21–24** vždy jednu správnou odpověď **A–D**.
 
 # 21 What makes Brad’s dog lively?
+[audio](./audio/26%20AJMZD24C0T01.mp3)
 - [A] leaving for a walk
 - [B] eating three times a day
 - [C] waking up in Brad’s bed
 - [D] following Brad’s orders at home
 # 22 When does the Badminton club start for new members? 
+[audio](./audio/28%20AJMZD24C0T01.mp3)
 - [A] 27th September
 - [B] 29th September
 - [C] 3rd October
 - [D] 5th October 
 # 23 What is the man doing regarding the book *The Silence*? 
+[audio](./audio/30%20AJMZD24C0T01.mp3)
 - [A] He’s making fun of it.
 - [B] He’s explaining why he likes it.
 - [C] He’s complaining about its ending.
 - [D] He’s describing its main character.
 # 24 Where is the couple going to have dinner tonight?  
+[audio](./audio/32%20AJMZD24C0T01.mp3)
 - [A] at home
 - [B] at Jane’s flat
 - [C] in an Italian restaurant

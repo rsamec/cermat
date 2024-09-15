@@ -5,7 +5,7 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 > vyslechnutých nahrávek **vyberte** k úlohám **1–4** vždy jeden správný obrázek **A–D**.
 
 # 1 How did Tom get to work today?
-[audio 1](./audio/05%20CD%20Track.mp3)
+[audio 1](./audio/05%20AJMZD24C0T01.mp3)
 
 - [A] ![taxi](image.png)
 - [B] ![bicycle](image-1.png)
@@ -13,7 +13,7 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 - [D] ![train](image-3.png)
 
 # 2 Which dining room set does the woman want to have?
-[audio 2](./audio/07%20CD%20Track.mp3)
+[audio 2](./audio/07%20CD%20TRACK.mp3)
 
 - [A] ![a dark table with 4 chairs](image-4.png)
 - [B] ![a white table with 2 chairs](image-5.png)
@@ -21,7 +21,7 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 - [D] ![a dark table with 2 chairs](image-7.png)
 
 # 3 What does the wife want her husband to do this Saturday?
-[audio 3](./audio/09%20CD%20Track.mp3)
+[audio 3](./audio/09%20CD%20TRACK.mp3)
 
 - [A] ![a man washing a dog](image-8.png)
 - [B] ![a man wasing a car](image-9.png)
@@ -29,7 +29,7 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 - [D] ![a man mowing the grass](image-11.png)
 
 # 4 Where will Barry have his birthday party?
-[audio 4](./audio/11%20CD%20Track.mp3)
+[audio 4](./audio/11%20CD%20TRACK.mp3)
 - [A] ![alt text](image-12.png)
 - [B] ![alt text](image-13.png)
 - [C] ![alt text](image-14.png)
@@ -40,7 +40,7 @@ POSLECH - 2. ČÁST - ÚLOHY 5–12
 > Uslyšíte rozhovor mezi bratrancem a sestřenicí o jejich rodinách. Na základě vyslechnuté 
 > nahrávky **rozhodněte**, zda jsou tvrzení v úlohách **5–12 pravdivá (P)**, nebo **nepravdivá (N)**.
 > \
-> [audio 5](./audio/15%20CD%20Track.mp3)
+> [audio 5](./audio/15%20CD%20TRACK.mp3)
 
  
 
@@ -59,7 +59,7 @@ POSLECH - 3. ČÁST - ÚLOHY 13–20
 > nahrávky **odpovězte** v anglickém jazyce na otázky v úlohách **13–20**. V odpovědích použijte 
 > **nejvýše 3 slova**. Čísla můžete zapisovat číslicemi.
 > \
-> [audio 6](./audio/21%20CD%20Track.mp3)
+> [audio 6](./audio/21%20CD%20TRACK.mp3)
 > 
 > Find Your Bookshop
 
@@ -80,25 +80,25 @@ POSLECH - 4. ČÁST - ÚLOHY 21–24
 > vyslechnutých nahrávek **vyberte** k úlohám **21–24** vždy jednu správnou odpověď **A–D**.
 
 # 21 Which rule regarding the shared fridge must everyone follow?
-[audio 7](./audio/26%20CD%20Track.mp3)
+[audio 7](./audio/26%20CD%20TRACK.mp3)
 - [A] Put your name on your food.
 - [B] All food must be in plastic boxes.
 - [C] Check on your food once a month.
 - [D] All drinks must be in the fridge door.
 # 22 How does the man learn a foreign language?
-[audio 8](./audio/28%20CD%20Track.mp3)
+[audio 8](./audio/28%20CD%20TRACK.mp3)
 - [A] by living abroad
 - [B] by dating a foreigner
 - [C] by studying at a school
 - [D] by watching movies with subtitles
 # 23 What does the woman think of her holiday in Rome?
-[audio 9](./audio/30%20CD%20Track.mp3)
+[audio 9](./audio/30%20CD%20TRACK.mp3)
 - [A] It was fun.
 - [B] It was tiring.
 - [C] It was too short.
 - [D] It was too expensive.
 # 24 What does the man advise Jane to do?
-[audio 10](./audio/32%20CD%20Track.mp3)
+[audio 10](./audio/32%20CD%20TRACK.mp3)
 - [A] to go on holiday
 - [B] to take some pills
 - [C] to lose some weight
