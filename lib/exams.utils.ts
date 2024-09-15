@@ -36,6 +36,8 @@ import CMB_2023 from './exams/CMB-2023';
 
 import AJA_2023 from './exams/AJA-2023';
 import AJB_2023 from './exams/AJB-2023';
+import AJA_2024 from './exams/AJA-2024';
+
 import DEA_2023 from './exams/DEA-2023';
 
 const cz8Years = ["cz", "8"];
@@ -94,7 +96,8 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
 
   // english  
   { pathes: enDiploma.concat("AJA-2023"), quiz: AJA_2023, config: { questions: true, solver:false } },
-  { pathes: enDiploma.concat("AJB-2023"), quiz: AJB_2023, config: { questions: false } },
+  { pathes: enDiploma.concat("AJB-2023"), quiz: AJB_2023, config: { questions: true } },  
+  { pathes: enDiploma.concat("AJA-2024"), quiz: AJA_2024, config: { questions: true, solver:false } },
 
   // german  
   { pathes: deDiploma.concat("DEA-2023"), quiz: DEA_2023, config: { questions: true, solver: false } },

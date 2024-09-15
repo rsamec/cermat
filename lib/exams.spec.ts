@@ -92,7 +92,6 @@ test.each(examTestCases.filter((d,i) => d.config.questions))(`quiz content build
    const quizBuilder = getQuizBuilder(contentTree,quizContent);
    
    const questionIds = quizBuilder.questions.map(d => d.id);
-   console.log(pathes,questionIds)
    expect(quizBuilder.content(questionIds)).toBe(quizContent.replace(/^\s+/g,''));
 })
 

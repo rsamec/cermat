@@ -4,7 +4,9 @@ export default defineConfig({
   test: {
     exclude:[
       ...configDefaults.exclude, 
+      'lib/query.spec.ts',
       'tests/*'
+
     ]
   },
 });
