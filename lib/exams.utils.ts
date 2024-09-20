@@ -37,6 +37,7 @@ import CMB_2023 from './exams/CMB-2023';
 import AJA_2023 from './exams/AJA-2023';
 import AJB_2023 from './exams/AJB-2023';
 import AJA_2024 from './exams/AJA-2024';
+import AJB_2024 from './exams/AJB-2024';
 
 import DEA_2023 from './exams/DEA-2023';
 
@@ -66,7 +67,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: math6Years.concat("M7B-2023"), quiz: M7B_2023, config: { questions: false } },
 
   { pathes: math4Years.concat("M9A-2024"), quiz: M9A_2024, config: { questions: true, solver: false } },
-  { pathes: math4Years.concat("M9B-2024"), quiz: M9B_2024, config: { questions: true, solver: true } },
+  { pathes: math4Years.concat("M9B-2024"), quiz: M9B_2024, config: { questions: true, solver: false } },
   { pathes: math4Years.concat("M9C-2024"), quiz: M9C_2024, config: { questions: true, solver: false } },
   { pathes: math4Years.concat("M9D-2024"), quiz: M9D_2024, config: { questions: true, solver: false } },
 
@@ -95,12 +96,13 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: czDimploma.concat("CMB-2023"), quiz: CMB_2023, config: { questions: false } },
 
   // english  
-  { pathes: enDiploma.concat("AJA-2023"), quiz: AJA_2023, config: { questions: true, solver:false } },
-  { pathes: enDiploma.concat("AJB-2023"), quiz: AJB_2023, config: { questions: true } },  
-  { pathes: enDiploma.concat("AJA-2024"), quiz: AJA_2024, config: { questions: true, solver:false } },
+  { pathes: enDiploma.concat("AJA-2023"), quiz: AJA_2023, config: { questions: true, solver: true } },
+  { pathes: enDiploma.concat("AJB-2023"), quiz: AJB_2023, config: { questions: true, solver: true } },
+  { pathes: enDiploma.concat("AJA-2024"), quiz: AJA_2024, config: { questions: true, solver: true } },
+  { pathes: enDiploma.concat("AJB-2024"), quiz: AJB_2024, config: { questions: true, solver: true } },
 
   // german  
-  { pathes: deDiploma.concat("DEA-2023"), quiz: DEA_2023, config: { questions: true, solver: false } },
+  { pathes: deDiploma.concat("DEA-2023"), quiz: DEA_2023, config: { questions: true, solver: true } },
 
   // french  
   //{ pathes: frDiploma.concat("FRA-2023"), quiz: aja_2023, config:{questions:true} },

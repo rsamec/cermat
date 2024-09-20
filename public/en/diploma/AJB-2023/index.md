@@ -5,7 +5,7 @@ POSLECH - 1. ČÁST - ÚLOHY 1–4
 > vyslechnutých nahrávek **vyberte** k úlohám **1–4** vždy jeden správný obrázek **A–D**.
 
 # 1 How did Tom get to work today?
-[audio 1](./audio/05%20AJMZD24C0T01.mp3)
+[audio 1](./audio/05%20CD%20TRACK.mp3)
 
 - [A] ![taxi](image.png)
 - [B] ![bicycle](image-1.png)

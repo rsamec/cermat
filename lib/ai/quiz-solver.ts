@@ -19,14 +19,14 @@ const endpoint = "https://models.inference.ai.azure.com";
 //const modelName = "gpt-4o-2024-08-06";
 const modelName = "gpt-4o";
 
-
+const chunkSize = 1;
 export async function main() {
 
   const client = new OpenAI({ baseURL: endpoint, apiKey: token });
   const { dispatch } = store;
 
 
-  for (let quizTestCase of examTestCases.filter(d => d.config.solver)) {
+  for (let quizTestCase of examTestCases.filter(d => d.config.questions && d.pathes[0] == "de")) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
 
@@ -45,7 +45,7 @@ export async function main() {
     const quiz = await loadJson<AnswerGroup<any>>([`${code}.json`]);
 
     const rootChildrenIds = Object.keys(quiz.children).map(d => parseInt(d, 10));
-    const chunkedChildren = chunk(rootChildrenIds, 1);
+    const chunkedChildren = chunk(rootChildrenIds, chunkSize);
     console.log("Chunked children", chunkedChildren);
 
 
@@ -111,7 +111,7 @@ export async function main() {
         console.log(response)
       }
       
-      await delay(10000); // Wait for 5 second between each iteratio
+      await delay(3000); // Wait for 5 second between each iteratio
     }
   }
 }

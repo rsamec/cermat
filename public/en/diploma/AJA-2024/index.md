@@ -62,7 +62,6 @@ POSLECH - 3. ČÁST - ÚLOHY 13–20
 
 # 14 On what date will the teacher’s last lesson with the students take place? 
 # 15 What part of the English language will the students practise in the first six lessons?  
-
 # 16 What does the teacher __not__ want the students to do during his lessons?  
 # 17 What is the number of the teacher’s office? 
 # 18  What is the surname of the author of the book which the teacher recommends to the students?  
@@ -220,10 +219,8 @@ POSLECH - 4. ČÁST - ÚLOHY 21–24
 ===
 
 > Přečtěte si tvrzení v úlohách **30–39** a informační leták cestovní kanceláře *RouteRide* k výpravě 
-> na motorkách značky Vespa po slavné americké mezistátní dálnici Route 66.  Na základě 
-> informací v textu **rozhodněte**, zda jsou tvrzení **pravdivá** (**P**), nebo **nepravdivá** (**N**).
- 
-
+> na motorkách značky Vespa po slavné americké mezistátní dálnici Route 66.
+> Na základě informací v textu **rozhodněte**, zda jsou tvrzení **pravdivá** (**P**), nebo **nepravdivá** (**N**).
 
 > **Los Angeles to Chicago or Chicago to Los Angeles with *RouteRide***
 > 
@@ -310,9 +307,8 @@ POSLECH - 4. ČÁST - ÚLOHY 21–24
 
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 7. ČÁST - ÚLOHY 40–44 
 ===
-> Přečtěte si dopis mladého britského lékaře George na zahraniční misi adresovaný jeho 
-> přítelkyni Celii. Na základě informací v textu vyberte k úlohám 40–44 vždy jednu správnou 
-> odpověď A–D.
+> Přečtěte si dopis mladého britského lékaře George na zahraniční misi adresovaný jeho přítelkyni Celii.
+> Na základě informací v textu **vyberte** k úlohám **40–44** vždy jednu správnou odpověď **A–D**.
 
 > Hi Celia, 
 > 
@@ -395,8 +391,8 @@ Because:
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 8. ČÁST - ÚLOHY 45–49 
 ===
 > Přečtěte si požadavky **pěti** rodin z Belfastu, které chtějí **tento víkend** navštívit mini zoo, 
-> a nabídky mini zoo. Na základě informací v textech **přiřaďte** k úlohám **45–49** vždy jednu 
-> odpovídající nabídku** A–G**. **Dvě** nabídky jsou **navíc** a nebudou použity.
+> a nabídky mini zoo.
+> Na základě informací v textech **přiřaďte** k úlohám **45–49** vždy jednu odpovídající nabídku **A–G**. Dvě nabídky jsou **navíc** a nebudou použity.
 
 # 45 the Murphys 
 They are busy this Sunday but are free this Saturday. They want to visit a mini zoo that 
@@ -500,8 +496,8 @@ More information on *www.belminizoo.com*.
 
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 9. ČÁST - ÚLOHY 50–59
 ===
-> Přečtěte si článek o televizní soutěži v pečení. Na základě textu **vyberte** k úlohám **50–59** vždy 
-> jednu správnou odpověď **A–C**.
+> Přečtěte si článek o televizní soutěži v pečení.
+> Na základě textu **vyberte** k úlohám **50–59** vždy jednu správnou odpověď **A–C**.
 
 > **The Great British Bake Off**
 > 
@@ -574,20 +570,20 @@ More information on *www.belminizoo.com*.
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 10. ČÁST - ÚLOHY 60–64 
 ===
 
-> Přečtěte si pozvánku na školní oslavu Dne Země. Na základě kontextu **doplňte** do každé z úloh 
-> **60–64** vždy **jedno** vhodné slovo ve správném tvaru. Úloha (0) slouží jako **vzor**.
+> Přečtěte si pozvánku na školní oslavu Dne Země. 
+> Na základě kontextu **doplňte** do každé z úloh **60–64** vždy **jedno** vhodné slovo ve správném tvaru. Úloha (0) slouží jako **vzor**.
 
 > **Earth Day Celebration**
 >
-> We are pleased (0) ________________ inform you that our school is going to celebrate 
-> *Earth Day* this Tuesday, April 22nd, (60) ________________ 9:30 am to 2:30 pm. 
-> We (61) ________________ inviting you all to *Earth Day* to spend it together. The main 
-> guest at the event is going to be a famous scientist (62) ________________ attended 
+> We are pleased (**0)** ____**have**_______ inform you that our school is going to celebrate 
+> *Earth Day* this Tuesday, April 22nd, (**60**) ________________ 9:30 am to 2:30 pm. 
+> We (**61**) ________________ inviting you all to *Earth Day* to spend it together. The main 
+> guest at the event is going to be a famous scientist (**62**) ________________ attended 
 > our school 25 years ago. His name is Dr Henry Daxon. We hope that you will take part 
-> (63) ________________ the event. We believe it will make students more interested in 
+> (**63**) ________________ the event. We believe it will make students more interested in 
 > the problems and dangers of the Earth.
 > 
-> We look (64) ________________ to seeing you all there. We will have a great time!
+> We look (**64**) ________________ to seeing you all there. We will have a great time!
 > 
 > (*CZVV*)
 
