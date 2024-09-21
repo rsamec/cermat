@@ -1,4 +1,4 @@
-import { optionBool, group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup } from "../utils/quiz-builder";
+import { optionBool, group, selfEvaluateText, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup } from "../utils/quiz-builder";
 
 const form = rootGroup({
     code: 'CJMZD23C0T01',

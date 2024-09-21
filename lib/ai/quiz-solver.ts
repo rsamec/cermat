@@ -26,7 +26,7 @@ export async function main() {
   const { dispatch } = store;
 
 
-  for (let quizTestCase of examTestCases.filter(d => d.config.questions && d.pathes[0] == "de")) {
+  for (let quizTestCase of examTestCases.filter(d => d.config.questions && d.config.solver)) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
 
@@ -61,11 +61,8 @@ export async function main() {
       content: quizBuilder.content(subject == "math" || subject == "cz" ? d : getChildrenIdsByGroup(quiz, d))
     }))
 
-    //console.log(chunkedDatas.map(d => JSON.stringify(d.metadata.children)));
-    //return chunkedDatas;
-
-
     for await (let chunkedData of chunkedDatas) {
+      //console.log(chunkedData.metadata.children)
       const response = await client.chat.completions.create({
         model: modelName,
         messages: [
@@ -90,6 +87,7 @@ export async function main() {
         max_tokens: 2000,
         top_p: 1.
       });
+      console.log(response);
 
       const result = response.choices[0].message.content;
       console.log(chunkedData.content)
@@ -111,7 +109,7 @@ export async function main() {
         console.log(response)
       }
       
-      await delay(3000); // Wait for 5 second between each iteratio
+      await delay(5000); // Wait for 5 second between each iteratio
     }
   }
 }

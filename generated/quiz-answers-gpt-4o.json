@@ -50,10 +50,10 @@
   },
   "AJB-2023": {
     "1.1": {
-      "value": "B"
+      "value": "C"
     },
     "1.2": {
-      "value": "C"
+      "value": "B"
     },
     "1.3": {
       "value": "A"
@@ -228,22 +228,22 @@
   },
   "AJA-2024": {
     "1.1": {
-      "value": "C"
+      "value": "B"
     },
     "1.2": {
-      "value": "A"
+      "value": "C"
     },
     "1.3": {
-      "value": "B"
+      "value": "A"
     },
     "1.4": {
       "value": "D"
     },
     "2.5": {
-      "value": false
+      "value": true
     },
     "2.6": {
-      "value": false
+      "value": true
     },
     "2.7": {
       "value": false
@@ -261,24 +261,24 @@
       "value": false
     },
     "2.12": {
-      "value": true
+      "value": false
     },
-    "3.13": "three times",
-    "3.14": "20th June",
-    "3.15": "grammar",
+    "3.13": "2 times",
+    "3.14": "March 25",
+    "3.15": "pronunciation",
     "3.16": "use phones",
-    "3.17": 305,
+    "3.17": 304,
     "3.18": "Smith",
-    "3.19": "blue",
+    "3.19": "red",
     "3.20": "library",
     "4.21": {
       "value": "A"
     },
     "4.22": {
-      "value": "D"
+      "value": "B"
     },
     "4.23": {
-      "value": "B"
+      "value": "C"
     },
     "4.24": {
       "value": "C"
@@ -347,22 +347,22 @@
       "value": "F"
     },
     "8.46": {
-      "value": "A"
+      "value": "B"
     },
     "8.47": {
-      "value": "C"
+      "value": "E"
     },
     "8.48": {
-      "value": "F"
+      "value": "C"
     },
     "8.49": {
-      "value": "B"
+      "value": "A"
     },
     "9.50": {
       "value": "A"
     },
     "9.51": {
-      "value": "B"
+      "value": "C"
     },
     "9.52": {
       "value": "B"
@@ -2630,10 +2630,10 @@
       "value": "A"
     },
     "1.2": {
-      "value": "B"
+      "value": "C"
     },
     "1.3": {
-      "value": "C"
+      "value": "B"
     },
     "1.4": {
       "value": "D"
@@ -2645,13 +2645,13 @@
       "value": false
     },
     "2.7": {
-      "value": true
-    },
-    "2.8": {
       "value": false
     },
-    "2.9": {
+    "2.8": {
       "value": true
+    },
+    "2.9": {
+      "value": false
     },
     "2.10": {
       "value": true
@@ -2662,25 +2662,25 @@
     "2.12": {
       "value": true
     },
-    "3.13": "her psychologist",
+    "3.13": "Her psychiatrist",
     "3.14": 1962,
     "3.15": 90000,
     "3.16": 4,
-    "3.17": "Spanish tiles",
-    "3.18": "the garden",
-    "3.19": "interior designer",
-    "3.20": "Perez",
+    "3.17": "Hardwood",
+    "3.18": "Garden",
+    "3.19": "Psychiatrist",
+    "3.20": "Engelberg",
     "4.21": {
-      "value": "C"
-    },
-    "4.22": {
       "value": "B"
     },
+    "4.22": {
+      "value": "D"
+    },
     "4.23": {
-      "value": "C"
+      "value": "A"
     },
     "4.24": {
-      "value": "A"
+      "value": "B"
     },
     "5.25": {
       "value": "D"
@@ -2749,10 +2749,10 @@
       "value": "F"
     },
     "8.47": {
-      "value": "E"
+      "value": "C"
     },
     "8.48": {
-      "value": "C"
+      "value": "F"
     },
     "8.49": {
       "value": "A"
@@ -2801,6 +2801,242 @@
     },
     "9.64": {
       "value": "C"
+    }
+  },
+  "DEA-2023": {
+    "1.1": {
+      "value": "A"
+    },
+    "1.2": {
+      "value": "D"
+    },
+    "1.3": {
+      "value": "B"
+    },
+    "1.4": {
+      "value": "C"
+    },
+    "2.5": {
+      "value": true
+    },
+    "2.6": {
+      "value": false
+    },
+    "2.7": {
+      "value": false
+    },
+    "2.8": {
+      "value": true
+    },
+    "2.9": {
+      "value": false
+    },
+    "2.10": {
+      "value": true
+    },
+    "2.11": {
+      "value": true
+    },
+    "2.12": {
+      "value": false
+    },
+    "3.13": 2005,
+    "3.14": 5,
+    "3.15": "Max",
+    "3.16": "15 Uhr",
+    "3.17": "Bilder malen",
+    "3.18": "Spielzeug Giraffe",
+    "3.19": "Maske",
+    "3.20": "Zebras",
+    "4.21": {
+      "value": "B"
+    },
+    "4.22": {
+      "value": "B"
+    },
+    "4.23": {
+      "value": "C"
+    },
+    "4.24": {
+      "value": "D"
+    },
+    "5.25": {
+      "value": "C"
+    },
+    "5.26": {
+      "value": "D"
+    },
+    "5.27": {
+      "value": "C"
+    },
+    "5.28": {
+      "value": "A"
+    },
+    "5.29": {
+      "value": "A"
+    },
+    "6.30": {
+      "value": false
+    },
+    "6.31": {
+      "value": false
+    },
+    "6.32": {
+      "value": true
+    },
+    "6.33": {
+      "value": false
+    },
+    "6.34": {
+      "value": false
+    },
+    "6.35": {
+      "value": true
+    },
+    "6.36": {
+      "value": false
+    },
+    "6.37": {
+      "value": true
+    },
+    "6.38": {
+      "value": false
+    },
+    "6.39": {
+      "value": true
+    },
+    "7.40": {
+      "value": "C"
+    },
+    "7.41": {
+      "value": "A"
+    },
+    "7.42": {
+      "value": "B"
+    },
+    "7.43": {
+      "value": "A"
+    },
+    "7.44": {
+      "value": "C"
+    },
+    "8.45": {
+      "value": "F"
+    },
+    "8.46": {
+      "value": "E"
+    },
+    "8.47": {
+      "value": "C"
+    },
+    "8.48": {
+      "value": "B"
+    },
+    "8.49": {
+      "value": "D"
+    },
+    "9.50": {
+      "value": "B"
+    },
+    "9.51": {
+      "value": "A"
+    },
+    "9.52": {
+      "value": "C"
+    },
+    "9.53": {
+      "value": "A"
+    },
+    "9.54": {
+      "value": "B"
+    },
+    "9.55": {
+      "value": "C"
+    },
+    "9.56": {
+      "value": "C"
+    },
+    "9.57": {
+      "value": "A"
+    },
+    "9.58": {
+      "value": "C"
+    },
+    "9.59": {
+      "value": "B"
+    },
+    "9.60": {
+      "value": "C"
+    },
+    "9.61": {
+      "value": "B"
+    },
+    "9.62": {
+      "value": "C"
+    },
+    "9.63": {
+      "value": "A"
+    },
+    "9.64": {
+      "value": "C"
+    }
+  },
+  "AJB-2024": {
+    "1.1": {
+      "value": "A"
+    },
+    "1.2": {
+      "value": "B"
+    },
+    "1.3": {
+      "value": "C"
+    },
+    "1.4": {
+      "value": "D"
+    },
+    "2.5": {
+      "value": false
+    },
+    "2.6": {
+      "value": false
+    },
+    "2.7": {
+      "value": true
+    },
+    "2.8": {
+      "value": true
+    },
+    "2.9": {
+      "value": false
+    },
+    "2.10": {
+      "value": false
+    },
+    "2.11": {
+      "value": true
+    },
+    "2.12": {
+      "value": false
+    },
+    "3.13": "stagecompany",
+    "3.14": "Great Adventure",
+    "3.15": "March 25",
+    "3.16": "school hall",
+    "3.17": "10:00",
+    "3.18": "book voucher",
+    "3.19": "Mr. Smith",
+    "3.20": 5,
+    "4.21": {
+      "value": "C"
+    },
+    "4.22": {
+      "value": "A"
+    },
+    "4.23": {
+      "value": "A"
+    },
+    "4.24": {
+      "value": "D"
     }
   }
 }

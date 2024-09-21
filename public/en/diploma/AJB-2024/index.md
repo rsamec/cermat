@@ -83,13 +83,16 @@ POSLECH - 4. ČÁST - ÚLOHY 21–24
 - [B] the school
 - [C] the railway station
 - [D] the swimming pool
+
 # 22 Why does the man want to return the shoes?
 [audio 8](./audio/28.%20CD%20TRACK.mp3)
-because of their: 
+
+because of their:
 - [A] size
 - [B] price
 - [C] colour
-- [D] material 
+- [D] material
+
 # 23 Why is Sophie calling her father?
 [audio 9](./audio/30.%20CD%20TRACK.mp3)
 - [A] to ask for his car
@@ -105,12 +108,12 @@ because of their:
 
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 5. ČÁST - ÚLOHY 25–29
 ===
-> Přečtěte si **pět** krátkých textů. Na základě informací v textech **vyberte** k úlohám **25–29** vždy jednu správnou odpověď **A–D**. 
+
+> Přečtěte si **pět** krátkých textů. Na základě informací v textech **vyberte** k úlohám **25–29** vždy jednu správnou odpověď **A–D**.
 
 # 25 Who invented the potato chip?
 
-> **Crispy Delight: The Invention of the Potato Chip**
->
+**Crispy Delight: The Invention of the Potato Chip**
 > Eighty years before businessman Herman Lay founded the Lays Company, known today for 
 > its potato chips, an incident took place at a resort in Saratoga Springs, New York. A customer 
 > complained that the resort’s chef’s French fries were too thick. So, George Crum, the chef, 
@@ -130,8 +133,7 @@ because of their:
 
 # 26 What did David Spargo do according to the article?
 
-> **An Australian Band’s Fan**
-> 
+**An Australian Band’s Fan**
 > David Spargo is a fan of the Australian band *Peking Duk*. After a concert in Melbourne, David 
 > went backstage to their dressing room, but a security guard stopped him. David showed him 
 > his ID and told him he was a band member’s cousin. To prove it, David opened *Peking Duk’s* 
@@ -172,8 +174,8 @@ because of their:
 
 # 28 Who was borrowed most often from the Human Library in 2021?
 
-> **Welcome to the Human Library**
-> 
+**Welcome to the Human Library**
+
 > In Denmark, there is a library where visitors can borrow people instead of books. They meet the 
 > people there at a certain time and listen to their life stories for 30 minutes. The goal is to share 
 > situations with people that they have not experienced. Visitors can also come to ask for help. The 
@@ -196,8 +198,7 @@ because of their:
 
 # 29 What is Dion Leonard planning to do?
 
-> **A Marathon Runner and a Homeless Dog**
-> 
+**A Marathon Runner and a Homeless Dog**
 > Scottish extreme marathoner, Dion Leonard, was joined by a homeless female dog in China 
 > last month while competing in the Gobi March, a 6-day race. She ran with him to the end of 
 > the difficult race. In the end, Dion decided to name the dog Gobi after the race, and to bring 
