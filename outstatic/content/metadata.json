@@ -986,7 +986,7 @@
       "grade": "4",
       "publishedAt": "2024-02-19T20:11:55.734Z",
       "slug": "c9c-2023",
-      "status": "draft",
+      "status": "published",
       "subject": "cz",
       "title": "Čeština (9. ročník) - 1. náhradní termín 2023",
       "year": "2023"
@@ -1147,7 +1147,7 @@
       "grade": "diploma",
       "publishedAt": "2024-02-19T20:11:55.734Z",
       "slug": "cmb-2024",
-      "status": "draft",
+      "status": "published",
       "subject": "cz",
       "title": "Čeština (maturita) - podzim 2024",
       "year": "2024"
@@ -1170,7 +1170,7 @@
       "grade": "diploma",
       "publishedAt": "2024-02-19T20:11:55.734Z",
       "slug": "cmb-2023",
-      "status": "draft",
+      "status": "published",
       "subject": "cz",
       "title": "Čeština (maturita) - podzim 2023",
       "year": "2023"

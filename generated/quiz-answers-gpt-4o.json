@@ -2983,10 +2983,10 @@
   },
   "AJB-2024": {
     "1.1": {
-      "value": "A"
+      "value": "B"
     },
     "1.2": {
-      "value": "B"
+      "value": "A"
     },
     "1.3": {
       "value": "C"
@@ -3018,16 +3018,16 @@
     "2.12": {
       "value": false
     },
-    "3.13": "stagecompany",
+    "3.13": "theatrecompany",
     "3.14": "Great Adventure",
-    "3.15": "March 25",
-    "3.16": "school hall",
-    "3.17": "10:00",
+    "3.15": "March 15",
+    "3.16": "auditorium",
+    "3.17": "5 PM",
     "3.18": "book voucher",
-    "3.19": "Mr. Smith",
+    "3.19": "Mrs. Smith",
     "3.20": 5,
     "4.21": {
-      "value": "C"
+      "value": "B"
     },
     "4.22": {
       "value": "A"
@@ -3036,7 +3036,756 @@
       "value": "A"
     },
     "4.24": {
+      "value": "C"
+    },
+    "5.25": {
+      "value": "B"
+    },
+    "5.26": {
+      "value": "C"
+    },
+    "5.27": {
+      "value": "C"
+    },
+    "5.28": {
+      "value": "C"
+    },
+    "5.29": {
+      "value": "A"
+    },
+    "6.30": {
+      "value": true
+    },
+    "6.31": {
+      "value": true
+    },
+    "6.32": {
+      "value": true
+    },
+    "6.33": {
+      "value": false
+    },
+    "6.34": {
+      "value": true
+    },
+    "6.35": {
+      "value": false
+    },
+    "6.36": {
+      "value": true
+    },
+    "6.37": {
+      "value": false
+    },
+    "6.38": {
+      "value": false
+    },
+    "6.39": {
+      "value": false
+    },
+    "7.40": {
+      "value": "C"
+    },
+    "7.41": {
+      "value": "B"
+    },
+    "7.42": {
+      "value": "A"
+    },
+    "7.43": {
+      "value": "A"
+    },
+    "7.44": {
       "value": "D"
+    },
+    "8.45": {
+      "value": "D"
+    },
+    "8.46": {
+      "value": "E"
+    },
+    "8.47": {
+      "value": "B"
+    },
+    "8.48": {
+      "value": "C"
+    },
+    "8.49": {
+      "value": "F"
+    },
+    "9.50": {
+      "value": "A"
+    },
+    "9.51": {
+      "value": "B"
+    },
+    "9.52": {
+      "value": "B"
+    },
+    "9.53": {
+      "value": "B"
+    },
+    "9.54": {
+      "value": "B"
+    },
+    "9.55": {
+      "value": "A"
+    },
+    "9.56": {
+      "value": "A"
+    },
+    "9.57": {
+      "value": "A"
+    },
+    "9.58": {
+      "value": "B"
+    },
+    "9.59": {
+      "value": "C"
+    },
+    "10.60": "was",
+    "10.61": "to",
+    "10.62": "There",
+    "10.63": "than",
+    "10.64": "work"
+  },
+  "CMA-2024": {
+    "3": {
+      "value": "A"
+    },
+    "4": {
+      "value": "C"
+    },
+    "5": {
+      "value": "C"
+    },
+    "6": {
+      "value": "D"
+    },
+    "7": {
+      "value": "A"
+    },
+    "8": {
+      "value": "C"
+    },
+    "11": [
+      "E",
+      "B",
+      "C",
+      "A",
+      "D"
+    ],
+    "13": [
+      "tvář",
+      "dlaní",
+      "stěnu"
+    ],
+    "14": {
+      "value": "A"
+    },
+    "15": {
+      "value": "B"
+    },
+    "16": {
+      "value": "B"
+    },
+    "17": {
+      "value": "A"
+    },
+    "18": {
+      "value": "C"
+    },
+    "20": {
+      "value": "A"
+    },
+    "21": {
+      "value": "B"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "D"
+    },
+    "25": {
+      "value": "A"
+    },
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "B"
+    },
+    "28": [
+      "ti"
+    ],
+    "30": [
+      "zařízený",
+      "přemýtání",
+      "kostely",
+      "poctěnné"
+    ],
+    "31": {
+      "value": "C"
+    },
+    "32": {
+      "value": "B"
+    },
+    "1.1": {
+      "value": false
+    },
+    "1.2": {
+      "value": true
+    },
+    "1.3": {
+      "value": false
+    },
+    "1.4": {
+      "value": false
+    },
+    "2.1": "jelikož",
+    "2.2": "ač",
+    "9.1": {
+      "value": "C"
+    },
+    "9.2": {
+      "value": "E"
+    },
+    "9.3": {
+      "value": "B"
+    },
+    "10.1": "popsaném",
+    "10.2": "bych zapomněl",
+    "12.1": {
+      "value": false
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": false
+    },
+    "19.1": {
+      "value": true
+    },
+    "19.2": {
+      "value": false
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "24.1": {
+      "value": false
+    },
+    "24.2": {
+      "value": true
+    },
+    "24.3": {
+      "value": true
+    },
+    "24.4": {
+      "value": true
+    },
+    "29.1": {
+      "value": "E"
+    },
+    "29.2": {
+      "value": "C"
+    },
+    "29.3": {
+      "value": "B"
+    },
+    "29.4": {
+      "value": "D"
+    }
+  },
+  "CMB-2023": {
+    "2": [
+      "svobodnější",
+      "totalitní",
+      "komunistickému"
+    ],
+    "3": {
+      "value": "A"
+    },
+    "4": {
+      "value": "C"
+    },
+    "5": {
+      "value": "A"
+    },
+    "6": {
+      "value": "C"
+    },
+    "7": {
+      "value": "A"
+    },
+    "9": [
+      "D",
+      "C",
+      "A",
+      "B",
+      "E"
+    ],
+    "10": [
+      "obrat",
+      "pást"
+    ],
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "D"
+    },
+    "15": {
+      "value": "B"
+    },
+    "16": {
+      "value": "C"
+    },
+    "17": {
+      "value": "D"
+    },
+    "19": {
+      "value": "B"
+    },
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "C"
+    },
+    "22": [
+      "krách",
+      "pólu"
+    ],
+    "24": {
+      "value": "D"
+    },
+    "25": {
+      "value": "A"
+    },
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "D"
+    },
+    "29": [
+      "scela",
+      "skleněnných",
+      "ikonické",
+      "složitá"
+    ],
+    "30": {
+      "value": "A"
+    },
+    "31": {
+      "value": "B"
+    },
+    "32": {
+      "value": "B"
+    },
+    "1.1": {
+      "value": true
+    },
+    "1.2": {
+      "value": false
+    },
+    "1.3": {
+      "value": true
+    },
+    "1.4": {
+      "value": false
+    },
+    "8.1": {
+      "value": "D"
+    },
+    "8.2": {
+      "value": "E"
+    },
+    "8.3": {
+      "value": "B"
+    },
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "11.4": {
+      "value": false
+    },
+    "18.1": {
+      "value": true
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": true
+    },
+    "23.1": {
+      "value": true
+    },
+    "23.2": {
+      "value": false
+    },
+    "23.3": {
+      "value": false
+    },
+    "23.4": {
+      "value": true
+    },
+    "28.1": {
+      "value": "C"
+    },
+    "28.2": {
+      "value": "F"
+    },
+    "28.3": {
+      "value": "B"
+    },
+    "28.4": {
+      "value": "D"
+    }
+  },
+  "C9C-2023": {
+    "1": {
+      "value": "C"
+    },
+    "2": {
+      "value": "C"
+    },
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "B"
+    },
+    "5": {
+      "value": "A"
+    },
+    "6": {
+      "value": "C"
+    },
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "A"
+    },
+    "12": [
+      "hostincem",
+      "kočár",
+      "příteli"
+    ],
+    "15": [
+      "B",
+      "E",
+      "F",
+      "A",
+      "D",
+      "C"
+    ],
+    "17": {
+      "value": "B"
+    },
+    "18": [
+      "zvolí",
+      "poměrně",
+      "zkušené",
+      "nedotčené"
+    ],
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": {
+      "value": "C"
+    },
+    "23": {
+      "value": "B"
+    },
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "B"
+    },
+    "29": {
+      "value": "A"
+    },
+    "7.1": {
+      "value": "D"
+    },
+    "7.2": {
+      "value": "A"
+    },
+    "7.3": {
+      "value": "E"
+    },
+    "8.1": {
+      "value": true
+    },
+    "8.2": {
+      "value": false
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "13.1": {
+      "value": true
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": true
+    },
+    "13.4": {
+      "value": true
+    },
+    "14.1": {
+      "podmět": "porada",
+      "přísudek": "přesvědčila"
+    },
+    "14.2": {
+      "podmět": "nápad",
+      "přísudek": "není"
+    },
+    "16.1": [
+      "pořádaném"
+    ],
+    "16.2": [
+      "článkem"
+    ],
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "24.1": [
+      "občerstvení"
+    ],
+    "24.2": [
+      "dávka"
+    ],
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "28.1": [
+      "předmět"
+    ],
+    "28.2": [
+      "předmět"
+    ],
+    "30.1": {
+      "value": "F"
+    },
+    "30.2": {
+      "value": "C"
+    },
+    "30.3": {
+      "value": "E"
+    },
+    "30.4": {
+      "value": "D"
+    }
+  },
+  "CMB-2024": {
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "A"
+    },
+    "5": {
+      "value": "B"
+    },
+    "8": "po",
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "B"
+    },
+    "11": {
+      "value": "A"
+    },
+    "12": [
+      "B",
+      "A",
+      "E",
+      "C",
+      "D"
+    ],
+    "13": {
+      "value": "D"
+    },
+    "14": {
+      "value": "B"
+    },
+    "15": {
+      "value": "A"
+    },
+    "17": {
+      "value": "D"
+    },
+    "18": {
+      "value": "D"
+    },
+    "19": [
+      "škrabka",
+      "vrtulník",
+      "budík"
+    ],
+    "21": [
+      "parfémů",
+      "lahvičkami"
+    ],
+    "22": {
+      "value": "B"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": {
+      "value": "B"
+    },
+    "25": {
+      "value": "D"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": [
+      "vzájemně",
+      "prospívají",
+      "ochranou",
+      "splete"
+    ],
+    "28": {
+      "value": "B"
+    },
+    "29": {
+      "value": "B"
+    },
+    "30": {
+      "value": "D"
+    },
+    "32": {
+      "value": "A"
+    },
+    "1.1": {
+      "value": false
+    },
+    "1.2": {
+      "value": true
+    },
+    "1.3": {
+      "value": false
+    },
+    "1.4": {
+      "value": false
+    },
+    "2.1": "zatížený",
+    "2.2": "vedoucími",
+    "6.1": {
+      "value": "C"
+    },
+    "6.2": {
+      "value": "E"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": true
+    },
+    "7.3": {
+      "value": true
+    },
+    "7.4": {
+      "value": true
+    },
+    "16.1": {
+      "value": false
+    },
+    "16.2": {
+      "value": false
+    },
+    "16.3": {
+      "value": false
+    },
+    "16.4": {
+      "value": false
+    },
+    "20.1": {
+      "value": false
+    },
+    "20.2": {
+      "value": false
+    },
+    "20.3": {
+      "value": true
+    },
+    "20.4": {
+      "value": false
+    },
+    "31.1": {
+      "value": "F"
+    },
+    "31.2": {
+      "value": "E"
+    },
+    "31.3": {
+      "value": "D"
+    },
+    "31.4": {
+      "value": "B"
     }
   }
 }

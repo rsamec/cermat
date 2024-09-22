@@ -19,7 +19,7 @@ const endpoint = "https://models.inference.ai.azure.com";
 //const modelName = "gpt-4o-2024-08-06";
 const modelName = "gpt-4o";
 
-const chunkSize = 1;
+const chunkSize = 6;
 export async function main() {
 
   const client = new OpenAI({ baseURL: endpoint, apiKey: token });
