@@ -8,12 +8,8 @@ import { renderControl } from "@/lib/utils/component.utils";
 import { ParsedQuestion } from "@/lib/utils/parser.utils";
 import { store, RootState, Dispatch } from "@/lib/store";
 import { connect } from "react-redux";
-import { toHtml } from "@fortawesome/fontawesome-svg-core";
-import DOMPurify from "dompurify";
-import { format } from "mathjs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown, faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import Badge from "../core/Badge";
 import TextBadge from "../core/TextBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
@@ -119,12 +115,6 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, answers, submitQui
                         <div className="flex gap-4">
                           {verified && correction === true && <FontAwesomeIcon icon={faThumbsUp} size="xl" className="text-green-600"></FontAwesomeIcon>}
                           {verified && correction === false && <FontAwesomeIcon icon={faThumbsDown} size="xl" className="text-red-600"></FontAwesomeIcon>}
-                          {/* {verified && correction !== true && <Badge type="Success">{
-                            (node.inputBy as any)?.kind === 'math' ?
-                              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(node.verifyBy.args))) }} /> :
-                              <div>{format(node.verifyBy?.args)}</div>
-                          }
-                          </Badge>} */}
                         </div>
                       </div>
                     </div>
