@@ -1874,5 +1874,657 @@
         "category": "TEXT_COHERENCE"
       }
     ]
+  },
+  "CMA-2023": {
+    "questions": [
+      {
+        "id": "1",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "2",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "3",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "4",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "5",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "6",
+        "category": "RELATED_WORDS"
+      },
+      {
+        "id": "7",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "8",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "9",
+        "category": "PHONETICS_WORD_STRUCTURE"
+      },
+      {
+        "id": "10",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "11",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "12",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "13",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "14",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "15",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "16",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "17",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "18",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "19",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "20",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "21",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "22",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "23",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "24",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "25",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "26",
+        "category": "STYLE"
+      },
+      {
+        "id": "27",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "28",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "29",
+        "category": "EMOTIVE_WORDS_FORMALITY"
+      },
+      {
+        "id": "30",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "31",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "32",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      }
+    ]
+  },
+  "CMB-2023": {
+    "questions": [
+      {
+        "id": "1",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "2",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "3",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "4",
+        "category": "FIXED_EXPRESSIONS"
+      },
+      {
+        "id": "5",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "6",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "7",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "8",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "9",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "10",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "11",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "12",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "13",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "14",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "15",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "16",
+        "category": "EMOTIVE_WORDS_FORMALITY"
+      },
+      {
+        "id": "17",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "18",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "19",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "20",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "21",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "22",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "23",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "24",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "25",
+        "category": "PHONETICS_WORD_STRUCTURE"
+      },
+      {
+        "id": "26",
+        "category": "STYLE"
+      },
+      {
+        "id": "27",
+        "category": "PHONETICS_WORD_STRUCTURE"
+      },
+      {
+        "id": "28",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "29",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "30",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "31",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "32",
+        "category": "SENTENCE_MEMBERS_SUBORDINATE_CLAUSES"
+      }
+    ]
+  },
+  "CMA-2024": {
+    "questions": [
+      {
+        "id": "1",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "2",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "3",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "4",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "5",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "6",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "7",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "8",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "9",
+        "category": "RELATED_WORDS"
+      },
+      {
+        "id": "10",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "11",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "12",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "13",
+        "category": "PARTS_OF_SPEECH"
+      },
+      {
+        "id": "14",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "15",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "16",
+        "category": "GRAMMATICAL_CATEGORIES"
+      },
+      {
+        "id": "17",
+        "category": "EMOTIVE_WORDS_FORMALITY"
+      },
+      {
+        "id": "18",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "19",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "20",
+        "category": "SENTENCE_MEMBERS_SUBORDINATE_CLAUSES"
+      },
+      {
+        "id": "21",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "22",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "23",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "24",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "25",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "26",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "27",
+        "category": "STYLE"
+      },
+      {
+        "id": "28",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "29",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "30",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "31",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "32",
+        "category": "SENTENCE_MEMBERS_SUBORDINATE_CLAUSES"
+      }
+    ]
+  },
+  "CMB-2024": {
+    "questions": [
+      {
+        "id": "1",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "2",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "3",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "4",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "5",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "6",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "7",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "8",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "9",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "10",
+        "category": "FIXED_EXPRESSIONS"
+      },
+      {
+        "id": "11",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "12",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "13",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "14",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "15",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "16",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "17",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "18",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "19",
+        "category": "WORK_WITH_DEFINITION"
+      },
+      {
+        "id": "20",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "21",
+        "category": "PARTS_OF_SPEECH"
+      },
+      {
+        "id": "22",
+        "category": "PHONETICS_WORD_STRUCTURE"
+      },
+      {
+        "id": "23",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "24",
+        "category": "SENTENCE_MEMBERS_SUBORDINATE_CLAUSES"
+      },
+      {
+        "id": "25",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "26",
+        "category": "STYLE"
+      },
+      {
+        "id": "27",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "28",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "29",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "30",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "31",
+        "category": "LITERATURE"
+      },
+      {
+        "id": "32",
+        "category": "SENTENCE_CONSTRUCTION"
+      }
+    ]
+  },
+  "C9C-2023": {
+    "questions": [
+      {
+        "id": "1",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "2",
+        "category": "EMOTIVE_WORDS_FORMALITY"
+      },
+      {
+        "id": "3",
+        "category": "STYLE"
+      },
+      {
+        "id": "4",
+        "category": "STYLE"
+      },
+      {
+        "id": "5",
+        "category": "FIXED_EXPRESSIONS"
+      },
+      {
+        "id": "6",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "7",
+        "category": "SENTENCE_MEMBERS_SUBORDINATE_CLAUSES"
+      },
+      {
+        "id": "8",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "9",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "10",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "11",
+        "category": "EMOTIVE_WORDS_FORMALITY"
+      },
+      {
+        "id": "12",
+        "category": "PARTS_OF_SPEECH"
+      },
+      {
+        "id": "13",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "14",
+        "category": "SENTENCE_CONSTRUCTION"
+      },
+      {
+        "id": "15",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "16",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "17",
+        "category": "LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "18",
+        "category": "SPELLING_RULES_OPEN"
+      },
+      {
+        "id": "19",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "20",
+        "category": "TEXT_COHERENCE"
+      },
+      {
+        "id": "21",
+        "category": "FIXED_EXPRESSIONS"
+      },
+      {
+        "id": "22",
+        "category": "WORD_MEANING_RELATIONS"
+      },
+      {
+        "id": "23",
+        "category": "WORD_FORMS"
+      },
+      {
+        "id": "24",
+        "category": "GRAMMATICAL_CATEGORIES"
+      },
+      {
+        "id": "25",
+        "category": "NON_LITERARY_TEXT_UNDERSTANDING"
+      },
+      {
+        "id": "26",
+        "category": "STYLE"
+      },
+      {
+        "id": "27",
+        "category": "PARTS_OF_SPEECH"
+      },
+      {
+        "id": "28",
+        "category": "SENTENCE_MEMBERS_SUBORDINATE_CLAUSES"
+      },
+      {
+        "id": "29",
+        "category": "SPELLING_RULES_CLOSED"
+      },
+      {
+        "id": "30",
+        "category": "PHONETICS_WORD_STRUCTURE"
+      }
+    ]
   }
 }

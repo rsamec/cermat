@@ -7,15 +7,16 @@ type Props = {
   showContact?: boolean
   fullWidth?: boolean
   children: React.ReactNode
+  noPadding?: boolean
 }
 
-const Layout = ({ children, headerNavigation, fullWidth, showContact }: Props) => {
+const Layout = ({ children, headerNavigation, fullWidth, noPadding, showContact }: Props) => {
   return (
     <>
       <Header>
         {headerNavigation}
       </Header>
-      <div className={cls(["min-h-screen mx-auto p-5", !fullWidth && "max-w-6xl"])}>
+      <div className={cls(["min-h-screen mx-auto", !noPadding && 'p-5', !fullWidth && "max-w-6xl"])}>
         <main>{children}</main>
       </div>
       <Footer showContact={showContact} />

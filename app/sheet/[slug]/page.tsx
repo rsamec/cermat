@@ -61,7 +61,7 @@ export default async function Sheet(params: Params) {
   const { project, quizTree, questions, assetPath } = await getData(params);
 
   return (
-    <Layout headerNavigation={<Navigation name={project.title} />}>
+    <Layout headerNavigation={<Navigation name={project.title} />} noPadding={true} fullWidth={false}>
         <QuizSheet tree={quizTree} headersAndOptions={questions} assetPath={assetPath}></QuizSheet>      
     </Layout>
   )

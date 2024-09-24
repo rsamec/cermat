@@ -18,7 +18,7 @@ import TextBadge from "../core/TextBadge";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   submitQuiz: (args: Record<string, any>) => dispatch.quiz.submitQuiz(args),
-  resetAnswers: () => dispatch.quiz.resetQuizAnswers(), 
+  resetAnswers: () => dispatch.quiz.resetQuizAnswers(),
 });
 
 
@@ -70,59 +70,72 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, answers, submitQui
   }
 
   const resetAnswersHandler = () => {
-    setVerified(false);
+    setVerified(false);    
     resetAnswers();
   }
 
-  return (
-    <div className="flex flex-col gap-2">
-      {leafs.map(({ leaf, options }) => {
-        const { id, node } = leaf;
-        const control = getControl(form, id as any)
-        const correction = corrections[id];
-        return node.inputBy && (
-          <div className="flex flex-wrap gap-10" key={`${id}`}>
-            <div className="flex gap-5 grow">
-              <span className="min-w-8" >{id}</span>
-              {renderControl(control!, node.inputBy, { options: options?.map(d => ({ value: d.value, name: '' })) })}
-              <div className="flex items-center gap-4">
-                {verified && correction === true && <FontAwesomeIcon icon={faThumbsUp} size="xl" className="text-green-600"></FontAwesomeIcon>}
-                {verified && correction === false && <FontAwesomeIcon icon={faThumbsDown} size="xl" className="text-red-600"></FontAwesomeIcon>}
-                {verified && correction !== true && <Badge type="Success">{
-                  (node.inputBy as any)?.kind === 'math' ?
-                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(node.verifyBy.args))) }} /> :
-                    <div>{format(node.verifyBy?.args)}</div>
-                }
-                </Badge>}
-              </div>
-            </div>
-          </div>
-        )
-      })}
-      <br />
-      <div className="flex flex-wrap gap-4">
-        <button className="btn btn-blue" onClick={() => markAsDirty(form)}>
-          Zkontrolovat
-        </button>
-        <button className="btn btn-blue" disabled={invalid} onClick={submitQuizHandler}>
-          Odeslat
-        </button>
-        <button className="btn btn-red" disabled={!invalid} onClick={submitQuizHandler}>
-          Odeslat nekompletní
-        </button>
-        <button className="btn btn-red" disabled={!invalid} onClick={resetAnswersHandler}>
-          <FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
-        </button>
-        
-      </div>
-      {verified &&
-        <div className="grow flex flex-wrap gap-2">
-          <TextBadge text="Úlohy" type="Gray">{`${totalAnswers} / ${questions.length}`}</TextBadge>
-          <TextBadge text="Body" type="Gray">{`${totalPoints} / ${maxTotalPoints}`}</TextBadge>
-        </div>
-      }
+  const groups = Object.entries(Object.groupBy(leafs, ({ leaf }) => leaf!.id.split('.')[0]));
 
-    </div>
+  return (
+    <>
+      <div className="sticky top-10 bg-white z-10">
+        <div className="flex flex-wrap gap-2 p-2">
+          <button className="btn btn-blue" onClick={() => markAsDirty(form)}>
+            Validace
+          </button>
+          <button className="btn btn-blue" onClick={submitQuizHandler}>
+            Odeslat
+          </button>
+          {/* <button className="btn btn-red" disabled={!invalid} onClick={submitQuizHandler}>
+            Odeslat nekompletní
+          </button> */}
+          <button className="btn btn-red" disabled={!invalid} onClick={resetAnswersHandler}>
+            <FontAwesomeIcon icon={faTrashCan} size="2xl"></FontAwesomeIcon>
+          </button>
+          <div className="grow self-end">
+            {verified &&
+              <div className="grow flex flex-wrap gap-2">
+                <TextBadge text="Úlohy" type="Gray">{`${totalAnswers} / ${questions.length}`}</TextBadge>
+                <TextBadge text="Body" type="Gray">{`${totalPoints} / ${maxTotalPoints}`}</TextBadge>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+      <div className="columns-sm print:columns-sm [column-rule-style:solid] [column-rule-width:1px] [column-rule-color:lightgray] p-5">
+        <div className="flex flex-col gap-5">
+          {
+            groups.map(([g, leafs]) => (
+              <div key={`${g}`} className="flex flex-col gap-1 break-inside-avoid print:break-inside-avoid">
+                {leafs!.map(({ leaf, options }) => {
+                  const { id, node } = leaf;
+                  const control = getControl(form, id as any)
+                  const correction = corrections[id];
+                  return node.inputBy && (
+                    <div className="flex flex-wrap gap-10" key={`${id}`}>
+                      <div className="flex gap-5 grow">
+                        <span className="min-w-8" >{id}</span>
+                        {renderControl(control!, node.inputBy, { options: options?.map(d => ({ value: d.value, name: '' })) })}
+                        <div className="flex gap-4">
+                          {verified && correction === true && <FontAwesomeIcon icon={faThumbsUp} size="xl" className="text-green-600"></FontAwesomeIcon>}
+                          {verified && correction === false && <FontAwesomeIcon icon={faThumbsDown} size="xl" className="text-red-600"></FontAwesomeIcon>}
+                          {/* {verified && correction !== true && <Badge type="Success">{
+                            (node.inputBy as any)?.kind === 'math' ?
+                              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(node.verifyBy.args))) }} /> :
+                              <div>{format(node.verifyBy?.args)}</div>
+                          }
+                          </Badge>} */}
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </>
   )
 }
 

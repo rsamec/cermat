@@ -1,17 +1,19 @@
 import OpenAI from "openai";
-import { loadJson, loadMarkdownWithAbsoluteImagesUrl } from "../utils/file.utils";
-import { store } from "../store";
-import { convertTree } from "../utils/quiz-specification";
+import { loadMarkdownWithAbsoluteImagesUrl } from "../utils/file.utils";
 import { QuizCategoriesFileSaver } from "./file.utils";
 import examTestCases from "../exams.utils";
 import { z } from "zod";
 import { zodResponseFormat } from "openai/helpers/zod";
+import { ShortCodeMarker, getQuizBuilder } from "../utils/parser.utils";
+import { parser, GFM, Subscript, Superscript } from '@lezer/markdown';
+import { chunk } from "../utils/utils";
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
 //const modelName = "gpt-4o-2024-08-06";
 const modelName = "gpt-4o";
 
+const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Superscript]);
 
 const MathQuestion = z.object({
   id: z.string(),
@@ -63,7 +65,7 @@ const CzQuestion = z.object({
   ])
 });
 const CzCategories = z.object({
-  questions: z.array(CzQuestion)  
+  questions: z.array(CzQuestion)
 })
 
 
@@ -110,66 +112,77 @@ const czCategories = {
   LITERATURE: "Literatura"
 }
 
+interface CategoryQuestions  { questions: { id: string, category: string }[]}
+
 export async function main() {
 
   const client = new OpenAI({ baseURL: endpoint, apiKey: token });
-  const { dispatch } = store;
 
 
-  for (let quizTestCase of examTestCases.filter(d => d.pathes[0] ==="cz" && d.config.questions)) {
+  for (let quizTestCase of examTestCases.filter(d => d.pathes[0] === "cz" && d.pathes[2] === "C9C-2023" && d.config.questions)) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
-
 
     //load quiz
     const quizContent = await loadMarkdownWithAbsoluteImagesUrl(pathes);
 
-    const quiz = await loadJson([`${code}.json`]);
+    //parse quiz questions
+    const contentTree = markdownParser.parse(quizContent);
+    const quizBuilder = getQuizBuilder(contentTree, quizContent);
 
-    const tree = convertTree(quiz as any);
-    await dispatch.quiz.initAsync({ tree, assetPath: pathes });
+    const questionChunks = chunk(quizBuilder.questions.map(d => d.id), 16);
+    console.log("Questions", questionChunks);
 
-    const response = await client.chat.completions.create({
-      model: modelName,
-      messages: [
-        {
-          role: "system", content: `You are an expert at classifying ${subject} subject. You will be given quiz with questions.
+    var categoriesResult: CategoryQuestions = { questions: [] }
+
+    for await (let questionChunk of questionChunks) {
+
+      const quizContent = quizBuilder.content(questionChunk);
+
+      const response = await client.chat.completions.create({
+        model: modelName,
+        messages: [
+          {
+            role: "system", content: `You are an expert at classifying ${subject} subject. You will be given quiz with questions.
          The quiz format is markdown text. Each question is identified by markdown headings. Some question can have sub questions.
         - # heading is root questions - question id is idenfied by format # {number}
-        - ## heading is sub question - question id is idenfied by format ## {number}.{number}
+        - ## heading is sub questions - question id is idenfied by format ## {number}.{number}
          `
-        },        
-        {
-          role: 'assistant',
-          content: `
+          },
+          {
+            role: 'assistant',
+            content: `
           category list
           ${Object.entries(subject == "math" ? mathCategories : subject == "cz" ? czCategories : {}).map(([key, value]) => `- ${key}:"${value}",\n`)}`
-        },
-        {
-          role: "user", content: [
-            { type: "text", text: "Assign category to each root question in a quiz. Do not assign category to sub questions."},
-            { type: "text", text: quizContent },
-            
-          ]
-        },
-      ],
-      response_format: zodResponseFormat( subject == "math" ? MathCategories: CzCategories , "mathquiz")
-      //{ "type": "json_object" }
-      ,
-      temperature: 1.,
-      max_tokens: 1000,
-      top_p: 1.
-    });
+          },
+          {
+            role: "user", content: [
+              { type: "text", text: "Assign category to each root question in a quiz. Do not assign category to sub questions." },
+              { type: "text", text: quizContent },
 
-    const result = response.choices[0].message.content;
-    if (result != null) {
+            ]
+          },
+        ],
+        response_format: zodResponseFormat(subject == "math" ? MathCategories : CzCategories, "quiz")
+        //{ "type": "json_object" }
+        ,
+        temperature: 1.,
+        max_tokens: 1000,
+        top_p: 1.
+      });
 
-      const parsedResult = JSON.parse(result) as any
-      console.log(pathes, Object.values(parsedResult))
-      new QuizCategoriesFileSaver({ model: modelName }).updateJSONFile(code, parsedResult)
-    }
-    else {
-      console.log(response)
+      const result = response.choices[0].message.content;
+
+      if (result != null) {
+
+        const parsedResult = JSON.parse(result) as CategoryQuestions
+        categoriesResult = { questions: categoriesResult.questions.concat(parsedResult.questions) }
+        console.log(pathes, Object.values(categoriesResult))
+        new QuizCategoriesFileSaver({ model: modelName }).updateJSONFile(code, categoriesResult)
+      }
+      else {
+        console.log(response)
+      }
     }
   }
 }

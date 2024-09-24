@@ -191,7 +191,7 @@ function renderField(control: FieldControl, spec: ComponentFunctionSpec, extra:
 }
 
 function renderList(control: ListControl, spec: ComponentFunctionSpec[]) {
-  return <ol className='flex flex-wrap gap-4'>
+  return <ol className='flex flex-wrap gap-2 px-1'>
     <List control={control}>
       {({ childControls, ...rest }) => {
         return (

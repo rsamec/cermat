@@ -49,7 +49,7 @@ export class QuizResultsFileSaver extends FileSaver {
 
 export class QuizCategoriesFileSaver extends FileSaver {
   constructor({ model }: { model: string }) {
-    super(`./generated/quiz-categories-${model}.json`);
+    super(`./generated/quiz-categories.json`);
   }
 }
 export class QuizTagsFileSaver extends FileSaver {
