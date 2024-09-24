@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import TextBadge from "../core/TextBadge";
+import { groupBy } from "@/lib/utils/utils";
 
 const mapDispatch = (dispatch: Dispatch) => ({
   submitQuiz: (args: Record<string, any>) => dispatch.quiz.submitQuiz(args),
@@ -70,7 +71,7 @@ const QuizForm: React.FC<Props> = ({ headersAndOptions, tree, answers, submitQui
     resetAnswers();
   }
 
-  const groups = Object.entries(Object.groupBy(leafs, ({ leaf }) => leaf!.id.split('.')[0]));
+  const groups = Object.entries(groupBy(leafs, ({ leaf }) => leaf!.id.split('.')[0]));
 
   return (
     <>

@@ -199,3 +199,16 @@ export function convertToDate(value: string) {
 
   return date;
 }
+
+
+export function groupBy<T>(
+  arr: T[],
+  callback: (currentValue: T, currentIndex: number, array: T[]) => string
+) {
+  return arr.reduce((acc = {}, ...args) => {
+    const key = callback(...args);
+    acc[key] ??= []
+    acc[key].push(args[0]);
+    return acc;
+  }, {} as Record<string,T[]>);
+};
