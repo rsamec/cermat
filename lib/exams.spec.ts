@@ -1,14 +1,13 @@
 import { test, expect } from "vitest";
 import { AnswerTreeNode, calculateMaxTotalPoints, convertTree, } from "./utils/quiz-specification";
 import { GFM, Subscript, Superscript, parser } from '@lezer/markdown';
-import { Maybe, matchNumberListCount, Option } from "./utils/utils";
+import { Maybe, matchNumberListCount } from "./utils/utils";
 import { TreeNode, createTree, getAllLeafsWithAncestors } from "./utils/tree.utils";
 import { loadMarkdown } from "./utils/file.utils";
 import { Abbreviations, OptionList, ParsedQuestion, ShortCodeMarker, chunkHeadingsList, getQuizBuilder } from "./utils/parser.utils";
 import examTestCases from "./exams.utils";
 
 const mdParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
-const mdParserWithoutOptions = parser.configure([[ShortCodeMarker], GFM, Subscript, Superscript]);
 
 function isLanguageTest(subject: string){
   return !(subject == "math" || subject == "cz")
@@ -88,7 +87,7 @@ test.each(examTestCases.filter((d,i) => d.config.questions))(`quiz content build
    //load quiz
    const quizContent = await loadMarkdown(pathes.concat(['index.md']));
    //parse quiz
-   const contentTree = mdParserWithoutOptions.parse(quizContent);
+   const contentTree = mdParser.parse(quizContent);
    const quizBuilder = getQuizBuilder(contentTree,quizContent);
    
    const questionIds = quizBuilder.questions.map(d => d.id);

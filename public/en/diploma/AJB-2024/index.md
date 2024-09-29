@@ -578,7 +578,7 @@ place on both railways so we’ll go by car.
 
 > **A Dream Job**
 > 
-> I think all people (**0)** _______**have**_________ their dream jobs. For example, I want to become a 
+> I think all people _______**have**_________ their dream jobs. For example, I want to become a 
 > writer. I (**60**) ________________ born into a family of biologists. When I was a young child, we 
 > used (**61**) ________________ visit zoos, parks, and museums. I also liked reading books and 
 > stories about animals. (**62**) ________________ were hundreds of books like those in our house!  

@@ -491,41 +491,44 @@ nicht mehr an.
 
 (*CZVV*)
 
-
-
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 9. ČÁST - ÚLOHY 50–64 
-
-> Přečtěte si článek o sběrateli jízdních kol Reinerovi. Na základě textu vyberte k úlohám 50–64 vždy jednu správnou odpověď A–C.
+===
+> Přečtěte si článek o sběrateli jízdních kol Reinerovi.
+> Na základě textu **vyberte** k úlohám **50–64** vždy jednu správnou odpověď **A–C**.
 
 **Fahrradsammler Reiner**
 
-Reiner ist 64 Jahre alt und arbeitet als Sozialarbeiter mit Schülern in einem Jugendzentrum. 
-Berühmt ist er aber durch sein Hobby. Es macht ihm Spaß, Fahrräder (**50**) __________.
-Reiner ist kein reicher Mann. Alles, was er spart, gibt er für Fahrräder (**51**) __________, die 
-er seit Langem sammelt. Reiner war 54 Jahre alt, (**52**) __________ er das Museum in seiner 
-Wohnung in Offenbach gegründet hat. Es stehen dort zurzeit etwa sechzig Stücke. Reiners 
-Sammlung soll die (**53**) __________ von allen in Deutschland sein. Das Museum besuchen 
-nicht nur Fahrräder-Fans aus Deutschland, sondern auch Touristen aus der (**54**) __________ 
-Welt. Die reichsten Radsammler kommen aus Taiwan, Japan und (**55**) __________ Vereinigten 
-Staaten von Amerika. Diese bieten Reiner für die einzelnen Stücke tausende Euros an, er ist 
-aber auf seine Sammlung sehr stolz, deshalb (**56**) __________ er nichts verkaufen.
-Für Reiner sind die berühmten Marken nicht (**57**) __________ großer Bedeutung. Interessant 
-findet er nur die Handwerkskunst. Es gefällt ihm, wenn mit den Fahrrädern eine Geschichte 
-(**58**) __________ ist. Die meisten Fahrräder in seiner Sammlung kommen aus den achtziger 
-(**59**) __________. Daneben baut Reiner auch eigene Fahrräder. Die einzelnen Teile 
-(**60**) __________ kauft er auf Messen, Flohmärkten und im Internet. Fahrräder sind einfach 
-Reiners Liebe. Wenn er nicht gerade in seinem Museum ist, fährt er Rad. Auch seinen letzten 
-Urlaub hat er auf seinem Fahrrad (**61**) __________. Das Fahrrad ist sein Lieblingsverkehrsmittel. 
-Kein Wunder, dass er an (**62**) __________ Veranstaltungen für Radfahrer teilnimmt. Regelmäßig 
-besucht er die *Critical Mass*. Für Radfahrer ist es ein wichtiges Ereignis. Dabei treffen sich 
-Radfahrer an der Alten Oper und dann fahren sie durch die Stadt. Mit (**63**) __________ 
-Veranstaltung zeigen sie, dass Radfahren durch die Stadt ökologisch ist.
-Falls Sie Reiner persönlich kennenlernen wollen, besuchen Sie ihn einfach in seinem Museum. 
-Jetzt ist dazu eine tolle Gelegenheit, weil er erst letzte Woche dort eine neue Abteilung mit 
-Fahrrädern aus der Zeit der Weimarer Republik eröffnet (**64**) __________. Man muss für den 
-Besuch keine Gebühr bezahlen. Ein kleiner Beitrag oder eine gute Rezension machen Reiner 
-jedoch Freude.\
-(*www.faz.net, upraveno*)
+> Reiner ist 64 Jahre alt und arbeitet als Sozialarbeiter mit Schülern in einem Jugendzentrum. 
+> Berühmt ist er aber durch sein Hobby. Es macht ihm Spaß, Fahrräder (**50**) __________.
+> 
+> Reiner ist kein reicher Mann. Alles, was er spart, gibt er für Fahrräder (**51**) __________, die 
+> er seit Langem sammelt. Reiner war 54 Jahre alt, (**52**) __________ er das Museum in seiner 
+> Wohnung in Offenbach gegründet hat. Es stehen dort zurzeit etwa sechzig Stücke. Reiners 
+> Sammlung soll die (**53**) __________ von allen in Deutschland sein. Das Museum besuchen 
+> nicht nur Fahrräder-Fans aus Deutschland, sondern auch Touristen aus der (**54**) __________ 
+> Welt. Die reichsten Radsammler kommen aus Taiwan, Japan und (**55**) __________ Vereinigten 
+> Staaten von Amerika. Diese bieten Reiner für die einzelnen Stücke tausende Euros an, er ist 
+> aber auf seine Sammlung sehr stolz, deshalb (**56**) __________ er nichts verkaufen.
+> 
+> Für Reiner sind die berühmten Marken nicht (**57**) __________ großer Bedeutung. Interessant 
+> findet er nur die Handwerkskunst. Es gefällt ihm, wenn mit den Fahrrädern eine Geschichte 
+> (**58**) __________ ist. Die meisten Fahrräder in seiner Sammlung kommen aus den achtziger 
+> (**59**) __________. Daneben baut Reiner auch eigene Fahrräder. Die einzelnen Teile 
+> (**60**) __________ kauft er auf Messen, Flohmärkten und im Internet. Fahrräder sind einfach 
+> Reiners Liebe. Wenn er nicht gerade in seinem Museum ist, fährt er Rad. Auch seinen letzten 
+> Urlaub hat er auf seinem Fahrrad (**61**) __________. Das Fahrrad ist sein Lieblingsverkehrsmittel. 
+> Kein Wunder, dass er an (**62**) __________ Veranstaltungen für Radfahrer teilnimmt. Regelmäßig 
+> besucht er die *Critical Mass*. Für Radfahrer ist es ein wichtiges Ereignis. Dabei treffen sich 
+> Radfahrer an der Alten Oper und dann fahren sie durch die Stadt. Mit (**63**) __________ 
+> Veranstaltung zeigen sie, dass Radfahren durch die Stadt ökologisch ist.
+> 
+> Falls Sie Reiner persönlich kennenlernen wollen, besuchen Sie ihn einfach in seinem Museum. 
+> Jetzt ist dazu eine tolle Gelegenheit, weil er erst letzte Woche dort eine neue Abteilung mit 
+> Fahrrädern aus der Zeit der Weimarer Republik eröffnet (**64**) __________. Man muss für den 
+> Besuch keine Gebühr bezahlen. Ein kleiner Beitrag oder eine gute Rezension machen Reiner 
+> jedoch Freude.\
+> 
+> (*www.faz.net, upraveno*)
 
 # 50 
 - [A] zu sammeln 

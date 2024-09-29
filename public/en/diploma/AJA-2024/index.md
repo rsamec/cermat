@@ -575,7 +575,7 @@ More information on *www.belminizoo.com*.
 
 > **Earth Day Celebration**
 >
-> We are pleased (**0)** ____**have**_______ inform you that our school is going to celebrate 
+> We are pleased (0) ____**have**_______ inform you that our school is going to celebrate 
 > *Earth Day* this Tuesday, April 22nd, (**60**) ________________ 9:30 am to 2:30 pm. 
 > We (**61**) ________________ inviting you all to *Earth Day* to spend it together. The main 
 > guest at the event is going to be a famous scientist (**62**) ________________ attended 

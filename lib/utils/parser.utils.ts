@@ -70,7 +70,7 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
 export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options: Option<string>[] };
 export type QuestionHtml = ParsedQuestion & { contentHtml: string }
 export type State = { position: number, type?: { name: string }, header: string, options: Option<string>[], excludeChunks: PositionChunk[] }
-export function chunkHeadingsList(tree: Tree, input: string) {
+export function chunkHeadingsList(tree: Tree, input: string,{excludeOptions}: {excludeOptions?:boolean}= {excludeOptions: true}) {
 
   const children: ParsedQuestion[] = [];
   let lastState: State = { position: 0, header: '', options: [], excludeChunks: [] }
@@ -86,10 +86,11 @@ export function chunkHeadingsList(tree: Tree, input: string) {
       if (type.name == Abbreviations.H1 || type.name == Abbreviations.H2 || type.name == Abbreviations.ST) {
 
         if (lastState.position != 0) {
+          const content = input.substring(lastState.position, from);
           children.push({
             type: lastState.type,
             header: lastState.header,
-            content: excludeChunks(input.substring(lastState.position, from), computedExcludeChunks()),
+            content: excludeOptions ? excludeChunks(content, computedExcludeChunks()):content ,
             options: lastState.options
           })
         }
@@ -108,10 +109,11 @@ export function chunkHeadingsList(tree: Tree, input: string) {
         lastState.excludeChunks.push({ from, to })
       }
       if (type.name == "Document") {
+        const content = input.substring(lastState.position, to);
         children.push({
           type: lastState.type,
           header: lastState.header,
-          content: excludeChunks(input.substring(lastState.position, to), computedExcludeChunks()),
+          content: excludeOptions ?  excludeChunks(content, computedExcludeChunks()): content,
           options: lastState.options
         })
       }
@@ -197,7 +199,7 @@ export function countMaxChars(str: string, charToCount: string): number {
 }
 
 export function getQuizBuilder(tree: Tree, input: string) {
-  const rawHeadings = chunkHeadingsList(tree, input);
+  const rawHeadings = chunkHeadingsList(tree, input, {excludeOptions: false});
 
   function order(name: Maybe<string>) {
     if (name == Abbreviations.ST) return 1;
@@ -221,17 +223,17 @@ export function getQuizBuilder(tree: Tree, input: string) {
       title: d.leaf.data.header,
       id,
       content: (selectedIds: number[]) => {
-        //const children = d.leaf.children ?? []; 
         const children = d.ancestors.slice(-1)[0].children ?? [];
         const items = [d.leaf.data].concat(children.map(d => d.data));
         return isInRange(id, range) && !selectedIds?.some(d => d < id && isInRange(d, range))
           ? toContent([root].concat(items))
           : toContent(items)
-      }
+      },
+      options: d.leaf.data.options?.length > 0 ? d.leaf.data.options : d.ancestors[d.ancestors.length - 2].data.options
     }
   })
   const output = {
-    questions: values.map(d => ({ id: d.id, title: d.title })),
+    questions: values.map(d => ({ id: d.id, title: d.title, options: d.options })),
     content: (ids: number[]) => {
       const filteredQuestions = values.filter(d => ids.includes(d.id));
       return filteredQuestions.map(d => d.content(filteredQuestions.map(d => d.id))).join("")
