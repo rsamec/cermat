@@ -689,6 +689,9 @@
             "kind": "options"
           }
         }
+      },
+      "metadata": {
+        "inline": true
       }
     }
   },

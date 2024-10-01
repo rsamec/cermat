@@ -25,6 +25,7 @@ export interface AnswerInfo {
 export interface AnswerGroupMetadata<T> {
   computeBy?: ComputeFunctionSpec,
   info?: AnswerInfo
+  inline?: boolean
 }
 
 export type AnswerNode<T> = AnswerGroup<T> | AnswerMetadata<T>;

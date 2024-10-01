@@ -86,13 +86,13 @@ const form = rootGroup(
             9.57: option("A"),
             9.58: option("B"),
             9.59: option("C"),
-        }),
+        }, { inline: true }),
         10: group({
             '10.60': word("was", twoPoints),
             10.61: word("to", twoPoints),
             10.62: word("There", twoPoints),            
             10.63: word("then", twoPoints),
             10.64: match(/(?:work|write)/, twoPoints),
-        }),
+        }, { inline: true }),
     });
 export default form

@@ -637,6 +637,9 @@
             "kind": "options"
           }
         }
+      },
+      "metadata": {
+        "inline": true
       }
     },
     "10": {
@@ -694,6 +697,9 @@
             "kind": "text"
           }
         }
+      },
+      "metadata": {
+        "inline": true
       }
     }
   },

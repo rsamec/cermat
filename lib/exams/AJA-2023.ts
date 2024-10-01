@@ -91,6 +91,6 @@ const form = rootGroup(
             9.62: option("C"),
             9.63: option("B"),
             9.64: option("C"),
-        }),
+        }, { inline: true }),
     });
 export default form

@@ -12,14 +12,15 @@ export const patternCatalog = {
   }
 } as const
 
+const validatorsBySpec = (spec: ComponentFunctionSpec, required?: boolean) => {
+  return [
+    ...(required ? [requiredValidator] : []),
+    ...(spec.kind === 'math' ? [mathExpressionValidator] : []),
+    ...(spec.kind === 'text' && spec.args?.patternType === 'ratio' ? [patternValidator(new RegExp(patternCatalog.ratio.regex))] : [])
+  ]
+}
+
 export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>, answers: Record<string, any> = {}) {
-  const validatorsBySpec = (spec: ComponentFunctionSpec, required?: boolean) => {
-    return [
-      ...(required ? [requiredValidator] : []),
-      ...(spec.kind === 'math' ? [mathExpressionValidator] : []),
-      ...(spec.kind === 'text' && spec.args?.patternType === 'ratio' ? [patternValidator(new RegExp(patternCatalog.ratio.regex))] : [])
-    ]
-  }
   
   const traverse = (node: TreeNode<AnswerTreeNode<T>>) => {
 
@@ -40,12 +41,8 @@ export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>, answers: Rec
         const answersList = answers[data.id];
         return new ListControl(inputBy.map((d,i) => new FieldControl(answersList?.[i], { validators: validatorsBySpec(d, true) })))
       }
-      else {
-        const answersMap = answers[data.id];
-        return new GroupControl(Object.entries(inputBy).reduce((out, [key, d]) => {
-          out[key] = new FieldControl(answersMap?.[key], { validators: validatorsBySpec(d, true) })
-          return out;
-        }, {} as FormGroupControlsConfig))
+      else {        
+        return convertRecordToGroupControl(inputBy, answers[data.id]);        
       }
     }
     else {
@@ -63,7 +60,12 @@ export function convertToForm<T>(tree: TreeNode<AnswerTreeNode<T>>, answers: Rec
   const result = traverse(tree) as GroupControl<any>;  
   return result;
 }
-
+export function convertRecordToGroupControl(record: Record<string,any>, answers: Record<string, any>){
+  return new GroupControl(Object.entries(record).reduce((out, [key, d]) => {
+    out[key] = new FieldControl(answers?.[key] ?? '', { validators: validatorsBySpec(d, true) })
+    return out;
+  }, {} as FormGroupControlsConfig))
+}
 export function getControl(control: GroupControl, code: QuizQuestionCode) {
   const parts = code.split('.');
   const names = parts.reduce((out, part) => {
