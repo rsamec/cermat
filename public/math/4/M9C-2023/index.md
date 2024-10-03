@@ -2,22 +2,22 @@
 # 2 Vypočtěte: 
 ## 2.1 
 $$
-4+6∶2−5⋅(−3+5)= 
+4+6∶2-5⋅(-3+5)= 
 $$
 ## 2.2 
 $$
-\sqrt{1,3^2−1,2^2}= 
+\sqrt{1,3^2-1,2^2}= 
 $$
  
  
 # 3 Vypočtěte a výsledek zapište zlomkem v základním tvaru. 
 ## 3.1 
 $$
-3⋅\frac{2}{7}−\frac{2}{7}=
+3⋅\frac{2}{7}-\frac{2}{7}=
 $$ 
 ## 3.2 
 $$
-1−\frac{14}{5}∶2= 
+1-\frac{14}{5}∶2= 
 $$
 
 ## 3.3 
@@ -29,26 +29,26 @@ $$
 # 4 
 ## 4.1 **Rozložte** na součin podle vzorce: 
 $$
-4𝑎^2−9= 
+4𝑎^2-9= 
 $$
 ## 4.2 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-(2𝑥−1)\cdot\frac{1}{2}−𝑥= 
+(2𝑥-1)\cdot\frac{1}{2}-𝑥= 
 $$
 ## 4.3 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-(4𝑛−3)^2−4𝑛⋅(4𝑛−3)= 
+(4𝑛-3)^2-4𝑛⋅(4𝑛-3)= 
  $$
  
 
 # 5 Řešte rovnici: 
 ## 5.1 
 $$
-0,3\cdot(2𝑥+1)=0,2𝑥−0,7 
+0,3\cdot(2𝑥+1)=0,2𝑥-0,7 
 $$
 ## 5.2 
 $$ 
-𝑦+\frac{5𝑦}{6}=\frac{2𝑦−1}{4}+\frac{𝑦+1}{2}
+𝑦+\frac{5𝑦}{6}=\frac{2𝑦-1}{4}+\frac{𝑦+1}{2}
 $$ 
 
 VÝCHOZÍ TEXT K ÚLOZE 6 
@@ -185,10 +185,10 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 13
 
 # 13 Jaká je velikost úhlu 𝜔?  
 Velikosti úhlů neměřte, ale vypočtěte. 
-- [A] $ 65\degree $
-- [B] $ 70\degree $
-- [C] $ 75\degree $
-- [D] $ 80\degree $
+- [A] 65°
+- [B] 70°
+- [C] 75°
+- [D] 80°
 - [E] jiná velikost 
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14 

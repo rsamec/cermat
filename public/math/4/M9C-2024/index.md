@@ -92,7 +92,7 @@ Výsledek uveďte v celých metrech.
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8 
 ===
 
-> Trojúhelník *ABC* je vymezen třemi různoběžkami a, b, c. Přímky a a c svírají úhel 130 $\degree$ a velikosti úhlů α a γ jsou v poměru 2:3. 
+> Trojúhelník *ABC* je vymezen třemi různoběžkami a, b, c. Přímky a a c svírají úhel 130° a velikosti úhlů α a γ jsou v poměru 2:3. 
 > 
 > ![alt text](image-3.png)
 # 8 

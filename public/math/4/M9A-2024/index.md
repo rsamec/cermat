@@ -123,16 +123,16 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 10
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 11
 ===
 > V rovině leží přímky p, q a r, jejichž průsečíky tvoří vrcholy trojúhelníku ABC.\
-> Jsou dány úhly $\beta = 23\degree$ a $\delta = 107\degree$.
+> Jsou dány úhly $\beta = 23°$ a $\delta = 107°$.
 >
 > ![alt text](image-5.png)
 
-# 11 Jaká je velikost rozdílu úhlů $\gamma -\alpha $ ? 
+# 11 Jaká je velikost rozdílu úhlů $\gamma -\alpha$ ? 
 Velikost úhlů neměřte, ale vypočítejte (obrázek je ilustrační).
-- [A] $10\degree$
-- [B] $11\degree$
-- [C] $12\degree$
-- [D] $13\degree$
+- [A] 10°
+- [B] 11°
+- [C] 12°
+- [D] 13°
 - [E] jiná velikost
 
 

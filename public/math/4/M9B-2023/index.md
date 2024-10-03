@@ -38,15 +38,15 @@ $$
 # 4 
 ## 4.1 **Upravte a rozložte** na součin vytknutím: 
 $$
-x\cdot(y−3)+3\cdot(x−2y) = 
+x\cdot(y-3)+3\cdot(x-2y) = 
 $$
 
-## 4.2 Určete pomocí vzorce nejjednodušší výraz, kterým je třeba vynásobit výraz $ 3a−2^2 $,  abychom získali výraz $ 9𝑎^2−16 $. 
+## 4.2 Určete pomocí vzorce nejjednodušší výraz, kterým je třeba vynásobit výraz $3a-2^2$,  abychom získali výraz $9𝑎^2-16$. 
 
 ## 4.3 Zjednodušte (výsledný výraz nesmí obsahovat závorky): 
 
 $$
-(3n+2)^2−n\cdot(3n+4)+(2n−n)⋅n =
+(3n+2)^2-n\cdot(3n+4)+(2n-n)⋅n =
 $$
 
 **V záznamovém archu** uveďte pouze v úloze 4.3 celý **postup řešení**. 
@@ -56,12 +56,12 @@ $$
 ## 5.1 
 
 $$ 
-2+{0.5}\cdot(x−3)={0.4}\cdot({1.5}x+2) 
+2+{0.5}\cdot(x-3)={0.4}\cdot({1.5}x+2) 
 $$
 
 ## 5.2 
 $$ 
-3\cdot\frac{2y−1}{6} = \frac{3y+2}{8} + \frac{3}{4}\cdot\frac{y-1}{6}
+3\cdot\frac{2y-1}{6} = \frac{3y+2}{8} + \frac{3}{4}\cdot\frac{y-1}{6}
 $$
  
 **V záznamovém archu** uveďte v obou částech úlohy celý **postup řešení** (zkoušku nezapisujte). 
@@ -180,13 +180,13 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 12
 >   
 > (*CZVV*) 
 
-# 12 Jaký je součet $ \varphi+\omega $?  
+# 12 Jaký je součet $\varphi+\omega$?  
 Velikosti úhlů neměřte, ale vypočtěte. 
-- [A] $ 150\degree $ 
-- [B] $ 155\degree $ 
-- [C] $ 160\degree $ 
-- [D] $ 165\degree $ 
-- [E] $ 170\degree $ 
+- [A] 150°
+- [B] 155°
+- [C] 160°
+- [D] 165°
+- [E] 170°
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 13 
 ===

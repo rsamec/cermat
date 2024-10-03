@@ -18,7 +18,7 @@ VÝCHOZÍ TEXT K ÚLOZE 2
 # 2 Vypočtěte v cm^2^ obsah daného čtverce.  
 Výsledek ani dílčí výpočty nezaokrouhlujte. 
 
-# 3 Pro $ {x \in R  \{−2;0;2\}} $ zjednodušte: 
+# 3 Pro ${x \in R  \{-2;0;2\}}$ zjednodušte: 
 $$
 \frac{1}{x + 2} - \frac{\frac{x^2}{x^2 - 4}}{\frac{x}{2}} = 
 $$
@@ -57,14 +57,14 @@ $$
 { \log_2(8^{-x})}
 $$
 
-**Určete všechna $ x \in R $, pro která je hodnota daného výrazu rovna osmi.** 
+**Určete všechna $x \in R$, pro která je hodnota daného výrazu rovna osmi.** 
 
 **V záznamovém archu** uveďte celý **postup řešení**.
  
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8 
 ===
-> Grafem funkce $ h:y= \frac{3}{x- 2}-4 $ je hyperbola se středem S (bod S je průsečík asymptot).
-> Graf lineární funkce *f* prochází bodem R[−5;1] a bodem S. 
+> Grafem funkce $h:y= \frac{3}{x- 2}-4$ je hyperbola se středem S (bod S je průsečík asymptot).
+> Graf lineární funkce *f* prochází bodem R[-5;1] a bodem S. 
 > 
 > ![alt text](image-1.png)
 >
@@ -141,14 +141,14 @@ VÝCHOZÍ TEXT K ÚLOZE 15
 
 > V kartézské soustavě souřadnic *Oxy* je dána přímka 
 > $$
-> { p:x=2+2𝑡, y=1−4𝑡, t \in R }
+> { p:x=2+2𝑡, y=1-4𝑡, t \in R }
 > $$
 > (*CZVV*) 
 
 # 15 Rozhodněte o každém z následujících tvrzení (15.1–15.3), zda je pravdivé (A), či nikoli (N). 
  
 
-## 15.1 Přímka *p* prochází bodem M[3;−1]. 
+## 15.1 Přímka *p* prochází bodem M[3;-1]. 
 ## 15.2 Vektor ${ \vec{u} = (2;1)}$ je směrovým vektorem přímky *p*. 
 ## 15.3 Přímka *p* je kolmá k přímce ${ q:2𝑥+𝑦=0}$. 
  
@@ -238,13 +238,13 @@ Výsledek je zaokrouhlen na celé cm^2^.
  
  
  
-# 21 Pro kterou z následujících nerovnic je množinou všech řešení v oboru R interval $ (7;+\infty)$ ? 
+# 21 Pro kterou z následujících nerovnic je množinou všech řešení v oboru R interval $(7;+\infty)$ ? 
 
-- [A] $ {7-x > 0} $
-- [B] $ {(x-7)^2 > 0} $
-- [C] $ { x^2 - 49 > 0} $
-- [D] $ {\frac{(x-1)^2}{x -7} > 0} $
-- [E] $ {\frac{x-7}{x-1} > 0} $
+- [A] ${7-x > 0}$
+- [B] ${(x-7)^2 > 0}$
+- [C] ${ x^2 - 49 > 0}$
+- [D] ${\frac{(x-1)^2}{x -7} > 0}$
+- [E] ${\frac{x-7}{x-1} > 0}$
  
 VÝCHOZÍ TEXT K ÚLOZE 22 
 ===
@@ -254,7 +254,7 @@ VÝCHOZÍ TEXT K ÚLOZE 22
 > ![alt text](image-7.png)
 >  
 > (*CZVV*) 
-# 22 Který výraz byl upraven správně pro každé $ {a \in (0;+\infty)}$ a každé ${ n \in N}$ ? 
+# 22 Který výraz byl upraven správně pro každé ${a \in (0;+\infty)}$ a každé ${ n \in N}$ ? 
 - [A] Správně byly upraveny alespoň dva ze tří výrazů. 
 - [B] pouze **I.** 
 - [C] pouze **II.** 

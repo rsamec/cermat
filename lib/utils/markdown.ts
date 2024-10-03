@@ -168,45 +168,45 @@ const underlinePlugin = () => {
   return transformer;
 };
 
-const firstWordPlugin = () => {
-  function transformer(tree: any, { value }: { value: any }) {
-    visit(tree, 'heading', (node, index?: any) => {
+  const firstWordPlugin = () => {
+    function transformer(tree: any, { value }: { value: any }) {
+      visit(tree, 'heading', (node, index?: any) => {
 
-      if ((index > 0) ||
-        (!('children' in node)) ||
-        (node.children.length <= 0) ||
-        (!('value' in node.children[0]))) {
-        return
-      }
-
-
-      var para = node.children[0].value
-      var word = para.split(' ')[0]
-      var text = para.substr(word.length)
-
-      // remove first word from text
-      node.children[0].value = text
-
-      // replace what was first word with accessible dropcapped markup
-      node.children.unshift(
-        {
-          type: 'emphasis',
-          children: [{
-            type: 'text',
-            value: word
-          }],
-          data: {
-            hName: 'span',
-            hProperties: {}
-          }
+        if ((index > 0) ||
+          (!('children' in node)) ||
+          (node.children.length <= 0) ||
+          (!('value' in node.children[0]))) {
+          return
         }
-      )
-    }
-    );
-  }
 
-  return transformer;
-};
+
+        var para = node.children[0].value
+        var word = para.split(' ')[0]
+        var text = para.substr(word.length)
+
+        // remove first word from text
+        node.children[0].value = text
+
+        // replace what was first word with accessible dropcapped markup
+        node.children.unshift(
+          {
+            type: 'emphasis',
+            children: [{
+              type: 'text',
+              value: word
+            }],
+            data: {
+              hName: 'span',
+              hProperties: {}
+            }
+          }
+        )
+      }
+      );
+    }
+
+    return transformer;
+  };
 
 
 // export function fromMarkdownTo(markdown: string) {

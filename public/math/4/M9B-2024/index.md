@@ -145,11 +145,11 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 13
 
 # 13 Jaká je velikost úhlů $\alpha$ ? 
 Velikost úhlů neměřte, ale vypočítejte (obrázek je ilustrační).
-- [A] $55\degree$
-- [B] $50\degree$
-- [C] $45\degree$
-- [D] $40\degree$
-- [E] $35\degree$
+- [A] 55°
+- [B] 50°
+- [C] 45°
+- [D] 40°
+- [E] 35°
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 ===

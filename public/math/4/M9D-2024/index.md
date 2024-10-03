@@ -148,10 +148,10 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 
 # 14 Jaký je součet úhlů α + β + γ? 
 Velikosti úhlů neměřte, ale vypočítejte (obrázek je ilustrační). 
-- [A] $126\degree30´$ 
-- [B] $133\degree30´$ 
-- [C] $143\degree30´$
-- [D] $180\degree$
+- [A] 126° 30´
+- [B] 133° 30´
+- [C] 143° 30´
+- [D] 180°
 - [E] jiný výsledek
 
 # 15 V obchodě mají dva druhy jablek. Kilogram jednoho druhu (dražších) jablek stojí 30 Kč, kilogram druhého druhu (levnějších) jablek stojí 25 Kč. Paní Vitamínová koupila x kilogramů jablek, kde x je celé číslo, a zaplatila 330 Kč. 

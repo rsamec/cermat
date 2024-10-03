@@ -4,7 +4,7 @@
 
 **Kolikrát je součet A + B menší než rozdíl A-B?**
 
-## 1.2 Napište desetinné číslo, které je o 0,093 menší než $ \frac{7}{8} $.
+## 1.2 Napište desetinné číslo, které je o 0,093 menší než $\frac{7}{8}$.
 
 # 2 Vypočítejte a výsledek zapište zlomkem v základním tvaru.
 
@@ -134,11 +134,11 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 > ![alt text](image-5.png)
 
 # 14 Jaká je velikost úhlu $\alpha$?
-- [A] $145\degree$
-- [B] $110\degree$
-- [C] $105\degree$
-- [D] $75\degree$
-- [E] $35\degree$
+- [A] 145°
+- [B] 110°
+- [C] 105°
+- [D] 75°
+- [E] 35°
 
 
 # 15 Přiřaďte ke každé úloze (15.1-15.3) odpovídající výsledek (A-F)

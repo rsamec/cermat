@@ -20,17 +20,17 @@ Doporučení: Úlohy 3.3, 4.3 a 5 řešte přímo v záznamovém archu.
 # 3 Vypočtěte a výsledek zapište zlomkem v základním tvaru. 
 ## 3.1 
 $$
-\frac{\frac{2}{3}−1}{\frac{8}{9}}=
+\frac{\frac{2}{3}-1}{\frac{8}{9}}=
 $$
 
 ## 3.2 
 $$ 
-2\cdot\frac{1}{6}−\frac{3}{8}\cdot4= 
+2\cdot\frac{1}{6}-\frac{3}{8}\cdot4= 
 $$
 
 ## 3.3 
 $$
-\frac{\frac{6}{7}−\frac{9}{14}}{\frac{8}{7}+\frac{6}{7}∶\frac{3}{2}}=
+\frac{\frac{6}{7}-\frac{9}{14}}{\frac{8}{7}+\frac{6}{7}∶\frac{3}{2}}=
 $$
 
 V záznamovém archu uveďte pouze v úloze 3.3 celý postup řešení.
@@ -42,23 +42,23 @@ $$
 $$
 ## 4.2 **Rozložte** na součin podle vzorce: 
 $$
-49−(−4𝑎)^2= 
+49-(-4𝑎)^2= 
 $$
 ## 4.3 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-𝑛\cdot(2𝑛−1)−(−2𝑛−𝑛)\cdot\\(3𝑛+2)+(1−2𝑛)\cdot(1+2𝑛)= 
+𝑛\cdot(2𝑛-1)-(-2𝑛-𝑛)\cdot\\(3𝑛+2)+(1-2𝑛)\cdot(1+2𝑛)= 
 $$
 V záznamovém archu uveďte pouze v úloze 4.3 celý postup řešení. 
 
 # 5 Řešte rovnici: 
 ## 5.1 
 $$ 
-\frac{2−𝑥}{2}+2𝑥=2,5𝑥−3 
+\frac{2-𝑥}{2}+2𝑥=2,5𝑥-3 
 $$
 
 ## 5.2 
 $$ 
-3\cdot\frac{𝑦+1}{2}−\frac{𝑦}{3}=\frac{3}{2}\cdot\frac{2𝑦−3}{3}+\frac{3}{2}
+3\cdot\frac{𝑦+1}{2}-\frac{𝑦}{3}=\frac{3}{2}\cdot\frac{2𝑦-3}{3}+\frac{3}{2}
 $$
 
 V záznamovém archu uveďte v obou částech úlohy celý postup řešení (zkoušku nezapisujte).
@@ -205,11 +205,11 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 13
 
 # 13 Jaká je velikost úhlu 𝛾?  
 Velikosti úhlů neměřte, ale vypočtěte. 
-- [A] $115\degree$
-- [B] $120\degree$
-- [C] $135\degree$
-- [D] $140\degree$
-- [E] $150\degree$
+- [A] 115°
+- [B] 120°
+- [C] 135°
+- [D] 140°
+- [E] 150°
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14 
 ===
