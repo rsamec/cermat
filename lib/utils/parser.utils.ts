@@ -1,9 +1,8 @@
 import { SyntaxNodeRef, Tree } from "@lezer/common";
 import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
-import { tags as t } from "@lezer/highlight";
-import { Maybe, Option, extractNumberRange, extractOptionRange } from "./utils";
 import { createTree, getNodesWithAncestors } from "./tree.utils";
 
+export type Option<T> = { name: string, nameHtml?: string, value: T }
 export const Abbreviations = {
   H1: "ATXHeading1",
   H2: "ATXHeading2",
@@ -125,8 +124,8 @@ export function chunkHeadingsList(tree: Tree, input: string,{excludeOptions}: {e
 
 export const OptionList: MarkdownConfig = {
   defineNodes: [
-    { name: "Option", block: true, style: t.list },
-    { name: "OptionMarker", style: t.atom }
+    { name: "Option", block: true },
+    { name: "OptionMarker" }
   ],
   parseBlock: [{
     name: "OptionList",
@@ -151,7 +150,6 @@ class OptionParser implements LeafBlockParser {
 export const ShortCodeMarker: MarkdownConfig = {
   defineNodes: [{
     name: "ShortCodeMarker",
-    style: t.atom
   }],
   parseInline: [{
     name: "ShortCodeMarker",
@@ -201,7 +199,7 @@ export function countMaxChars(str: string, charToCount: string): number {
 export function getQuizBuilder(tree: Tree, input: string) {
   const rawHeadings = chunkHeadingsList(tree, input, {excludeOptions: false});
 
-  function order(name: Maybe<string>) {
+  function order(name?: string) {
     if (name == Abbreviations.ST) return 1;
     if (name == Abbreviations.H1) return 2;
     return 3;    
@@ -241,4 +239,27 @@ export function getQuizBuilder(tree: Tree, input: string) {
   }
   return output;
 
+}
+
+export function extractNumberRange(text: string): [number, number] | null {
+  text = text.split("\n")[0].trim();
+  const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?$/);
+  if (match) {
+    const prefix = match[1];
+    const start = parseInt(match[2], 10);
+    const end = match[3] ? parseInt(match[3], 10) : start;
+    return [start, end];
+  } else {
+    return null;
+  }
+}
+
+export function extractOptionRange(text: string): [string, string] | null {
+  const match = text.match(/^\[([\w\d]*)\][ \t]/);
+  if (match) {
+    const prefix = match[1];
+    return [prefix, text.replace(`[${prefix}] `, '')];
+  } else {
+    return null;
+  }
 }

@@ -138,7 +138,7 @@ be cause of:
 - [D] She called a taxi for the pigeon.
 
 # 26
-> **Hot Air Balloon Crash Lands^1^ in San Diego**
+> **Hot Air Balloon Crash Lands[^1] in San Diego**
 > A sunset wedding ceremony in a hot air balloon didn’t go quite as planned yesterday. 
 > The balloon crash landed in the garden of a San Diego house because of strong winds. So, 
 > the plans to fly until the sun set had to be cancelled. It happened just after the bride and 
@@ -153,7 +153,7 @@ be cause of:
 >
 > (*www.foxnews.com, upraveno*)
 >
-> ^1^ crash land: nouzově přistát
+> [^1]: crash land: nouzově přistát
 
 
 **What do we find out about the wedding ceremony from this article?**
@@ -301,7 +301,7 @@ time and place tomorrow.
 
 (*CZVV*)
 
-^1^ participant: účastník
+[^1]: participant: účastník
 
 > Přečtěte si tvrzení v úlohách **30–39** a informační leták, který jste právě obdržel/a při příjezdu na letní jazykový tábor jako jeho účastník/účastnice. Na základě informací v textu **rozhodněte**, zda jsou tvrzení **pravdivá (P)**, nebo **nepravdivá (N)**.
  
@@ -309,8 +309,8 @@ time and place tomorrow.
 # 31 You __won’t__ be allowed to take part in an afternoon activity if you come late to your English class that day. 
 # 32 There are afternoon activities organised specially for the English language beginners. 
 # 33 You need to have some experience with sailing if you want to attend any sailing lessons. 
-# 34 Participants ^1^ 16 years of age and older can leave the camp alone. 
-^1^ participant: účastník
+# 34 Participants[^1] 16 years of age and older can leave the camp alone. 
+[^1]: participant: účastník
 # 35 The red bus will take you to Wauxhelm from the bus stop at the camp. 
 # 36 Both day trips include some travel by ship. 
 # 37 You will be hiking six kilometres along a lake on either day trip. 
@@ -334,7 +334,7 @@ and took the now-famous photo. He thought about eventually sending it
 to National Geographic, as they had bought some of his previous photos. 
 So had the Los Angeles Times, whose editors would surely be interested in more photos of 
 the California countryside. In the end, he decided to upload it to a photo licensing website. Then 
-in 2000, Microsoft was looking for a photo that would make a default desktop background1 for 
+in 2000, Microsoft was looking for a photo that would make a default desktop background[^1] for 
 its newest operating system. Microsoft found O’Rear’s photo on the photo licensing website and 
 bought it from him.
 
@@ -377,7 +377,7 @@ a history of animal farming, there would be an animal farm there now.
 
 (*www.artsy.net, www.en.wikipedia.org/wiki/bliss_(image*)*; upraveno)*
 
-^1^ a default desktop background: výchozí pozadí plochy počítače
+[^1]: a default desktop background: výchozí pozadí plochy počítače
 
 
 # 40 Which company asked Charles O’Rear to take the now-famous photograph?

@@ -213,15 +213,15 @@ nepravdivá (N).
 # 31 Das Skigebiet Grindelwald hat die größte Fläche in der Jungfrau-Region. 
 # 32 Man muss den Skikurs für den März im Voraus reservieren. 
 # 33 Der erste Sieger beim *World Snow Festival* war der japanische Künstler Takashi. 
-# 34 Beide Schlittenwege^1^ können kleine Kinder allein herunterfahren. 
+# 34 Beide Schlittenwege[^1] können kleine Kinder allein herunterfahren. 
 # 35 Bis zum Start der beiden Schlittenwege kann man mit öffentlichen Verkehrsmitteln kommen. 
 # 36 Den längsten Schlittenweg der Welt kann man in 30 Minuten herunterfahren. 
 # 37 Das Ziel der beiden Schlittenwege ist an derselben Stelle in Grindelwald. 
-# 38 Alle ausgeliehenen Schlitten^2^ kann man nur bei Intersport in Grindelwald zurückgeben. 
+# 38 Alle ausgeliehenen Schlitten[^2] kann man nur bei Intersport in Grindelwald zurückgeben. 
 # 39 Vor den Yeti-Hütten kann man auch im Winter parken. 
 
-^1^ der Schlittenweg: sáňkařská dráha\
-^2^ der Schlitten: sáňky
+[^1]: der Schlittenweg: sáňkařská dráha\
+[^2]: der Schlitten: sáňky
 
 
 **Willkommen im Skigebiet Grindelwald!**
@@ -244,7 +244,7 @@ kamen Künstler aus anderen Ländern nach Grindelwald, um ihre „Schneekunst“
 diesem Jahr hat Takashi dem ersten Sieger den Preis gegeben. Beim *World Snow Festival* erhält 
 der Sieger immer eine Glasfigur, die das Werk Takashis von 1983 darstellt. 
 
-Und was ist die größte Attraktion? In Grindelwald gibt es den längsten Schlittenweg^1^ der Welt! 
+Und was ist die größte Attraktion? In Grindelwald gibt es den längsten Schlittenweg[^1] der Welt! 
 Sehr beliebt ist aber auch der kürzere Grüne Schlittenweg:
 
 **Grüner Schlittenweg**
@@ -264,7 +264,7 @@ Ort damit hinauffahren. Dieser
 Schlittenweg beginnt an der 
 Bushaltestelle, die sich in einer 
 Höhe von 1800 Metern befindet. 
-Von da fährt man auf dem Schlitten^2^ 
+Von da fährt man auf dem Schlitten[^2] 
 bis nach unten zum Ziel dieses 
 Schlittenwegs an der Bushaltestelle 
 *Gaggi Säge* in Grindelwald. 
@@ -306,8 +306,8 @@ Jahreszeit erlaubt. Die Yeti-Hütten sind sehr beliebt und sollten rechtzeitig g
 (*www.grindelwald.swiss.de, upraveno*)
 
 ---
-^1^ der Schlittenweg: sáňkařská dráha\
-^2^ der Schlitten: sáňky
+[^1]: der Schlittenweg: sáňkařská dráha\
+[^2]: der Schlitten: sáňky
 
 ČTENÍ A JAZYKOVÁ KOMPETENCE - 7. ČÁST - ÚLOHY 40–44 
 ===

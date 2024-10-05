@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls, extractNumberRange, extractOptionRange, formatTime, intersection, normalizeImageUrlsToAbsoluteUrls, strToSimpleHtml } from './utils';
+import { cls, formatTime, intersection, normalizeImageUrlsToAbsoluteUrls, strToSimpleHtml } from './utils';
 
 test('simple string', () => {
 
@@ -15,41 +15,6 @@ test('ternary operator', () => {
 test('boolean to string', () => {
   expect(cls([true && "one"])).toBe("one")
   expect(cls([false && "one"])).toBe("")
-})
-
-test('extract number range identifier', () => {
-  expect(extractNumberRange(
-    `Some text 8
-  ===`
-  )).toEqual([8, 8])
-
-})
-test('extract number range identifier with standard dash', () => {
-  expect(extractNumberRange(
-    `Some text 8-12
-  ===`
-  )).toEqual([8, 12])
-
-})
-test('extract number range identifier with different longer dash ', () => {
-  expect(extractNumberRange(
-    `Some text 8–12
-  ===`
-  )).toEqual([8, 12])
-
-})
-
-test('extract number range identifier with multiple dashes', () => {
-  expect(extractNumberRange(
-    `POSLECH - 2. ČÁST ÚLOHY 5–12 
-  ===`
-  )).toEqual([5, 12])
-
-})
-
-test('extract option identifier', () => {
-  expect(extractOptionRange("[A] some text")).toEqual(["A", "some text"])
-
 })
 
 test('simple convert string to super script', () => {

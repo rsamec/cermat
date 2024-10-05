@@ -35,28 +35,6 @@ export function filterSteps<T>(steps: T[], currentStepIndex: number, maxVisibleS
   return steps.slice(start, end + 1);
 };
 
-export function extractNumberRange(text: string): [number, number] | null {
-  text = text.split("\n")[0].trim();
-  const match = text.match(/^([\s\S]*?)(\d+)(?:[-–](\d+))?$/);
-  if (match) {
-    const prefix = match[1];
-    const start = parseInt(match[2], 10);
-    const end = match[3] ? parseInt(match[3], 10) : start;
-    return [start, end];
-  } else {
-    return null;
-  }
-}
-
-export function extractOptionRange(text: string): [string, string] | null {
-  const match = text.match(/^\[([\w\d]*)\][ \t]/);
-  if (match) {
-    const prefix = match[1];
-    return [prefix, text.replace(`[${prefix}] `, '')];
-  } else {
-    return null;
-  }
-}
 
 export const isEmptyOrWhiteSpace = (value: string | undefined): boolean => {
   return value == null || (typeof value === 'string' && value.trim() === '');

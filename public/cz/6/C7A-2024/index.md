@@ -99,7 +99,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 7–10
 > už z konce 19. století. Tato pera ovšem měla zásadní nedostatky: často vysychala nebo 
 > z nich vytékal inkoust. První prototyp funkčního kuličkového pera vyrobil až maďarský 
 > vynálezce László Bíró v roce 1931. Inspirovaly ho prý děti, které hrály kuličky na 
-> chodníku plném kaluží. Rok před začátkem druhé světové války^1^ musel Bíró kvůli svému 
+> chodníku plném kaluží. Rok před začátkem druhé světové války[^1] musel Bíró kvůli svému 
 > židovskému původu opustit Maďarsko. Po dvouletém pobytu v Paříži se vydal za oceán 
 > a usadil se v Argentině, kde úspěšně __rozjel výrobu kuličkových per__.
 > 
@@ -111,12 +111,12 @@ VÝCHOZÍ TEXT K ÚLOHÁM 7–10
 > začátkem 50. let byly v obchodech k dostání levné a přitom spolehlivé propisky.
 > 
 > __Tajemství propisky spočívá__ v hustém rychleschnoucím inkoustu a zejména v malinké 
-> kuličce, umístěné na jejím hrotu. Tato kulička, vyráběná například ze slinutého karbidu^2^, 
+> kuličce, umístěné na jejím hrotu. Tato kulička, vyráběná například ze slinutého karbidu[^2], 
 > se při psaní otáčí, __inkoust z náplně se tak rovnoměrně rozvádí__ po jejím povrchu 
 > a zanechává na papíře stopu. Na stejném principu funguje i keramické pero.
 > 
-> ^1^ Druhá světová válka probíhala v letech 1939–1945.
-> ^2^ Slinutý karbid je velmi tvrdý materiál používaný na hroty protipancéřových střel, ve šperkařství, při 
+> [^1]: Druhá světová válka probíhala v letech 1939–1945.
+> [^2]: Slinutý karbid je velmi tvrdý materiál používaný na hroty protipancéřových střel, ve šperkařství, při 
 >  výrobě břitů aj.
 > 
 > (*www.stoplusjednicka.cz; zoom.iprima.cz, upraveno*)

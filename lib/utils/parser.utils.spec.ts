@@ -1,8 +1,7 @@
 import { expect, test } from 'vitest'
-import { Abbreviations, OptionList, ShortCodeMarker, chunkByAbbreviationType, chunkHeadingsList, getQuizBuilder } from './parser.utils'
+import { Abbreviations, OptionList, ShortCodeMarker, chunkByAbbreviationType, chunkHeadingsList, extractNumberRange, extractOptionRange, getQuizBuilder } from './parser.utils'
 import { parser, GFM, Subscript, Superscript } from '@lezer/markdown';
 import { createTree, getAllLeafsWithAncestors } from './tree.utils';
-import { Maybe } from './utils';
 
 const markdownParser = parser.configure([[ShortCodeMarker, OptionList], GFM, Subscript, Superscript]);
 
@@ -109,7 +108,7 @@ test('parse tree markdown', () => {
   //console.log(rawHeadings)
   expect(rawHeadings.length).toBe(4);
 
-  function order(name: Maybe<string>) {
+  function order(name?: string) {
     if (name == Abbreviations.ST) return 1;
     if (name == Abbreviations.H1) return 2;
     if (name == Abbreviations.H2) return 3;
@@ -212,3 +211,38 @@ Kvádr je možné beze zbytku rozřezat na 200 krychlí, z nichž každá má ob
 
 })
 
+
+test('extract number range identifier', () => {
+  expect(extractNumberRange(
+    `Some text 8
+  ===`
+  )).toEqual([8, 8])
+
+})
+test('extract number range identifier with standard dash', () => {
+  expect(extractNumberRange(
+    `Some text 8-12
+  ===`
+  )).toEqual([8, 12])
+
+})
+test('extract number range identifier with different longer dash ', () => {
+  expect(extractNumberRange(
+    `Some text 8–12
+  ===`
+  )).toEqual([8, 12])
+
+})
+
+test('extract number range identifier with multiple dashes', () => {
+  expect(extractNumberRange(
+    `POSLECH - 2. ČÁST ÚLOHY 5–12 
+  ===`
+  )).toEqual([5, 12])
+
+})
+
+test('extract option identifier', () => {
+  expect(extractOptionRange("[A] some text")).toEqual(["A", "some text"])
+
+})

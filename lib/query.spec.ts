@@ -1,13 +1,13 @@
-import { test, expect } from "vitest";
-import { defineTable, Schema, NewTableRow, TableRow } from "squid"
+import { test } from "vitest";
+import { defineTable, Schema, NewTableRow } from "squid"
 import { sql, spreadInsert, } from "squid/pg"
 import { createTree, getAllLeafsWithAncestors } from "./utils/tree.utils";
 
 import { AnswerMetadata, convertTree } from "./utils/quiz-specification";
 import { GFM, Subscript, Superscript, parser } from "@lezer/markdown";
 import { loadMarkdown, loadMarkdownWithAbsoluteImagesUrl } from "./utils/file.utils";
-import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, ParsedQuestion, QuestionHtml, countMaxChars, } from "./utils/parser.utils";
-import { Maybe, extractNumberRange, normalizeImageUrlsToAbsoluteUrls } from "./utils/utils";
+import { ShortCodeMarker, OptionList, chunkHeadingsList, Abbreviations, QuestionHtml, countMaxChars, extractNumberRange, } from "./utils/parser.utils";
+import { Maybe } from "./utils/utils";
 import { getVerifyFunction } from "./utils/assert";
 import { uuidv4 } from "../tests/test.utils";
 import markdownToHtml from "./utils/markdown";

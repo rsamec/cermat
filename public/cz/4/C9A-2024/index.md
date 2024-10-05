@@ -107,7 +107,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 6–11
 ====
 
 > (**1**) Planinu Nazca, ležící na jihu Peru, zdobí nejrozměrnější grafické dílo světa. 
-> Na ploše velké **okolo** 520 kilometrů čtverečních se zde nachází více než 300 geoglyfů^1^. 
+> Na ploše velké **okolo** 520 kilometrů čtverečních se zde nachází více než 300 geoglyfů[^1]. 
 > Jsou tvořeny světlými liniemi, které byly vyryty do tmavší povrchové horniny. Některé 
 > obrazce znázorňují lidské postavy, jiné mají **podobu** zvířat. Pozornost upoutají zejména 
 > gigantické obrazce: obří pavouk velký 45 metrů, stometrová opice či kondor s rozpětím 
@@ -128,7 +128,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 6–11
 > 
 > (**4**) Podle jedné z nich byly geoglyfy využívány k náboženským rituálům, podle jiné šlo o důmyslný zavlažovací systém. Další vědci se zase domnívají, že obrazce sloužily jako astronomický kalendář, který pomáhal určovat období setí či sklizně. Kromě všech těchto hypotéz, považovaných za seriózní, však existuje i pofidérní teorie přisuzující obrazcům mimozemský původ. Pravdu se asi hned tak nedozvíme. Za peruánskými geoglyfy, zapsanými roku 1994 na seznam světového dědictví UNESCO, *****.
 > 
-> ^1^ *geoglyf* – velký obrazec vytvořený na zemském povrchu
+> [^1]: *geoglyf* – velký obrazec vytvořený na zemském povrchu
 > 
 > (*D. Brewer a kol., Planeta tajuplných světů, upraveno*)
 > 

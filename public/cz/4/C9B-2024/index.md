@@ -108,7 +108,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 6–11
 > pralesem na severu dnešní Kambodže, aby ulovil vzácného motýla, narazil na zbytky 
 > chrámů. Šlo o pozůstatky Angkoru, významného města dnes již zaniklé Khmerské říše. 
 > V současnosti je Angkor nejen známým archeologickým nalezištěm, ale také 
-> **vyhledávaným** turistickým cílem.^1^
+> **vyhledávaným** turistickým cílem.[^1]
 > 
 > Roku 1992 byl Angkor zapsán na seznam světového dědictví UNESCO. V celém areálu 
 > se totiž nachází více než tisíc památek: od kamenných rozvalin až po majestátní chrámy. 
@@ -129,7 +129,7 @@ VÝCHOZÍ TEXT K ÚLOHÁM 6–11
 > polí. Následná neúroda patrně **vyvolala** vlnu hladomorů, jež přinutily panovníka 
 > přesunout hlavní město jinam. Časem byl Angkor úplně pohlcen nezkrotnou džunglí.
 > 
-> ^1^  Např. v roce 2023 areál navštívilo přes dva miliony turistů, stejně vysoká návštěvnost se očekává i letos.
+> [^1]: Např. v roce 2023 areál navštívilo přes dva miliony turistů, stejně vysoká návštěvnost se očekává i letos.
 > 
 > (*www.stoplusjednicka.cz, upraveno*)
 
