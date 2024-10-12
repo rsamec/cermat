@@ -55,11 +55,11 @@
         "6.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": true
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "6.2": {

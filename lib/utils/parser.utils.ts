@@ -1,5 +1,6 @@
 import { SyntaxNodeRef, Tree } from "@lezer/common";
-import { BlockContext, LeafBlock, LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
+import { BlockContext, LeafBlock } from "@lezer/markdown";
+import type { LeafBlockParser, MarkdownConfig } from "@lezer/markdown";
 import { createTree, getNodesWithAncestors } from "./tree.utils";
 
 export type Option<T> = { name: string, nameHtml?: string, value: T }
@@ -66,10 +67,10 @@ export function chunkByAbbreviationType(tree: Tree, input: string, abbr: Abbrevi
   })
   return chunks.length > 0 ? chunks : [input];
 }
-export type ParsedQuestion = { type?: { name: string }, header: string, content: string, options: Option<string>[] };
+export type ParsedQuestion = { type?: { name: string }, header: string, content: string, contentWithoutOptions: string, options: Option<string>[] };
 export type QuestionHtml = ParsedQuestion & { contentHtml: string }
 export type State = { position: number, type?: { name: string }, header: string, options: Option<string>[], excludeChunks: PositionChunk[] }
-export function chunkHeadingsList(tree: Tree, input: string,{excludeOptions}: {excludeOptions?:boolean}= {excludeOptions: true}) {
+export function chunkHeadingsList(tree: Tree, input: string) {
 
   const children: ParsedQuestion[] = [];
   let lastState: State = { position: 0, header: '', options: [], excludeChunks: [] }
@@ -89,7 +90,8 @@ export function chunkHeadingsList(tree: Tree, input: string,{excludeOptions}: {e
           children.push({
             type: lastState.type,
             header: lastState.header,
-            content: excludeOptions ? excludeChunks(content, computedExcludeChunks()):content ,
+            content,
+            contentWithoutOptions: excludeChunks(content, computedExcludeChunks()),
             options: lastState.options
           })
         }
@@ -112,7 +114,8 @@ export function chunkHeadingsList(tree: Tree, input: string,{excludeOptions}: {e
         children.push({
           type: lastState.type,
           header: lastState.header,
-          content: excludeOptions ?  excludeChunks(content, computedExcludeChunks()): content,
+          content,
+          contentWithoutOptions: excludeChunks(content, computedExcludeChunks()),
           options: lastState.options
         })
       }
@@ -195,28 +198,34 @@ export function countMaxChars(str: string, charToCount: string): number {
   const maxCount = matches.length == 0 ? 0 : Math.max(...matches.map(match => match.length));
   return maxCount;
 }
-
-export function getQuizBuilder(tree: Tree, input: string) {
-  const rawHeadings = chunkHeadingsList(tree, input, {excludeOptions: false});
+export type RenderType = "none" | "content" | "contentWithoutOptions";
+export function getQuizBuilder(tree: Tree, input: string, { rootOnly, render }: { rootOnly?: boolean, render: RenderType } = { render: "content" }) {
+  const rawHeadings = chunkHeadingsList(tree, input);
 
   function order(name?: string) {
     if (name == Abbreviations.ST) return 1;
     if (name == Abbreviations.H1) return 2;
-    return 3;    
+    return 3;
   }
-  
+
   const headingsTree = createTree(rawHeadings.map(data => ({ data })), (child, potentionalParent) => order(child.type?.name) > order(potentionalParent.type?.name));
-  
+
 
   const rootQuestions = getNodesWithAncestors({ data: {} as ParsedQuestion, children: headingsTree }, d => d.type?.name == Abbreviations.H1);
   const isInRange = (number: number, range: [number, number] | null) => range != null ? number >= range[0] && number <= range[1] : false;
-  const toContent = (items: { header: string, content: string }[]) => items.map(d => (d.header ?? "") + (d.content ?? "")).join("");
+  const toContent = (items: { header: string, content: string, contentWithoutOptions: string }[], { renderHeader, render }: { renderHeader: boolean, render: RenderType }) =>
+    items.map(d => (renderHeader ? d.header ?? "" : "") +
+      (render === "content"
+        ? d.content ?? ""
+        : render === "contentWithoutOptions"
+          ? d.contentWithoutOptions ?? ""
+          : "")).join("");
 
   const values = rootQuestions.map(d => {
     const root = d.ancestors[1].data;
     const id = Math.floor(parseFloat(d.leaf.data.header.replaceAll("#", "")));
     const range = root.type?.name == Abbreviations.ST ? extractNumberRange(root.header) : null;
-    
+
     return {
       title: d.leaf.data.header,
       id,
@@ -224,8 +233,8 @@ export function getQuizBuilder(tree: Tree, input: string) {
         const children = d.ancestors.slice(-1)[0].children ?? [];
         const items = [d.leaf.data].concat(children.map(d => d.data));
         return isInRange(id, range) && !selectedIds?.some(d => d < id && isInRange(d, range))
-          ? toContent([root].concat(items))
-          : toContent(items)
+          ? toContent([root], { renderHeader: true, render }) + toContent(items, { renderHeader: !rootOnly, render })
+          : toContent(items, { renderHeader: !rootOnly, render })
       },
       options: d.leaf.data.options?.length > 0 ? d.leaf.data.options : d.ancestors[d.ancestors.length - 2].data.options
     }

@@ -1,4 +1,4 @@
-import { group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, number, mathExpr, selfEvaluateImage, rootGroup } from "../utils/quiz-builder";
+import { group, selfEvaluateText, wordsGroup, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, number, mathExpr, selfEvaluateImage, rootGroup, optionBool } from "../utils/quiz-builder";
 
 const form = rootGroup({
    code: 'MAMZD23C0T01',
@@ -37,9 +37,9 @@ const form = rootGroup({
    }),
    14: number(1040, { suffix: 'm' }, threePoints),
    15: group({
-      15.1: option('N'),
-      15.2: option('A'),
-      15.3: option('A'),
+      15.1: optionBool(false),
+      15.2: optionBool(true),
+      15.3: optionBool(true),
    }),
    16: option('A', twoPoints),
    17: option('C', twoPoints),

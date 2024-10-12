@@ -1,4 +1,4 @@
-import { group, mathExpr, number, option, rootGroup, selfEvaluateImage, task2Max3Points, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
+import { group, mathExpr, number, option, optionBool, rootGroup, selfEvaluateImage, task2Max3Points, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
 const form = rootGroup({
   code: 'M9PCD23C0T03',
@@ -48,16 +48,16 @@ const form = rootGroup({
     10.2: selfEvaluateImage("image-8.png")
   }, task2Max3Points),
   11: group({
-    11.1: option('A'),
-    11.2: option('N'),
-    11.3: option('A'),
+    11.1: optionBool(true),
+    11.2: optionBool(false),
+    11.3: optionBool(true),
   }, task3Max4Points),
   12: option('C', twoPoints),
   13: option('D', twoPoints),
   14: option('B', twoPoints),
   15: group({
     15.1: option('E'),
-    15.2: option('A'),
+    15.2: optionBool(true),
     15.3: option('B'),
   }, task3Max6Points),
   16: group({

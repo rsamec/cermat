@@ -274,31 +274,31 @@
         "15.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "N"
+            "args": false
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "15.2": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": true
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         },
         "15.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "A"
+            "args": true
           },
           "points": 1,
           "inputBy": {
-            "kind": "options"
+            "kind": "bool"
           }
         }
       }

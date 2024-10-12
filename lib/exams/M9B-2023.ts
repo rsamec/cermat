@@ -47,9 +47,9 @@ const form = rootGroup({
   9: selfEvaluateImage("V rovině leží úsečka AB a bod S.jpeg", twoPoints),
   10: selfEvaluateImage("V rovině leží body C, Q a kružnice k se středem S, která prochází bodem C.jpeg", threePoints),
   11: group({
-    11.1: option('N'),
-    11.2: option('A'),
-    11.3: option('A'),
+    11.1: optionBool(false),
+    11.2: optionBool(true),
+    11.3: optionBool(true),
   }, task3Max4Points),
   12: option('E', twoPoints),
   13: option('C', twoPoints),

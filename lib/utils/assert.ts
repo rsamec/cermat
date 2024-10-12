@@ -1,7 +1,5 @@
-import { intersect } from "mathjs"
 import { normalizeToString } from "./math.utils"
-import { option } from "./quiz-builder"
-import { removeSpaces, Option, areDeeplyEqual, isArraySame, intersection, normalizeToArray } from "./utils"
+import { removeSpaces, Option, areDeeplyEqual, intersection, normalizeToArray } from "./utils"
 
 export type ValidationFunctionArgs<T> = { args: T }
 export type EqualValidator<T> = ValidationFunctionArgs<T> & {
