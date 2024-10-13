@@ -55,7 +55,7 @@ const form = rootGroup({
   15: group({
     15.1: option('E'),
     15.2: option('C'),
-    15.3: optionBool(true),
+    15.3: option('A'),
   }, task3Max6Points),
   16: group({
     16.1: number(81, { suffix: 'bílých trojúhelníků' }),

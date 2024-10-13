@@ -45,7 +45,7 @@ const form = rootGroup({
   15: group({
     15.1: option('E'),
     15.2: option('B'),
-    15.3: optionBool(true),
+    15.3: option('A'),
   }, task3Max6Points),
   16: group({
     16.1: number(630, { suffix: 'cm^2^' }, twoPoints),

@@ -57,7 +57,7 @@ const form = rootGroup({
   14: option('B', twoPoints),
   15: group({
     15.1: option('E'),
-    15.2: optionBool(true),
+    15.2: option('A'),
     15.3: option('B'),
   }, task3Max6Points),
   16: group({

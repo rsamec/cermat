@@ -14,7 +14,7 @@ const form = rootGroup({
   4: option("D"),
   5: option("C"),
   6: group({
-    6.1: optionBool(true),
+    6.1: option('A'),
     6.2: option('E'),
     6.3: option('D'),
   }),
