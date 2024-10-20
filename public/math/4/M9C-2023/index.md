@@ -13,16 +13,16 @@ $$
 # 3 Vypočtěte a výsledek zapište zlomkem v základním tvaru. 
 ## 3.1 
 $$
-3⋅\frac{2}{7}-\frac{2}{7}=
+3\cdot\frac{2}{7}-\frac{2}{7}=
 $$ 
 ## 3.2 
 $$
-1-\frac{14}{5}∶2= 
+1-\frac{14}{5}∶2=
 $$
 
 ## 3.3 
 $$ 
-\frac{\frac{3}{4}+\frac{4}{3}}{\frac{5}{7}\cdot\frac{14}{3}}= 
+\frac{\frac{3}{4}+\frac{4}{3}}{\frac{5}{7}\cdot\frac{14}{3}}=
 $$
  
 

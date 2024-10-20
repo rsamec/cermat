@@ -527,9 +527,6 @@ place on both railways so we’ll go by car.
 > 
 > [^1]:altitude: (nadmořská) výška
 
-
-ČTENÍ A JAZYKOVÁ KOMPETENCE - 9. ČÁST - ÚLOHY 50–59
-
 # 50 
 - [A] doesn’t know 
 - [B] know 

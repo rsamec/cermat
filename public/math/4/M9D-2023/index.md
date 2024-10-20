@@ -25,7 +25,7 @@ $$
 
 ## 3.2 
 $$ 
-2\cdot\frac{1}{6}-\frac{3}{8}\cdot4= 
+2\cdot\frac{1}{6}-\frac{3}{8}\cdot4=
 $$
 
 ## 3.3 
