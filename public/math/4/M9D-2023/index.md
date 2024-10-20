@@ -30,7 +30,7 @@ $$
 
 ## 3.3 
 $$
-\frac{\frac{6}{7}-\frac{9}{14}}{\frac{8}{7}+\frac{6}{7}∶\frac{3}{2}}=
+\frac{\frac{6}{7}-\frac{9}{14}}{\frac{8}{7}+\frac{6}{7}\div\frac{3}{2}}=
 $$
 
 **V záznamovém archu** uveďte pouze v úloze 3.3 celý **postup řešení**. 
@@ -46,7 +46,7 @@ $$
 $$
 ## 4.3 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-𝑛\cdot(2n-1)-(-2n-n)\cdot\\(3n+2)+(1-2n)\cdot(1+2n)=
+n\cdot(2n-1)-(-2n-n)\cdot\\(3n+2)+(1-2n)\cdot(1+2n)=
 $$
 V záznamovém archu uveďte pouze v úloze 4.3 celý postup řešení. 
 
