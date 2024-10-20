@@ -2,11 +2,11 @@
 # 2 Vypočtěte: 
 ## 2.1 
 $$
-4+6∶2-5⋅(-3+5)= 
+4+6∶2-5⋅(-3+5)=
 $$
 ## 2.2 
 $$
-\sqrt{1,3^2-1,2^2}= 
+\sqrt{1,3^2-1,2^2}=
 $$
  
  
@@ -29,26 +29,26 @@ $$
 # 4 
 ## 4.1 **Rozložte** na součin podle vzorce: 
 $$
-4𝑎^2-9= 
+4a^2-9=
 $$
 ## 4.2 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-(2𝑥-1)\cdot\frac{1}{2}-𝑥= 
+(2x-1)\cdot\frac{1}{2}-x=
 $$
 ## 4.3 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-(4𝑛-3)^2-4𝑛⋅(4𝑛-3)= 
- $$
+(4n-3)^2-4n⋅(4n-3)=
+$$
  
 
 # 5 Řešte rovnici: 
 ## 5.1 
 $$
-0,3\cdot(2𝑥+1)=0,2𝑥-0,7 
+0,3\cdot(2x+1)=0,2x-0,7
 $$
 ## 5.2 
 $$ 
-𝑦+\frac{5𝑦}{6}=\frac{2𝑦-1}{4}+\frac{𝑦+1}{2}
+y+\frac{5y}{6}=\frac{2y-1}{4}+\frac{y+1}{2}
 $$ 
 
 VÝCHOZÍ TEXT K ÚLOZE 6 

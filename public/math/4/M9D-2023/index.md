@@ -33,32 +33,32 @@ $$
 \frac{\frac{6}{7}-\frac{9}{14}}{\frac{8}{7}+\frac{6}{7}∶\frac{3}{2}}=
 $$
 
-V záznamovém archu uveďte pouze v úloze 3.3 celý postup řešení.
+**V záznamovém archu** uveďte pouze v úloze 3.3 celý **postup řešení**. 
 
 # 4 
 ## 4.1 **Umocněte a zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-(0,3𝑥+0,5)^2= 
+(0,3x+0,5)^2=
 $$
 ## 4.2 **Rozložte** na součin podle vzorce: 
 $$
-49-(-4𝑎)^2= 
+49-(-4a)^2=
 $$
 ## 4.3 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-𝑛\cdot(2𝑛-1)-(-2𝑛-𝑛)\cdot\\(3𝑛+2)+(1-2𝑛)\cdot(1+2𝑛)= 
+𝑛\cdot(2n-1)-(-2n-n)\cdot\\(3n+2)+(1-2n)\cdot(1+2n)=
 $$
 V záznamovém archu uveďte pouze v úloze 4.3 celý postup řešení. 
 
 # 5 Řešte rovnici: 
 ## 5.1 
 $$ 
-\frac{2-𝑥}{2}+2𝑥=2,5𝑥-3 
+\frac{2-x}{2}+2x=2,5x-3
 $$
 
 ## 5.2 
 $$ 
-3\cdot\frac{𝑦+1}{2}-\frac{𝑦}{3}=\frac{3}{2}\cdot\frac{2𝑦-3}{3}+\frac{3}{2}
+3\cdot\frac{y+1}{2}-\frac{y}{3}=\frac{3}{2}\cdot\frac{2y-3}{3}+\frac{3}{2}
 $$
 
 V záznamovém archu uveďte v obou částech úlohy celý postup řešení (zkoušku nezapisujte).
