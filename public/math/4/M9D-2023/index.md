@@ -46,9 +46,10 @@ $$
 $$
 ## 4.3 **Zjednodušte** (výsledný výraz nesmí obsahovat závorky): 
 $$
-n\cdot(2n-1)-(-2n-n)\cdot\\(3n+2)+(1-2n)\cdot(1+2n)=
+n\cdot(2n-1)-(-2n-n)\cdot(3n+2)+(1-2n)\cdot(1+2n)=
 $$
-V záznamovém archu uveďte pouze v úloze 4.3 celý postup řešení. 
+
+**V záznamovém archu** uveďte pouze v úloze 4.3 celý **postup řešení**. 
 
 # 5 Řešte rovnici: 
 ## 5.1 
