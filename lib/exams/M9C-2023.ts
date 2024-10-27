@@ -11,23 +11,23 @@ const form = rootGroup({
 
   1: number(7, { suffix: 'krát' }),
   2: group({
-    2.1: number(-3),
-    2.2: number(0.5)
+    2.1: number(-3,{ latexId: "0"}),
+    2.2: number(0.5, { latexId: "1"})
   }),
   3: group({
-    3.1: mathExpr("4/7", { hintType: 'fraction' }),
-    3.2: mathExpr("-2/5", { hintType: 'fraction' }),
-    3.3: mathExpr("5/8", { hintType: 'fraction' }, twoPoints),
+    3.1: mathExpr("4/7", { hintType: 'fraction', latexId: "2" }),
+    3.2: mathExpr("-2/5", { hintType: 'fraction',latexId: "3" }),
+    3.3: mathExpr("5/8", { hintType: 'fraction',latexId: "4" }, twoPoints),
 
   }),
   4: group({
-    4.1: mathExpr("(2a+3)(2a-3)", { hintType: 'expression' }),
-    4.2: mathExpr("-1/2", { hintType: 'expression' }),
-    4.3: mathExpr("-12n+9", { hintType: 'expression' }, twoPoints),
+    4.1: mathExpr("(2a+3)(2a-3)", { hintType: 'expression', latexId: "5" }),
+    4.2: mathExpr("-1/2", { hintType: 'expression', latexId: "6" }),
+    4.3: mathExpr("-12n+9", { hintType: 'expression', latexId: "7" }, twoPoints),
   }),
   5: group({
-    5.1: mathExpr("x=-2.5", { hintType: 'equation' }, twoPoints),
-    5.2: mathExpr("y=0.3", { hintType: 'equation' }, twoPoints),
+    5.1: mathExpr("x=-2.5", { hintType: 'equation', latexId: "8" }, twoPoints),
+    5.2: mathExpr("y=0.3", { hintType: 'equation', latexId: "9" }, twoPoints),
   }),
   6: group({
     6.1: mathExpr("(4/15)x", { hintType: 'expression' }),

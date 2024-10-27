@@ -22,7 +22,10 @@
           },
           "points": 1,
           "inputBy": {
-            "kind": "number"
+            "kind": "number",
+            "args": {
+              "latexId": "0"
+            }
           }
         },
         "2.2": {
@@ -32,7 +35,10 @@
           },
           "points": 1,
           "inputBy": {
-            "kind": "number"
+            "kind": "number",
+            "args": {
+              "latexId": "1"
+            }
           }
         }
       }
@@ -48,7 +54,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "fraction"
+              "hintType": "fraction",
+              "latexId": "2"
             }
           }
         },
@@ -61,7 +68,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "fraction"
+              "hintType": "fraction",
+              "latexId": "3"
             }
           }
         },
@@ -74,7 +82,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "fraction"
+              "hintType": "fraction",
+              "latexId": "4"
             }
           }
         }
@@ -91,7 +100,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "expression"
+              "hintType": "expression",
+              "latexId": "5"
             }
           }
         },
@@ -104,7 +114,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "expression"
+              "hintType": "expression",
+              "latexId": "6"
             }
           }
         },
@@ -117,7 +128,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "expression"
+              "hintType": "expression",
+              "latexId": "7"
             }
           }
         }
@@ -134,7 +146,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "equation"
+              "hintType": "equation",
+              "latexId": "8"
             }
           }
         },
@@ -147,7 +160,8 @@
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "equation"
+              "hintType": "equation",
+              "latexId": "9"
             }
           }
         }
