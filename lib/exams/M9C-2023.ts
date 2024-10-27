@@ -11,13 +11,13 @@ const form = rootGroup({
 
   1: number(7, { suffix: 'krát' }),
   2: group({
-    2.1: number(-3,{ latexId: "0"}),
-    2.2: number(0.5, { latexId: "1"})
+    2.1: number(-3, { latexId: "0" }),
+    2.2: number(0.5, { latexId: "1" })
   }),
   3: group({
     3.1: mathExpr("4/7", { hintType: 'fraction', latexId: "2" }),
-    3.2: mathExpr("-2/5", { hintType: 'fraction',latexId: "3" }),
-    3.3: mathExpr("5/8", { hintType: 'fraction',latexId: "4" }, twoPoints),
+    3.2: mathExpr("-2/5", { hintType: 'fraction', latexId: "3" }),
+    3.3: mathExpr("5/8", { hintType: 'fraction', latexId: "4" }, twoPoints),
 
   }),
   4: group({
@@ -34,8 +34,8 @@ const form = rootGroup({
     6.2: number(900, { suffix: 'km' }, twoPoints),
   }),
   7: group({
-    7.1: number(5, { prefix:"r", suffix:"cm"}, twoPoints),
-    7.2: number(940,{ prefix:"V", suffix:"cm^3^"}),
+    7.1: number(5, { prefix: "r", suffix: "cm" }, twoPoints),
+    7.2: number(940, { prefix: "V", suffix: "cm^3^" }),
 
   }),
   8: group({
