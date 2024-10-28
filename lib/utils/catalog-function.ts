@@ -12,9 +12,8 @@ export type GroupCompute = ComputeFunctionArgs<{ points: number, min: number }[]
 export type ComputeFunctionSpec = SumCompute | GroupCompute
 
 
-
 export type ComponentFunctionArgs<T> = { args?: T }
-export type MathExpressionSolver = { latexId?: string }
+
 export type MathExpressionHintType = 'fraction' | 'expression' | 'equation';
 
 export type BooleanComponentFunctionSpec = ComponentFunctionArgs<never> & {
@@ -24,11 +23,11 @@ export type TextComponentFunctionArgs = { prefix?: string, suffix?: string, patt
 export type TextComponentFunctionSpec = ComponentFunctionArgs<TextComponentFunctionArgs> & {
   kind: 'text'
 }
-export type NumberComponentFunctionArgs = { prefix?: string, suffix?: string, step?: number } & MathExpressionSolver
+export type NumberComponentFunctionArgs = { prefix?: string, suffix?: string, step?: number }
 export type NumberComponentFunctionSpec = ComponentFunctionArgs<NumberComponentFunctionArgs> & {
   kind: 'number'
 }
-export type MathExpressionComponentFunctionArgs = { prefix?: string, suffix?: string, hintType?: MathExpressionHintType | MathExpressionHintType[], hint?: string } & MathExpressionSolver
+export type MathExpressionComponentFunctionArgs = { prefix?: string, suffix?: string, hintType?: MathExpressionHintType | MathExpressionHintType[], hint?: string }
 export type MathExpressionComponentFunctionSpec = ComponentFunctionArgs<MathExpressionComponentFunctionArgs> & {
   kind: 'math'
 }

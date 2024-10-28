@@ -1,4 +1,4 @@
-import { group, mathExpr, number, option, optionBool, rootGroup, selfEvaluateImage, task2Max3Points, task3Max4Points, task3Max6Points, threePoints, twoPoints } from "../utils/quiz-builder";
+import { group, mathExpr, number, option, optionBool, rootGroup, selfEvaluateImage, task2Max3Points, task3Max4Points, task3Max6Points, threePoints, twoPoints, video } from "../utils/quiz-builder";
 
 const form = rootGroup({
   code: 'M9PCD23C0T03',
@@ -11,23 +11,23 @@ const form = rootGroup({
 
   1: number(7, { suffix: 'krát' }),
   2: group({
-    2.1: number(-3, { latexId: "0" }),
-    2.2: number(0.5, { latexId: "1" })
+    2.1: number(-3, {}, video("0")),
+    2.2: number(0.5, {}, video("1"))
   }),
   3: group({
-    3.1: mathExpr("4/7", { hintType: 'fraction', latexId: "2" }),
-    3.2: mathExpr("-2/5", { hintType: 'fraction', latexId: "3" }),
-    3.3: mathExpr("5/8", { hintType: 'fraction', latexId: "4" }, twoPoints),
+    3.1: mathExpr("4/7", { hintType: 'fraction' }, video("2")),
+    3.2: mathExpr("-2/5", { hintType: 'fraction' }, video("3")),
+    3.3: mathExpr("5/8", { hintType: 'fraction' }, { ...twoPoints, ...video("4") }),
 
   }),
   4: group({
-    4.1: mathExpr("(2a+3)(2a-3)", { hintType: 'expression', latexId: "5" }),
-    4.2: mathExpr("-1/2", { hintType: 'expression', latexId: "6" }),
-    4.3: mathExpr("-12n+9", { hintType: 'expression', latexId: "7" }, twoPoints),
+    4.1: mathExpr("(2a+3)(2a-3)", { hintType: 'expression' }, video("5")),
+    4.2: mathExpr("-1/2", { hintType: 'expression' }, video("6")),
+    4.3: mathExpr("-12n+9", { hintType: 'expression' }, { ...twoPoints, ...video("7") }),
   }),
   5: group({
-    5.1: mathExpr("x=-2.5", { hintType: 'equation', latexId: "8" }, twoPoints),
-    5.2: mathExpr("y=0.3", { hintType: 'equation', latexId: "9" }, twoPoints),
+    5.1: mathExpr("x=-2.5", { hintType: 'equation' }, { ...twoPoints, ...video("8") }),
+    5.2: mathExpr("y=0.3", { hintType: 'equation' }, { ...twoPoints, ...video("9") }),
   }),
   6: group({
     6.1: mathExpr("(4/15)x", { hintType: 'expression' }),

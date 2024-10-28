@@ -5,13 +5,19 @@ import { TreeNode } from "./tree.utils"
 
 
 export type MixedChildren<T> = { [K in keyof T]: T[K] extends AnswerGroup<any> ? T[K] : AnswerMetadata<any> };
-export type ObservableCells = string[]
+export type ResourceTypes = "video"
+
+export type ComponentFunctionArgs<T> = { args?: T }
+export type VideoResource = { kind: 'video', id: string };
+export type ObservableHQResource = { kind: 'observableHQ', cells: string[] }
+export type Resource = VideoResource | ObservableHQResource
+export type Resources = Resource[]
 export type AnswerInputBy = ComponentFunctionSpec | ComponentFunctionSpec[] | { [index: string]: ComponentFunctionSpec }
 export interface AnswerMetadata<T> {
   verifyBy: ValidationFunctionSpec<T>
   points?: number
   inputBy?: AnswerInputBy
-  observableCells?: ObservableCells
+  resources?: Resources
 }
 
 export interface AnswerInfo {

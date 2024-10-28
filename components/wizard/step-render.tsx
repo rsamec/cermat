@@ -61,8 +61,8 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
   const stepData = currentStep?.data;
   const showMathSolverButton = (currentStep?.metadata?.inputBy as any)?.kind == "math";
 
-  const observableCells = currentStep?.metadata?.observableCells ?? [];
-  const showObservableCellsButton = observableCells.length > 0;
+  //const observableCells = currentStep?.metadata?.observableCells ?? [];
+  //const showObservableCellsButton = observableCells.length > 0;
 
   const rawContent = stepData != null ? normalizeImageUrlsToAbsoluteUrls([
     stepData.header?.rawContent,
@@ -89,16 +89,6 @@ const StepsRenderer: React.FC<StateProps & DispatchProps> = ({ previousStepIndex
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
             </svg>
           </MathSolverLinkComponent>}
-
-          {showObservableCellsButton && <Link href={`https://geometry.rsamec.workers.dev?q=${encodeURIComponent((assetPath ?? []).slice(-1).map(d=> d.toLowerCase()).concat(observableCells).join("|"))}`} className="inline-flex items-center gap-2 justify-center p-2 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white" target="_blank">
-
-            <FontAwesomeIcon icon={faRuler} width={32} height={32} title="Zobray řešení geometrie"></FontAwesomeIcon>
-            <span className="w-full">Geometrie</span>
-            <svg className="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-            </svg>
-          </Link>
-          }
 
           {rawContent && <Link href={`https://chat.openai.com/?q=${encodeURIComponent(rawContent)}`} className="inline-flex items-center gap-2 justify-center p-2 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white" target="_blank">
             <Image alt="Zkus ChatGTP" src={chatGTPImage} width={32} height={32} title="Zkus ChatGTP"></Image>

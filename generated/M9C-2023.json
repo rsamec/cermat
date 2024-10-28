@@ -20,12 +20,15 @@
             "kind": "equal",
             "args": -3
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "0"
+            }
+          ],
           "inputBy": {
             "kind": "number",
-            "args": {
-              "latexId": "0"
-            }
+            "args": {}
           }
         },
         "2.2": {
@@ -33,12 +36,15 @@
             "kind": "equal",
             "args": 0.5
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "1"
+            }
+          ],
           "inputBy": {
             "kind": "number",
-            "args": {
-              "latexId": "1"
-            }
+            "args": {}
           }
         }
       }
@@ -50,12 +56,16 @@
             "kind": "equalMathExpression",
             "args": "4/7"
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "2"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "fraction",
-              "latexId": "2"
+              "hintType": "fraction"
             }
           }
         },
@@ -64,12 +74,16 @@
             "kind": "equalMathExpression",
             "args": "-2/5"
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "3"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "fraction",
-              "latexId": "3"
+              "hintType": "fraction"
             }
           }
         },
@@ -79,11 +93,16 @@
             "args": "5/8"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "4"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "fraction",
-              "latexId": "4"
+              "hintType": "fraction"
             }
           }
         }
@@ -96,12 +115,16 @@
             "kind": "equalMathExpression",
             "args": "(2a+3)(2a-3)"
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "5"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "expression",
-              "latexId": "5"
+              "hintType": "expression"
             }
           }
         },
@@ -110,12 +133,16 @@
             "kind": "equalMathExpression",
             "args": "-1/2"
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "6"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "expression",
-              "latexId": "6"
+              "hintType": "expression"
             }
           }
         },
@@ -125,11 +152,16 @@
             "args": "-12n+9"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "7"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "expression",
-              "latexId": "7"
+              "hintType": "expression"
             }
           }
         }
@@ -143,11 +175,16 @@
             "args": "x=-2.5"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "8"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "equation",
-              "latexId": "8"
+              "hintType": "equation"
             }
           }
         },
@@ -157,11 +194,16 @@
             "args": "y=0.3"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "9"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
-              "hintType": "equation",
-              "latexId": "9"
+              "hintType": "equation"
             }
           }
         }

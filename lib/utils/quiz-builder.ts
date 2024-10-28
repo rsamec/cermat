@@ -1,41 +1,46 @@
 import { SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
-import { ComponentFunctionSpec, LatexExpressionComponentFunctionArgs, LatexExpressionComponentFunctionSpec, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
-import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren, ObservableCells } from "./quiz-specification";
+import { ComponentFunctionSpec, LatexExpressionComponentFunctionArgs, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
+import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren, Resources, ResourceTypes } from "./quiz-specification";
 
 export function rootGroup<T>(info: AnswerInfo, children: MixedChildren<T>) {
   return new AnswerGroupImpl<T>(children, { info });
 }
-
+type additionalConfig = { points?: number, resources?: Resources }
 export function group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetadata<T>) {
   return new AnswerGroupImpl<T>(children, metadata);
 }
 
-export function number(value: number, args?: NumberComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: "equal", args: value }, points, inputBy: { kind: 'number', args } } as const
+export function number(value: number, args?: NumberComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: "equal", args: value }, points, resources, inputBy: { kind: 'number', args } } as const
 }
 
-export function mathExpr(value: string | number, args: MathExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: "equalMathExpression", args: value }, points, inputBy: { kind: 'math' as const, args } } as const
+export function mathExpr(value: string | number, args: MathExpressionComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: "equalMathExpression", args: value }, points, resources, inputBy: { kind: 'math' as const, args } } as const
 }
-export function latexExpr(value: string, args: LatexExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: "equalLatexExpression", args: value }, points, inputBy: { kind: 'latex' as const, args } } as const
-}
-
-export function mathEquation(value: string | boolean, args: MathExpressionComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: 'equalMathEquation', args: value }, points, inputBy: { kind: 'math', args } } as const
-}
-export function mathRatio(value: string, { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: 'equalRatio', args: value }, points, inputBy: { kind: 'text', args: { patternType: 'ratio' } } } as const
+export function latexExpr(value: string, args: LatexExpressionComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: "equalLatexExpression", args: value }, points, resources, inputBy: { kind: 'latex' as const, args } } as const
 }
 
-export function text(value: string, args: TextComponentFunctionArgs, { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: "equal", args: value }, points, inputBy: { kind: 'text', args } } as const
+export function mathEquation(value: string | boolean, args: MathExpressionComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: 'equalMathEquation', args: value }, points, resources, inputBy: { kind: 'math', args } } as const
+}
+export function mathRatio(value: string, { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: 'equalRatio', args: value }, points, resources, inputBy: { kind: 'text', args: { patternType: 'ratio' } } } as const
+}
+
+export function text(value: string, args: TextComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: "equal", args: value }, points, resources, inputBy: { kind: 'text', args } } as const
 }
 export const noPoints = {}
 export const twoPoints = { points: 2 };
 export const threePoints = { points: 3 };
 export const fourPoints = { points: 4 };
-export function optionBool(spravnaVolba: boolean, { points }: { points?: number } = { points: 1 }) {
+
+
+export const video = (id: string) => ({ resources: [{ kind: "video" as const, id }] });
+export const observableCells = (cells: string[]) => ({ resources: [{ kind: "observableHQ" as const,cells }] });
+
+export function optionBool(spravnaVolba: boolean, { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy:
       { kind: "equalOption", args: spravnaVolba },
@@ -93,7 +98,7 @@ const points = [
 function getPoints(max: number) {
   return points.slice(0, max + 1)
 }
-export function option(spravnaVolba: string, { points }: { points?: number } = { points: 1 }) {
+export function option(spravnaVolba: string, { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy:
       { kind: "equalOption", args: spravnaVolba },
@@ -104,18 +109,19 @@ export function option(spravnaVolba: string, { points }: { points?: number } = {
   } as const
 }
 
-export function word(slovo: string, { points }: { points: number } = { points: 1 }) {
+export function word(slovo: string, { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy:
       { kind: "equal", args: slovo },
     points,
+    resources,
     inputBy: {
       kind: 'text'
     }
   } as const
 }
 
-export function match(pattern: RegExp, { points }: { points: number } = { points: 1 }) {
+export function match(pattern: RegExp, { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy:
     {
@@ -125,6 +131,7 @@ export function match(pattern: RegExp, { points }: { points: number } = { points
       }
     },
     points,
+    resources,
     inputBy: {
       kind: 'text'
     }
@@ -132,7 +139,7 @@ export function match(pattern: RegExp, { points }: { points: number } = { points
 }
 
 
-export function words(slova: string, { points }: { points?: number } = { points: 1 }) {
+export function words(slova: string, { points, resources }: additionalConfig = { points: 1 }) {
   const items = slova.split(",").map(d => d.trim())
   return {
     verifyBy:
@@ -144,7 +151,7 @@ export function words(slova: string, { points }: { points?: number } = { points:
   } as const
 }
 
-export function numbers(items: number[], { points }: { points?: number } = { points: 1 }) {
+export function numbers(items: number[], { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy:
       { kind: "equalNumberCollection", args: items },
@@ -155,7 +162,7 @@ export function numbers(items: number[], { points }: { points?: number } = { poi
   } as const
 }
 
-export function wordsGroup(slova: { [key: string]: string }, { points }: { points?: number } = { points: 1 }) {
+export function wordsGroup(slova: { [key: string]: string }, { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy: { kind: 'equal', args: slova },
     points,
@@ -165,7 +172,7 @@ export function wordsGroup(slova: { [key: string]: string }, { points }: { point
     }, {})
   } as const
 }
-export function numbersGroup(numbers: { [key: string]: number }, { points }: { points?: number } = { points: 1 }) {
+export function numbersGroup(numbers: { [key: string]: number }, { points, resources }: additionalConfig = { points: 1 }) {
   return {
     verifyBy: { kind: 'equal', args: numbers },
     points,
@@ -177,21 +184,21 @@ export function numbersGroup(numbers: { [key: string]: number }, { points }: { p
 }
 
 
-export function sortedOptions(sortedOptions: string[], { points }: { points?: number } = { points: 1 }) {
-  return { verifyBy: { kind: 'equalSortedOptions', args: sortedOptions }, points, inputBy: { kind: 'sortedOptions' } } as const
+export function sortedOptions(sortedOptions: string[], { points, resources }: additionalConfig = { points: 1 }) {
+  return { verifyBy: { kind: 'equalSortedOptions', args: sortedOptions }, points, resources, inputBy: { kind: 'sortedOptions' } } as const
 }
 
-export function selfEvaluateImage(src: string, points: { points?: number } = { points: 1 }, observableCells?: ObservableCells) {
-  return selfEvaluate({ kind: 'image' as const, src }, points, observableCells);
+export function selfEvaluateImage(src: string, { points, resources }: additionalConfig = { points: 1 }) {
+  return selfEvaluate({ kind: 'image' as const, src }, { points, resources });
 }
-export function selfEvaluateText(content: string, { points }: { points?: number } = { points: 1 }, observableCells?: ObservableCells) {
-  return selfEvaluate({ kind: 'text' as const, content }, { points }, observableCells);
+export function selfEvaluateText(content: string, { points, resources }: additionalConfig = { points: 1 }) {
+  return selfEvaluate({ kind: 'text' as const, content }, { points, resources });
 }
-export function selfEvaluate(hint: SelfEvaluateText | SelfEvaluateImage, { points }: { points?: number } = { points: 1 }, observableCells?: ObservableCells) {
+export function selfEvaluate(hint: SelfEvaluateText | SelfEvaluateImage, { points, resources }: additionalConfig = { points: 1 }) {
   const options = getPoints(points ?? 1)
   return {
     verifyBy: { kind: 'selfEvaluate', args: { options, hint } } as SelfEvaluateValidator,
     inputBy: { kind: 'options' as const, args: options },
-    observableCells
+    resources
   } as const
 }

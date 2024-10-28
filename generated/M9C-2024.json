@@ -31,6 +31,12 @@
             "args": "21/2"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "0"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
@@ -44,6 +50,12 @@
             "args": "-16/5"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "1"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
@@ -60,7 +72,12 @@
             "kind": "equalMathExpression",
             "args": "(64/9)b^2"
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "2"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
@@ -73,7 +90,12 @@
             "kind": "equalMathExpression",
             "args": "(2+x)(2-x)"
           },
-          "points": 1,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "3"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
@@ -87,6 +109,12 @@
             "args": "c+49"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "4"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
@@ -104,6 +132,12 @@
             "args": "x=9"
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "5"
+            }
+          ],
           "inputBy": {
             "kind": "math",
             "args": {
@@ -194,6 +228,12 @@
             "args": 78
           },
           "points": 2,
+          "resources": [
+            {
+              "kind": "video",
+              "id": "8"
+            }
+          ],
           "inputBy": {
             "kind": "number",
             "args": {
@@ -265,9 +305,14 @@
           }
         ]
       },
-      "observableCells": [
-        "steps9",
-        "q9"
+      "resources": [
+        {
+          "kind": "observableHQ",
+          "cells": [
+            "steps9",
+            "q9"
+          ]
+        }
       ]
     },
     "10": {
@@ -319,9 +364,14 @@
           }
         ]
       },
-      "observableCells": [
-        "steps10",
-        "q10"
+      "resources": [
+        {
+          "kind": "observableHQ",
+          "cells": [
+            "steps10",
+            "q10"
+          ]
+        }
       ]
     },
     "11": {
