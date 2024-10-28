@@ -1,4 +1,4 @@
-import { group, mathEquation, mathExpr, number, observableCells, option, optionBool, rootGroup, selfEvaluateImage, task3Max3Points, threePoints, twoPoints, video } from "../utils/quiz-builder";
+import { group, mathEquation, mathExpr, number, option, optionBool, rootGroup, selfEvaluateImage, task3Max3Points, threePoints, twoPoints, video } from "../utils/quiz-builder";
 
 const form = rootGroup({
   code: 'M9PCD24C0T03',
@@ -36,8 +36,8 @@ const form = rootGroup({
     8.1: number(78, { suffix: 'stupňů' }, { ...twoPoints, ...video("8") }),
     8.2: number(2, { suffix: 'stupňů' }, twoPoints),
   }),
-  9: selfEvaluateImage("image-9.png", { ...threePoints, ...video("9"), ...observableCells(['steps9', 'q9']) }),
-  10: selfEvaluateImage("image-10.png", { ...threePoints, ...video("10"), ...observableCells(['steps10', 'q10']) }),
+  9: selfEvaluateImage("image-9.png", { ...threePoints, ...video("9") }),
+  10: selfEvaluateImage("image-10.png", { ...threePoints, ...video("10") }),
   11: option('B', twoPoints),
   12: option('C', twoPoints),
   13: option('D', twoPoints),

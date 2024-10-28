@@ -307,11 +307,8 @@
       },
       "resources": [
         {
-          "kind": "observableHQ",
-          "cells": [
-            "steps9",
-            "q9"
-          ]
+          "kind": "video",
+          "id": "9"
         }
       ]
     },
@@ -366,11 +363,8 @@
       },
       "resources": [
         {
-          "kind": "observableHQ",
-          "cells": [
-            "steps10",
-            "q10"
-          ]
+          "kind": "video",
+          "id": "10"
         }
       ]
     },
