@@ -33,11 +33,22 @@ class FileSaver {
     // Save the updated data back to the file
     this.saveJSONToFile(data);
   }
+  containsKey(key:string){
+    // Read the existing data
+    const data = this.readJSONFromFile();
+    return data[key] != null;    
+  }
 }
 
 export class QuizAnswerFileSaver extends FileSaver {
   constructor({ model }: { model: string }) {
     super(`./generated/quiz-answers-${model}.json`);
+  }
+}
+
+export class QuizDetailAnswerFileSaver extends FileSaver {
+  constructor({ model }: { model: string }) {
+    super(`./generated/quiz-answers-detail-${model}.json`);
   }
 }
 

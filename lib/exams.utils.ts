@@ -60,12 +60,12 @@ const frDiploma = ["fr", "diploma"];
 
 const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { questions?: boolean, solver?: boolean } }[] = [
   // math
-  { pathes: math8Years.concat("M5A-2024"), quiz: M5A_2024, config: { questions: true, solver: false } },
-  { pathes: math8Years.concat("M5A-2023"), quiz: M5A_2023, config: { questions: true, solver: false } },
+  { pathes: math8Years.concat("M5A-2024"), quiz: M5A_2024, config: { questions: true, solver: true } },
+  { pathes: math8Years.concat("M5A-2023"), quiz: M5A_2023, config: { questions: true, solver: true } },
   { pathes: math8Years.concat("M5B-2023"), quiz: M5B_2023, config: { questions: false } },
 
-  { pathes: math6Years.concat("M7A-2024"), quiz: M7A_2024, config: { questions: true, solver: false } },
-  { pathes: math6Years.concat("M7A-2023"), quiz: M7A_2023, config: { questions: true, solver: false } },
+  { pathes: math6Years.concat("M7A-2024"), quiz: M7A_2024, config: { questions: true, solver: true } },
+  { pathes: math6Years.concat("M7A-2023"), quiz: M7A_2023, config: { questions: true, solver: true } },
   { pathes: math6Years.concat("M7B-2023"), quiz: M7B_2023, config: { questions: false } },
 
   { pathes: math4Years.concat("M9A-2024"), quiz: M9A_2024, config: { questions: true, solver: false } },
@@ -81,23 +81,23 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: mathDiploma.concat("MMA-2023"), quiz: MMA_2023, config: { questions: true } },
 
   // czech
-  { pathes: cz8Years.concat("C5A-2024"), quiz: C5A_2024, config: { questions: true, solver: false } },
-  { pathes: cz8Years.concat("C5A-2023"), quiz: C5A_2023, config: { questions: true, solver: false } },
-  { pathes: cz8Years.concat("C5B-2023"), quiz: C5B_2023, config: { questions: true, solver: false } },
+  { pathes: cz8Years.concat("C5A-2024"), quiz: C5A_2024, config: { questions: true, solver: true } },
+  { pathes: cz8Years.concat("C5A-2023"), quiz: C5A_2023, config: { questions: true, solver: true } },
+  { pathes: cz8Years.concat("C5B-2023"), quiz: C5B_2023, config: { questions: true, solver: true } },
 
-  { pathes: cz6Years.concat("C7A-2024"), quiz: C7A_2024, config: { questions: true, solver: false } },
-  { pathes: cz6Years.concat("C7A-2023"), quiz: C7A_2023, config: { questions: true, solver: false } },
+  { pathes: cz6Years.concat("C7A-2024"), quiz: C7A_2024, config: { questions: true, solver: true } },
+  { pathes: cz6Years.concat("C7A-2023"), quiz: C7A_2023, config: { questions: true, solver: true } },
 
-  { pathes: cz4Years.concat("C9A-2024"), quiz: C9A_2024, config: { questions: true, solver: false } },
+  { pathes: cz4Years.concat("C9A-2024"), quiz: C9A_2024, config: { questions: true, solver: false} },
   { pathes: cz4Years.concat("C9B-2024"), quiz: C9B_2024, config: { questions: true, solver: false } },
   { pathes: cz4Years.concat("C9A-2023"), quiz: C9A_2023, config: { questions: true, solver: false } },
   { pathes: cz4Years.concat("C9B-2023"), quiz: C9B_2023, config: { questions: true, solver: false } },
-  { pathes: cz4Years.concat("C9C-2023"), quiz: C9C_2023, config: { questions: true, solver: false} },
+  { pathes: cz4Years.concat("C9C-2023"), quiz: C9C_2023, config: { questions: true, solver: false } },
 
   { pathes: czDimploma.concat("CMA-2023"), quiz: CMA_2023, config: { questions: true, solver: false } },
   { pathes: czDimploma.concat("CMB-2023"), quiz: CMB_2023, config: { questions: true, solver: false } },
-  { pathes: czDimploma.concat("CMA-2024"), quiz: CMA_2024, config: { questions: true, solver: false } },
-  { pathes: czDimploma.concat("CMB-2024"), quiz: CMB_2024, config: { questions: true, solver: false } },
+  { pathes: czDimploma.concat("CMA-2024"), quiz: CMA_2024, config: { questions: true, solver: true } },
+  { pathes: czDimploma.concat("CMB-2024"), quiz: CMB_2024, config: { questions: true, solver: true } },
 
   // english  
   { pathes: enDiploma.concat("AJA-2023"), quiz: AJA_2023, config: { questions: true, solver: false } },
