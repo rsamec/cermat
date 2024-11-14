@@ -44,7 +44,7 @@ export const fourPoints = { points: 4 };
 
 
 export const video = (id: string) => ({ resources: [{ kind: "video" as const, id }] });
-export const observableCells = (cells: string[]) => ({ resources: [{ kind: "observableHQ" as const,cells }] });
+export const observableCells = (cells: string[]) => ({ resources: [{ kind: "observableHQ" as const, cells }] });
 
 export function optionBool(spravnaVolba: boolean, { points, resources }: additionalConfig = { points: 1 }) {
   return {
@@ -161,7 +161,7 @@ export function words(slova: string, { points, resources }: additionalConfig = {
   } as const
 }
 
-export function numbers(items: number[], { points, resources }: additionalConfig = { points: 1 }) {  
+export function numbers(items: number[], { points, resources }: additionalConfig = { points: 1 }) {
   points = points ?? 1;
   return {
     verifyBy:
@@ -184,10 +184,18 @@ export function wordsGroup(slova: { [key: string]: string }, { points, resources
     }, {})
   } as const
 }
-export function wordsGroupPattern(slova: { [key: string]: RegExp }, { points, resources }: additionalConfig = { points: 1 }) {
+export function wordsGroupPattern(slova: Record<string, RegExp>, { points, resources }: additionalConfig = { points: 1 }) {
   points = points ?? 1;
   return {
-    verifyBy: { kind: 'equal', args: slova },
+    verifyBy: {
+      kind: 'matchObjectValues', args: Object.entries(slova).reduce((out, [key, pattern]) => {
+        out[key] = {
+          source: pattern.source,
+          flags: pattern.flags
+        };
+        return out;
+      }, {} as Record<string, JsonRegExp>)
+    },
     points,
     inputBy: Object.keys(slova).reduce((out: { [key: string]: ComponentFunctionSpec }, d) => {
       out[d] = { kind: 'text' as const };

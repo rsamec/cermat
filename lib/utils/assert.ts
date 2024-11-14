@@ -10,6 +10,9 @@ export type JsonRegExp = { source: string, flags: string }
 export type MatchValidator = ValidationFunctionArgs<JsonRegExp> & {
   kind: "match"
 }
+export type MatchObjectValuesValidator = ValidationFunctionArgs<Record<string, JsonRegExp>> & {
+  kind: "matchObjectValues"
+}
 
 export type EqualRatioValidator<T> = ValidationFunctionArgs<T> & {
   kind: "equalRatio"
@@ -53,7 +56,7 @@ export type SelfEvaluateValidator = ValidationFunctionArgs<{ options: Option<num
   kind: "selfEvaluate"
 }
 export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<T> | EqualOptionValidator<T> | SelfEvaluateValidator | EqualMathOptionValidator
-  | EqualMathEquationValidator | EqualStringCollectionValidator | EqualNumberCollectionValidator | EqualSortedOptionsValidator | MatchValidator | EqualLatexExpressionValidator;
+  | EqualMathEquationValidator | EqualStringCollectionValidator | EqualNumberCollectionValidator | EqualSortedOptionsValidator | MatchValidator | MatchObjectValuesValidator | EqualLatexExpressionValidator;
 
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
@@ -129,6 +132,18 @@ export class CoreVerifyiers {
       return options[options.length - 1].value == control?.value ? null : { expected: options, actual: control, errorCount: null }
     }
   }
+
+
+  static MatchObjectValues(patterns: Record<string,JsonRegExp>) {
+    return (control: Record<string, string>) => {
+    
+      const controlValues = Object.values(control);
+      const match = Object.values(patterns).map(pattern => new RegExp(pattern.source,pattern.flags)).every((d,i) => d.test(controlValues[i]));
+      
+      return match ? undefined : { 'expected': patterns, 'actual': control, errorCount: null }
+    }
+  }
+
 }
 
 
@@ -157,6 +172,8 @@ export function getVerifyFunction<T>(spec: ValidationFunctionSpec<T>)
       return CoreVerifyiers.SelfEvaluateTo(spec.args);
     case 'equalSortedOptions':
       return CoreVerifyiers.SortedOptionsEqualTo(spec.args);
+    case 'matchObjectValues':
+      return CoreVerifyiers.MatchObjectValues(spec.args);
     default:
       throw new Error(`Function ${spec} not supported.`);
   }

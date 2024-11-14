@@ -44,10 +44,16 @@
       "children": {
         "5.1": {
           "verifyBy": {
-            "kind": "equal",
+            "kind": "matchObjectValues",
             "args": {
-              "podmět": {},
-              "přísudek": {}
+              "podmět": {
+                "source": "(?:nejen )?spánek, (?:ale i)?strava",
+                "flags": ""
+              },
+              "přísudek": {
+                "source": "chybí",
+                "flags": ""
+              }
             }
           },
           "points": 1,

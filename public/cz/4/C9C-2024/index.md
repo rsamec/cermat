@@ -81,10 +81,8 @@ chlapcův otec, chlapec a jako poslední král duchů.
 
 # 5 Vypište z každé z následujících vět (5.1 a 5.2) základní skladební dvojici.
 (Základní skladební dvojice musí být zapsány pravopisně správně.)
-## 5.1 Podle naší lékařky chybí v současné době mnoha lidem nejen kvalitní spánek, ale 
-i vyvážená strava.
-## 5.2 Sklenice vychlazené limonády byly po těchto mimořádně vyčerpávajících výkonech 
-vítaným osvěžením.
+## 5.1 Podle naší lékařky chybí v současné době mnoha lidem nejen kvalitní spánek, ale i vyvážená strava.
+## 5.2 Sklenice vychlazené limonády byly po těchto mimořádně vyčerpávajících výkonech vítaným osvěžením.
 # 6 Přiřaďte k jednotlivým souvětím (6.1–6.3) odpovídající tvrzení (A–E).
 (Žádnou možnost z nabídky A–E nelze přiřadit víckrát než jednou.)
 ## 6.1 Ten hňup z protějšího domu velice rád šíří pomluvy, jeho žena je prý zase hodně škodolibá. 
