@@ -72,6 +72,7 @@
             "kind": "equalMathExpression",
             "args": "(64/9)b^2"
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",
@@ -90,6 +91,7 @@
             "kind": "equalMathExpression",
             "args": "(2+x)(2-x)"
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",

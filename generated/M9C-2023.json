@@ -20,6 +20,7 @@
             "kind": "equal",
             "args": -3
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",
@@ -36,6 +37,7 @@
             "kind": "equal",
             "args": 0.5
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",
@@ -56,6 +58,7 @@
             "kind": "equalMathExpression",
             "args": "4/7"
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",
@@ -74,6 +77,7 @@
             "kind": "equalMathExpression",
             "args": "-2/5"
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",
@@ -115,6 +119,7 @@
             "kind": "equalMathExpression",
             "args": "(2a+3)(2a-3)"
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",
@@ -133,6 +138,7 @@
             "kind": "equalMathExpression",
             "args": "-1/2"
           },
+          "points": 1,
           "resources": [
             {
               "kind": "video",

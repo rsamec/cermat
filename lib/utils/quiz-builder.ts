@@ -1,4 +1,4 @@
-import { SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
+import { JsonRegExp, SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
 import { ComponentFunctionSpec, LatexExpressionComponentFunctionArgs, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
 import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren, Resources, ResourceTypes } from "./quiz-specification";
 
@@ -11,24 +11,30 @@ export function group<T>(children: MixedChildren<T>, metadata?: AnswerGroupMetad
 }
 
 export function number(value: number, args?: NumberComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: "equal", args: value }, points, resources, inputBy: { kind: 'number', args } } as const
 }
 
 export function mathExpr(value: string | number, args: MathExpressionComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: "equalMathExpression", args: value }, points, resources, inputBy: { kind: 'math' as const, args } } as const
 }
 export function latexExpr(value: string, args: LatexExpressionComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: "equalLatexExpression", args: value }, points, resources, inputBy: { kind: 'latex' as const, args } } as const
 }
 
 export function mathEquation(value: string | boolean, args: MathExpressionComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: 'equalMathEquation', args: value }, points, resources, inputBy: { kind: 'math', args } } as const
 }
 export function mathRatio(value: string, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: 'equalRatio', args: value }, points, resources, inputBy: { kind: 'text', args: { patternType: 'ratio' } } } as const
 }
 
 export function text(value: string, args: TextComponentFunctionArgs, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: "equal", args: value }, points, resources, inputBy: { kind: 'text', args } } as const
 }
 export const noPoints = {}
@@ -99,6 +105,7 @@ function getPoints(max: number) {
   return points.slice(0, max + 1)
 }
 export function option(spravnaVolba: string, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return {
     verifyBy:
       { kind: "equalOption", args: spravnaVolba },
@@ -110,6 +117,7 @@ export function option(spravnaVolba: string, { points, resources }: additionalCo
 }
 
 export function word(slovo: string, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return {
     verifyBy:
       { kind: "equal", args: slovo },
@@ -122,6 +130,7 @@ export function word(slovo: string, { points, resources }: additionalConfig = { 
 }
 
 export function match(pattern: RegExp, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return {
     verifyBy:
     {
@@ -140,6 +149,7 @@ export function match(pattern: RegExp, { points, resources }: additionalConfig =
 
 
 export function words(slova: string, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   const items = slova.split(",").map(d => d.trim())
   return {
     verifyBy:
@@ -151,7 +161,8 @@ export function words(slova: string, { points, resources }: additionalConfig = {
   } as const
 }
 
-export function numbers(items: number[], { points, resources }: additionalConfig = { points: 1 }) {
+export function numbers(items: number[], { points, resources }: additionalConfig = { points: 1 }) {  
+  points = points ?? 1;
   return {
     verifyBy:
       { kind: "equalNumberCollection", args: items },
@@ -163,6 +174,18 @@ export function numbers(items: number[], { points, resources }: additionalConfig
 }
 
 export function wordsGroup(slova: { [key: string]: string }, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
+  return {
+    verifyBy: { kind: 'equal', args: slova },
+    points,
+    inputBy: Object.keys(slova).reduce((out: { [key: string]: ComponentFunctionSpec }, d) => {
+      out[d] = { kind: 'text' as const };
+      return out;
+    }, {})
+  } as const
+}
+export function wordsGroupPattern(slova: { [key: string]: RegExp }, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return {
     verifyBy: { kind: 'equal', args: slova },
     points,
@@ -173,6 +196,7 @@ export function wordsGroup(slova: { [key: string]: string }, { points, resources
   } as const
 }
 export function numbersGroup(numbers: { [key: string]: number }, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return {
     verifyBy: { kind: 'equal', args: numbers },
     points,
@@ -185,16 +209,20 @@ export function numbersGroup(numbers: { [key: string]: number }, { points, resou
 
 
 export function sortedOptions(sortedOptions: string[], { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return { verifyBy: { kind: 'equalSortedOptions', args: sortedOptions }, points, resources, inputBy: { kind: 'sortedOptions' } } as const
 }
 
 export function selfEvaluateImage(src: string, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return selfEvaluate({ kind: 'image' as const, src }, { points, resources });
 }
 export function selfEvaluateText(content: string, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   return selfEvaluate({ kind: 'text' as const, content }, { points, resources });
 }
 export function selfEvaluate(hint: SelfEvaluateText | SelfEvaluateImage, { points, resources }: additionalConfig = { points: 1 }) {
+  points = points ?? 1;
   const options = getPoints(points ?? 1)
   return {
     verifyBy: { kind: 'selfEvaluate', args: { options, hint } } as SelfEvaluateValidator,

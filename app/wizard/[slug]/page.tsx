@@ -99,7 +99,7 @@ async function getData({ params }: Params) {
       ...opt,
       nameHtml: await markdownToHtml(opt.name, { path: assetPath })
     }))) : d.options,
-    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: assetPath }) : (await markdownToHtml(d.header, { path: assetPath }) + await markdownToHtml(d.content, { path: assetPath })),
+    contentHtml: d.type?.name == Abbreviations.ST ? await markdownToHtml(d.content, { path: assetPath }) : (await markdownToHtml(d.header, { path: assetPath }) + await markdownToHtml(d.contentWithoutOptions, { path: assetPath })),
   })))
 
   function order(name: Maybe<string>) {
