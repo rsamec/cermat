@@ -121,13 +121,13 @@ VÝCHOZÍ TEXT K ÚLOHÁM 7–12
 > 
 > (*D. Brewer a kol., Planeta tajuplných světů; www.national-geographic.cz, upraveno*)
 
-# 7 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá 
-z výchozího textu (A), nebo ne (N).
+# 7 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z výchozího textu (A), nebo ne (N).
  
 ## 7.1 Průměrné teploty v oblasti, v níž se nachází Uluru, dosahují 47 °C. 
 ## 7.2 Obejde-li člověk celý skalní útvar po stezce Uluru Base Walk, ujde přesně 9 400 metrů. 
 ## 7.3 Když v roce 2019 lid Anangu prohlásil celé území kolem Uluru za posvátné, turistům byl ihned zakázán výstup na tuto skálu. 
 ## 7.4 Jak název *Ayersova skála*, tak název *Uluru* označují tentýž skalní útvar, pojmenování *Ayersova skála* je ale mladší než pojmenování *Uluru*. 
+
 # 8 Která z následujících možností nejlépe vystihuje výchozí text? 
 - [A] Hlavním účelem tohoto textu, do něhož jsou začleněny prvky popisu, je 
 seznámit čtenáře s historií Austrálie.
@@ -256,8 +256,8 @@ VÝCHOZÍ TEXT K ÚLOZE 17
 - [B] Jde o vyprávění příhody o společných znacích různých vládců podsvětí.
 - [C] Jde o neumělecký text zabývající se vládci podsvětí z různých mytologií.
 - [D] Jde o neumělecký text zpochybňující společné znaky různých vládců podsvětí.
-# 18 Na vynechané místo (*****) v českém ustáleném slovním spojení doplňte 
-příslušné sloveso v infinitivu.
+
+# 18 Na vynechané místo (*****) v českém ustáleném slovním spojení doplňte příslušné sloveso v infinitivu.
  
 Petr chtěl pozvat Janu na rande. S pozváním ale otálel, a tak ho předběhl Kuba. Teď 
 už Jana chodí s Kubou a Petr je na sebe naštvaný, že se neodhodlal dřív. Jenže pozdě 
@@ -311,11 +311,13 @@ VÝCHOZÍ TEXTY K ÚLOHÁM 19–24
 > (*F. Herbert, Duna, upraveno*)
 
 **TEXT 2**
-U **slovního tvaru typu A** (např. *jablku*) lze i bez kontextu určit, ve kterém čísle je 
-slovo užito (*jablku* je buď tvar 3. pádu, nebo tvar 6. pádu, v obou případech však čísla 
-jednotného).
-U **slovního tvaru typu B** (např. *jablka*) __nelze__ bez kontextu určit, ve kterém čísle je slovo 
-užito (*jablka* je např. tvar 2. pádu čísla jednotného nebo 1. pádu čísla množného).
+
+> U **slovního tvaru typu A** (např. *jablku*) lze i bez kontextu určit, ve kterém čísle je 
+> slovo užito (*jablku* je buď tvar 3. pádu, nebo tvar 6. pádu, v obou případech však čísla 
+> jednotného).
+>
+> U **slovního tvaru typu B** (např. *jablka*) __nelze__ bez kontextu určit, ve kterém čísle je slovo 
+> užito (*jablka* je např. tvar 2. pádu čísla jednotného nebo 1. pádu čísla množného).
 
 # 19 Rozhodněte o každém z následujících tvrzení, zda jednoznačně vyplývá z TEXTU 1 (A), nebo ne (N).
  
@@ -414,6 +416,7 @@ VÝCHOZÍ TEXT K ÚLOZE 28
 - [B] Každá z těchto vět obsahuje pravopisnou chybu.
 - [C] Věta č. 1 je zapsána pravopisně správně, věta č. 2 obsahuje pravopisnou chybu.
 - [D] Věta č. 1 obsahuje pravopisnou chybu, věta č. 2 je zapsána pravopisně správně.
+
 VÝCHOZÍ TEXT K ÚLOZE 29
 ===
 
@@ -428,10 +431,12 @@ VÝCHOZÍ TEXT K ÚLOZE 29
 # 30 Přiřaďte k jednotlivým větám (30.1–30.4) odpovídající tvrzení (A–F).
 (Větné členy mohou být ve větách uvedeny v libovolném pořadí. Žádnou možnost z nabídky A–F nelze 
 přiřadit víckrát než jednou.)
+
 ## 30.1 Porušení slibu dívku hluboce ranilo. 
 ## 30.2 Závěrečná skladba dojala všechny diváky. 
 ## 30.3 Seznam obsahoval zajímavé knihy o přírodě. 
 ## 30.4 Gymnasta denně trénoval v tělocvičně sestavu. 
+
 - [A] Kromě základní skladební dvojice tato věta obsahuje předmět a dva přívlastky shodné.
 - [B] Kromě základní skladební dvojice tato věta obsahuje předmět a dvě příslovečná určení.
 - [C] Kromě základní skladební dvojice tato věta obsahuje předmět a dva přívlastky neshodné.

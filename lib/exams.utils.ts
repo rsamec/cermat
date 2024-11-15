@@ -28,6 +28,7 @@ import C7A_2023 from './exams/C7A-2023';
 import C9A_2024 from './exams/C9A-2024';
 import C9B_2024 from './exams/C9B-2024';
 import C9C_2024 from './exams/C9C-2024';
+import C9D_2024 from './exams/C9D-2024';
 import C9A_2023 from './exams/C9A-2023';
 import C9B_2023 from './exams/C9B-2023';
 import C9C_2023 from './exams/C9C-2023';
@@ -91,6 +92,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: cz4Years.concat("C9A-2024"), quiz: C9A_2024, config: { questions: true, solver: false} },
   { pathes: cz4Years.concat("C9B-2024"), quiz: C9B_2024, config: { questions: true, solver: false } },
   { pathes: cz4Years.concat("C9C-2024"), quiz: C9C_2024, config: { questions: true, solver: false } },
+  { pathes: cz4Years.concat("C9D-2024"), quiz: C9D_2024, config: { questions: true, solver: false } },
   { pathes: cz4Years.concat("C9A-2023"), quiz: C9A_2023, config: { questions: true, solver: false } },
   { pathes: cz4Years.concat("C9B-2023"), quiz: C9B_2023, config: { questions: true, solver: false } },
   { pathes: cz4Years.concat("C9C-2023"), quiz: C9C_2023, config: { questions: true, solver: false } },

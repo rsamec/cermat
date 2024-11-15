@@ -131,7 +131,7 @@ async function getData({ params }: Params) {
     }))) : d.options,
     hasTexIndent: countMaxChars(d.header, "=") === 4,
     multiColumnsCount: Math.max(0, countMaxChars(d.header, "=") - 4),
-    contentHtml: (await markdownToHtml(d.header, { path: pathes }) + await markdownToHtml(d.content, { path: pathes })),
+    contentHtml: (await markdownToHtml(d.header, { path: pathes }) + await markdownToHtml(d.contentWithoutOptions, { path: pathes })),
   })))
 
   return {
