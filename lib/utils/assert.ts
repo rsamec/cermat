@@ -12,6 +12,7 @@ export type MatchValidator = ValidationFunctionArgs<JsonRegExp> & {
 }
 export type MatchObjectValuesValidator = ValidationFunctionArgs<Record<string, JsonRegExp>> & {
   kind: "matchObjectValues"
+  source: Record<string, string>
 }
 
 export type EqualRatioValidator<T> = ValidationFunctionArgs<T> & {

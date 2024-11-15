@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { cls, formatTime, intersection, normalizeImageUrlsToAbsoluteUrls, strToSimpleHtml } from './utils';
+import { cls, formatTime, intersection, normalizeImageUrlsToAbsoluteUrls, stringPatternToRegex, strToSimpleHtml } from './utils';
 
 test('simple string', () => {
 
@@ -38,4 +38,35 @@ test('intersection', () => {
   const array1 = ["apple", "banana", "orange", "grape"];
   const array2 = ["banana", "apple", "grape", "pineapple"];
   expect(intersection(array1, array2)).toBe(3);
+})
+
+test('string pattern to regex - optional parts', () => {
+  const pattern = "(nejen) spánek, (ale i) strava";
+  const regex = stringPatternToRegex(pattern);
+  
+  expect(regex.test('nejen spánek, ale i strava')).toBe(true)
+  expect(regex.test('nejen spánek, strava')).toBe(true)
+  //expect(regex.test('spánek, ale i strava')).toBe(true)
+  expect(regex.test('spánek, strava')).toBe(true)
+})
+
+test('string pattern to regex - white spaces are optional around comma', () => {
+  const pattern = "(nejen) spánek, (ale i) strava";
+  const regex = stringPatternToRegex(pattern);
+  
+  expect(regex.test('nejen spánek,ale i strava')).toBe(true)
+  expect(regex.test('nejen spánek,strava')).toBe(true)
+  expect(regex.test('spánek,ale i strava')).toBe(true)
+  expect(regex.test('spánek,strava')).toBe(true)
+
+})
+
+test('string pattern to regex - white spaces are required between words', () => {
+  const pattern = "(nejen) spánek, (ale i) strava";
+  const regex = stringPatternToRegex(pattern);
+  
+  expect(regex.test('nejen spánek, alei strava')).toBe(false)
+  expect(regex.test('nejenspánek, strava')).toBe(false)
+  expect(regex.test('spánek, ale istrava')).toBe(false)
+
 })

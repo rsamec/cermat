@@ -13,7 +13,7 @@ const form = rootGroup({
 3: option("C"),
 4: option("B"),
 5: group({
-  5.1: wordsGroupPattern({ podmět: /(?:nejen )?spánek, (?:ale i)?strava/, přísudek: /chybí/ }),
+  5.1: wordsGroupPattern({ podmět: "(nejen) spánek, (ale i) strava", přísudek: "chybí" }),
   5.2: wordsGroup({ podmět: 'sklenice', přísudek: 'byly osvěžením' }),
 }),
 6: group({

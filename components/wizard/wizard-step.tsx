@@ -9,7 +9,7 @@ import { useState } from "react";
 import Image from 'next/image';
 import { faCopy, faInfoCircle, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { imageUrl, cls, format, updateMap } from "@/lib/utils/utils";
+import { imageUrl, cls, formatArgs, updateMap, mapObjectValues } from "@/lib/utils/utils";
 import IconBadge from "../core/IconBadge";
 import { FieldControl } from "@rx-form/core";
 import { useControlValid } from "@rx-form/react";
@@ -149,12 +149,12 @@ const WizardStep: React.FC<Props> = ({ questions, step, tree, corrections, answe
               {(correction === false) && <ToggleSwitchBadge text="Zobrazit správné řešení úlohy" value={isQuestionAnswerExpanded}
                 onChange={() => toggleExpandableAnswer(stepId)}
                 showCopy={!(inputBy.kind == 'options' || inputBy.kind =="sortedOptions")}
-                onCopy={() => formControl.setValue(verifyBy?.args)}
+                onCopy={() => verifyBy.kind == "matchObjectValues" ? formControl.setValue(mapObjectValues(verifyBy?.source, d => d.replace(/\s*\([^)]*\)\s*/g,''))) : formControl.setValue(verifyBy?.args)}
                 type="Success">
                 {
                   inputBy?.kind === 'math' ?
-                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(format(verifyBy.args))) }} /> :
-                    <div>{format(verifyBy?.args)}</div>
+                    <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(toHtml(formatArgs(verifyBy.args))) }} /> :
+                    <div>{verifyBy.kind == "matchObjectValues" ? formatArgs(verifyBy?.source): formatArgs(verifyBy?.args)}</div>
                 }
               </ToggleSwitchBadge>
               }

@@ -1,6 +1,7 @@
 import { JsonRegExp, SelfEvaluateImage, SelfEvaluateText, SelfEvaluateValidator } from "./assert";
 import { ComponentFunctionSpec, LatexExpressionComponentFunctionArgs, MathExpressionComponentFunctionArgs, NumberComponentFunctionArgs, TextComponentFunctionArgs } from "./catalog-function";
 import { AnswerGroupImpl, AnswerGroupMetadata, AnswerInfo, MixedChildren, Resources, ResourceTypes } from "./quiz-specification";
+import { stringPatternToRegex } from "./utils";
 
 export function rootGroup<T>(info: AnswerInfo, children: MixedChildren<T>) {
   return new AnswerGroupImpl<T>(children, { info });
@@ -184,14 +185,17 @@ export function wordsGroup(slova: { [key: string]: string }, { points, resources
     }, {})
   } as const
 }
-export function wordsGroupPattern(slova: Record<string, RegExp>, { points, resources }: additionalConfig = { points: 1 }) {
+export function wordsGroupPattern(slova: Record<string, string>, { points, resources }: additionalConfig = { points: 1 }) {
   points = points ?? 1;
   return {
     verifyBy: {
-      kind: 'matchObjectValues', args: Object.entries(slova).reduce((out, [key, pattern]) => {
+      kind: 'matchObjectValues',
+      source: slova,
+      args: Object.entries(slova).reduce((out, [key, pattern]) => {
+        const regex = stringPatternToRegex(pattern);
         out[key] = {
-          source: pattern.source,
-          flags: pattern.flags
+          source: regex.source,
+          flags: regex.flags
         };
         return out;
       }, {} as Record<string, JsonRegExp>)

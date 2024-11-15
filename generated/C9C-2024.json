@@ -45,13 +45,17 @@
         "5.1": {
           "verifyBy": {
             "kind": "matchObjectValues",
+            "source": {
+              "podmět": "(nejen) spánek, (ale i) strava",
+              "přísudek": "chybí"
+            },
             "args": {
               "podmět": {
-                "source": "(?:nejen )?spánek, (?:ale i)?strava",
+                "source": "^(?:nejen\\s+)?spánek,\\s*(?:ale\\s+i\\s+)?strava$",
                 "flags": ""
               },
               "přísudek": {
-                "source": "chybí",
+                "source": "^chybí$",
                 "flags": ""
               }
             }

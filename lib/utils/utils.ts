@@ -64,7 +64,7 @@ export function strToSimpleHtml(value: string) {
 
   return result;
 }
-export function format(value: any) {
+export function formatArgs(value: any) {
   if (value == null) return value;
   if (typeof value == 'number') return formatNumber(value);
   if (typeof value == 'boolean') return value ? "A" : "N"
@@ -190,3 +190,21 @@ export function groupBy<T>(
     return acc;
   }, {} as Record<string,T[]>);
 };
+
+export function stringPatternToRegex(input: string) {
+  const regexString = input
+  .replace(/\((.*?)\)/g, "(?:$1\\s+)?") // Make parts in parentheses optional with spaces handled directly after each part
+  .replace(/(?<=\?)\s/g, "") // spaces that are preceded by a question mark
+  .replace(/,\s*/g, ",\\s*") // Allow optional spaces around commas
+  .replace(/ /g, "\\s+")   // Require at least one space between words
+  
+  const regex = new RegExp(`^${regexString.trim()}$`);  // Anchor to ensure full match
+  return regex;
+}
+
+export function mapObjectValues(obj: Record<string,string>, format: (value:string) => string){
+  return Object.entries(obj).reduce((acc, [key, value]) => ({ 
+    ...acc, 
+    [key]: format(value) 
+  }), {} as Record<string,string>);
+}
