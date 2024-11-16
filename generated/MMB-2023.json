@@ -56,55 +56,52 @@
       "children": {
         "5.1": {
           "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "64^n+0.5"
+            "kind": "equalLatexExpression",
+            "args": "64^{n+0.5}"
           },
           "points": 1,
           "inputBy": {
-            "kind": "math",
-            "args": {
-              "hintType": "expression"
-            }
+            "kind": "latex",
+            "args": {}
           }
         },
         "5.2": {
           "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "5^2n-1"
+            "kind": "equalLatexExpression",
+            "args": "5^{2n-1}"
           },
           "points": 1,
           "inputBy": {
-            "kind": "math",
-            "args": {
-              "hintType": "expression"
-            }
+            "kind": "latex",
+            "args": {}
           }
         }
       }
     },
     "6": {
       "verifyBy": {
-        "kind": "equal",
-        "args": 0
+        "kind": "equalMathExpression",
+        "args": "3/2"
       },
-      "points": 1,
+      "points": 2,
       "inputBy": {
-        "kind": "number"
+        "kind": "math",
+        "args": {
+          "hintType": "expression"
+        }
       }
     },
     "7": {
       "children": {
         "7.1": {
           "verifyBy": {
-            "kind": "equalMathExpression",
-            "args": "b^2=1/4"
+            "kind": "equalLatexExpression",
+            "args": "b_2=1/4"
           },
           "points": 1,
           "inputBy": {
-            "kind": "math",
-            "args": {
-              "hintType": "equation"
-            }
+            "kind": "latex",
+            "args": {}
           }
         },
         "7.2": {

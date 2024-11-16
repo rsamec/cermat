@@ -11,7 +11,7 @@ const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Supe
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
-const modelName = "gpt-4o";
+const modelName = "gpt-4o-mini";
 
 export async function main() {
 

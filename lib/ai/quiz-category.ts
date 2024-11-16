@@ -116,10 +116,15 @@ interface CategoryQuestions  { questions: { id: string, category: string }[]}
 
 export async function main() {
 
-  const client = new OpenAI({ baseURL: endpoint, apiKey: token });
+  //const client = new OpenAI({ baseURL: endpoint, apiKey: token });
 
+  const client = new OpenAI({
+      organization: "org-u9Q9NxhzuntTO1rgjfl2Kkaq",
+      project: "proj_3AmxUiUlFDCV0xxQD5DteczY",
+  });
 
-  for (let quizTestCase of examTestCases.filter(d => d.pathes[0] === "cz" && d.pathes[2] === "C9C-2023" && d.config.questions)) {
+  const tests = ['MMB-2023']
+  for (let quizTestCase of examTestCases.filter(d => d.pathes[0] === "math" && tests.some(t => t == d.pathes[2]) && d.config.questions)) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
 
@@ -157,15 +162,15 @@ export async function main() {
           },
           {
             role: "user", content: [
-              { type: "text", text: "Assign category to each root question in a quiz. Do not assign category to sub questions." },
+              { type: "text", text: `Assign category to each root question in a quiz. Do not assign category to sub questions.`},
+                //Return json format. Array of categories for each root question, e.g.[{"id": "1","category": "WORD_PROBLEMS"}, {"id": "2","category": "SOLID_GEOMETRY"}]` },
               { type: "text", text: quizContent },
 
             ]
           },
         ],
-        response_format: zodResponseFormat(subject == "math" ? MathCategories : CzCategories, "quiz")
-        //{ "type": "json_object" }
-        ,
+        response_format: zodResponseFormat(subject == "math" ? MathCategories : CzCategories, "quiz"),
+        //response_format: { "type": "json_object" },
         temperature: 1.,
         max_tokens: 1000,
         top_p: 1.
