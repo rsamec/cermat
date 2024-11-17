@@ -62,17 +62,17 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7
 **V záznamovém archu** obtáhněte vše **propisovací tužkou.** 
 
 # 8 
-Funkce $h:y=−(x+6)^2+4$ s definičním oborem R je v jednom ze dvou 
+Funkce $h:y=-(x+6)^{2}+4$ s definičním oborem R je v jednom ze dvou 
 intervalů (−∞;p⟩, ⟨p;+∞) klesající a ve zbývajícím je rostoucí ($p \in R$). 
 
 **Z obou intervalů vyberte ten, v němž je funkce $h$ rostoucí, a zapište jej s konkrétním číslem $p$.**
 
-# 9 V rostoucí aritmetické posloupnosti $(a_n)_{n=1}^∞$ je pátý člen $a_5=0$. 
+# 9 V rostoucí aritmetické posloupnosti $(a_n)_{n=1}^\infty$ je pátý člen $a_5=0$. 
 **Vypočtěte, kolikrát je dvacátý člen $a_{20}$ větší než desátý $a_{10}$.**
 
 VÝCHOZÍ TEXT K ÚLOZE 10 
 ===
-> Na 100 km jízdy spotřeboval automobil A 7 litrů benzinu a automobil B o 𝑥𝑥 litrů benzinu 
+> Na 100 km jízdy spotřeboval automobil A 7 litrů benzinu a automobil B o $x$ litrů benzinu 
 > méně než automobil A. 
 > 
 > Cena benzinu byla 40 Kč za litr. 
@@ -145,7 +145,7 @@ stranu o 140 metrů delší než čtvercový pozemek.
 ## 15.2 Řešením nerovnice $(x+4)(x+4)\geq0$ v oboru **R** je každé reálné číslo. 
 ## 15.3 Množinou všech řešení nerovnice $\frac{x-2}{2-x}>0$ v oboru **R** je prázdná množina. 
 
-# 16 Vektor $\vec{u}=(3;𝑢_2)$ je kolmý k vektoru $\vec{w}=(−3;1)$. 
+# 16 Vektor $\vec{u}=(3;\vec{𝑢}_{2})$ je kolmý k vektoru $\vec{w}=(-3;1)$. 
 Jaká je velikost vektoru $\vec{u}$ ? 
 - [A] $3\sqrt{10}$
 - [B] $\sqrt{10}$
