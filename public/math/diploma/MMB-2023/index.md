@@ -16,7 +16,7 @@ $$
 $$
 
 **Vyjádřete z tohoto vztahu neznámou $a$.**
-# 3 Pro $x \in R | \{0\}$ zjednodušte: 
+# 3 Pro $x \in R \backslash \{0\}$ zjednodušte: 
 
  $$
 \left(\frac{\frac{x^2+10}{x}}{x}-1\right) \div \frac{5}{x}=
@@ -50,7 +50,7 @@ $$
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7 
 ===
 
-> Funkce $g: y=a^x$ se základem $a \in R^+ | \{1\}$  je definována pro všechna $x \in R$. 
+> Funkce $g: y=a^x$ se základem $a \in R^+ \backslash \{1\}$  je definována pro všechna $x \in R$. 
 > Její graf prochází bodem A[−2;4]. 
 > 
 > ![alt text](image.png)
@@ -145,7 +145,7 @@ stranu o 140 metrů delší než čtvercový pozemek.
 ## 15.2 Řešením nerovnice $(x+4)(x+4)\geq0$ v oboru **R** je každé reálné číslo. 
 ## 15.3 Množinou všech řešení nerovnice $\frac{x-2}{2-x}>0$ v oboru **R** je prázdná množina. 
 
-# 16 Vektor $\vec{u}=(3;\vec{𝑢}_{2})$ je kolmý k vektoru $\vec{w}=(-3;1)$. 
+# 16 Vektor $\vec{u}=(3;\vec{u}_{2})$ je kolmý k vektoru $\vec{w}=(-3;1)$. 
 Jaká je velikost vektoru $\vec{u}$ ? 
 - [A] $3\sqrt{10}$
 - [B] $\sqrt{10}$
