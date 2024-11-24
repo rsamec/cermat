@@ -22,11 +22,20 @@ const modelName = "gpt-4o";
 const chunkSize = 6;
 export async function main() {
 
-  const client = new OpenAI({ baseURL: endpoint, apiKey: token });
+  const usePaidApi = true;
+  const client = usePaidApi ? new OpenAI({
+      organization: "org-u9Q9NxhzuntTO1rgjfl2Kkaq",
+      project: "proj_3AmxUiUlFDCV0xxQD5DteczY",
+  }): new OpenAI({ baseURL: endpoint, apiKey: token });
+
+  const storage = new QuizAnswerFileSaver({ model: modelName });
+  let filtredQuizTestCase = examTestCases.filter(d => d.config.questions && !storage.containsKey(d.pathes[2]));
+  console.log(filtredQuizTestCase.map(d => d.pathes));
+  console.log(`Total tests: ${examTestCases.length}, filtred: ${filtredQuizTestCase.length}`);  
   const { dispatch } = store;
 
 
-  for (let quizTestCase of examTestCases.filter(d => d.config.questions && d.config.solver)) {
+  for (let quizTestCase of filtredQuizTestCase) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
 
@@ -70,8 +79,8 @@ export async function main() {
             role: "system", content: `You are an expert at ${subject === 'math' ? 'math' : subject === 'cz' ? 'czech language' : `${subject} language`}.
             You will be given quiz with questions. The quiz format is markdown text.
             Each question is identified by markdown headings. Some question can have sub questions.
-            - # heading is root questions - question id is idenfied by format # {number}
-            - ## heading is sub question - question id is idenfied by format ## {number}.{number}`
+            - # heading is root questions - question id is identified by format # {number}
+            - ## heading is sub question - question id is identified by format ## {number}.{number}`
           },
           {
             role: "user", content: [
@@ -90,7 +99,7 @@ export async function main() {
       console.log(response);
 
       const result = response.choices[0].message.content;
-      console.log(chunkedData.content)
+      //console.log(chunkedData.content)
       console.log(result);
       if (result != null) {
 
@@ -102,7 +111,7 @@ export async function main() {
         const quizState = store.getState().quiz;
         console.log(pathes, quizState.totalPoints)
 
-        new QuizAnswerFileSaver({ model: modelName }).updateJSONFile(code, parsedResult)
+        storage.updateJSONFile(code, parsedResult)
 
       }
       else {

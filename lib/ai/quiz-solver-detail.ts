@@ -5,13 +5,14 @@ import examTestCases from "../exams.utils";
 import { ShortCodeMarker, getQuizBuilder } from "../utils/parser.utils";
 import { parser, GFM, Subscript, Superscript } from '@lezer/markdown';
 import { QuizDetailAnswerFileSaver } from "./file.utils";
+import { Berkshire_Swash } from "next/font/google";
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Superscript]);
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
-const modelName = "gpt-4o-mini";
+const modelName = "gpt-4o";
 
 export async function main() {
 
@@ -26,8 +27,10 @@ export async function main() {
     const [subject, grade, code] = pathes;
 
     if (storage.containsKey(code)) {
-      console.log(`${code} already exists. skipping ....`)
+      console.log(`${code} already exists. skipping ....`);
+      continue;
     }
+    
 
     //load quiz questions
     const quizContent = await loadMarkdownWithAbsoluteImagesUrl(pathes);

@@ -28,6 +28,8 @@ function convertToZodType(node: AnswerMetadata<any>) {
         : typeof node.verifyBy.args == "string"
           ? z.string()
           : z.object(Object.fromEntries(Object.keys(node.verifyBy.args).map(key => [key, z.string()])));
+    case 'matchObjectValues':
+      return z.object(Object.fromEntries(Object.keys(node.verifyBy.args).map(key => [key, z.string()])));
     case 'equalNumberCollection':
       return z.array(z.number())
     case 'equalStringCollection':

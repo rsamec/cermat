@@ -116,15 +116,19 @@ interface CategoryQuestions  { questions: { id: string, category: string }[]}
 
 export async function main() {
 
-  //const client = new OpenAI({ baseURL: endpoint, apiKey: token });
-
-  const client = new OpenAI({
+  const usePaidApi = false;
+  const client = usePaidApi ? new OpenAI({
       organization: "org-u9Q9NxhzuntTO1rgjfl2Kkaq",
       project: "proj_3AmxUiUlFDCV0xxQD5DteczY",
-  });
+  }): new OpenAI({ baseURL: endpoint, apiKey: token });
 
-  const tests = ['MMB-2023']
-  for (let quizTestCase of examTestCases.filter(d => d.pathes[0] === "math" && tests.some(t => t == d.pathes[2]) && d.config.questions)) {
+  const storage = new QuizCategoriesFileSaver({ model: modelName });
+  let filtredQuizTestCase = examTestCases.filter(d => d.config.questions && (d.pathes[1] == 'cz' || d.pathes[1] == 'math') && !storage.containsKey(d.pathes[2]));
+  console.log(filtredQuizTestCase.map(d => d.pathes));
+  console.log(`Total tests: ${examTestCases.length}, filtred: ${filtredQuizTestCase.length}`);
+  
+  
+  for (let quizTestCase of filtredQuizTestCase) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
 
@@ -183,7 +187,7 @@ export async function main() {
         const parsedResult = JSON.parse(result) as CategoryQuestions
         categoriesResult = { questions: categoriesResult.questions.concat(parsedResult.questions) }
         console.log(pathes, Object.values(categoriesResult))
-        new QuizCategoriesFileSaver({ model: modelName }).updateJSONFile(code, categoriesResult)
+        storage.updateJSONFile(code, categoriesResult)
       }
       else {
         console.log(response)

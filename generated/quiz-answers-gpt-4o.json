@@ -3787,5 +3787,540 @@
     "31.4": {
       "value": "B"
     }
+  },
+  "MMB-2023": {
+    "1": 27,
+    "2": "-\\frac{ab^2+3c}{2}",
+    "3": "\\frac{x^2+5x-10}{5}",
+    "4": "x = 2",
+    "6": "x = 3",
+    "8": "(-∞; -6⟩",
+    "9": 3,
+    "11": "5t",
+    "12": "(0,4)",
+    "14": 680,
+    "16": {
+      "value": "B"
+    },
+    "17": {
+      "value": "C"
+    },
+    "18": {
+      "value": "B"
+    },
+    "19": {
+      "value": "A"
+    },
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "E"
+    },
+    "22": {
+      "value": "B"
+    },
+    "23": {
+      "value": "C"
+    },
+    "24": {
+      "value": "A"
+    },
+    "5.1": "8 \\cdot 64^n = 2^3 \\cdot (2^6)^n = 2^{3+6n} = 2^{3+6n} = 64^{n+\\frac{1}{3}}",
+    "5.2": "\\left(\\frac{20}{100}\\right) \\cdot (25^2) = 5 \\cdot 25^2 = 5^3 \\cdot 2^3",
+    "7.1": "16a^2 = 256",
+    "7.2": "The graph is an exponential curve which passes through points A[-2,4] and B[2,y].",
+    "10.1": 2.8,
+    "10.2": "(7-x)/(100*x)\\cdot 40",
+    "13.1": "30 m^2",
+    "13.2": "250 m^3",
+    "15.1": {
+      "value": true
+    },
+    "15.2": {
+      "value": true
+    },
+    "15.3": {
+      "value": false
+    },
+    "25.1": {
+      "value": "B"
+    },
+    "25.2": {
+      "value": "D"
+    }
+  },
+  "C9C-2024": {
+    "1": {
+      "value": "A"
+    },
+    "2": {
+      "value": "B"
+    },
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "B"
+    },
+    "8": {
+      "value": "A"
+    },
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "D"
+    },
+    "12": [
+      "a",
+      "s",
+      "i"
+    ],
+    "14": [
+      "předchůdce",
+      "nadřízen",
+      "předložka"
+    ],
+    "15": [
+      "C",
+      "E",
+      "A",
+      "F",
+      "B",
+      "D"
+    ],
+    "16": [
+      "týdenní",
+      "soutěsky",
+      "nalákaly",
+      "extrémně"
+    ],
+    "17": {
+      "value": "C"
+    },
+    "18": "vodu",
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "C"
+    },
+    "22": {
+      "value": "A"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": {
+      "value": "A"
+    },
+    "26": {
+      "value": "C"
+    },
+    "27": {
+      "value": "B"
+    },
+    "28": {
+      "value": "D"
+    },
+    "5.1": {
+      "podmět": "spánek",
+      "přísudek": "chybí"
+    },
+    "5.2": {
+      "podmět": "sklenice",
+      "přísudek": "byly"
+    },
+    "6.1": {
+      "value": "E"
+    },
+    "6.2": {
+      "value": "D"
+    },
+    "6.3": {
+      "value": "C"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": true
+    },
+    "7.3": {
+      "value": false
+    },
+    "7.4": {
+      "value": true
+    },
+    "13.1": {
+      "value": true
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": true
+    },
+    "13.4": {
+      "value": false
+    },
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": true
+    },
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "29.1": "provedených",
+    "29.2": "předloženou",
+    "30.1": {
+      "value": "E"
+    },
+    "30.2": {
+      "value": "D"
+    },
+    "30.3": {
+      "value": "A"
+    },
+    "30.4": {
+      "value": "C"
+    }
+  },
+  "C9D-2023": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "B"
+    },
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "D"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "A"
+    },
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "D"
+    },
+    "15": [
+      "E",
+      "A",
+      "D",
+      "B",
+      "F",
+      "C"
+    ],
+    "17": {
+      "value": "A"
+    },
+    "18": [
+      "zákonné",
+      "historickými",
+      "upřímně",
+      "sblížili"
+    ],
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": {
+      "value": "D"
+    },
+    "24": {
+      "value": "B"
+    },
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "A"
+    },
+    "28": {
+      "value": "D"
+    },
+    "29": [
+      "základní",
+      "nebezpečnými",
+      "další"
+    ],
+    "5.1": {
+      "value": true
+    },
+    "5.2": {
+      "value": true
+    },
+    "5.3": {
+      "value": false
+    },
+    "5.4": {
+      "value": true
+    },
+    "6.1": {
+      "value": "A"
+    },
+    "6.2": {
+      "value": "E"
+    },
+    "6.3": {
+      "value": "B"
+    },
+    "6.4": {
+      "value": "F"
+    },
+    "7.1": {
+      "podmět": "stavení",
+      "přísudek": "se proměnilo"
+    },
+    "7.2": {
+      "podmět": "listy",
+      "přísudek": "jsou"
+    },
+    "8.1": {
+      "value": true
+    },
+    "8.2": {
+      "value": false
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "14.1": [
+      "podezřelým"
+    ],
+    "14.2": [
+      "odnětí"
+    ],
+    "16.1": "předměstí",
+    "16.2": "obhájkyně",
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "23.1": "příčinný",
+    "23.2": "přípustkový",
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "30.1": {
+      "value": "A"
+    },
+    "30.2": {
+      "value": "E"
+    },
+    "30.3": {
+      "value": "B"
+    }
+  },
+  "C9D-2024": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "C"
+    },
+    "3": {
+      "value": "D"
+    },
+    "4": {
+      "value": "B"
+    },
+    "8": {
+      "value": "C"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "B"
+    },
+    "12": [
+      "kromě",
+      "do",
+      "pod"
+    ],
+    "14": [
+      "klobouk",
+      "eukalyptus",
+      "nafoukaný"
+    ],
+    "15": [
+      "B",
+      "D",
+      "A",
+      "F",
+      "E",
+      "C"
+    ],
+    "16": [
+      "změt",
+      "zpocátku",
+      "nedaří",
+      "vít"
+    ],
+    "17": {
+      "value": "C"
+    },
+    "18": "honit",
+    "20": {
+      "value": "A"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "A"
+    },
+    "23": {
+      "value": "C"
+    },
+    "24": {
+      "value": "D"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": {
+      "value": "C"
+    },
+    "28": {
+      "value": "D"
+    },
+    "5.1": {
+      "podmět": "radní",
+      "přísudek": "musí projednat"
+    },
+    "5.2": {
+      "podmět": "ty",
+      "přísudek": "bys pomohla"
+    },
+    "6.1": {
+      "value": "C"
+    },
+    "6.2": {
+      "value": "A"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": false
+    },
+    "7.3": {
+      "value": false
+    },
+    "7.4": {
+      "value": true
+    },
+    "13.1": {
+      "value": true
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": false
+    },
+    "13.4": {
+      "value": true
+    },
+    "19.1": {
+      "value": true
+    },
+    "19.2": {
+      "value": false
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": true
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "29.1": "uznávaného",
+    "29.2": "vyhovující",
+    "30.1": {
+      "value": "D"
+    },
+    "30.2": {
+      "value": "A"
+    },
+    "30.3": {
+      "value": "F"
+    },
+    "30.4": {
+      "value": "B"
+    }
   }
 }

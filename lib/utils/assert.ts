@@ -138,7 +138,7 @@ export class CoreVerifyiers {
   static MatchObjectValues(patterns: Record<string,JsonRegExp>) {
     return (control: Record<string, string>) => {
     
-      const controlValues = Object.values(control);
+      const controlValues = Object.values(control ?? {});
       const match = Object.values(patterns).map(pattern => new RegExp(pattern.source,pattern.flags)).every((d,i) => d.test(controlValues[i]));
       
       return match ? undefined : { 'expected': patterns, 'actual': control, errorCount: null }
