@@ -81,7 +81,7 @@ export class CoreVerifyiers {
 
   static MathExpressionEqualTo(value: string | number) {
     return (control: string) => {
-      return normalizeToString(control) === value  || checkEquivalence(control, value?.toString()) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
+      return normalizeToString(control) === value ? undefined : { 'expected': value, 'actual': control, errorCount: null };
     }
   }
 
