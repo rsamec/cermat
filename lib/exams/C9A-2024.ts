@@ -1,4 +1,4 @@
-import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup } from "../utils/quiz-builder";
+import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, twoPoints, rootGroup, wordsGroupPattern } from "../utils/quiz-builder";
 
 const form = rootGroup({
   code: 'C9PAD24C0T01',
@@ -36,7 +36,7 @@ const form = rootGroup({
   }, tasks4Max2Points),
   13: group({
     13.1: wordsGroup({ podmet: 'materiály', prisudek: 'budou vytvořeny' }),
-    13.2: wordsGroup({ podmet: 'bylinky i koření', prisudek: 'dodávají' }),
+    13.2: wordsGroupPattern({ podmet: 'bylinky, (ale i) koření', prisudek: 'dodávají' }),
   }),
   14: sortedOptions(['D', 'B', 'E', 'A', 'C', 'F'], threePoints),
   15: words("průkazku,dané,Oskarovi,my", fourPoints),

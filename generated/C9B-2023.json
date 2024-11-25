@@ -367,10 +367,20 @@
         },
         "17.2": {
           "verifyBy": {
-            "kind": "equal",
-            "args": {
+            "kind": "matchObjectValues",
+            "source": {
               "podmět": "větve (i) kmeny",
               "přísudek": "se lámaly"
+            },
+            "args": {
+              "podmět": {
+                "source": "^větve\\s+(?:i\\s+)?kmeny$",
+                "flags": ""
+              },
+              "přísudek": {
+                "source": "^se\\s+lámaly$",
+                "flags": ""
+              }
             }
           },
           "points": 1,

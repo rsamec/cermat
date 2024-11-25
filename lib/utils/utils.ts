@@ -77,10 +77,15 @@ export function formatArgs(value: any) {
 export function formatNumber(input: number, decimals: number = 2) {
   return input.toLocaleString("cs-CZ", { maximumFractionDigits: decimals, minimumFractionDigits: 0 })
 }
-
-
+export function isString(obj: object): obj is String {
+  return  typeof obj === 'string' 
+}
+export function normalizeString(obj: object) {
+  return  isString(obj)? obj.replace(/\s+/g, '').toLowerCase():obj;
+}
 export function areDeeplyEqual(obj1: any, obj2: any): boolean {
   if (obj1 === obj2) return true;
+  if (normalizeString(obj1) === normalizeString(obj2)) return true;
 
   if (Array.isArray(obj1) && Array.isArray(obj2)) {
 

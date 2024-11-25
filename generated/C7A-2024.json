@@ -278,10 +278,20 @@
         },
         "13.2": {
           "verifyBy": {
-            "kind": "equal",
-            "args": {
-              "podmet": "ochota a schopnost",
+            "kind": "matchObjectValues",
+            "source": {
+              "podmet": "ochota (a) schopnost",
               "prisudek": "patří"
+            },
+            "args": {
+              "podmet": {
+                "source": "^ochota\\s+(?:a\\s+)?schopnost$",
+                "flags": ""
+              },
+              "prisudek": {
+                "source": "^patří$",
+                "flags": ""
+              }
             }
           },
           "points": 1,

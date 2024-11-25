@@ -1,5 +1,5 @@
 
-import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, selfEvaluateText, rootGroup } from "../utils/quiz-builder";
+import { optionBool, group, wordsGroup, word, sortedOptions, words, option, tasks4Max2Points, threePoints, fourPoints, selfEvaluateText, rootGroup, wordsGroupPattern } from "../utils/quiz-builder";
 
 const form = rootGroup({
   code: 'C7PAD24C0T01',
@@ -40,7 +40,7 @@ const form = rootGroup({
   }, tasks4Max2Points),
   13: group({
     13.1: wordsGroup({ podmet: 'autobus', prisudek: 'by nenabral' }),
-    13.2: wordsGroup({ podmet: 'ochota a schopnost', prisudek: 'patří' }),
+    13.2: wordsGroupPattern({ podmet: 'ochota (a) schopnost', prisudek: 'patří' }),
   }),
   14: sortedOptions(['E', 'B', 'F', 'A', 'D', 'C'], threePoints),
   15: group({

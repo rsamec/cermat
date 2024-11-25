@@ -21,7 +21,7 @@ function convertToZodType(node: AnswerMetadata<any>) {
       return z.string().describe(`use latex formating`)
     case 'equalMathEquation':
     case 'equalMathExpression':
-      return z.string().describe(`do not use latex formating, use simple math string and for fraction use backslash symbol, for powers use caret symbol`)
+      return z.string().describe(`do not use latex formating, use simple math string, for fraction use slash symbol, for powers use caret symbol`)
     case 'equal':
       return typeof node.verifyBy.args == 'number'
         ? z.number()

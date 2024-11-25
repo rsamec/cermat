@@ -1,4 +1,4 @@
-import { normalizeToString } from "./math.utils"
+import { checkEquivalence, normalizeToString } from "./math.utils"
 import { removeSpaces, Option, areDeeplyEqual, intersection, normalizeToArray } from "./utils"
 
 export type ValidationFunctionArgs<T> = { args: T }
@@ -81,7 +81,7 @@ export class CoreVerifyiers {
 
   static MathExpressionEqualTo(value: string | number) {
     return (control: string) => {
-      return normalizeToString(control) === value ? undefined : { 'expected': value, 'actual': control, errorCount: null };
+      return normalizeToString(control) === value  || checkEquivalence(control, value?.toString()) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
     }
   }
 

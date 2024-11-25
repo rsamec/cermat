@@ -1,4 +1,4 @@
-import { parse,  MathNode } from 'mathjs';
+import { parse,  MathNode, simplify, evaluate } from 'mathjs';
 import { isEmptyOrWhiteSpace, removeSpaces } from './utils';
 
 export const str2sym = (expression: string): MathNode => {
@@ -46,3 +46,43 @@ export const normalizeToString = (input: string) => {
   return result;
 };
 
+export function checkEquivalence(expr1:string, expr2:string) {
+  try {
+      if (isEmptyOrWhiteSpace(expr1) || isEmptyOrWhiteSpace(expr2)){
+        //unable to evaulate
+        return false;
+      }
+      //return simplify(expr1).toString() == simplify(expr2).toString();
+      // Extract variable names from the expressions
+      const variables = Array.from(new Set([
+          ...parse(expr1).filter((node:any) => node.isSymbolNode).map((node:any) => node.name),
+          ...parse(expr2).filter((node:any) => node.isSymbolNode).map((node:any) => node.name),
+      ]));
+      if (variables.length == 0){
+        return simplify(expr1).toString() == simplify(expr2).toString();
+      }
+      console.log(expr1, expr2)
+
+      // Generate test points for each variable
+      const testCases = [
+          [...Array(5)].keys() // Test with 5 sets of random values
+      ].map(() =>
+          Object.fromEntries(variables.map(variable => [variable, Math.random() * 20 - 10]))
+      );
+
+      // Evaluate expressions for all test cases
+      for (const testCase of testCases) {
+          const result1 = evaluate(expr1, testCase);
+          const result2 = evaluate(expr2, testCase);
+
+          // If results differ, expressions are not equivalent
+          if (Math.abs(result1 - result2) > 1e-9) {
+              return false;
+          }
+      }
+      return true; // All test cases passed
+  } catch (error) {
+      console.error("Error in evaluating expressions:", error);
+      return false;
+  }
+}

@@ -27,7 +27,7 @@ const form = rootGroup(
             2.12: optionBool(false),
         }),
         3: group({
-            3.13: match(/(?:twice|two times|2)/, twoPoints),
+            3.13: match(/(?:twice|two times|2|2 times)/, twoPoints),
             3.14: match(/(?:12th December|12.12.|12\/12)/, twoPoints),
             3.15: word("vocabulary", twoPoints),
             3.16: match(/(?:to )?record?/, twoPoints),

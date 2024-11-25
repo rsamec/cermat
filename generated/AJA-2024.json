@@ -134,7 +134,7 @@
           "verifyBy": {
             "kind": "match",
             "args": {
-              "source": "(?:twice|two times|2)",
+              "source": "(?:twice|two times|2|2 times)",
               "flags": ""
             }
           },

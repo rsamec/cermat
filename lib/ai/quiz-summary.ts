@@ -68,10 +68,12 @@ export async function main() {
           out[d.id] = verify.kind == "selfEvaluate"
             ? (verify.args.hint.kind === "image"
               ? `https://raw.githubusercontent.com/rsamec/cermat/main/public/${subject}/${grade}/${code}/${verify.args.hint.src}`
-              : verify.args.hint.content) :
-            verify.kind == "match"
-              ? verify.args.source
-              : convertAnswerToString(verify.args);
+              : verify.args.hint.content) 
+            : verify.kind == "matchObjectValues"
+            ? convertAnswerToString(verify.source)
+            : verify.kind == "match"
+                ? verify.args.source
+                : convertAnswerToString(verify.args);
           return out;
         }, {} as Record<string, string | number | undefined>),
         answers: Object.entries(result).reduce((out, [key, value]) => {

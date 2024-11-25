@@ -1,32 +1,32 @@
 {
   "M9B-2024": {
     "1": 1.5,
-    "2": 20,
-    "9": "Construct the rhombus using the given conditions.",
-    "10": "Construct the isosceles triangle using the given conditions.",
+    "2": 50,
+    "9": "To construct the rhombus ABCD, plot points A, B, and C (which lies on line OA), and use the properties of a rhombus (equal sides, opposite sides parallel). Adjust D to fulfill these conditions.",
+    "10": "To construct an isosceles triangle KLM, place point M on the circle and adjust K and L such that LM is the base. Use the compass and straightedge to ensure LM is the correct base.",
     "11": {
-      "value": "B"
+      "value": "A"
     },
     "12": {
       "value": "C"
     },
     "13": {
-      "value": "A"
+      "value": "C"
     },
     "14": {
       "value": "B"
     },
-    "3.1": "-11\\30",
-    "3.2": "-10\\17",
+    "3.1": "-11/10",
+    "3.2": "25/58",
     "4.1": "9+12x+4x^2",
-    "4.2": "(x+100)(x+80)",
-    "4.3": "x(x+1)(2x+1)",
-    "5.1": "-1.6",
-    "5.2": "1",
-    "6.1": 306,
+    "4.2": "(100-x)(80-x)",
+    "4.3": "2(5-x)(3x+5)",
+    "5.1": "-8",
+    "5.2": "3",
+    "6.1": 282,
     "6.2": 64,
-    "7.1": "1.5x",
-    "7.2": 29,
+    "7.1": "x + x/2",
+    "7.2": 49,
     "8.1": 64,
     "8.2": 181,
     "15.1": {
@@ -45,7 +45,7 @@
       "value": "C"
     },
     "16.3": {
-      "value": "B"
+      "value": "C"
     }
   },
   "AJB-2023": {
@@ -395,31 +395,31 @@
     "10.64": "forward"
   },
   "M5A-2024": {
-    "2": 4,
-    "3": 10,
+    "2": 3,
+    "3": 20,
     "9": {
       "value": "C"
     },
     "10": {
-      "value": "C"
+      "value": "A"
     },
     "11": {
-      "value": "D"
+      "value": "C"
     },
-    "1.1": 654,
+    "1.1": 618,
     "1.2": 1,
     "4.1": 9,
     "4.2": 269,
     "4.3": 100,
     "5.1": 4800,
-    "5.2": 760,
+    "5.2": 260,
     "6.1": {
-      "X": "66",
+      "X": "22",
       "Y": "88"
     },
-    "6.2": "22",
-    "7.1": "B cannot be uniquely determined",
-    "7.2": "Q cannot be uniquely determined; thus, C and D cannot be constructed",
+    "6.2": "-88",
+    "7.1": "Odpověd: Sestrojte bod B tak, že je od bodu A stejně vzdálen jako bod S, ale na opačné straně vzhledem k přímce p.",
+    "7.2": "Odpověd:: Bod Q leží na přímce p jako střed delší strany AB, pak vrcholy C a D lze sestrojit pomocí Q a bod B je již stanoven výše. Obdélník ABCD může mít různé polohy podle bodu Q.",
     "8.1": {
       "value": false
     },
@@ -433,81 +433,81 @@
       "value": "A"
     },
     "12.2": {
-      "value": "A"
+      "value": "C"
     },
     "12.3": {
-      "value": "C"
+      "value": "A"
     },
     "13.1": {
       "value": "F"
     },
     "13.2": {
-      "value": "C"
-    },
-    "13.3": {
       "value": "B"
     },
+    "13.3": {
+      "value": "A"
+    },
     "14.1": 6,
-    "14.2": 120,
+    "14.2": 168,
     "14.3": 15
   },
   "M5A-2023": {
     "9": {
-      "value": "D"
+      "value": "A"
     },
     "10": {
-      "value": "C"
+      "value": "D"
     },
     "11": {
-      "value": "D"
+      "value": "C"
     },
     "12": {
       "value": "E"
     },
-    "1.1": 610,
-    "1.2": 143,
-    "2.1": 4,
+    "1.1": 670,
+    "1.2": 126,
+    "2.1": 5,
     "2.2": 60,
     "3.1": 120,
     "3.2": 8,
-    "3.3": 48,
+    "3.3": 27,
     "4.1": 27,
-    "4.2": 54,
-    "4.3": 240,
-    "5.1": 11,
-    "5.2": 22,
-    "6.1": 3,
-    "6.2": 1200,
-    "7.1": "Geometric Construction",
-    "7.2": "Geometric Construction",
+    "4.2": 45,
+    "4.3": 400,
+    "5.1": 21,
+    "5.2": 32,
+    "6.1": 2,
+    "6.2": 2400,
+    "7.1": "Vrchol A je na přímce a a vrchol B na přímce b, oba stejné vzdálenosti od bodu C.",
+    "7.2": "Vrchol L je na přímce p stejně daleko jako bod K od bodu S, a vrcholy M a N tvoří obdélník se stranou KL.",
     "8.1": {
       "value": true
     },
     "8.2": {
-      "value": false
+      "value": true
     },
     "8.3": {
       "value": false
     },
     "13.1": {
-      "value": "C"
+      "value": "E"
     },
     "13.2": {
-      "value": "B"
-    },
-    "13.3": {
       "value": "D"
     },
+    "13.3": {
+      "value": "F"
+    },
     "14.1": 8,
-    "14.2": 5,
+    "14.2": 4,
     "14.3": 3
   },
   "M7A-2024": {
-    "4": "7/18",
+    "4": "5/12",
     "6": 61,
-    "7": 14,
-    "8": "No numerical solution possible; requires geometric construction.",
-    "9": "Rovnoramenný trojúhelník ABC byl sestrojen s přímkou o jako osou strany BC.",
+    "7": 15,
+    "8": "Řešení vyžaduje konstrukci a není možné jej přesně specifikovat ve formátu textu.",
+    "9": "Řešení vyžaduje konstrukci a není možné jej přesně specifikovat ve formátu textu.",
     "11": {
       "value": "E"
     },
@@ -515,71 +515,71 @@
       "value": "D"
     },
     "13": {
-      "value": "D"
+      "value": "B"
     },
     "14": {
-      "value": "A"
+      "value": "B"
     },
-    "1.1": 5,
+    "1.1": 2,
     "1.2": 0.784,
-    "2.1": "3/7",
-    "2.2": "4/5",
-    "3.1": 1,
-    "3.2": 4,
-    "3.3": 4.2,
-    "5.1": 351,
-    "5.2": 171,
+    "2.1": "30/77",
+    "2.2": "89/40",
+    "3.1": 2.8,
+    "3.2": 3,
+    "3.3": 2.8,
+    "5.1": 209,
+    "5.2": 123,
     "10.1": {
       "value": false
     },
     "10.2": {
-      "value": true
+      "value": false
     },
     "10.3": {
       "value": true
     },
     "15.1": {
-      "value": "F"
+      "value": "A"
     },
     "15.2": {
-      "value": "F"
+      "value": "D"
     },
     "15.3": {
       "value": "A"
     },
-    "16.1": 630,
-    "16.2": 1575
+    "16.1": 660,
+    "16.2": 840
   },
   "M7A-2023": {
-    "1": 9,
-    "8": "Nelze určit",
-    "9": "L, M, N are not definable with given data (not enough info to determine specific coordinates/dimensions without grid or measurements).",
+    "1": 14,
+    "8": "Since the solution involves a geometrical construction, all possible configurations need to be considered. The construction was made, and possible solutions were marked, ensuring that side AC is parallel to line b and that sides AB and AC have the same length.",
+    "9": "Using a ruler and compass, points L, M, and N were constructed such that K, L, M, and N form an oblong rectangle, ensuring line p passes through the midpoints as specified.",
     "11": {
       "value": "D"
     },
     "12": {
-      "value": "B"
-    },
-    "13": {
       "value": "C"
     },
-    "14": {
-      "value": "A"
+    "13": {
+      "value": "E"
     },
-    "2.1": "1/5",
-    "2.2": "1/3",
+    "14": {
+      "value": "D"
+    },
+    "2.1": "3/5",
+    "2.2": "2/15",
     "3.1": 120,
     "3.2": 17,
-    "3.3": 124,
+    "3.3": 158,
     "4.1": 19,
     "4.2": "2:3",
     "5.1": 60,
-    "5.2": 160,
-    "6.1": 3,
-    "6.2": 1800,
-    "7.1": 14,
-    "7.2": 20,
-    "7.3": 24,
+    "5.2": 440,
+    "6.1": 9,
+    "6.2": 1200,
+    "7.1": 8,
+    "7.2": 30,
+    "7.3": 16,
     "10.1": {
       "value": false
     },
@@ -590,50 +590,50 @@
       "value": false
     },
     "15.1": {
-      "value": "D"
+      "value": "B"
     },
     "15.2": {
       "value": "C"
     },
     "15.3": {
-      "value": "B"
+      "value": "A"
     },
-    "16.1": 2,
-    "16.2": 5,
-    "16.3": 2
+    "16.1": 4,
+    "16.2": 4,
+    "16.3": 8
   },
   "M9A-2024": {
     "1": 72,
-    "2": 3140,
-    "9": "Vrchol A i B jsou zkonstruovány podle zadání.",
-    "10": "Vrchol B, C, D jsou zkonstruovány podle zadání.",
+    "2": 2760,
+    "9": "Use geometric construction techniques to locate points A and B such that the distance between them is twice the distance from S to either point and ensure they form an equilateral triangle with point C. Draw the triangle.",
+    "10": "Visualize points B, C, and D in such a way that B is on line AE and C is on line p. Ensure that the diagonals AC and BD are equal, using AE as a reference for BD's length. Sketch the rectangle.",
     "11": {
-      "value": "B"
+      "value": "A"
     },
     "12": {
       "value": "E"
     },
     "13": {
-      "value": "A"
+      "value": "C"
     },
     "14": {
-      "value": "D"
+      "value": "B"
     },
-    "3.1": "41/9",
-    "3.2": "5/28",
+    "3.1": "8/3",
+    "3.2": "-5/8",
     "4.1": "9a^2/16",
     "4.2": "(3a-4)(3a+4)",
-    "4.3": "-(9c^2-2c+10)",
-    "5.1": "x = -1",
-    "5.2": "y = 0",
-    "6.1": 540,
-    "6.2": 35,
-    "7.1": 7,
+    "4.3": "(1-3c)(c+5)",
+    "5.1": "x=-1",
+    "5.2": "y=5/2",
+    "6.1": 612,
+    "6.2": 25,
+    "7.1": 5,
     "7.2": 28,
-    "8.1": 157,
-    "8.2": 84,
+    "8.1": 100,
+    "8.2": 51,
     "15.1": {
-      "value": false
+      "value": true
     },
     "15.2": {
       "value": true
@@ -645,19 +645,19 @@
       "value": "A"
     },
     "16.2": {
-      "value": "E"
+      "value": "C"
     },
     "16.3": {
-      "value": "E"
+      "value": "F"
     }
   },
   "M9C-2024": {
     "1": 35100,
     "2": 5,
-    "9": "Obtáhněte konstrukci podle pokynů.",
-    "10": "Obtáhněte konstrukci podle pokynů.",
+    "9": "This question asks you to construct a trapezoid with given conditions. Since this is a geometrical drawing task, the solution involves creating a drawing rather than providing a textual numeric solution.",
+    "10": "This question involves constructing a trapezoid based on the given geometric conditions which typically require a compass and straightedge or a similar tool to draw. As with question 9, it is a drawing task.",
     "11": {
-      "value": "B"
+      "value": "C"
     },
     "12": {
       "value": "C"
@@ -668,30 +668,30 @@
     "14": {
       "value": "D"
     },
-    "3.1": "\n46\\5",
-    "3.2": "-2\\3",
-    "4.1": "64\\9b^2",
-    "4.2": "x^2-2x+4",
-    "4.3": "c^3-13c^2+35c-49",
+    "3.1": "80/7",
+    "3.2": "-4/5",
+    "4.1": "64b^2/9",
+    "4.2": "-x^2-2x+6",
+    "4.3": "c^2-17c+74",
     "5.1": "18",
-    "5.2": "x=2\\3",
+    "5.2": "-3/4",
     "6.1": 8,
     "6.2": 88,
     "7.1": 20,
     "7.2": 10,
     "8.1": 78,
-    "8.2": 26,
+    "8.2": 18,
     "15.1": {
       "value": false
     },
     "15.2": {
-      "value": true
+      "value": false
     },
     "15.3": {
       "value": false
     },
     "16.1": {
-      "value": "D"
+      "value": "E"
     },
     "16.2": {
       "value": "E"
@@ -701,35 +701,35 @@
     }
   },
   "M9D-2024": {
-    "1": 250,
+    "1": 900,
     "2": 30,
-    "9": "Obdélník ABCD je dán body A, S, a přímkou p. Konstrukce se může provést několika způsoby, v záznamovém archu obtáhněte v propisovací tužkou.",
-    "10": "Pravoúhlý trojúhelník ABC je dán body C, S a přímkou p. Konstrukce se může provést několika způsoby, v záznamovém archu obtáhněte v propisovací tužkou.",
+    "9": "The construction of rectangle ABCD is not possible with the given conditions if considering general Euclidean geometry. Hence, no solutions are given.",
+    "10": "The construction of the right triangle ABC is dependent on aligning the specific geometric constraints presented. This is not solvable through description without precise measurements. No solutions are provided as this is a construction problem requiring manual solving.",
     "11": {
-      "value": "B"
+      "value": "E"
     },
     "12": {
-      "value": "C"
+      "value": "B"
     },
     "13": {
-      "value": "D"
+      "value": "A"
     },
     "14": {
       "value": "D"
     },
-    "3.1": "-1\\2",
-    "3.2": "-1\\6",
-    "4.1": "a^2(-1+2)-4a^2+6a^2=3a^2",
-    "4.2": "16b^2-\\frac{8b}{3}+\\frac{1}{9}",
-    "4.3": "4x^2+12x+9-6x-4x^2+8x-4=-2x+5",
-    "5.1": "x=\\frac{8}{3}",
-    "5.2": "x=\\frac{5}{3}",
-    "6.1": 8,
-    "6.2": 60,
+    "3.1": "-5/9",
+    "3.2": "-1/6",
+    "4.1": "-a(a+6)",
+    "4.2": "16b^2 - 8b + 1/9",
+    "4.3": "x^2 - 4x - 7",
+    "5.1": "8",
+    "5.2": "5",
+    "6.1": 16,
+    "6.2": 120,
     "7.1": 80,
     "7.2": 100,
-    "8.1": 9,
-    "8.2": 96,
+    "8.1": 8,
+    "8.2": 60,
     "15.1": {
       "value": true
     },
@@ -740,261 +740,209 @@
       "value": true
     },
     "16.1": {
-      "value": "B"
+      "value": "C"
     },
     "16.2": {
-      "value": "E"
+      "value": "B"
     },
     "16.3": {
-      "value": "D"
+      "value": "C"
     }
   },
   "M9A-2023": {
     "1": 20,
-    "9": "(Solution depends on the diagram)",
-    "10": "(Solution depends on the diagram)",
+    "9": "Sestrojit body B, D podle pravidel konstrukce obdélníka.",
+    "10": "Sestrojit body B, C podle pravidel konstrukce rovnoramenného trojúhelníku.",
     "12": {
-      "value": "E"
+      "value": "C"
     },
     "13": {
       "value": "D"
     },
     "14": {
-      "value": "B"
+      "value": "A"
     },
-    "2.1": 4,
+    "2.1": 2,
     "2.2": 1600000,
-    "3.1": "20\\81",
-    "3.2": "-3\\42",
-    "3.3": "6\\49",
-    "4.1": "x\\cdot(2x+1)",
-    "4.2": "4\\9a^2-4a+9",
-    "4.3": "9n^2-5n+9",
-    "5.1": "x=4",
-    "5.2": "y=-5",
-    "6.1": 21,
-    "6.2": 87,
-    "7.1": 50,
-    "7.2": 12,
-    "7.3": "3:2",
-    "8.1": "0.75a",
+    "3.1": "25/54",
+    "3.2": "-3/14",
+    "3.3": "12/107",
+    "4.1": "x(2x+1)",
+    "4.2": "4/9a^2 - 4a + 9",
+    "4.3": "19n + 9",
+    "5.1": "x = 1",
+    "5.2": "y = 5",
+    "6.1": 60,
+    "6.2": 135,
+    "7.1": 66.67,
+    "7.2": 9,
+    "7.3": "4:5",
+    "8.1": "0.75*a",
     "8.2": 40,
-    "8.3": 400,
+    "8.3": 1200,
     "11.1": {
       "value": true
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "B"
+    },
+    "15.3": {
+      "value": "A"
+    },
+    "16.1": 256,
+    "16.2": 364,
+    "16.3": 59049
+  },
+  "M9B-2023": {
+    "1": -4,
+    "9": "You will need to physically construct this on paper based on the description provided.",
+    "10": "You will need to physically construct this on paper based on the description provided.",
+    "12": {
+      "value": "C"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "E"
+    },
+    "2.1": 2.5,
+    "2.2": 600,
+    "3.1": "-7/18",
+    "3.2": "14/45",
+    "3.3": "7/60",
+    "4.1": "(x-6)(y-3)",
+    "4.2": "3a+4",
+    "4.3": "8n^2-2n+4",
+    "5.1": "x=6",
+    "5.2": "y=16",
+    "6.1": 25,
+    "6.2": 8,
+    "6.3": 9,
+    "7.1": "x/2",
+    "7.2": "5x/4",
+    "7.3": 60,
+    "8.1": 24,
+    "8.2": 2400,
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": true
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "D"
+    },
+    "15.3": {
+      "value": "C"
+    },
+    "16.1": 32,
+    "16.2": 40,
+    "16.3": [
+      421,
+      422
+    ]
+  },
+  "M9D-2023": {
+    "1": 900,
+    "9": "One possible set of vertices for the square ABCD is A, B, C, D where two of the points P, Q, R are on two different sides of the square and one is outside. Due to the construction nature, specific coordinates are not provided so a geometric construction is required on paper.",
+    "10": "There are two possible solutions where angles add up to 180° with the given angle at C being 40° and a right angle at A. However, specific coordinates or length measures aren't provided, so a geometric construction is required to find the exact triangle on paper.",
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "C"
+    },
+    "14": {
+      "value": "C"
+    },
+    "2.1": 25,
+    "2.2": 5,
+    "3.1": "-1/12",
+    "3.2": "-1/6",
+    "3.3": "-1/5",
+    "4.1": "0.09x^2+0.3x+0.25",
+    "4.2": "(7-4a)(7+4a)",
+    "4.3": "4n^2+2n+1",
+    "5.1": "x=6",
+    "5.2": "y=-6",
+    "6.1": "4p/3",
+    "6.2": "p*1.6",
+    "6.3": 150,
+    "7.1": 21,
+    "7.2": 15,
+    "8.1": [
+      6,
+      7
+    ],
+    "8.2": [
+      5,
+      6
+    ],
+    "11.1": {
+      "value": false
     },
     "11.2": {
       "value": false
     },
     "11.3": {
-      "value": true
-    },
-    "15.1": {
-      "value": "C"
-    },
-    "15.2": {
-      "value": "B"
-    },
-    "15.3": {
-      "value": "E"
-    },
-    "16.1": 256,
-    "16.2": 364,
-    "16.3": 98304
-  },
-  "M9B-2023": {
-    "1": -4,
-    "9": "",
-    "10": "",
-    "12": {
-      "value": "D"
-    },
-    "13": {
-      "value": "E"
-    },
-    "14": {
-      "value": "A"
-    },
-    "2.1": 2.5,
-    "2.2": 200,
-    "3.1": "-13\\18",
-    "3.2": "14\\5",
-    "3.3": "7\\30",
-    "4.1": "x(y-3)+3(x-2y)=(x-6)(y-1)",
-    "4.2": "3a+4",
-    "4.3": "9n^2-n",
-    "5.1": "x=4",
-    "5.2": "y=1",
-    "6.1": 25,
-    "6.2": 8,
-    "6.3": 6,
-    "7.1": "x\\2",
-    "7.2": "5x\\4",
-    "7.3": 30,
-    "8.1": 12,
-    "8.2": 2400,
-    "11.1": {
-      "value": "A"
-    },
-    "11.2": {
-      "value": "A"
-    },
-    "11.3": {
-      "value": "A"
-    },
-    "15.1": {
-      "value": "C"
-    },
-    "15.2": {
-      "value": "D"
-    },
-    "15.3": {
-      "value": "E"
-    },
-    "16.1": 32,
-    "16.2": 2,
-    "16.3": [
-      801,
-      802
-    ]
-  },
-  "M9C-2023": {
-    "1": 4.666666666666667,
-    "9": "Impossible to determine without the image.",
-    "12": {
-      "value": "A"
-    },
-    "13": {
-      "value": "B"
-    },
-    "14": {
-      "value": "B"
-    },
-    "2.1": 8,
-    "2.2": 0.5,
-    "3.1": "4\\7",
-    "3.2": "3\\5",
-    "3.3": "17\\10",
-    "4.1": "(2a+3)(2a-3)",
-    "4.2": "0",
-    "4.3": "9",
-    "5.1": "-1",
-    "5.2": "1\\5",
-    "6.1": "x\\3-60",
-    "6.2": 450,
-    "7.1": 4,
-    "7.2": 600,
-    "8.1": 152,
-    "8.2": 714,
-    "10.1": "Impossible to determine without the image.",
-    "10.2": "Impossible to determine without the image.",
-    "11.1": {
-      "value": "A"
-    },
-    "11.2": {
-      "value": "A"
-    },
-    "11.3": {
-      "value": "A"
+      "value": false
     },
     "15.1": {
       "value": "E"
     },
     "15.2": {
-      "value": "B"
-    },
-    "15.3": {
-      "value": "D"
-    },
-    "16.1": 160,
-    "16.2": 50,
-    "16.3": 106
-  },
-  "M9D-2023": {
-    "1": 900,
-    "9": "Not applicable",
-    "10": "Not applicable",
-    "12": {
-      "value": "D"
-    },
-    "13": {
       "value": "E"
-    },
-    "14": {
-      "value": "C"
-    },
-    "2.1": 32,
-    "2.2": 12,
-    "3.1": "-3\\4",
-    "3.2": "-13\\6",
-    "3.3": "-3\\7",
-    "4.1": "0.09x^2+0.3x+0.25",
-    "4.2": "(7-4a)(7+4a)",
-    "4.3": "4n^2-7n+1",
-    "5.1": "x=2",
-    "5.2": "y=0",
-    "6.1": "4\\3*p",
-    "6.2": "8\\5*p",
-    "6.3": 180,
-    "7.1": 21,
-    "7.2": 24,
-    "8.1": [
-      10,
-      11
-    ],
-    "8.2": [
-      6,
-      8
-    ],
-    "11.1": {
-      "value": "A"
-    },
-    "11.2": {
-      "value": "A"
-    },
-    "11.3": {
-      "value": "A"
-    },
-    "15.1": {
-      "value": "F"
-    },
-    "15.2": {
-      "value": "F"
     },
     "15.3": {
       "value": "D"
     },
     "16.1": 45,
-    "16.2": 40,
-    "16.3": 870
+    "16.2": 48,
+    "16.3": 680
   },
   "MMA-2023": {
     "1": 25,
     "2": 400,
-    "3": "-1",
-    "4": "x = 1",
-    "5": "x = 1,\\ y = 2",
-    "6": "k = 9",
-    "7": "x = -4",
-    "9": "P = \\left( 0, -\\sin\\left(\\frac{7\\pi}{6}\\right) \\right) = \\left( 0, \\frac{1}{2}\\right)",
-    "10": "x = \\frac{\\pi}{3} - \\frac{7\\pi}{6} = \\frac{\\pi}{2}",
-    "11": 2,
-    "12": 1.1,
-    "14": 42,
+    "3": "-1/x",
+    "4": "x = 5",
+    "5": "x = 34, y = -7/2",
+    "6": "k = 5 or k = 9",
+    "7": "x = -3",
+    "9": "P(0, -\\frac{1}{2})",
+    "10": "\\frac{\\pi}{2} - \\frac{7\\pi}{6} = -\\frac{2\\pi}{3} + 2\\pi = \\frac{4\\pi}{3}",
+    "11": 1,
+    "12": 0.68,
+    "14": 135,
     "16": {
-      "value": "C"
+      "value": "A"
     },
     "17": {
       "value": "B"
     },
     "18": {
-      "value": "A"
+      "value": "B"
     },
     "19": {
-      "value": "C"
+      "value": "A"
     },
     "20": {
-      "value": "A"
+      "value": "B"
     },
     "21": {
       "value": "C"
@@ -1006,12 +954,12 @@
       "value": "A"
     },
     "24": {
-      "value": "C"
+      "value": "D"
     },
-    "8.1": "S (2, -4)",
-    "8.2": "Grafnenízde potřebenakreslit.",
-    "13.1": 2.6,
-    "13.2": 5.8,
+    "8.1": "S(2,-4)",
+    "8.2": "The line passes through R (-5, 1) and S (2, -4) with equation y = -5/7x - 2/7.",
+    "13.1": 5.1,
+    "13.2": 5.7,
     "15.1": {
       "value": true
     },
@@ -1019,13 +967,13 @@
       "value": false
     },
     "15.3": {
-      "value": true
+      "value": false
     },
     "25.1": {
-      "value": "D"
+      "value": "E"
     },
     "25.2": {
-      "value": "D"
+      "value": "A"
     }
   },
   "C5A-2024": {
@@ -3789,27 +3737,27 @@
     }
   },
   "MMB-2023": {
-    "1": 27,
-    "2": "-\\frac{ab^2+3c}{2}",
-    "3": "\\frac{x^2+5x-10}{5}",
+    "1": 50,
+    "2": "a = -\\frac{ab^2+3c}{2}",
+    "3": "x^2/5",
     "4": "x = 2",
-    "6": "x = 3",
-    "8": "(-∞; -6⟩",
-    "9": 3,
-    "11": "5t",
-    "12": "(0,4)",
-    "14": 680,
+    "6": "x = 6",
+    "8": "The function h is increasing in the interval ⟨-6;+∞).",
+    "9": 5,
+    "11": "-3 + 4t",
+    "12": "[0; 8]",
+    "14": 560,
     "16": {
-      "value": "B"
+      "value": "A"
     },
     "17": {
-      "value": "C"
-    },
-    "18": {
       "value": "B"
     },
+    "18": {
+      "value": "C"
+    },
     "19": {
-      "value": "A"
+      "value": "B"
     },
     "20": {
       "value": "B"
@@ -3818,22 +3766,22 @@
       "value": "E"
     },
     "22": {
-      "value": "B"
+      "value": "D"
     },
     "23": {
-      "value": "C"
-    },
-    "24": {
       "value": "A"
     },
-    "5.1": "8 \\cdot 64^n = 2^3 \\cdot (2^6)^n = 2^{3+6n} = 2^{3+6n} = 64^{n+\\frac{1}{3}}",
-    "5.2": "\\left(\\frac{20}{100}\\right) \\cdot (25^2) = 5 \\cdot 25^2 = 5^3 \\cdot 2^3",
-    "7.1": "16a^2 = 256",
-    "7.2": "The graph is an exponential curve which passes through points A[-2,4] and B[2,y].",
+    "24": {
+      "value": "B"
+    },
+    "5.1": "8 \\cdot 64^n = 2^3 \\cdot (2^6)^n = 2^{3+6n} = 2^{6n+3}",
+    "5.2": "5^2 \\cdot 5^2 = 5^4",
+    "7.1": "b_2 = 16a^2",
+    "7.2": "Graph of g through points like A[-2,4], B[2,b_2] and other calculated points.",
     "10.1": 2.8,
-    "10.2": "(7-x)/(100*x)\\cdot 40",
-    "13.1": "30 m^2",
-    "13.2": "250 m^3",
+    "10.2": "(7-x) * 0.4",
+    "13.1": "25",
+    "13.2": "110",
     "15.1": {
       "value": true
     },
@@ -3841,10 +3789,10 @@
       "value": true
     },
     "15.3": {
-      "value": false
+      "value": true
     },
     "25.1": {
-      "value": "B"
+      "value": "C"
     },
     "25.2": {
       "value": "D"
@@ -4322,5 +4270,57 @@
     "30.4": {
       "value": "B"
     }
+  },
+  "M9C-2023": {
+    "1": 3,
+    "9": "To sestrojte.",
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "C"
+    },
+    "14": {
+      "value": "D"
+    },
+    "2.1": 2,
+    "2.2": 0.5,
+    "3.1": "4/7",
+    "3.2": "1/5",
+    "3.3": "37/10",
+    "4.1": "(2a-3)(2a+3)",
+    "4.2": "0",
+    "4.3": "9",
+    "5.1": "x=-2",
+    "5.2": "y=-6",
+    "6.1": "x/3 - 60",
+    "6.2": 450,
+    "7.1": 5,
+    "7.2": 283,
+    "8.1": 160,
+    "8.2": 750,
+    "10.1": "To sestrojte.",
+    "10.2": "To sestrojte.",
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": false
+    },
+    "11.3": {
+      "value": true
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "B"
+    },
+    "15.3": {
+      "value": "D"
+    },
+    "16.1": 324,
+    "16.2": 47,
+    "16.3": 107
   }
 }
