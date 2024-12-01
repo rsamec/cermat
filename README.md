@@ -10,34 +10,6 @@ There are 2 main bottlenecks to use cermat offical tests.
   - getting the approval may take one month
 - the content format available is typically the pdf document - this is not much appropriate for use by a program or an application
 
-This repository shows
-- example how to store cermat's materials to be reusable
-- example applications and usage of cermat's materials
-
-See more examples
-
-- test application - PWA with offline support with ChatGTP button
-  - [czech](https://rsamec.github.io/cermat/wizard/c5a-2023)
-  - [math](https://rsamec.github.io/cermat/wizard/m9a-2023)
-  - [english](https://rsamec.github.io/cermat/wizard/aja-2023)
-  - [german](https://rsamec.github.io/cermat/wizard/dea-2023)
-- game application - kahoot alternative - multiplayer
-  - [demo](https://kahoot-alternative-xi.vercel.app)
-  - [source](https://github.com/rsamec/kahoot-alternative)
-- examples of print media
-  - [czech](https://rsamec.github.io/cermat/paper/c5a-2023)
-  - [math](https://rsamec.github.io/cermat/paper/m9a-2023)
-  - [english](https://rsamec.github.io/cermat/paper/aja-2023)
-  - [german](https://rsamec.github.io/cermat/paper/dea-2023)
-- reusable test specification - [see quiz specification](#cermat-quiz)
-  - [czech](public/cz/8/C5A-2023/index.md)
-  - [math](public/math/4/M9A-2023/index.md)
-  - [english](public/en/diploma/AJA-2023/index.md)
-  - [german](public/de/diploma/DEA-2023/index.md)
-
-
-
-
 ## License
 
 The files that are created based on CERMAT materials (mainly the content of the public directory) has ['CERMAT' license](https://prijimacky.cermat.cz/files/files/CZVV_pravidla-vyuziti-webstrankyn.pdf).
@@ -213,17 +185,6 @@ Example of the cermat json meta data builder utility class.
 
 TODO: add description
 
-
-## Cermat game - kahoot alternative example
-
-TODO: add description
-
-## Cermat print media example
-
-TODO: add description
-
-
-
 ## Getting Started
 
 First, run the development server:
@@ -240,14 +201,3 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
