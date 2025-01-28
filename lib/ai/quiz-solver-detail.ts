@@ -5,7 +5,6 @@ import examTestCases from "../exams.utils";
 import { ShortCodeMarker, getQuizBuilder } from "../utils/parser.utils";
 import { parser, GFM, Subscript, Superscript } from '@lezer/markdown';
 import { QuizDetailAnswerFileSaver } from "./file.utils";
-import { Berkshire_Swash } from "next/font/google";
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Superscript]);
@@ -20,7 +19,7 @@ export async function main() {
 
   const storage = new QuizDetailAnswerFileSaver({ model: modelName });
   const quizTestCases = examTestCases
-    .filter(d => d.config.questions && d.config.solver)
+    .filter(d => d.config.questions)
 
   for (let quizTestCase of quizTestCases) {
     const { pathes } = quizTestCase;

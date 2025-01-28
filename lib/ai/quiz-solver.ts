@@ -17,24 +17,28 @@ const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Supe
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
 //const modelName = "gpt-4o-2024-08-06";
-const modelName = "gpt-4o";
+const modelName = "gpt-4o-mini-2024-07-18";
 
 const chunkSize = 6;
 export async function main() {
 
   const usePaidApi = true;
+  //EXPORT OPENAI_API_KEY=
   const client = usePaidApi ? new OpenAI({
       organization: "org-u9Q9NxhzuntTO1rgjfl2Kkaq",
       project: "proj_3AmxUiUlFDCV0xxQD5DteczY",
   }): new OpenAI({ baseURL: endpoint, apiKey: token });
 
   const storage = new QuizAnswerFileSaver({ model: modelName });
+  
   let filtredQuizTestCase = examTestCases.filter(d => d.config.questions && !storage.containsKey(d.pathes[2]));
-  console.log(filtredQuizTestCase.map(d => d.pathes));
+  filtredQuizTestCase = filtredQuizTestCase.filter(d => d.pathes[0] == "math" && d.pathes[2] == "M9A-2024")
+
+  console.log(filtredQuizTestCase.map(d => d.pathes[1] == "math2"));
   console.log(`Total tests: ${examTestCases.length}, filtred: ${filtredQuizTestCase.length}`);  
   const { dispatch } = store;
 
-
+  
   for (let quizTestCase of filtredQuizTestCase) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
