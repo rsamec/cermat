@@ -8,7 +8,7 @@ $$
 
 ## 2.2
 $$
-\sqrt{\frac{2\cdot{2^2}}{3}}\cdot\sqrt{\frac{3}{2}}
+\sqrt{\frac{2\cdot2^2}{3}}\cdot\sqrt{\frac32}
 $$
 
 
@@ -39,7 +39,7 @@ $$
 
 ## 4.3 Zjednodušte a výsledek rozložte na součin vytýkáním:
 $$
-7\cdot3 + 10\cdot({a^2}+10) - a\cdot(a+66)=
+7\cdot3 + 10\cdot({a^2}+10) - a\cdot(a + {6\\6})=
 $$
 
 
@@ -51,8 +51,8 @@ Zkoušku nazapisujte.
 ## 5.1
 $$
 \begin{aligned}
-3x+\frac{3}{4}y &= 1\\
-3,5y+3x &=6,5
+3x+\frac{3}{4}y = 1\\
+3,5y+3x = 6,5
 \end{aligned}
 $$
 
