@@ -3,12 +3,12 @@
 # 2 Vypočítejte:
 ## 2.1
 $$
-(1,5^2 - 0,3^2)\div6=
+(1{,}5^2 - 0{,}3^2)\div6=
 $$
 
 ## 2.2
 $$
-\sqrt{\frac{2\cdot2^2}{3}}\cdot\sqrt{\frac32}
+\sqrt{\frac{2\cdot2^2}{3}}\cdot\sqrt{\frac32}=
 $$
 
 
@@ -17,7 +17,7 @@ $$
 
 ## 3.1
 $$
-0,2-0,2\cdot\frac{5}{12}-\left(-\frac{7}{30}\right)=
+0{,}2-0{,}2\cdot\frac{5}{12}-\left(-\frac{7}{30}\right)=
 $$
 
 ## 3.2
