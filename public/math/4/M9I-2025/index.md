@@ -3,12 +3,12 @@
 # 2 Vypočítejte:
 ## 2.1
 $$
-\left(1,5^2 - 0,3^2\right)\div6=
+(1,5^2 - 0,3^2)\div6=
 $$
 
 ## 2.2
 $$
-\sqrt{\frac{2\cdot2^2}{3}}\cdot\sqrt{\frac{3}{2}}
+\sqrt{\frac{2\cdot{2^2}}{3}}\cdot\sqrt{\frac{3}{2}}
 $$
 
 
@@ -29,7 +29,7 @@ $$
 
 ## 4.1 Zjednodušte (výsledný výraz nesmí obsahovat závorky):
 $$
-x^2-(x - 2y)\cdot(x+2y)=
+x^2 - (x - 2y)\cdot(x+2y)=
 $$
 
 ## 4.2 Rozložte na součin podle vzorce:
@@ -39,7 +39,7 @@ $$
 
 ## 4.3 Zjednodušte a výsledek rozložte na součin vytýkáním:
 $$
-7\cdot3+10\cdot(a^2+10)-a\cdot(a+66)=
+7\cdot3 + 10\cdot({a^2}+10) - a\cdot(a+66)=
 $$
 
 
@@ -54,7 +54,6 @@ $$
 3x+\frac{3}{4}y &= 1\\
 3,5y+3x &=6,5
 \end{aligned}
-
 $$
 
 ## 5.2
