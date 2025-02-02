@@ -46,7 +46,7 @@
             "kind": "equalMathExpression",
             "args": "7/20"
           },
-          "points": 1,
+          "points": 2,
           "inputBy": {
             "kind": "math",
             "args": {
@@ -59,7 +59,7 @@
             "kind": "equalMathExpression",
             "args": "5/4"
           },
-          "points": 1,
+          "points": 2,
           "inputBy": {
             "kind": "math",
             "args": {
@@ -223,7 +223,7 @@
             "kind": "equal",
             "args": 84
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
             "kind": "number",
             "args": {
@@ -262,10 +262,6 @@
             {
               "value": 2,
               "name": "2 body"
-            },
-            {
-              "value": 3,
-              "name": "3 body"
             }
           ],
           "hint": {
@@ -288,10 +284,6 @@
           {
             "value": 2,
             "name": "2 body"
-          },
-          {
-            "value": 3,
-            "name": "3 body"
           }
         ]
       }
@@ -463,22 +455,28 @@
       "children": {
         "16.1": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": "A"
+            "kind": "equal",
+            "args": 420
           },
           "points": 2,
           "inputBy": {
-            "kind": "options"
+            "kind": "number",
+            "args": {
+              "suffix": "sloupců"
+            }
           }
         },
         "16.2": {
           "verifyBy": {
-            "kind": "equalOption",
-            "args": "C"
+            "kind": "equal",
+            "args": 11
           },
           "points": 2,
           "inputBy": {
-            "kind": "options"
+            "kind": "number",
+            "args": {
+              "suffix": "řad"
+            }
           }
         }
       }

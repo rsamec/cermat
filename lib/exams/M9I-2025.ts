@@ -15,8 +15,8 @@ const form = rootGroup({
     2.2: number(2, {}),
   }),
   3: group({
-    3.1: mathExpr("7/20", { hintType: 'fraction' }),
-    3.2: mathExpr("5/4", { hintType: 'fraction' }),
+    3.1: mathExpr("7/20", { hintType: 'fraction' }, twoPoints),
+    3.2: mathExpr("5/4", { hintType: 'fraction' }, twoPoints),
   }),
   4: group({
     4.1: mathExpr('4y^2', { hintType: 'expression' }),
@@ -34,13 +34,13 @@ const form = rootGroup({
   7: group({
     7.1: number(760, { suffix: 'gramů' }),
     7.2: number(56, { suffix: 'gramů' }),
-    7.3: number(88, { prefix:'o', suffix: 'gramů' }, twoPoints),
+    7.3: number(88, { prefix: 'o', suffix: 'gramů' }, twoPoints),
   }),
   8: group({
-    8.1: number(84, { suffix: 'cm' }, twoPoints),
+    8.1: number(84, { suffix: 'cm' }),
     8.2: number(432, { suffix: 'cm^2^' }, twoPoints),
   }),
-  9: selfEvaluateImage("image-9.png", threePoints),
+  9: selfEvaluateImage("image-9.png", twoPoints),
   10: selfEvaluateImage("image-10.png", threePoints),
   11: group({
     11.1: optionBool(true),
@@ -56,8 +56,8 @@ const form = rootGroup({
     15.3: option('D', twoPoints),
   }),
   16: group({
-    16.1: option('A', twoPoints),
-    16.2: option('C', twoPoints),
+    16.1: number(420, { suffix: "sloupců" }, twoPoints),
+    16.2: number(11, { suffix: 'řad' }, twoPoints),
   }),
 });
 export default form;
