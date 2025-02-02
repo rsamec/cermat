@@ -39,9 +39,8 @@ $$
 
 ## 4.3 Zjednodušte a výsledek rozložte na součin vytýkáním:
 $$
-7\cdot3 + 10\cdot({a^2}+10) - a\cdot(a + {6\\6})=
+7\cdot3+10\cdot({a^2}+10)-a\cdot(a+66)=
 $$
-
 
 
 # 5 Řešte soustavu rovnic.
@@ -49,17 +48,19 @@ $$
 Zkoušku nazapisujte.
 
 ## 5.1
+
 $$
-\begin{aligned}
-3x+\frac{3}{4}y = 1\\
-3,5y+3x = 6,5
-\end{aligned}
+\frac{1}{5}y+\frac{1}{2}=2\cdot\left(y+\frac{1}{4}\right)
 $$
 
 ## 5.2
 $$
-6-\frac{3-2y}{5}\cdot2 = 4y
+\begin{aligned}
+3x+\frac{3}{4}y = 1\\
+3{,}5y+3x = 6{,}5
+\end{aligned}
 $$
+
 
 VÝCHOZÍ TEXT K ÚLOZE 6
 ===
@@ -91,7 +92,7 @@ VÝCHOZÍ TEXT K ÚLOZE 7
 # 7 Vypočtěte, jaká je hmotnost v gramech
 ## 7.1 jedné plné krabice,
 ## 7.2 jednoho výrobku,
-## 7.2 jedné prázdné krabice.
+## 7.3 jedné prázdné krabice.
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 8
 ===
@@ -113,9 +114,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 9
 
 # 9 Bod A' je vrchol trojúhelníku A'B'C', který je obrazem trojúhelníku ABC ve středové souměrnosti se středem S.
 
-## 9.1
 **Sestrojte** a **označte** písmenem střed souměrnosti S.
-## 9.1
 **Sestrojte** vrcholy B' a C' trojúhleníku A'B'C', **označte** je písmeny a trojúhelník **narýsujte**.
 
 **V záznamovém archu** obtáhněte celou konstrukci **propisovací tužkou** (čáry i písmena).
@@ -145,9 +144,9 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 11
 
 Úhly neměřte, náčrtek není přesný.
 
-## 11.1 $\alpha = 72\degree$
-## 11.2 $\beta < 36\degree$
-## 11.3 $\gamma = \alpha$
+## 11.1 $\alpha=72\degree$
+## 11.2 $\beta<36\degree$
+## 11.3 $\gamma=\alpha$
 
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 12
@@ -159,7 +158,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 12
 > V tabulce je u každého druhu květin uvedena cena za jeden kus. Cena celé kytice se získá jako součet cen jednotlivých květin, z nichž byla kytice svázána.
 > 
 > |Druh květiny|Cena za kus|Počet kusů v kytici|
-> |:------:|:------:|:------:|
+> |--------|:------:|:------:|
 > |Růže       |54 korun||
 > |Chryzantéma|40 korun||
 > |Statice    |35 korun||
@@ -244,5 +243,3 @@ V jedné dvojici obdélníků má nižší obdélník 21 řad. V této dvojici u
 ## 16.2
 V jiné dvojici obdélníků má vyšší obdélník 110 sloupců. V této dvojici určete počet řad v nižším obdélníku.
 
-## 16.3
-..
