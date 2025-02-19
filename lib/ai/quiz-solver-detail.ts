@@ -11,11 +11,16 @@ const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Supe
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
-const modelName = "gpt-4o";
+const modelName = "o1-mini";
 
 export async function main() {
 
-  const client = new OpenAI({ baseURL: endpoint, apiKey: token });
+  const usePaidApi = false;
+  const client = usePaidApi ? new OpenAI({
+    organization: "org-u9Q9NxhzuntTO1rgjfl2Kkaq",
+    project: "proj_3AmxUiUlFDCV0xxQD5DteczY",
+  }) : new OpenAI({ baseURL: endpoint, apiKey: token });
+
 
   const storage = new QuizDetailAnswerFileSaver({ model: modelName });
   const quizTestCases = examTestCases
@@ -29,7 +34,7 @@ export async function main() {
       console.log(`${code} already exists. skipping ....`);
       continue;
     }
-    
+
 
     //load quiz questions
     const quizContent = await loadMarkdownWithAbsoluteImagesUrl(pathes);
@@ -50,7 +55,7 @@ export async function main() {
         model: modelName,
         messages: [
           {
-            role: "system", content: `You are an expert at ${subject === 'math' ? 'math' : subject === 'cz' ? 'czech language' : `${subject} language`}.
+            role: "user", content: `You are an expert at ${subject === 'math' ? 'math' : subject === 'cz' ? 'czech language' : `${subject} language`}.
             You will be given quiz with questions. The quiz format is markdown text in czech language.
             Output text should be in the czech language.`
           },
@@ -61,7 +66,7 @@ export async function main() {
           },
         ],
         temperature: 1.,
-        max_tokens: 2000,
+        max_completion_tokens: 5000,
         top_p: 1.
       });
       console.log(response);

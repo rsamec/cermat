@@ -123,7 +123,7 @@ export async function main() {
   }): new OpenAI({ baseURL: endpoint, apiKey: token });
 
   const storage = new QuizCategoriesFileSaver({ model: modelName });
-  let filtredQuizTestCase = examTestCases.filter(d => d.config.questions && (d.pathes[1] == 'cz' || d.pathes[1] == 'math') && !storage.containsKey(d.pathes[2]));
+  let filtredQuizTestCase = examTestCases.filter(d => d.config.questions && (d.pathes[0] == 'cz' || d.pathes[0] == 'math') && !storage.containsKey(d.pathes[2]));  
   console.log(filtredQuizTestCase.map(d => d.pathes));
   console.log(`Total tests: ${examTestCases.length}, filtred: ${filtredQuizTestCase.length}`);
   

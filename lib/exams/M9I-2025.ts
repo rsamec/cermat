@@ -1,11 +1,11 @@
 import { group, mathEquation, mathExpr, number, option, optionBool, rootGroup, selfEvaluateImage, task3Max4Points, threePoints, twoPoints } from "../utils/quiz-builder";
 
 const form = rootGroup({
-  code: 'XXX',
+  code: 'M9PND25C0T01',
   maxPoints: 50,
   questions: {
-    closed: 6,
-    opened: 10
+    closed: 5,
+    opened: 11
   }
 }, {
 

@@ -16,13 +16,13 @@ const markdownParser = parser.configure([[ShortCodeMarker], GFM, Subscript, Supe
 
 const token = process.env["GITHUB_TOKEN"];
 const endpoint = "https://models.inference.ai.azure.com";
-//const modelName = "gpt-4o-2024-08-06";
-const modelName = "gpt-4o-mini-2024-07-18";
+const modelName = "gpt-4o";
+//const modelName = "o1";
 
 const chunkSize = 6;
 export async function main() {
 
-  const usePaidApi = true;
+  const usePaidApi = false;
   //EXPORT OPENAI_API_KEY=
   const client = usePaidApi ? new OpenAI({
       organization: "org-u9Q9NxhzuntTO1rgjfl2Kkaq",
@@ -32,9 +32,9 @@ export async function main() {
   const storage = new QuizAnswerFileSaver({ model: modelName });
   
   let filtredQuizTestCase = examTestCases.filter(d => d.config.questions && !storage.containsKey(d.pathes[2]));
-  filtredQuizTestCase = filtredQuizTestCase.filter(d => d.pathes[0] == "math" && d.pathes[2] == "M9A-2024")
+  filtredQuizTestCase = filtredQuizTestCase.filter(d => d.pathes[0] == "cz")
 
-  console.log(filtredQuizTestCase.map(d => d.pathes[1] == "math2"));
+  console.log(filtredQuizTestCase.map(d => d.pathes[1] == "math"));
   console.log(`Total tests: ${examTestCases.length}, filtred: ${filtredQuizTestCase.length}`);  
   const { dispatch } = store;
 
@@ -80,7 +80,7 @@ export async function main() {
         model: modelName,
         messages: [
           {
-            role: "system", content: `You are an expert at ${subject === 'math' ? 'math' : subject === 'cz' ? 'czech language' : `${subject} language`}.
+            role: "user", content: `You are an expert at ${subject === 'math' ? 'math' : subject === 'cz' ? 'czech language' : `${subject} language`}.
             You will be given quiz with questions. The quiz format is markdown text.
             Each question is identified by markdown headings. Some question can have sub questions.
             - # heading is root questions - question id is identified by format # {number}
@@ -97,7 +97,7 @@ export async function main() {
         //{ "type": "json_object" }
         ,
         temperature: 1.,
-        max_tokens: 2000,
+        max_completion_tokens: 2000,
         top_p: 1.
       });
       console.log(response);
