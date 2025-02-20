@@ -66,9 +66,8 @@ VÝCHOZÍ TEXT K ÚLOZE 6
 ===
 
 > Zahradník sázel na záhon sazenice. Sazenice salátů zasadil o 4 více než sazenic okurek.\
-> Na záhoně čtvrtinu sazenic salátů zlikvidovali slimáci a šestina sazenic okurek uschla.\ 
+> Na záhoně čtvrtinu sazenic salátů zlikvidovali slimáci a šestina sazenic okurek uschla.\
 > Všechny ostatní sazenice se ujaly. Na záhoně se tak ujal stejný počet sazenic salátů a okurek.
->
 
 # 6 Určete,
 

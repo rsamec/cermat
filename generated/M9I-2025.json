@@ -117,7 +117,7 @@
         "5.1": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "x=0"
+            "args": "y=0"
           },
           "points": 2,
           "inputBy": {
@@ -130,7 +130,7 @@
         "5.2": {
           "verifyBy": {
             "kind": "equalMathEquation",
-            "args": "y=2"
+            "args": "x=-1/6, y=2"
           },
           "points": 2,
           "inputBy": {
@@ -183,7 +183,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "gramů"
+              "suffix": "g"
             }
           }
         },
@@ -196,7 +196,7 @@
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "gramů"
+              "suffix": "g"
             }
           }
         },
@@ -210,7 +210,7 @@
             "kind": "number",
             "args": {
               "prefix": "o",
-              "suffix": "gramů"
+              "suffix": "g"
             }
           }
         }

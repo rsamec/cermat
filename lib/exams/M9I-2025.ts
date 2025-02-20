@@ -24,17 +24,17 @@ const form = rootGroup({
     4.3: mathExpr('(3a-11)^2', { hintType: 'expression' }, twoPoints),
   }),
   5: group({
-    5.1: mathEquation('x=0', { hintType: 'equation' }, twoPoints),
-    5.2: mathEquation('y=2', { hintType: 'equation' }, twoPoints),
+    5.1: mathEquation('y=0', { hintType: 'equation' }, twoPoints),
+    5.2: mathEquation('x=-1/6, y=2', { hintType: 'equation' }, twoPoints),
   }),
   6: group({
     6.1: number(40, { suffix: 'sazenic salátů' }),
     6.2: number(30, { suffix: 'sazenic okurek' }, twoPoints),
   }),
   7: group({
-    7.1: number(760, { suffix: 'gramů' }),
-    7.2: number(56, { suffix: 'gramů' }),
-    7.3: number(88, { prefix: 'o', suffix: 'gramů' }, twoPoints),
+    7.1: number(760, { suffix: 'g' }),
+    7.2: number(56, { suffix: 'g' }),
+    7.3: number(88, { prefix: 'o', suffix: 'g' }, twoPoints),
   }),
   8: group({
     8.1: number(84, { suffix: 'cm' }),
