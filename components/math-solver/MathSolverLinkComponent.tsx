@@ -18,7 +18,7 @@ const MathSolverLinkComponent: React.FC<Props> = ({ className, children }) => {
     if (!latexExp) {
       return;
     }
-    const hrefWithQuery = `${baseUrl}/?q=${encodeURIComponent(latexExp)}`  
+    const hrefWithQuery = `${baseUrl}/?q=${encodeURIComponent(latexExp.replace(/\{,\}/g,"."))}`
     window.open(hrefWithQuery,'_blank')
   }
 

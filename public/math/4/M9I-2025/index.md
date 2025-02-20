@@ -57,7 +57,7 @@ $$
 $$
 \begin{aligned}
 3x+\frac{3}{4}y = 1\\
-3{,}5y+3x = 6{,}5
+3,5y+3x = 6,5
 \end{aligned}
 $$
 
