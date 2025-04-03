@@ -40,7 +40,7 @@ const form = rootGroup({
   8: group({
     8.1: mathExpr("0.75a", { hintType: 'expression', hint: 'Odpověď zapište s proměnnou a.' }),
     8.2: number(40, { prefix: 'a = ', suffix: 'm' }, twoPoints),
-    8.3: number(10, { prefix: 'o', suffix: 'm^2^' }),
+    8.3: number(100, { prefix: 'o', suffix: 'm^2^' }),
   }),
   9: selfEvaluateImage( "9-result.jpeg",twoPoints),
   10: selfEvaluateImage( "10-result.jpeg",threePoints),

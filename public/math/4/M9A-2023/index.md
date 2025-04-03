@@ -205,6 +205,8 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 ===
 
 > V rovině leží čtyři přímky, z nichž dvě jsou rovnoběžné.
+>
+>![alt text](image.png)
 
 # 14 Jaká je velikost úhlu 𝛽? Velikosti úhlů neměřte, ale vypočtěte.
 

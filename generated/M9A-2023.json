@@ -267,7 +267,7 @@
         "8.3": {
           "verifyBy": {
             "kind": "equal",
-            "args": 10
+            "args": 100
           },
           "points": 1,
           "inputBy": {
