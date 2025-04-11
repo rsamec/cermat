@@ -22,12 +22,12 @@ $$
 ## 3.2 
 Upravte na co nejjednodušší tvar bez závorek: 
 $$
-2−(𝑛+2)⋅(−𝑛)+(3−𝑛)⋅(𝑛+1)= 
+2-(n+2)\cdot(-n)+(3-n)\cdot(n+1)=
 $$
 
 ## 3.3 Upravte a výsledný výraz rozložte na součin pomocí vzorce: 
 $$
-𝑥⋅(18−𝑥)+9⋅(16−2𝑥)= 
+x\cdot(18-x)+9\cdot(16-2x)=
 $$
 
 # 4 Řešte rovnici: 
@@ -37,7 +37,7 @@ $$
 $$ 
 ## 4.2 
 $$ 
-y-(y+5)\cdot0{,}1=0{,}9y+0{,}5 
+y-(y+5)\cdot0{,}1=0{,}9y+0{,}5
 $$
 
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 5 
