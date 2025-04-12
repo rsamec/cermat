@@ -137,7 +137,6 @@ tohoto trojúhelníku.
 **Sestrojte** vrchol A trojúhelníku *ABC*, **označte** ho písmenem a trojúhelník **narýsujte**. 
 V záznamovém archu obtáhněte celou konstrukci propisovací tužkou (čáry i písmena). 
  
-# 9 
 VÝCHOZÍ TEXT A OBRÁZKY K ÚLOZE 11 
 ===
 
