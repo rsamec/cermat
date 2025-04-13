@@ -84,7 +84,7 @@ export function normalizeString(obj: object) {
   return  isString(obj)? obj.replace(/\s+/g, '').toLowerCase():obj;
 }
 export function areDeeplyEqual(obj1: any, obj2: any): boolean {
-  if (obj1 === obj2) return true;
+  if (obj1 === obj2 || (typeof obj1 === "number" && obj1 == obj2) || (typeof obj2 === "number" && obj2 == obj1) ) return true;
   if (normalizeString(obj1) === normalizeString(obj2)) return true;
 
   if (Array.isArray(obj1) && Array.isArray(obj2)) {

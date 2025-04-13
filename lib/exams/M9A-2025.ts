@@ -9,7 +9,7 @@ const form = rootGroup({
   }
 }, {
 
-  1: number(8),
+  1: number(2.5),
   2: group({
     2.1: mathExpr("1/4", { hintType: 'fraction' }),
     2.2: mathExpr("1/2", { hintType: 'fraction' }, twoPoints),
@@ -20,11 +20,11 @@ const form = rootGroup({
       b: 81
     }),
     3.2: mathExpr('4n+5', { hintType: 'expression' }),
-    3.3: mathExpr('(12+x)(12-x)', { hintType: 'expression' }, twoPoints),
+    3.3: mathExpr('(12-x)(12+x)', { hintType: 'expression' }, twoPoints),
   }),
   4: group({
-    4.1: mathEquation('x=20)', { hintType: 'equation' }, twoPoints),
-    4.2: mathEquation('0=10', { hintType: 'equation' }, twoPoints),
+    4.1: number(20, { prefix: "x=" }, twoPoints),
+    4.2: mathEquation(false, { hintType: 'equation' }, twoPoints),
   }),
   5: group({
     5.1: number(12, { suffix: 'm' }, twoPoints),

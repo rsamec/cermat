@@ -1,0 +1,4738 @@
+{
+  "M5A-2024": {
+    "2": 9,
+    "3": 7,
+    "9": {
+      "value": "B"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": {
+      "value": "D"
+    },
+    "1.1": 591,
+    "1.2": 1,
+    "4.1": 13,
+    "4.2": 269,
+    "4.3": 50,
+    "5.1": 4800,
+    "5.2": 240,
+    "6.1": {
+      "X": "11",
+      "Y": "143"
+    },
+    "6.2": "0",
+    "7.1": "Vrchol B se sestrojí jako obraz bodu A souměrně vůči středu S.",
+    "7.2": "Konstrukce vede k dvěma variantám – buď s bodem Q jako středem strany BC, nebo s bodem Q jako středem strany AD; podle zvolené varianty se pak sestrojí vrcholy C a D a obdélník ABCD.",
+    "8.1": {
+      "value": false
+    },
+    "8.2": {
+      "value": true
+    },
+    "8.3": {
+      "value": false
+    },
+    "12.1": {
+      "value": "A"
+    },
+    "12.2": {
+      "value": "B"
+    },
+    "12.3": {
+      "value": "D"
+    },
+    "13.1": {
+      "value": "E"
+    },
+    "13.2": {
+      "value": "C"
+    },
+    "13.3": {
+      "value": "A"
+    },
+    "14.1": 12,
+    "14.2": 196,
+    "14.3": 18
+  },
+  "M5A-2023": {
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "B"
+    },
+    "11": {
+      "value": "C"
+    },
+    "12": {
+      "value": "D"
+    },
+    "1.1": 710,
+    "1.2": 126,
+    "2.1": 2,
+    "2.2": 60,
+    "3.1": 120,
+    "3.2": 17,
+    "3.3": 136,
+    "4.1": 27,
+    "4.2": 54,
+    "4.3": 520,
+    "5.1": 7,
+    "5.2": 18,
+    "6.1": 2,
+    "6.2": 900,
+    "7.1": "Existují dvě konstrukční možnosti trojúhelníku, jež splňují podmínky: s vrcholy A na přímce a, B na přímce b, přičemž strana AC procházející bodem C je rovnoběžná s přímkou b a přitom platí AB = AC.",
+    "7.2": "K obdélníku KLMN se dvěma možnými konstrukcemi – při volbě, kterou ze zbývajících stran protnout s přímkou p (vedoucí středem strany KL i středem protilehlé strany), získáme obě řešení.",
+    "8.1": {
+      "value": true
+    },
+    "8.2": {
+      "value": true
+    },
+    "8.3": {
+      "value": false
+    },
+    "13.1": {
+      "value": "C"
+    },
+    "13.2": {
+      "value": "D"
+    },
+    "13.3": {
+      "value": "F"
+    },
+    "14.1": 20,
+    "14.2": 6,
+    "14.3": 24
+  },
+  "M7A-2024": {
+    "4": "1/3",
+    "6": 61,
+    "7": 12,
+    "8": "Zvolte libovolný úsek AB. Sestrojte na přímce p kolmici v bodě A a určete bod D tak, aby AD = AB. Na úseku AB označte bod B a na polopřímce vycházející z B určete bod C tak, aby délka BC byla rovna polovině délky AB. Poté proložte čáry spojující vrcholy a získáte pravoúhlý lichoběžník ABCD splňující zadané podmínky.",
+    "9": "Na polopřímce BX vyberte libovolný bod A. Sestrojte osovou přímku o ke straně BC tak, aby s danou polopřímkou BX vycházela symetrická poloha. Poté určete bod C na této přímce, který spolu s bodem A vytvoří základnu AC rovnoramenného trojúhelníku s vrcholem B. Konstrukce je jednoznačná danými podmínkami.",
+    "11": {
+      "value": "E"
+    },
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "D"
+    },
+    "14": {
+      "value": "C"
+    },
+    "1.1": 7,
+    "1.2": 0.782,
+    "2.1": "1/7",
+    "2.2": "9/10",
+    "3.1": 4.55,
+    "3.2": 2.5,
+    "3.3": -1.05,
+    "5.1": 285,
+    "5.2": 57,
+    "10.1": {
+      "value": false
+    },
+    "10.2": {
+      "value": true
+    },
+    "10.3": {
+      "value": true
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "B"
+    },
+    "15.3": {
+      "value": "A"
+    },
+    "16.1": 7200,
+    "16.2": 31500
+  },
+  "M7A-2023": {
+    "1": 14,
+    "8": "Dvě řešení",
+    "9": "Dvě řešení",
+    "11": {
+      "value": "D"
+    },
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "E"
+    },
+    "14": {
+      "value": "A"
+    },
+    "2.1": "-1/5",
+    "2.2": "2/15",
+    "3.1": 120,
+    "3.2": 17,
+    "3.3": 136,
+    "4.1": 19,
+    "4.2": "2:3",
+    "5.1": 54,
+    "5.2": 520,
+    "6.1": 2,
+    "6.2": 900,
+    "7.1": 12,
+    "7.2": 18,
+    "7.3": 24,
+    "10.1": {
+      "value": true
+    },
+    "10.2": {
+      "value": true
+    },
+    "10.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "C"
+    },
+    "15.2": {
+      "value": "D"
+    },
+    "15.3": {
+      "value": "B"
+    },
+    "16.1": 18,
+    "16.2": 8,
+    "16.3": 23
+  },
+  "M9I-2025": {
+    "1": 1980,
+    "9": "Sestrojte střed S jako střed souměrnosti trojúhelníků a proveďte symetrické zobrazení bodů B a C do bodů B' a C' podle zadání.",
+    "10": "Konstrukci proveďte podle zadání; existují dvě geometricky odlišná řešení, přičemž vrchol D leží na přímce PX.",
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "A"
+    },
+    "14": {
+      "value": "C"
+    },
+    "2.1": 0.36,
+    "2.2": 2,
+    "3.1": "7/20",
+    "3.2": "5/4",
+    "4.1": "4y^2",
+    "4.2": "n^2+9",
+    "4.3": "(3a-11)^2",
+    "5.1": "y=0",
+    "5.2": "x=-1/6, y=2",
+    "6.1": 40,
+    "6.2": 30,
+    "7.1": 760,
+    "7.2": 56,
+    "7.3": 88,
+    "8.1": 108,
+    "8.2": 432,
+    "11.1": {
+      "value": true
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "C"
+    },
+    "15.2": {
+      "value": "E"
+    },
+    "15.3": {
+      "value": "D"
+    },
+    "16.1": 20,
+    "16.2": 111
+  },
+  "M9A-2024": {
+    "1": 45,
+    "2": 3140,
+    "9": "Sestrojte konstrukci dle zadání.",
+    "10": "Sestrojte konstrukci dle zadání.",
+    "11": {
+      "value": "C"
+    },
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "A"
+    },
+    "14": {
+      "value": "D"
+    },
+    "3.1": "13/3",
+    "3.2": "-1/3",
+    "4.1": "9a^2/16",
+    "4.2": "(3a-4)(3a+4)",
+    "4.3": "10(c-1)",
+    "5.1": "-11/10",
+    "5.2": "3/2",
+    "6.1": 306,
+    "6.2": 15,
+    "7.1": 8,
+    "7.2": 26,
+    "8.1": 314,
+    "8.2": 64,
+    "15.1": {
+      "value": false
+    },
+    "15.2": {
+      "value": true
+    },
+    "15.3": {
+      "value": false
+    },
+    "16.1": {
+      "value": "A"
+    },
+    "16.2": {
+      "value": "C"
+    },
+    "16.3": {
+      "value": "E"
+    }
+  },
+  "M9B-2024": {
+    "1": 1.5,
+    "2": 40,
+    "9": "Kosočtverec ABCD je sestrojen dle zadání.",
+    "10": "Rovnoramenný trojúhelník KLM je sestrojen se všemi řešeními podle zadání.",
+    "11": {
+      "value": "B"
+    },
+    "12": {
+      "value": "C"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "D"
+    },
+    "3.1": "-10/9",
+    "3.2": "-70/9",
+    "4.1": "4x^2+12x+9",
+    "4.2": "(100-x)(100+x)",
+    "4.3": "3(x+7)",
+    "5.1": "-1",
+    "5.2": "3",
+    "6.1": 96,
+    "6.2": 50,
+    "7.1": "3x/2",
+    "7.2": 58,
+    "8.1": 64,
+    "8.2": 20,
+    "15.1": {
+      "value": false
+    },
+    "15.2": {
+      "value": true
+    },
+    "15.3": {
+      "value": false
+    },
+    "16.1": {
+      "value": "D"
+    },
+    "16.2": {
+      "value": "C"
+    },
+    "16.3": {
+      "value": "B"
+    }
+  },
+  "M9C-2024": {
+    "1": 35100,
+    "2": 5,
+    "9": "Konstrukce lichoběžníku ABCD se zbývajícími vrcholy B, C a D byla provedena podle zadání.",
+    "10": "Lichoběžník ABCD byl sestrojen dle zadaných podmínek.",
+    "11": {
+      "value": "C"
+    },
+    "12": {
+      "value": "C"
+    },
+    "13": {
+      "value": "D"
+    },
+    "14": {
+      "value": "E"
+    },
+    "3.1": "21/2",
+    "3.2": "-16/5",
+    "4.1": "64b^2/9",
+    "4.2": "(2-x)(2+x)",
+    "4.3": "c+49",
+    "5.1": "9",
+    "5.2": "2",
+    "6.1": 8,
+    "6.2": 88,
+    "7.1": 6,
+    "7.2": 2,
+    "8.1": 78,
+    "8.2": 2,
+    "15.1": {
+      "value": true
+    },
+    "15.2": {
+      "value": false
+    },
+    "15.3": {
+      "value": true
+    },
+    "16.1": {
+      "value": "E"
+    },
+    "16.2": {
+      "value": "D"
+    },
+    "16.3": {
+      "value": "B"
+    }
+  },
+  "M9D-2024": {
+    "1": 900,
+    "2": 35,
+    "9": "Konstrukčně sestrojitelná řešení obdélníku ABCD podle daných podmínek (konstrukce s vyznačeným bodem A, středem S a vrcholem D na přímce p).",
+    "10": "Konstrukčně sestrojitelná řešení pravoúhlého trojúhelníku ABC se středem S strany BC a se stranou AB rovnoběžnou s přímkou p.",
+    "11": {
+      "value": "A"
+    },
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "C"
+    },
+    "14": {
+      "value": "D"
+    },
+    "3.1": "1/3",
+    "3.2": "-1/30",
+    "4.1": "a*(5a-12)",
+    "4.2": "16b^2-8b/3+1/9",
+    "4.3": "14x+5",
+    "5.1": "x=18",
+    "5.2": "x=2",
+    "6.1": 4,
+    "6.2": 120,
+    "7.1": 280,
+    "7.2": 300,
+    "8.1": 8,
+    "8.2": 30,
+    "15.1": {
+      "value": true
+    },
+    "15.2": {
+      "value": false
+    },
+    "15.3": {
+      "value": true
+    },
+    "16.1": {
+      "value": "D"
+    },
+    "16.2": {
+      "value": "A"
+    },
+    "16.3": {
+      "value": "E"
+    }
+  },
+  "M9A-2023": {
+    "1": 20,
+    "9": "Konstrukce provedena dle zadání",
+    "10": "Konstrukce provedena dle zadání, přičemž jsou nalezena všechna řešení",
+    "12": {
+      "value": "C"
+    },
+    "13": {
+      "value": "D"
+    },
+    "14": {
+      "value": "B"
+    },
+    "2.1": 1.2,
+    "2.2": 1600000,
+    "3.1": "4/9",
+    "3.2": "-2/7",
+    "3.3": "5/14",
+    "4.1": "x(2x-1)",
+    "4.2": "4/9a^2-4a+9",
+    "4.3": "n^2+19n+7",
+    "5.1": "no solution",
+    "5.2": "y=-10",
+    "6.1": 84,
+    "6.2": 140,
+    "7.1": 40,
+    "7.2": 21,
+    "7.3": "1:2",
+    "8.1": "3/4*a",
+    "8.2": 40,
+    "8.3": 100,
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "C"
+    },
+    "15.3": {
+      "value": "A"
+    },
+    "16.1": 81,
+    "16.2": 364,
+    "16.3": 19683
+  },
+  "M9B-2023": {
+    "1": -4,
+    "9": "Konstrukce provedena v záznamovém archu podle zadání.",
+    "10": "Konstrukce provedena v záznamovém archu se všemi řešeními.",
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "C"
+    },
+    "14": {
+      "value": "A"
+    },
+    "2.1": 2.5,
+    "2.2": 300,
+    "3.1": "-13/18",
+    "3.2": "7/10",
+    "3.3": "Nejprve spočítáme součet 2/3 + 2/7 = (14+6)/21 = 20/21. Dále sečteme 9/14 + 3/2 = 9/14 + 21/14 = 30/14 = 15/7 a vynásobíme ho 2: (15/7)*2 = 30/7. Výraz se pak získá jako (20/21) děleno (30/7) = (20/21)*(7/30) = 140/630, což se zkrátí na 2/9.",
+    "4.1": "y*(x-6)",
+    "4.2": "3a+4",
+    "4.3": "Nejprve rozepíšeme (3n+2)^2 = 9n^2 + 12n + 4, dále spočítáme n*(3n+4) = 3n^2 + 4n a (2n-n)*n = n^2. Poté odečteme: 9n^2 + 12n + 4 - 3n^2 - 4n + n^2 = 7n^2 + 8n + 4.",
+    "5.1": "Nejprve rozebereme levou stranu: 2 + 0.5*(x-3) = 2 + 0.5x - 1.5 = 0.5x + 0.5. Pravá strana: 0.4*(1.5x+2) = 0.6x + 0.8. Poté rovnici 0.5x + 0.5 = 0.6x + 0.8 přepíšeme: 0.5 = 0.1x + 0.8, což vede k 0.1x = -0.3 a tedy x = -3.",
+    "5.2": "Nejprve zjednodušíme levou stranu: 3*(2y-1)/6 = (2y-1)/2. Pravá strana se upraví na: (3y+2)/8 + (3/4)*(y-1)/6 = (3y+2)/8 + (y-1)/8 = (4y+1)/8. Nyní máme rovnici (2y-1)/2 = (4y+1)/8. Obě strany vynásobíme osmi, což dává 4*(2y-1) = 4y+1, tedy 8y - 4 = 4y + 1. Odečtením 4y obou stran získáme 4y - 4 = 1, což vede k 4y = 5 a tedy y = 5/4.",
+    "6.1": 25,
+    "6.2": 8,
+    "6.3": 18,
+    "7.1": "x/2",
+    "7.2": "5x/4",
+    "7.3": 20,
+    "8.1": 24,
+    "8.2": 3140,
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": true
+    },
+    "15.1": {
+      "value": "D"
+    },
+    "15.2": {
+      "value": "C"
+    },
+    "15.3": {
+      "value": "B"
+    },
+    "16.1": 32,
+    "16.2": 19,
+    "16.3": [
+      361,
+      441
+    ]
+  },
+  "M9C-2023": {
+    "1": 7,
+    "9": "Konstrukce: Ze zadané úsečky AB sestrojte kružnici se středem A a poloměrem AB. Její průsečíky s přímkou p procházející bodem B určují možnou umístění vrcholu C. Pro každý výběr C pak sestrojte v pravém úhlu k AB přímku procházející A a její posun, aby byl vytvořen lichoběžník ABCD splňující podmínku, že úhlopříčka AC má délku AB. Výsledkem jsou dvě různá řešení.",
+    "12": {
+      "value": "C"
+    },
+    "13": {
+      "value": "D"
+    },
+    "14": {
+      "value": "B"
+    },
+    "2.1": -3,
+    "2.2": 0.5,
+    "3.1": "4/7",
+    "3.2": "-2/5",
+    "3.3": "5/8",
+    "4.1": "(2a-3)(2a+3)",
+    "4.2": "-1/2",
+    "4.3": "-3*(4n-3)",
+    "5.1": "-2.5",
+    "5.2": "3/10",
+    "6.1": "x/3-60",
+    "6.2": 900,
+    "7.1": 5,
+    "7.2": 940,
+    "8.1": 152,
+    "8.2": 750,
+    "10.1": "Osou souměrnosti trojúhelníku ABC je kolmice na základnu AC procházející jejím středem. Sestročení této osy (označené písmenem o) realizujeme jako kolmá bisektrice úsečky AC.",
+    "10.2": "Vrchol B se určí jako průsečík přímky p s osou souměrnosti (kolmou bisektricí úsečky AC) tak, aby trojúhelník ABC byl rovnoramenný se základem AC.",
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "A"
+    },
+    "15.3": {
+      "value": "B"
+    },
+    "16.1": 380,
+    "16.2": 39,
+    "16.3": 207
+  },
+  "M9D-2023": {
+    "1": 900,
+    "9": "Konstrukčně lze vyjádřit všechny čtverce splňující podmínky – řešení není jedinečné, záleží na volbě umístění bodů.",
+    "10": "Konstrukce trojúhelníku vede ke dvěma odlišným řešením.",
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "E"
+    },
+    "14": {
+      "value": "B"
+    },
+    "2.1": 30,
+    "2.2": 20,
+    "3.1": "-3/8",
+    "3.2": "-7/6",
+    "3.3": "1/8",
+    "4.1": "0.09x^2+0.3x+0.25",
+    "4.2": "(7-4a)(7+4a)",
+    "4.3": "7n^2+5n+1",
+    "5.1": "x=4",
+    "5.2": "y=-9",
+    "6.1": "4/3p",
+    "6.2": "8/5p",
+    "6.3": 150,
+    "7.1": 21,
+    "7.2": 20,
+    "8.1": [
+      3,
+      7
+    ],
+    "8.2": [
+      4,
+      6
+    ],
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "E"
+    },
+    "15.2": {
+      "value": "B"
+    },
+    "15.3": {
+      "value": "D"
+    },
+    "16.1": 45,
+    "16.2": 33,
+    "16.3": 900
+  },
+  "MMA-2023": {
+    "1": 25,
+    "2": 424,
+    "3": "-1/(x-2)",
+    "4": "$x\\approx-4.445$",
+    "5": "$x=0,\\;y=\\frac{5}{2}$",
+    "6": "$k=0$",
+    "7": "x = -8/3",
+    "9": "$P = (0, -\\frac{1}{2})$",
+    "10": "$x = \\frac{4\\pi}{3}$",
+    "11": 2,
+    "12": 1.6,
+    "14": 57,
+    "16": {
+      "value": "B"
+    },
+    "17": {
+      "value": "E"
+    },
+    "18": {
+      "value": "B"
+    },
+    "19": {
+      "value": "C"
+    },
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "C"
+    },
+    "23": {
+      "value": "A"
+    },
+    "24": {
+      "value": "E"
+    },
+    "8.1": "$S = (2, -4)$",
+    "8.2": "$f(x) = -\\frac{5}{7}x - \\frac{18}{7}$",
+    "13.1": 4.6,
+    "13.2": 8.3,
+    "15.1": {
+      "value": true
+    },
+    "15.2": {
+      "value": false
+    },
+    "15.3": {
+      "value": false
+    },
+    "25.1": {
+      "value": "D"
+    },
+    "25.2": {
+      "value": "C"
+    }
+  },
+  "MMB-2023": {
+    "1": 22,
+    "2": "a = -3c/(b^2+2)",
+    "3": "2/x",
+    "4": "x = 2, -1",
+    "6": "x = 3/2",
+    "8": "(-∞;-6]",
+    "9": 3,
+    "11": "10 - 10t",
+    "12": "(0;1)",
+    "14": 1040,
+    "16": {
+      "value": "A"
+    },
+    "17": {
+      "value": "C"
+    },
+    "18": {
+      "value": "D"
+    },
+    "19": {
+      "value": "B"
+    },
+    "20": {
+      "value": "D"
+    },
+    "21": {
+      "value": "B"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "A"
+    },
+    "24": {
+      "value": "C"
+    },
+    "5.1": "64^{n+1/2}",
+    "5.2": "5^{3}",
+    "7.1": "1/4",
+    "7.2": "Graf funkce g: y = (1/2)^x, kde body A(-2;4) a B(2;1/4) leží na křivce.",
+    "10.1": 2.8,
+    "10.2": "40*(7-x)/100",
+    "13.1": "20",
+    "13.2": "100",
+    "15.1": {
+      "value": false
+    },
+    "15.2": {
+      "value": true
+    },
+    "15.3": {
+      "value": true
+    },
+    "25.1": {
+      "value": "D"
+    },
+    "25.2": {
+      "value": "E"
+    }
+  },
+  "C5A-2023": {
+    "1": {
+      "value": "A"
+    },
+    "2": {
+      "value": "A"
+    },
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "B"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": {
+      "value": "A"
+    },
+    "12": {
+      "value": "C"
+    },
+    "13": {
+      "value": "A"
+    },
+    "14": "Silný stát vítězí vždy.",
+    "15": [
+      "C",
+      "A",
+      "B",
+      "D",
+      "E",
+      "F"
+    ],
+    "17": [
+      "čistota",
+      "důsledek",
+      "plavání"
+    ],
+    "18": [
+      "připravil",
+      "vyzvídat",
+      "autogramy",
+      "nejúžasnější"
+    ],
+    "20": [
+      "kukátku",
+      "Norbridgovi",
+      "dohodě"
+    ],
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "C"
+    },
+    "24": {
+      "value": "C"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": {
+      "value": "A"
+    },
+    "5.1": {
+      "value": true
+    },
+    "5.2": {
+      "value": false
+    },
+    "5.3": {
+      "value": false
+    },
+    "5.4": {
+      "value": true
+    },
+    "6.1": {
+      "value": "E"
+    },
+    "6.2": {
+      "value": "B"
+    },
+    "6.3": {
+      "value": "E"
+    },
+    "7.1": {
+      "podmět": "vzácné kousky",
+      "přísudek": "objeví"
+    },
+    "7.2": {
+      "podmět": "Loňské silné deště a s nimi související záplavy",
+      "přísudek": "zničily"
+    },
+    "8.1": {
+      "value": false
+    },
+    "8.2": {
+      "value": false
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "16.1": "Až skončí trénink, půjdeme do parku.",
+    "16.2": "Rozhodl jsem se napsat román.",
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": false
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": true
+    },
+    "23.1": {
+      "value": true
+    },
+    "23.2": {
+      "value": false
+    },
+    "23.3": {
+      "value": false
+    },
+    "23.4": {
+      "value": true
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "28.1": {
+      "value": "A"
+    },
+    "28.2": {
+      "value": "D"
+    },
+    "28.3": {
+      "value": "E"
+    },
+    "28.4": {
+      "value": "F"
+    }
+  },
+  "C5B-2023": {
+    "1": {
+      "value": "B"
+    },
+    "2": {
+      "value": "D"
+    },
+    "3": {
+      "value": "D"
+    },
+    "4": {
+      "value": "A"
+    },
+    "8": {
+      "value": "A"
+    },
+    "9": {
+      "value": "B"
+    },
+    "11": {
+      "value": "C"
+    },
+    "12": {
+      "value": "A"
+    },
+    "13": {
+      "value": "A"
+    },
+    "14": [
+      "F",
+      "E",
+      "B",
+      "D",
+      "A",
+      "C"
+    ],
+    "16": [
+      "taxi",
+      "menu",
+      "filé"
+    ],
+    "17": [
+      "dědovi",
+      "mávaním",
+      "tohoto",
+      "drakoleti"
+    ],
+    "19": [
+      "drakem",
+      "křídly",
+      "máváním"
+    ],
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "D"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": [
+      "Placení zlepšuje náš život."
+    ],
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "B"
+    },
+    "5.1": {
+      "value": true
+    },
+    "5.2": {
+      "value": true
+    },
+    "5.3": {
+      "value": true
+    },
+    "5.4": {
+      "value": true
+    },
+    "6.1": {
+      "value": "C"
+    },
+    "6.2": {
+      "value": "B"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "podmět": "mí spolužáci, ale i naši učitelé",
+      "přísudek": "se obávali"
+    },
+    "7.2": {
+      "podmět": "dřívější příjezd rodičů z letní dovolené",
+      "přísudek": "by zaskočil"
+    },
+    "10.1": {
+      "value": false
+    },
+    "10.2": {
+      "value": false
+    },
+    "10.3": {
+      "value": true
+    },
+    "10.4": {
+      "value": false
+    },
+    "15.1": "Sejdeme se s trenérem, a to před začátkem závodu.",
+    "15.2": "Silnice vedoucí lesem je neprůjezdná.",
+    "18.1": {
+      "value": false
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": false
+    },
+    "22.1": {
+      "value": false
+    },
+    "22.2": {
+      "value": false
+    },
+    "22.3": {
+      "value": false
+    },
+    "22.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": true
+    },
+    "25.4": {
+      "value": false
+    },
+    "28.1": {
+      "value": "D"
+    },
+    "28.2": {
+      "value": "F"
+    },
+    "28.3": {
+      "value": "E"
+    },
+    "28.4": {
+      "value": "C"
+    }
+  },
+  "C7A-2024": {
+    "1": {
+      "value": "B"
+    },
+    "2": {
+      "value": "A"
+    },
+    "3": {
+      "value": "D"
+    },
+    "4": {
+      "value": "D"
+    },
+    "5": {
+      "value": "C"
+    },
+    "8": {
+      "value": "A"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "B"
+    },
+    "14": [
+      "E",
+      "B",
+      "A",
+      "D",
+      "C",
+      "F"
+    ],
+    "16": [
+      "4",
+      "7",
+      "11"
+    ],
+    "17": [
+      "nevydařený",
+      "dvoumetroví",
+      "městě",
+      "Minhově"
+    ],
+    "19": {
+      "value": "B"
+    },
+    "20": {
+      "value": "D"
+    },
+    "22": [
+      "uprostřed",
+      "vedle",
+      "mezi"
+    ],
+    "23": {
+      "value": "B"
+    },
+    "24": {
+      "value": "D"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": {
+      "value": "B"
+    },
+    "6.1": {
+      "value": "D"
+    },
+    "6.2": {
+      "value": "B"
+    },
+    "6.3": {
+      "value": "E"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": true
+    },
+    "7.3": {
+      "value": true
+    },
+    "7.4": {
+      "value": true
+    },
+    "11.1": "lhář",
+    "11.2": "zaměstnání",
+    "12.1": {
+      "value": true
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": true
+    },
+    "12.4": {
+      "value": false
+    },
+    "13.1": {
+      "podmet": "dálkový autobus",
+      "prisudek": "nenabral"
+    },
+    "13.2": {
+      "podmet": "ochota naslouchat a schopnost efektivně řešit různé problémy",
+      "prisudek": "patří"
+    },
+    "15.1": "On naléhal, ale ona nabídku odmítla.",
+    "15.2": "Zakázal mi sbírat houby.",
+    "18.1": {
+      "value": false
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": false
+    },
+    "21.1": {
+      "value": true
+    },
+    "21.2": {
+      "value": false
+    },
+    "21.3": {
+      "value": false
+    },
+    "21.4": {
+      "value": true
+    },
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "28.1": {
+      "value": "A"
+    },
+    "28.2": {
+      "value": "D"
+    },
+    "28.3": {
+      "value": "F"
+    },
+    "28.4": {
+      "value": "C"
+    }
+  },
+  "C7A-2023": {
+    "1": {
+      "value": "C"
+    },
+    "2": {
+      "value": "A"
+    },
+    "3": {
+      "value": "A"
+    },
+    "4": "Ten kout je chladný.",
+    "6": {
+      "value": "D"
+    },
+    "7": {
+      "value": "C"
+    },
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "A"
+    },
+    "11": {
+      "value": "B"
+    },
+    "12": {
+      "value": "A"
+    },
+    "15": [
+      "C",
+      "D",
+      "F",
+      "E",
+      "A",
+      "B"
+    ],
+    "17": [
+      "podpatek",
+      "bezdomovec",
+      "předsíň"
+    ],
+    "18": [
+      "skutečné",
+      "zpočátku",
+      "autogramy",
+      "nejúžasnější"
+    ],
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "D"
+    },
+    "23": [
+      "úpatí",
+      "člunu",
+      "oknu"
+    ],
+    "24": {
+      "value": "C"
+    },
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "D"
+    },
+    "5.1": {
+      "value": "E"
+    },
+    "5.2": {
+      "value": "A"
+    },
+    "5.3": {
+      "value": "B"
+    },
+    "8.1": {
+      "value": true
+    },
+    "8.2": {
+      "value": true
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "13.1": {
+      "value": false
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": false
+    },
+    "13.4": {
+      "value": false
+    },
+    "14.1": {
+      "podmet": "Návštěva divadelního představení",
+      "prisudek": "je považována"
+    },
+    "14.2": {
+      "podmet": "Její včerejší ne",
+      "prisudek": "zahřálo"
+    },
+    "16.1": "Učitelka informovala rodiče, že jsem se nevhodně choval.",
+    "16.2": "Parkoval na místě určeném jen pro zákazníky.",
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "22.1": {
+      "value": true
+    },
+    "22.2": {
+      "value": true
+    },
+    "22.3": {
+      "value": false
+    },
+    "22.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": true
+    },
+    "25.4": {
+      "value": false
+    },
+    "28.1": {
+      "value": "F"
+    },
+    "28.2": {
+      "value": "E"
+    },
+    "28.3": {
+      "value": "D"
+    },
+    "28.4": {
+      "value": "C"
+    }
+  },
+  "C9I-2025": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "D"
+    },
+    "3": {
+      "value": "D"
+    },
+    "4": {
+      "value": "D"
+    },
+    "7": [
+      "oceánu",
+      "diskusích",
+      "místech"
+    ],
+    "8": {
+      "value": "C"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "A"
+    },
+    "11": {
+      "value": "A"
+    },
+    "14": [
+      "C",
+      "D",
+      "B",
+      "A",
+      "E",
+      "F"
+    ],
+    "15": [
+      "oblíbeným",
+      "zběhlý",
+      "bez újmy",
+      "spletenými"
+    ],
+    "16": {
+      "value": "B"
+    },
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": {
+      "value": "B"
+    },
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "A"
+    },
+    "28": {
+      "value": "A"
+    },
+    "5.1": {
+      "value": "C"
+    },
+    "5.2": {
+      "value": "D"
+    },
+    "5.3": {
+      "value": "B"
+    },
+    "5.4": {
+      "value": "A"
+    },
+    "6.1": {
+      "value": false
+    },
+    "6.2": {
+      "value": false
+    },
+    "6.3": {
+      "value": false
+    },
+    "6.4": {
+      "value": false
+    },
+    "12.1": {
+      "value": true
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": false
+    },
+    "13.1": {
+      "podmět": "skvělá příležitost",
+      "přísudek": "naskytla se"
+    },
+    "13.2": {
+      "podmět": "letošní úroda meruněk a švestek",
+      "přísudek": "bude daleko menší"
+    },
+    "17.1": "provaz",
+    "17.2": "lano",
+    "18.1": {
+      "value": false
+    },
+    "18.2": {
+      "value": true
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": false
+    },
+    "19.1": "malý",
+    "19.2": "raněných",
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": true
+    },
+    "25.4": {
+      "value": false
+    },
+    "29.1": "kategoriích",
+    "29.2": "závodili",
+    "30.1": {
+      "value": "B"
+    },
+    "30.2": {
+      "value": "A"
+    },
+    "30.3": {
+      "value": "C"
+    }
+  },
+  "C9A-2024": {
+    "1": {
+      "value": "B"
+    },
+    "2": {
+      "value": "A"
+    },
+    "3": {
+      "value": "A"
+    },
+    "4": {
+      "value": "B"
+    },
+    "7": [
+      "poprvé",
+      "zhruba",
+      "totiž"
+    ],
+    "8": {
+      "value": "D"
+    },
+    "9": {
+      "value": "D"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": {
+      "value": "B"
+    },
+    "14": [
+      "D",
+      "B",
+      "E",
+      "A",
+      "C",
+      "F"
+    ],
+    "15": [
+      "průkazku",
+      "dětscí",
+      "jakákoliv",
+      "dané"
+    ],
+    "16": {
+      "value": "C"
+    },
+    "17": "pán",
+    "19": {
+      "value": "B"
+    },
+    "20": {
+      "value": "A"
+    },
+    "21": {
+      "value": "C"
+    },
+    "22": {
+      "value": "C"
+    },
+    "23": {
+      "value": "A"
+    },
+    "24": [
+      "důrazný",
+      "bezbřehý",
+      "podlomený"
+    ],
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "B"
+    },
+    "28": {
+      "value": "B"
+    },
+    "5.1": {
+      "value": "D"
+    },
+    "5.2": {
+      "value": "B"
+    },
+    "5.3": {
+      "value": "C"
+    },
+    "6.1": {
+      "value": true
+    },
+    "6.2": {
+      "value": true
+    },
+    "6.3": {
+      "value": true
+    },
+    "6.4": {
+      "value": false
+    },
+    "12.1": {
+      "value": true
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": true
+    },
+    "13.1": {
+      "podmet": "speciální informační materiály",
+      "prisudek": "budou vytvořeny"
+    },
+    "13.2": {
+      "podmet": "čerstvé bylinky, ale i exotické koření",
+      "prisudek": "dodávají"
+    },
+    "18.1": {
+      "value": true
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": true
+    },
+    "18.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "29.1": "vyrobené",
+    "29.2": "umístěných",
+    "30.1": {
+      "value": "B"
+    },
+    "30.2": {
+      "value": "E"
+    },
+    "30.3": {
+      "value": "C"
+    },
+    "30.4": {
+      "value": "F"
+    }
+  },
+  "C9B-2024": {
+    "1": {
+      "value": "A"
+    },
+    "2": {
+      "value": "C"
+    },
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "D"
+    },
+    "7": [
+      "pravým",
+      "sousední",
+      "nezkrotnou"
+    ],
+    "8": {
+      "value": "A"
+    },
+    "9": {
+      "value": "D"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": {
+      "value": "D"
+    },
+    "14": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "15": [
+      "dospělí",
+      "dotyční",
+      "odcházejí",
+      "sháněli"
+    ],
+    "16": {
+      "value": "A"
+    },
+    "17": "měkkou",
+    "19": {
+      "value": "A"
+    },
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "B"
+    },
+    "23": {
+      "value": "A"
+    },
+    "24": [
+      "dobrman",
+      "zub",
+      "příslovce"
+    ],
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "C"
+    },
+    "28": {
+      "value": "B"
+    },
+    "5.1": {
+      "value": "B"
+    },
+    "5.2": {
+      "value": "A"
+    },
+    "5.3": {
+      "value": "E"
+    },
+    "6.1": {
+      "value": false
+    },
+    "6.2": {
+      "value": true
+    },
+    "6.3": {
+      "value": true
+    },
+    "6.4": {
+      "value": true
+    },
+    "12.1": {
+      "value": false
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": true
+    },
+    "12.4": {
+      "value": true
+    },
+    "13.1": {
+      "podmet": "Někdo",
+      "prisudek": "nechal"
+    },
+    "13.2": {
+      "podmet": "dobré kamarádky",
+      "prisudek": "nedoporučily"
+    },
+    "18.1": {
+      "value": true
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": true
+    },
+    "29.1": "vydaná",
+    "29.2": "zaslané",
+    "30.1": {
+      "value": "C"
+    },
+    "30.2": {
+      "value": "D"
+    },
+    "30.3": {
+      "value": "B"
+    },
+    "30.4": {
+      "value": "E"
+    }
+  },
+  "C9C-2024": {
+    "1": {
+      "value": "C"
+    },
+    "2": {
+      "value": "A"
+    },
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "C"
+    },
+    "8": {
+      "value": "C"
+    },
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": {
+      "value": "D"
+    },
+    "12": [
+      "a",
+      "i",
+      "či"
+    ],
+    "14": [
+      "podíl",
+      "podklad",
+      "nadávka"
+    ],
+    "15": [
+      "A",
+      "B",
+      "D",
+      "C",
+      "E",
+      "F"
+    ],
+    "16": [
+      "týdenní",
+      "Soča",
+      "lanami",
+      "extrémně"
+    ],
+    "17": {
+      "value": "C"
+    },
+    "18": "okurka",
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": {
+      "value": "A"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": {
+      "value": "D"
+    },
+    "26": {
+      "value": "C"
+    },
+    "27": {
+      "value": "B"
+    },
+    "28": {
+      "value": "D"
+    },
+    "5.1": {
+      "podmět": "kvalitní spánek a vyvážená strava",
+      "přísudek": "chybí"
+    },
+    "5.2": {
+      "podmět": "sklenice vychlazené limonády",
+      "přísudek": "byly vítaným osvěžením"
+    },
+    "6.1": {
+      "value": "B"
+    },
+    "6.2": {
+      "value": "A"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": true
+    },
+    "7.3": {
+      "value": false
+    },
+    "7.4": {
+      "value": true
+    },
+    "13.1": {
+      "value": false
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": true
+    },
+    "13.4": {
+      "value": false
+    },
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "29.1": "provedeného",
+    "29.2": "předloženou",
+    "30.1": {
+      "value": "E"
+    },
+    "30.2": {
+      "value": "A"
+    },
+    "30.3": {
+      "value": "D"
+    },
+    "30.4": {
+      "value": "C"
+    }
+  },
+  "C9A-2023": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "B"
+    },
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "B"
+    },
+    "5": {
+      "value": "C"
+    },
+    "9": [
+      "je",
+      "vaše"
+    ],
+    "10": {
+      "value": "A"
+    },
+    "11": {
+      "value": "C"
+    },
+    "12": {
+      "value": "D"
+    },
+    "15": [
+      "B",
+      "A",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "17": {
+      "value": "C"
+    },
+    "18": [
+      "spjatý",
+      "na kterou",
+      "významné",
+      "tradičně"
+    ],
+    "20": {
+      "value": "A"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": {
+      "value": "B"
+    },
+    "23": {
+      "value": "C"
+    },
+    "24": {
+      "value": "B"
+    },
+    "26": [
+      "dějinách",
+      "úklidu",
+      "trhu"
+    ],
+    "27": {
+      "value": "B"
+    },
+    "28": {
+      "value": "D"
+    },
+    "29": {
+      "value": "C"
+    },
+    "6.1": {
+      "value": "A"
+    },
+    "6.2": {
+      "value": "E"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": "řeč",
+    "7.2": "srovnání",
+    "8.1": {
+      "value": false
+    },
+    "8.2": {
+      "value": false
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "13.1": {
+      "value": true
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": true
+    },
+    "13.4": {
+      "value": false
+    },
+    "14.1": "zvykle",
+    "14.2": "prožitě",
+    "16.1": {
+      "podmet": "Závan horského větru",
+      "prisudek": "byl osvěžující"
+    },
+    "16.2": {
+      "podmet": "dnešní lidé",
+      "prisudek": "mohli by žít"
+    },
+    "19.1": {
+      "value": true
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": true
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": true
+    },
+    "25.4": {
+      "value": false
+    },
+    "30.1": {
+      "value": "A"
+    },
+    "30.2": {
+      "value": "C"
+    },
+    "30.3": {
+      "value": "F"
+    },
+    "30.4": {
+      "value": "B"
+    }
+  },
+  "C9B-2023": {
+    "1": {
+      "value": "A"
+    },
+    "2": {
+      "value": "B"
+    },
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "B"
+    },
+    "5": {
+      "value": "D"
+    },
+    "8": {
+      "value": "C"
+    },
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": [
+      "sídlo",
+      "stavba",
+      "podobu"
+    ],
+    "14": [
+      "D",
+      "A",
+      "C",
+      "B",
+      "E",
+      "F"
+    ],
+    "16": {
+      "value": "D"
+    },
+    "18": [
+      "favoritům",
+      "ztřeštěný",
+      "zločineckého",
+      "čidla"
+    ],
+    "19": {
+      "value": "D"
+    },
+    "20": {
+      "value": "A"
+    },
+    "22": {
+      "value": "B"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": {
+      "value": "B"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": {
+      "value": "D"
+    },
+    "28": [
+      "oproti",
+      "mezi"
+    ],
+    "29": {
+      "value": "A"
+    },
+    "6.1": {
+      "value": "C"
+    },
+    "6.2": {
+      "value": "B"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "value": true
+    },
+    "7.2": {
+      "value": false
+    },
+    "7.3": {
+      "value": false
+    },
+    "7.4": {
+      "value": true
+    },
+    "12.1": {
+      "value": true
+    },
+    "12.2": {
+      "value": false
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": true
+    },
+    "13.1": [
+      "Jedlý"
+    ],
+    "13.2": [
+      "Obránce"
+    ],
+    "15.1": [
+      "zaměřených"
+    ],
+    "15.2": [
+      "způsobenými"
+    ],
+    "17.1": {
+      "podmět": "lahodné zákusky",
+      "přísudek": "byly připraveny"
+    },
+    "17.2": {
+      "podmět": "větve dubů i celé kmeny okolních borovic",
+      "přísudek": "se lámaly"
+    },
+    "21.1": {
+      "value": false
+    },
+    "21.2": {
+      "value": false
+    },
+    "21.3": {
+      "value": false
+    },
+    "21.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": true
+    },
+    "25.4": {
+      "value": false
+    },
+    "30.1": {
+      "value": "A"
+    },
+    "30.2": {
+      "value": "B"
+    },
+    "30.3": {
+      "value": "C"
+    },
+    "30.4": {
+      "value": "E"
+    }
+  },
+  "C9C-2023": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "C"
+    },
+    "3": {
+      "value": "A"
+    },
+    "4": {
+      "value": "A"
+    },
+    "5": {
+      "value": "D"
+    },
+    "6": {
+      "value": "C"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "A"
+    },
+    "12": [
+      "netvorovi",
+      "příteli",
+      "bytu"
+    ],
+    "15": [
+      "B",
+      "E",
+      "C",
+      "A",
+      "D",
+      "F"
+    ],
+    "17": {
+      "value": "B"
+    },
+    "18": [
+      "zvolí",
+      "zkušené",
+      "poměrně",
+      "nedotčené"
+    ],
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "C"
+    },
+    "23": {
+      "value": "B"
+    },
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "D"
+    },
+    "29": {
+      "value": "A"
+    },
+    "7.1": {
+      "value": "E"
+    },
+    "7.2": {
+      "value": "A"
+    },
+    "7.3": {
+      "value": "B"
+    },
+    "8.1": {
+      "value": false
+    },
+    "8.2": {
+      "value": false
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "13.1": {
+      "value": true
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": false
+    },
+    "13.4": {
+      "value": true
+    },
+    "14.1": {
+      "podmět": "porada",
+      "přísudek": "přesvědčila"
+    },
+    "14.2": {
+      "podmět": "ten jeho nápad",
+      "přísudek": "není"
+    },
+    "16.1": [
+      "pořádaném"
+    ],
+    "16.2": [
+      "článkem"
+    ],
+    "19.1": {
+      "value": true
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "24.1": [
+      "zčerstvení"
+    ],
+    "24.2": [
+      "dání"
+    ],
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "28.1": [
+      "přívlastek"
+    ],
+    "28.2": [
+      "předmět"
+    ],
+    "30.1": {
+      "value": "D"
+    },
+    "30.2": {
+      "value": "B"
+    },
+    "30.3": {
+      "value": "C"
+    },
+    "30.4": {
+      "value": "E"
+    }
+  },
+  "C9D-2023": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "B"
+    },
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "B"
+    },
+    "9": {
+      "value": "D"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "C"
+    },
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "D"
+    },
+    "15": [
+      "E",
+      "A",
+      "D",
+      "B",
+      "F",
+      "C"
+    ],
+    "17": {
+      "value": "A"
+    },
+    "18": [
+      "zákonní",
+      "historickými",
+      "rozvernými",
+      "upřímně"
+    ],
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": {
+      "value": "D"
+    },
+    "24": {
+      "value": "B"
+    },
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "C"
+    },
+    "28": {
+      "value": "D"
+    },
+    "29": [
+      "základní",
+      "intenzivní",
+      "umami"
+    ],
+    "5.1": {
+      "value": true
+    },
+    "5.2": {
+      "value": true
+    },
+    "5.3": {
+      "value": false
+    },
+    "5.4": {
+      "value": true
+    },
+    "6.1": {
+      "value": "E"
+    },
+    "6.2": {
+      "value": "E"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "6.4": {
+      "value": "D"
+    },
+    "7.1": {
+      "podmět": "stavení",
+      "přísudek": "se proměnilo"
+    },
+    "7.2": {
+      "podmět": "listy stromů a keřů",
+      "přísudek": "jsou"
+    },
+    "8.1": {
+      "value": true
+    },
+    "8.2": {
+      "value": false
+    },
+    "8.3": {
+      "value": false
+    },
+    "8.4": {
+      "value": false
+    },
+    "14.1": [
+      "podezřelým"
+    ],
+    "14.2": [
+      "odnětím"
+    ],
+    "16.1": "zdvoření",
+    "16.2": "obhajoba",
+    "19.1": {
+      "value": false
+    },
+    "19.2": {
+      "value": true
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "23.1": "Příčinný významový poměr (vysvětluje, že Hubáčkův návrh byl schválen díky svému pozitivnímu vlivu na siluetu hory).",
+    "23.2": "Protikladný významový poměr (i když návrh oceněn, Hubáček si ho politických důvodů nemohl převzít).",
+    "25.1": {
+      "value": false
+    },
+    "25.2": {
+      "value": true
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "30.1": {
+      "value": "E"
+    },
+    "30.2": {
+      "value": "C"
+    },
+    "30.3": {
+      "value": "E"
+    }
+  },
+  "CMA-2023": {
+    "2": [
+      "lihovina",
+      "dceři",
+      "příjmení"
+    ],
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "A"
+    },
+    "5": {
+      "value": "C"
+    },
+    "6": {
+      "value": "D"
+    },
+    "7": {
+      "value": "B"
+    },
+    "9": [
+      "obrovský",
+      "schůdný"
+    ],
+    "10": [
+      "C",
+      "D",
+      "A",
+      "B",
+      "E"
+    ],
+    "11": {
+      "value": "D"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "A"
+    },
+    "15": {
+      "value": "B"
+    },
+    "16": {
+      "value": "B"
+    },
+    "17": {
+      "value": "C"
+    },
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "A"
+    },
+    "25": {
+      "value": "C"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": {
+      "value": "B"
+    },
+    "28": [
+      "víc než"
+    ],
+    "30": [
+      "žádní",
+      "nákladu",
+      "výkonnou",
+      "nejvýše"
+    ],
+    "31": {
+      "value": "D"
+    },
+    "32": {
+      "value": "D"
+    },
+    "1.1": {
+      "value": true
+    },
+    "1.2": {
+      "value": false
+    },
+    "1.3": {
+      "value": true
+    },
+    "1.4": {
+      "value": true
+    },
+    "8.1": {
+      "value": "A"
+    },
+    "8.2": {
+      "value": "E"
+    },
+    "8.3": {
+      "value": "D"
+    },
+    "8.4": {
+      "value": "F"
+    },
+    "12.1": {
+      "value": true
+    },
+    "12.2": {
+      "value": false
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": false
+    },
+    "18.1": {
+      "value": true
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": true
+    },
+    "18.4": {
+      "value": false
+    },
+    "19.1": "Epos o Gilgamešovi",
+    "19.2": "Homer",
+    "24.1": {
+      "value": false
+    },
+    "24.2": {
+      "value": true
+    },
+    "24.3": {
+      "value": false
+    },
+    "24.4": {
+      "value": true
+    },
+    "29.1": {
+      "value": "A"
+    },
+    "29.2": {
+      "value": "D"
+    },
+    "29.3": {
+      "value": "E"
+    }
+  },
+  "CMB-2023": {
+    "2": [
+      "srpnové",
+      "varšavské",
+      "komunistickému"
+    ],
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "C"
+    },
+    "5": {
+      "value": "A"
+    },
+    "6": {
+      "value": "C"
+    },
+    "7": {
+      "value": "B"
+    },
+    "9": [
+      "D",
+      "A",
+      "C",
+      "B",
+      "E"
+    ],
+    "10": [
+      "obrat",
+      "sál"
+    ],
+    "12": {
+      "value": "D"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "D"
+    },
+    "15": {
+      "value": "B"
+    },
+    "16": {
+      "value": "C"
+    },
+    "17": {
+      "value": "D"
+    },
+    "19": {
+      "value": "D"
+    },
+    "20": {
+      "value": "C"
+    },
+    "21": {
+      "value": "A"
+    },
+    "22": [
+      "kráků",
+      "ledoborci"
+    ],
+    "24": {
+      "value": "D"
+    },
+    "25": {
+      "value": "A"
+    },
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "A"
+    },
+    "29": [
+      "setměním",
+      "zcela",
+      "zbořily",
+      "ikonickou"
+    ],
+    "30": {
+      "value": "B"
+    },
+    "31": {
+      "value": "B"
+    },
+    "32": {
+      "value": "B"
+    },
+    "1.1": {
+      "value": true
+    },
+    "1.2": {
+      "value": false
+    },
+    "1.3": {
+      "value": true
+    },
+    "1.4": {
+      "value": false
+    },
+    "8.1": {
+      "value": "D"
+    },
+    "8.2": {
+      "value": "E"
+    },
+    "8.3": {
+      "value": "B"
+    },
+    "11.1": {
+      "value": false
+    },
+    "11.2": {
+      "value": false
+    },
+    "11.3": {
+      "value": false
+    },
+    "11.4": {
+      "value": false
+    },
+    "18.1": {
+      "value": false
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": true
+    },
+    "23.1": {
+      "value": false
+    },
+    "23.2": {
+      "value": false
+    },
+    "23.3": {
+      "value": false
+    },
+    "23.4": {
+      "value": true
+    },
+    "28.1": {
+      "value": "C"
+    },
+    "28.2": {
+      "value": "F"
+    },
+    "28.3": {
+      "value": "B"
+    },
+    "28.4": {
+      "value": "D"
+    }
+  },
+  "CMA-2024": {
+    "3": {
+      "value": "D"
+    },
+    "4": {
+      "value": "A"
+    },
+    "5": {
+      "value": "C"
+    },
+    "6": {
+      "value": "D"
+    },
+    "7": {
+      "value": "A"
+    },
+    "8": {
+      "value": "C"
+    },
+    "11": [
+      "E",
+      "C",
+      "B",
+      "D",
+      "A"
+    ],
+    "13": [
+      "dlaní",
+      "ženou",
+      "chováním"
+    ],
+    "14": {
+      "value": "A"
+    },
+    "15": {
+      "value": "B"
+    },
+    "16": {
+      "value": "B"
+    },
+    "17": {
+      "value": "C"
+    },
+    "18": {
+      "value": "A"
+    },
+    "20": {
+      "value": "A"
+    },
+    "21": {
+      "value": "B"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "D"
+    },
+    "25": {
+      "value": "A"
+    },
+    "26": {
+      "value": "A"
+    },
+    "27": {
+      "value": "C"
+    },
+    "28": [
+      "sem"
+    ],
+    "30": [
+      "skromně",
+      "dobývacími",
+      "Rhodosu",
+      "přemítání"
+    ],
+    "31": {
+      "value": "C"
+    },
+    "32": {
+      "value": "B"
+    },
+    "1.1": {
+      "value": false
+    },
+    "1.2": {
+      "value": true
+    },
+    "1.3": {
+      "value": false
+    },
+    "1.4": {
+      "value": false
+    },
+    "2.1": "jelikož",
+    "2.2": "ač",
+    "9.1": {
+      "value": "A"
+    },
+    "9.2": {
+      "value": "E"
+    },
+    "9.3": {
+      "value": "D"
+    },
+    "10.1": "popsaném",
+    "10.2": "zapomněl bych",
+    "12.1": {
+      "value": false
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": false
+    },
+    "19.1": {
+      "value": true
+    },
+    "19.2": {
+      "value": false
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": false
+    },
+    "24.1": {
+      "value": true
+    },
+    "24.2": {
+      "value": false
+    },
+    "24.3": {
+      "value": true
+    },
+    "24.4": {
+      "value": true
+    },
+    "29.1": {
+      "value": "E"
+    },
+    "29.2": {
+      "value": "C"
+    },
+    "29.3": {
+      "value": "B"
+    },
+    "29.4": {
+      "value": "D"
+    }
+  },
+  "CMB-2024": {
+    "3": {
+      "value": "B"
+    },
+    "4": {
+      "value": "C"
+    },
+    "5": {
+      "value": "C"
+    },
+    "8": "ve",
+    "9": {
+      "value": "A"
+    },
+    "10": {
+      "value": "B"
+    },
+    "11": {
+      "value": "B"
+    },
+    "12": [
+      "B",
+      "A",
+      "E",
+      "C",
+      "D"
+    ],
+    "13": {
+      "value": "D"
+    },
+    "14": {
+      "value": "B"
+    },
+    "15": {
+      "value": "A"
+    },
+    "17": {
+      "value": "D"
+    },
+    "18": {
+      "value": "D"
+    },
+    "19": [
+      "sušák",
+      "budík",
+      "škrabka"
+    ],
+    "21": [
+      "kuchyň",
+      "jídelnu"
+    ],
+    "22": {
+      "value": "C"
+    },
+    "23": {
+      "value": "D"
+    },
+    "24": {
+      "value": "B"
+    },
+    "25": {
+      "value": "C"
+    },
+    "26": {
+      "value": "D"
+    },
+    "27": [
+      "okenních",
+      "vzájemně",
+      "vlhkost",
+      "neprozpívají"
+    ],
+    "28": {
+      "value": "A"
+    },
+    "29": {
+      "value": "C"
+    },
+    "30": {
+      "value": "D"
+    },
+    "32": {
+      "value": "B"
+    },
+    "1.1": {
+      "value": false
+    },
+    "1.2": {
+      "value": false
+    },
+    "1.3": {
+      "value": false
+    },
+    "1.4": {
+      "value": true
+    },
+    "2.1": "ovlivněné",
+    "2.2": "vedoucími",
+    "6.1": {
+      "value": "C"
+    },
+    "6.2": {
+      "value": "E"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": true
+    },
+    "7.3": {
+      "value": true
+    },
+    "7.4": {
+      "value": false
+    },
+    "16.1": {
+      "value": false
+    },
+    "16.2": {
+      "value": false
+    },
+    "16.3": {
+      "value": false
+    },
+    "16.4": {
+      "value": false
+    },
+    "20.1": {
+      "value": false
+    },
+    "20.2": {
+      "value": false
+    },
+    "20.3": {
+      "value": true
+    },
+    "20.4": {
+      "value": false
+    },
+    "31.1": {
+      "value": "F"
+    },
+    "31.2": {
+      "value": "E"
+    },
+    "31.3": {
+      "value": "D"
+    },
+    "31.4": {
+      "value": "B"
+    }
+  },
+  "AJA-2023": {
+    "1.1": {
+      "value": "C"
+    },
+    "1.2": {
+      "value": "B"
+    },
+    "1.3": {
+      "value": "D"
+    },
+    "1.4": {
+      "value": "A"
+    },
+    "2.5": {
+      "value": true
+    },
+    "2.6": {
+      "value": false
+    },
+    "2.7": {
+      "value": true
+    },
+    "2.8": {
+      "value": false
+    },
+    "2.9": {
+      "value": false
+    },
+    "2.10": {
+      "value": true
+    },
+    "2.11": {
+      "value": false
+    },
+    "2.12": {
+      "value": true
+    },
+    "3.13": "Her agent",
+    "3.14": 1953,
+    "3.15": 100000,
+    "3.16": 4,
+    "3.17": "wooden floors",
+    "3.18": "sunny terrace",
+    "3.19": "actor",
+    "3.20": "Smith",
+    "4.21": {
+      "value": "A"
+    },
+    "4.22": {
+      "value": "B"
+    },
+    "4.23": {
+      "value": "A"
+    },
+    "4.24": {
+      "value": "D"
+    },
+    "5.25": {
+      "value": "D"
+    },
+    "5.26": {
+      "value": "B"
+    },
+    "5.27": {
+      "value": "A"
+    },
+    "5.28": {
+      "value": "C"
+    },
+    "5.29": {
+      "value": "D"
+    },
+    "6.30": {
+      "value": false
+    },
+    "6.31": {
+      "value": true
+    },
+    "6.32": {
+      "value": true
+    },
+    "6.33": {
+      "value": false
+    },
+    "6.34": {
+      "value": true
+    },
+    "6.35": {
+      "value": false
+    },
+    "6.36": {
+      "value": false
+    },
+    "6.37": {
+      "value": false
+    },
+    "6.38": {
+      "value": false
+    },
+    "6.39": {
+      "value": false
+    },
+    "7.40": {
+      "value": "A"
+    },
+    "7.41": {
+      "value": "A"
+    },
+    "7.42": {
+      "value": "C"
+    },
+    "7.43": {
+      "value": "B"
+    },
+    "7.44": {
+      "value": "D"
+    },
+    "8.45": {
+      "value": "E"
+    },
+    "8.46": {
+      "value": "B"
+    },
+    "8.47": {
+      "value": "C"
+    },
+    "8.48": {
+      "value": "D"
+    },
+    "8.49": {
+      "value": "A"
+    },
+    "9.50": {
+      "value": "B"
+    },
+    "9.51": {
+      "value": "C"
+    },
+    "9.52": {
+      "value": "B"
+    },
+    "9.53": {
+      "value": "B"
+    },
+    "9.54": {
+      "value": "A"
+    },
+    "9.55": {
+      "value": "A"
+    },
+    "9.56": {
+      "value": "A"
+    },
+    "9.57": {
+      "value": "C"
+    },
+    "9.58": {
+      "value": "C"
+    },
+    "9.59": {
+      "value": "A"
+    },
+    "9.60": {
+      "value": "B"
+    },
+    "9.61": {
+      "value": "B"
+    },
+    "9.62": {
+      "value": "C"
+    },
+    "9.63": {
+      "value": "B"
+    },
+    "9.64": {
+      "value": "C"
+    }
+  },
+  "AJB-2023": {
+    "1.1": {
+      "value": "B"
+    },
+    "1.2": {
+      "value": "C"
+    },
+    "1.3": {
+      "value": "D"
+    },
+    "1.4": {
+      "value": "B"
+    },
+    "2.5": {
+      "value": false
+    },
+    "2.6": {
+      "value": true
+    },
+    "2.7": {
+      "value": false
+    },
+    "2.8": {
+      "value": false
+    },
+    "2.9": {
+      "value": false
+    },
+    "2.10": {
+      "value": false
+    },
+    "2.11": {
+      "value": true
+    },
+    "2.12": {
+      "value": true
+    },
+    "3.13": 1500,
+    "3.14": "Belfast Books",
+    "3.15": "Blue",
+    "3.16": "Stationery",
+    "3.17": "Live music",
+    "3.18": "Armchair",
+    "3.19": "Rose",
+    "3.20": "23 March",
+    "4.21": {
+      "value": "A"
+    },
+    "4.22": {
+      "value": "D"
+    },
+    "4.23": {
+      "value": "A"
+    },
+    "4.24": {
+      "value": "D"
+    },
+    "5.25": {
+      "value": "B"
+    },
+    "5.26": {
+      "value": "A"
+    },
+    "5.27": {
+      "value": "C"
+    },
+    "5.28": {
+      "value": "C"
+    },
+    "5.29": {
+      "value": "D"
+    },
+    "6.30": {
+      "value": false
+    },
+    "6.31": {
+      "value": true
+    },
+    "6.32": {
+      "value": true
+    },
+    "6.33": {
+      "value": true
+    },
+    "6.34": {
+      "value": true
+    },
+    "6.35": {
+      "value": false
+    },
+    "6.36": {
+      "value": false
+    },
+    "6.37": {
+      "value": true
+    },
+    "6.38": {
+      "value": false
+    },
+    "6.39": {
+      "value": false
+    },
+    "7.40": {
+      "value": "B"
+    },
+    "7.41": {
+      "value": "D"
+    },
+    "7.42": {
+      "value": "A"
+    },
+    "7.43": {
+      "value": "C"
+    },
+    "7.44": {
+      "value": "B"
+    },
+    "8.45": {
+      "value": "F"
+    },
+    "8.46": {
+      "value": "A"
+    },
+    "8.47": {
+      "value": "D"
+    },
+    "8.48": {
+      "value": "C"
+    },
+    "8.49": {
+      "value": "C"
+    },
+    "9.50": {
+      "value": "A"
+    },
+    "9.51": {
+      "value": "C"
+    },
+    "9.52": {
+      "value": "C"
+    },
+    "9.53": {
+      "value": "B"
+    },
+    "9.54": {
+      "value": "A"
+    },
+    "9.55": {
+      "value": "C"
+    },
+    "9.56": {
+      "value": "A"
+    },
+    "9.57": {
+      "value": "A"
+    },
+    "9.58": {
+      "value": "B"
+    },
+    "9.59": {
+      "value": "C"
+    },
+    "9.60": {
+      "value": "C"
+    },
+    "9.61": {
+      "value": "B"
+    },
+    "9.62": {
+      "value": "A"
+    },
+    "9.63": {
+      "value": "B"
+    },
+    "9.64": {
+      "value": "C"
+    }
+  },
+  "AJA-2024": {
+    "1.1": {
+      "value": "C"
+    },
+    "1.2": {
+      "value": "B"
+    },
+    "1.3": {
+      "value": "D"
+    },
+    "1.4": {
+      "value": "A"
+    },
+    "2.5": {
+      "value": false
+    },
+    "2.6": {
+      "value": true
+    },
+    "2.7": {
+      "value": false
+    },
+    "2.8": {
+      "value": true
+    },
+    "2.9": {
+      "value": false
+    },
+    "2.10": {
+      "value": true
+    },
+    "2.11": {
+      "value": false
+    },
+    "2.12": {
+      "value": false
+    },
+    "3.13": "2 times",
+    "3.14": "June 30",
+    "3.15": "speaking and listening",
+    "3.16": "talk during class",
+    "3.17": 105,
+    "3.18": "Smith",
+    "3.19": "blue",
+    "3.20": "computer room",
+    "4.21": {
+      "value": "A"
+    },
+    "4.22": {
+      "value": "C"
+    },
+    "4.23": {
+      "value": "D"
+    },
+    "4.24": {
+      "value": "C"
+    },
+    "5.25": {
+      "value": "C"
+    },
+    "5.26": {
+      "value": "C"
+    },
+    "5.27": {
+      "value": "B"
+    },
+    "5.28": {
+      "value": "A"
+    },
+    "5.29": {
+      "value": "C"
+    },
+    "6.30": {
+      "value": false
+    },
+    "6.31": {
+      "value": true
+    },
+    "6.32": {
+      "value": true
+    },
+    "6.33": {
+      "value": true
+    },
+    "6.34": {
+      "value": false
+    },
+    "6.35": {
+      "value": true
+    },
+    "6.36": {
+      "value": false
+    },
+    "6.37": {
+      "value": false
+    },
+    "6.38": {
+      "value": false
+    },
+    "6.39": {
+      "value": true
+    },
+    "7.40": {
+      "value": "A"
+    },
+    "7.41": {
+      "value": "B"
+    },
+    "7.42": {
+      "value": "A"
+    },
+    "7.43": {
+      "value": "D"
+    },
+    "7.44": {
+      "value": "D"
+    },
+    "8.45": {
+      "value": "E"
+    },
+    "8.46": {
+      "value": "D"
+    },
+    "8.47": {
+      "value": "F"
+    },
+    "8.48": {
+      "value": "C"
+    },
+    "8.49": {
+      "value": "B"
+    },
+    "9.50": {
+      "value": "A"
+    },
+    "9.51": {
+      "value": "C"
+    },
+    "9.52": {
+      "value": "B"
+    },
+    "9.53": {
+      "value": "C"
+    },
+    "9.54": {
+      "value": "B"
+    },
+    "9.55": {
+      "value": "C"
+    },
+    "9.56": {
+      "value": "A"
+    },
+    "9.57": {
+      "value": "A"
+    },
+    "9.58": {
+      "value": "C"
+    },
+    "9.59": {
+      "value": "C"
+    },
+    "10.60": "from",
+    "10.61": "are",
+    "10.62": "who",
+    "10.63": "in",
+    "10.64": "forward"
+  },
+  "AJB-2024": {
+    "1.1": {
+      "value": "B"
+    },
+    "1.2": {
+      "value": "A"
+    },
+    "1.3": {
+      "value": "D"
+    },
+    "1.4": {
+      "value": "C"
+    },
+    "2.5": {
+      "value": false
+    },
+    "2.6": {
+      "value": false
+    },
+    "2.7": {
+      "value": true
+    },
+    "2.8": {
+      "value": false
+    },
+    "2.9": {
+      "value": true
+    },
+    "2.10": {
+      "value": true
+    },
+    "2.11": {
+      "value": true
+    },
+    "2.12": {
+      "value": false
+    },
+    "3.13": "www.royaldrama.com",
+    "3.14": "The Tempest",
+    "3.15": "on Aug 15",
+    "3.16": "auditorium",
+    "3.17": "7 pm",
+    "3.18": "free tickets",
+    "3.19": "the teacher",
+    "3.20": 5,
+    "4.21": {
+      "value": "C"
+    },
+    "4.22": {
+      "value": "A"
+    },
+    "4.23": {
+      "value": "D"
+    },
+    "4.24": {
+      "value": "B"
+    },
+    "5.25": {
+      "value": "B"
+    },
+    "5.26": {
+      "value": "C"
+    },
+    "5.27": {
+      "value": "C"
+    },
+    "5.28": {
+      "value": "C"
+    },
+    "5.29": {
+      "value": "D"
+    },
+    "6.30": {
+      "value": true
+    },
+    "6.31": {
+      "value": true
+    },
+    "6.32": {
+      "value": false
+    },
+    "6.33": {
+      "value": true
+    },
+    "6.34": {
+      "value": true
+    },
+    "6.35": {
+      "value": false
+    },
+    "6.36": {
+      "value": true
+    },
+    "6.37": {
+      "value": false
+    },
+    "6.38": {
+      "value": true
+    },
+    "6.39": {
+      "value": true
+    },
+    "7.40": {
+      "value": "C"
+    },
+    "7.41": {
+      "value": "B"
+    },
+    "7.42": {
+      "value": "D"
+    },
+    "7.43": {
+      "value": "A"
+    },
+    "7.44": {
+      "value": "D"
+    },
+    "8.45": {
+      "value": "D"
+    },
+    "8.46": {
+      "value": "F"
+    },
+    "8.47": {
+      "value": "B"
+    },
+    "8.48": {
+      "value": "A"
+    },
+    "8.49": {
+      "value": "C"
+    },
+    "9.50": {
+      "value": "C"
+    },
+    "9.51": {
+      "value": "B"
+    },
+    "9.52": {
+      "value": "B"
+    },
+    "9.53": {
+      "value": "B"
+    },
+    "9.54": {
+      "value": "B"
+    },
+    "9.55": {
+      "value": "A"
+    },
+    "9.56": {
+      "value": "A"
+    },
+    "9.57": {
+      "value": "A"
+    },
+    "9.58": {
+      "value": "B"
+    },
+    "9.59": {
+      "value": "C"
+    },
+    "10.60": "was",
+    "10.61": "to",
+    "10.62": "There",
+    "10.63": "than",
+    "10.64": "work"
+  },
+  "DEA-2023": {
+    "1.1": {
+      "value": "C"
+    },
+    "1.2": {
+      "value": "D"
+    },
+    "1.3": {
+      "value": "A"
+    },
+    "1.4": {
+      "value": "B"
+    },
+    "2.5": {
+      "value": true
+    },
+    "2.6": {
+      "value": false
+    },
+    "2.7": {
+      "value": false
+    },
+    "2.8": {
+      "value": true
+    },
+    "2.9": {
+      "value": false
+    },
+    "2.10": {
+      "value": true
+    },
+    "2.11": {
+      "value": false
+    },
+    "2.12": {
+      "value": true
+    },
+    "3.13": 2000,
+    "3.14": 10,
+    "3.15": "Lola",
+    "3.16": "15 Uhr",
+    "3.17": "Bilder malen",
+    "3.18": "Kinogutschein",
+    "3.19": "Alter Baum",
+    "3.20": "Schlangen",
+    "4.21": {
+      "value": "D"
+    },
+    "4.22": {
+      "value": "A"
+    },
+    "4.23": {
+      "value": "C"
+    },
+    "4.24": {
+      "value": "D"
+    },
+    "5.25": {
+      "value": "D"
+    },
+    "5.26": {
+      "value": "D"
+    },
+    "5.27": {
+      "value": "C"
+    },
+    "5.28": {
+      "value": "A"
+    },
+    "5.29": {
+      "value": "A"
+    },
+    "6.30": {
+      "value": false
+    },
+    "6.31": {
+      "value": false
+    },
+    "6.32": {
+      "value": true
+    },
+    "6.33": {
+      "value": false
+    },
+    "6.34": {
+      "value": false
+    },
+    "6.35": {
+      "value": true
+    },
+    "6.36": {
+      "value": true
+    },
+    "6.37": {
+      "value": false
+    },
+    "6.38": {
+      "value": false
+    },
+    "6.39": {
+      "value": true
+    },
+    "7.40": {
+      "value": "C"
+    },
+    "7.41": {
+      "value": "A"
+    },
+    "7.42": {
+      "value": "B"
+    },
+    "7.43": {
+      "value": "D"
+    },
+    "7.44": {
+      "value": "C"
+    },
+    "8.45": {
+      "value": "F"
+    },
+    "8.46": {
+      "value": "E"
+    },
+    "8.47": {
+      "value": "C"
+    },
+    "8.48": {
+      "value": "B"
+    },
+    "8.49": {
+      "value": "D"
+    },
+    "9.50": {
+      "value": "A"
+    },
+    "9.51": {
+      "value": "B"
+    },
+    "9.52": {
+      "value": "B"
+    },
+    "9.53": {
+      "value": "C"
+    },
+    "9.54": {
+      "value": "A"
+    },
+    "9.55": {
+      "value": "A"
+    },
+    "9.56": {
+      "value": "A"
+    },
+    "9.57": {
+      "value": "C"
+    },
+    "9.58": {
+      "value": "B"
+    },
+    "9.59": {
+      "value": "C"
+    },
+    "9.60": {
+      "value": "C"
+    },
+    "9.61": {
+      "value": "A"
+    },
+    "9.62": {
+      "value": "B"
+    },
+    "9.63": {
+      "value": "A"
+    },
+    "9.64": {
+      "value": "A"
+    }
+  },
+  "C5A-2024": {
+    "1": {
+      "value": "C"
+    },
+    "2": {
+      "value": "C"
+    },
+    "3": {
+      "value": "D"
+    },
+    "7": {
+      "value": "B"
+    },
+    "8": {
+      "value": "C"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "D"
+    },
+    "13": {
+      "value": "C"
+    },
+    "14": [
+      "B",
+      "D",
+      "A",
+      "C",
+      "E",
+      "F"
+    ],
+    "16": [
+      "4",
+      "9",
+      "13"
+    ],
+    "17": [
+      "zrcadly",
+      "útlého",
+      "zaměřil",
+      "kroužek"
+    ],
+    "19": [
+      "jeho",
+      "té",
+      "nic"
+    ],
+    "20": {
+      "value": "B"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "B"
+    },
+    "24": "Děl padl do příkopu.",
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "C"
+    },
+    "4.1": {
+      "podmět": "Poslední srpnová neděle",
+      "přísudek": "bude patřit fotbalovému utkání"
+    },
+    "4.2": {
+      "podmět": "počítačové učebny a hřiště",
+      "přísudek": "upoutaly"
+    },
+    "5.1": {
+      "value": true
+    },
+    "5.2": {
+      "value": false
+    },
+    "5.3": {
+      "value": true
+    },
+    "5.4": {
+      "value": true
+    },
+    "6.1": {
+      "value": "E"
+    },
+    "6.2": {
+      "value": "C"
+    },
+    "6.3": {
+      "value": "B"
+    },
+    "9.1": {
+      "value": true
+    },
+    "9.2": {
+      "value": false
+    },
+    "9.3": {
+      "value": true
+    },
+    "9.4": {
+      "value": true
+    },
+    "12.1": {
+      "value": true
+    },
+    "12.2": {
+      "value": true
+    },
+    "12.3": {
+      "value": false
+    },
+    "12.4": {
+      "value": false
+    },
+    "15.1": "Patřil k lidem, a ti lidé budili důvěru.",
+    "15.2": "Promícháním těchto barev získáme požadovaný odstín.",
+    "18.1": {
+      "value": false
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": false
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": true
+    },
+    "28.1": {
+      "value": "A"
+    },
+    "28.2": {
+      "value": "C"
+    },
+    "28.3": {
+      "value": "F"
+    },
+    "28.4": {
+      "value": "D"
+    }
+  },
+  "C9D-2024": {
+    "1": {
+      "value": "D"
+    },
+    "2": {
+      "value": "C"
+    },
+    "3": {
+      "value": "C"
+    },
+    "4": {
+      "value": "B"
+    },
+    "8": {
+      "value": "C"
+    },
+    "9": {
+      "value": "C"
+    },
+    "10": {
+      "value": "D"
+    },
+    "11": {
+      "value": "B"
+    },
+    "12": [
+      "kromě",
+      "díky",
+      "podle"
+    ],
+    "14": [
+      "eunuch",
+      "eukalyptus",
+      "zneuctěný"
+    ],
+    "15": [
+      "B",
+      "A",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "16": [
+      "Milovice",
+      "bezobratlých",
+      "zmatení",
+      "splétli"
+    ],
+    "17": {
+      "value": "C"
+    },
+    "18": "litovat",
+    "20": {
+      "value": "A"
+    },
+    "21": {
+      "value": "C"
+    },
+    "22": {
+      "value": "D"
+    },
+    "23": {
+      "value": "C"
+    },
+    "24": {
+      "value": "D"
+    },
+    "26": {
+      "value": "C"
+    },
+    "27": {
+      "value": "A"
+    },
+    "28": {
+      "value": "A"
+    },
+    "5.1": {
+      "podmět": "příslušní radní obou měst",
+      "přísudek": "musí projednat"
+    },
+    "5.2": {
+      "podmět": "ty",
+      "přísudek": "pomohla"
+    },
+    "6.1": {
+      "value": "A"
+    },
+    "6.2": {
+      "value": "B"
+    },
+    "6.3": {
+      "value": "D"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": false
+    },
+    "7.3": {
+      "value": false
+    },
+    "7.4": {
+      "value": true
+    },
+    "13.1": {
+      "value": false
+    },
+    "13.2": {
+      "value": false
+    },
+    "13.3": {
+      "value": false
+    },
+    "13.4": {
+      "value": false
+    },
+    "19.1": {
+      "value": true
+    },
+    "19.2": {
+      "value": false
+    },
+    "19.3": {
+      "value": false
+    },
+    "19.4": {
+      "value": true
+    },
+    "25.1": {
+      "value": true
+    },
+    "25.2": {
+      "value": false
+    },
+    "25.3": {
+      "value": false
+    },
+    "25.4": {
+      "value": false
+    },
+    "29.1": "uznávaného",
+    "29.2": "vyhovujícímu",
+    "30.1": {
+      "value": "E"
+    },
+    "30.2": {
+      "value": "D"
+    },
+    "30.3": {
+      "value": "F"
+    },
+    "30.4": {
+      "value": "B"
+    }
+  },
+  "M9A-2025": {
+    "1": 2.5,
+    "10": "Trojúhelník ABC je konstrukčně narýsován, přičemž vrchol A byl určen pomocí sestavení výšky a těžnice a označen písmenem A.",
+    "12": {
+      "value": "B"
+    },
+    "13": {
+      "value": "B"
+    },
+    "14": {
+      "value": "D"
+    },
+    "2.1": "1/4",
+    "2.2": "1/2",
+    "3.1": {
+      "a": "9",
+      "b": "81"
+    },
+    "3.2": "4n+5",
+    "3.3": "(12-x)*(12+x)",
+    "4.1": "20",
+    "4.2": "no solution",
+    "5.1": 12,
+    "5.2": 558,
+    "6.1": 1.5,
+    "6.2": 20,
+    "7.1": 45,
+    "7.2": 45,
+    "7.3": 90,
+    "8.1": 26,
+    "8.2": 5,
+    "8.3": 39,
+    "9.1": "Osa většího úhlu byla sestrojena konstrukčně a označena písmenem o.",
+    "9.2": "Vrcholy obdélníku KLMN byly konstrukčně sestrojeny, označeny a obdélník byl narýsován.",
+    "11.1": {
+      "value": true
+    },
+    "11.2": {
+      "value": true
+    },
+    "11.3": {
+      "value": false
+    },
+    "15.1": {
+      "value": "B"
+    },
+    "15.2": {
+      "value": "E"
+    },
+    "15.3": {
+      "value": "C"
+    },
+    "16.1": 28,
+    "16.2": 6,
+    "16.3": 40
+  },
+  "C9A-2025": {
+    "1": {
+      "value": "A"
+    },
+    "2": {
+      "value": "D"
+    },
+    "3": {
+      "value": "D"
+    },
+    "4": {
+      "value": "B"
+    },
+    "6": [
+      "bezprostředně",
+      "nadpozemský",
+      "mnohočetný"
+    ],
+    "8": [
+      "nacista",
+      "zloděj",
+      "voják"
+    ],
+    "9": {
+      "value": "D"
+    },
+    "10": {
+      "value": "C"
+    },
+    "11": {
+      "value": "A"
+    },
+    "12": {
+      "value": "C"
+    },
+    "15": [
+      "E",
+      "B",
+      "D",
+      "C",
+      "A",
+      "F"
+    ],
+    "16": [
+      "památihodnosti",
+      "včelí",
+      "naráz",
+      "zprostředkují"
+    ],
+    "17": {
+      "value": "D"
+    },
+    "20": {
+      "value": "D"
+    },
+    "21": {
+      "value": "D"
+    },
+    "22": {
+      "value": "A"
+    },
+    "23": {
+      "value": "A"
+    },
+    "25": {
+      "value": "C"
+    },
+    "26": {
+      "value": "B"
+    },
+    "27": {
+      "value": "C"
+    },
+    "28": {
+      "value": "D"
+    },
+    "29": "oříšek",
+    "5.1": {
+      "value": "D"
+    },
+    "5.2": {
+      "value": "A"
+    },
+    "5.3": {
+      "value": "C"
+    },
+    "7.1": {
+      "value": false
+    },
+    "7.2": {
+      "value": true
+    },
+    "7.3": {
+      "value": true
+    },
+    "7.4": {
+      "value": false
+    },
+    "13.1": {
+      "value": true
+    },
+    "13.2": {
+      "value": true
+    },
+    "13.3": {
+      "value": true
+    },
+    "13.4": {
+      "value": true
+    },
+    "14.1": "obou",
+    "14.2": "nabízenou",
+    "18.1": {
+      "value": false
+    },
+    "18.2": {
+      "value": false
+    },
+    "18.3": {
+      "value": false
+    },
+    "18.4": {
+      "value": true
+    },
+    "19.1": "příčinné",
+    "19.2": "časové",
+    "24.1": {
+      "value": false
+    },
+    "24.2": {
+      "value": true
+    },
+    "24.3": {
+      "value": true
+    },
+    "24.4": {
+      "value": false
+    },
+    "30.1": {
+      "value": "A"
+    },
+    "30.2": {
+      "value": "B"
+    },
+    "30.3": {
+      "value": "D"
+    },
+    "30.4": {
+      "value": "E"
+    }
+  }
+}

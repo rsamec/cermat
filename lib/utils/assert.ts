@@ -62,12 +62,12 @@ export type ValidationFunctionSpec<T> = EqualValidator<T> | EqualRatioValidator<
 export class CoreVerifyiers {
   static EqualTo<T>(value: T) {
     return (control: T) => {
-      return control === value || areDeeplyEqual(control, value) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
+      return control === value || areDeeplyEqual(control, value) || (typeof value == "number" && value == control) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
     }
   }
 
   static MatchTo(pattern: JsonRegExp) {
-    const regex = new RegExp(pattern.source,pattern.flags);
+    const regex = new RegExp(pattern.source, pattern.flags);
     return (control: string) => {
       return regex.test(control) ? undefined : { 'expected': pattern, 'actual': control, errorCount: null };
     }
@@ -88,7 +88,7 @@ export class CoreVerifyiers {
   static MathEquationEqualTo(value: string | boolean) {
     return (control: string | boolean) => {
       if (typeof value === 'boolean') {
-        return value === control ? undefined : { 'expected': value, 'actual': control, errorCount: null };
+        return value === control || (control === "no solution" && value === false) ? undefined : { 'expected': value, 'actual': control, errorCount: null };
       }
       else {
         const controlValue = normalizeToString(control?.toString());
@@ -122,9 +122,9 @@ export class CoreVerifyiers {
 
   static SortedOptionsEqualTo(values: string[]) {
     return (control: Option<string>[] | string[] | string) => {
-      const options = normalizeToArray(control);      
-      return Array.isArray(options) && values.length === options.length && values.join() === options.map((d:any) => d.value ?? d).map(d => d?.trim()).join() ? undefined :
-        { 'expected': values, 'actual': options, errorCount: null }      
+      const options = normalizeToArray(control);
+      return Array.isArray(options) && values.length === options.length && values.join() === options.map((d: any) => d.value ?? d).map(d => d?.trim()).join() ? undefined :
+        { 'expected': values, 'actual': options, errorCount: null }
     }
   }
 
@@ -135,12 +135,12 @@ export class CoreVerifyiers {
   }
 
 
-  static MatchObjectValues(patterns: Record<string,JsonRegExp>) {
+  static MatchObjectValues(patterns: Record<string, JsonRegExp>) {
     return (control: Record<string, string>) => {
-    
+
       const controlValues = Object.values(control ?? {});
-      const match = Object.values(patterns).map(pattern => new RegExp(pattern.source,pattern.flags)).every((d,i) => d.test(controlValues[i]));
-      
+      const match = Object.values(patterns).map(pattern => new RegExp(pattern.source, pattern.flags)).every((d, i) => d.test(controlValues[i]));
+
       return match ? undefined : { 'expected': patterns, 'actual': control, errorCount: null }
     }
   }

@@ -5,7 +5,8 @@ import { QuizResultsFileSaver } from "./file.utils";
 import examTestCases from "../exams.utils";
 import { TreeNode } from "../utils/tree.utils";
 
-const modelName = "gpt-4o";
+//const modelName = "gpt-4o";
+const modelName = "o3-mini";
 
 const selection = store.select((models) => ({
   totalAnswers: models.quiz.totalAnswers,
@@ -15,7 +16,7 @@ const selection = store.select((models) => ({
 function isBool(value: any) {
   return (typeof value === "boolean" || value === "true" || value === "false")
 }
-function convertAnswerToString(value: any): string | number | undefined {
+function convertAnswerToString(value: any): string | number | undefined | boolean {
   if (value == null) return;
   return isBool(value)
     ? (value ? 'Ano' : 'Ne')
@@ -75,11 +76,11 @@ export async function main() {
                 ? verify.args.source
                 : convertAnswerToString(verify.args);
           return out;
-        }, {} as Record<string, string | number | undefined>),
+        }, {} as Record<string, string | number | undefined | boolean>),
         answers: Object.entries(result).reduce((out, [key, value]) => {
           out[key] = convertAnswerToString(value)
           return out;
-        }, {} as Record<string, string | number | undefined>),
+        }, {} as Record<string, string | number | undefined | boolean>),
         points: additionalQuizValues.points,
       }
       console.log(pathes, quiz.totalPoints)
