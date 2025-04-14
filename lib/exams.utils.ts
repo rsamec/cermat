@@ -9,6 +9,7 @@ import M7B_2023 from './exams/M7B-2023';
 
 import M9I_2025 from './exams/M9I-2025';
 import M9A_2025 from './exams/M9A-2025';
+import M9B_2025 from './exams/M9B-2025';
 
 import M9A_2024 from './exams/M9A-2024';
 import M9B_2024 from './exams/M9B-2024';
@@ -80,6 +81,7 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
 
   { pathes: math4Years.concat("M9I-2025"), quiz: M9I_2025, config: { questions: true, solver: false } },
   { pathes: math4Years.concat("M9A-2025"), quiz: M9A_2025, config: { questions: true, solver: false } },
+  { pathes: math4Years.concat("M9B-2025"), quiz: M9B_2025, config: { questions: true, solver: false } },
 
   { pathes: math4Years.concat("M9A-2024"), quiz: M9A_2024, config: { questions: true, solver: false } },
   { pathes: math4Years.concat("M9B-2024"), quiz: M9B_2024, config: { questions: true, solver: false } },
