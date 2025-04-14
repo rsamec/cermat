@@ -13,12 +13,12 @@ Výsledek zapište zlomkem v základním tvaru.
 ## 3.1 
 
 $$ 
-\left(\frac{11}{5}-\frac{11}{6}\right) \div \left(-\frac{1}{3}\right)=
+\left(\frac{11}{5}-\frac{11}{6}\right):\left(-\frac{1}{3}\right)=
 $$
 
 ## 3.2 
 $$
-\frac{20-\sqrt{4\cdot3^2}}{3\cdot\sqrt{100−64}} \div \frac{4+3}{4\cdot3}= 
+\frac{20-\sqrt{4\cdot3^2}}{3\cdot\sqrt{100−64}}:\frac{4+3}{4\cdot3}= 
 $$
 
 # 4 
@@ -45,12 +45,10 @@ $$
 $$
 ## 5.2 **Řešte** soustavu rovnic: 
 $$
-
 \begin{aligned}
-6x+y =14\\
+6x+y=14\\
 3x+2y=15
 \end{aligned}
-
 $$
 
 # 6 Číslo 231 lze rozložit na součin tří prvočísel 𝑎⋅𝑏⋅𝑐. 
