@@ -1,4 +1,5 @@
 import { AnswerGroup } from './utils/quiz-specification';
+import M5A_2025 from './exams/M5A-2025';
 import M5A_2024 from './exams/M5A-2024';
 import M5A_2023 from './exams/M5A-2023';
 import M5B_2023 from './exams/M5B-2023';
@@ -71,6 +72,7 @@ const frDiploma = ["fr", "diploma"];
 
 const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { questions?: boolean, solver?: boolean } }[] = [
   // math
+  { pathes: math8Years.concat("M5A-2025"), quiz: M5A_2025, config: { questions: true, solver: true } },
   { pathes: math8Years.concat("M5A-2024"), quiz: M5A_2024, config: { questions: true, solver: true } },
   { pathes: math8Years.concat("M5A-2023"), quiz: M5A_2023, config: { questions: true, solver: true } },
   { pathes: math8Years.concat("M5B-2023"), quiz: M5B_2023, config: { questions: false } },

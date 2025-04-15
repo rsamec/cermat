@@ -238,8 +238,8 @@ VÝCHOZÍ TEXT K ÚLOZE 16
 > druhým číslem udělal krátkou pauzu, během níž Zuzka řekla součet posledních dvou čísel, 
 > které vyslovil Mirek. 
 > 
-> Na začátku tedy zazněla čísla:\
-> 1, 2, **3**, 3, 4,** 7**, 5, 6, **11**, … 
+> Na začátku tedy zazněla čísla:/
+> 1, 2, **3**, 3, 4,**7**, 5, 6, **11**, … 
 > 
 > (Tučně zapsaná čísla vyslovila Zuzka, ostatní čísla Mirek.) 
 > 
