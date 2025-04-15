@@ -80,9 +80,10 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6
 ## 6.2 délku kratší strany obdélníku představujícího přízemí. 
  
 ![alt text](image-1.png)
- 
+
+# 7 
+
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7
-===
 
 > ![alt text](image-2.png)
 > 
@@ -90,7 +91,6 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7
 >  
 > (*CZVV*) 
 
-# 7
 ## 7.1 
 Bod A je vrchol obdélníku *ABCD*.\
 Na jedné z přímek p, q leží vrchol B a na druhé přímce vrchol C tohoto obdélníku.\
