@@ -1,8 +1,8 @@
 # 1 Doplňte do rámečku takové číslo, aby platila rovnost:
 ## 1.1
-[?]∶11=(5+5⋅20)−101 
+$[?]∶11=(5+5⋅20)−101$
 ## 1.2
-(188−152)∶(1+[?])=4+20∶4
+$(188−152)∶(1+[?])=4+20∶4$
 
 # 2
 ## 2.1 Tabulka má obsahovat všechna celá čísla od 0 do 8. Do prázdných polí tabulky se doplní chybějící čísla tak, aby byl součet v každém sloupci i v každém řádku stejný. 
