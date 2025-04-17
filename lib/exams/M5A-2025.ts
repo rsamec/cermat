@@ -1,6 +1,6 @@
 
 
-import { group, number, numbersGroup, option, optionBool, rootGroup, selfEvaluateImage, selfEvaluateText, task3Max3Points, task3Max4Points, task3Max5Points, threePoints, twoPoints, wordsGroup } from "../utils/quiz-builder";
+import { group, number, numbers, option, optionBool, rootGroup, selfEvaluateImage, selfEvaluateText, task3Max3Points, task3Max4Points, task3Max5Points, threePoints, twoPoints, wordsGroup } from "../utils/quiz-builder";
 
 const form = rootGroup({
   code: 'M5PAD25C0T01',
@@ -16,10 +16,7 @@ const form = rootGroup({
   }),
   2: group({
     2.1: number(6, {}, twoPoints),
-    2.2: numbersGroup({
-      "x": 45,
-      "y": 135
-    }, twoPoints),
+    2.2: numbers([45, 135], twoPoints),
   }),
   3: group({
     3.1: number(36, { suffix: 'krát' }, twoPoints),

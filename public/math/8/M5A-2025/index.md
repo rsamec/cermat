@@ -53,10 +53,10 @@ VÝCHOZÍ TEXT K ÚLOZE 5
 ===
 
 > Náš dům má tři patra a bydlí v něm celkem 11 dětí.\
-> V prvním a druhém patře bydlí dohromady 8 dětí.\ 
+> V prvním a druhém patře bydlí dohromady 8 dětí.\
 > Ve druhém patře bydlí jen dívky.\
 > V prvním a třetím patře bydlí dohromady 5 chlapců a 3 dívky.\
-> Ze všech chlapců z našeho domu pouze 3 chlapci nebydlí ve třetím patře. 
+> Ze všech chlapců z našeho domu pouze 3 chlapci nebydlí ve třetím patře.
 > 
 > (*CZVV*) 
 
@@ -83,7 +83,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 6
 
 # 7 
 
-VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7
+**VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7**
 
 > ![alt text](image-2.png)
 > 
@@ -99,7 +99,7 @@ Bodem R prochází strana *BC* obdélníku *ABCD*.
 **Sestrojte** vrcholy B, C, D obdélníku *ABCD*, **označte** je písmeny a obdélník **narýsujte**.\
 Najděte všechna řešení. 
 
-VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.2
+**VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.2**
 
 > V rovině leží bod S a různoběžné přímky m, n. 
 > 
@@ -110,7 +110,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 7.2
 ## 7.2 
 Na přímce m leží strana *EF* trojúhelníku *EFG*\
 a na přímce n leží strana *EG* tohoto trojúhelníku.\
-Bod S má od všech tří vrcholů trojúhelníku *EFG* stejnou vzdálenost.\
+Bod S má od všech tří vrcholů trojúhelníku *EFG* stejnou vzdálenost.
 
 **Sestrojte** vrcholy trojúhelníku *EFG*, **označte** je písmeny a trojúhelník **narýsujte**. 
 
