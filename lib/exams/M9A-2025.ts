@@ -45,10 +45,10 @@ const form = rootGroup({
     8.3: number(39, { suffix: 'červených rostlin' }, twoPoints),
   }),
   9: group({
-    9.1: selfEvaluateImage("image-9.png"),
-    9.2: selfEvaluateImage("image-9.png", twoPoints),
+    9.1: selfEvaluateImage(""),
+    9.2: selfEvaluateImage("", twoPoints),
   }),
-  10: selfEvaluateImage("image-10.png", twoPoints),
+  10: selfEvaluateImage("", twoPoints),
   11: group({
     11.1: optionBool(true),
     11.2: optionBool(true),

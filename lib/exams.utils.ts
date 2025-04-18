@@ -5,6 +5,8 @@ import M5A_2024 from './exams/M5A-2024';
 import M5A_2023 from './exams/M5A-2023';
 import M5B_2023 from './exams/M5B-2023';
 
+import M7A_2025 from './exams/M7A-2025';
+import M7B_2025 from './exams/M7B-2025';
 import M7A_2024 from './exams/M7A-2024';
 import M7A_2023 from './exams/M7A-2023';
 import M7B_2023 from './exams/M7B-2023';
@@ -79,6 +81,8 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: math8Years.concat("M5A-2023"), quiz: M5A_2023, config: { questions: true, solver: true } },
   { pathes: math8Years.concat("M5B-2023"), quiz: M5B_2023, config: { questions: false } },
 
+  { pathes: math6Years.concat("M7A-2025"), quiz: M7A_2025, config: { questions: true, solver: true } },
+  { pathes: math6Years.concat("M7B-2025"), quiz: M7B_2025, config: { questions: true, solver: true } },
   { pathes: math6Years.concat("M7A-2024"), quiz: M7A_2024, config: { questions: true, solver: true } },
   { pathes: math6Years.concat("M7A-2023"), quiz: M7A_2023, config: { questions: true, solver: true } },
   { pathes: math6Years.concat("M7B-2023"), quiz: M7B_2023, config: { questions: false } },

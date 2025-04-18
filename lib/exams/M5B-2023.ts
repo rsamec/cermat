@@ -38,8 +38,8 @@ const form = rootGroup({
     6.3: number(78, { suffix: 'cm' }, twoPoints)
   }),
   7: group({
-    7.1: selfEvaluateImage("V rovině leží bod F a přímka g.jpg", threePoints),
-    7.2: selfEvaluateImage("V rovině leží body S, Q a přímka p.jpg", threePoints),
+    7.1: selfEvaluateImage("", threePoints),
+    7.2: selfEvaluateImage("", threePoints),
   }),
   8: group({
     8.1: option("A"),

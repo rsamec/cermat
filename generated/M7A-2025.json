@@ -5,23 +5,29 @@
         "1.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 44
+            "args": {
+              "hodin": 18,
+              "minut": 40
+            }
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
-            "kind": "number",
-            "args": {}
+            "hodin": {
+              "kind": "number"
+            },
+            "minut": {
+              "kind": "number"
+            }
           }
         },
         "1.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 3
+            "args": 33
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
-            "kind": "number",
-            "args": {}
+            "kind": "number"
           }
         }
       }
@@ -30,32 +36,29 @@
       "children": {
         "2.1": {
           "verifyBy": {
-            "kind": "equal",
-            "args": 6
+            "kind": "equalMathExpression",
+            "args": "1/2"
           },
           "points": 2,
           "inputBy": {
-            "kind": "number",
-            "args": {}
+            "kind": "math",
+            "args": {
+              "hintType": "fraction"
+            }
           }
         },
         "2.2": {
           "verifyBy": {
-            "kind": "equalNumberCollection",
-            "args": [
-              45,
-              135
-            ]
+            "kind": "equalMathExpression",
+            "args": "3/4"
           },
           "points": 2,
-          "inputBy": [
-            {
-              "kind": "number"
-            },
-            {
-              "kind": "number"
+          "inputBy": {
+            "kind": "math",
+            "args": {
+              "hintType": "fraction"
             }
-          ]
+          }
         }
       }
     },
@@ -64,27 +67,22 @@
         "3.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 36
+            "args": 120
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
-            "kind": "number",
-            "args": {
-              "suffix": "krát"
-            }
+            "kind": "number"
           }
         },
         "3.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 180
+            "args": 48
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
-            "args": {
-              "suffix": "krát"
-            }
+            "args": {}
           }
         }
       }
@@ -94,26 +92,40 @@
         "4.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 24
+            "args": 600
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "kuliček"
+              "suffix": "korun"
             }
           }
         },
         "4.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 320
+            "args": 200
           },
           "points": 1,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "gramů"
+              "prefix": "o",
+              "suffix": "korun"
+            }
+          }
+        },
+        "4.3": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 1900
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "korun"
             }
           }
         }
@@ -124,39 +136,26 @@
         "5.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 0
+            "args": 21
           },
           "points": 1,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "chlapců"
+              "suffix": "korun"
             }
           }
         },
         "5.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 5
+            "args": 42
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "dětí"
-            }
-          }
-        },
-        "5.3": {
-          "verifyBy": {
-            "kind": "equal",
-            "args": 6
-          },
-          "points": 2,
-          "inputBy": {
-            "kind": "number",
-            "args": {
-              "suffix": "dívek"
+              "suffix": "korun"
             }
           }
         }
@@ -167,26 +166,39 @@
         "6.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 20
+            "args": 77
           },
-          "points": 2,
+          "points": 1,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm"
+              "suffix": "kartiček"
             }
           }
         },
         "6.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 2
+            "args": 3
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "kartiček"
+            }
+          }
+        },
+        "6.3": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 7
           },
           "points": 2,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "cm"
+              "suffix": "kartiček"
             }
           }
         }
@@ -196,6 +208,36 @@
       "children": {
         "7.1": {
           "verifyBy": {
+            "kind": "equal",
+            "args": 5
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm"
+            }
+          }
+        },
+        "7.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 110
+          },
+          "points": 2,
+          "inputBy": {
+            "kind": "number",
+            "args": {
+              "suffix": "cm^2^"
+            }
+          }
+        }
+      }
+    },
+    "8": {
+      "children": {
+        "8.1": {
+          "verifyBy": {
             "kind": "selfEvaluate",
             "args": {
               "options": [
@@ -206,14 +248,6 @@
                 {
                   "value": 1,
                   "name": "1 bod"
-                },
-                {
-                  "value": 2,
-                  "name": "2 body"
-                },
-                {
-                  "value": 3,
-                  "name": "3 body"
                 }
               ],
               "hint": {
@@ -232,19 +266,11 @@
               {
                 "value": 1,
                 "name": "1 bod"
-              },
-              {
-                "value": 2,
-                "name": "2 body"
-              },
-              {
-                "value": 3,
-                "name": "3 body"
               }
             ]
           }
         },
-        "7.2": {
+        "8.2": {
           "verifyBy": {
             "kind": "selfEvaluate",
             "args": {
@@ -288,9 +314,69 @@
         }
       }
     },
-    "8": {
+    "9": {
+      "verifyBy": {
+        "kind": "selfEvaluate",
+        "args": {
+          "options": [
+            {
+              "value": 0,
+              "name": "0 bodů"
+            },
+            {
+              "value": 1,
+              "name": "1 bod"
+            },
+            {
+              "value": 2,
+              "name": "2 body"
+            },
+            {
+              "value": 3,
+              "name": "3 body"
+            }
+          ],
+          "hint": {
+            "kind": "image",
+            "src": ""
+          }
+        }
+      },
+      "inputBy": {
+        "kind": "options",
+        "args": [
+          {
+            "value": 0,
+            "name": "0 bodů"
+          },
+          {
+            "value": 1,
+            "name": "1 bod"
+          },
+          {
+            "value": 2,
+            "name": "2 body"
+          },
+          {
+            "value": 3,
+            "name": "3 body"
+          }
+        ]
+      }
+    },
+    "10": {
       "children": {
-        "8.1": {
+        "10.1": {
+          "verifyBy": {
+            "kind": "equalOption",
+            "args": false
+          },
+          "points": 1,
+          "inputBy": {
+            "kind": "bool"
+          }
+        },
+        "10.2": {
           "verifyBy": {
             "kind": "equalOption",
             "args": true
@@ -300,17 +386,7 @@
             "kind": "bool"
           }
         },
-        "8.2": {
-          "verifyBy": {
-            "kind": "equalOption",
-            "args": true
-          },
-          "points": 1,
-          "inputBy": {
-            "kind": "bool"
-          }
-        },
-        "8.3": {
+        "10.3": {
           "verifyBy": {
             "kind": "equalOption",
             "args": false
@@ -320,47 +396,12 @@
             "kind": "bool"
           }
         }
-      },
-      "metadata": {
-        "computeBy": {
-          "kind": "group",
-          "args": [
-            {
-              "points": 4,
-              "min": 3
-            },
-            {
-              "points": 2,
-              "min": 2
-            }
-          ]
-        }
-      }
-    },
-    "9": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "A"
-      },
-      "points": 2,
-      "inputBy": {
-        "kind": "options"
-      }
-    },
-    "10": {
-      "verifyBy": {
-        "kind": "equalOption",
-        "args": "B"
-      },
-      "points": 2,
-      "inputBy": {
-        "kind": "options"
       }
     },
     "11": {
       "verifyBy": {
         "kind": "equalOption",
-        "args": "D"
+        "args": "B"
       },
       "points": 2,
       "inputBy": {
@@ -378,18 +419,38 @@
       }
     },
     "13": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "A"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "14": {
+      "verifyBy": {
+        "kind": "equalOption",
+        "args": "D"
+      },
+      "points": 2,
+      "inputBy": {
+        "kind": "options"
+      }
+    },
+    "15": {
       "children": {
-        "13.1": {
+        "15.1": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "C"
+            "args": "A"
           },
           "points": 1,
           "inputBy": {
             "kind": "options"
           }
         },
-        "13.2": {
+        "15.2": {
           "verifyBy": {
             "kind": "equalOption",
             "args": "E"
@@ -399,10 +460,10 @@
             "kind": "options"
           }
         },
-        "13.3": {
+        "15.3": {
           "verifyBy": {
             "kind": "equalOption",
-            "args": "D"
+            "args": "F"
           },
           "points": 1,
           "inputBy": {
@@ -415,55 +476,56 @@
           "kind": "group",
           "args": [
             {
-              "points": 3,
-              "min": 3
+              "points": 2,
+              "min": 1
             },
             {
-              "points": 1,
+              "points": 4,
               "min": 2
+            },
+            {
+              "points": 6,
+              "min": 3
             }
           ]
         }
       }
     },
-    "14": {
+    "16": {
       "children": {
-        "14.1": {
+        "16.1": {
           "verifyBy": {
             "kind": "equal",
-            "args": 18
+            "args": 38
           },
-          "points": 2,
+          "points": 1,
+          "inputBy": {
+            "kind": "number"
+          }
+        },
+        "16.2": {
+          "verifyBy": {
+            "kind": "equal",
+            "args": 630
+          },
+          "points": 1,
           "inputBy": {
             "kind": "number",
             "args": {
-              "suffix": "dukátů"
+              "suffix": "bílých čtyřúhelníků"
             }
           }
         },
-        "14.2": {
+        "16.3": {
           "verifyBy": {
-            "kind": "equal",
-            "args": 96
+            "kind": "equalRatio",
+            "args": "52:49"
           },
           "points": 2,
           "inputBy": {
-            "kind": "number",
+            "kind": "text",
             "args": {
-              "suffix": "dukátů"
-            }
-          }
-        },
-        "14.3": {
-          "verifyBy": {
-            "kind": "equal",
-            "args": 128
-          },
-          "points": 2,
-          "inputBy": {
-            "kind": "number",
-            "args": {
-              "suffix": "dukátů"
+              "patternType": "ratio"
             }
           }
         }
@@ -472,11 +534,11 @@
   },
   "metadata": {
     "info": {
-      "code": "M5PAD25C0T01",
+      "code": "M7PAD25C0T01",
       "maxPoints": 50,
       "questions": {
         "closed": 6,
-        "opened": 8
+        "opened": 10
       }
     }
   }

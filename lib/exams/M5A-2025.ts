@@ -36,8 +36,8 @@ const form = rootGroup({
     6.2: number(2, { suffix: 'cm' }, twoPoints),
   }),
   7: group({
-    7.1: selfEvaluateImage("primkyABvRovineVysledek.jpg", threePoints),
-    7.2: selfEvaluateImage("bodyVRovine.jpg", twoPoints),
+    7.1: selfEvaluateImage("", threePoints),
+    7.2: selfEvaluateImage("", twoPoints),
   }),
   8: group({
     8.1: optionBool(true),

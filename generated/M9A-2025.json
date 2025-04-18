@@ -282,7 +282,7 @@
               ],
               "hint": {
                 "kind": "image",
-                "src": "image-9.png"
+                "src": ""
               }
             }
           },
@@ -320,7 +320,7 @@
               ],
               "hint": {
                 "kind": "image",
-                "src": "image-9.png"
+                "src": ""
               }
             }
           },
@@ -364,7 +364,7 @@
           ],
           "hint": {
             "kind": "image",
-            "src": "image-10.png"
+            "src": ""
           }
         }
       },
