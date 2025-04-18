@@ -49,7 +49,7 @@ VÝCHOZÍ TEXT K ÚLOZE 4
 VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 5 
 ===
 
-> Na papír lepíme stejné samolepící čtverečky, které mají stranu délky 1 cm a obsah 1 cm2.\
+> Na papír lepíme stejné samolepící čtverečky, které mají stranu délky 1 cm a obsah 1 cm^2^.\
 > Vytváříme tak různé obdélníky, z nichž každý má **obvod** 18 cm. Jeden z takových obdélníků je na obrázku. Sousední čtverečky v obdélníku mají vždy jednu stranu společnou. 
 >
 > ![alt text](image.png)
@@ -229,5 +229,8 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 14
 # 14 
 ## 14.1 **Vypočtěte** v cm obvod druhého obrazce. 
 ## 14.2 **Vypočtěte**, o kolik cm se liší délky sousedních stran třetího obrazce. 
-## 14.3 Na obrázku vpravo je silně vyznačena uzavřená lomená čára, která kopíruje strany čtverečků ve třetím obrazci. 
+## 14.3 Na obrázku níže je silně vyznačena uzavřená lomená čára, která kopíruje strany čtverečků ve třetím obrazci. 
+
+![alt text](image-9.png)
+
 **Určete v cm celkovou délku této lomené čáry.**
