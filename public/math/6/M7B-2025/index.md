@@ -187,6 +187,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 12
 - [C] o 75,0 cm^2^ 
 - [D] o 87,5 cm^2^ 
 - [E] o 100,0 cm^2^ 
+
 VÝCHOZÍ TEXT A GRAF K ÚLOHÁM 13–14 
 ===
 
