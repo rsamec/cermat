@@ -6,7 +6,7 @@ class FileSaver {
 
   }
   // Function to save JSON to a file
-  private saveJSONToFile(data: Record<string, any>) {
+  saveJSONToFile(data: Record<string, any>) {
     fs.writeFileSync(this.path, JSON.stringify(data, null, 2), 'utf-8');
     //console.log(`Data saved to file. ${this.path}`);
   }
@@ -66,5 +66,11 @@ export class QuizCategoriesFileSaver extends FileSaver {
 export class QuizTagsFileSaver extends FileSaver {
   constructor({ model }: { model: string }) {
     super(`./generated/quiz-tags-${model}.json`);
+  }
+}
+
+export class QuizAnswerSchemaFileSaver extends FileSaver {
+  constructor({ code }: { code:string }) {
+    super(`./generated/quiz-schema-${code}.json`);
   }
 }

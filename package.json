@@ -10,6 +10,7 @@
     "test": "vitest",
     "generate": "node process-ts-modules.js /lib/exams /generated",
     "generate:watch": "npm-watch generate",
+    "generate-schema":"ts-node lib/schema/generate-schema.ts",
     "ai.solve": "ts-node lib/ai/quiz-solver.ts",
     "ai.solve-detail": "ts-node lib/ai/quiz-solver-detail.ts",
     "ai.summary": "ts-node lib/ai/quiz-summary.ts",

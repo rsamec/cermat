@@ -144,7 +144,7 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 11
 Úhly neměřte, náčrtek není přesný.
 
 ## 11.1 $\alpha={72}\degree$
-## 11.2 $\beta<{66}\degree$
+## 11.2 $\beta<{36}\degree$
 ## 11.3 $\gamma=\alpha$
 
 
