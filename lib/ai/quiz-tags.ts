@@ -17,7 +17,7 @@ export async function main() {
   const { dispatch } = store;
 
 
-  for (let quizTestCase of examTestCases.filter(d => d.config.solver)) {
+  for (let quizTestCase of examTestCases) {
     const { pathes } = quizTestCase;
     const [subject, grade, code] = pathes;
 
