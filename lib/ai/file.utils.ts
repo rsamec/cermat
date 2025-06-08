@@ -71,6 +71,6 @@ export class QuizTagsFileSaver extends FileSaver {
 
 export class QuizAnswerSchemaFileSaver extends FileSaver {
   constructor({ code }: { code:string }) {
-    super(`./generated/quiz-schema-${code}.json`);
+    super(`./generated/${code}.schema.json`);
   }
 }
