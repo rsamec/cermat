@@ -506,7 +506,7 @@
         "16.2": {
           "verifyBy": {
             "kind": "equal",
-            "args": 630
+            "args": 23
           },
           "points": 1,
           "inputBy": {

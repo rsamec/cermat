@@ -63,7 +63,7 @@ const form = rootGroup({
   }, task3Max6Points),
   16: group({
     16.1: number(38),
-    16.2: number(630, { suffix: 'bílých čtyřúhelníků' }),
+    16.2: number(23, { suffix: 'bílých čtyřúhelníků' }),
     16.3: mathRatio("52:49", twoPoints)
   })
 });
