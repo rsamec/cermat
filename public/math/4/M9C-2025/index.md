@@ -255,7 +255,6 @@ VÝCHOZÍ TEXT A OBRÁZEK K ÚLOZE 16
 > (*CZVV*) 
 
 # 16 
-## 16.1 **Vypočtěte**, kolik trojúhelníků (bílých i šedých dohromady) obsahuje poslední 
-přidaný pás 4. obrazce. 
+## 16.1 **Vypočtěte**, kolik trojúhelníků (bílých i šedých dohromady) obsahuje poslední přidaný pás 4. obrazce.
 ## 16.2 **Vypočtěte**, kolik **šedých** trojúhelníků obsahuje **celý** 6. obrazec. 
 ## 16.3 **Určete**, kolikátý obrazec má v posledním přidaném pásu 225 šedých trojúhelníků.

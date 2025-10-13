@@ -88,7 +88,7 @@ VÝCHOZÍ TEXT A TABULKA K ÚLOZE 7
 > |   |8 bodů|9 bodů|10 bodů|Aritmetický průměr|
 > |---|:---:|:---:|:---:|:---:|
 > |1.kolo||5|||
-> |2.kolo||5||9,5|
+> |2.kolo||||9,5|
 > 
 > (*CZVV*) 
 
@@ -229,18 +229,21 @@ VÝCHOZÍ TEXT A GRAF K ÚLOZE 14
 # 15 Přiřaďte ke každé úloze (15.1–15.3) odpovídající výsledek (A–F). 
 ## 15.1 
 Pan Zdeněk bydlí posledních pět osmin svého dosavadního života v Plzni, 
-kam se přestěhoval, když mu bylo 27 let. 
+kam se přestěhoval, když mu bylo 27 let.
+
 **Kolik let bydlí pan Zdeněk v Plzni?**
 
 ## 15.2 
 Ze tří škol v obci je nejstarší základní škola, která je v provozu již 84 let.  
 Funguje tedy o 75 % delší dobu než gymnázium. Nejmladší školou je lyceum.  
-Poměr doby fungování lycea a gymnázia je 2∶3. 
+Poměr doby fungování lycea a gymnázia je 2∶3.
+
 **Kolik let funguje v obci lyceum?**
 
 ## 15.3 
 Součet věků dvojčat a jejich staršího bratra je 99 let.  
-Každému z dvojčat je o 40 % méně let než jejich bratrovi. 
+Každému z dvojčat je o 40 % méně let než jejich bratrovi.
+
 **Kolik let je každému z dvojčat?**
 - [A] 22 let 
 - [B] 27 let 
