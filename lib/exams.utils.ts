@@ -10,6 +10,9 @@ import M7B_2025 from './exams/M7B-2025';
 import M7A_2024 from './exams/M7A-2024';
 import M7A_2023 from './exams/M7A-2023';
 import M7B_2023 from './exams/M7B-2023';
+import M7I_2018 from './exams/M7I-2018';
+
+import M9I_2017 from './exams/M9I-2017';
 
 import M9I_2025 from './exams/M9I-2025';
 import M9A_2025 from './exams/M9A-2025';
@@ -89,6 +92,10 @@ const examTestCases: { quiz: AnswerGroup<any>, pathes: string[], config: { quest
   { pathes: math6Years.concat("M7A-2024"), quiz: M7A_2024, config: { questions: true } },
   { pathes: math6Years.concat("M7A-2023"), quiz: M7A_2023, config: { questions: true } },
   { pathes: math6Years.concat("M7B-2023"), quiz: M7B_2023, config: { questions: false } },
+  { pathes: math6Years.concat("M7I-2018"), quiz: M7I_2018, config: { questions: true } },
+  
+
+  { pathes: math4Years.concat("M9I-2017"), quiz: M9I_2017, config: { questions: true } },
 
   { pathes: math4Years.concat("M9I-2025"), quiz: M9I_2025, config: { questions: true } },
   { pathes: math4Years.concat("M9A-2025"), quiz: M9A_2025, config: { questions: true } },
